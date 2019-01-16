@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"/>
+        <item
+            android:id="@+id/nav_thecity"
+            android:icon="@drawable/ic_city"
+            android:title="The City" />
+        <item
+            android:id="@+id/nav_goverment"
+            android:icon="@drawable/ic_goverment"
+            android:title="Goverment" />
+        <item
+            android:id="@+id/nav_economy"
+            android:icon="@drawable/ic_economy"
+            android:title="Economy" />
+        <item
+                android:id="@+id/nav_sanpablo"
+                android:icon="@drawable/ic_people"
+                android:title="San Pableños" />
+        <item
+                android:id="@+id/nav_tourism"
+                android:icon="@drawable/ic_location"
+                android:title="Tourism" />
+        <item
+                android:id="@+id/nav_gallery"
+                android:icon="@drawable/ic_gallery"
+                android:title="Gallery" />
+
+
+    </group>
+
+    <item android:title="Fill up Forms  ">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_download"
+                android:title="Business Registration Form" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_bpo"
+                android:title="Online BPLO Fill Up" />
+        </menu>
+    </item>
+
+    <item android:title="Goverment Links">
+           <menu>
+               <item
+                   android:id="@+id/nav_president"
+                   android:title="Office of the President"/>
+               <item
+                       android:id="@+id/nav_vice_president"
+                       android:title="Office of the Vice President"/>
+               <item
+                       android:id="@+id/nav_senate"
+                       android:title="Senate of the Philippines"/>
+               <item
+                       android:id="@+id/nav_representatives"
+                       android:title="House of Representatives"/>
+               <item
+                       android:id="@+id/nav_supreme_court"
+                       android:title="Supreme Court"/>
+               <item
+                       android:id="@+id/nav_court"
+                       android:title="Court of the Appeals"/>
+               <item
+                       android:id="@+id/nav_sandiganbayan"
+                       android:title="Sandiganbayan"/>
+           </menu>
+    </item>
+</menu>

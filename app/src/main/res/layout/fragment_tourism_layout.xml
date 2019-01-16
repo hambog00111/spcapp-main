@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+
+
+        <TextView
+                android:id="@+id/p_tourism"
+                android:text="Tourism"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="3dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintVertical_bias="0.045"
+                android:textColor="@color/white"
+                android:background="@drawable/side_nav_title"
+                android:textSize="28dp"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="13dp"/>
+
+        <TextView
+                android:id="@+id/p_organizational"
+                android:text="Organizational"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="3dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintVertical_bias="0.045"
+                android:textColor="@color/white"
+                android:background="@drawable/side_nav_title"
+                android:textSize="28dp"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="13dp"/>
+
+        <TextView
+                android:id="@+id/p_chart"
+                android:text="Chart"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="3dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintVertical_bias="0.045"
+                android:textColor="@color/white"
+                android:background="@drawable/side_nav_title"
+                android:textSize="28dp"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="13dp"/>
+
+        <TextView
+                android:id="@+id/p_festival"
+                android:text="Festival"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="3dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintVertical_bias="0.045"
+                android:textColor="@color/white"
+                android:background="@drawable/side_nav_title"
+                android:textSize="28dp"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="13dp"/>
+
+        <TextView
+                android:id="@+id/p_history"
+                android:text="History"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="3dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintVertical_bias="0.045"
+                android:textColor="@color/white"
+                android:background="@drawable/side_nav_title"
+                android:textSize="28dp"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="13dp"/>
+
+        <TextView
+                android:id="@+id/p_awardees"
+                android:text="Awardees"
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:paddingTop="3dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintVertical_bias="0.045"
+                android:textColor="@color/white"
+                android:background="@drawable/side_nav_title"
+                android:textSize="28dp"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textSize="13dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
