@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
         val toggle = ActionBarDrawerToggle(
-                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+            this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
 
-        displayscreen(-1)
+        displayScreen(-1)
     }
 
     override fun onBackPressed() {
@@ -45,50 +45,47 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         when (item.itemId) {
             R.id.action_BPO -> return true
             else -> return super.onOptionsItemSelected(item)
         }
     }
 
-    fun displayscreen(id: Int){
-      val fragment= when(id){
+    fun displayScreen(id: Int){
+        val fragment= when (id){
+
             R.id.nav_home -> {
-                FragmentTheCity()
+                FragmentHome()
             }
             R.id.nav_thecity -> {
                 FragmentTheCity()
             }
             R.id.nav_goverment ->{
-                FragmentHome()
+                FragmentGoverment()
             }
             R.id.nav_economy ->{
-                FragmentHome()
+                FragmentEconomy()
             }
             R.id.nav_sanpablo ->{
-                FragmentHome()
+                FragmentSanPablo()
             }
             R.id.nav_tourism->{
-                FragmentHome()
+                FragmentTourism()
             }
             else -> {
                 FragmentHome()
             }
         }
 
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.RelativeLayout, fragment)
-            .commit()
+        supportFragmentManager.beginTransaction().replace(R.id.Relativelayout, fragment).commit()
 
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
-        displayscreen(item.itemId)
+
+        displayScreen(item.itemId)
 
 
         drawer_layout.closeDrawer(GravityCompat.START)

@@ -8,14 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.*
 
-class FragmentTheCity : Fragment() {
+class FragmentGallery : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-        val view: View = inflater.inflate(R.layout.fragment_thecity_layout, container,
-            false)
-
-        return  view
+        return inflater.inflate(R.layout.fragment_gallery_layout, null)
 
     }
+
 }
