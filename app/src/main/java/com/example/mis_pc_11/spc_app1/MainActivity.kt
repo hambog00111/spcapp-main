@@ -1,7 +1,6 @@
 package com.example.mis_pc_11.spc_app1
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
@@ -17,17 +16,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
-
-
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
-
         nav_view.setNavigationItemSelectedListener(this)
-
-        displayScreen(-1)
+        supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentHome()).commit()
     }
 
     override fun onBackPressed() {
@@ -52,42 +46,30 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-    fun displayScreen(id: Int){
-        val fragment= when (id){
-
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
             R.id.nav_home -> {
-                FragmentHome()
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentHome()).commit()
             }
             R.id.nav_thecity -> {
-                FragmentTheCity()
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentTheCity()).commit()
             }
             R.id.nav_goverment ->{
-                FragmentGoverment()
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentGoverment()).commit()
             }
             R.id.nav_economy ->{
-                FragmentEconomy()
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentEconomy()).commit()
             }
             R.id.nav_sanpablo ->{
-                FragmentSanPablo()
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentSanPablo()).commit()
             }
             R.id.nav_tourism->{
-                FragmentTourism()
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentTourism()).commit()
             }
             else -> {
-                FragmentHome()
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentHome()).commit()
             }
         }
-
-        supportFragmentManager.beginTransaction().replace(R.id.Relativelayout, fragment).commit()
-
-    }
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
-
-        displayScreen(item.itemId)
-
-
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }

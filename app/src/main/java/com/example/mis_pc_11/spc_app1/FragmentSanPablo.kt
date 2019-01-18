@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.*
 class FragmentSanPablo : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_thecity_layout, null)
+        return inflater.inflate(R.layout.fragment_sanpablo_layout, null)
 
     }
 
