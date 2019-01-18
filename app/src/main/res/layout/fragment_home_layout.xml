@@ -124,9 +124,7 @@
                 android:paddingTop="12dp"
                 android:textSize="8dp"
                 android:textColor="@color/black"
-                android:textAlignment="center"
-
-        />
+                android:textAlignment="center" tools:ignore="MissingConstraints"/>
 
     </android.support.constraint.ConstraintLayout>
 
