@@ -66,9 +66,41 @@
             android:fitsSystemWindows="true"
             android:scaleType="centerCrop"/>
 
+    <ImageView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:srcCompat="@drawable/slake6"
+            android:fitsSystemWindows="true"
+            android:scaleType="centerCrop"/>
+
+    <ImageView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:srcCompat="@drawable/slake2"
+            android:fitsSystemWindows="true"
+            android:scaleType="centerCrop"/>
+
+    <ImageView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:srcCompat="@drawable/slake4"
+            android:fitsSystemWindows="true"
+            android:scaleType="centerCrop"/>
+
+    <ImageView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:srcCompat="@drawable/slake5"
+            android:fitsSystemWindows="true"
+            android:scaleType="centerCrop"/>
+
 
     <Button
-            android:text="Go to Pictures!!!"
+            android:text="View More Pictures..."
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:id="@+id/button_picture"

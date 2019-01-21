@@ -7,13 +7,26 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_form">Download Bussiness Registration Form</string>
     <string name="action_bpo">Online BPLO Fill Up</string>
-    <string name="home">San Pablo, officially the City of San Pablo, (Tagalog: Lungsod ng San Pablo), or simply known as San Pablo City, is a 1st class city in the province of Laguna, Philippines. According to the 2015 census, it has a population of 266,068 people. Located in the southern portion of Laguna province, it is one of the oldest cities in the Philippines.  By land area, it is the largest in the province of Laguna. Its population ranks sixth within the province after the cities of Calamba, Santa Rosa, Biñan, San Pedro, and Cabuyao. The city is more popularly known as the "City of Seven Lakes" (Tagalog: Lungsod ng Pitong Lawa), referring to the Seven Lakes of San Pablo: Lake Sampaloc (or Sampalok), Lake Palakpakin, Lake Bunot, Lakes Pandin and Yambo, Lake Muhikap, and Lake Calibato. San Pablo was part of the Roman Catholic Archdiocese of Lipa since 1910. On November 28, 1967,</string>
+    <string name="home">San Pablo, officially the City of San Pablo, (Tagalog: Lungsod ng San Pablo), or simply known as
+        San Pablo City, is a 1st class city in the province of Laguna, Philippines. According to the 2015 census, it has
+        a population of 266,068 people. Located in the southern portion of Laguna province, it is one of the oldest
+        cities in the Philippines. By land area, it is the largest in the province of Laguna. Its population ranks sixth
+        within the province after the cities of Calamba, Santa Rosa, Biñan, San Pedro, and Cabuyao. The city is more
+        popularly known as the "City of Seven Lakes" (Tagalog: Lungsod ng Pitong Lawa), referring to the Seven Lakes of
+        San Pablo: Lake Sampaloc (or Sampalok), Lake Palakpakin, Lake Bunot, Lakes Pandin and Yambo, Lake Muhikap, and
+        Lake Calibato. San Pablo was part of the Roman Catholic Archdiocese of Lipa since 1910. On November 28, 1967,
+    </string>
     <string name="tab_govphil">The Integrated Government Philippines (iGovPhil) is a joint program of the
         Department of Information and Communications Technology (DICT) and the
-        Advanced Science and Technology Institute of the Department of Science and Technology (DOST-ASTI)</string>
+        Advanced Science and Technology Institute of the Department of Science and Technology (DOST-ASTI)
+    </string>
     <string name="form">I DECLARE UNDER PENALTY OF PERJURY that the
         forgoing information are true based on my personal knowledge and authentic records.
         Further, I agree to comply with the regulatory requirements and other deficiencies within thirty
-        (30) days from release of the business permit.</string>
-    <string name="gallery_">San Pablo, officially the City of San Pablo, (Tagalog: Lungsod ng San Pablo), or simply known as San Pablo City, is a 1st class city in the province of Laguna, Philippines. According to the 2015 census, it has a population of 266,068 peopl</string>
+        (30) days from release of the business permit.
+    </string>
+    <string name="gallery_">San Pablo, officially the City of San Pablo, (Tagalog: Lungsod ng San Pablo), or simply
+        known as San Pablo City, is a 1st class city in the province of Laguna, Philippines. According to the 2015
+        census, it has a population of 266,068 peopl
+    </string>
 </resources>
