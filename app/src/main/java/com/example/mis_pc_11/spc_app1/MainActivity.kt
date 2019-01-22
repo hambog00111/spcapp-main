@@ -41,9 +41,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
-            R.id.action_BPO -> return true
+            R.id.action_BPO -> {
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentHome()).commit()
+            }
             else -> return super.onOptionsItemSelected(item)
         }
+        return true
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
