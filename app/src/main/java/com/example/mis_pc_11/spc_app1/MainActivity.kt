@@ -54,10 +54,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_tourism->{
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentTourism()).commit()
             }
+
             R.id.nav_gallery->{
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentGallery()).commit()
             }
-            R.id.nav_bplo-> {
+            R.id.nav_bplo->{
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentFillUp()).commit()
             }
             else -> {
