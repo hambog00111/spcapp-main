@@ -83,8 +83,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="New"
-                android:textSize="12dp"
-                android:paddingTop="7dp"
+                android:textSize="11dp"
+                android:paddingTop="8dp"
                 android:textColor="@color/black"
                 android:paddingRight="10dp"/>
         <RadioButton
@@ -96,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Renewal"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"
                 android:paddingRight="10dp"/>
@@ -105,6 +105,8 @@
 
     <LinearLayout
             android:layout_width="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -112,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Mode of Payment:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"/>
 
@@ -125,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Annually"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"/>
 
@@ -138,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Semi Annually"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"/>
         <RadioButton
@@ -150,7 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Quarterly"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"/>
 
@@ -166,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:text="Date Application:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"/>
 
@@ -177,14 +179,14 @@
                 android:ems="10"
                 android:id="@+id/r_date"
                 android:hint="YY/MM/DD"
-                android:textSize="13dp"/>
+                android:textSize="11dp"/>
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:text="TIN no.:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"/>
         <EditText
@@ -194,7 +196,7 @@
                 android:ems="10"
                 android:id="@+id/r_tin"
                 android:hint="4000"
-                android:textSize="13dp"/>
+                android:textSize="11dp"/>
 
     </LinearLayout>
 
@@ -208,7 +210,7 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:text="DTI/SEC/CDA Registration:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"/>
         <EditText
@@ -217,13 +219,13 @@
                 android:ems="10"
                 android:id="@+id/r_dti"
                 android:hint="DTI/SEC/CDA"
-                android:textSize="13dp"/>
+                android:textSize="11dp"/>
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
                 android:text="DTI/SEC/CDA Registration:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"/>
         <EditText
@@ -232,7 +234,7 @@
                 android:ems="10"
                 android:id="@+id/r_dti2"
                 android:hint="DTI/SEC/CDA"
-                android:textSize="13dp"/>
+                android:textSize="11dp"/>
 
     </LinearLayout>
 
@@ -266,7 +268,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Single"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -279,7 +281,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Partnership"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -292,7 +294,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Corporation"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
         <RadioButton
@@ -304,7 +306,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Cooperative"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -320,7 +322,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Amendment From:"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -333,7 +335,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Single"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -346,7 +348,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Partnership"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
         <RadioButton
@@ -358,7 +360,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Corporation"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -373,7 +375,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Amendment To:"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -386,7 +388,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Single"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -399,7 +401,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Partnership"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -412,7 +414,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Corporation"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -428,7 +430,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Are you enjoying tax incentive from any Government Entity?"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -447,7 +449,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Yes"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -460,7 +462,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="No"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -492,7 +494,7 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="15dp"
                 android:text="Last Name:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"
                />
@@ -502,7 +504,7 @@
                 android:ems="10"
                 android:id="@+id/text_lastname"
                 android:hint="Last Name"
-                android:textSize="13dp"/>
+                android:textSize="11dp"/>
 
 
     </LinearLayout>
@@ -516,7 +518,7 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="15dp"
                 android:text="First Name:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"
         />
@@ -540,7 +542,7 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="15dp"
                 android:text="Middle Name:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"
         />
@@ -550,7 +552,7 @@
                 android:ems="10"
                 android:id="@+id/text_middlename"
                 android:hint="Middle Name"
-                android:textSize="13dp"/>
+                android:textSize="11dp"/>
 
     </LinearLayout>
 
@@ -564,7 +566,7 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="15dp"
                 android:text="Business Name:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"
         />
@@ -574,7 +576,7 @@
                 android:ems="10"
                 android:id="@+id/text_businessname"
                 android:hint="Business Name"
-                android:textSize="13dp"/>
+                android:textSize="11dp"/>
 
     </LinearLayout>
 

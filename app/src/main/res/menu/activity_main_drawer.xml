@@ -39,14 +39,11 @@
 
     <item android:title="Fill up Forms  ">
         <menu>
+
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_download"
-                android:title="Business Registration Form" />
-            <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_bplo"
                 android:icon="@drawable/ic_bpo"
-                android:title="Online BPLO Fill Up" />
+                android:title="BPLO Fill Up" />
         </menu>
     </item>
 

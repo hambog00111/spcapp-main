@@ -15,7 +15,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/recycler_video"/>
+            android:id="@+id/recycler_video_detail"/>
 
 
 

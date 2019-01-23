@@ -32,22 +32,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when (item.itemId) {
-            R.id.action_BPO -> {
-                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentHome()).commit()
-            }
-            else -> return super.onOptionsItemSelected(item)
-        }
-        return true
-    }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
@@ -68,6 +53,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_tourism->{
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentTourism()).commit()
+            }
+            R.id.nav_gallery->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentGallery()).commit()
+            }
+            R.id.nav_bplo-> {
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentFillUp()).commit()
             }
             else -> {
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentHome()).commit()
