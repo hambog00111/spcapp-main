@@ -1,37 +1,55 @@
 package com.example.mis_pc_11.spc_app1
 
-import android.content.Context
+import android.app.AlertDialog
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_fill_up.view.*
 
 
 class FragmentFillUp : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_fill_up, null)
+        val view = inflater.inflate(R.layout.fragment_fill_up, null)
+        val progBar: AlertDialog.Builder = AlertDialog.Builder(activity)
+
+        progBar.setCancelable(true)
+        progBar.setView(R.layout.layout_progress_loading)
+
+        val alDialog: AlertDialog = progBar.create()
+        val btnClick = view.btnSend
+        btnClick.setOnClickListener{
+            SaveInfo(alDialog).execute("")
+        }
+
+        return view
     }
 
-    abstract class SaveInfo(ctx: Context): AsyncTask<String, Void, String>() {
+    private class SaveInfo constructor(pBar: AlertDialog): AsyncTask<String, Void, String>() {
+        private val pLoading: AlertDialog = pBar
 
-        private var mContext: Context
-
-        init {
-            this.mContext = ctx.applicationContext
-        }
         override fun onPreExecute(){
-
+            super.onPreExecute()
+            pLoading.show()
         }
 
         override fun doInBackground(vararg p0: String?): String {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            try{
+
+            } catch(e: Exception) {
+
+            } finally {
+
+            }
+            return ""
         }
 
         override fun onPostExecute(result: String?) {
-
+            super.onPostExecute(result)
+            pLoading.dismiss()
         }
 
     }
