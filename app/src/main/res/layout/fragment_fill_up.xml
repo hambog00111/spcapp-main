@@ -1185,7 +1185,7 @@
                 android:background="@drawable/side_nav_title"
                 android:textColor="@color/white"
                 android:text="Print"
-                />
+                android:id="@+id/btnSend"/>
 
 
     </LinearLayout>
