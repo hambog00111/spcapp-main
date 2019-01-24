@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_fill_up.view.*
-import java.util.*
 
 
 class FragmentFillUp : Fragment() {
@@ -38,15 +37,19 @@ class FragmentFillUp : Fragment() {
         }
 
         override fun doInBackground(vararg p0: String?): String {
-            for(i in 0..100){
-                println(i)
+            try{
+
+            } catch(e: Exception) {
+
+            } finally {
+
             }
             return ""
         }
 
         override fun onPostExecute(result: String?) {
             super.onPostExecute(result)
-
+            pLoading.dismiss()
         }
 
     }
