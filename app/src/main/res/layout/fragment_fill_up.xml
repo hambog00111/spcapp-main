@@ -105,8 +105,6 @@
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -641,7 +639,7 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="15dp"
                 android:text="Business Address:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:paddingTop="7dp"
                 android:textColor="@color/black"
         />
@@ -665,28 +663,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Email Add.:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_email"
                 android:hint="example@email.com"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Postal Code:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_postalcode"
                 android:hint="4000"
                 android:inputType="number"
@@ -704,33 +702,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Mobile No.:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_mobilenumber"
                 android:hint="09XX XXX XXXX"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Telephone No.:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_telephone2"
                 android:hint="50XX-XXXX"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
 
     </LinearLayout>
@@ -744,17 +742,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="In Case of emergency, provide name of contact person:"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_emergency_name"
                 android:hint="Contact Full Name"
-                android:textSize="13dp"/>
+                android:textSize="11dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -766,32 +764,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Email Add.:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_emergency_emai"
                 android:hint="example@email.com"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Mobile No./Tel.:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_emergency_number"
                 android:hint="09XX XXX XXXX"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
 
 
@@ -806,7 +804,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Total No. of Employees in Establishment: "
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
 
@@ -817,7 +815,7 @@
                 android:id="@+id/text_total_employees"
                 android:hint="Total No. of Employees"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
 
     </LinearLayout>
@@ -831,19 +829,19 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Business Area "
-                android:textSize="12dp"
+                android:text="Business Area: "
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
 
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_business_area"
                 android:hint="In. sq. m."
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
 
     </LinearLayout>
@@ -859,7 +857,8 @@
                 android:textColor="@color/black"
                 android:text="No. of Employees Residing within:"
                 android:textAlignment="center"
-                android:paddingTop="10dp"/>
+                android:paddingTop="10dp"
+                android:textSize="11dp"/>
 
     </LinearLayout>
 
@@ -870,29 +869,29 @@
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_employee_lgu"
                 android:hint="LGU"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_employee_male"
                 android:hint="Male"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_employee_female"
                 android:hint="Female"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
 
     </LinearLayout>
@@ -922,9 +921,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="Lessor's Full Name"
+                android:text="Lessor's Full Name:"
                 android:textAlignment="center"
                 android:paddingTop="10dp"
+                android:textSize="11sp"
         />
 
     </LinearLayout>
@@ -936,26 +936,26 @@
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_lessors_last"
                 android:hint="Last Name"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_lessors_first"
                 android:hint="First Name"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_lessors_middle"
                 android:hint="Middle Name"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
 
     </LinearLayout>
@@ -969,7 +969,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Lessor'Full Adress:"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingTop="9dp"
                 android:textColor="@color/black"/>
 
@@ -979,7 +979,7 @@
                 android:ems="10"
                 android:id="@+id/text_lessors_address"
                 android:hint="Bdlg#/Street//Brgy./City"
-                android:textSize="13dp"/>
+                android:textSize="11dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -991,32 +991,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Email Add.:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_lessors_email"
                 android:hint="example@email.com"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Mobile No./Tel.:"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_lessors_number"
                 android:hint="09XX XXX XXXX"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
 
     </LinearLayout>
@@ -1029,8 +1029,8 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Monthly Rental"
-                android:textSize="12dp"
+                android:text="Monthly Rental:"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
@@ -1038,8 +1038,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/text_lessors_rental"
-                android:hint="20,XXXX"
-                android:textSize="13dp"
+                android:hint="Amount Monthly Rental"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
 
     </LinearLayout>
@@ -1073,32 +1073,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Line of Business"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_line_business"
                 android:hint="Name of Business"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="No. of Units"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="9"
                 android:id="@+id/text_number_business"
                 android:hint="No. of Units"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
     </LinearLayout>
 
@@ -1110,33 +1110,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Capitalization"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="5"
+                android:ems="4"
                 android:id="@+id/text_capitalization_business"
                 android:hint="11"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Essential"
-                android:textSize="12dp"
+                android:textSize="11dp"
                 android:textColor="@color/black"
                 android:paddingTop="10dp"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="5"
+                android:ems="4"
                 android:id="@+id/text_essential_business"
                 android:hint="11"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
         <TextView
                 android:layout_width="wrap_content"
@@ -1148,11 +1148,11 @@
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="5"
+                android:ems="4"
                 android:id="@+id/text_nonessential_business"
                 android:hint="11"
                 android:inputType="number"
-                android:textSize="13dp"
+                android:textSize="11dp"
                 android:paddingBottom="10dp"/>
     </LinearLayout>
 

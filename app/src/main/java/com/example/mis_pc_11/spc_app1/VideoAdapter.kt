@@ -36,16 +36,24 @@ val videoTitles = listOf("First Title", "Second", "Third")
         val channelImageView = holder.itemView.imageView_video_profile
         Picasso.with(holder.itemView.context).load(video.channel.profileImageUrl).into(channelImageView)
 
+        holder.video = video
     }
 }
 
-class CustomViewHolder(view: View): RecyclerView.ViewHolder(view){
+class CustomViewHolder(val view: View, var video: Video? = null): RecyclerView.ViewHolder(view){
 
+    companion object {
+        val VIDEO_TITLE_KEY = "VIDEO_TITLE"
+        val VIDEO_KEY = "VIDEO_ID"
+    }
     init{
         view.setOnClickListener {
             println("TEST")
 
-            val intent = Intent(itemView.context,MainActivity::class.java)
+            val intent = Intent(itemView.context, ActivityVideoDetail::class.java)
+
+                intent.putExtra(VIDEO_TITLE_KEY, video?.name)
+                intent.putExtra(VIDEO_KEY,video?.id)
 
             itemView.context.startActivity(intent)
         }
