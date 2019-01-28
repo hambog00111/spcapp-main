@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+      xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+      tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
@@ -33,18 +33,39 @@
                 android:id="@+id/nav_gallery"
                 android:icon="@drawable/ic_gallery"
                 android:title="Gallery" />
+        <item
+                android:id="@+id/nav_webview"
+                android:title="Browser"
+                android:icon="@drawable/ic_webview"/>
 
 
-    </group>
+
+
 
     <item android:title="Fill up Forms  ">
         <menu>
 
             <item
                 android:id="@+id/nav_bplo"
-                android:icon="@drawable/ic_bpo"
+                android:icon="@drawable/ic_fill_up"
                 android:title="BPLO Fill Up" />
         </menu>
+    </item>
+
+    <item android:title="ABOUT GOVPH">
+        <menu>
+
+            <item
+                    android:id="@+id/nav_govph"
+                    android:title="GOV.PH"/>
+            <item
+                    android:id="@+id/nav_open_data"
+                    android:title="Open Data Portal"/>
+            <item
+                    android:id="@+id/nav_official_gazette"
+                    android:title="Official Gazette"/>
+        </menu>
+
     </item>
 
     <item android:title="Goverment Links">
@@ -72,4 +93,6 @@
                        android:title="Sandiganbayan"/>
            </menu>
     </item>
+    </group>
 </menu>
+

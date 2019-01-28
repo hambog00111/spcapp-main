@@ -148,6 +148,7 @@
             android:layout_marginTop="20dp"
 
     />
+
     <TextView
             android:id="@+id/p_videos"
             android:text="Videos"
@@ -168,6 +169,57 @@
             android:textSize="28dp"
             app:layout_constraintHorizontal_bias="0.0"/>
 
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:src="@drawable/spcvid1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintDimensionRatio="16:9"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" android:id="@+id/imageView11"/>
+        <TextView
+                android:text="Darbio - San Pablo City Laguna (Official Music Video)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView11"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+        <TextView
+                android:text="S U B S C R I B E : FOR MORE MUSIC BY DARBIO ℗ Future Vision Records San Pablo City Laguna Mp3 Download LINK ..."
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                android:layout_marginTop="10dp" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
     <Button
             android:text="View More Videos..."
             android:layout_width="250dp"
@@ -177,6 +229,7 @@
             android:textColor="@color/white"
             android:background="@drawable/side_nav_title"
             android:layout_gravity="center"
+            android:layout_marginTop="15dp"
     />
 
 
