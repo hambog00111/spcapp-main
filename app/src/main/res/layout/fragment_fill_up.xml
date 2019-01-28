@@ -92,7 +92,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" android:id="@+id/opt2">
+                android:orientation="horizontal">
 
             <TextView
                     android:layout_width="wrap_content"
@@ -221,7 +221,7 @@
         <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" android:id="@+id/opt3">
+                android:orientation="horizontal">
 
             <RadioButton
                     android:id="@+id/r_business_single"
@@ -252,7 +252,7 @@
         <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" android:id="@+id/opt4">
+                android:orientation="horizontal">
 
 
             <TextView
@@ -286,7 +286,7 @@
         <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" android:id="@+id/opt5">
+                android:orientation="horizontal">
 
             <TextView
                     android:layout_width="wrap_content"
@@ -334,7 +334,7 @@
         <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" android:id="@+id/opt6">
+                android:orientation="horizontal">
 
             <RadioButton
                     android:id="@+id/r_goverment_yes"
