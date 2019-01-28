@@ -1184,7 +1184,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/side_nav_title"
                 android:textColor="@color/white"
-                android:text="Print"
+                android:text="Submit"
                 android:id="@+id/btnSend"/>
 
 

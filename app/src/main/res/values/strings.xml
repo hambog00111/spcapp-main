@@ -2,10 +2,10 @@
     <string name="app_name">SPC App</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">San Pablo City Android Application</string>
+    <string name="nav_header_title">San Pablo City Application</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_form">Download Bussiness Registration Form</string>
+
     <string name="action_bpo">BPLO Fill Up</string>
     <string name="home">San Pablo, officially the City of San Pablo, (Tagalog: Lungsod ng San Pablo), or simply known as
         San Pablo City, is a 1st class city in the province of Laguna, Philippines. According to the 2015 census, it has

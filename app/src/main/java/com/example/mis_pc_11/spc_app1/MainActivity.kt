@@ -61,6 +61,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_bplo->{
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentFillUp()).commit()
             }
+            R.id.nav_president->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentOfficePresident()).commit()
+            }
+
             else -> {
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentHome()).commit()
             }
