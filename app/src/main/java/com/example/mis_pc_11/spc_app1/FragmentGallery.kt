@@ -16,7 +16,7 @@ class FragmentGallery : Fragment() {
         return inflater.inflate(R.layout.fragment_gallery_layout, null)
 
 
-        
+
         }
     }
 
