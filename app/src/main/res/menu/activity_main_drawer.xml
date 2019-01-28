@@ -38,10 +38,6 @@
                 android:title="Browser"
                 android:icon="@drawable/ic_webview"/>
 
-
-
-
-
     <item android:title="Fill up Forms  ">
         <menu>
 

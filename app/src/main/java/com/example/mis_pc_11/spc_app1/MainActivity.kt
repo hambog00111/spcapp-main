@@ -54,15 +54,47 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_tourism->{
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentTourism()).commit()
             }
-
             R.id.nav_gallery->{
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentGallery()).commit()
             }
+            R.id.nav_webview->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentBrowser()).commit()
+            }
+
             R.id.nav_bplo->{
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentFillUp()).commit()
             }
+
+            R.id.nav_govph->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentGOV()).commit()
+            }
+            R.id.nav_open_data->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentOpenData()).commit()
+            }
+            R.id.nav_official_gazette->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentOfficialGazette()).commit()
+            }
+
             R.id.nav_president->{
                 supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentOfficePresident()).commit()
+            }
+            R.id.nav_vice_president->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentOfficeVice()).commit()
+            }
+            R.id.nav_senate->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentSenate()).commit()
+            }
+            R.id.nav_representatives->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentRepresentatives()).commit()
+            }
+            R.id.nav_supreme_court->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentSupremeCourt()).commit()
+            }
+            R.id.nav_court->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentCourtAppeals()).commit()
+            }
+            R.id.nav_sandiganbayan->{
+                supportFragmentManager.beginTransaction().replace(R.id.frag_container, FragmentSandiganbayan()).commit()
             }
 
             else -> {

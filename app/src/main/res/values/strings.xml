@@ -29,4 +29,6 @@
         known as San Pablo City, is a 1st class city in the province of Laguna, Philippines. According to the 2015
         census, it has a population of 266,068 peopl
     </string>
+    <string name="back"><![CDATA[<]]></string>
+    <string name="forward"><![CDATA[>]]></string>
 </resources>
