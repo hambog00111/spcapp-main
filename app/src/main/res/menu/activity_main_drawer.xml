@@ -37,10 +37,13 @@
                 android:id="@+id/nav_webview"
                 android:title="Browser"
                 android:icon="@drawable/ic_webview"/>
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 26810d8cbc2b6e835c5c7a65e05b46c35830b895
 
     <item android:title="Fill up Forms  ">
         <menu>

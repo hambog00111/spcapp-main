@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent">
 
 </android.support.constraint.ConstraintLayout>
+=======
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <Button
+            android:id="@+id/btn_back"
+            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:text="@string/back"/>
+
+    <Button android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_forward"
+            android:text="@string/forward"
+            android:layout_toEndOf="@+id/btn_back"/>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btn_forward"
+            android:layout_toStartOf="@+id/btn_go"
+            android:id="@+id/web_url"/>
+
+    <Button
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_go"
+            android:text="GO"
+            android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
+
+    <WebView
+            android:layout_height="match_parent"
+             android:layout_width="match_parent"
+            android:id="@+id/webView"/>
+
+</LinearLayout>
+>>>>>>> 26810d8cbc2b6e835c5c7a65e05b46c35830b895

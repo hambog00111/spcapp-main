@@ -9,18 +9,18 @@ import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
 
-class FragmentOfficePresident :
-    Fragment() {
+class FragmentRepresentatives :
+   Fragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_office_president, container,
+        val view: View = inflater.inflate(R.layout.fragment_representatives, container,
             false)
+        
 
-
-        val  mWebView = view.findViewById(R.id.web_president) as WebView
-        mWebView.loadUrl("http://president.gov.ph/")
+        val  mWebView = view.findViewById(R.id.web_representatives) as WebView
+        mWebView.loadUrl("http://www.congress.gov.ph/")
 
         val webSettings = mWebView.getSettings()
         webSettings.setJavaScriptEnabled(true)
@@ -34,3 +34,4 @@ class FragmentOfficePresident :
 
     }
 }
+
