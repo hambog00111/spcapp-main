@@ -7,7 +7,8 @@
     <string name="nav_header_desc">Navigation header</string>
 
     <string name="action_bpo">BPLO Fill Up</string>
-    <string name="home">San Pablo, officially the City of San Pablo, (Tagalog: Lungsod ng San Pablo), or simply known as
+    <string name="home">\t \t San Pablo, officially the City of San Pablo, (Tagalog: Lungsod ng San Pablo), or simply
+        known as
         San Pablo City, is a 1st class city in the province of Laguna, Philippines. According to the 2015 census, it has
         a population of 266,068 people. Located in the southern portion of Laguna province, it is one of the oldest
         cities in the Philippines. By land area, it is the largest in the province of Laguna. Its population ranks sixth
@@ -15,6 +16,11 @@
         popularly known as the "City of Seven Lakes" (Tagalog: Lungsod ng Pitong Lawa), referring to the Seven Lakes of
         San Pablo: Lake Sampaloc (or Sampalok), Lake Palakpakin, Lake Bunot, Lakes Pandin and Yambo, Lake Muhikap, and
         Lake Calibato. San Pablo was part of the Roman Catholic Archdiocese of Lipa since 1910. On November 28, 1967,
+        it became an independent diocese and became the Roman Catholic Diocese of San Pablo.
+    </string>
+
+    <string name="home2">
+        1910. On November 28, 1967, it became an independent diocese and became the Roman Catholic Diocese of San Pablo.
     </string>
     <string name="tab_govphil">The Integrated Government Philippines (iGovPhil) is a joint program of the
         Department of Information and Communications Technology (DICT) and the
@@ -31,4 +37,7 @@
     </string>
     <string name="back"><![CDATA[<]]></string>
     <string name="forward"><![CDATA[>]]></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

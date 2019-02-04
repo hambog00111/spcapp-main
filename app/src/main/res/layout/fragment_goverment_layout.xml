@@ -30,13 +30,15 @@
                 android:textSize="28dp"
                 app:layout_constraintHorizontal_bias="0.0"/>
 
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="@string/home"
-                  android:textColor="@android:color/black"
-                  android:layout_marginLeft="20dp"
-                  android:layout_marginRight="20dp"
-                  android:textSize="13dp"/>
+        <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/asd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="25dp"
+                android:textSize="13dp"/>
+
 
         <TextView
                 android:paddingLeft="20dp"
@@ -92,7 +94,10 @@
                   android:textColor="@android:color/black"
                   android:layout_marginLeft="20dp"
                   android:layout_marginRight="20dp"
-                  android:textSize="13dp"/>
+                  android:textSize="13dp"
+
+        />
+
 
         <TextView
                 android:paddingLeft="20dp"
@@ -114,13 +119,14 @@
                 android:textSize="28dp"
                 app:layout_constraintHorizontal_bias="0.0"/>
 
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="@string/home"
-                  android:textColor="@android:color/black"
-                  android:layout_marginLeft="20dp"
-                  android:layout_marginRight="20dp"
-                  android:textSize="13dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="13dp"/>
 
         <TextView
                 android:paddingLeft="20dp"
