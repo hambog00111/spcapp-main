@@ -17,6 +17,7 @@ import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineModel
 
 
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.home.FragmentHome
 
 class FragmentCityHotline : Fragment() {
 
@@ -35,7 +36,7 @@ class FragmentCityHotline : Fragment() {
         val btncall= rootview.findViewById<Button>(R.id.btn_call_city_hot_line)
         btncall?.setOnClickListener{
             activity!!.supportFragmentManager.beginTransaction().replace(R.id.frag_container,
-                FragmentCityEmployeesCorner()
+                FragmentHome()
             ).commit()
         }
 

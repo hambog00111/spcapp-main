@@ -33,15 +33,15 @@ class FragmentCityHotlinephone : Fragment() {
         val rootview = inflater.inflate(R.layout.fragment_cityhotline_listview, null)
 
 //        val phoneNumber = "000000"
-//
-//        btn_call_city_hot_line.setOnClickListener {
-//
-//            val  intent = Intent(Intent.ACTION_DIAL)
-//            intent.data= Uri.parse("tel:"+ phoneNumber)
-//
-//            startActivity(intent)
-//
-//        }
+////
+////        btn_call_city_hot_line.setOnClickListener {
+////
+////            val  intent = Intent(Intent.ACTION_DIAL)
+////            intent.data= Uri.parse("tel:"+ phoneNumber)
+////
+////            startActivity(intent)
+////
+////        }
 
 
 
