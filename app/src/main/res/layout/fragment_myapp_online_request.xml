@@ -116,7 +116,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="BC"
+                        android:text="Birth Certificate"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:padding="3dp"
@@ -155,7 +155,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="MC"
+                        android:text="Marriage Certificate"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:textSize="15sp"
@@ -182,7 +182,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="DC"
+                        android:text="Death Certificate"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:textSize="15sp"

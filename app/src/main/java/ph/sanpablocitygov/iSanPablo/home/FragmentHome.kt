@@ -27,7 +27,12 @@ import android.widget.Button
 import android.widget.MediaController
 import android.widget.VideoView
 import kotlinx.android.synthetic.main.fragment_home_layout_2.view.*
-import ph.sanpablocitygov.iSanPablo.home.BusinessPermit.FragmentBusinessPermit
+import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessPermit.FragmentBusinessPermit
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentGovermentOnlineServices
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyAppOnlineRequest
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes
 
 @Suppress("UNREACHABLE_CODE", "PLUGIN_WARNING")
 class FragmentHome : Fragment() {
@@ -86,11 +91,53 @@ class FragmentHome : Fragment() {
                 FragmentFBCIO()
             ).commit()
         }
-        val btnpermit = view.findViewById<TextView>(R.id.btn_business_permit)
-        btnpermit?.setOnClickListener {
+
+        val textBITC = view.findViewById<TextView>(R.id.btn_business_in_the_city)
+        textBITC.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentBusinessPermit()
+            ).commit()
+        }
+
+        val textMT = view.findViewById<TextView>(R.id.btn_my_taxes)
+        textMT.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentMyTaxes()
+            ).commit()
+        }
+
+             val textGOS = view.findViewById<TextView>(R.id.btn_gov_online_service)
+        textGOS.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentGovermentOnlineServices()
+            ).commit()
+        }
+
+        val textCHL = view.findViewById<TextView>(R.id.btn_city_hot_lines)
+        textCHL.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentCityHotline()
+            ).commit()
+        }
+
+        val textCEC = view.findViewById<TextView>(R.id.btn_city_employees_corner)
+        textCEC.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentCityEmployeesCorner()
+            ).commit()
+        }
+
+
+        val textMAOR = view.findViewById<TextView>(R.id.btn_online_request)
+        textMAOR.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentMyAppOnlineRequest()
             ).commit()
         }
         return view

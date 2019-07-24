@@ -1,4 +1,4 @@
-package layout.ph.sanpablocitygov.iSanPablo.goverment.department
+package ph.sanpablocitygov.iSanPablo.home.isanpablo
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

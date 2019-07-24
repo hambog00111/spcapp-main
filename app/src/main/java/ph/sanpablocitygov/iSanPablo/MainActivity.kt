@@ -17,100 +17,19 @@ import ph.sanpablocitygov.iSanPablo.home.FragmentHome
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.dialog_disclosure.view.*
-import kotlinx.android.synthetic.main.dialog_my_isanpablo.view.*
-import layout.FragmentMyTaxes
-import layout.ph.sanpablocitygov.iSanPablo.FragmentCityEmployeesCorner
-import layout.ph.sanpablocitygov.iSanPablo.FragmentMyAppOnlineRequest
-import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
 
-import layout.ph.sanpablocitygov.iSanPablo.goverment.department.FragmentGovermentOnlineServices
 import ph.sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
-import ph.sanpablocitygov.iSanPablo.home.BusinessPermit.FragmentBusinessPermit
+
 import ph.sanpablocitygov.iSanPablo.links.*
-//import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
-
-//    internal var expandableListView: ExpandableListView? = null
-//    internal var adapter: ExpandableListAdapter? = null
-//    internal var titleList: List<String> ? = null
-//    val data: HashMap<String, List<String>>
-//
-//        get() {
-//            val listData = HashMap<String, List<String>>()
-//            val theTourism = ArrayList<String>()
-//            theTourism.add("Tourism Master Plan")
-//            theTourism.add("Gallery")
-//            theTourism.add("Landmarks")
-//            theTourism.add("Events")
-//            val theHome = ArrayList<String>()
-//
-//            val theCity = ArrayList<String>()
-//            theCity.add("History")
-//            theCity.add("San Pableños")
-//            theCity.add("Barangay")
-//            theCity.add("Hymn")
-//            theCity.add("Location")
-//            theCity.add("Mission and Vision")
-//
-//            val theGoverment = ArrayList<String>()
-//            theGoverment.add("Office Vicinity Map")
-//            theGoverment.add("Local Officials")
-//            theGoverment.add("Departments")
-//
-//            val theEconomy = ArrayList<String>()
-//            theEconomy.add("Comprehensive Land Usage Program Vol. 1")
-//            theEconomy.add("Comprehensive Land Usage Program Vol. 2")
-//            theEconomy.add("Comprehensive Land Usage Program Vol. 3")
-//            theEconomy.add("Comprehensive Development Plan")
-//            theEconomy.add("SPC Ecological Profile")
-//            theEconomy.add("CDP Annexes")
-//
-//
-//
-//            val theOthers = ArrayList<String>()
-//            theOthers.add("Citizen's Charter")
-//            theOthers.add("Browser")
-//
-//            val theFillup = ArrayList<String>()
-//            theFillup.add("BPLO Fill Up")
-//
-//            val theAbout = ArrayList<String>()
-//            theAbout.add("GOV.PH")
-//            theAbout.add("Open Data Portal")
-//            theAbout.add("Official Gazette")
-//
-//            val theLinks = ArrayList<String>()
-//            theLinks.add("Office of the President")
-//            theLinks.add("Office of the Vice President")
-//            theLinks.add("Senate of the Philippines")
-//            theLinks.add("House of Representatives")
-//            theLinks.add("Supreme Court")
-//            theLinks.add("Court of the Appeals")
-//            theLinks.add("Sandiganbayan")
-//
-//
-//
-//            listData["Goverment"] = theCity
-//            listData["Economy"] = theEconomy
-//            listData["Home"] = theHome
-//            listData["The City"] = theCity
-//            listData["Tourism"] = theTourism
-//
-//            listData["Others"] = theOthers
-//            listData["Fill Up Forms"] = theFillup
-//            listData["About GOVPH"] = theAbout
-//            listData["Government Links"] = theLinks
-//
-//            return listData
-//        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setSupportActionBar(toolbar)
+
 
 //        fab.setOnClickListener { view ->
 //            var show: Any = Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -133,29 +52,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
        ).commit()
 
 
-//
-//        var mdrawerlayout = findViewById<DrawerLayout>(R.id.drawer_layout)
-//        var expandableListview = findViewById<ExpandableListView>(R.id.expendableListView)
-
-
-//        expandableListView = findViewById(R.id.expendableListView)
-//        if (expandableListView != null) {
-//            val listData = data
-//            titleList = ArrayList(listData.keys)
-//            adapter = CustomExpandableListAdapter(this, titleList as ArrayList<String>, listData)
-//            expandableListView!!.setAdapter(adapter)
-//
-//            expandableListView!!.setOnGroupExpandListener { groupPosition -> Toast.makeText(applicationContext, (titleList as ArrayList<String>)[groupPosition] + " List Expanded.", Toast.LENGTH_SHORT).show() }
-//
-//            expandableListView!!.setOnGroupCollapseListener { groupPosition -> Toast.makeText(applicationContext, (titleList as ArrayList<String>)[groupPosition] + " List Collapsed.", Toast.LENGTH_SHORT).show() }
-//
-//            expandableListView!!.setOnChildClickListener { _, _, groupPosition, childPosition, _ ->
-//                Toast.makeText(applicationContext, "Clicked: " + (titleList as ArrayList<String>)[groupPosition] + " -> " + listData[(titleList as ArrayList<String>)[groupPosition]]!!.get(childPosition), Toast.LENGTH_SHORT).show()
-//                false
-//            }
-//        }
 
     }
+
+
 
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
@@ -286,27 +186,31 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_home -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentHome()
-                ).commit()
+                    FragmentHome(), null)
+                    .addToBackStack(null)
+                .commit()
             }
             R.id.nav_our_city -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOurCity()
-                ).commit()
+                    FragmentOurCity(), null)
+                        .addToBackStack(null)
+                .commit()
             }
             R.id.nav_our_government -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOurGoverment()
-                ).commit()
+                    FragmentOurGoverment(), null)
+                    .addToBackStack(null)
+                .commit()
             }
 
             R.id.nav_department_head -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentDepartment()
-                ).commit()
+                    FragmentDepartment(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
 
             R.id.nav_full_disclosure -> {
@@ -576,163 +480,103 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
 
-            R.id.nav_My_I_San_Pablo-> {
-
-                val disView = LayoutInflater.from(this).inflate(R.layout.dialog_my_isanpablo, null)
-                val disBuilder = AlertDialog.Builder(this)
-                    .setView(disView)
-                val disDialog = disBuilder.show()
-
-                disView.btn_business_in_the_city.setOnClickListener {
-                    disDialog.dismiss()
-                    supportFragmentManager.beginTransaction().replace(
-                        R.id.frag_container,
-                        FragmentBusinessPermit()
-                    ).commit()
-
-                }
-
-                disView.btn_my_taxes.setOnClickListener {
-                    disDialog.dismiss()
-                    supportFragmentManager.beginTransaction().replace(
-                        R.id.frag_container,
-                        FragmentFillUp()
-                    ).commit()
-
-                }
-                disView.btn_my_taxes.setOnClickListener {
-                    disDialog.dismiss()
-                    supportFragmentManager.beginTransaction().replace(
-                        R.id.frag_container,
-                        FragmentMyTaxes()
-                    ).commit()
-
-                }
-                disView.btn_online_request.setOnClickListener {
-                    disDialog.dismiss()
-                    supportFragmentManager.beginTransaction().replace(
-                        R.id.frag_container,
-                        FragmentMyAppOnlineRequest()
-                    ).commit()
-
-                }
-
-                disView.btn_city_hot_lines.setOnClickListener {
-                    disDialog.dismiss()
-                    supportFragmentManager.beginTransaction().replace(
-                        R.id.frag_container,
-                        FragmentCityHotline()
-                    ).commit()
-
-                }
-
-                disView.btn_gov_online_service.setOnClickListener {
-                    disDialog.dismiss()
-                    supportFragmentManager.beginTransaction().replace(
-                        R.id.frag_container,
-                        FragmentGovermentOnlineServices()
-                    ).commit()
-
-                }
-
-                disView.btn_city_employees_corner.setOnClickListener {
-                    disDialog.dismiss()
-                    supportFragmentManager.beginTransaction().replace(
-                        R.id.frag_container,
-                        FragmentCityEmployeesCorner()
-                    ).commit()
-
-                }
-
-                disView.btn_cancel.setOnClickListener {
-                    disDialog.dismiss()
-                }
-
-            }
 
 
 
             R.id.nav_webview ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentBrowser()
-                ).commit()
+                    FragmentBrowser(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
 
             R.id.nav_bplo ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentFillUp()
-                ).commit()
+                    FragmentFillUp(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
 
             R.id.nav_govph ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentGOV()
-                ).commit()
+                    FragmentGOV(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.nav_open_data ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOpenData()
-                ).commit()
+                    FragmentOpenData(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.nav_official_gazette ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOfficialGazette()
-                ).commit()
+                    FragmentOfficialGazette(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
 
             R.id.nav_president ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOfficePresident()
-                ).commit()
+                    FragmentOfficePresident(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.nav_vice_president ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOfficeVice()
-                ).commit()
+                    FragmentOfficeVice(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.nav_senate ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentSenate()
-                ).commit()
+                    FragmentSenate(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.nav_representatives ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentRepresentatives()
-                ).commit()
+                    FragmentRepresentatives(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.nav_supreme_court ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentSupremeCourt()
-                ).commit()
+                    FragmentSupremeCourt(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.nav_court ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentCourtAppeals()
-                ).commit()
+                    FragmentCourtAppeals(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.nav_sandiganbayan ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentSandiganbayan()
-                ).commit()
+                    FragmentSandiganbayan(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
 
             else -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentHome()
-                ).commit()
+                    FragmentHome(), null)
+                    .addToBackStack(null)
+                    .commit()
             }
         }
         drawer_layout.closeDrawer(GravityCompat.START)

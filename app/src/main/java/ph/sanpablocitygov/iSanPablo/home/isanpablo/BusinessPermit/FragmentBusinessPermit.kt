@@ -1,4 +1,4 @@
-package ph.sanpablocitygov.iSanPablo.home.BusinessPermit
+package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessPermit
 
 import android.app.AlertDialog
 import android.app.DownloadManager
