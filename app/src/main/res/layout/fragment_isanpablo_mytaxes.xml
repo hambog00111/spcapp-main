@@ -82,6 +82,7 @@
                         android:layout_height="100dp"
                         android:background="@drawable/logo_mt_rtp"
                         android:fitsSystemWindows="true"
+                        android:id="@+id/btn_rpt_payment"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
 
@@ -111,6 +112,7 @@
                         android:background="@drawable/logo_mt_purchase"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
+                        android:id="@+id/btn_fp"
                         android:layout_gravity="center"/>
 
                 <TextView
@@ -147,7 +149,7 @@
                 <Button
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:id="@+id/btn_business_bplo"
+                        android:id="@+id/btn_mop"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:background="@drawable/logo_mt_mop"
@@ -177,6 +179,7 @@
                         android:layout_height="100dp"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
+                        android:id="@+id/btn_lcr_request_payment"
                         android:background="@drawable/logo_mt_lcr"
                         android:layout_gravity="center"/>
 
@@ -244,6 +247,7 @@
                         android:background="@drawable/logo_mt_op"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
+                        android:id="@+id/btn_op"
                         android:layout_gravity="center"/>
 
                 <TextView

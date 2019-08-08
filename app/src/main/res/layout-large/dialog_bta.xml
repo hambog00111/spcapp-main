@@ -2,15 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:orientation="vertical"
-                android:background="@drawable/background">
-
+              android:background="@drawable/background"
+              android:orientation="vertical">
 
     <TextView android:layout_width="wrap_content"
-              android:text="BPLO Fill-up Forms"
+              android:text="Business Tax Assessment"
+              android:textStyle="bold"
               android:layout_gravity="center"
               android:textSize="20sp"
-              android:textStyle="bold"
               android:textColor="@color/white"
               android:layout_marginBottom="10dp"
               android:layout_marginTop="10dp"
@@ -20,7 +19,7 @@
               android:layout_height="wrap_content"
               android:textColor="@color/white"
               android:textAlignment="center"
-              android:textSize="15sp"
+              android:textSize="25sp"
               android:layout_marginTop="10dp"
               android:layout_marginBottom="8dp"
               android:layout_marginStart="15dp"
@@ -28,14 +27,14 @@
               android:background="@drawable/text_border2"
               android:padding="10dp"
               android:textStyle="bold"
-              android:text="Download Business Registration Form"
-              android:id="@+id/btn_download_bplo"/>
+              android:text="Online Fill-up Form"
+              android:id="@+id/btn_online_bta"/>
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:textColor="@color/white"
               android:textAlignment="center"
-              android:textSize="15sp"
+              android:textSize="25sp"
               android:layout_marginTop="10dp"
               android:layout_marginBottom="8dp"
               android:layout_marginStart="15dp"
@@ -43,8 +42,8 @@
               android:background="@drawable/text_border2"
               android:padding="10dp"
               android:textStyle="bold"
-              android:text="Online BPLO Fill up Form"
-              android:id="@+id/btn_online_bplo"/>
+              android:text="Download Form"
+              android:id="@+id/btn_download_bta"/>
 
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -54,7 +53,7 @@
               android:textColor="@color/white"
               android:layout_margin="20dp"
               android:text="cancel"
-              android:id="@+id/btn_bplo_cancel"
-              android:textSize="15sp"/>
+              android:id="@+id/btn_bt_cancel"
+              android:textSize="25sp"/>
 
 </LinearLayout>

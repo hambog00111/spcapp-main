@@ -102,126 +102,236 @@
                 android:layout_marginEnd="10dp"
                 android:scaleType="fitCenter"/>
 
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_margin="10dp"
+                      android:paddingTop="10dp"
+                      android:gravity="center">
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="My iSanPablo"
-                android:textStyle="bold"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:textSize="30sp"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center"
-        />
+            <ImageView android:layout_width="100dp"
+                       android:layout_height="100dp"
+                       android:src="@drawable/logo_home_mysanpablo"/>
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:textColor="@color/white"
-                  android:textAlignment="center"
-                  android:textSize="25sp"
-                  android:layout_marginTop="5dp"
-                  android:layout_marginBottom="5dp"
-                  android:layout_marginStart="15dp"
-                  android:layout_marginEnd="15dp"
-                  android:background="@drawable/text_border2"
-                  android:padding="10dp"
-                  android:textStyle="bold"
-                  android:text="Business in the City"
-                  android:id="@+id/btn_business_in_the_city"
-                  android:textAllCaps="true"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/white"
+                      android:textSize="25sp"
+                      android:layout_marginStart="10dp"
+                      android:textStyle="bold"
+                      android:text="Business Tax Assessment"/>
 
-        <TextView
-                android:textAllCaps="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="25sp"
+
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="20dp">
+
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+        <LinearLayout
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/text_border2"
-                android:padding="10dp"
-                android:textStyle="bold"
-                android:text="My Taxes"
-                android:id="@+id/btn_my_taxes"/>
-
-
-
-        <TextView
-                android:textAllCaps="true"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="25sp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/text_border2"
-                android:padding="10dp"
-                android:textStyle="bold"
-                android:text="My App Online Request"
-                android:id="@+id/btn_online_request"/>
+                android:orientation="vertical">
 
-        <TextView
-                android:textAllCaps="true"
-                android:layout_width="match_parent"
+            <Button
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/logo_home_bc"
+                    android:fitsSystemWindows="true"
+                    android:id="@+id/btn_business_in_the_city"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BUSINESS IN THE CITY"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="25sp"
+                android:orientation="vertical">
+
+            <Button
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/logo_home_mt"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_my_taxes"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MY TAXES"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:padding="3dp"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+        <LinearLayout
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/text_border2"
-                android:padding="10dp"
-                android:textStyle="bold"
-                android:text="City Hot Lines"
-                android:id="@+id/btn_city_hot_lines"/>
-        <TextView
-                android:textAllCaps="true"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="25sp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/text_border2"
-                android:padding="10dp"
-                android:textStyle="bold"
-                android:text="Government Online Services"
-                android:id="@+id/btn_gov_online_service"/>
+                android:orientation="vertical">
 
-        <TextView
-                android:textAllCaps="true"
-                android:layout_width="match_parent"
+            <Button
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:id="@+id/btn_online_request"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/logo_home_maor"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MY APP ONLINE REQUEST"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="25sp"
+                android:orientation="vertical">
+
+            <Button
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/logo_home_ch"
+                    android:id="@+id/btn_city_hot_lines"
+                    android:layout_gravity="center"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CITY HOTLINES"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+        <LinearLayout
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/text_border2"
-                android:padding="10dp"
-                android:textStyle="bold"
-                android:text="City Employees Corner"
-                android:id="@+id/btn_city_employees_corner"/>
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
+            <Button
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/logo_home_gos"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/btn_gov_online_service"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GOVERNMENT ONLINE SERVICES"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
 
+        </LinearLayout>
+        <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
+            <Button
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/logo_home_cec"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/btn_city_employees_corner"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CITY EMPLOYEES CORNER"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+        </LinearLayout>
         <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"

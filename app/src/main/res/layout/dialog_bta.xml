@@ -3,11 +3,10 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical"
-                android:background="@drawable/background">
-
+              android:background="@drawable/background">
 
     <TextView android:layout_width="wrap_content"
-              android:text="BPLO Fill-up Forms"
+              android:text="Business Tax Assessment"
               android:layout_gravity="center"
               android:textSize="20sp"
               android:textStyle="bold"
@@ -28,8 +27,8 @@
               android:background="@drawable/text_border2"
               android:padding="10dp"
               android:textStyle="bold"
-              android:text="Download Business Registration Form"
-              android:id="@+id/btn_download_bplo"/>
+              android:text="Online Fill-up Form"
+              android:id="@+id/btn_online_bta"/>
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -43,8 +42,8 @@
               android:background="@drawable/text_border2"
               android:padding="10dp"
               android:textStyle="bold"
-              android:text="Online BPLO Fill up Form"
-              android:id="@+id/btn_online_bplo"/>
+              android:text="Download Form"
+              android:id="@+id/btn_download_bta"/>
 
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -54,7 +53,7 @@
               android:textColor="@color/white"
               android:layout_margin="20dp"
               android:text="cancel"
-              android:id="@+id/btn_bplo_cancel"
+              android:id="@+id/btn_bta_cancel"
               android:textSize="15sp"/>
 
 </LinearLayout>

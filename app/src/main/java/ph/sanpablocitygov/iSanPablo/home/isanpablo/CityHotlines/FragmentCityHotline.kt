@@ -6,9 +6,9 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
+import android.widget.Button
 import android.widget.ListView
-import android.widget.Toast
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineAdapter
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineModel
 
@@ -19,7 +19,6 @@ class FragmentCityHotline : Fragment() {
 
     private lateinit var listView: ListView
 
-
     @SuppressLint("RestrictedApi")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -28,10 +27,18 @@ class FragmentCityHotline : Fragment() {
         listView = rootview.findViewById(R.id.listview_cityhotline)
         genList(listView)
 
+        val btncall= rootview.findViewById<Button>(R.id.btn_call_city_hot_line)
+        btncall?.setOnClickListener{
+            activity!!.supportFragmentManager.beginTransaction().replace(R.id.frag_container,
+                FragmentCityEmployeesCorner()
+            ).commit()
+        }
+
 
 
         return rootview
     }
+
     fun genList(ls: ListView) {
         var lists: MutableList<CityhotlineModel> = mutableListOf<CityhotlineModel>()
 
@@ -78,8 +85,7 @@ class FragmentCityHotline : Fragment() {
         val list = CityhotlineAdapter(requireContext(), R.layout.row_cityhot_lines, lists)
         ls.adapter = list
 
-
-
     }
+
 
 }
