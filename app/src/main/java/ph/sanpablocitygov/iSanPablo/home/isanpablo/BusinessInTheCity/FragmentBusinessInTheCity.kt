@@ -25,7 +25,6 @@ import kotlinx.android.synthetic.main.dialog_investment.view.btn_business_invest
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_invest_cancel
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 import ph.sanpablocitygov.iSanPablo.R
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.FragmentBusinessTaxAssessment
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
 import ph.sanpablocitygov.iSanPablo.links.FragmentHomeCSC
 
@@ -172,7 +171,6 @@ class FragmentBusinessInTheCity : Fragment() {
             investmentView.btn_invest_cancel.setOnClickListener {
                 investDialog.dismiss()
             }
-
         }
 
 
@@ -215,15 +213,6 @@ class FragmentBusinessInTheCity : Fragment() {
                 .commit()
         }
 
-
-        val btnass = view.findViewById<Button>(R.id.btn_business_bta)
-        btnass.setOnClickListener {
-            activity!!.supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentBusinessTaxAssessment() , null)
-                .addToBackStack(null)
-                .commit()
-        }
         return  view
 
     }
