@@ -37,7 +37,7 @@
     <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="48dp"
             android:layout_height="46dp"
-            app:srcCompat="@drawable/ic_city"
+            app:srcCompat="@drawable/ic_home"
             android:id="@+id/imageView_video_profile"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="8dp"

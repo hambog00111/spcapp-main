@@ -16,6 +16,10 @@
                 android:title="Our Government"/>
         <item android:id="@+id/nav_full_disclosure"
               android:title="Full Disclosure"/>
+        <item android:id="@+id/nav_tourism"
+              android:title="Tourism"/>
+
+
 
         <!--<item android:title="The City">-->
             <!--<menu>-->
@@ -90,18 +94,18 @@
             <!--</menu>-->
         <!--</item>-->
 
-<item android:title="Others">
-        <menu>
-        <item
-                android:id="@+id/nav_charter"
-                android:title="Citizen's Charter"
-        />
-        <item
-                android:id="@+id/nav_webview"
-                android:title="Browser"
-               />
-        </menu>
-</item>
+<!--<item android:title="Others">-->
+        <!--<menu>-->
+        <!--<item-->
+                <!--android:id="@+id/nav_charter"-->
+                <!--android:title="Citizen's Charter"-->
+        <!--/>-->
+        <!--<item-->
+                <!--android:id="@+id/nav_webview"-->
+                <!--android:title="Browser"-->
+               <!--/>-->
+        <!--</menu>-->
+<!--</item>-->
     <item android:title="Fill up Forms ">
         <menu>
 

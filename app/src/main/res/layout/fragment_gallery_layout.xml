@@ -61,22 +61,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!--<TextView-->
-            <!--android:textAlignment="center"-->
-            <!--android:text="GALLERY"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:paddingTop="3dp"-->
-            <!--android:paddingBottom="5dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:textColor="@color/white"-->
-        <!--android:textStyle="bold"-->
-            <!--android:textSize="25sp"-->
-            <!--android:layout_marginTop="20dp"-->
-    <!--/>-->
-
-
     <TextView
 
             android:paddingLeft="20dp"
@@ -119,17 +103,7 @@
                 android:layout_marginStart="8dp"
                 android:textSize="15sp"
                 android:textColor="@color/white"/>
-        <!--<TextView-->
-        <!--android:text=" Doña Leonila Park Plan San Pablo City, Laguna..."-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/textView7"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/textView6"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--android:layout_marginEnd="8dp"/>-->
+
 
 
 
@@ -152,7 +126,8 @@
                 android:layout_marginStart="100dp" app:layout_constraintTop_toTopOf="@+id/btn_play"/>
         <Button android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/play"
+                android:background="@drawable/ic_play"
+
 
                 android:textSize="15sp"
                 app:layout_constraintTop_toBottomOf="@+id/textView6"
@@ -161,17 +136,17 @@
                 android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/btn_forward"/>
 
     </android.support.constraint.ConstraintLayout>
-    <!--<Button-->
-            <!--android:text="View More Videos..."-->
-            <!--android:layout_width="250dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/button_videos"-->
-            <!--style="@style/Widget.AppCompat.Button"-->
-            <!--android:textColor="@color/white"-->
-            <!--android:background="@drawable/text_border2"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:layout_marginTop="15dp"-->
-    <!--/>-->
+    <Button
+            android:text="View More Videos..."
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_videos"
+            style="@style/Widget.AppCompat.Button"
+            android:textColor="@color/white"
+            android:background="@drawable/text_border2"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+    />
 
 
     <TextView
@@ -204,7 +179,7 @@
             <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:src="@drawable/slake0"
+                    android:src="@drawable/lake1"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -226,7 +201,30 @@
             <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:src="@drawable/slake1"
+                    android:src="@drawable/lake2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintDimensionRatio="20:12"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop"
+                    android:paddingBottom="10dp"
+            />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@drawable/lake5"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -247,49 +245,7 @@
             <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:src="@drawable/slake2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintDimensionRatio="20:12"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:scaleType="centerCrop"
-                    android:paddingBottom="10dp"
-            />
-
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:src="@drawable/slake4"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintDimensionRatio="20:12"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:scaleType="centerCrop"
-                    android:paddingBottom="10dp"
-            />
-
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:src="@drawable/slake5"
+                    android:src="@drawable/lake3"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -312,7 +268,7 @@
             <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:src="@drawable/slake6"
+                    android:src="@drawable/lake4"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -328,26 +284,6 @@
 
 
     </LinearLayout>
-
-
-    <!--<Button-->
-            <!--android:text="View More Pictures..."-->
-            <!--android:layout_width="250dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/button_picture"-->
-            <!--style="@style/Widget.AppCompat.Button"-->
-            <!--android:textColor="@color/white"-->
-            <!--android:background="@drawable/text_border"-->
-            <!--android:layout_gravity="center"-->
-
-
-
-    <!--/>-->
-
-
-
-
-
 
     <LinearLayout
             android:layout_width="match_parent"

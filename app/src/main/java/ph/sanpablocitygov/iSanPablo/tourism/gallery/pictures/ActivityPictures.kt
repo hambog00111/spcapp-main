@@ -16,12 +16,12 @@ class ActivityPictures : AppCompatActivity() {
 
         val rview = findViewById<View>(R.id.rview) as RecyclerView
         val place = intArrayOf(
-            R.drawable.slake1,
-            R.drawable.slake2,
-            R.drawable.slake4,
-            R.drawable.slake5,
-            R.drawable.slake6,
-            R.drawable.slake0
+            R.drawable.lake1,
+            R.drawable.lake1,
+            R.drawable.lake1,
+            R.drawable.lake1,
+            R.drawable.lake1,
+            R.drawable.lake1
         )
         val name = arrayOf("Lake1","Lake2","Lake3","Lake4","Lake5","Lake6")
 

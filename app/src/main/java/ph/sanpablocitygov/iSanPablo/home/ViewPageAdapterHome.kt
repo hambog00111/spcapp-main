@@ -12,7 +12,7 @@ import ph.sanpablocitygov.iSanPablo.R
 class ViewPageAdapterHome(private val context: Context) : PagerAdapter(){
 
     private var layoutInflater: LayoutInflater?=null
-    private val images = arrayOf(R.drawable.slake4,R.drawable.slake0,R.drawable.slake1,R.drawable.slake2,R.drawable.slake5)
+    private val images = arrayOf(R.drawable.lake1,R.drawable.lake2,R.drawable.lake3,R.drawable.lake4,R.drawable.lake5)
 
     override fun isViewFromObject(p0: View, p1: Any): Boolean {
         return p0 === p1

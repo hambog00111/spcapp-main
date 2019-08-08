@@ -131,7 +131,7 @@
                         <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="My iSanPablo"
+                                android:text="My i San Pablo"
                                 android:textStyle="bold"
                                 android:gravity="center"
                                 android:textSize="24sp"
@@ -232,7 +232,7 @@
                                   android:layout_height="wrap_content"
                                   android:textColor="@color/white"
                                   android:textAlignment="center"
-                                  android:textSize="15sp"
+                                   android:textSize="15sp"
                                   android:layout_marginTop="5dp"
                                   android:layout_marginBottom="5dp"
                                   android:layout_marginStart="15dp"
@@ -243,40 +243,6 @@
                                   android:text="City Employees Corner"
                                   android:id="@+id/btn_city_employees_corner"/>
 
-
-                        <TextView
-                                android:textAllCaps="true"
-                                android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:textColor="@color/white"
-                                  android:textAlignment="center"
-                                  android:textSize="15sp"
-                                  android:layout_marginTop="5dp"
-                                  android:layout_marginBottom="5dp"
-                                  android:layout_marginStart="15dp"
-                                  android:layout_marginEnd="15dp"
-                                  android:background="@drawable/text_border2"
-                                  android:padding="10dp"
-                                  android:textStyle="bold"
-                                  android:text="G"
-                                  android:id="@+id/btn_g"/>
-
-                        <TextView
-                                android:textAllCaps="true"
-                                android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                  android:textColor="@color/white"
-                                  android:textAlignment="center"
-                                  android:textSize="15sp"
-                                  android:layout_marginTop="5dp"
-                                  android:layout_marginBottom="5dp"
-                                  android:layout_marginStart="15dp"
-                                  android:layout_marginEnd="15dp"
-                                  android:background="@drawable/text_border2"
-                                  android:padding="10dp"
-                                  android:textStyle="bold"
-                                  android:text="H"
-                                  android:id="@+id/btn_h"/>
 
 
                         <TextView android:layout_width="match_parent"

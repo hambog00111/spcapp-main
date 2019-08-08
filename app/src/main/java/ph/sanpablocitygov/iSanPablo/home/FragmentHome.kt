@@ -34,6 +34,7 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentGovermentOnlineServic
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyAppOnlineRequest
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes
 
+
 @Suppress("UNREACHABLE_CODE", "PLUGIN_WARNING")
 class FragmentHome : Fragment() {
 
@@ -59,15 +60,17 @@ class FragmentHome : Fragment() {
         btncsc?.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                FragmentHomeCSC()
-            ).commit()
+                FragmentHomeCSC() , null)
+                .addToBackStack(null)
+                .commit()
         }
         val btnphiljob = view.findViewById<Button>(R.id.btn_home_phil_job)
         btnphiljob?.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                FragmentHomePhilJobNet()
-            ).commit()
+                FragmentHomePhilJobNet() , null)
+                .addToBackStack(null)
+                .commit()
         }
 
         val btngeps = view.findViewById<android.widget.Button>(R.id.btn_home_philgeps)
@@ -75,21 +78,27 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentHomePhilGEPS()
-            ).commit()
+                , null)
+                .addToBackStack(null)
+                .commit()
         }
         val btncio = view.findViewById<android.widget.Button>(R.id.btn_fb_cio)
         btncio?.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentFBCIO()
-            ).commit()
+                , null)
+                .addToBackStack(null)
+                .commit()
         }
         val textcio = view.findViewById<TextView>(R.id.text_fb_cio)
         textcio?.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentFBCIO()
-            ).commit()
+                , null)
+                .addToBackStack(null)
+                .commit()
         }
 
         val textBITC = view.findViewById<TextView>(R.id.btn_business_in_the_city)
@@ -97,7 +106,9 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentBusinessPermit()
-            ).commit()
+                , null)
+                .addToBackStack(null)
+                .commit()
         }
 
         val textMT = view.findViewById<TextView>(R.id.btn_my_taxes)
@@ -105,7 +116,9 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentMyTaxes()
-            ).commit()
+                , null)
+                .addToBackStack(null)
+                .commit()
         }
 
              val textGOS = view.findViewById<TextView>(R.id.btn_gov_online_service)
@@ -113,7 +126,9 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentGovermentOnlineServices()
-            ).commit()
+                , null)
+                .addToBackStack(null)
+                .commit()
         }
 
         val textCHL = view.findViewById<TextView>(R.id.btn_city_hot_lines)
@@ -124,13 +139,6 @@ class FragmentHome : Fragment() {
             ).commit()
         }
 
-        val textCEC = view.findViewById<TextView>(R.id.btn_city_employees_corner)
-        textCEC.setOnClickListener {
-            activity!!.supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentCityEmployeesCorner()
-            ).commit()
-        }
 
 
         val textMAOR = view.findViewById<TextView>(R.id.btn_online_request)
@@ -138,9 +146,34 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentMyAppOnlineRequest()
-            ).commit()
+                , null)
+                .addToBackStack(null)
+                .commit()
+        }
+
+        val textCH = view.findViewById<TextView>(R.id.btn_city_hot_lines)
+        textCH.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentCityHotline()
+                , null)
+                .addToBackStack(null)
+                .commit()
+        }
+
+        val textCEC = view.findViewById<TextView>(R.id.btn_city_employees_corner)
+        textCEC.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentCityEmployeesCorner()
+                , null)
+                .addToBackStack(null)
+                .commit()
+
         }
         return view
 
     }
+
+
 }

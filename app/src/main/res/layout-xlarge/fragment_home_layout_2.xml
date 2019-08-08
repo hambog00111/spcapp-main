@@ -103,6 +103,123 @@
                 android:scaleType="fitCenter"/>
 
 
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My iSanPablo"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+        />
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/white"
+                  android:textAlignment="center"
+                  android:textSize="25sp"
+                  android:layout_marginTop="5dp"
+                  android:layout_marginBottom="5dp"
+                  android:layout_marginStart="15dp"
+                  android:layout_marginEnd="15dp"
+                  android:background="@drawable/text_border2"
+                  android:padding="10dp"
+                  android:textStyle="bold"
+                  android:text="Business in the City"
+                  android:id="@+id/btn_business_in_the_city"
+                  android:textAllCaps="true"/>
+
+        <TextView
+                android:textAllCaps="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/text_border2"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:text="My Taxes"
+                android:id="@+id/btn_my_taxes"/>
+
+
+
+        <TextView
+                android:textAllCaps="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/text_border2"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:text="My App Online Request"
+                android:id="@+id/btn_online_request"/>
+
+        <TextView
+                android:textAllCaps="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/text_border2"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:text="City Hot Lines"
+                android:id="@+id/btn_city_hot_lines"/>
+        <TextView
+                android:textAllCaps="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/text_border2"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:text="Government Online Services"
+                android:id="@+id/btn_gov_online_service"/>
+
+        <TextView
+                android:textAllCaps="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/text_border2"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:text="City Employees Corner"
+                android:id="@+id/btn_city_employees_corner"/>
+
 
 
         <LinearLayout

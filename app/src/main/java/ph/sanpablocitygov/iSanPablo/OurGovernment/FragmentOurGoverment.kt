@@ -11,7 +11,6 @@ import android.widget.TextView
 import org.json.JSONArray
 import org.json.JSONObject
 import ph.sanpablocitygov.iSanPablo.R
-import ph.sanpablocitygov.iSanPablo.goverment.department.FragmentDepartment
 import java.lang.ref.WeakReference
 import java.net.HttpURLConnection
 import java.net.URL

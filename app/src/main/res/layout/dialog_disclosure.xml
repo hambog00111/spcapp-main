@@ -161,7 +161,7 @@
               android:layout_marginRight="20dp"
               android:layout_marginBottom="10dp"
               android:text="CANCEL"
-              android:id="@+id/btn_hymn_cancel"
+              android:id="@+id/btn_dis_cancel"
               android:textSize="18sp"/>
 
 </LinearLayout>

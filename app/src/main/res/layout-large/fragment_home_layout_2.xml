@@ -12,19 +12,6 @@
                   android:orientation="vertical"
                   android:id="@+id/linera">
 
-
-
-        <android.support.v4.view.ViewPager
-                android:layout_width="match_parent"
-                   android:layout_height="350dp"
-                    android:id="@+id/home_viewpager"
-                   android:fitsSystemWindows="true"
-                   android:layout_gravity="center"
-                   android:scaleType="centerCrop"
-                   android:padding="10dp"
-                   android:layout_margin="10dp"
-        />
-
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,6 +63,19 @@
 
 
 
+        <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                   android:layout_height="330dp"
+                    android:id="@+id/home_viewpager"
+                   android:fitsSystemWindows="true"
+                   android:layout_gravity="center"
+                   android:scaleType="centerCrop"
+                   android:padding="10dp"
+                   android:layout_margin="10dp"
+        />
+
+
+
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
 
         <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="220dp"
                 android:src="@drawable/app"
                 android:id="@+id/events_viewpager"
                 android:layout_gravity="center"
@@ -222,39 +222,7 @@
                 android:id="@+id/btn_city_employees_corner"/>
 
 
-        <TextView
-                android:textAllCaps="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/text_border2"
-                android:padding="10dp"
-                android:textStyle="bold"
-                android:text="G"
-                android:id="@+id/btn_g"/>
 
-        <TextView
-                android:textAllCaps="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:background="@drawable/text_border2"
-                android:padding="10dp"
-                android:textStyle="bold"
-                android:text="H"
-                android:id="@+id/btn_h"/>
 
         <LinearLayout
         android:layout_width="match_parent"
@@ -358,7 +326,7 @@
         <TextView
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:text="JOBS OFFER"
+                android:text="FEATURED LINKS"
                 android:textStyle="bold"
 
                 android:paddingBottom="5dp"

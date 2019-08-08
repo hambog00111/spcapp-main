@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@drawable/background">
+
+    <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="FULL DISCLOSURE"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+    >
+        <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+            <Button android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_border2"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/disclosure_1"
+                    android:text="4th-quarter-SPP"/>
+            <Button android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_border2"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/disclosure_2"
+                    android:text="20-utilization-2018\n4th-Quarter"/>
+            <Button android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_border2"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/disclosure_3"
+                    android:text="app-2019"/>
+            <Button android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_border2"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/disclosure_4"
+                    android:text="bid-results 2018\n4th quarter"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+            <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp">
+
+                <Button android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_border2"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/disclosure_9"
+                        android:text="cdrrmf-12.31.18"/>
+                <Button android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_border2"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/disclosure_10"
+                        android:text="manpower\ncomplement(dilg)"/>
+
+                <Button android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_border2"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:id="@+id/disclosure_11"
+                        android:text="PDAF UTILIZATION"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+            <Button android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_border2"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/disclosure_5"
+                    android:text="SCF-4TH-QUARTER"/>
+            <Button android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_border2"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/disclosure_6"
+                    android:text="SEF-UTILIZATION\n2018"/>
+            <Button android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_border2"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/disclosure_7"
+                    android:text="statement of debt\nservices 03.24.14"/>
+            <Button android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_border2"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/disclosure_8"
+                    android:text="unliquidated\n2018"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="right"
+              android:textStyle="bold"
+              android:textAllCaps="true"
+              android:textColor="@color/white"
+              android:layout_marginTop="15dp"
+              android:layout_marginRight="20dp"
+              android:layout_marginBottom="10dp"
+              android:text="CANCEL"
+              android:id="@+id/btn_dis_cancel"
+              android:textSize="18sp"/>
+
+</LinearLayout>

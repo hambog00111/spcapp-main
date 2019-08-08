@@ -10,7 +10,7 @@ import ph.sanpablocitygov.iSanPablo.R
 class FragmentMyAppOnlineRequest : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_myapp_online_request, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_isanpablo_myappolreq, container, false)
 
         return view
     }
