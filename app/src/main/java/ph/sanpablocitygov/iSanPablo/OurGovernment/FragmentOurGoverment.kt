@@ -21,6 +21,8 @@ class FragmentOurGoverment  : Fragment(), View.OnClickListener{
 
         val view: View = inflater.inflate(R.layout.fragment_our_goverment_layout, container, false)
 
+
+
         val t1: TextView = view.findViewById(R.id.dept_mayor_office)
         t1.setOnClickListener(this)
         GetDeptLs(this).execute()
@@ -116,6 +118,9 @@ class FragmentOurGoverment  : Fragment(), View.OnClickListener{
         return  view
 
     }
+
+
+
 
 
     //    fun getData() {
@@ -267,4 +272,6 @@ class FragmentOurGoverment  : Fragment(), View.OnClickListener{
         }
 
     }
+
+
 }

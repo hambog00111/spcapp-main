@@ -19,6 +19,7 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.GovernmentOnlineServices.Frag
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.FragmentMyAppOnlineRequest
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes
 
+
 @Suppress("UNREACHABLE_CODE", "PLUGIN_WARNING")
 class FragmentHome : Fragment() {
 
@@ -105,7 +106,7 @@ class FragmentHome : Fragment() {
                 .commit()
         }
 
-        val textGOS = view.findViewById<TextView>(R.id.btn_gov_online_service)
+             val textGOS = view.findViewById<TextView>(R.id.btn_gov_online_service)
         textGOS.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
@@ -114,6 +115,16 @@ class FragmentHome : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
+
+        val textCHL = view.findViewById<TextView>(R.id.btn_city_hot_lines)
+        textCHL.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentCityHotline()
+            ).commit()
+        }
+
+
 
         val textMAOR = view.findViewById<TextView>(R.id.btn_online_request)
         textMAOR.setOnClickListener {
@@ -143,8 +154,11 @@ class FragmentHome : Fragment() {
                 , null)
                 .addToBackStack(null)
                 .commit()
+
         }
         return view
 
     }
+
+
 }

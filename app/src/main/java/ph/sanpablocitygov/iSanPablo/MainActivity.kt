@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setSupportActionBar(toolbar)
+
 
 //        fab.setOnClickListener { view ->
 //            var show: Any = Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -54,6 +54,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
     }
+
+
 
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
@@ -184,25 +186,33 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_home -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentHome()
-                    , null)
+
+                    FragmentHome(), null)
                     .addToBackStack(null)
-                    .commit()
+                .commit()
+
 
             }
             R.id.nav_our_city -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOurCity() , null)
-                    .addToBackStack(null)
-                    .commit()
+
+                    FragmentOurCity(), null)
+                        .addToBackStack(null)
+                .commit()
+
+
+
             }
             R.id.nav_our_government -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOurGoverment() , null)
+
+                    FragmentOurGoverment(), null)
                     .addToBackStack(null)
-                    .commit()
+                .commit()
+
+
             }
             R.id.nav_tourism -> {
                 supportFragmentManager.beginTransaction().replace(
@@ -210,11 +220,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 FragmentTourism() , null)
                     .addToBackStack(null)
                     .commit()
+
             }
             R.id.nav_department_head -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentDepartment() , null)
+
+                    FragmentDepartment(), null)
+
                     .addToBackStack(null)
                     .commit()
             }
@@ -491,7 +504,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
 
-
+//
+//            R.id.nav_webview ->{
+//                supportFragmentManager.beginTransaction().replace(
+//                    R.id.frag_container,
+//                    FragmentBrowser(), null)
+//                    .addToBackStack(null)
+//                    .commit()
+//            }
 
 //            R.id.nav_webview ->{
 //                supportFragmentManager.beginTransaction().replace(
@@ -499,6 +519,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //                    FragmentBrowser()
 //                ).commit()
 //            }
+
 
             R.id.nav_bplo ->{
                 supportFragmentManager.beginTransaction().replace(
@@ -511,24 +532,26 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_govph ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentGOV()
-                    , null)
+
+                    FragmentGOV(), null)
+
                     .addToBackStack(null)
                     .commit()
             }
             R.id.nav_open_data ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOpenData()
-                    , null)
+
+                    FragmentOpenData(), null)
+
                     .addToBackStack(null)
                     .commit()
             }
             R.id.nav_official_gazette ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOfficialGazette()
-                    , null)
+
+                    FragmentOfficialGazette(), null)
                     .addToBackStack(null)
                     .commit()
             }
@@ -536,24 +559,32 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_president ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOfficePresident()
-                    , null)
+
+                    FragmentOfficePresident(), null)
+
                     .addToBackStack(null)
                     .commit()
             }
             R.id.nav_vice_president ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentOfficeVice()
-                    , null)
+
+                    FragmentOfficeVice(), null)
+
                     .addToBackStack(null)
                     .commit()
             }
             R.id.nav_senate ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentSenate()
-                    , null)
+                    FragmentSenate(), null)
+                    .addToBackStack(null)
+                    .commit()
+            }
+            R.id.nav_representatives ->{
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentRepresentatives(), null)
                     .addToBackStack(null)
                     .commit()
         }
@@ -568,24 +599,26 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_supreme_court ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentSupremeCourt()
-                    , null)
+
+                    FragmentSupremeCourt(), null)
+
                     .addToBackStack(null)
                     .commit()
             }
             R.id.nav_court ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentCourtAppeals()
-                    , null)
+
+                    FragmentCourtAppeals(), null)
                     .addToBackStack(null)
                     .commit()
             }
             R.id.nav_sandiganbayan ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentSandiganbayan()
-                    , null)
+
+                    FragmentSandiganbayan(), null)
+
                     .addToBackStack(null)
                     .commit()
             }
@@ -593,8 +626,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             else -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentHome()
-                    , null)
+                    FragmentHome(), null)
                     .addToBackStack(null)
                     .commit()
             }

@@ -18,6 +18,9 @@
               android:title="Full Disclosure"/>
         <item android:id="@+id/nav_tourism"
               android:title="Tourism"/>
+
+
+
         <!--<item android:title="The City">-->
             <!--<menu>-->
                 <!--<item-->

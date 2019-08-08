@@ -9,11 +9,16 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import ph.sanpablocitygov.iSanPablo.R
 
-class CityhotlineAdapter(var mcontext: Context, var resource:Int, var items:List<CityhotlineModel>)
+@Suppress("DEPRECATION")
+class CityhotlineAdapter(var mcontext: Context, var resource:Int, var items: MutableList<CityhotlineModel>)
     : ArrayAdapter<CityhotlineModel>(mcontext, resource, items){
 
     @SuppressLint("ViewHolder")
+
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+
+
         val layoutInflater: LayoutInflater = LayoutInflater.from(mcontext)
 
         val view: View = layoutInflater.inflate(resource, null)
@@ -27,13 +32,13 @@ class CityhotlineAdapter(var mcontext: Context, var resource:Int, var items:List
 
         name.text = cityh.ivcityhotline
 
-
         phone.text = cityh.ivcityhotlinephone
-
 
 
 
         return view
     }
+
+
 
 }
