@@ -19,7 +19,7 @@
             android:orientation="vertical">
         <TextView
                 android:id="@+id/title_cityhot_line"
-                android:text="San Pablo City Government"
+                android:text="San Pablo City Goverment"
                 android:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,6 +46,17 @@
     </LinearLayout>
 
 
+    <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/btn_call_city_hot_line"
+            android:layout_weight="1"
+            android:background="@drawable/ic_phone"
+            android:layout_marginTop="12dp"
+
+
+    />
 
 </LinearLayout>
 

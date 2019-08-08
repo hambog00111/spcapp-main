@@ -12,12 +12,15 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.MenuItem
-import ph.sanpablocitygov.iSanPablo.home.FragmentHome
+
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.dialog_disclosure.view.*
 
 import ph.sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
+import ph.sanpablocitygov.iSanPablo.home.FragmentHome
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
+
 
 import ph.sanpablocitygov.iSanPablo.links.*
 
@@ -523,7 +526,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_bplo ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentFillUp(), null)
+                    FragmentBPLOonline(), null)
                     .addToBackStack(null)
                     .commit()
             }

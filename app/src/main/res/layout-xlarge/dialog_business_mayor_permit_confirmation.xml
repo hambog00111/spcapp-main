@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@drawable/background">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Print Mayor's Permit"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Reference Number:"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="112-220-112"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:id="@+id/txt_mp_refnumber_confirmation"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"/>
+
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:orientation="horizontal">
+
+        <Button android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:background="@drawable/text_border"
+                android:id="@+id/btn_mp_confirm"
+                android:text="confirm"/>
+        <Button android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:background="@drawable/text_border"
+                android:id="@+id/btn_mp_edit"
+                android:text="edit"/>
+        <Button android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:background="@drawable/text_border"
+                android:id="@+id/btn_mp_cancel"
+                android:text="cancel"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

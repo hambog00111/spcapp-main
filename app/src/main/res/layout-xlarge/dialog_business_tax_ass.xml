@@ -148,28 +148,42 @@
                   android:layout_height="wrap_content"
                   android:orientation="horizontal">
 
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity=""
-                  android:textStyle="bold"
-                  android:textAllCaps="true"
-                  android:textColor="@color/white"
-                  android:layout_margin="20dp"
-                  android:text="send request"
-                  android:id="@+id/btn_assess_send"
-                  android:textSize="25sp"/>
+        <Button android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_gravity=""
+                android:background="@drawable/text_border"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:layout_margin="15dp"
+                android:text="Send Request"
+                android:id="@+id/btn_assess_send"
+                android:textSize="20sp"/>
+
+        <Button android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_gravity=""
+                android:background="@drawable/text_border"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:layout_margin="15dp"
+                android:text="Clear all"
+                android:id="@+id/btn_assess_clearall"
+                android:textSize="18sp"/>
 
 
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity=""
-                  android:textStyle="bold"
-                  android:textAllCaps="true"
-                  android:textColor="@color/white"
-                  android:layout_margin="20dp"
-                  android:text="cancel"
-                  android:id="@+id/btn_assess_cancel"
-                  android:textSize="25sp"/>
+        <Button android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:layout_gravity=""
+                android:background="@drawable/text_border"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:layout_margin="15dp"
+                android:text="Cancel"
+                android:id="@+id/btn_assess_cancel"
+                android:textSize="18sp"/>
     </LinearLayout>
 
 

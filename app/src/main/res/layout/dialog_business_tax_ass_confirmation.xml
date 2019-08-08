@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical"
               android:background="@drawable/background">
@@ -11,7 +11,7 @@
             android:text="Confirmation for Online Assessment"
             android:textStyle="bold"
             android:layout_marginStart="10dp"
-            android:paddingBottom="5dp"
+            android:paddingBottom="10dp"
             android:paddingTop="5dp"
             android:textSize="20sp"
             android:textColor="@color/white"
@@ -36,7 +36,7 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dela Cruz, Juan Carlo"
+            android:text="" 
             android:textStyle="bold"
             android:layout_marginStart="10dp"
             android:paddingBottom="5dp"
@@ -54,7 +54,7 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reference Numnber:"
+            android:text="Reference Number:"
             android:textStyle="bold"
             android:layout_marginStart="10dp"
             android:paddingBottom="5dp"
@@ -67,7 +67,7 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10093-11234-2222"
+            android:text=""
             android:textStyle="bold"
             android:inputType="number"
             android:layout_marginStart="10dp"
@@ -77,7 +77,7 @@
             android:textColor="@color/white"
             android:layout_marginBottom="5dp"
             android:layout_gravity="center"
-            android:id="@+id/txt_assess_refcon"/>
+            android:id="@+id/txt_assess_refcon" tools:ignore="TextViewEdits"/>
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="juandelacruz@gmail.com"
+            android:text=""
             android:textStyle="bold"
             android:layout_marginStart="10dp"
             android:paddingBottom="5dp"
@@ -103,7 +103,7 @@
             android:textColor="@color/white"
             android:layout_marginBottom="5dp"
             android:layout_gravity="center"
-            android:id="@+id/txt_assess_emailcon"/>
+            android:id="@+id/txt_assess_emailcon" tools:ignore="TextViewEdits"/>
 
 
 

@@ -79,7 +79,7 @@
                 android:orientation="vertical">
 
             <Button
-                    android:id="@+id/btn_business_doing"
+                    android:id="@+id/btn_business_doing_business"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:background="@drawable/logo_bc_db"
@@ -148,7 +148,7 @@
 
             <Button
                     android:layout_width="100dp"
-                    android:layout_height="94dp"
+                    android:layout_height="100dp"
                     android:id="@+id/btn_business_bplo"
                     android:fitsSystemWindows="true"
                     android:scaleType="fitCenter"
@@ -216,7 +216,7 @@
 
             <Button
                     android:layout_width="100dp"
-                    android:layout_height="86dp"
+                    android:layout_height="100dp"
                     android:background="@drawable/logo_bc_btp"
                     android:fitsSystemWindows="true"
                     android:scaleType="fitCenter"

@@ -5,6 +5,16 @@
               android:orientation="vertical"
             android:background="@drawable/background">
 
+    <TextView android:layout_width="wrap_content"
+              android:text="INVESTMENT"
+              android:layout_gravity="center"
+              android:textSize="20sp"
+              android:textStyle="bold"
+              android:textColor="@color/white"
+              android:layout_marginBottom="10dp"
+              android:layout_marginTop="10dp"
+              android:layout_height="wrap_content"/>
+
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:textColor="@color/white"
@@ -18,7 +28,7 @@
               android:padding="10dp"
               android:textStyle="bold"
               android:text="Why Invest in San Pablo City?"
-              android:id="@+id/btn_download_bplo"/>
+              android:id="@+id/btn_download_wispc"/>
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -33,7 +43,7 @@
               android:padding="10dp"
               android:textStyle="bold"
               android:text="COMPREHENSIVE DEVELOPMENT PLAN"
-              android:id="@+id/btn_online_bplo"/>
+              android:id="@+id/btn_business_investment"/>
 
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -43,7 +53,7 @@
               android:textColor="@color/white"
               android:layout_margin="20dp"
               android:text="cancel"
-              android:id="@+id/btn_eco_cancel"
+              android:id="@+id/btn_invest_cancel"
               android:textSize="15sp"/>
 
 </LinearLayout>
