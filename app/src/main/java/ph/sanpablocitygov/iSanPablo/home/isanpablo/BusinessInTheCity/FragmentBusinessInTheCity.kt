@@ -18,6 +18,7 @@ import kotlinx.android.synthetic.main.dialog_business_doing_business.view.*
 import kotlinx.android.synthetic.main.dialog_business_mayor_permit.view.*
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.FragmentBusinessTaxAssessment
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
 import ph.sanpablocitygov.iSanPablo.links.FragmentHomeCSC
 
@@ -103,6 +104,15 @@ class FragmentBusinessInTheCity : Fragment() {
                 .commit()
         }
 
+
+        val btnass = view.findViewById<Button>(R.id.btn_business_bta)
+        btnass.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentBusinessTaxAssessment() , null)
+                .addToBackStack(null)
+                .commit()
+        }
         return  view
 
     }
