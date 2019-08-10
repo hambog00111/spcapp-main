@@ -1,6 +1,7 @@
 package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -13,18 +14,27 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayors
 
 class FragmentBusinessTaxAssessment : Fragment() {
 
-    @SuppressLint("SetTextI18n", "InflateParams")
+    @SuppressLint("SetTextI18n", "InflateParams", "WrongViewCast")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view: View = inflater.inflate(R.layout.fragment_assessment_login_home, container, false)
-        val btnreg = view.findViewById<TextView>(R.id.txt_assessment_register)
-        btnreg.setOnClickListener {
-            activity!!.supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentBusinessTaxAssessmentRegistration() , null)
-                .addToBackStack(null)
-                .commit()
-        }
+       // val btnreg = view.findViewById<TextView>(R.id.txt_assessment_register)
+//        btnreg.setOnClickListener {
+//            activity!!.supportFragmentManager.beginTransaction().replace(
+//                R.id.frag_container,
+//                FragmentBusinessTaxAssessmentRegistration() , null)
+//                .addToBackStack(null)
+//                .commit()
+//        }
+
+        val btnreg = view.findViewById(R.id.txt_assessment_register) as TextView
+        btnreg.setOnClickListener(object: View.OnClickListener {
+
+            override fun onClick(v:View) {
+                val `in` = Intent(getActivity(), BusinessTaxAssessmentRegActivity::class.java)
+                startActivity(`in`)
+            }
+        })
         return view
 
 

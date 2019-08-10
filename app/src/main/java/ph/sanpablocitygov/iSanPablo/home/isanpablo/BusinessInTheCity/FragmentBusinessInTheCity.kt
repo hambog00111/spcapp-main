@@ -25,7 +25,9 @@ import kotlinx.android.synthetic.main.dialog_investment.view.btn_business_invest
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_invest_cancel
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.FragmentBusinessTaxAssessment
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.testlng.Fragmentpastdata
 import ph.sanpablocitygov.iSanPablo.links.FragmentHomeCSC
 
 @Suppress("PLUGIN_WARNING")
@@ -84,46 +86,11 @@ class FragmentBusinessInTheCity : Fragment() {
 
         val btnbta = view.findViewById<Button>(R.id.btn_business_bta)
         btnbta.setOnClickListener {
-
-            val btaView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_bta, null)
-
-            val btabBuilder = AlertDialog.Builder(requireContext())
-                .setView(btaView)
-
-            val btaDialog = btabBuilder.show()
-
-//            btaView.btn_download_bta.setOnClickListener {
-//                btaDialog.dismiss()
-//                var str = "Would you like to download this document?"
-//                val builder = AlertDialog.Builder(requireContext())
-//                with(builder) {
-//                    setMessage(str)
-//                    setTitle("Download BPLO Form")
-//
-//                    setPositiveButton("OK", DialogInterface.OnClickListener
-//                    { _, _ ->  val downloadManager: DownloadManager = getSystemService(requireContext(),
-//                        DownloadManager::class.java) as DownloadManager
-//                        val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/BUSINESS%20PERMIT%20APPLICATION%20FORM.docx")
-//                        val request = DownloadManager.Request(uri)
-//                        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-//                        downloadManager.enqueue(request)  })
-//                    setNegativeButton("CANCEL", null)
-//                }
-//                val alertDialog = builder.create()
-//                alertDialog.show()
-//            }
-//            btaView.btn_online_bta.setOnClickListener {
-//                btaDialog.dismiss()
-//                activity!!.supportFragmentManager.beginTransaction().replace(
-//                    R.id.frag_container,
-//                    FragmentBPLOonline()
-//                    , null)
-//                    .addToBackStack(null)
-//                    .commit()
-//            }
-            btaView.btn_bta_cancel.setOnClickListener {
-                btaDialog.dismiss()
-            }
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentBusinessTaxAssessment() , null)
+                .addToBackStack(null)
+                .commit()
 
         }
 
@@ -208,7 +175,7 @@ class FragmentBusinessInTheCity : Fragment() {
         btnmp.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                FragmentMayorsPermit() , null)
+                Fragmentpastdata() , null)
                 .addToBackStack(null)
                 .commit()
         }
