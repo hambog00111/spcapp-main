@@ -13,7 +13,7 @@ class FragmentBusinessTaxAssessmentRegistration : Fragment() {
     @SuppressLint("SetTextI18n", "InflateParams")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_assessment_registration_1, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_bc_assessment_registration, container, false)
 
         return view
 

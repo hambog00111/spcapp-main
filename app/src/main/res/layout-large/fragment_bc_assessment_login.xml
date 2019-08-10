@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="7dp">
+
+
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center">
+                <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/spc_logo2"
+                        android:id="@+id/imageView2"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"/>
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingLeft="15dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Republic of the Philippines"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="5dp"
+                            android:textSize="17dp"
+                    />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CITY GOVERNMENT OF SAN PABLO"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="23sp"
+                            android:layout_marginTop="3dp"
+
+                    />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:layout_marginBottom="30dp"
+                      android:layout_marginTop="30dp"
+                      android:padding="20dp"
+                      android:background="@drawable/text_border3">
+
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginBottom="15dp"
+                          android:paddingTop="5dp"
+                            android:layout_marginTop="20dp"
+                          android:gravity="center">
+
+                <ImageView android:layout_width="70dp"
+                           android:layout_height="70dp"
+                           android:src="@drawable/logo_bc_bta"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textColor="@color/white"
+                          android:textSize="25sp"
+                          android:layout_marginStart="10dp"
+                          android:textStyle="bold"
+                          android:text="Business Tax Assessment"/>
+
+
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_gravity="center"
+                          android:gravity="center"
+                          android:padding="5dp">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:src="@drawable/nav_account_circle"/>
+
+                <EditText android:layout_width="320dp"
+                          android:layout_height="wrap_content"
+                          android:hint="Username"
+                          android:textSize="20sp"
+                          android:layout_marginStart="5dp"
+                          android:textColorHint="@color/white"
+                          android:textColor="@color/white"
+                          android:id="@+id/txt_assess_username_login"
+                          android:inputType="text"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_gravity="center"
+                          android:gravity="center"
+                          android:padding="5dp">
+
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:src="@drawable/password"/>
+
+                <EditText android:layout_width="320dp"
+                          android:layout_height="wrap_content"
+                          android:hint="Password"
+                          android:textSize="20sp"
+                          android:layout_marginStart="5dp"
+                          android:textColorHint="@color/white"
+                          android:textColor="@color/white"
+                          android:id="@+id/txt_assess_password_login"
+                          android:inputType="textPassword"/>
+
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:gravity="center">
+
+                <Button android:layout_width="190dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/text_border"
+                        android:text="Login"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/white"
+                />
+
+
+            </LinearLayout>
+
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textSize="18sp"
+                      android:layout_marginTop="30dp"
+                      android:text="Not yet Registered? Click Here!!!"
+                      android:textAlignment="center"
+                      android:layout_marginBottom="30dp"
+                      android:id="@+id/txt_assessment_register"
+                      android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/phlogo"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"/>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="@string/Reps"
+                        android:textSize="13dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textStyle="bold"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Rep"
+                        android:textSize="13dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp"/>
+                <TextView
+                        android:text="© 2019 San Pablo City Goverment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="13dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:id="@+id/textView8"
+
+                />
+
+            </LinearLayout>
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/transpa"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                        android:text="Developed by:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:layout_marginEnd="3dp"
+                />
+                <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/pylon"
+                        android:layout_marginRight="13dp"/>
+            </LinearLayout>
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                        android:text="Developer: "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                />
+                <TextView
+                        android:text="Chris Velasco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center"
+
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

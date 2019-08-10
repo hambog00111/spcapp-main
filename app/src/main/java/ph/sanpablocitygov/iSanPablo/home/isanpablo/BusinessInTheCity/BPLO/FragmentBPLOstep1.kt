@@ -1,5 +1,4 @@
-package ph.sanpablocitygov.iSanPablo
-
+package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,20 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import ph.sanpablocitygov.iSanPablo.links.FragmentHomeCSC
-import ph.sanpablocitygov.iSanPablo.tourism.FragmentLandmarks
+import ph.sanpablocitygov.iSanPablo.R
 
-
-class FragmentTourism : Fragment (){
+class FragmentBPLOstep1 : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.fragment_bc_bplo_fillup_step1, null)
 
-        val view: View = inflater.inflate(R.layout.fragment_tourism_layout, container, false)
-        val btncsc = view.findViewById<Button>(R.id.btn_tourism_gallery)
-        btncsc?.setOnClickListener {
+        val btnlogin = view.findViewById<Button>(R.id.txt_bplo_next_page)
+        btnlogin.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                FragmentLandmarks() , null)
+                FragmentBPLOstep2(), null)
                 .addToBackStack(null)
                 .commit()
         }

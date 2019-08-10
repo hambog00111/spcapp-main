@@ -1005,6 +1005,95 @@
         deck/Bonifacio Shrine. The lot was part of Dona Leonila Park which was donated
         by Cabesang Sixto Bautista. \n\n
 
+    </string>
+
+    <string name="sampaloc_lakes">
+        • Nasasakupan: Barangay IV-A, IV-C, V-A, Concepcion, San Lucas 1 \n\n
+        • Lawak: 99.21 Hectares \n\n
+        • Lalim: 27 Meters \n\n
+        • Yamang Lawa: Dalag, Hito, Tilapia,Gurami, Hipon, Ayungin, Dulong, Big Head, Karpa, Bitoo, Kuhol \n\n
+        • Atrakson: Ang Lawa ng Sampalok, Sampalok Lake Mini Parks, Museo ng San Pablo, Doña Leonila Park, Hagdang Bato, Bonifacio Monument, Trese Martirez Monument\n\n
+        • Mga Akomodasyon: Ang Tahanan ni Aling Meding Hotel and Restaurant, Lake City Hotel \n\n
+        • Tourist Arrivals: January 2019 – 72,134 | February 2019 – 14,863 | March 2019 – 16,027  \n
+    </string>
+
+    <string name="calibato_lakes">
+        • Nasasakupan: Barangay Sto. Angel \n\n
+        • Lawak: 27.18 Hectares \n\n
+        • Lalim: 135 Meters (pinakamalalim sa 7 lawa) \n\n
+        • Yamang Lawa: Dalag, Tilapia,Gurami, Hipon, Ayungin, Karpa, Bitoo, Kuhol, Big Head \n\n
+        • Atrakson: Ang Lawa ng Kalibato \n\n
+        • Tourist Arrivals: January 2019 – 47 | February 2019 – 239 | March 2019 - 74 \n
+    </string>
+
+    <string name="bunot_lakes">
+        • Nasasakupan: Barangay Concepcion \n\n
+        • Lawak: 38.16 Hectares \n\n
+        • Lalim: 23 Meters \n\n
+        • Yamang Lawa: Dalag, Tilapia,Gurami, Hipon, Ayungin, Karpa, Bitoo, Kuhol \n\n
+        • Atrakson: Ang Lawa ng Bunot \n\n
+        • Mga Akomodasyon/Kainan: Cusina de Sabang 602, Bunot Lake Resort, Villa Muñoz Resort, Crisolaido’s Motorist Inn, NM Travellers Inn \n\n
+        • Tourist Arrivals: January 2019 – 1,824 | February 2019 – 2,358 | March 2019 – 2,160 \n
+    </string>
+
+    <string name="mohicap_lakes">
+        • Nasasakupan: Barangay San Buenaventura \n\n
+        • Lawak: 20.49 Hectares \n\n
+        • Lalim: 27 Meters \n\n
+        • Yamang Lawa: Dalag, Tilapia,Gurami, Hipon, Ayungin, Karpa, Bitoo, Kuhol \n\n
+        • Atrakson: Ang Lawa ng Muhikap, Boat Rafting with food service  \n\n
+        • Mga Akomodasyon/Kainan: Star Lake Resort and Hotel \n\n
+        • Tourist Arrivals: January 2019 – 101 | February 2019 – 508 | March 2019 - 240 \n
+    </string>
+
+    <string name="palakpakin_lakes">
+        • Nasasakupan: Barangay San Lorenzo, San Buenaventura, Dolores \n\n
+        • Lawak: 54.39 Hectares \n\n
+        • Lalim: 7.5 Meters \n\n
+        • Yamang Lawa: Dalag, Tilapia,Gurami, Hipon, Ayungin, Karpa, Bitoo, Kuhol, Aquarium Fish \n\n
+        • Atraksyon: Ang Lawa ng Palakpakin \n\n
+        • Tourist Arrivals: January 2019 – 26 | February 2019 – 246 | March 2019 - 53 \n
+    </string>
+
+    <string name="pandin_lakes">
+        • Nasasakupan: Barangay Sto. Angel, San Lorenzo \n\n
+        • Lawak: 23.54 Hectares \n\n
+        • Lalim: 63 Meters \n\n
+        • Yamang Lawa: Dalag, Tilapia,Gurami, Hipon, Ayungin, Karpa, Bitoo, Kuhol, Hito \n\n
+        • Atraksyon: Ang Lawa ng Pandin, Boat Rafting with food Services \n\n
+        • Tourist Arrivals: January 2019 – 2,647 | February 2019 – 2,905 | March 2019 – 5,651 \n
+    </string>
+
+    <string name="yambo_lakes">
+        • Nasasakupan: Barangay Sto. Angel, San Lorenzo \n\n
+        • Lawak: 36 Hectares \n\n
+        • Lalim: 40 Meters \n\n
+        • Yamang Lawa: Dalag, Tilapia,Gurami, Hipon, Ayungin, Karpa, Bitoo, Kuhol, Bakuli \n\n
+        • Atraksyon: Ang Lawa ng Yambo, Boat Rafting with food services \n\n
+        • Tourist Arrivals: January 2019 – 857 | February 2019 – 1,057 | March 2019 – 2,377 \n
+    </string>
+
+    <string name="coco_festivals">
+       \t\tIn January 12, 1996, a group of individuals from private
+        and government sectors advocated and committed themselves
+        in developing and promoting arts and culture in San Pablo
+        City, thus conceived the COCO FESTIVAL. This annual weeklong
+        festival, which is celebrated every second week of January,
+        showcases the rich cultural heritage and natural attractions
+        of the city which draws spectators to visit and balikbayans
+        yearn to come home to. \n\n
+
+
+        \t\t A weeklong festival celebrated every 2nd week of January that
+        showcases the rich cultural heritage and natural attractions of
+        the City highlighted by a grandiose parade honoring its patron Saint
+        Paul the First Hermit for a bountiful and blessed coconut harvest.
+        The annual festival started in January 12, 1996 as an advocacy of a
+        group of individuals from the private and government sector who has
+        committed themselves in developing and promoting arts and culture in
+        San Pablo City. Today, it has drawn spectators from neighboring towns,
+        foreign tourist and balikbayans who yearns to come home each year and
+        celebrate the festivities. \n
 
     </string>
     <string name="back"><![CDATA[<]]></string>

@@ -23,6 +23,7 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Fragme
 
 
 import ph.sanpablocitygov.iSanPablo.links.*
+import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -219,7 +220,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_tourism -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                FragmentTourism() , null)
+                    FragmentTourism(), null)
                     .addToBackStack(null)
                     .commit()
 
