@@ -61,7 +61,7 @@ class BusinessTaxAssessmentRegActivity : AppCompatActivity() {
 
 
 
-    
+
 
     //adding a new record to database
     private fun addArtist() {
