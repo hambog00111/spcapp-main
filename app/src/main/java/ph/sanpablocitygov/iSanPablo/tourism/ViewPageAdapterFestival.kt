@@ -1,4 +1,4 @@
-package ph.sanpablocitygov.iSanPablo.home
+package ph.sanpablocitygov.iSanPablo.tourism
 
 import android.content.Context
 import android.support.v4.view.PagerAdapter
@@ -9,10 +9,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import ph.sanpablocitygov.iSanPablo.R
 
-class ViewPageAdapterHome(private val context: Context) : PagerAdapter(){
+class ViewPageAdapterFestival(private val context: Context) : PagerAdapter(){
 
     private var layoutInflater: LayoutInflater?=null
-    private val images = arrayOf(R.drawable.lake1,R.drawable.lake2,R.drawable.lake4,R.drawable.lake5)
+    private val images = arrayOf(R.drawable.cocofest1,R.drawable.cocofest2,R.drawable.cocofest3)
 
     override fun isViewFromObject(p0: View, p1: Any): Boolean {
         return p0 === p1
@@ -25,8 +25,8 @@ class ViewPageAdapterHome(private val context: Context) : PagerAdapter(){
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val v = layoutInflater!!.inflate(R.layout.custom_home_layout, null)
-        val image = v.findViewById<View>(R.id.image_view_home) as ImageView
+        val v = layoutInflater!!.inflate(R.layout.custom_festivals_layout, null)
+        val image = v.findViewById<View>(R.id.image_view_festivals) as ImageView
         image.setImageResource(images[position])
 
 

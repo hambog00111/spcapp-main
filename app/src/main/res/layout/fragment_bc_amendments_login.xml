@@ -63,94 +63,113 @@
 
 
 
-<LinearLayout android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:layout_marginLeft="10dp"
-              android:layout_marginRight="10dp"
-              android:layout_marginBottom="10dp"
-              android:layout_marginTop="30dp"
-              android:padding="20dp"
-              android:background="@drawable/transparent2">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:layout_marginBottom="30dp"
+                      android:layout_marginTop="30dp"
+                      android:padding="20dp"
+                      android:background="@drawable/text_border3">
 
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="horizontal"
-                  android:layout_margin="10dp"
-                  android:paddingTop="10dp"
-                  android:gravity="center">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginBottom="15dp"
+                          android:paddingTop="5dp"
 
-        <ImageView android:layout_width="50dp"
-                   android:layout_height="50dp"
-                   android:src="@drawable/logo_bc_bta"/>
+                          android:gravity="center">
 
-        <TextView android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:textColor="@color/white"
-                  android:textSize="15sp"
-                  android:layout_marginStart="10dp"
-                  android:textStyle="bold"
-                  android:text="Business Tax Assessment"/>
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:src="@drawable/logo_bc_amendments"/>
 
-
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="horizontal"
-
-                  android:layout_gravity="center"
-                  android:gravity="center"
-                  android:padding="10dp">
-
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="User ."
-              android:textSize="15sp"
-              android:textColor="@color/white"
-              android:textStyle="bold"/>
-        
-        <EditText android:layout_width="180dp"
-                  android:layout_height="wrap_content"
-                  android:hint="1090-229-221"
-                  android:textSize="15sp"
-                  android:layout_marginStart="5dp"
-                  android:textColorHint="@color/white"
-                  android:textColor="@color/white"
-                  android:id="@+id/txt_assess_user_id"
-                  android:inputType="number"/>
-
-    </LinearLayout>
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textColor="@color/white"
+                          android:textSize="15sp"
+                          android:layout_marginStart="10dp"
+                          android:textStyle="bold"
+                          android:text="Online Amendments"/>
 
 
-<LinearLayout android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-                android:gravity="center">
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_gravity="center"
+                          android:gravity="center"
+                          android:padding="5dp">
 
-    <Button android:layout_width="130dp"
-            android:layout_height="40dp"
-            android:background="@drawable/text_border"
-            android:text="Login"
-            android:textStyle="bold"
-            android:layout_margin="10dp"
-            android:textColor="@color/white"
-          />
+                <ImageView android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:src="@drawable/nav_account_circle"/>
+
+                <EditText android:layout_width="230dp"
+                          android:layout_height="wrap_content"
+                          android:hint="Username"
+                          android:textSize="15sp"
+                          android:layout_marginStart="5dp"
+                          android:textColorHint="@color/white"
+                          android:textColor="@color/white"
+                          android:id="@+id/txt_amendments_username_login"
+                          android:inputType="text"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_gravity="center"
+                          android:gravity="center"
+                          android:padding="5dp">
+
+                <ImageView android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:src="@drawable/password"/>
+
+                <EditText android:layout_width="230dp"
+                          android:layout_height="wrap_content"
+                          android:hint="Password"
+                          android:textSize="15sp"
+                          android:layout_marginStart="5dp"
+                          android:textColorHint="@color/white"
+                          android:textColor="@color/white"
+                          android:id="@+id/txt_amendments_password_login"
+                          android:inputType="textPassword"/>
+
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:gravity="center">
+
+                <Button android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/text_border"
+                        android:text="Login"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:id="@+id/btn_amendments_login"
+                        android:textColor="@color/white"
+                />
 
 
-</LinearLayout>
+            </LinearLayout>
 
 
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:textSize="13sp"
-              android:layout_marginTop="20dp"
-              android:text="Not yet Registered? Click Here!!!"
-              android:textAlignment="center"
-              android:id="@+id/txt_assessment_register"
-              android:textColor="@color/white"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textSize="13sp"
+                      android:layout_marginTop="30dp"
+                      android:text="Not yet Registered? Click Here!!!"
+                      android:textAlignment="center"
+                      android:id="@+id/txt_assessment_register"
+                      android:textColor="@color/white"/>
 
-</LinearLayout>
+        </LinearLayout>
 
 
         <LinearLayout

@@ -1,64 +1,70 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                         xmlns:tools="http://schemas.android.com/tools"
-                         android:layout_width="match_parent"
-                         android:layout_height="match_parent"
-                         android:background="@drawable/background"
-                         android:paddingTop="5dp"
-                         android:paddingLeft="5dp"
-                         android:paddingRight="5dp">
+<?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
-    <LinearLayout android:layout_height="wrap_content"
-                  android:layout_width="match_parent"
-                  android:gravity="center">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
 
         <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:layout_marginBottom="4dp"
-                android:gravity="center">
+                android:layout_marginBottom="7dp">
 
-            <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/spc_logo2"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="4dp"/>
+
+
 
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                <TextView
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center">
+                <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/spc_logo2"
+                        android:id="@+id/imageView2"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"/>
+                <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"
-                        android:layout_marginTop="13dp"
+                        android:orientation="vertical"
                         android:gravity="center"
-                        android:layout_gravity="center"
-                        android:text="Republic of the Philippines"/>
+                        android:paddingLeft="15dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Republic of the Philippines"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="5dp"
+                            android:textSize="17dp"
+                    />
 
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="10dp"
-                        android:textStyle="bold"
-                        android:text="CITY GOVERMENT OF SAN PABLO"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CITY GOVERNMENT OF SAN PABLO"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="23sp"
+                            android:layout_marginTop="3dp"
+
+                    />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-
 
 
     <LinearLayout
@@ -66,8 +72,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="5dp"
-
-            android:background="@drawable/transparent2">
+            android:padding="5dp"
+         >
 
 
 
@@ -82,7 +88,7 @@
                 android:layout_marginEnd="10dp"
                 android:paddingBottom="10dp"
                 android:paddingTop="5dp"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
@@ -91,7 +97,7 @@
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="vertical"
-                      android:background="@drawable/text_border"
+                      android:background="@drawable/text_border3"
                       android:layout_margin="5dp">
 
             <TextView
@@ -103,7 +109,7 @@
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textSize="18sp"
+                    android:textSize="23sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
@@ -117,17 +123,18 @@
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
+
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:id="@+id/txt_assess_last"
                       android:textColor="@color/white"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
-                      android:textSize="15sp"
+                      android:textSize="20sp"
                       android:inputType="textPersonName"
                       android:textColorHint="@color/white"
                       android:hint="Last Name"/>
@@ -139,7 +146,7 @@
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
@@ -150,7 +157,7 @@
                       android:textColor="@color/white"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
-                      android:textSize="15sp"
+                      android:textSize="20sp"
                       android:inputType="textPersonName"
                       android:textColorHint="@color/white"
                       android:hint="First Name"/>
@@ -162,7 +169,7 @@
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
@@ -173,7 +180,7 @@
                       android:textColor="@color/white"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
-                      android:textSize="15sp"
+                      android:textSize="20sp"
                       android:inputType="textPersonName"
                       android:textColorHint="@color/white"
                       android:hint="Middle Name"/>
@@ -187,20 +194,20 @@
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:textColorHint="@color/white"
                     android:layout_gravity="center"/>
 
-            <EditText android:layout_width="match_parent"
+            <EditText android:layout_width="350dp"
                       android:layout_height="wrap_content"
                       android:id="@+id/txt_assess_mob_num"
                       android:textColor="@color/white"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
                       android:inputType="phone"
-                      android:textSize="15sp"
+                      android:textSize="20sp"
                       android:textColorHint="@color/white"
                       android:hint="09 xxxx xxx xxx" />
 
@@ -213,7 +220,7 @@
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:textColorHint="@color/white"
@@ -221,63 +228,64 @@
 
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:orientation="horizontal">
+                          android:orientation="horizontal"
+                          android:layout_marginBottom="5dp">
 
                 <LinearLayout android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:orientation="vertical">
-
-                    <EditText android:layout_width="50dp"
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal">
+                        <EditText android:layout_width="70dp"
+                                  android:layout_height="wrap_content"
+                                  android:id="@+id/txt_assess_tel_num_area_code"
+                                  android:textColor="@color/white"
+                                  android:layout_marginStart="10dp"
+                                  android:inputType="phone"
+                                  android:textSize="20sp"
+                                  android:textColorHint="@color/white"
+                                  android:hint="(049)"/>
+                        <TextView android:layout_width="10dp"
+                                  android:text="+"
+                                  android:layout_marginTop="10dp"
+                                  android:textSize="20sp"
+                                  android:textColor="@color/white"
+                                  android:textAlignment="center"
+                                  android:layout_height="match_parent"
+                        />
+                    </LinearLayout>
+                    <TextView android:layout_width="90dp"
                               android:layout_height="wrap_content"
-                              android:id="@+id/txt_assess_tel_num_area_code"
                               android:textColor="@color/white"
-                              android:layout_marginStart="10dp"
-                              android:inputType="phone"
-                              android:textSize="15sp"
-                              android:textColorHint="@color/white"
-                              android:text="(049)"/>
-
-                    <TextView android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:textColor="@color/white"
-                              android:textSize="13sp"
+                              android:textSize="18sp"
                               android:text="Area Code"
                               android:textStyle="italic"
                               android:layout_gravity="center"
                               android:gravity="center"
-                              android:layout_marginStart="10dp"
+                              android:layout_marginStart="5dp"
 
                               android:textAlignment="center"
                     />
                 </LinearLayout>
-                <TextView android:layout_width="10dp"
-                          android:text="+"
 
-                          android:layout_marginTop="10dp"
-                          android:textSize="15sp"
-                          android:textColor="@color/white"
-                          android:textAlignment="center"
 
-                          android:layout_height="wrap_content"
-                />
-
-                <LinearLayout android:layout_width="match_parent"
+                <LinearLayout android:layout_width="250dp"
                               android:layout_height="wrap_content"
                               android:orientation="vertical">
-                    <EditText android:layout_width="match_parent"
+                    <EditText android:layout_width="250dp"
                               android:layout_height="wrap_content"
                               android:id="@+id/txt_assess_tel_num"
                               android:textColor="@color/white"
-                              android:layout_marginStart="5dp"
                               android:layout_marginEnd="10dp"
                               android:inputType="phone"
-                              android:textSize="15sp"
+                              android:textSize="20sp"
                               android:textColorHint="@color/white"
-                              android:text="5030-538"/>
+                              android:hint="5030-538"/>
                     <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:textColor="@color/white"
-                              android:textSize="13sp"
+                              android:textSize="18sp"
                               android:textStyle="italic"
                               android:text="Telephone Number"
                               android:layout_gravity="center"
@@ -298,7 +306,7 @@
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
@@ -309,7 +317,7 @@
                       android:textColor="@color/white"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
-                      android:textSize="15sp"
+                      android:textSize="20sp"
                       android:inputType="textEmailAddress"
                       android:textColorHint="@color/white"
                       android:hint="example@gmail.com"/>
@@ -317,11 +325,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="*please enter your own valid email address*"
-                    android:textStyle="bold"
+                    android:textStyle="italic"
                     android:layout_marginStart="10dp"
-                    android:paddingBottom="5dp"
+                    android:paddingBottom="10dp"
                     android:paddingTop="5dp"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
 
                     android:textColorHint="@color/white"
                     android:textColor="@color/white"
@@ -332,7 +340,7 @@
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="vertical"
-                      android:background="@drawable/text_border"
+                      android:background="@drawable/text_border3"
                       android:layout_margin="5dp">
 
             <TextView
@@ -344,7 +352,7 @@
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
@@ -357,7 +365,7 @@
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
@@ -367,19 +375,33 @@
                       android:textColor="@color/white"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
-                      android:textSize="15sp"
+                      android:textSize="20sp"
                       android:inputType="text"
                       android:textColorHint="@color/white"
-                      android:hint="Please enter your username"/>
+                      android:hint="Username"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="*You can use letters,numbers and periods*"
+                    android:textStyle="italic"
+                    android:layout_marginStart="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:textSize="18sp"
+
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Password:"
                     android:textStyle="bold"
                     android:layout_marginStart="10dp"
-                    android:paddingBottom="5dp"
+
                     android:paddingTop="5dp"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"
@@ -390,54 +412,51 @@
                       android:textColor="@color/white"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
-                      android:textSize="15sp"
+                      android:textSize="20sp"
                       android:inputType="textWebPassword"
                       android:textColorHint="@color/white"
                       android:text="asdcww"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Confirmation Password:"
+                    android:text=" ip:"
                     android:textStyle="bold"
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:id="@+id/txt_assess_password_confirmation"
+                      android:id="@+id/txt_assess_ip"
                       android:textColor="@color/white"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
-                      android:textSize="15sp"
-                      android:inputType="textPassword"
+                      android:textSize="20sp"
+                      android:inputType="text"
                       android:textColorHint="@color/white"
-                      android:text="asdasd2"/>
+                      android:text="192.168.100.93:8080"/>
 
         </LinearLayout>
-
-
-
-
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="horizontal"
+                      android:layout_marginTop="20dp"
                       android:gravity="center" >
 
-            <Button android:layout_width="120dp"
+            <Button android:layout_width="100dp"
                     android:layout_height="40dp"
-
+                    android:layout_gravity=""
                     android:background="@drawable/text_border"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
-                    android:layout_margin="13dp"
+                    android:layout_margin="10dp"
                     android:text="Register"
-                    android:id="@+id/btn_assess_registration"
+                    android:id="@+id/btn_asses_register"
                     android:textSize="15sp"/>
 
             <Button android:layout_width="100dp"
@@ -447,7 +466,7 @@
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
-                    android:layout_margin="15dp"
+                    android:layout_margin="10dp"
                     android:text="clear all"
                     android:id="@+id/btn_assess_clearall"
                     android:textSize="15sp"/>
@@ -460,145 +479,129 @@
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
-                    android:layout_margin="15dp"
+                    android:layout_margin="10dp"
                     android:text="Cancel"
                     android:id="@+id/btn_assess_cancel"
                     android:textSize="15sp"/>
 
         </LinearLayout>
 
-
-
-
     </LinearLayout>
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="center">
-        <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-            <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/phlogo"
-            />
 
-
-        </LinearLayout>
 
         <LinearLayout
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="18dp"
-                    android:text="@string/Reps"
-                    android:textSize="10dp"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
-
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Rep"
-                    android:textSize="10dp"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_marginBottom="5dp"/>
-
-            <TextView
-                    android:text="© 2019 San Pablo City Goverment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="10sp"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:id="@+id/textView8"/>
-
-        </LinearLayout>
-        <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-            <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/transpa"
-            />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-
-        <LinearLayout
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:orientation="horizontal">
-            <TextView
-                    android:text="Developed by:"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"
-                    android:layout_marginEnd="3dp"
-            />
-            <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="21dp"
-                    android:src="@drawable/pylon"
-                    android:layout_marginRight="13dp"/>
-        </LinearLayout>
-        <LinearLayout
 
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/phlogo"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"/>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="@string/Reps"
+                        android:textSize="13dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textStyle="bold"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Rep"
+                        android:textSize="13dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp"/>
+                <TextView
+                        android:text="© 2019 San Pablo City Goverment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="13dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:id="@+id/textView8"
+
+                />
+
+            </LinearLayout>
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/transpa"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
-            <TextView
-                    android:text="Developer: "
-                    android:layout_width="match_parent"
+
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"
-            />
-            <TextView
-                    android:text="Chris Velasco"
-                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+                <TextView
+                        android:text="Developed by:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:layout_marginEnd="3dp"
+                />
+                <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/pylon"
+                        android:layout_marginRight="13dp"/>
+            </LinearLayout>
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"
-            />
+                    android:orientation="horizontal">
+                <TextView
+                        android:text="Developer: "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                />
+                <TextView
+                        android:text="Chris Velasco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:gravity="center"
+
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                />
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
-
-
-</LinearLayout>
 </ScrollView>

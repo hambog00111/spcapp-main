@@ -169,7 +169,7 @@
                                         android:id="@+id/btn_business_in_the_city"
                                         android:layout_width="100dp"
                                         android:layout_height="100dp"
-                                        android:background="@drawable/logo_home_bc"
+                                        android:background="@drawable/logo_home_bc_button"
                                         android:fitsSystemWindows="true"
                                         android:scaleType="fitCenter"
                                         android:layout_gravity="center"/>

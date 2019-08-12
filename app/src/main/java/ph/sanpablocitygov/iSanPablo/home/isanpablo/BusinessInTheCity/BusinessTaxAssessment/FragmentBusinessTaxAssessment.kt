@@ -14,11 +14,11 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayors
 
 class FragmentBusinessTaxAssessment : Fragment() {
 
-    @SuppressLint("SetTextI18n", "InflateParams", "WrongViewCast")
+    @SuppressLint("SetTextI18n", "InflateParams")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_assessment_login_home, container, false)
-       // val btnreg = view.findViewById<TextView>(R.id.txt_assessment_register)
+        val view: View = inflater.inflate(R.layout.fragment_bc_assessment_login, container, false)
+      //  val btnreg = view.findViewById<TextView>(R.id.txt_assessment_register)
 //        btnreg.setOnClickListener {
 //            activity!!.supportFragmentManager.beginTransaction().replace(
 //                R.id.frag_container,
@@ -26,7 +26,6 @@ class FragmentBusinessTaxAssessment : Fragment() {
 //                .addToBackStack(null)
 //                .commit()
 //        }
-
         val btnreg = view.findViewById(R.id.txt_assessment_register) as TextView
         btnreg.setOnClickListener(object: View.OnClickListener {
 
@@ -35,6 +34,9 @@ class FragmentBusinessTaxAssessment : Fragment() {
                 startActivity(`in`)
             }
         })
+
+
+
         return view
 
 

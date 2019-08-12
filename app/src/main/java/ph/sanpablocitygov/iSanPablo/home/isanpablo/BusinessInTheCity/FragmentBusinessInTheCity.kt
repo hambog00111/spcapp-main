@@ -27,7 +27,6 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Fragme
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.FragmentBusinessTaxAssessment
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.testlng.Fragmentpastdata
 import ph.sanpablocitygov.iSanPablo.links.FragmentHomeCSC
 
 @Suppress("PLUGIN_WARNING")
@@ -91,7 +90,6 @@ class FragmentBusinessInTheCity : Fragment() {
                 FragmentBusinessTaxAssessment() , null)
                 .addToBackStack(null)
                 .commit()
-
         }
 
 
@@ -175,7 +173,7 @@ class FragmentBusinessInTheCity : Fragment() {
         btnmp.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                Fragmentpastdata() , null)
+                FragmentMayorsPermit() , null)
                 .addToBackStack(null)
                 .commit()
         }
