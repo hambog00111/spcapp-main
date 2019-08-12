@@ -3,6 +3,7 @@ package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTa
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.TextInputLayout
 import android.text.TextUtils
 import android.widget.EditText
 import android.widget.Toast
@@ -29,7 +30,7 @@ class BusinessTaxAssessmentRegActivity : AppCompatActivity() {
     private var txt_assess_email: EditText? = null
     private var txt_assess_username: EditText? = null
     private var txt_assess_password: EditText? = null
-    private var txt_assess_ip: EditText? = null
+    private var txt_assess_ip: TextInputLayout? = null
 
 
 
@@ -46,7 +47,7 @@ class BusinessTaxAssessmentRegActivity : AppCompatActivity() {
         txt_assess_username = findViewById(R.id.txt_assess_username) as EditText
 
         txt_assess_password = findViewById(R.id.txt_assess_password) as EditText
-        txt_assess_ip = findViewById(R.id.txt_assess_ip) as EditText
+        txt_assess_ip = findViewById(R.id.txt_assess_ip) as TextInputLayout
         //adding a click listener to button
         btn_asses_register.setOnClickListener {
             addArtist() }
@@ -74,7 +75,7 @@ class BusinessTaxAssessmentRegActivity : AppCompatActivity() {
         val ed = txt_assess_email?.text.toString()
         val uname = txt_assess_username?.text.toString()
         val pass = txt_assess_password?.text.toString()
-        val UPDATE_URL =("http://"+txt_assess_ip?.text+"/api/android_api/").toString()
+        val UPDATE_URL =("http://"+txt_assess_ip?.getEditText()?.getText()+"/api/android_api/").toString()
 
         if (TextUtils.isEmpty(lname)) {
             txt_assess_last?.error = "Please enter your last name"

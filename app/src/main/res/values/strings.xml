@@ -1028,9 +1028,10 @@
         • Lawak: 99.21 Hectares \n\n
         • Lalim: 27 Meters \n\n
         • Yamang Lawa: Dalag, Hito, Tilapia,Gurami, Hipon, Ayungin, Dulong, Big Head, Karpa, Bitoo, Kuhol \n\n
-        • Atrakson: Ang Lawa ng Sampalok, Sampalok Lake Mini Parks, Museo ng San Pablo, Doña Leonila Park, Hagdang Bato, Bonifacio Monument, Trese Martirez Monument\n\n
+        • Atrakson: Ang Lawa ng Sampalok, Sampalok Lake Mini Parks, Museo ng San Pablo, Doña Leonila Park, Hagdang Bato,
+        Bonifacio Monument, Trese Martirez Monument\n\n
         • Mga Akomodasyon: Ang Tahanan ni Aling Meding Hotel and Restaurant, Lake City Hotel \n\n
-        • Tourist Arrivals: January 2019 – 72,134 | February 2019 – 14,863 | March 2019 – 16,027  \n
+        • Tourist Arrivals: January 2019 – 72,134 | February 2019 – 14,863 | March 2019 – 16,027 \n
     </string>
 
     <string name="calibato_lakes">
@@ -1048,7 +1049,8 @@
         • Lalim: 23 Meters \n\n
         • Yamang Lawa: Dalag, Tilapia,Gurami, Hipon, Ayungin, Karpa, Bitoo, Kuhol \n\n
         • Atrakson: Ang Lawa ng Bunot \n\n
-        • Mga Akomodasyon/Kainan: Cusina de Sabang 602, Bunot Lake Resort, Villa Muñoz Resort, Crisolaido’s Motorist Inn, NM Travellers Inn \n\n
+        • Mga Akomodasyon/Kainan: Cusina de Sabang 602, Bunot Lake Resort, Villa Muñoz Resort, Crisolaido’s Motorist
+        Inn, NM Travellers Inn \n\n
         • Tourist Arrivals: January 2019 – 1,824 | February 2019 – 2,358 | March 2019 – 2,160 \n
     </string>
 
@@ -1057,7 +1059,7 @@
         • Lawak: 20.49 Hectares \n\n
         • Lalim: 27 Meters \n\n
         • Yamang Lawa: Dalag, Tilapia,Gurami, Hipon, Ayungin, Karpa, Bitoo, Kuhol \n\n
-        • Atrakson: Ang Lawa ng Muhikap, Boat Rafting with food service  \n\n
+        • Atrakson: Ang Lawa ng Muhikap, Boat Rafting with food service \n\n
         • Mga Akomodasyon/Kainan: Star Lake Resort and Hotel \n\n
         • Tourist Arrivals: January 2019 – 101 | February 2019 – 508 | March 2019 - 240 \n
     </string>
@@ -1112,7 +1114,7 @@
     </string>
     <string name="lenten_festivals">
 
-        \t\t  San Pablo City it has been decades tradition to celebrate the Lenten Season
+        \t\t San Pablo City it has been decades tradition to celebrate the Lenten Season
         highlight of Holy Week with Good Friday Procession. Life-size statues of bible
         characters and scenes are mounted on lighted flower clad floats called “andas”
         escorted by believers while chanting prayers. Thousands of visitors flock the
@@ -1121,7 +1123,7 @@
 
     <string name="christmas_festivals">
 
-        \t\t  The annual LIGHTING OF CHRISTMAS TREE at the City Plaza of
+        \t\t The annual LIGHTING OF CHRISTMAS TREE at the City Plaza of
         San Pablo every 1st Day of December ushers the holiday season in
         the City. With the celebration comes the tradition of giving and
         sharing by the City Government to less fortunate children and
@@ -1130,9 +1132,9 @@
         The giant Christmas tree remains lighted until January 15 of the
         following year, on the feast day of the City’s patron Saint Paul the First Hermit. \n\n
 
-      \t\t In 2018, giant Christmas trees and nativity on raft we’re set-up in Sampalok Lake
+        \t\t In 2018, giant Christmas trees and nativity on raft we’re set-up in Sampalok Lake
         for the traditional lighting ceremonies in live of the city plaza giant Christmas
-        tree to give way to the restoration works being undertaken at the  City Plaza by
+        tree to give way to the restoration works being undertaken at the City Plaza by
         the National Historical Commission of the Philippines (NHCP). Ten of thousands of
         visitors from all over Calabarzon and balik-bayans enjoyed long hours of festivities
         every night at Sampalok Lake with the awesome Christmas trees and lights, music and local foods.
@@ -1146,4 +1148,6 @@
     <string name="title_activity_maps">Lakbay San Pablo</string>
     <string name="title_activity_maps2">Map</string>
     <string name="leonilla_park">Doña Leonila Park Plan San Pablo City (Official Video)</string>
+    <string name="_192_168_100_93_8080">192.168.100.93:8080</string>
+    <string name="ip">IP</string>
 </resources>
