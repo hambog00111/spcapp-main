@@ -7,6 +7,11 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_bpo">BPLO Fill Up</string>
 
+    <string name="data_privacy_policy">
+        \t\t By submitting this as a fully accomplished form; you hereby consent to the collection,
+        generation, use, processing, storage and retention of your personal data by the City
+        Government of San Pablo as provided for in the Data Privacy Act of 2012. \n
+    </string>
 
     <string name="hymn">
         Titik ni : Celso Al Carunungan \n

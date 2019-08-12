@@ -93,11 +93,38 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@drawable/text_border4"
+                      android:padding="10dp"
+                      android:layout_marginBottom="20dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Data Privacy Policy"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/data_privacy_policy"
+                    android:layout_marginStart="30dp"/>
+
+        </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="vertical"
-                      android:background="@drawable/text_border3"
+                      android:background="@drawable/text_border4"
                       android:layout_margin="5dp">
 
             <TextView
@@ -110,79 +137,57 @@
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:textSize="23sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
 
 
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Last Name:"
-                    android:textStyle="bold"
-                    android:layout_marginStart="10dp"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:layout_marginBottom="5dp"
-                    android:layout_gravity="center"/>
+
 
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:id="@+id/txt_assess_last"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
-                      android:textSize="20sp"
+                      android:textSize="18sp"
                       android:inputType="textPersonName"
-                      android:textColorHint="@color/white"
+                      android:textColorHint="@color/lightgray"
                       android:hint="Last Name"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="First Name:"
-                    android:textStyle="bold"
-                    android:layout_marginStart="10dp"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:layout_marginBottom="5dp"
-                    android:layout_gravity="center"/>
+
 
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:id="@+id/txt_assess_first"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
                       android:textSize="20sp"
                       android:inputType="textPersonName"
-                      android:textColorHint="@color/white"
+                      android:textColorHint="@color/lightgray"
                       android:hint="First Name"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Middle Name:"
-                    android:textStyle="bold"
-                    android:layout_marginStart="10dp"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:layout_marginBottom="5dp"
-                    android:layout_gravity="center"/>
+            <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Middle Name:"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_marginStart="10dp"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:layout_gravity="center"/>-->
 
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:id="@+id/txt_assess_middle"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
                       android:textSize="20sp"
                       android:inputType="textPersonName"
-                      android:textColorHint="@color/white"
+                      android:textColorHint="@color/lightgray"
                       android:hint="Middle Name"/>
 
 
@@ -195,21 +200,21 @@
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/darkgray"
                     android:layout_gravity="center"/>
 
             <EditText android:layout_width="350dp"
                       android:layout_height="wrap_content"
                       android:id="@+id/txt_assess_mob_num"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
                       android:inputType="phone"
                       android:textSize="20sp"
-                      android:textColorHint="@color/white"
-                      android:hint="09 xxxx xxx xxx" />
+                      android:textColorHint="@color/lightgray"
+                      android:hint="Contact Number" />
 
 
             <TextView
@@ -221,9 +226,9 @@
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/darkgray"
                     android:layout_gravity="center"/>
 
             <LinearLayout android:layout_width="match_parent"
@@ -240,24 +245,24 @@
                         <EditText android:layout_width="70dp"
                                   android:layout_height="wrap_content"
                                   android:id="@+id/txt_assess_tel_num_area_code"
-                                  android:textColor="@color/white"
+                                  android:textColor="@color/darkgray"
                                   android:layout_marginStart="10dp"
                                   android:inputType="phone"
                                   android:textSize="20sp"
-                                  android:textColorHint="@color/white"
+                                  android:textColorHint="@color/lightgray"
                                   android:hint="(049)"/>
                         <TextView android:layout_width="10dp"
                                   android:text="+"
                                   android:layout_marginTop="10dp"
                                   android:textSize="20sp"
-                                  android:textColor="@color/white"
+                                  android:textColor="@color/darkgray"
                                   android:textAlignment="center"
                                   android:layout_height="match_parent"
                         />
                     </LinearLayout>
                     <TextView android:layout_width="90dp"
                               android:layout_height="wrap_content"
-                              android:textColor="@color/white"
+                              android:textColor="@color/darkgray"
                               android:textSize="18sp"
                               android:text="Area Code"
                               android:textStyle="italic"
@@ -276,15 +281,15 @@
                     <EditText android:layout_width="250dp"
                               android:layout_height="wrap_content"
                               android:id="@+id/txt_assess_tel_num"
-                              android:textColor="@color/white"
+                              android:textColor="@color/darkgray"
                               android:layout_marginEnd="10dp"
                               android:inputType="phone"
                               android:textSize="20sp"
-                              android:textColorHint="@color/white"
+                              android:textColorHint="@color/lightgray"
                               android:hint="5030-538"/>
                     <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
-                              android:textColor="@color/white"
+                              android:textColor="@color/darkgray"
                               android:textSize="18sp"
                               android:textStyle="italic"
                               android:text="Telephone Number"
@@ -307,7 +312,7 @@
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
 
@@ -319,7 +324,7 @@
                       android:layout_marginEnd="10dp"
                       android:textSize="20sp"
                       android:inputType="textEmailAddress"
-                      android:textColorHint="@color/white"
+                      android:textColorHint="@color/lightgray"
                       android:hint="example@gmail.com"/>
             <TextView
                     android:layout_width="match_parent"
@@ -330,9 +335,8 @@
                     android:paddingBottom="10dp"
                     android:paddingTop="5dp"
                     android:textSize="18sp"
-
-                    android:textColorHint="@color/white"
-                    android:textColor="@color/white"
+                    android:textColorHint="@color/darkgray"
+                    android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
         </LinearLayout>
@@ -340,7 +344,7 @@
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="vertical"
-                      android:background="@drawable/text_border3"
+                      android:background="@drawable/text_border4"
                       android:layout_margin="5dp">
 
             <TextView
@@ -353,7 +357,7 @@
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:textSize="25sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
 
@@ -366,7 +370,7 @@
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
             <EditText android:layout_width="match_parent"
@@ -377,7 +381,7 @@
                       android:layout_marginEnd="10dp"
                       android:textSize="20sp"
                       android:inputType="text"
-                      android:textColorHint="@color/white"
+                      android:textColorHint="@color/lightgray"
                       android:hint="Username"/>
             <TextView
                     android:layout_width="match_parent"
@@ -389,8 +393,8 @@
                     android:paddingTop="5dp"
                     android:textSize="18sp"
 
-                    android:textColorHint="@color/white"
-                    android:textColor="@color/white"
+                    android:textColorHint="@color/darkgray"
+                    android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
             <TextView
@@ -402,19 +406,19 @@
 
                     android:paddingTop="5dp"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"
             />
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:id="@+id/txt_assess_password"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
                       android:textSize="20sp"
                       android:inputType="textWebPassword"
-                      android:textColorHint="@color/white"
+                      android:textColorHint="@color/darkgray"
                       android:text="asdcww"/>
             <TextView
                     android:layout_width="match_parent"
@@ -425,18 +429,18 @@
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"/>
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:id="@+id/txt_assess_ip"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:layout_marginStart="10dp"
                       android:layout_marginEnd="10dp"
                       android:textSize="20sp"
                       android:inputType="text"
-                      android:textColorHint="@color/white"
+                      android:textColorHint="@color/lightgray"
                       android:text="192.168.100.93:8080"/>
 
         </LinearLayout>

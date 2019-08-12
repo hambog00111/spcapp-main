@@ -89,14 +89,41 @@
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="vertical"
-                      android:background="@drawable/text_border"
+                      android:background="@drawable/text_border4"
+                      android:padding="10dp"
+                      android:layout_marginBottom="20dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Data Privacy Policy"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/data_privacy_policy"
+                    android:layout_marginStart="30dp"/>
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@drawable/text_border4"
                       android:padding="10dp">
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="INSTRUCTION"
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorPrimaryDark"
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:textSize="18sp"
@@ -106,14 +133,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="1.  Provide accurate information. Incomplete form will not be proceed in the next step."
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorPrimaryDark"
                     android:paddingTop="5dp"
                     android:textSize="18sp"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="2.  If the context is unclickable please proceed to the next context. It will be automatic system generated."
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorPrimaryDark"
                     android:paddingTop="5dp"
                     android:textSize="18sp"/>
         </LinearLayout>
@@ -139,12 +166,12 @@
                       android:id="@+id/ll_bplo_1"
                       android:orientation="vertical"
                       android:padding="10dp"
-                      android:background="@drawable/text_border">
+                      android:background="@drawable/text_border4">
 
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:textSize="21sp"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:textStyle="bold"
                       android:layout_marginBottom="10dp"
                       android:text="Business Activity"/>
@@ -152,7 +179,7 @@
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:textSize="18sp"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:textStyle="bold"
                       android:layout_marginBottom="10dp"
                       android:text="Main Business"/>
@@ -178,8 +205,8 @@
                               android:textSize="18sp"
                               android:inputType="text"
                               android:hint="Sub Category"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_business_activity_sub_category"/>
 
 
@@ -188,8 +215,8 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:text="Capitalization"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_business_activity_capitalization"/>
 
@@ -211,8 +238,8 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:hint="No. of Units"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_business_activity_num_units"/>
 
                 </LinearLayout>
@@ -226,7 +253,7 @@
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:id="@+id/btn_business_activity_update"
-                    android:background="@drawable/text_border"/>
+                    android:background="@drawable/text_border2"/>
             <LinearLayout android:layout_width="match_parent"
                           android:padding="10dp"
                           android:layout_height="wrap_content"
@@ -242,8 +269,8 @@
                               android:textSize="18sp"
                               android:inputType="text"
                               android:hint="Line of business"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_business_activity_line_business_conf"/>
                     <EditText android:layout_width="match_parent"
@@ -251,8 +278,8 @@
                               android:textSize="18sp"
                               android:inputType="text"
                               android:hint="Code"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_business_activity_code_conf"/>
                     <EditText android:layout_width="match_parent"
@@ -260,8 +287,8 @@
                               android:textSize="18sp"
                               android:inputType="text"
                               android:hint="Sub Category"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_business_activity_sub_category_conf"/>
                 </LinearLayout>
@@ -275,8 +302,8 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:text="Capitalization"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_business_activity_capitalization_conf"/>
                     <EditText android:layout_width="match_parent"
@@ -284,8 +311,7 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:hint="No. of Units"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColorHint="@color/darkgray"
                               android:id="@+id/txt_bplo_business_activity_num_units_conf"/>
                 </LinearLayout>
             </LinearLayout>
@@ -298,12 +324,12 @@
                       android:id="@+id/ll_bplo_2"
                       android:orientation="vertical"
                       android:padding="10dp"
-                      android:background="@drawable/text_border">
+                      android:background="@drawable/text_border4">
 
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:textSize="18sp"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:textStyle="bold"
                       android:layout_marginBottom="10dp"
                       android:text="Additional Line of Business"/>
@@ -328,8 +354,8 @@
                               android:textSize="18sp"
                               android:inputType="text"
                               android:hint="Sub Category"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_additional_line_sub_category"/>
 
 
@@ -352,8 +378,8 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:text="Capitalization"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_additional_line_capitalization"/>
 
@@ -369,7 +395,7 @@
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:id="@+id/btn_additional_line_add"
-                    android:background="@drawable/text_border"/>
+                    android:background="@drawable/text_border2"/>
 
             <ListView android:layout_width="match_parent"
                       android:layout_marginTop="10dp"

@@ -80,46 +80,77 @@
                       android:text="BPLO Fill-up Form"/>
         </LinearLayout>
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="vertical"
-                  android:background="@drawable/text_border"
-                  android:padding="10dp">
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="INSTRUCTION"
-                android:textColor="@color/white"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textSize="13sp"
-                android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@drawable/text_border4"
+                      android:padding="10dp"
+                      android:layout_marginBottom="20dp">
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="1.  Provide accurate information. Incomplete form will not be proceed in the next step."
-                android:textColor="@color/white"
-                android:paddingTop="5dp"
-                android:textSize="13sp"/>
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="2.  If the context is unclickable please proceed to the next context. It will be automatic system generated."
-                android:textColor="@color/white"
-                android:paddingTop="5dp"
-                android:textSize="13sp"/>
-    </LinearLayout>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Data Privacy Policy"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/data_privacy_policy"
+                    android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@drawable/text_border4"
+                      android:padding="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="INSTRUCTION"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="1.  Provide accurate information. Incomplete form will not be proceed in the next step."
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="5dp"
+                    android:textSize="13sp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="2.  If the context is unclickable please proceed to the next context. It will be automatic system generated."
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="5dp"
+                    android:textSize="13sp"/>
+        </LinearLayout>
 
                 <LinearLayout android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:layout_margin="10dp">
-                        <TextView android:layout_width="180dp"
+                        <TextView android:layout_width="match_parent"
                                   android:layout_height="wrap_content"
                                     android:text="STEP 3"
                                     android:textSize="20sp"
+                                  android:gravity="center"
                                     android:textColor="@color/white"
                                     android:textStyle="bold"/>
                 </LinearLayout>
@@ -134,12 +165,12 @@
                       android:id="@+id/ll_bplo_1"
                       android:orientation="vertical"
                       android:padding="10dp"
-                      android:background="@drawable/text_border">
+                      android:background="@drawable/text_border4">
 
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:textSize="15sp"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:textStyle="bold"
                       android:layout_marginBottom="10dp"
                       android:text="Owners Information" />
@@ -147,8 +178,8 @@
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:hint="Last Name"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:textSize="13sp"
                       android:inputType="textPersonName"
                       android:id="@+id/txt_bplo_owners_info_lname"/>
@@ -156,8 +187,8 @@
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:hint="First Name"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:textSize="13sp"
                       android:inputType="textPersonName"
                       android:id="@+id/txt_bplo_owners_info_fname"/>
@@ -165,8 +196,8 @@
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:hint="Middle Name"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:textSize="13sp"
                       android:inputType="textPersonName"
                       android:id="@+id/txt_bplo_owners_info_mname"/>
@@ -175,8 +206,8 @@
                       android:textSize="13sp"
                       android:inputType="textPostalAddress"
                       android:hint="Owners Address"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_owners_info_owners_address"/>
 
@@ -185,8 +216,8 @@
                       android:textSize="13sp"
                       android:inputType="textPostalAddress"
                       android:hint="Building Name"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_owners_info_owners_name"/>
 
@@ -195,8 +226,8 @@
                       android:textSize="13sp"
                       android:inputType="textPostalAddress"
                       android:hint="Street"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_owners_info_street"/>
             <EditText android:layout_width="match_parent"
@@ -204,8 +235,8 @@
                       android:textSize="13sp"
                       android:inputType="textPostalAddress"
                       android:hint="Subdivision"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_owners_info_subdivision"/>
 
@@ -228,8 +259,8 @@
                               android:textSize="13sp"
                               android:inputType="number"
                               android:hint="House No./Bldg. No."
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_owners_info_house_num"/>
 
 
@@ -239,8 +270,8 @@
                               android:textSize="13sp"
                               android:inputType="text"
                               android:text="San Pablo City"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_owners_info_city"/>
                     <EditText android:layout_width="match_parent"
@@ -248,8 +279,8 @@
                               android:textSize="13sp"
                               android:inputType="phone"
                               android:hint="Contact Number"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_owners_info_contact_num"/>
                 </LinearLayout>
 
@@ -264,8 +295,8 @@
                               android:textSize="13sp"
                               android:inputType="number"
                               android:hint="Unit No."
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_owners_info_unit_num"/>
 
                     <EditText android:layout_width="match_parent"
@@ -274,8 +305,8 @@
                               android:textSize="13sp"
                               android:inputType="date"
                               android:text="Laguna"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_owners_info_province"/>
                     <EditText android:layout_width="match_parent"
@@ -283,8 +314,8 @@
                               android:textSize="13sp"
                               android:inputType="number"
                               android:hint="PIN"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_owners_info_pin"/>
                 </LinearLayout>
             </LinearLayout>
@@ -293,8 +324,8 @@
                <EditText android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:hint="Email Address"
-                         android:textColor="@color/white"
-                         android:textColorHint="@color/white"
+                         android:textColor="@color/darkgray"
+                         android:textColorHint="@color/lightgray"
                          android:textSize="13sp"
                          android:inputType="textEmailAddress"
                         android:id="@+id/txt_bplo_owners_info_email_address"/>
@@ -309,19 +340,19 @@
                   android:id="@+id/ll_bplo_2"
                   android:orientation="vertical"
                   android:padding="10dp"
-                  android:background="@drawable/text_border">
+                  android:background="@drawable/text_border4">
 
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                     android:textSize="13sp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:text="Business Area (in SQM)"/>
 
         <EditText android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:hint="in sq m"
-                  android:textColor="@color/white"
-                  android:textColorHint="@color/white"
+                  android:textColor="@color/darkgray"
+                  android:textColorHint="@color/lightgray"
                   android:textSize="13sp"
                   android:inputType="number"
                   android:id="@+id/txt_bplo_owners_info_business_area"/>
@@ -338,8 +369,8 @@
         <EditText android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:hint="Total Male Employees\nin Establishment"
-                  android:textColor="@color/white"
-                  android:textColorHint="@color/white"
+                  android:textColor="@color/darkgray"
+                  android:textColorHint="@color/lightgray"
                   android:textSize="13sp"
                   android:inputType="number"
                   android:id="@+id/txt_bplo_owners_info_total_male"/>
@@ -352,8 +383,8 @@
         <EditText android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:hint="Total Female Employee\nin Establishment"
-                  android:textColor="@color/white"
-                  android:textColorHint="@color/white"
+                  android:textColor="@color/darkgray"
+                  android:textColorHint="@color/lightgray"
                   android:textSize="13sp"
                   android:inputType="number"
                   android:id="@+id/txt_bplo_owners_info_total_female"/>
@@ -371,8 +402,8 @@
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:hint="\nUnit of Service Vehicle"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:textSize="13sp"
                       android:inputType="number"
                       android:id="@+id/txt_bplo_owners_info_unit_service"/>
@@ -385,8 +416,8 @@
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:hint="Total No. of Employees \nResiding in LGU"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:textSize="13sp"
                       android:inputType="number"
                       android:id="@+id/txt_bplo_owners_info_total_num_employees_lgu"/>
@@ -396,7 +427,7 @@
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:textSize="13sp"
-                  android:textColor="@color/white"
+                  android:textColor="@color/darkgray"
                   android:text="Rented?"/>
 
         <RadioGroup android:layout_width="match_parent"
@@ -408,13 +439,13 @@
                          android:layout_height="wrap_content"
                          android:text="Yes"
                          android:textSize="13sp"
-                         android:textColor="@color/white"
+                         android:textColor="@color/darkgray"
                          android:id="@+id/rb_bplo_owner_info_rented_yes"/>
             <RadioButton android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="No"
                          android:textSize="13sp"
-                         android:textColor="@color/white"
+                         android:textColor="@color/darkgray"
                          android:id="@+id/rb_bplo_owner_info_rented_no"/>
 
         </RadioGroup>
@@ -431,12 +462,12 @@
                       android:padding="5dp"
                       android:gravity="center">
 
-            <Button android:layout_width="110dp"
+            <Button android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:textColor="@color/white"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
                     android:textStyle="bold"
                     android:textSize="15sp"
                     android:background="@drawable/text_border"
@@ -444,11 +475,11 @@
                     android:layout_gravity="start"
                     android:id="@+id/txt_bplo_back"/>
 
-            <Button android:layout_width="110dp"
+            <Button android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:textColor="@color/white"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
                     android:layout_marginTop="10dp"
                     android:textStyle="bold"
                     android:gravity="center"
@@ -458,12 +489,12 @@
                     android:layout_gravity="center_horizontal"
                     android:id="@+id/txt_bplo_clear_all"/>
 
-            <Button android:layout_width="110dp"
+            <Button android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:textColor="@color/white"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
                     android:textStyle="bold"
                     android:textSize="15sp"
                     android:text="next page"

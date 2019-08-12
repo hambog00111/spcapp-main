@@ -86,18 +86,45 @@
                       android:textStyle="bold"
                       android:text="BPLO Fill-up Form"/>
         </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@drawable/text_border4"
+                      android:padding="10dp"
+                      android:layout_marginBottom="20dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Data Privacy Policy"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/data_privacy_policy"
+                    android:layout_marginStart="30dp"/>
+
+        </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="vertical"
-                      android:background="@drawable/text_border"
+                      android:background="@drawable/text_border4"
                       android:padding="10dp">
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="INSTRUCTION"
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorPrimaryDark"
                     android:paddingTop="10dp"
                     android:paddingBottom="5dp"
                     android:textSize="18sp"
@@ -107,14 +134,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="1.  Provide accurate information. Incomplete form will not be proceed in the next step."
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorPrimaryDark"
                     android:paddingTop="5dp"
                     android:textSize="15sp"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="2.  If the context is unclickable please proceed to the next context. It will be automatic system generated."
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorPrimaryDark"
                     android:paddingTop="5dp"
                     android:textSize="15sp"/>
         </LinearLayout>
@@ -143,12 +170,12 @@
                       android:id="@+id/ll_bplo_2"
                       android:orientation="vertical"
                       android:padding="10dp"
-                      android:background="@drawable/text_border">
+                      android:background="@drawable/text_border4">
 
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:textSize="18sp"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:textStyle="bold"
                       android:layout_marginBottom="10dp"
                       android:text="Business Information" />
@@ -158,8 +185,8 @@
                       android:textSize="18sp"
                       android:inputType="textPostalAddress"
                       android:hint="Business Address"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_business_info_business_address"/>
 
@@ -168,8 +195,8 @@
                       android:textSize="18sp"
                       android:inputType="textPostalAddress"
                       android:hint="Building Name"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_business_info_building_name"/>
 
@@ -178,8 +205,8 @@
                       android:textSize="18sp"
                       android:inputType="textPostalAddress"
                       android:hint="Street"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_business_info_street"/>
             <EditText android:layout_width="match_parent"
@@ -187,8 +214,8 @@
                       android:textSize="18sp"
                       android:inputType="textPostalAddress"
                       android:hint="Subdivision"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_business_info_subdivision"/>
             <Spinner android:layout_width="180dp"
@@ -216,8 +243,8 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:hint="House No./Bldg. No."
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_business_info_house_num"/>
 
 
@@ -227,8 +254,8 @@
                               android:textSize="18sp"
                               android:inputType="text"
                               android:text="San Pablo City"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_business_info_city"/>
                     <EditText android:layout_width="match_parent"
@@ -236,8 +263,8 @@
                               android:textSize="18sp"
                               android:inputType="phone"
                               android:hint="Contact Number"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_business_info_contact_num"/>
                 </LinearLayout>
 
@@ -253,8 +280,8 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:hint="Unit No."
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_business_info_unit_num"/>
 
                     <EditText android:layout_width="match_parent"
@@ -263,8 +290,8 @@
                               android:textSize="18sp"
                               android:inputType="date"
                               android:text="Laguna"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_business_info_province"/>
                     <EditText android:layout_width="match_parent"
@@ -272,8 +299,8 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:hint="PIN"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_business_info_pin"/>
                 </LinearLayout>
             </LinearLayout>
@@ -282,8 +309,8 @@
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:hint="Email Address"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:textSize="18sp"
                       android:inputType="text"
                       android:id="@+id/txt_bplo_business_info_email_address"/>
@@ -302,7 +329,7 @@
 
             <Button android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
@@ -315,7 +342,7 @@
 
             <Button android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
@@ -329,7 +356,7 @@
 
             <Button android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"

@@ -13,16 +13,16 @@ import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
 
 
-class FragmentBPLOonline : Fragment() {
+class FragmentBPLOProfile : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_bc_bplo_home_login, null)
+        val view = inflater.inflate(R.layout.fragment_bc_bplo_profile, null)
 
-        val btnlogin = view.findViewById<Button>(R.id.btn_bplo_login)
+        val btnlogin = view.findViewById<Button>(R.id.txt_bplo_apply_now)
         btnlogin.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                FragmentBPLOProfile() , null)
+                FragmentBPLOstep1() , null)
                 .addToBackStack(null)
                 .commit()
         }

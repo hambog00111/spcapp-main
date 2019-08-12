@@ -80,46 +80,78 @@
                       android:text="BPLO Fill-up Form"/>
         </LinearLayout>
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="vertical"
-                  android:background="@drawable/text_border"
-                  android:padding="10dp">
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="INSTRUCTION"
-                android:textColor="@color/white"
-                android:paddingTop="10dp"
-                android:paddingBottom="5dp"
-                android:textSize="14dp"
-                android:textStyle="bold"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@drawable/text_border4"
+                      android:padding="10dp"
+                      android:layout_marginBottom="20dp">
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="1.  Provide accurate information. Incomplete form will not be proceed in the next step."
-                android:textColor="@color/white"
-                android:paddingTop="5dp"
-                android:textSize="13sp"/>
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="2.  If the context is unclickable please proceed to the next context. It will be automatic system generated."
-                android:textColor="@color/white"
-                android:paddingTop="5dp"
-                android:textSize="13sp"/>
-    </LinearLayout>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Data Privacy Policy"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
 
-                <LinearLayout android:layout_width="match_parent"
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/data_privacy_policy"
+                    android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:background="@drawable/text_border4"
+                      android:padding="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="INSTRUCTION"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="1.  Provide accurate information. Incomplete form will not be proceed in the next step."
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="5dp"
+                    android:textSize="13sp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="2.  If the context is unclickable please proceed to the next context. It will be automatic system generated."
+                    android:textColor="@color/colorPrimaryDark"
+                    android:paddingTop="5dp"
+                    android:textSize="13sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:layout_margin="10dp">
-                        <TextView android:layout_width="180dp"
+                        <TextView android:layout_width="match_parent"
                                   android:layout_height="wrap_content"
                                     android:text="STEP 4"
                                     android:textSize="20sp"
+                                  android:gravity="center"
                                     android:textColor="@color/white"
                                     android:textStyle="bold"/>
                 </LinearLayout>
@@ -131,12 +163,12 @@
                       android:id="@+id/ll_bplo_1"
                       android:orientation="vertical"
                       android:padding="10dp"
-                      android:background="@drawable/text_border">
+                      android:background="@drawable/text_border4">
 
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:textSize="18sp"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:textStyle="bold"
                       android:layout_marginBottom="10dp"
                       android:text="Business Activity"/>
@@ -144,7 +176,7 @@
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:textSize="15sp"
-                      android:textColor="@color/white"
+                      android:textColor="@color/darkgray"
                       android:textStyle="bold"
                       android:layout_marginBottom="10dp"
                       android:text="Main Business"/>
@@ -167,8 +199,8 @@
                               android:textSize="13sp"
                               android:inputType="text"
                               android:hint="Sub Category"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_business_activity_sub_category"/>
 
 
@@ -177,8 +209,8 @@
                               android:textSize="13sp"
                               android:inputType="number"
                               android:text="Capitalization"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:clickable="false"
                               android:id="@+id/txt_bplo_business_activity_capitalization"/>
 
@@ -199,8 +231,8 @@
                               android:textSize="13sp"
                               android:inputType="number"
                               android:hint="No. of Units"
-                              android:textColor="@color/white"
-                              android:textColorHint="@color/white"
+                              android:textColor="@color/darkgray"
+                              android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_business_activity_num_units"/>
 
                 </LinearLayout>
@@ -214,7 +246,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/btn_business_activity_update"
-                    android:background="@drawable/text_border"/>
+                    android:background="@drawable/text_border2"/>
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:orientation="horizontal">
@@ -228,8 +260,8 @@
                       android:textSize="13sp"
                       android:inputType="text"
                       android:hint="Line of business"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_business_activity_line_business_conf"/>
             <EditText android:layout_width="match_parent"
@@ -237,8 +269,8 @@
                       android:textSize="13sp"
                       android:inputType="text"
                       android:hint="Code"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_business_activity_code_conf"/>
             <EditText android:layout_width="match_parent"
@@ -246,8 +278,8 @@
                       android:textSize="13sp"
                       android:inputType="text"
                       android:hint="Sub Category"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_business_activity_sub_category_conf"/>
         </LinearLayout>
