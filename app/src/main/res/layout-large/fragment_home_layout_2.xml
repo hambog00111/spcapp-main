@@ -143,7 +143,7 @@
                         android:id="@+id/btn_business_in_the_city"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_home_bc"
+                        android:background="@drawable/logo_home_bc_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
@@ -172,7 +172,7 @@
                         android:id="@+id/btn_my_taxes"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_home_mt"
+                        android:background="@drawable/logo_home_mt_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
@@ -211,7 +211,7 @@
                         android:id="@+id/btn_online_request"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_home_maor"
+                        android:background="@drawable/logo_home_maor_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
@@ -240,7 +240,7 @@
                         android:id="@+id/btn_city_hot_lines"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_home_ch"
+                        android:background="@drawable/logo_home_ch_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
@@ -280,7 +280,7 @@
                         android:id="@+id/btn_gov_online_service"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_home_gos"
+                        android:background="@drawable/logo_home_gos_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
@@ -309,7 +309,7 @@
                         android:id="@+id/btn_city_employees_corner"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_home_cec"
+                        android:background="@drawable/logo_home_cec_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>

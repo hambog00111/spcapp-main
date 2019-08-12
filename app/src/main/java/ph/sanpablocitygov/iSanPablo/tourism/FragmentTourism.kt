@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.tourism.Festival.FragmentFestival
+import ph.sanpablocitygov.iSanPablo.tourism.WheretoStayEat.FragmentWheretoStayEat
 
 
 class FragmentTourism : Fragment (){
@@ -36,6 +38,14 @@ class FragmentTourism : Fragment (){
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentFestival(), null)
+                .addToBackStack(null)
+                .commit()
+        }
+        val btnstay = view.findViewById<Button>(R.id.btn_tourism_where)
+        btnstay?.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentWheretoStayEat(), null)
                 .addToBackStack(null)
                 .commit()
         }

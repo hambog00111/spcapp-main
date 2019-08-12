@@ -80,7 +80,7 @@
                 <Button
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/logo_emplocor_sr"
+                        android:background="@drawable/logo_emplocor_sor_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"
@@ -109,7 +109,7 @@
                 <Button
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/logo_emplocor_cp"
+                        android:background="@drawable/logo_emplocor_cp_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>

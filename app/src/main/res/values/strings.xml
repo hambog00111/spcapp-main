@@ -1090,16 +1090,6 @@
     </string>
 
     <string name="coco_festivals">
-       \t\tIn January 12, 1996, a group of individuals from private
-        and government sectors advocated and committed themselves
-        in developing and promoting arts and culture in San Pablo
-        City, thus conceived the COCO FESTIVAL. This annual weeklong
-        festival, which is celebrated every second week of January,
-        showcases the rich cultural heritage and natural attractions
-        of the city which draws spectators to visit and balikbayans
-        yearn to come home to. \n\n
-
-
         \t\t A weeklong festival celebrated every 2nd week of January that
         showcases the rich cultural heritage and natural attractions of
         the City highlighted by a grandiose parade honoring its patron Saint
@@ -1110,7 +1100,43 @@
         San Pablo City. Today, it has drawn spectators from neighboring towns,
         foreign tourist and balikbayans who yearns to come home each year and
         celebrate the festivities. \n
+    </string>
+    <string name="tilapia_festivals">
+        \t\t Every 30th of May, San Pablo City celebrates the TILAPIA FESTIVAL.
+        It’s a festivity for bountiful harvest from the 7Lakes. Since 2005 this
+        festival honors the fishermen and their families with events like balsa
+        regatta, balsa tug of war, tilapia eating and cooking contest, largest
+        and healthiest tilapia which are conducted to the awe of visitors and
+        village dwellers around Sampalok Lake. Fostering camaraderie among the fisherfolks
+        is promoted by the event that is highlighted by the search for Diwata ng Pitong Lawa. \n
+    </string>
+    <string name="lenten_festivals">
 
+        \t\t  San Pablo City it has been decades tradition to celebrate the Lenten Season
+        highlight of Holy Week with Good Friday Procession. Life-size statues of bible
+        characters and scenes are mounted on lighted flower clad floats called “andas”
+        escorted by believers while chanting prayers. Thousands of visitors flock the
+        City to witness the annual event. \n
+    </string>
+
+    <string name="christmas_festivals">
+
+        \t\t  The annual LIGHTING OF CHRISTMAS TREE at the City Plaza of
+        San Pablo every 1st Day of December ushers the holiday season in
+        the City. With the celebration comes the tradition of giving and
+        sharing by the City Government to less fortunate children and
+        families of the City since 2008. Highlight of the cold night
+        celebration in the Plaza is made warm by colorful fireworks display.
+        The giant Christmas tree remains lighted until January 15 of the
+        following year, on the feast day of the City’s patron Saint Paul the First Hermit. \n\n
+
+      \t\t In 2018, giant Christmas trees and nativity on raft we’re set-up in Sampalok Lake
+        for the traditional lighting ceremonies in live of the city plaza giant Christmas
+        tree to give way to the restoration works being undertaken at the  City Plaza by
+        the National Historical Commission of the Philippines (NHCP). Ten of thousands of
+        visitors from all over Calabarzon and balik-bayans enjoyed long hours of festivities
+        every night at Sampalok Lake with the awesome Christmas trees and lights, music and local foods.
+        \n
     </string>
     <string name="back"><![CDATA[<]]></string>
     <string name="forward"><![CDATA[>]]></string>
