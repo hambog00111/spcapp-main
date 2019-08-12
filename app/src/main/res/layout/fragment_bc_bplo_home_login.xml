@@ -160,6 +160,10 @@
             </LinearLayout>
 
 
+
+
+
+
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:textSize="13sp"
@@ -168,6 +172,32 @@
                       android:textAlignment="center"
                       android:id="@+id/txt_assessment_register"
                       android:textColor="@color/white"/>
+            <ProgressBar
+                    android:visibility="gone"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar"/>
+
+            <android.support.design.widget.TextInputLayout
+                    android:id="@+id/txt_assess_ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:errorEnabled="true"
+                    app:passwordToggleEnabled="true"
+            >
+
+                <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="ip"
+                        android:text="81cdf678.ngrok.io"
+                        android:inputType="textPassword"
+
+                />
+            </android.support.design.widget.TextInputLayout>
+
+
 
         </LinearLayout>
 

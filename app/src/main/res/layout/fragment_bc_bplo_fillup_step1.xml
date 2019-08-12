@@ -190,7 +190,7 @@
                               android:layout_height="wrap_content"
                               android:textColor="@color/darkgray"
                               android:textStyle="bold"
-                              android:textSize="13"
+                              android:textSize="13sp"
                               android:text="Businesss ID"/>
 
                     <EditText android:layout_width="match_parent"

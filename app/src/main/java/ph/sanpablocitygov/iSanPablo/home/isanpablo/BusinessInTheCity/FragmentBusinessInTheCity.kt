@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DownloadManager
 import android.content.DialogInterface
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -12,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 
 import kotlinx.android.synthetic.main.dialog_bplo.view.*
 import kotlinx.android.synthetic.main.dialog_bplo.view.btn_download_bplo
@@ -25,6 +27,7 @@ import kotlinx.android.synthetic.main.dialog_investment.view.btn_business_invest
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_invest_cancel
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.LoginBPLOActivity
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.FragmentBusinessTaxAssessment
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
 import ph.sanpablocitygov.iSanPablo.links.FragmentHomeCSC
@@ -40,7 +43,7 @@ class FragmentBusinessInTheCity : Fragment() {
         val btnbplo = view.findViewById<Button>(R.id.btn_business_bplo)
         btnbplo.setOnClickListener {
 
-            val bploView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_bplo, null)
+            var bploView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_bplo, null)
 
             val bplobBuilder = AlertDialog.Builder(requireContext())
                 .setView(bploView)
@@ -67,15 +70,15 @@ class FragmentBusinessInTheCity : Fragment() {
                 val alertDialog = builder.create()
                 alertDialog.show()
             }
+
             bploView.btn_online_bplo.setOnClickListener {
                 bploDialog.dismiss()
-                activity!!.supportFragmentManager.beginTransaction().replace(
-                    R.id.frag_container,
-                    FragmentBPLOonline()
-                    , null)
-                    .addToBackStack(null)
-                    .commit()
+                val intent = Intent(activity, LoginBPLOActivity::class.java)
+                activity?.startActivity(intent)
             }
+
+
+
             bploView.btn_bplo_cancel.setOnClickListener {
                 bploDialog.dismiss()
             }
