@@ -126,15 +126,7 @@ class FragmentBusinessInTheCity : Fragment() {
                 val alertDialog = builder.create()
                 alertDialog.show()
             }
-//            investmentView.btn_online_bplo.setOnClickListener {
-//                bploDialog.dismiss()
-//                activity!!.supportFragmentManager.beginTransaction().replace(
-//                    R.id.frag_container,
-//                    FragmentBPLOonline()
-//                    , null)
-//                    .addToBackStack(null)
-//                    .commit()
-//            }
+//
             investmentView.btn_invest_cancel.setOnClickListener {
                 investDialog.dismiss()
             }

@@ -123,6 +123,113 @@
                 android:textSize="17sp"
         />
 
+        <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:id="@+id/festivals_tilapia_viewpager"
+                android:fitsSystemWindows="true"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+        />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tilapia Festival"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+        />
+
+        <me.biubiubiu.justifytext.library.JustifyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tilapia_festivals"
+                android:textColor="@color/white"
+                android:layout_marginStart="35dp"
+                android:textSize="17sp"
+        />
+
+        <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:id="@+id/festivals_lenten_viewpager"
+                android:fitsSystemWindows="true"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+        />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lenten Procession"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+        />
+
+        <me.biubiubiu.justifytext.library.JustifyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lenten_festivals"
+                android:textColor="@color/white"
+                android:layout_marginStart="35dp"
+                android:textSize="17sp"
+        />
+
+        <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:id="@+id/festivals_christmas_viewpager"
+                android:fitsSystemWindows="true"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+        />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Christmas Tree Lighting Ceremonies and Gift Giving"
+                android:textStyle="bold"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+        />
+
+        <me.biubiubiu.justifytext.library.JustifyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/christmas_festivals"
+                android:textColor="@color/white"
+                android:layout_marginStart="35dp"
+                android:textSize="17sp"
+        />
+
+
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"

@@ -80,7 +80,7 @@
                 <Button
                         android:layout_width="104dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/logo_mt_rtp"
+                        android:background="@drawable/logo_mt_rpt_button"
                         android:fitsSystemWindows="true"
                         android:id="@+id/btn_rpt_payment"
                         android:scaleType="fitCenter"
@@ -109,7 +109,7 @@
                 <Button
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/logo_mt_purchase"
+                        android:background="@drawable/logo_mt_fp_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:id="@+id/btn_fp"
@@ -147,12 +147,12 @@
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="100dp"
+                        android:layout_width="89dp"
                         android:layout_height="100dp"
                         android:id="@+id/btn_mop"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
-                        android:background="@drawable/logo_mt_mop"
+                        android:background="@drawable/logo_mt_mop_button"
                         android:layout_gravity="center"/>
                 <TextView
                         android:layout_width="match_parent"
@@ -180,7 +180,7 @@
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:id="@+id/btn_lcr_request_payment"
-                        android:background="@drawable/logo_mt_lcr"
+                        android:background="@drawable/logo_mt_lcr_button"
                         android:layout_gravity="center"/>
 
                 <TextView
@@ -217,7 +217,7 @@
                 <Button
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/logo_mt_certification"
+                        android:background="@drawable/logo_mt_certification_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
@@ -244,7 +244,7 @@
                 <Button
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:background="@drawable/logo_mt_op"
+                        android:background="@drawable/logo_mt_op_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:id="@+id/btn_op"

@@ -80,7 +80,7 @@
                 <Button
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_bc_db"
+                        android:background="@drawable/logo_bc_db_button"
                         android:fitsSystemWindows="true"
                         android:id="@+id/btn_business_doing_business"
                         android:scaleType="fitCenter"
@@ -109,7 +109,7 @@
                 <Button
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_bc_investment"
+                        android:background="@drawable/logo_bc_investment_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"
@@ -147,12 +147,12 @@
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="130dp"
+                        android:layout_width="127dp"
                         android:layout_height="125dp"
                         android:id="@+id/btn_business_bplo"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
-                        android:background="@drawable/logo_bc_bplo"
+                        android:background="@drawable/logo_bc_bplo_button"
                         android:layout_gravity="center"/>
                 <TextView
                         android:layout_width="match_parent"
@@ -179,7 +179,7 @@
                         android:layout_height="125dp"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
-                        android:background="@drawable/logo_bc_bta"
+                        android:background="@drawable/logo_bc_bta_button"
                         android:id="@+id/btn_business_bta"
                         android:layout_gravity="center"/>
 
@@ -217,7 +217,7 @@
                 <Button
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_bc_btp"
+                        android:background="@drawable/logo_bc_btp_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:id="@+id/btn_business_btp"
@@ -245,7 +245,7 @@
                 <Button
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_bc_p"
+                        android:background="@drawable/logo_bc_p_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:id="@+id/btn_business_printmayor"
@@ -285,7 +285,7 @@
                 <Button
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_bc_amendments"
+                        android:background="@drawable/logo_bc_amendments_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:id="@+id/btn_business_amendments"
@@ -314,7 +314,7 @@
                 <Button
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_bc_mybusiness"
+                        android:background="@drawable/logo_bc_mybusiness_button"
                         android:fitsSystemWindows="true"
                         android:id="@+id/btn_business_mybusiness"
                         android:scaleType="fitCenter"

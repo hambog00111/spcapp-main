@@ -175,6 +175,7 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:hint="1223"
+                              android:clickable="false"
                               android:textColor="@color/white"
                               android:textColorHint="@color/white"
                               android:id="@+id/txt_bplo_business_id"/>
@@ -198,6 +199,7 @@
                               android:textColor="@color/white"
                               android:textSize="18sp"
                               android:text="Annually"
+                              android:clickable="false"
                               android:contextClickable="false"
                               android:id="@+id/rb_mode_of_payment_annually"/>
 
@@ -306,13 +308,13 @@
                               android:text="DTI/SEC/CDA Date of Registration:"/>
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
-                              android:contextClickable="false"
+
                               android:textSize="18sp"
                               android:inputType="date"
                               android:hint="yy/dd/mm"
                               android:textColor="@color/white"
                               android:textColorHint="@color/white"
-                              android:clickable="false"
+
                               android:id="@+id/txt_bplo_date_dti_registration"/>
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
