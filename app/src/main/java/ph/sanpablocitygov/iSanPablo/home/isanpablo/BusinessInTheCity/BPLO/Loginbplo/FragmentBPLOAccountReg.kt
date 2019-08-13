@@ -1,5 +1,6 @@
 package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo
 
+
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.design.widget.TextInputLayout
@@ -18,6 +19,8 @@ import com.android.volley.Response.Listener
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import ph.sanpablocitygov.iSanPablo.R
+
+
 
 class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
 
@@ -205,10 +208,12 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
         volleyRequest!!.add(req)
 
 
-
     }
 
 
-
-
 }
+
+
+
+
+

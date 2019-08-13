@@ -19,9 +19,10 @@ import kotlinx.android.synthetic.main.dialog_bplo.view.btn_online_bplo
 import kotlinx.android.synthetic.main.dialog_business_doing_business.view.*
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_business_investment
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_invest_cancel
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentLoginBPLO
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.FragmentBusinessTaxAssessment
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxPayment.FragmentBusinessTaxPayment
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
 
 @Suppress("PLUGIN_WARNING")
@@ -51,8 +52,7 @@ class FragmentBusinessInTheCity : Fragment() {
                     setTitle("Download BPLO Form")
 
                     setPositiveButton("OK", DialogInterface.OnClickListener
-                    { _, _ ->  val downloadManager: DownloadManager = getSystemService(requireContext(),
-                        DownloadManager::class.java) as DownloadManager
+                    { _, _ ->  val downloadManager: DownloadManager = getSystemService(requireContext(), DownloadManager::class.java) as DownloadManager
                         val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/BUSINESS%20PERMIT%20APPLICATION%20FORM.docx")
                         val request = DownloadManager.Request(uri)
                         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
@@ -69,14 +69,18 @@ class FragmentBusinessInTheCity : Fragment() {
 //                activity?.startActivity(intent)
 //            }
 
+
+
             bploView.btn_online_bplo.setOnClickListener {
                 bploDialog.dismiss()
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentBPLOonline() , null)
+                    FragmentLoginBPLO() , null)
                     .addToBackStack(null)
                     .commit()
             }
+
+
 
             bploView.btn_bplo_cancel.setOnClickListener {
                 bploDialog.dismiss()
@@ -94,6 +98,14 @@ class FragmentBusinessInTheCity : Fragment() {
                 .commit()
         }
 
+        val btntp = view.findViewById<Button>(R.id.btn_business_btp)
+        btntp.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentBusinessTaxPayment() , null)
+                .addToBackStack(null)
+                .commit()
+        }
 
 
         val btninvest = view.findViewById<Button>(R.id.btn_business_investment)

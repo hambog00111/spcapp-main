@@ -10,4 +10,6 @@
     <color name="blues">#1C3757</color>
     <color name="bluess">#1C728E</color>
     <color name="fill">#215C81</color>
+    <color name="darkgray">#232325</color>
+    <color name="lightgray">#A3A3A3</color>
 </resources>

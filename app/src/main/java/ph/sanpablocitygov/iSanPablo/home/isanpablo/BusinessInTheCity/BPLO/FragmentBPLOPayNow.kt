@@ -1,4 +1,4 @@
-package ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes
+package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,7 +10,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import ph.sanpablocitygov.iSanPablo.R
 
-class FragmentLCRRequestPayment: Fragment() {
+class FragmentBPLOPayNow: Fragment() {
 
 
     @SuppressLint("SetJavaScriptEnabled")

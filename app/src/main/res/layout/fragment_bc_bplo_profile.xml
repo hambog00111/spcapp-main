@@ -59,258 +59,219 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="horizontal"
-                      android:layout_marginBottom="15dp"
-                      android:paddingTop="5dp"
 
-                      android:gravity="center">
-
-            <ImageView android:layout_width="50dp"
-                       android:layout_height="50dp"
-                       android:src="@drawable/logo_bc_bplo"/>
-
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:textColor="@color/white"
-                      android:textSize="15sp"
-                      android:layout_marginStart="10dp"
-                      android:textStyle="bold"
-                      android:text="BPLO Fill-up Form"/>
-        </LinearLayout>
-
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_margin="10dp"
+    >
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="vertical"
                       android:background="@drawable/text_border4"
-                      android:padding="10dp"
-                      android:layout_marginBottom="20dp">
-
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Data Privacy Policy"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="5dp"
-                    android:textSize="15sp"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
-
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:text="@string/data_privacy_policy"
-                    android:layout_marginStart="20dp"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="vertical"
-                  android:background="@drawable/text_border4"
-                  android:padding="10dp">
-
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="INSTRUCTION"
-                android:textColor="@color/colorPrimaryDark"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:textSize="13sp"
-                android:textStyle="bold"/>
-
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="1.  Provide accurate information. Incomplete form will not be proceed in the next step."
-                android:textColor="@color/colorPrimaryDark"
-                android:paddingTop="5dp"
-                android:textSize="13sp"/>
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="2.  If the context is unclickable please proceed to the next context. It will be automatic system generated."
-                android:textColor="@color/colorPrimaryDark"
-                android:paddingTop="5dp"
-                android:textSize="13sp"/>
-    </LinearLayout>
-
-                <LinearLayout android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_margin="10dp">
-                        <TextView android:layout_width="match_parent"
-                                  android:layout_height="wrap_content"
-                                    android:text="STEP 2"
-                                  android:gravity="center"
-                                    android:textSize="20sp"
-                                    android:textColor="@color/white"
-                                    android:textStyle="bold"/>
-                </LinearLayout>
-
-
-
-
-
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_margin="5dp"
-                      android:id="@+id/ll_bplo_2"
-                      android:orientation="vertical"
-                      android:padding="10dp"
-                      android:background="@drawable/text_border4">
-
-            <TextView android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="15sp"
-                      android:textColor="@color/darkgray"
-                      android:textStyle="bold"
-                      android:layout_marginBottom="10dp"
-                      android:text="Business Information" />
-
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="textPostalAddress"
-                      android:hint="Business Address"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_info_business_address"/>
-
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="textPostalAddress"
-                      android:hint="Building Name"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_info_building_name"/>
-
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="textPostalAddress"
-                      android:hint="Street"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_info_street"/>
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="textPostalAddress"
-                      android:hint="Subdivision"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_info_subdivision"/>
-            <Spinner android:layout_width="180dp"
-                     android:id="@+id/spinner_bplo_business_info_district"
-                     android:layout_height="wrap_content"/>
-
+                      android:padding="10dp">
 
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:orientation="horizontal"
-                          >
+                          android:gravity="center">
 
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textColor="@color/colorPrimaryDark"
+                          android:text="BPLO FILL FORM"
+                          android:textSize="20sp"
+                          android:textStyle="bold"
+                          android:padding="10dp"
+                          android:gravity="center"
 
+                />
+                <ImageView android:layout_width="150dp"
+                           android:layout_height="50dp"
+                           android:layout_margin="10dp"
+                           android:src="@drawable/bilis_logo"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
 
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textStyle="bold"
+                          android:textSize="15sp"
+                          android:textColor="@color/colorPrimaryDark"
+                          android:layout_marginBottom="10dp"
 
-                <LinearLayout android:layout_width="180dp"
+                          android:layout_marginEnd="10dp"
+
+                          android:text="Business Information"/>
+
+                <LinearLayout android:layout_width="match_parent"
                               android:layout_height="wrap_content"
-                              android:orientation="vertical"
-                             >
+                              android:orientation="horizontal">
 
-
-                    <EditText android:layout_width="match_parent"
+                    <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
+                              android:textStyle="bold"
                               android:textSize="13sp"
-                              android:inputType="number"
-                              android:hint="House No./Bldg. No."
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_business_info_house_num"/>
+                              android:textColor="@color/colorPrimaryDark"
+                              android:layout_marginStart="10dp"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginEnd="5dp"
+                              android:text="Business Name:"/>
 
-
-                    <EditText android:layout_width="match_parent"
+                    <TextView android:layout_width="match_parent"
                               android:layout_height="wrap_content"
-                              android:contextClickable="false"
+                              android:textStyle="bold"
                               android:textSize="13sp"
-                              android:inputType="text"
-                              android:text="San Pablo City"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:clickable="false"
-                              android:id="@+id/txt_bplo_business_info_city"/>
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:textSize="13sp"
-                              android:inputType="phone"
-                              android:hint="Contact Number"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_business_info_contact_num"/>
+                              android:textColor="@color/colorPrimaryDark"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginEnd="10dp"
+                              android:id="@+id/txt_bplo_profile_business_name"
+                              android:text=""/>
                 </LinearLayout>
 
-
-                <LinearLayout android:layout_width="180dp"
+                <LinearLayout android:layout_width="match_parent"
                               android:layout_height="wrap_content"
-                              android:orientation="vertical"
-                              >
+                              android:orientation="horizontal">
 
-
-                    <EditText android:layout_width="match_parent"
+                    <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
+                              android:textStyle="bold"
                               android:textSize="13sp"
-                              android:inputType="number"
-                              android:hint="Unit No."
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_business_info_unit_num"/>
+                              android:textColor="@color/colorPrimaryDark"
+                              android:layout_marginStart="10dp"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginEnd="5dp"
+                              android:text="Owner's Name:"/>
 
-                    <EditText android:layout_width="match_parent"
+                    <TextView android:layout_width="match_parent"
                               android:layout_height="wrap_content"
-                              android:contextClickable="false"
+                              android:textStyle="bold"
                               android:textSize="13sp"
-                              android:inputType="date"
-                              android:text="Laguna"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:clickable="false"
-                              android:id="@+id/txt_bplo_business_info_province"/>
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:textSize="13sp"
-                              android:inputType="number"
-                              android:hint="PIN"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_business_info_pin"/>
+                              android:textColor="@color/colorPrimaryDark"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginEnd="10dp"
+                              android:id="@+id/txt_bplo_profile_owners_name"
+                              android:text=""/>
                 </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textStyle="bold"
+                              android:textSize="13sp"
+                              android:textColor="@color/colorPrimaryDark"
+                              android:layout_marginStart="10dp"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginEnd="5dp"
+                              android:text="Business ID:"/>
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:textStyle="bold"
+                              android:textSize="13sp"
+                              android:textColor="@color/colorPrimaryDark"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginEnd="10dp"
+                              android:id="@+id/txt_bplo_profile_business_id"
+                              android:text=""/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal">
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textStyle="bold"
+                              android:textSize="13sp"
+                              android:textColor="@color/colorPrimaryDark"
+                              android:layout_marginStart="10dp"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginEnd="5dp"
+                              android:text="Main Line of Business:"/>
+
+                    <TextView android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:textStyle="bold"
+                              android:textSize="13sp"
+                              android:textColor="@color/colorPrimaryDark"
+                              android:layout_marginBottom="10dp"
+                              android:layout_marginEnd="10dp"
+                              android:id="@+id/txt_bplo_profile_main_line"
+                              android:text=""/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:background="@drawable/line_border"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textStyle="bold"
+                      android:textSize="14sp"
+                      android:textColor="@color/colorPrimaryDark"
+                      android:layout_marginBottom="10dp"
+
+                      android:layout_marginEnd="10dp"
+
+                      android:text="Business Profile"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textStyle="bold"
+                          android:textSize="13sp"
+                          android:textColor="@color/colorPrimaryDark"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_marginEnd="5dp"
+                          android:text="Date Approved:"/>
+
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textStyle="bold"
+                          android:textSize="13sp"
+                          android:textColor="@color/colorPrimaryDark"
+                          android:layout_marginBottom="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:id="@+id/txt_bplo_profile_date_approved"
+                          android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textStyle="bold"
+                          android:textSize="13sp"
+                          android:textColor="@color/colorPrimaryDark"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_marginEnd="5dp"
+                          android:text="Date of Payment:"/>
+
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:textStyle="bold"
+                          android:textSize="13sp"
+                          android:textColor="@color/colorPrimaryDark"
+                          android:layout_marginBottom="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:id="@+id/txt_bplo_profile_date_of_payment"
+                          android:text=""/>
             </LinearLayout>
 
 
-               <EditText android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:hint="Email Address"
-                         android:textColor="@color/darkgray"
-                         android:textColorHint="@color/lightgray"
-                         android:textSize="13sp"
-                         android:inputType="text"
-                        android:id="@+id/txt_bplo_business_info_email_address"/>
-
         </LinearLayout>
 
+    </LinearLayout>
 
 
         <LinearLayout android:layout_width="match_parent"
@@ -323,46 +284,48 @@
 
             <Button android:layout_width="100dp"
                     android:layout_height="30dp"
-                    android:textColor="@color/white"
                     android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
+                    android:textColor="@color/white"
+
                     android:layout_marginTop="10dp"
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:background="@drawable/text_border"
-                    android:text="BACK PAGE"
+                    android:text="Apply now"
                     android:layout_gravity="start"
-                    android:id="@+id/txt_bplo_back"/>
+                    android:id="@+id/txt_bplo_apply_now"/>
 
             <Button android:layout_width="100dp"
                     android:layout_height="30dp"
-                    android:textColor="@color/white"
                     android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
+                    android:textColor="@color/white"
+
                     android:layout_marginTop="10dp"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:textSize="13sp"
                     android:background="@drawable/text_border"
-                    android:text="Clear all"
+                    android:text="pay now"
                     android:layout_gravity="center_horizontal"
-                    android:id="@+id/txt_bplo_clear_all"/>
+                    android:id="@+id/txt_bplo_pay_now"/>
 
             <Button android:layout_width="100dp"
                     android:layout_height="30dp"
-                    android:textColor="@color/white"
                     android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
+                    android:textColor="@color/white"
+
                     android:layout_marginTop="10dp"
                     android:textStyle="bold"
                     android:textSize="13sp"
-                    android:text="next page"
+                    android:text="log out"
                     android:background="@drawable/text_border"
                     android:layout_gravity="right"
-                    android:id="@+id/txt_bplo_next_page"/>
+                    android:id="@+id/txt_bplo_log_out"/>
 
         </LinearLayout>
-
 
 
         <LinearLayout
@@ -379,7 +342,8 @@
                 <ImageView
                         android:layout_width="100dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/phlogo"/>
+                        android:src="@drawable/phlogo"
+                />
 
 
             </LinearLayout>
@@ -429,10 +393,16 @@
                 <ImageView
                         android:layout_width="100dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/transpa"/>
-
+                        android:src="@drawable/transpa"
+                />
             </LinearLayout>
         </LinearLayout>
+
+
+
+
+
+
 
         <LinearLayout
                 android:layout_marginTop="10dp"
@@ -490,7 +460,5 @@
             </LinearLayout>
 
         </LinearLayout>
-
-
     </LinearLayout>
 </ScrollView>
