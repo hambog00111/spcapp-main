@@ -159,14 +159,6 @@
 </LinearLayout>
 
 
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:textSize="13sp"
-              android:layout_marginTop="30dp"
-              android:text="Not yet Registered? Click Here!!!"
-              android:textAlignment="center"
-              android:id="@+id/txt_assessment_register"
-              android:textColor="@color/white"/>
 
 </LinearLayout>
 
