@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DownloadManager
 import android.content.DialogInterface
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -13,24 +12,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 
 import kotlinx.android.synthetic.main.dialog_bplo.view.*
 import kotlinx.android.synthetic.main.dialog_bplo.view.btn_download_bplo
 import kotlinx.android.synthetic.main.dialog_bplo.view.btn_online_bplo
-import kotlinx.android.synthetic.main.dialog_bta.view.*
 import kotlinx.android.synthetic.main.dialog_business_doing_business.view.*
-import kotlinx.android.synthetic.main.dialog_business_mayor_permit.view.*
-import kotlinx.android.synthetic.main.dialog_disclosure.view.*
-import kotlinx.android.synthetic.main.dialog_investment.view.*
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_business_investment
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_invest_cancel
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 import ph.sanpablocitygov.iSanPablo.R
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.LoginBPLOActivity
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentLoginBPLO
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.FragmentBusinessTaxAssessment
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxPayment.FragmentBusinessTaxPayment
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
-import ph.sanpablocitygov.iSanPablo.links.FragmentHomeCSC
 
 @Suppress("PLUGIN_WARNING")
 class FragmentBusinessInTheCity : Fragment() {
@@ -59,8 +52,7 @@ class FragmentBusinessInTheCity : Fragment() {
                     setTitle("Download BPLO Form")
 
                     setPositiveButton("OK", DialogInterface.OnClickListener
-                    { _, _ ->  val downloadManager: DownloadManager = getSystemService(requireContext(),
-                        DownloadManager::class.java) as DownloadManager
+                    { _, _ ->  val downloadManager: DownloadManager = getSystemService(requireContext(), DownloadManager::class.java) as DownloadManager
                         val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/BUSINESS%20PERMIT%20APPLICATION%20FORM.docx")
                         val request = DownloadManager.Request(uri)
                         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
@@ -71,10 +63,21 @@ class FragmentBusinessInTheCity : Fragment() {
                 alertDialog.show()
             }
 
+//            bploView.btn_online_bplo.setOnClickListener {
+//                bploDialog.dismiss()
+//                val intent = Intent(activity, LoginBPLOActivity::class.java)
+//                activity?.startActivity(intent)
+//            }
+
+
+
             bploView.btn_online_bplo.setOnClickListener {
                 bploDialog.dismiss()
-                val intent = Intent(activity, LoginBPLOActivity::class.java)
-                activity?.startActivity(intent)
+                activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentLoginBPLO() , null)
+                    .addToBackStack(null)
+                    .commit()
             }
 
 
@@ -95,6 +98,14 @@ class FragmentBusinessInTheCity : Fragment() {
                 .commit()
         }
 
+        val btntp = view.findViewById<Button>(R.id.btn_business_btp)
+        btntp.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentBusinessTaxPayment() , null)
+                .addToBackStack(null)
+                .commit()
+        }
 
 
         val btninvest = view.findViewById<Button>(R.id.btn_business_investment)

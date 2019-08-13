@@ -292,8 +292,8 @@
                       android:textSize="13sp"
                       android:inputType="number"
                       android:text="Capitalization"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:clickable="false"
                       android:id="@+id/txt_bplo_business_activity_capitalization_conf"/>
             <EditText android:layout_width="match_parent"
@@ -301,8 +301,8 @@
                       android:textSize="13sp"
                       android:inputType="number"
                       android:hint="No. of Units"
-                      android:textColor="@color/white"
-                      android:textColorHint="@color/white"
+                      android:textColor="@color/darkgray"
+                      android:textColorHint="@color/lightgray"
                       android:id="@+id/txt_bplo_business_activity_num_units_conf"/>
             </LinearLayout>
     </LinearLayout>
@@ -315,12 +315,12 @@
                   android:id="@+id/ll_bplo_2"
                   android:orientation="vertical"
                   android:padding="10dp"
-                  android:background="@drawable/text_border">
+                  android:background="@drawable/text_border4">
 
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:textSize="15sp"
-                  android:textColor="@color/white"
+                  android:textColor="@color/darkgray"
                   android:textStyle="bold"
                   android:layout_marginBottom="10dp"
                   android:text="Additional Line of Business"/>
@@ -342,8 +342,8 @@
                           android:textSize="13sp"
                           android:inputType="text"
                           android:hint="Sub Category"
-                          android:textColor="@color/white"
-                          android:textColorHint="@color/white"
+                          android:textColor="@color/darkgray"
+                          android:textColorHint="@color/lightgray"
                           android:id="@+id/txt_bplo_additional_line_sub_category"/>
 
 
@@ -365,7 +365,7 @@
                           android:textSize="13sp"
                           android:inputType="number"
                           android:text="Capitalization"
-                          android:textColor="@color/white"
+                          android:textColor="@color/darkgray"
                           android:textColorHint="@color/white"
                           android:clickable="false"
                           android:id="@+id/txt_bplo_additional_line_capitalization"/>
@@ -382,7 +382,7 @@
                 android:textColor="@color/white"
                 android:textSize="13sp"
                 android:id="@+id/btn_additional_line_add"
-                android:background="@drawable/text_border"/>
+                android:background="@drawable/text_border2"/>
 
         <ListView android:layout_width="match_parent"
                   android:layout_marginTop="10dp"
@@ -408,11 +408,11 @@
                       android:padding="5dp"
                       android:gravity="center">
 
-            <Button android:layout_width="110dp"
+            <Button android:layout_width="100dp"
                       android:layout_height="30dp"
                       android:textColor="@color/white"
-                      android:layout_marginEnd="10dp"
-                      android:layout_marginStart="10dp"
+                      android:layout_marginEnd="5dp"
+                      android:layout_marginStart="5dp"
                       android:layout_marginTop="10dp"
                       android:textStyle="bold"
                       android:textSize="15sp"
@@ -424,8 +424,8 @@
             <Button android:layout_width="110dp"
                     android:layout_height="30dp"
                     android:textColor="@color/white"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
                     android:layout_marginTop="10dp"
                     android:textStyle="bold"
                     android:gravity="center"
@@ -438,8 +438,8 @@
             <Button android:layout_width="110dp"
                       android:layout_height="30dp"
                       android:textColor="@color/white"
-                      android:layout_marginEnd="10dp"
-                      android:layout_marginStart="10dp"
+                      android:layout_marginEnd="5dp"
+                      android:layout_marginStart="5dp"
                       android:layout_marginTop="10dp"
                       android:textStyle="bold"
                       android:textSize="15sp"

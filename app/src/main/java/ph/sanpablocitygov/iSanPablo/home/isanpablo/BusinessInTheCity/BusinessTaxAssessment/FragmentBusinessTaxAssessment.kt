@@ -26,14 +26,14 @@ class FragmentBusinessTaxAssessment : Fragment() {
 //                .addToBackStack(null)
 //                .commit()
 //        }
-        val btnreg = view.findViewById(R.id.txt_assessment_register) as TextView
-        btnreg.setOnClickListener(object: View.OnClickListener {
-
-            override fun onClick(v:View) {
-                val `in` = Intent(getActivity(), BusinessTaxAssessmentRegActivity::class.java)
-                startActivity(`in`)
-            }
-        })
+//        val btnreg = view.findViewById(R.id.txt_assessment_register) as TextView
+//        btnreg.setOnClickListener(object: View.OnClickListener {
+//
+//            override fun onClick(v:View) {
+//                val `in` = Intent(getActivity(), BusinessTaxAssessmentRegActivity::class.java)
+//                startActivity(`in`)
+//            }
+//        })
 
 
 

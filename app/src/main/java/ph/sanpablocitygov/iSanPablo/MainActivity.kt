@@ -251,9 +251,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setTitle("4th-quarter-SPP")
 
                         setPositiveButton("OK", DialogInterface.OnClickListener
-                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
-                            this@MainActivity,
-                            DownloadManager::class.java) as DownloadManager
+                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(this@MainActivity, DownloadManager::class.java) as DownloadManager
                             val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/4th-qtr-SPP.xls")
                             val request = DownloadManager.Request(uri)
                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)

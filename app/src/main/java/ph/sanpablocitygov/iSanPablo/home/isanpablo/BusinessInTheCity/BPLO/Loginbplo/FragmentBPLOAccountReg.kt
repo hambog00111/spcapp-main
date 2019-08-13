@@ -1,24 +1,28 @@
-package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment
+package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo
 
-import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.design.widget.TextInputLayout
+import android.support.v4.app.Fragment
 import android.text.TextUtils
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.android.volley.DefaultRetryPolicy
 import com.android.volley.RequestQueue
 import com.android.volley.Response
+import com.android.volley.Response.Listener
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-
-import kotlinx.android.synthetic.main.fragment_bc_assessment_registration.*
 import ph.sanpablocitygov.iSanPablo.R
 
-class BusinessTaxAssessmentRegActivity : AppCompatActivity() {
 
 
+class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
 
     private var txt_assess_last: EditText? = null
     private var txt_assess_first: EditText? = null
@@ -30,51 +34,54 @@ class BusinessTaxAssessmentRegActivity : AppCompatActivity() {
     private var txt_assess_email: EditText? = null
     private var txt_assess_username: EditText? = null
     private var txt_assess_password: EditText? = null
+    private var btn_asses_register: Button? = null
     private var txt_assess_ip: TextInputLayout? = null
+    @SuppressLint("SetTextI18n", "InflateParams")
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
+        val view: View = inflater.inflate(R.layout.fragment_bc_assessment_registration, container, false)
 
+        txt_assess_last = view.findViewById<View>(R.id.txt_assess_last) as EditText
+        txt_assess_first = view.findViewById<View>(R.id.txt_assess_first) as EditText
+        txt_assess_middle =view.findViewById<View>(R.id.txt_assess_middle) as EditText
+        txt_assess_mob_num = view.findViewById<View>(R.id.txt_assess_mob_num) as EditText
+        txt_assess_tel_num = view.findViewById<View>(R.id.txt_assess_tel_num) as EditText
+        txt_assess_email = view.findViewById<View>(R.id.txt_assess_email) as EditText
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_bc_assessment_registration)
-        txt_assess_last = findViewById(R.id.txt_assess_last) as EditText
-        txt_assess_first = findViewById(R.id.txt_assess_first) as EditText
-        txt_assess_middle = findViewById(R.id.txt_assess_middle) as EditText
-        txt_assess_mob_num = findViewById(R.id.txt_assess_mob_num) as EditText
-        txt_assess_tel_num = findViewById(R.id.txt_assess_tel_num) as EditText
-        txt_assess_email = findViewById(R.id.txt_assess_email) as EditText
+        txt_assess_username = view.findViewById<View>(R.id.txt_assess_username) as EditText
 
-        txt_assess_username = findViewById(R.id.txt_assess_username) as EditText
-
-        txt_assess_password = findViewById(R.id.txt_assess_password) as EditText
-        txt_assess_ip = findViewById(R.id.txt_assess_ip) as TextInputLayout
+        txt_assess_password = view.findViewById<View>(R.id.txt_assess_password) as EditText
+        btn_asses_register = view.findViewById<View>(R.id.btn_asses_register) as Button
+        //  txt_assess_ip = view.findViewById<View>(R.id.txt_assess_ip) as TextInputLayout
         //adding a click listener to button
-        btn_asses_register.setOnClickListener {
-            addArtist() }
+
+        btn_asses_register!!.setOnClickListener(this)
 
 
-//        buttonViewArtist.setOnClickListener {
-//            val intent = Intent(applicationContext, SecondActivity::class.java)
-//            startActivity(intent)
-//        }
+//
+//        btn_asses_register.setOnClickListener {
+//            addArtist() }
+
+
+
+
+
+
+        return view
+
     }
 
 
-
-
-
-
-    //adding a new record to database
-    private fun addArtist() {
+    override fun  onClick(view: View)  {
         //getting the record values
-        val lname = txt_assess_last?.text.toString()
-        val fname = txt_assess_first?.text.toString()
-        val mname = txt_assess_middle?.text.toString()
-        val mnum = txt_assess_mob_num?.text.toString()
-        val tnum = txt_assess_tel_num?.text.toString()
-        val ed = txt_assess_email?.text.toString()
-        val uname = txt_assess_username?.text.toString()
-        val pass = txt_assess_password?.text.toString()
+        val lname = txt_assess_last!!.text.toString()
+        val fname = txt_assess_first!!.text.toString()
+        val mname = txt_assess_middle!!.text.toString()
+        val mnum = txt_assess_mob_num!!.text.toString()
+        val tnum = txt_assess_tel_num!!.text.toString()
+        val ed = txt_assess_email!!.text.toString()
+        val uname = txt_assess_username!!.text.toString()
+        val pass = txt_assess_password!!.text.toString()
         val UPDATE_URL =("http://"+txt_assess_ip?.getEditText()?.getText()+"/api/android_api/").toString()
 
         if (TextUtils.isEmpty(lname)) {
@@ -141,22 +148,31 @@ class BusinessTaxAssessmentRegActivity : AppCompatActivity() {
 
 
 
-//        val UPDATE_URL = "http://192.168.100.207:8080/android_api/"
+//       val UPDATE_URL = "http://192.168.100.207:8080/android_api/"
         var volleyRequest: RequestQueue? = null
 
-        volleyRequest = Volley.newRequestQueue(this)
+        volleyRequest = Volley.newRequestQueue(context)
 
 
         val req = object : StringRequest(Method.POST,
             UPDATE_URL,
-            Response.Listener { response ->
-                Toast.makeText(this, response, Toast.LENGTH_LONG).show()
-                val user = Intent(this, BusinessTaxAssessmentRegActivity::class.java)
-                startActivity(user)
+            Listener { response ->
+                Toast.makeText(context, response, Toast.LENGTH_LONG).show()
+
+
+
+                activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentBPLOAccountReg(), null)
+                    .addToBackStack(null)
+                    .commit()
+
+//                val user = Intent(context, FragmentBusinessTaxAssessmentRegistration::class.java)
+//                startActivity(user)
 
             }, Response.ErrorListener { e ->
 
-                Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
+                Toast.makeText(context, e.toString(), Toast.LENGTH_LONG).show()
             }) {
             override fun getParams(): Map<String, String> {
                 val params = HashMap<String, String>()
@@ -172,15 +188,32 @@ class BusinessTaxAssessmentRegActivity : AppCompatActivity() {
 
 
                 return params
+
+
+
+//
+//                activity!!.supportFragmentManager.beginTransaction().replace(
+//                    R.id.frag_container,
+//                    FragmentBusinessTaxAssessmentRegistration() , null)
+//                    .addToBackStack(null)
+//                    .commit()
+
             }
+
+
+
         }
         req.retryPolicy = DefaultRetryPolicy(60000, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT)
 
         volleyRequest!!.add(req)
 
+
     }
 
 
-
-
 }
+
+
+
+
+
