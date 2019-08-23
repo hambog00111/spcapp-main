@@ -191,7 +191,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="ip"
-                        android:text="81cdf678.ngrok.io"
+                        android:text="192.168.100.207:8080"
                         android:inputType="textPassword"
 
                 />

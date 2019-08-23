@@ -4,8 +4,8 @@
               android:layout_height="match_parent">
 
     <ImageView android:layout_width="match_parent"
-               android:layout_height="280dp"
-               android:id="@+id/image_view_home"
+               android:layout_height="450dp"
+               android:id="@+id/image_view_christmas_festivals"
                android:scaleType="centerCrop"
     />
 

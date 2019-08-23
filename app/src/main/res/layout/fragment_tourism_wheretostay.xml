@@ -99,7 +99,7 @@
                 android:layout_gravity="center"
         />
 
-        <ListView
+         <ListView
                 android:id="@+id/listview_tourism_resort"
                 android:layout_width="match_parent"
                 android:scrollbarSize="5dp"

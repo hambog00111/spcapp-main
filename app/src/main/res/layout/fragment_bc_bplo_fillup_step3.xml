@@ -161,7 +161,7 @@
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:layout_margin="5dp"
+
                       android:id="@+id/ll_bplo_1"
                       android:orientation="vertical"
                       android:padding="10dp"
@@ -247,9 +247,11 @@
 
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
+                          android:gravity="center"
+                          android:layout_gravity="center"
                           android:orientation="horizontal">
 
-                <LinearLayout android:layout_width="180dp"
+                <LinearLayout android:layout_width="170dp"
                               android:layout_height="wrap_content"
                               android:orientation="vertical">
 
@@ -269,6 +271,7 @@
                               android:contextClickable="false"
                               android:textSize="13sp"
                               android:inputType="text"
+                              android:focusable="false"
                               android:text="San Pablo City"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
@@ -285,7 +288,7 @@
                 </LinearLayout>
 
 
-                <LinearLayout android:layout_width="180dp"
+                <LinearLayout android:layout_width="170dp"
                               android:layout_height="wrap_content"
                               android:orientation="vertical">
 
@@ -305,6 +308,7 @@
                               android:textSize="13sp"
                               android:inputType="date"
                               android:text="Laguna"
+                              android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
@@ -359,9 +363,10 @@
 
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:gravity="center"
                   android:orientation="horizontal">
 
-        <LinearLayout android:layout_width="180dp"
+        <LinearLayout android:layout_width="170dp"
                       android:layout_height="wrap_content"
                       android:orientation="vertical">
 
@@ -376,7 +381,7 @@
                   android:id="@+id/txt_bplo_owners_info_total_male"/>
         </LinearLayout>
 
-        <LinearLayout android:layout_width="180dp"
+        <LinearLayout android:layout_width="170dp"
                       android:layout_height="wrap_content"
                       android:orientation="vertical">
 
@@ -393,9 +398,11 @@
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:gravity="center"
                   android:orientation="horizontal">
 
-        <LinearLayout android:layout_width="180dp"
+        <LinearLayout android:layout_width="170dp"
                       android:layout_height="wrap_content"
                       android:orientation="vertical">
 
@@ -409,7 +416,7 @@
                       android:id="@+id/txt_bplo_owners_info_unit_service"/>
 
         </LinearLayout>
-        <LinearLayout android:layout_width="180dp"
+        <LinearLayout android:layout_width="170dp"
                       android:layout_height="wrap_content"
                       android:orientation="vertical">
 

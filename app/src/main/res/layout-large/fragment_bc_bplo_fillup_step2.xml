@@ -254,6 +254,7 @@
                               android:textSize="18sp"
                               android:inputType="text"
                               android:text="San Pablo City"
+                              android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
@@ -290,6 +291,7 @@
                               android:textSize="18sp"
                               android:inputType="date"
                               android:text="Laguna"
+                              android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
@@ -329,7 +331,7 @@
 
             <Button android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:textColor="@color/darkgray"
+                    android:textColor="@color/white"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
@@ -342,7 +344,7 @@
 
             <Button android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:textColor="@color/darkgray"
+                    android:textColor="@color/white"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
@@ -356,7 +358,7 @@
 
             <Button android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:textColor="@color/darkgray"
+                    android:textColor="@color/white"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"

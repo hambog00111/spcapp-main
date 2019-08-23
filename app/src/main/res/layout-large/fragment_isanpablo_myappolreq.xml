@@ -79,7 +79,7 @@
                 <Button
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_malr_request"
+                        android:background="@drawable/logo_malr_request_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
@@ -107,7 +107,7 @@
                 <Button
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:background="@drawable/logo_malr_bc"
+                        android:background="@drawable/logo_malr_bc_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
@@ -149,7 +149,7 @@
                         android:id="@+id/btn_business_bplo"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
-                        android:background="@drawable/logo_malr_mc"
+                        android:background="@drawable/logo_malr_mc_button"
                         android:layout_gravity="center"/>
                 <TextView
                         android:layout_width="match_parent"
@@ -177,7 +177,7 @@
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
 
-                        android:background="@drawable/logo_marl_dc"
+                        android:background="@drawable/logo_malr_dc_button"
                         android:layout_gravity="center"/>
 
                 <TextView

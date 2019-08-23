@@ -86,7 +86,7 @@
 
                         <android.support.v4.view.ViewPager
                                 android:layout_width="match_parent"
-                                android:layout_height="200dp"
+                                android:layout_height="280dp"
                                 android:id="@+id/home_viewpager"
                                 android:fitsSystemWindows="true"
                                 android:layout_gravity="center"
@@ -94,9 +94,6 @@
                                 android:layout_marginTop="8dp"
 
                         />
-
-
-
 
                         <TextView
                                 android:layout_width="match_parent"
@@ -166,6 +163,7 @@
                                     android:orientation="vertical">
 
                                 <Button
+
                                         android:id="@+id/btn_business_in_the_city"
                                         android:layout_width="100dp"
                                         android:layout_height="100dp"
@@ -366,6 +364,8 @@
                     <LinearLayout android:layout_width="match_parent"
                                   android:layout_height="wrap_content"
                                   android:orientation="horizontal"
+                                  android:layout_marginStart="10dp"
+                                  android:layout_marginEnd="10dp"
                                   android:layout_gravity="center">
 
                     <LinearLayout android:layout_width="220dp"
@@ -490,18 +490,20 @@
 
                                     <TextView android:layout_width="match_parent"
                                               android:layout_height="wrap_content"
-                                              android:text="Tourism San Pablo FB page"
+                                              android:text="Tourism San Pablo FB Page"
                                               android:textColor="@color/white"
                                               android:textSize="13sp"
                                               android:id="@id/btn_fb_tourism"
                                               android:layout_gravity="center"
-                                              android:gravity="center"/>
+                                             />
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
                         <LinearLayout android:layout_width="match_parent"
                                       android:layout_height="wrap_content"
+
+
                                       android:orientation="vertical">
                             <TextView
                                     android:layout_width="match_parent"
