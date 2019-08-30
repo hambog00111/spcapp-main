@@ -6,6 +6,9 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_bpo">BPLO Fill Up</string>
+    <string name="chkCon">Establishing connection&#8230;</string>
+    <string name="tryAgain"><a>Try Again</a></string>
+    <string name="noConWarn">No Connection</string>
 
     <string name="data_privacy_policy">
         \t\t By submitting this as a fully accomplished form; you hereby consent to the collection,
@@ -1155,4 +1158,5 @@
     <string name="leonilla_park">Doña Leonila Park Plan San Pablo City (Official Video)</string>
     <string name="_192_168_100_93_8080">192.168.100.93:8080</string>
     <string name="ip">IP</string>
+    <item name="btn_next" type="id"/>
 </resources>

@@ -1,10 +1,17 @@
 package ph.sanpablocitygov.iSanPablo
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DownloadManager
+import android.app.Service
 import android.content.DialogInterface
+import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.support.annotation.RequiresApi
 import android.support.design.widget.NavigationView
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
@@ -12,6 +19,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.MenuItem
+import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -24,9 +32,15 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Fragme
 
 import ph.sanpablocitygov.iSanPablo.links.*
 import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
+import java.time.Duration
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+
+    var context =this
+    var connectivity: ConnectivityManager?=null
+    var info: NetworkInfo?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,10 +68,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
            FragmentHome()
        ).commit()
 
-
-
     }
 
+    fun isConnected() : Boolean
+    {
+
+        connectivity = context.getSystemService(Service.CONNECTIVITY_SERVICE)as ConnectivityManager
+        if(connectivity!=null)
+        {
+            info= connectivity!!.activeNetworkInfo
+            if(info!=null)
+            {
+
+                if (info!!.state == NetworkInfo.State.CONNECTED)
+                {
+                    return true
+
+                }
+            }
+
+        }
+        return false
+    }
 
 
     override fun onBackPressed() {
@@ -184,6 +216,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
 //    @SuppressLint("CommitTransaction")
+    @SuppressLint("WrongConstant", "ShowToast")
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> {
@@ -208,15 +242,30 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_our_government -> {
-                supportFragmentManager.beginTransaction().replace(
-                    R.id.frag_container,
 
-                    FragmentOurGoverment(), null)
-                    .addToBackStack(null)
-                .commit()
+                if (isConnected()) {
+                    supportFragmentManager.beginTransaction().replace(
+                        R.id.frag_container,
+                        FragmentOurGoverment(), null
+                    )
+                        .addToBackStack(null)
+                        .commit()
+
+                }
+
+                else{
+
+                    Toast.makeText(context,"Please check your internet connection",4000).show()
+
+                }
+
 
 
             }
+
+
+
+
             R.id.nav_tourism -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,

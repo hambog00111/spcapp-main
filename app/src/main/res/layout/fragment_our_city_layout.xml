@@ -65,8 +65,8 @@
 
 
     <ImageView android:layout_width="match_parent"
-               android:layout_height="200dp"
-               android:src="@drawable/cathedral"
+               android:layout_height="250dp"
+               android:src="@drawable/our_history"
                android:fitsSystemWindows="true"
                android:layout_gravity="center"
                android:scaleType="center"
@@ -232,7 +232,7 @@
 
 
         <ImageView android:layout_width="match_parent"
-                   android:layout_height="200dp"
+                   android:layout_height="250dp"
                    android:src="@drawable/lights"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
@@ -310,7 +310,7 @@
 
 
         <ImageView android:layout_width="match_parent"
-                   android:layout_height="200dp"
+                   android:layout_height="250dp"
                    android:src="@drawable/lake5"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"

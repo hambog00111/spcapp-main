@@ -204,10 +204,11 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:hint="1223"
+                              android:focusable="false"
                               android:clickable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/darkgray"
-                              android:id="@+id/txt_bplo_business_id"/>
+                              android:id="@+id/txt_bplo_business_id" tools:targetApi="m"/>
 
                 </LinearLayout>
                 <LinearLayout android:layout_width="250dp"
@@ -228,6 +229,7 @@
                               android:textColor="@color/darkgray"
                               android:textSize="18sp"
                               android:text="Annually"
+                              android:focusable="false"
                               android:clickable="false"
                               android:contextClickable="false"
                               android:id="@+id/rb_mode_of_payment_annually"/>
@@ -278,6 +280,7 @@
                               android:textSize="18sp"
                               android:inputType="date"
                               android:hint="yy/dd/mm"
+                              android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
@@ -288,6 +291,7 @@
                               android:textSize="18sp"
                               android:inputType="number"
                               android:hint="Reference No."
+                              android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
@@ -391,7 +395,7 @@
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:hint="Please Sepicify Entity"
-                          android:textColor="@color/white"
+                          android:textColor="@color/darkgray"
                           android:textColorHint="@color/lightgray"
                           android:textSize="18sp"
                           android:maxLength="200"

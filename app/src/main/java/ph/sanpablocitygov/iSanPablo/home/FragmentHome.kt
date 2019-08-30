@@ -12,19 +12,30 @@ import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.links.*
 
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.ViewFlipper
 import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentBPLOAccountReg
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.GovernmentOnlineServices.FragmentGovermentOnlineServices
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.FragmentMyAppOnlineRequest
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes.FragmentMyTaxes
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.test
 
 @Suppress("UNREACHABLE_CODE", "PLUGIN_WARNING")
 class FragmentHome : Fragment() {
 
+    internal lateinit var viewflipperHome : ViewFlipper
 
-    internal lateinit var viewPagerHome: ViewPager
-    internal lateinit var viewPagerEvents: ViewPager
+
+//    internal lateinit var viewPagerHome: ViewPager
+    //internal lateinit var viewPagerEvents: ViewPager
+    internal lateinit var viewflipperEvents : ViewFlipper
+
+    val image = intArrayOf(R.drawable.lake5,R.drawable.lake1,R.drawable.lake4,R.drawable.lake2)
+
+    val imageevent = intArrayOf(R.drawable.event1,R.drawable.event2,R.drawable.event3)
     //internal lateinit var downloadManager: DownloadManager
     //@SuppressLint("InflateParams")
     @SuppressLint("SetJavaScriptEnabled")
@@ -32,13 +43,27 @@ class FragmentHome : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home_layout_2, null)
 
-        viewPagerEvents = view.findViewById<View>(R.id.events_viewpager) as ViewPager
-        val adapterevents = ViewPagerAdapterEvent(requireContext())
-        viewPagerEvents.adapter = adapterevents
+        viewflipperHome =view.findViewById<View>(R.id.v_flipper) as ViewFlipper
 
-        viewPagerHome = view?.findViewById<View>(R.id.home_viewpager) as ViewPager
-        val adapterhome = ViewPageAdapterHome(requireContext())
-        viewPagerHome.adapter = adapterhome
+        viewflipperEvents =view.findViewById<View>(R.id.v_flipperevent) as ViewFlipper
+
+
+        for(i in 0 until image.size) {
+            flip_imagehome(image[i])
+        }
+
+
+        for(i in 0 until imageevent.size) {
+            flip_imageevent(imageevent[i])
+        }
+
+//        viewPagerEvents = view.findViewById<View>(R.id.events_viewpager) as ViewPager
+//        val adapterevents = ViewPagerAdapterEvent(requireContext())
+//        viewPagerEvents.adapter = adapterevents
+
+//        viewPagerHome = view?.findViewById<View>(R.id.home_viewpager) as ViewPager
+//        val adapterhome = ViewPageAdapterHome(requireContext())
+//        viewPagerHome.adapter = adapterhome
 
         val btncsc = view.findViewById<Button>(R.id.btn_home_csc)
         btncsc?.setOnClickListener {
@@ -53,6 +78,16 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentHomePhilJobNet() , null)
+                .addToBackStack(null)
+                .commit()
+        }
+
+
+        val btnweb = view.findViewById<Button>(R.id.db_home_logo)
+        btnweb?.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                Fragmentweb() , null)
                 .addToBackStack(null)
                 .commit()
         }
@@ -144,7 +179,35 @@ class FragmentHome : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
+
+
+
         return view
 
     }
+
+
+    fun flip_imagehome(i : Int) {
+        val view = ImageView(context)
+        view.setBackgroundResource(i)
+        viewflipperHome.addView(view)
+        viewflipperHome.setFlipInterval(4000)
+        viewflipperHome.setAutoStart(true)
+        viewflipperHome.setInAnimation(context , android.R.anim.slide_in_left)
+        viewflipperHome.setOutAnimation(context , android.R.anim.slide_out_right)
+    }
+
+
+    fun flip_imageevent(i : Int) {
+        val view = ImageView(context)
+        view.setBackgroundResource(i)
+        viewflipperEvents.addView(view)
+        viewflipperEvents.setFlipInterval(6000)
+        viewflipperEvents.setAutoStart(true)
+        viewflipperEvents.setInAnimation(context , android.R.anim.slide_in_left)
+        viewflipperEvents.setOutAnimation(context , android.R.anim.slide_out_right)
+    }
+
+
 }
+

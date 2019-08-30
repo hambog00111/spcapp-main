@@ -25,11 +25,12 @@
                     android:orientation="horizontal"
                     android:layout_marginBottom="4dp"
                     android:gravity="center">
-                <ImageView
+                <Button
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/spc_logo2"
-                        android:id="@+id/imageView2"
+                        android:id="@+id/db_home_logo"
+                        android:background="@drawable/spc_logo"
                         android:layout_marginStart="4dp"
                         android:layout_marginTop="4dp"/>
                 <LinearLayout
@@ -63,16 +64,27 @@
 
 
 
-        <android.support.v4.view.ViewPager
+        <!--<android.support.v4.view.ViewPager-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="330dp"-->
+                <!--android:id="@+id/home_viewpager"-->
+                <!--android:fitsSystemWindows="true"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_margin="10dp"-->
+        <!--/>-->
+        <ViewFlipper
+                android:id="@+id/v_flipper"
                 android:layout_width="match_parent"
                 android:layout_height="330dp"
-                android:id="@+id/home_viewpager"
-                android:fitsSystemWindows="true"
                 android:layout_gravity="center"
-                android:scaleType="centerCrop"
                 android:padding="10dp"
                 android:layout_margin="10dp"
+                android:fitsSystemWindows="true"
+
         />
+
 
 
 
@@ -92,17 +104,34 @@
         />
 
 
-        <android.support.v4.view.ViewPager
+        <!--<android.support.v4.view.ViewPager-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="220dp"-->
+                <!--android:src="@drawable/app"-->
+                <!--android:id="@+id/events_viewpager"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:fitsSystemWindows="true"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:scaleType="fitCenter"/>-->
+
+        <ViewFlipper
+                android:id="@+id/v_flipperevent"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:src="@drawable/app"
-                android:id="@+id/events_viewpager"
                 android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:fitsSystemWindows="true"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
-                android:scaleType="fitCenter"/>
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="20dp"
+
+        />
+
+
+
+
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
