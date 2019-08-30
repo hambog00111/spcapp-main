@@ -104,7 +104,9 @@ class FragmentLoginBPLO: Fragment(),View.OnClickListener {
 //                            userJson.getInt("id"),
 //                            userJson.getString("username"),
 //                            userJson.getString("password"),
-//                            userJson.getString("type"),
+//                            userJson.getString("t
+//
+//                            ype"),
 //                            userJson.getString("created_at"),
 //                            userJson.getString("updated_at")
 //                        )

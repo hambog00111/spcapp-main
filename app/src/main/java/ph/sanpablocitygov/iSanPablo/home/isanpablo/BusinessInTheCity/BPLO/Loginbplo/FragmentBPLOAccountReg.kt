@@ -116,6 +116,14 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
             return
 
         }
+        if ((mnum).length < 11)
+        {
+            txt_assess_mob_num!!.error = ("mobile number too short")
+            txt_assess_mob_num?.requestFocus()
+            return
+
+        }
+
         if(TextUtils.isEmpty(mnum)){
             txt_assess_mob_num?.error = "Please enter your mobile number "
             txt_assess_mob_num?.requestFocus()
@@ -145,6 +153,7 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
             txt_assess_password?.requestFocus()
             return
         }
+        
 
 
 
@@ -152,6 +161,7 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
         var volleyRequest: RequestQueue? = null
 
         volleyRequest = Volley.newRequestQueue(context)
+
 
 
         val req = object : StringRequest(Method.POST,
@@ -191,12 +201,7 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
 
 
 
-//
-//                activity!!.supportFragmentManager.beginTransaction().replace(
-//                    R.id.frag_container,
-//                    FragmentBusinessTaxAssessmentRegistration() , null)
-//                    .addToBackStack(null)
-//                    .commit()
+
 
             }
 
