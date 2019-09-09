@@ -84,6 +84,7 @@
                           android:textSize="20sp"
                           android:textStyle="bold"
                           android:padding="10dp"
+                          android:layout_marginLeft="10dp"
                           android:gravity="center"
 
                 />

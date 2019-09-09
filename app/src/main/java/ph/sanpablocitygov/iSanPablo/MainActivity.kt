@@ -1,17 +1,28 @@
 package ph.sanpablocitygov.iSanPablo
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DownloadManager
+import android.app.Service
 import android.content.DialogInterface
+import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.support.annotation.RequiresApi
 import android.support.design.widget.NavigationView
+import android.support.design.widget.Snackbar
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -24,20 +35,27 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Fragme
 
 import ph.sanpablocitygov.iSanPablo.links.*
 import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
+import java.time.Duration
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+
+    var context =this
+    var connectivity: ConnectivityManager?=null
+    var info: NetworkInfo?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
 
-
-//        fab.setOnClickListener { view ->
-//            var show: Any = Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
-//        }
+        fab.setOnClickListener { view ->
+            var show: Any = Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
 
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar,
@@ -54,10 +72,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
            FragmentHome()
        ).commit()
 
-
-
     }
 
+    fun isConnected() : Boolean
+    {
+
+        connectivity = context.getSystemService(Service.CONNECTIVITY_SERVICE)as ConnectivityManager
+        if(connectivity!=null)
+        {
+            info= connectivity!!.activeNetworkInfo
+            if(info!=null)
+            {
+
+                if (info!!.state == NetworkInfo.State.CONNECTED)
+                {
+                    return true
+
+                }
+            }
+
+        }
+        return false
+    }
 
 
     override fun onBackPressed() {
@@ -68,8 +104,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-
-//
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        return when (item.itemId) {
+//            R.id.action_settings -> true
+//            else -> super.onOptionsItemSelected(item)
+//        }
+//    }
+////
 //
 //    val police = "09081930819"
 //    val emergency = "09089078124"
@@ -77,73 +126,73 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //    val PHONE_REQ = 1
 //
     // actions on click menu items
-    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
-
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
 //
-//        R.id.police_menu -> {
+////
+////        R.id.police_menu -> {
+////
+////            if (ActivityCompat.checkSelfPermission(
+////                    this,
+////                    Manifest.permission.CALL_PHONE
+////                ) != PackageManager.PERMISSION_GRANTED
+////            ) {
+////
+////                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), PHONE_REQ)
+////
+////            } else {
+////
+////                policecall()
+////            }
+////
+////            true
+////        }
 //
-//            if (ActivityCompat.checkSelfPermission(
-//                    this,
-//                    Manifest.permission.CALL_PHONE
-//                ) != PackageManager.PERMISSION_GRANTED
-//            ) {
+////        R.id.emergency_menu -> {
+////
+////            if (ActivityCompat.checkSelfPermission(
+////                    this,
+////                    Manifest.permission.CALL_PHONE
+////                ) != PackageManager.PERMISSION_GRANTED
+////            ) {
+////
+////                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), PHONE_REQ)
+////            } else {
+////                emergencycall()
+////            }
+////            true
+////        }
 //
-//                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), PHONE_REQ)
+////        R.id.fire_menu -> {
+////
+////            if (ActivityCompat.checkSelfPermission(
+////                    this,
+////                    Manifest.permission.CALL_PHONE
+////                ) != PackageManager.PERMISSION_GRANTED
+////            ) {
+////
+////                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), PHONE_REQ)
+////            } else {
+////
+////                firecall()
+////            }
+////            true
+////        }
+////
+////        R.id.admin -> {
+////
+////        spc_map()
+////
+////            true
+////        }
 //
-//            } else {
 //
-//                policecall()
-//            }
-//
-//            true
+//        else -> {
+//            // If we got here, the user's action was not recognized.
+//            // Invoke the superclass to handle it.
+//            super.onOptionsItemSelected(item)
 //        }
-
-//        R.id.emergency_menu -> {
 //
-//            if (ActivityCompat.checkSelfPermission(
-//                    this,
-//                    Manifest.permission.CALL_PHONE
-//                ) != PackageManager.PERMISSION_GRANTED
-//            ) {
-//
-//                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), PHONE_REQ)
-//            } else {
-//                emergencycall()
-//            }
-//            true
-//        }
-
-//        R.id.fire_menu -> {
-//
-//            if (ActivityCompat.checkSelfPermission(
-//                    this,
-//                    Manifest.permission.CALL_PHONE
-//                ) != PackageManager.PERMISSION_GRANTED
-//            ) {
-//
-//                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), PHONE_REQ)
-//            } else {
-//
-//                firecall()
-//            }
-//            true
-//        }
-//
-//        R.id.admin -> {
-//
-//        spc_map()
-//
-//            true
-//        }
-
-
-        else -> {
-            // If we got here, the user's action was not recognized.
-            // Invoke the superclass to handle it.
-            super.onOptionsItemSelected(item)
-        }
-
-    }
+//    }
 
 //    private fun policecall() {
 //        val callIntent = Intent(Intent.ACTION_CALL)
@@ -184,6 +233,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
 //    @SuppressLint("CommitTransaction")
+    @SuppressLint("WrongConstant", "ShowToast")
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> {
@@ -208,15 +259,30 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_our_government -> {
-                supportFragmentManager.beginTransaction().replace(
-                    R.id.frag_container,
 
-                    FragmentOurGoverment(), null)
-                    .addToBackStack(null)
-                .commit()
+                if (isConnected()) {
+                    supportFragmentManager.beginTransaction().replace(
+                        R.id.frag_container,
+                        FragmentOurGoverment(), null
+                    )
+                        .addToBackStack(null)
+                        .commit()
+
+                }
+
+                else{
+
+                    Toast.makeText(context,"Please check your internet connection",4000).show()
+
+                }
+
 
 
             }
+
+
+
+
             R.id.nav_tourism -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ph.sanpablocitygov.iSanPablo.MainActivity">
+    tools:context="ph.sanpablocitygov.iSanPablo.MainActivity"
+    android:background="@drawable/background">
 
 
     <android.support.design.widget.AppBarLayout
@@ -14,10 +15,67 @@
 
         <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                android:gravity="center"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout android:layout_height="wrap_content"
+                          android:layout_width="fill_parent">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+
+                        android:gravity="center">
+
+                    <Button
+                            android:id="@+id/db_home_logo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="4dp"
+                            android:background="@drawable/spc_logo"
+                            android:layout_marginTop="4dp"/>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:id="@+id/db_home_header1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+
+                                android:text="Republic of the Philippines"/>
+
+                        <TextView
+                                android:id="@+id/db_home_header2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:paddingEnd="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="3dp"
+                                android:textStyle="bold"
+                                android:layout_gravity="center"
+
+                                android:text="CITY GOVERMENT OF SAN PABLO"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 

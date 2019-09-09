@@ -12,54 +12,55 @@
                   android:orientation="vertical"
                   android:id="@+id/linera">
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp">
+        <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_marginBottom="10dp">-->
 
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="4dp"
-                    android:gravity="center">
-                <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/spc_logo2"
-                        android:id="@+id/imageView2"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="4dp"/>
-                <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:paddingLeft="10dp">
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Republic of the Philippines"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="5dp"
-                            android:textSize="17dp"
-                    />
+            <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_marginBottom="4dp"-->
+                    <!--android:gravity="center">-->
+                <!--<Button-->
+                        <!--android:layout_width="80dp"-->
+                        <!--android:layout_height="80dp"-->
+                        <!--android:src="@drawable/spc_logo2"-->
+                        <!--android:id="@+id/db_home_logo"-->
+                        <!--android:background="@drawable/spc_logo"-->
+                        <!--android:layout_marginStart="4dp"-->
+                        <!--android:layout_marginTop="4dp"/>-->
+                <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:gravity="center"-->
+                        <!--android:paddingLeft="10dp">-->
+                    <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="Republic of the Philippines"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:textSize="17dp"-->
+                    <!--/>-->
 
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="CITY GOVERNMENT OF SAN PABLO"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
-                            android:layout_marginTop="3dp"
+                    <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="CITY GOVERNMENT OF SAN PABLO"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textStyle="bold"-->
+                            <!--android:textSize="23sp"-->
+                            <!--android:layout_marginTop="3dp"-->
 
-                    />
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
+                    <!--/>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
 
 
 
@@ -70,49 +71,100 @@
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
-                android:padding="10dp"
-                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
         />
+        <!--<ViewFlipper-->
+                <!--android:id="@+id/v_flipper"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="330dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:fitsSystemWindows="true"-->
+
+        <!--/>-->
 
 
 
+
+        <android.support.v7.widget.CardView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="15dp">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="EVENTS AND ANNOUNCEMENTS"
                 android:textStyle="bold"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
                 android:textSize="25sp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
+                android:background="@drawable/text_border2"
                 android:layout_gravity="center"
         />
 
+        <!--<android.support.v4.view.ViewPager-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="220dp"-->
+                <!--android:src="@drawable/app"-->
+                <!--android:id="@+id/events_viewpager"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:fitsSystemWindows="true"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:scaleType="fitCenter"/>-->
 
-        <android.support.v4.view.ViewPager
+        <ViewFlipper
+                android:id="@+id/v_flipperevent"
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:src="@drawable/app"
-                android:id="@+id/events_viewpager"
+                android:layout_height="250dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
-                android:fitsSystemWindows="true"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
-                android:scaleType="fitCenter"/>
+                android:scaleType="centerInside"
+                android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_columnWeight="1"-->
+                <!--android:layout_rowWeight="1"-->
+                <!--app:cardElevation="6dp"-->
+                <!--app:cardCornerRadius="12dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_margin="15dp">-->
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="horizontal"
                       android:layout_margin="10dp"
-                      android:paddingTop="10dp"
+
+                      android:padding="10dp"
+                      android:background="@drawable/text_border2"
+                      android:layout_gravity="center"
                       android:gravity="center">
 
-            <ImageView android:layout_width="90dp"
-                       android:layout_height="90dp"
+            <ImageView android:layout_width="55dp"
+                       android:layout_height="55dp"
                        android:src="@drawable/logo_home_mysanpablo"/>
 
             <TextView android:layout_width="wrap_content"
@@ -125,46 +177,75 @@
 
 
         </LinearLayout>
-        <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-            <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+        <!--</android.support.v7.widget.CardView>-->
+        <GridLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:columnCount="2"
+                    android:rowCount="3"
+                    android:layout_gravity="center"
+                    android:alignmentMode="alignMargins"
+                    android:columnOrderPreserved="false">
+            <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
 
-                <Button
-                        android:id="@+id/btn_business_in_the_city"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
-                        android:background="@drawable/logo_home_bc_button"
-                        android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:layout_gravity="center"/>
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="BUSINESS IN THE CITY"
-                        android:textStyle="bold"
-                        android:layout_marginTop="5dp"
-                        android:textSize="15sp"
-                        android:padding="3dp"
-                        android:textAlignment="center"
+                <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="200dp"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-            </LinearLayout>
+                    <Button
+                            android:id="@+id/btn_business_in_the_city"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/logo_home_bc_button"
+                            android:fitsSystemWindows="true"
+                            android:scaleType="fitCenter"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_gravity="center" tools:targetApi="m"/>
 
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BUSINESS IN THE CITY"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:padding="3dp"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textColor="@color/bluess"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
             <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="200dp"
+                    android:gravity="center"
+
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -178,156 +259,376 @@
                         android:layout_gravity="center"/>
 
                 <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="MY TAXES"
                         android:textStyle="bold"
+
+                        android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:padding="3dp"
-                        android:textSize="15sp"
+                        android:textSize="16sp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/colorPrimary"/>
 
             </LinearLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-            <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                <Button
-                        android:id="@+id/btn_online_request"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
-                        android:background="@drawable/logo_home_maor_button"
-                        android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:layout_gravity="center"/>
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="MY APP ONLINE REQUEST"
-                        android:textStyle="bold"
-                        android:layout_marginTop="5dp"
-                        android:textSize="15sp"
-                        android:padding="3dp"
-                        android:textAlignment="center"
+                    android:layout_width="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
+                <LinearLayout
+                        android:layout_gravity="center"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-            </LinearLayout>
+                    <Button
+                            android:id="@+id/btn_online_request"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/logo_home_maor_button"
+                            android:fitsSystemWindows="true"
+                            android:scaleType="fitCenter"
+                            android:layout_gravity="center"/>
 
-            <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="MY APP ONLINE REQUEST"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:padding="3dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_width="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
 
-                <Button
-                        android:id="@+id/btn_city_hot_lines"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
-                        android:background="@drawable/logo_home_ch_button"
-                        android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:layout_gravity="center"/>
 
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="CITY HOTLINES"
-                        android:textStyle="bold"
-                        android:layout_marginTop="5dp"
-                        android:padding="3dp"
-                        android:textSize="15sp"
-                        android:textAlignment="center"
+                <LinearLayout
+                        android:layout_gravity="center"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-            </LinearLayout>
-        </LinearLayout>
+                    <Button
+                            android:id="@+id/btn_city_hot_lines"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/logo_home_ch_button"
+                            android:fitsSystemWindows="true"
+                            android:scaleType="fitCenter"
+                            android:layout_gravity="center"/>
 
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="CITY HOTLINES"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:padding="3dp"
+                            android:textSize="16sp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"/>
 
-
-        <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-            <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_width="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
 
-                <Button
-                        android:id="@+id/btn_gov_online_service"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
-                        android:background="@drawable/logo_home_gos_button"
-                        android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:layout_gravity="center"/>
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="GOVERNMENT ONLINE SEVICES"
-                        android:textStyle="bold"
-                        android:layout_marginTop="5dp"
-                        android:textSize="15sp"
-                        android:padding="3dp"
-                        android:textAlignment="center"
+                <LinearLayout
+                        android:layout_gravity="center"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-            </LinearLayout>
+                    <Button
+                            android:id="@+id/btn_gov_online_service"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/logo_home_gos_button"
+                            android:fitsSystemWindows="true"
+                            android:scaleType="fitCenter"
+                            android:layout_gravity="center"/>
 
-            <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="GOVERNMENT ONLINE SEVICES"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:padding="3dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_width="250dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
 
-                <Button
-                        android:id="@+id/btn_city_employees_corner"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
-                        android:background="@drawable/logo_home_cec_button"
-                        android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:layout_gravity="center"/>
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="CITY EMPLOYEE CORNER"
-                        android:textStyle="bold"
-                        android:layout_marginTop="5dp"
-                        android:textSize="15sp"
-                        android:padding="3dp"
-                        android:textAlignment="center"
+                <LinearLayout
+                        android:layout_gravity="center"
                         android:gravity="center"
-                        android:textColor="@color/white"/>
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-            </LinearLayout>
-        </LinearLayout>
+                    <Button
+                            android:id="@+id/btn_city_employees_corner"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/logo_home_cec_button"
+                            android:fitsSystemWindows="true"
+                            android:scaleType="fitCenter"
+                            android:layout_gravity="center"/>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="CITY EMPLOYEE CORNER\n"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:padding="3dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </GridLayout>
+
+
+
+
+
+        <GridLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="3"
+                    android:layout_gravity="center"
+                    android:alignmentMode="alignMargins"
+                    android:columnOrderPreserved="false">
+
+
+            <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="300dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:padding="5dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="vertical"
+                              android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:layout_width="match_parent "
+                                    android:layout_height="wrap_content"
+                                    android:text="JOBS OFFER"
+                                    android:textStyle="bold"
+                                    android:paddingBottom="5dp"
+                                    android:paddingTop="5dp"
+                                    android:textSize="25sp"
+                                    android:background="@color/colorPrimary"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:layout_marginBottom="5dp"
+
+                                    android:layout_gravity="center"
+                            />
+
+                <LinearLayout
+                        android:layout_height="300dp"
+                        android:layout_width="300dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/text_border">
+
+
+                    <Button
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:background="@drawable/csc"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:id="@+id/btn_home_csc"/>
+
+                    <Button
+                            android:layout_width="280dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/philjob"
+                            android:layout_gravity="center"
+                            android:padding="10dp"
+                            android:id="@+id/btn_home_phil_job"/>
+
+
+                </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical"
+                              android:layout_gravity="center">
+
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:layout_marginBottom="5dp">
+
+                        <Button android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/facebook"
+                                android:layout_marginRight="10dp"
+                                android:id="@+id/btn_fb_cio"/>
+
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="CIO San Pablo FB Page"
+                                  android:textColor="@color/colorPrimary"
+                                  android:textSize="15sp"
+                                  android:layout_gravity="center"
+                                  android:gravity="center"
+                                  android:id="@+id/text_fb_cio"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:layout_marginBottom="5dp">
+
+                        <Button android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/facebook"
+                                android:layout_marginRight="10dp"
+                                android:id="@+id/btn_fb_tourism"/>
+
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="Tourism San Pablo FB page"
+                                  android:textColor="@color/colorPrimary"
+                                  android:textSize="15sp"
+                                  android:layout_gravity="center"
+                                  android:gravity="center"
+                                  android:id="@+id/text_fb_tourism"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:layout_marginBottom="5dp">
+
+                        <Button android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/facebook"
+                                android:layout_marginRight="10dp"
+                                android:id="@+id/btn_fb_lgu"/>
+
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="San Pablo LGU FB Page"
+                                  android:textColor="@color/colorPrimary"
+                                  android:textSize="15sp"
+                                  android:layout_gravity="center"
+                                  android:gravity="center"
+                                  android:id="@+id/text_fb_lgu"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:orientation="horizontal"
+                                  android:layout_marginBottom="5dp">
+
+                        <Button android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/facebook"
+                                android:layout_marginRight="10dp"
+                                android:id="@+id/btn_fb_cdrrmo"/>
+
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="CDRRMO San Pablo FB Page"
+                                  android:textColor="@color/colorPrimary"
+                                  android:textSize="15sp"
+                                  android:layout_gravity="center"
+                                  android:gravity="center"
+                                  android:id="@+id/text_fb_cdrrmo"/>
+                    </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+        </GridLayout>
+
+
+
 
 
 
@@ -341,8 +642,6 @@
                     android:layout_margin="5dp"
                     android:orientation="horizontal"
             >
-                <ScrollView android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
 
                     <LinearLayout
                             android:layout_width="match_parent"
@@ -353,52 +652,6 @@
                                       android:orientation="vertical">
 
 
-                            <TextView
-                                    android:layout_width="320dp"
-                                    android:layout_height="wrap_content"
-                                    android:text="JOBS OFFER"
-                                    android:textStyle="bold"
-
-                                    android:paddingBottom="5dp"
-                                    android:paddingTop="5dp"
-                                    android:textSize="25sp"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/white"
-                                    android:layout_marginBottom="5dp"
-                                    android:layout_marginTop="20dp"
-                                    android:layout_gravity="center"
-                            />
-
-
-                            <LinearLayout
-                                    android:layout_height="300dp"
-                                    android:layout_width="300dp"
-                                    android:orientation="vertical"
-                                    android:gravity="center"
-                                    android:layout_gravity="center"
-                                    android:background="@drawable/text_border">
-
-
-                                <Button
-                                        android:layout_marginTop="5dp"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="150dp"
-                                        android:background="@drawable/csc"
-                                        android:gravity="center"
-                                        android:layout_gravity="center"
-                                        android:layout_marginBottom="20dp"
-                                        android:id="@+id/btn_home_csc"/>
-
-                                <Button
-                                        android:layout_width="280dp"
-                                        android:layout_height="80dp"
-                                        android:background="@drawable/philjob"
-                                        android:layout_gravity="center"
-                                        android:padding="10dp"
-                                        android:id="@+id/btn_home_phil_job"/>
-
-
-                            </LinearLayout>
 
                             <TextView
                                     android:layout_width="320dp"
@@ -424,14 +677,13 @@
                                     android:id="@+id/btn_home_philgeps"/>
 
                         </LinearLayout>
-
                         <LinearLayout
                                 android:layout_height="wrap_content"
                                 android:layout_width="match_parent"
                                 android:orientation="vertical">
 
                             <TextView
-                                    android:layout_width="320dp"
+                                    android:layout_width="200dp"
                                     android:layout_height="wrap_content"
                                     android:text="FEATURED LINKS"
                                     android:textStyle="bold"
@@ -447,103 +699,8 @@
                             />
 
 
-                            <LinearLayout android:layout_width="wrap_content"
-                                          android:layout_height="wrap_content"
-                                          android:orientation="vertical"
-                                          android:layout_gravity="center"
-                            >
-
-                                <LinearLayout android:layout_width="wrap_content"
-                                              android:layout_height="wrap_content"
-                                              android:orientation="horizontal"
-                                              android:layout_marginBottom="5dp">
-
-                                    <Button android:layout_width="40dp"
-                                            android:layout_height="40dp"
-                                            android:background="@drawable/facebook"
-                                            android:layout_marginRight="10dp"
-                                            android:id="@+id/btn_fb_cio"/>
-
-                                    <TextView android:layout_width="wrap_content"
-                                              android:layout_height="wrap_content"
-                                              android:text="CIO San Pablo FB Page"
-                                              android:textColor="@color/white"
-                                              android:textSize="15sp"
-                                              android:layout_gravity="center"
-                                              android:gravity="center"
-                                              android:id="@+id/text_fb_cio"/>
-                                </LinearLayout>
-                                <LinearLayout android:layout_width="wrap_content"
-                                              android:layout_height="wrap_content"
-                                              android:orientation="horizontal"
-                                              android:layout_marginBottom="5dp">
-
-                                    <Button android:layout_width="40dp"
-                                            android:layout_height="40dp"
-                                            android:background="@drawable/facebook"
-                                            android:layout_marginRight="10dp"
-                                            android:id="@+id/btn_fb_tourism"/>
-
-                                    <TextView android:layout_width="wrap_content"
-                                              android:layout_height="wrap_content"
-                                              android:text="Tourism San Pablo FB page"
-                                              android:textColor="@color/white"
-                                              android:textSize="15sp"
-                                              android:layout_gravity="center"
-                                              android:gravity="center"
-                                              android:id="@+id/text_fb_tourism"/>
-                                </LinearLayout>
-                                <LinearLayout android:layout_width="wrap_content"
-                                              android:layout_height="wrap_content"
-                                              android:orientation="horizontal"
-                                              android:layout_marginBottom="5dp">
-
-                                    <Button android:layout_width="40dp"
-                                            android:layout_height="40dp"
-                                            android:background="@drawable/facebook"
-                                            android:layout_marginRight="10dp"
-                                            android:id="@+id/btn_fb_lgu"/>
-
-                                    <TextView android:layout_width="wrap_content"
-                                              android:layout_height="wrap_content"
-                                              android:text="San Pablo LGU FB Page"
-                                              android:textColor="@color/white"
-                                              android:textSize="15sp"
-                                              android:layout_gravity="center"
-                                              android:gravity="center"
-                                              android:id="@+id/text_fb_lgu"/>
-                                </LinearLayout>
-                                <LinearLayout android:layout_width="wrap_content"
-                                              android:layout_height="wrap_content"
-                                              android:orientation="horizontal"
-                                              android:layout_marginBottom="5dp">
-
-                                    <Button android:layout_width="40dp"
-                                            android:layout_height="40dp"
-                                            android:background="@drawable/facebook"
-                                            android:layout_marginRight="10dp"
-                                            android:id="@+id/btn_fb_cdrrmo"/>
-
-                                    <TextView android:layout_width="wrap_content"
-                                              android:layout_height="wrap_content"
-                                              android:text="CDRRMO San Pablo FB Page"
-                                              android:textColor="@color/white"
-                                              android:textSize="15sp"
-                                              android:layout_gravity="center"
-                                              android:gravity="center"
-                                              android:id="@+id/text_fb_cdrrmo"/>
-                                </LinearLayout>
-
-
-                            </LinearLayout>
-
-
-
-
-
                         </LinearLayout>
                     </LinearLayout>
-                </ScrollView>
             </LinearLayout>
 
 

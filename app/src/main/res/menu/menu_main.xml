@@ -5,10 +5,11 @@
 >
 
         <item
-                android:icon="@drawable/ic_phone"
+                android:icon="@drawable/places_ic_search"
                 android:id="@+id/phone"
                 app:showAsAction="always"
                 android:title="">
+        </item>
 
         <!--<menu>-->
                 <!--<item-->
@@ -33,7 +34,7 @@
 
         <!--</menu>-->
 
-        </item>
+        <!--</item>-->
 
         <!--<item-->
                 <!--android:icon="@drawable/ic_location2"-->

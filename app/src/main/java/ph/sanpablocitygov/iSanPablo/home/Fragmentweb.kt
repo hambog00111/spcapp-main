@@ -1,6 +1,5 @@
-package ph.sanpablocitygov.iSanPablo.links
+package ph.sanpablocitygov.iSanPablo.home
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -12,11 +11,11 @@ import android.widget.Button
 import android.widget.ProgressBar
 import ph.sanpablocitygov.iSanPablo.R
 
-class FragmentOfficialGazette :
-   Fragment() {
+class Fragmentweb  : Fragment()  {
+
     internal var btn_next: Button? = null
     internal var progressBar: ProgressBar? = null
-    private var url = "https://www.officialgazette.gov.ph/"
+    private var url = "http://www.sanpablocitygov.ph/?fbclid=IwAR25R1_F3f9gz59nqa9bqAWp7a32RGeGDViejvA23747zW77GhNjZu2v8YU"
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view: View = inflater.inflate(R.layout.test, container, false)
 //       val view = inflater.inflate(R.layout.test, null)
@@ -75,28 +74,3 @@ class FragmentOfficialGazette :
     }
 
 }
-//
-//    @SuppressLint("SetJavaScriptEnabled")
-//    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-//
-//        val view: View = inflater.inflate(
-//            R.layout.fragment_home_web, container,
-//            false)
-//
-//
-//        val  mWebView = view.findViewById(R.id.home_web_view) as WebView
-//        mWebView.loadUrl("https://www.officialgazette.gov.ph/")
-//
-//        val webSettings = mWebView.settings
-//        webSettings.javaScriptEnabled = true
-//
-//// Force links and redirects to open in the WebView instead of in a browser
-//        mWebView.webViewClient = WebViewClient()
-//
-//
-//
-//        return  view
-//
-//    }
-//}
-

@@ -1,176 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/background"
-            android:paddingTop="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp">
+            android:orientation="vertical"
+            android:layout_gravity="center"
+        android:gravity="center"
+            android:background="@drawable/background">
 
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:orientation="vertical"
-    >
-        <LinearLayout android:layout_height="wrap_content"
-                      android:layout_width="match_parent"
-                      android:gravity="center">
+                  android:orientation="vertical">
+
+
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="50dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center">
+
+            <ImageView android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/logo_bc_bta"/>
+
+            <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="bold"
+                    android:text="Business Tax Assessment"/>
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_margin="5dp">
 
             <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:gravity="center">
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/circle_back"
+                    android:gravity="center"
+                    android:weightSum="1"
+                    android:visibility="visible"
+
+                    android:forceHasOverlappingRendering="true"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                    tools:ignore="UnusedAttribute">
 
                 <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:src="@drawable/spc_logo2"
-                        android:layout_marginStart="6dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginTop="4dp"/>
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/logo_home_mysanpablo" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/text_border"
+                    android:elevation="6dp"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:layout_editor_absoluteX="-16dp">
+
 
                 <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                    <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/nav_account_circle" />
+
+                    <EditText
+                            android:id="@+id/txt_amendments_username_login"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:hint="Username"
+                            android:inputType="text"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/darkgray"
+                            android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                    <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/password" />
+
+                    <EditText
+                            android:id="@+id/txt_amendments_password_login"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/darkgray"
+                            android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:orientation="vertical">
 
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                    <Button
+                            android:id="@+id/btn_amendments_login"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/text_border2"
+                            android:text="Login"
                             android:textColor="@color/white"
-                            android:textSize="15sp"
-                            android:layout_marginTop="13dp"
-                            android:gravity="center"
-                            android:layout_gravity="center"
-                            android:text="Republic of the Philippines"/>
+                            android:textStyle="bold" />
 
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/white"
-                            android:textSize="15sp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="10dp"
-                            android:textStyle="bold"
-                            android:text="CITY GOVERMENT OF SAN PABLO"/>
+
                 </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
 
 
-
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="vertical"
-                      android:layout_marginLeft="10dp"
-                      android:layout_marginRight="10dp"
-                      android:layout_marginBottom="30dp"
-                      android:layout_marginTop="30dp"
-                      android:padding="20dp"
-                      android:background="@drawable/text_border3">
-
-
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:orientation="horizontal"
-                          android:layout_marginBottom="15dp"
-                          android:paddingTop="5dp"
-
-                          android:gravity="center">
-
-                <ImageView android:layout_width="50dp"
-                           android:layout_height="50dp"
-                           android:src="@drawable/logo_bc_amendments"/>
-
-                <TextView android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:textColor="@color/white"
-                          android:textSize="15sp"
-                          android:layout_marginStart="10dp"
-                          android:textStyle="bold"
-                          android:text="Online Amendments"/>
-
+                <!--<TextView android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="13sp"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:text="Not yet Registered? Click Here!!!"-->
+                <!--android:textAlignment="center"-->
+                <!--android:id="@+id/txt_assessment_register"-->
+                <!--android:textColor="@color/white"/>-->
 
             </LinearLayout>
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:orientation="horizontal"
-                          android:layout_gravity="center"
-                          android:gravity="center"
-                          android:padding="5dp">
-
-                <ImageView android:layout_width="40dp"
-                           android:layout_height="40dp"
-                           android:src="@drawable/nav_account_circle"/>
-
-                <EditText android:layout_width="230dp"
-                          android:layout_height="wrap_content"
-                          android:hint="Username"
-                          android:textSize="15sp"
-                          android:layout_marginStart="5dp"
-                          android:textColorHint="@color/white"
-                          android:textColor="@color/white"
-                          android:id="@+id/txt_amendments_username_login"
-                          android:inputType="text"/>
-
-            </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:orientation="horizontal"
-                          android:layout_gravity="center"
-                          android:gravity="center"
-                          android:padding="5dp">
-
-                <ImageView android:layout_width="40dp"
-                           android:layout_height="40dp"
-                           android:src="@drawable/password"/>
-
-                <EditText android:layout_width="230dp"
-                          android:layout_height="wrap_content"
-                          android:hint="Password"
-                          android:textSize="15sp"
-                          android:layout_marginStart="5dp"
-                          android:textColorHint="@color/white"
-                          android:textColor="@color/white"
-                          android:id="@+id/txt_amendments_password_login"
-                          android:inputType="textPassword"/>
-
-            </LinearLayout>
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:orientation="vertical"
-                          android:gravity="center">
-
-                <Button android:layout_width="130dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/text_border"
-                        android:text="Login"
-                        android:textStyle="bold"
-                        android:layout_margin="10dp"
-                        android:id="@+id/btn_amendments_login"
-                        android:textColor="@color/white"
-                />
-
-
-            </LinearLayout>
-
-
-            <!--<TextView android:layout_width="match_parent"-->
-                      <!--android:layout_height="wrap_content"-->
-                      <!--android:textSize="13sp"-->
-                      <!--android:layout_marginTop="30dp"-->
-                      <!--android:text="Not yet Registered? Click Here!!!"-->
-                      <!--android:textAlignment="center"-->
-                      <!--android:id="@+id/txt_assessment_register"-->
-                      <!--android:textColor="@color/white"/>-->
-
-        </LinearLayout>
-
+        </android.support.constraint.ConstraintLayout>
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -202,7 +193,7 @@
                         android:layout_height="18dp"
                         android:text="@string/Reps"
                         android:textSize="10dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
                         android:textStyle="bold"/>
@@ -212,7 +203,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
                         android:textSize="10dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
                         android:layout_marginBottom="5dp"/>
@@ -223,7 +214,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
                         android:gravity="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
@@ -261,7 +252,7 @@
                         android:textSize="13sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="3dp"
                 />
@@ -283,7 +274,7 @@
                         android:textSize="13sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                 />
                 <TextView
@@ -292,7 +283,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="13sp"
                         android:gravity="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                 />
             </LinearLayout>
@@ -301,4 +292,5 @@
 
 
     </LinearLayout>
-</ScrollView>
+    </RelativeLayout>
+</LinearLayout>

@@ -4,10 +4,7 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/background"
-            android:paddingTop="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp">
+            android:background="@drawable/background">
 
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -15,63 +12,14 @@
 
 
 
-        <LinearLayout android:layout_height="wrap_content"
-                      android:layout_width="match_parent"
-                      android:gravity="center">
-
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:gravity="center">
-
-                <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:src="@drawable/spc_logo2"
-                        android:layout_marginStart="6dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginTop="4dp"/>
-
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/white"
-                            android:textSize="15sp"
-                            android:layout_marginTop="13dp"
-                            android:gravity="center"
-                            android:layout_gravity="center"
-                            android:text="Republic of the Philippines"/>
-
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/white"
-                            android:textSize="15sp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="10dp"
-
-                            android:textStyle="bold"
-
-                            android:text="CITY GOVERMENT OF SAN PABLO"/>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
 
         <ImageView android:layout_width="match_parent"
-                   android:layout_height="220dp"
+                   android:layout_height="230dp"
                    android:src="@drawable/lake5"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerCrop"
-                   android:padding="5dp"
+
 
         />
 
@@ -89,6 +37,7 @@
                     android:paddingTop="5dp"
                     android:textSize="23dp"
                     android:textColor="@color/white"
+                    android:background="@color/colorPrimary"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center"
@@ -137,7 +86,7 @@
                         android:layout_height="18dp"
                         android:text="@string/Reps"
                         android:textSize="10dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
                         android:textStyle="bold"/>
@@ -147,7 +96,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
                         android:textSize="10dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
                         android:layout_marginBottom="5dp"/>
@@ -158,7 +107,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
                         android:gravity="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
@@ -196,7 +145,7 @@
                         android:textSize="13sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="3dp"
                 />
@@ -218,7 +167,7 @@
                         android:textSize="13sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                 />
                 <TextView
@@ -228,7 +177,7 @@
                         android:textSize="13sp"
                         android:gravity="center"
 
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                 />
             </LinearLayout>

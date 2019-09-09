@@ -2,4 +2,11 @@
 <resources>
     <item name="nav_My_I_San_Pablo" type="id"/>
     <item name="btn_business_doing" type="id"/>
+    <item name="myMenuOne" type="id"/>
+    <item name="myMenuTwo" type="id"/>
+    <item name="myMenuThree" type="id"/>
+    <item name="btnnext" type="id"/>
+    <item name="btnprev" type="id"/>
+    <item name="btn_pre" type="id"/>
+
 </resources>

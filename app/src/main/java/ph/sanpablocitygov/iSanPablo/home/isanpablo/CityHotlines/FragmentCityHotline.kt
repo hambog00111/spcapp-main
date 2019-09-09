@@ -6,8 +6,10 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.Button
 import android.widget.ListView
+import android.widget.Toast
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineAdapter
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineModel
@@ -83,7 +85,26 @@ class FragmentCityHotline : Fragment() {
         }
 
         val list = CityhotlineAdapter(requireContext(), R.layout.row_cityhot_lines, lists)
-        ls.adapter = list
+        listView.adapter = list
+
+
+        listView.onItemClickListener = object : AdapterView.OnItemClickListener {
+
+            override fun onItemClick(parent: AdapterView<*>, view: View,
+                                     position: Int, id: Long) {
+
+                // value of item that is clicked
+                val itemValue = ls.getItemAtPosition(position) as String
+
+                // Toast the values
+                Toast.makeText(requireContext(), "Position :$position\nItem Value : $itemValue", Toast.LENGTH_LONG).show()
+            }
+        }
+
+
+
+
+
 
     }
 

@@ -9,6 +9,6 @@
             android:endColor="#FFFF"
             android:startColor="#FFFF"
             android:type="linear" />
-    <stroke android:width="4sp" android:color="#17455E"/>
+    <stroke android:width="2sp" android:color="#17455E"/>
 
 </shape>

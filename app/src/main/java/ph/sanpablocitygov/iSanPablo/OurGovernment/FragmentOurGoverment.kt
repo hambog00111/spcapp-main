@@ -1,13 +1,20 @@
 package ph.sanpablocitygov.iSanPablo.OurGovernment
 
 import android.app.AlertDialog
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.net.ConnectivityManager
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat.getSystemService
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import kotlinx.android.synthetic.main.fragment_our_goverment_layout.*
 import org.json.JSONArray
 import org.json.JSONObject
 import ph.sanpablocitygov.iSanPablo.R
@@ -15,7 +22,22 @@ import java.lang.ref.WeakReference
 import java.net.HttpURLConnection
 import java.net.URL
 
-class FragmentOurGoverment  : Fragment(), View.OnClickListener{
+class FragmentOurGoverment  : Fragment(),View.OnClickListener{
+
+    private var broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            val notConnected = intent.getBooleanExtra(ConnectivityManager
+                .EXTRA_NO_CONNECTIVITY, false)
+            if (notConnected) {
+                disconnected()
+            } else {
+                connected()
+            }
+        }
+    }
+
+
+
     private lateinit var data: JSONArray
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -120,14 +142,35 @@ class FragmentOurGoverment  : Fragment(), View.OnClickListener{
     }
 
 
+override fun onStart() {
+    super.onStart()
+    activity!!.registerReceiver(broadcastReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
+}
+
+override fun onStop() {
+    super.onStop()
+    activity!!.unregisterReceiver(broadcastReceiver)
+}
+
+
+private fun disconnected() {
+    scrollView.visibility = View.INVISIBLE
+    imageView.visibility = View.VISIBLE
+}
+
+private fun connected() {
+    scrollView.visibility = View.VISIBLE
+    imageView.visibility = View.INVISIBLE
+//        fetchFeeds()
+}
 
 
 
-    //    fun getData() {
-//        val conn: HttpURLConnection = URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
-//        val res = conn.inputStream.bufferedReader().readText()
-//        val data: JSONArray = JSONObject(res).getJSONArray("depts")
-//    }
+        fun getData() {
+        val conn: HttpURLConnection = URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
+        val res = conn.inputStream.bufferedReader().readText()
+        val data: JSONArray = JSONObject(res).getJSONArray("depts")
+    }
     override fun onClick(v: View?) {
         when(v!!.id) {
             R.id.dept_mayor_office -> dispMyrOff()
@@ -136,6 +179,12 @@ class FragmentOurGoverment  : Fragment(), View.OnClickListener{
             else -> dispOth(v.id)
         }
     }
+
+//    private fun isNetworkConnected(): Boolean {
+//        val connectivityManager = getSystemService(activity!!.supportFragmentManager.CONNECTIVITY_SERVICE) as ConnectivityManager //1
+//        val networkInfo = connectivityManager.activeNetworkInfo //2
+//        return networkInfo != null && networkInfo.isConnected //3
+//    }
 
 
     fun dispMyrOff() {
