@@ -1,12 +1,18 @@
 package ph.sanpablocitygov.iSanPablo.tourism
 
 
+import android.app.AlertDialog
+import android.app.DownloadManager
+import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import kotlinx.android.synthetic.main.dialog_business_doing_business.view.*
+import kotlinx.android.synthetic.main.dialog_tourism_masterplan.view.*
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.tourism.Festival.FragmentFestival
 import ph.sanpablocitygov.iSanPablo.tourism.WheretoStayEat.FragmentWheretoStayEat
@@ -48,6 +54,31 @@ class FragmentTourism : Fragment (){
                 FragmentWheretoStayEat(), null)
                 .addToBackStack(null)
                 .commit()
+        }
+
+        val btnmp = view.findViewById<Button>(R.id.btn_tourism_masterplan)
+        btnmp.setOnClickListener {
+            val dbView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_tourism_masterplan, null)
+
+            val dbBuilder = AlertDialog.Builder(requireContext())
+                .setView(dbView)
+
+            val dbDialog = dbBuilder.show()
+
+            dbView.btn_doing_master_confirm.setOnClickListener {
+                dbDialog.dismiss()
+                val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                    requireContext(),
+                    DownloadManager::class.java
+                ) as DownloadManager
+                val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/SP%20TMP.pdf")
+                val request = DownloadManager.Request(uri)
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                downloadManager.enqueue(request)  }
+
+            dbView.btn_doing_master_cancel.setOnClickListener {
+                dbDialog.dismiss()
+            }
         }
         return view
     }

@@ -5,133 +5,136 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/background"
-            android:paddingTop="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp">
+           >
 
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="match_parent"
+                  android:layout_height="wrap_content"
                   android:orientation="vertical">
 
-
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="7dp">
-
-
-
-
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
             <LinearLayout
+                    android:id="@+id/linearLayout3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center">
-                <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/spc_logo2"
-                        android:id="@+id/imageView2"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="4dp"/>
-                <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:paddingLeft="15dp">
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Republic of the Philippines"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="5dp"
-                            android:textSize="17dp"
-                    />
+                    android:layout_height="90dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="CITY GOVERNMENT OF SAN PABLO"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
-                            android:layout_marginTop="3dp"
-
-                    />
-                </LinearLayout>
-
+                <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"/>
             </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="horizontal"
-                      android:layout_marginBottom="15dp"
-                      android:paddingTop="5dp"
-
-                      android:gravity="center">
-
-            <ImageView android:layout_width="80dp"
-                       android:layout_height="80dp"
-                       android:src="@drawable/logo_tourism_where"/>
-
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:textColor="@color/white"
-                      android:textSize="25sp"
-                      android:layout_marginStart="10dp"
-                      android:textStyle="bold"
-                      android:text="Where to Stay/ Eat? "/>
-        </LinearLayout>
-
-
+            <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/circle_back"
+                    android:forceHasOverlappingRendering="true"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:weightSum="1"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                    tools:ignore="UnusedAttribute">
+                <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/logo_home_mysanpablo" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RESORTS"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:textSize="28sp"
-                android:textColor="@color/white"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
-        />
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="WHERE TO STAY/ EAT?"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30sp" />
+
+
+
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="RESORTS"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"/>
+        </LinearLayout>
+
+<!--        <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingTop="5dp"-->
+<!--                android:paddingBottom="5dp"-->
+<!--                android:text="RESORTS"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="28sp"-->
+<!--                android:textStyle="bold" />-->
 
         <ListView
                 android:id="@+id/listview_tourism_resort"
                 android:layout_width="match_parent"
-                android:scrollbarSize="5dp"
-                android:background="@drawable/text_border"
+                android:layout_height="400dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:scrollbarStyle="insideInset"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/text_border"
                 android:nestedScrollingEnabled="true"
-                android:layout_height="400dp"
                 android:padding="5dp"
-                android:layout_marginBottom="20dp"/>
-
-        <TextView
-                android:layout_width="match_parent"
+                android:scrollbarSize="5dp"
+                android:scrollbarStyle="insideInset" />
+        <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="HOTEL"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:textSize="28sp"
-                android:textColor="@color/white"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center"
-        />
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="HOTEL"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"/>
+        </LinearLayout>
+<!--        <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingTop="5dp"-->
+<!--                android:paddingBottom="5dp"-->
+<!--                android:text="HOTEL"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="28sp"-->
+<!--                android:textStyle="bold" />-->
 
         <ListView
                 android:id="@+id/listview_tourism_hotel"
@@ -176,20 +179,36 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"/>
 
-        <TextView
-                android:layout_width="match_parent"
+        <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TRAVEL AND TOURS"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:textSize="28sp"
-                android:textColor="@color/white"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center"
-        />
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="TRAVEL AND TOURS"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"/>
+        </LinearLayout>
+
+<!--        <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="TRAVEL AND TOURS"-->
+<!--                android:textStyle="bold"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingBottom="5dp"-->
+<!--                android:paddingTop="5dp"-->
+<!--                android:textSize="28sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_gravity="center"-->
+<!--        />-->
 
         <ListView
                 android:id="@+id/listview_tourism_travel_tour"
@@ -204,20 +223,34 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="20dp"/>
 
-        <TextView
-                android:layout_width="match_parent"
+        <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Restaurants"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:textSize="28sp"
-                android:textColor="@color/white"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center"
-        />
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="RESTAURANTS"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"/>
+        </LinearLayout>
+<!--        <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingTop="5dp"-->
+<!--                android:paddingBottom="5dp"-->
+<!--                android:text="Restaurants"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="28sp"-->
+<!--                android:textStyle="bold" />-->
 
         <ListView
                 android:id="@+id/listview_tourism_travel_restaurant"
@@ -253,7 +286,7 @@
                         android:layout_height="18dp"
                         android:text="@string/Reps"
                         android:textSize="13dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:textStyle="bold"/>
                 <TextView
@@ -261,7 +294,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
                         android:textSize="13dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp"/>
                 <TextView
@@ -269,7 +302,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textSize="13dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
@@ -291,7 +324,7 @@
         <LinearLayout
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
@@ -307,7 +340,7 @@
                         android:textSize="15sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="3dp"
                 />
@@ -329,21 +362,35 @@
                         android:textSize="15sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                />
-                <TextView
-                        android:text="Chris Velasco"
-                        android:layout_width="match_parent"
+                        />
+                <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:gravity="center"
+                        android:orientation="vertical">
+                    <TextView
+                            android:text="Chris Velasco"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:gravity="center"
 
-                        android:textColor="@color/white"
-                        android:textAlignment="center"
-                />
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            />
+                    <TextView
+                            android:text="Joseph Bonilla"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:gravity="center"
+
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            />
+                </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
 
     </LinearLayout>

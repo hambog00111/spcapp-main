@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ph.sanpablocitygov.iSanPablo.MainActivity"
-    android:background="@drawable/background">
+    >
 
 
     <android.support.design.widget.AppBarLayout
@@ -50,7 +50,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
-                                android:textSize="12sp"
+                                android:textSize="11sp"
                                 android:layout_marginTop="8dp"
                                 android:gravity="center"
                                 android:layout_gravity="center"
@@ -63,7 +63,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/white"
                                 android:textSize="12sp"
-                                android:paddingEnd="10dp"
+
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="3dp"
                                 android:textStyle="bold"

@@ -26,13 +26,13 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
 
     private var broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            val notConnected = intent.getBooleanExtra(ConnectivityManager
-                .EXTRA_NO_CONNECTIVITY, false)
-            if (notConnected) {
-                disconnected()
-            } else {
-                connected()
-            }
+//            val notConnected = intent.getBooleanExtra(ConnectivityManager
+//                .EXTRA_NO_CONNECTIVITY, false)
+//            if (notConnected) {
+//                disconnected()
+//            } else {
+//                connected()
+//            }
         }
     }
 
@@ -142,27 +142,27 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
     }
 
 
-override fun onStart() {
-    super.onStart()
-    activity!!.registerReceiver(broadcastReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
-}
-
-override fun onStop() {
-    super.onStop()
-    activity!!.unregisterReceiver(broadcastReceiver)
-}
-
-
-private fun disconnected() {
-    scrollView.visibility = View.INVISIBLE
-    imageView.visibility = View.VISIBLE
-}
-
-private fun connected() {
-    scrollView.visibility = View.VISIBLE
-    imageView.visibility = View.INVISIBLE
-//        fetchFeeds()
-}
+//override fun onStart() {
+//    super.onStart()
+//    activity!!.registerReceiver(broadcastReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
+//}
+//
+//override fun onStop() {
+//    super.onStop()
+//    activity!!.unregisterReceiver(broadcastReceiver)
+//}
+//
+//
+//private fun disconnected() {
+//    scrollView.visibility = View.INVISIBLE
+//    imageView.visibility = View.VISIBLE
+//}
+//
+//private fun connected() {
+//    scrollView.visibility = View.VISIBLE
+//    imageView.visibility = View.INVISIBLE
+////        fetchFeeds()
+//}
 
 
 

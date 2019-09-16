@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:background="@drawable/background"
+
               android:orientation="vertical">
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -14,26 +14,24 @@
                 android:layout_height="wrap_content"
                 android:text="Doing Business"
                 android:textStyle="bold"
-                android:layout_marginStart="15dp"
+                android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:paddingTop="5dp"
+                android:paddingStart="20dp"
+                android:background="@color/colorPrimary"
                 android:textSize="18sp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
                 android:layout_gravity="center"/>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Would you like to download the file of procedure and requirements for doing business in San Pablo City?"
-
                 android:layout_marginStart="15dp"
                 android:paddingBottom="10dp"
 
                 android:textSize="15sp"
-                android:textColor="@color/white"
+                android:textColor="@color/darkgray"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
@@ -44,29 +42,29 @@
 
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="50dp"
-                  android:layout_marginBottom="10dp"
+                  android:layout_height="40dp"
+                  android:layout_marginBottom="5dp"
                   android:gravity="end"
                   android:orientation="horizontal">
 
-        <Button android:layout_width="100dp"
+        <TextView android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:textStyle="bold"
                 android:textSize="13sp"
-                android:textColor="@color/white"
-                android:background="@drawable/text_border"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
                 android:id="@+id/btn_doing_business_confirm"
-                android:text="Confirm"/>
+                android:text="CONFIRM"/>
 
-        <Button android:layout_width="100dp"
+        <TextView android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:textStyle="bold"
                 android:textSize="13sp"
-                android:textColor="@color/white"
-                android:background="@drawable/text_border"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
                 android:id="@+id/btn_doing_business_cancel"
-                android:text="cancel"/>
+                android:text="CANCEL"/>
     </LinearLayout>
 </LinearLayout>

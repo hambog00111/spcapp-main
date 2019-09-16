@@ -3,7 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:background="@drawable/background"
+
               android:orientation="vertical">
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -14,14 +14,14 @@
                 android:layout_height="wrap_content"
                 android:text="Doing Business"
                 android:textStyle="bold"
-                android:layout_marginStart="15dp"
+                android:paddingStart="20dp"
                 android:paddingBottom="10dp"
-                android:paddingTop="5dp"
+                android:background="@color/colorPrimary"
+                android:paddingTop="10dp"
                 android:textSize="25sp"
                 android:textColor="@color/white"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+
                 android:layout_gravity="center"/>
 
         <TextView
@@ -33,7 +33,7 @@
                 android:paddingBottom="10dp"
 
                 android:textSize="20sp"
-                android:textColor="@color/white"
+                android:textColor="@color/darkgray"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
@@ -43,30 +43,34 @@
 
 
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="80dp"
-                  android:layout_marginBottom="10dp"
-                  android:orientation="horizontal"
-                    android:gravity="end">
 
-        <Button android:layout_width="130dp"
-                android:layout_height="40dp"
-                android:layout_margin="10dp"
-                android:textStyle="bold"
-                android:textSize="15sp"
-                android:textColor="@color/white"
-                android:background="@drawable/text_border"
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+        <TextView
                 android:id="@+id/btn_doing_business_confirm"
-                android:text="Confirm"/>
-
-        <Button android:layout_width="130dp"
+                android:layout_width="130dp"
                 android:layout_height="40dp"
                 android:layout_margin="10dp"
-                android:textStyle="bold"
+                android:gravity="center"
+                android:text="CONFIRM"
+                android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
-                android:textColor="@color/white"
-                android:background="@drawable/text_border"
+                android:textStyle="bold" />
+
+        <TextView
                 android:id="@+id/btn_doing_business_cancel"
-                android:text="cancel"/>
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="CANCEL"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
     </LinearLayout>
 </LinearLayout>

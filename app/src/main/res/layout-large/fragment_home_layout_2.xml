@@ -12,83 +12,367 @@
                   android:orientation="vertical"
                   android:id="@+id/linera">
 
-        <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="horizontal"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:layout_marginBottom="10dp">-->
 
-            <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:layout_marginBottom="4dp"-->
-                    <!--android:gravity="center">-->
-                <!--<Button-->
-                        <!--android:layout_width="80dp"-->
-                        <!--android:layout_height="80dp"-->
-                        <!--android:src="@drawable/spc_logo2"-->
-                        <!--android:id="@+id/db_home_logo"-->
-                        <!--android:background="@drawable/spc_logo"-->
-                        <!--android:layout_marginStart="4dp"-->
-                        <!--android:layout_marginTop="4dp"/>-->
-                <!--<LinearLayout-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:orientation="vertical"-->
-                        <!--android:gravity="center"-->
-                        <!--android:paddingLeft="10dp">-->
-                    <!--<TextView-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="Republic of the Philippines"-->
-                            <!--android:textColor="@color/white"-->
-                            <!--android:layout_marginTop="5dp"-->
-                            <!--android:textSize="17dp"-->
-                    <!--/>-->
-
-                    <!--<TextView-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:text="CITY GOVERNMENT OF SAN PABLO"-->
-                            <!--android:textColor="@color/white"-->
-                            <!--android:textStyle="bold"-->
-                            <!--android:textSize="23sp"-->
-                            <!--android:layout_marginTop="3dp"-->
-
-                    <!--/>-->
-                <!--</LinearLayout>-->
-            <!--</LinearLayout>-->
-        <!--</LinearLayout>-->
-
-
-
-        <android.support.v4.view.ViewPager
+        <ViewFlipper
+                android:id="@+id/v_flipper"
+                android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="330dp"
-                android:id="@+id/home_viewpager"
-                android:fitsSystemWindows="true"
                 android:layout_gravity="center"
-                android:scaleType="centerCrop"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
+                android:fitsSystemWindows="true"
+
         />
-        <!--<ViewFlipper-->
-                <!--android:id="@+id/v_flipper"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="330dp"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:padding="10dp"-->
-                <!--android:layout_margin="10dp"-->
-                <!--android:fitsSystemWindows="true"-->
-
-        <!--/>-->
 
 
 
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:padding="10dp"
+                android:layout_marginTop="10dp"
+                      android:background="@color/colorPrimary"
+                      android:layout_gravity="center"
+                      android:gravity="center">
+            <ImageView android:layout_width="55dp"
+                       android:layout_height="55dp"
+                       android:src="@drawable/logo_home_mysanpablo"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/white"
+                      android:textSize="25sp"
+                      android:layout_marginStart="5dp"
+                      android:textStyle="bold"
+                      android:text="My iSanPablo"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/text_border"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:gravity="bottom">
+
+                        <Button
+                                android:id="@+id/btn_business_in_the_city"
+
+                                android:layout_width="100dp"
+                                android:layout_height="110dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/btn_bitc"
+                                android:elevation="10dp"
+                                android:fitsSystemWindows="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:gravity="bottom"
+                                android:scaleType="fitCenter"
+                                tools:targetApi="m" />
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="BUSINESS IN THE CITY"
+                            android:textAlignment="center"
+                            android:textColor="@color/blues"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/text_border"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:gravity="bottom">
+
+                        <Button
+                                android:id="@+id/btn_my_taxes"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/btn_mt"
+                                android:fitsSystemWindows="true"
+                                android:gravity="bottom"
+                                android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="MY TAXES"
+                            android:textAlignment="center"
+                            android:textColor="@color/bluess"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/text_border"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:gravity="bottom">
+
+                        <Button
+                                android:id="@+id/btn_online_request"
+
+                                android:layout_width="90dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/btn_maro"
+                                android:elevation="10dp"
+                                android:fitsSystemWindows="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:gravity="bottom"
+                                android:scaleType="fitCenter"
+                                tools:targetApi="m" />
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="MY APP ONLINE REQUEST"
+                            android:textAlignment="center"
+                            android:textColor="@color/blues"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/text_border"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:gravity="bottom">
+
+                        <Button
+                                android:id="@+id/btn_city_hot_lines"
+                                android:layout_width="100dp"
+                                android:layout_height="90dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/btn_ch"
+                                android:fitsSystemWindows="true"
+                                android:gravity="bottom"
+                                android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="CITY HOTLINES\n"
+                            android:textAlignment="center"
+                            android:textColor="@color/bluess"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/text_border"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:gravity="bottom">
+
+                        <Button
+                                android:id="@+id/btn_gov_online_service"
+
+                                android:layout_width="100dp"
+                                android:layout_height="110dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/btn_gos"
+                                android:elevation="10dp"
+                                android:fitsSystemWindows="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:gravity="bottom"
+                                android:scaleType="fitCenter"
+                                tools:targetApi="m" />
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="GOVERNMENT ONLINE SERVICES"
+                            android:textAlignment="center"
+                            android:textColor="@color/blues"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="180dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/text_border"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:gravity="bottom">
+
+                        <Button
+                                android:id="@+id/btn_city_employees_corner"
+                                android:layout_width="100dp"
+                                android:layout_height="110dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/btn_cec"
+                                android:fitsSystemWindows="true"
+                                android:gravity="bottom"
+                                android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="CITY EMPLOYEE\nCORNER"
+                            android:textAlignment="center"
+                            android:textColor="@color/bluess"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
 
         <android.support.v7.widget.CardView
                 android:layout_height="wrap_content"
@@ -99,354 +383,33 @@
                 app:cardCornerRadius="12dp"
                 android:layout_margin="15dp">
             <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:orientation="vertical">
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="EVENTS AND ANNOUNCEMENTS"
-                android:textStyle="bold"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:textSize="25sp"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/text_border2"
-                android:layout_gravity="center"
-        />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="EVENTS AND ANNOUNCEMENTS"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textSize="25sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
 
-        <!--<android.support.v4.view.ViewPager-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="220dp"-->
-                <!--android:src="@drawable/app"-->
-                <!--android:id="@+id/events_viewpager"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:layout_marginBottom="20dp"-->
-                <!--android:fitsSystemWindows="true"-->
-                <!--android:layout_marginRight="10dp"-->
-                <!--android:layout_marginLeft="10dp"-->
-                <!--android:scaleType="fitCenter"/>-->
+                        android:background="@color/colorPrimary"
+                        android:layout_gravity="center"
+                        />
 
-        <ViewFlipper
-                android:id="@+id/v_flipperevent"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:scaleType="centerInside"
-                android:layout_marginBottom="20dp"/>
+                <ViewFlipper
+                        android:id="@+id/v_flipperevent"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
-
-
-        <!--<android.support.v7.widget.CardView-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_columnWeight="1"-->
-                <!--android:layout_rowWeight="1"-->
-                <!--app:cardElevation="6dp"-->
-                <!--app:cardCornerRadius="12dp"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:layout_margin="15dp">-->
-
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="horizontal"
-                      android:layout_margin="10dp"
-
-                      android:padding="10dp"
-                      android:background="@drawable/text_border2"
-                      android:layout_gravity="center"
-                      android:gravity="center">
-
-            <ImageView android:layout_width="55dp"
-                       android:layout_height="55dp"
-                       android:src="@drawable/logo_home_mysanpablo"/>
-
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:textColor="@color/white"
-                      android:textSize="25sp"
-                      android:layout_marginStart="5dp"
-                      android:textStyle="bold"
-                      android:text="My iSanPablo"/>
-
-
-        </LinearLayout>
-        <!--</android.support.v7.widget.CardView>-->
-        <GridLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:columnCount="2"
-                    android:rowCount="3"
-                    android:layout_gravity="center"
-                    android:alignmentMode="alignMargins"
-                    android:columnOrderPreserved="false">
-            <android.support.v7.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="250dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardElevation="6dp"
-                    android:padding="10dp"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="15dp">
-
-                <LinearLayout
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="200dp"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                    <Button
-                            android:id="@+id/btn_business_in_the_city"
-                            android:layout_width="130dp"
-                            android:layout_height="130dp"
-                            android:background="@drawable/logo_home_bc_button"
-                            android:fitsSystemWindows="true"
-                            android:scaleType="fitCenter"
-                            android:foreground="?android:attr/selectableItemBackground"
-                            android:layout_gravity="center" tools:targetApi="m"/>
-
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="BUSINESS IN THE CITY"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:textSize="16sp"
-                            android:padding="3dp"
-                            android:layout_gravity="center"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textColor="@color/bluess"/>
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="250dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardElevation="6dp"
-
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="15dp">
-            <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="200dp"
-                    android:gravity="center"
-
-                    android:layout_gravity="center"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                <Button
-                        android:id="@+id/btn_my_taxes"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
-                        android:background="@drawable/logo_home_mt_button"
-                        android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:layout_gravity="center"/>
-
-                <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="MY TAXES"
-                        android:textStyle="bold"
-
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:padding="3dp"
-                        android:textSize="16sp"
-                        android:textAlignment="center"
-                        android:gravity="center"
-                        android:textColor="@color/colorPrimary"/>
-
-            </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="250dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardElevation="6dp"
-                    android:padding="10dp"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="15dp">
-                <LinearLayout
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                    <Button
-                            android:id="@+id/btn_online_request"
-                            android:layout_width="130dp"
-                            android:layout_height="130dp"
-                            android:background="@drawable/logo_home_maor_button"
-                            android:fitsSystemWindows="true"
-                            android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="MY APP ONLINE REQUEST"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:textSize="16sp"
-                            android:padding="3dp"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textColor="@color/colorPrimary"/>
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="250dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardElevation="6dp"
-                    android:padding="10dp"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="15dp">
-
-
-                <LinearLayout
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                    <Button
-                            android:id="@+id/btn_city_hot_lines"
-                            android:layout_width="130dp"
-                            android:layout_height="130dp"
-                            android:background="@drawable/logo_home_ch_button"
-                            android:fitsSystemWindows="true"
-                            android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="CITY HOTLINES"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:padding="3dp"
-                            android:textSize="16sp"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textColor="@color/colorPrimary"/>
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="250dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardElevation="6dp"
-                    android:padding="10dp"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="15dp">
-
-                <LinearLayout
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                    <Button
-                            android:id="@+id/btn_gov_online_service"
-                            android:layout_width="130dp"
-                            android:layout_height="130dp"
-                            android:background="@drawable/logo_home_gos_button"
-                            android:fitsSystemWindows="true"
-                            android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="GOVERNMENT ONLINE SEVICES"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:textSize="16sp"
-                            android:padding="3dp"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textColor="@color/colorPrimary"/>
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="250dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardElevation="6dp"
-                    android:padding="10dp"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="15dp">
-
-                <LinearLayout
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                    <Button
-                            android:id="@+id/btn_city_employees_corner"
-                            android:layout_width="130dp"
-                            android:layout_height="130dp"
-                            android:background="@drawable/logo_home_cec_button"
-                            android:fitsSystemWindows="true"
-                            android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="CITY EMPLOYEE CORNER\n"
-                            android:textStyle="bold"
-                            android:layout_marginTop="5dp"
-                            android:textSize="16sp"
-                            android:padding="3dp"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textColor="@color/colorPrimary"/>
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-        </GridLayout>
-
-
 
 
 
@@ -484,17 +447,14 @@
                                     android:textAlignment="center"
                                     android:textColor="@color/white"
                                     android:layout_marginBottom="5dp"
-
-                                    android:layout_gravity="center"
-                            />
+                                    android:layout_gravity="center" />
 
                 <LinearLayout
                         android:layout_height="300dp"
                         android:layout_width="300dp"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:layout_gravity="center"
-                        android:background="@drawable/text_border">
+                        android:layout_gravity="center">
 
 
                     <Button
@@ -534,6 +494,20 @@
                               android:layout_height="wrap_content"
                             android:orientation="vertical">
 
+                    <TextView
+                            android:layout_width="match_parent "
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/colorPrimary"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="FEATURED LINKS"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+
+                           android:textSize="25sp"
+                            android:textStyle="bold" />
 
                 <LinearLayout android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
@@ -543,7 +517,7 @@
                     <LinearLayout android:layout_width="wrap_content"
                                   android:layout_height="wrap_content"
                                   android:orientation="horizontal"
-                                  android:layout_marginBottom="5dp">
+                            android:layout_marginBottom="10dp">
 
                         <Button android:layout_width="40dp"
                                 android:layout_height="40dp"
@@ -563,7 +537,7 @@
                     <LinearLayout android:layout_width="wrap_content"
                                   android:layout_height="wrap_content"
                                   android:orientation="horizontal"
-                                  android:layout_marginBottom="5dp">
+                            android:layout_marginBottom="10dp">
 
                         <Button android:layout_width="40dp"
                                 android:layout_height="40dp"
@@ -583,7 +557,7 @@
                     <LinearLayout android:layout_width="wrap_content"
                                   android:layout_height="wrap_content"
                                   android:orientation="horizontal"
-                                  android:layout_marginBottom="5dp">
+                            android:layout_marginBottom="10dp">
 
                         <Button android:layout_width="40dp"
                                 android:layout_height="40dp"
@@ -603,7 +577,7 @@
                     <LinearLayout android:layout_width="wrap_content"
                                   android:layout_height="wrap_content"
                                   android:orientation="horizontal"
-                                  android:layout_marginBottom="5dp">
+                            android:layout_marginBottom="10dp">
 
                         <Button android:layout_width="40dp"
                                 android:layout_height="40dp"
@@ -629,83 +603,46 @@
 
 
 
-
-
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:orientation="horizontal"
-            >
-
+        <android.support.v7.widget.CardView
+                android:layout_height="wrap_content"
+                android:layout_width="320dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:padding="10dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="15dp">
                     <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                        <LinearLayout android:layout_width="wrap_content"
-                                      android:layout_height="wrap_content"
-                                      android:orientation="vertical">
-
-
-
-                            <TextView
-                                    android:layout_width="320dp"
-                                    android:layout_height="wrap_content"
-                                    android:text="BIDS AND AWARDS"
-                                    android:textStyle="bold"
-                                    android:gravity="center"
-                                    android:paddingBottom="5dp"
-                                    android:textSize="25sp"
-                                    android:layout_marginTop="20dp"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/white"
-                                    android:layout_marginBottom="5dp"
-                                    android:layout_gravity="center"/>
-
-
-                            <Button
-                                    android:layout_width="300dp"
-                                    android:layout_height="100dp"
-                                    android:background="@drawable/philgeps"
-                                    android:layout_gravity="center"
-                                    android:padding="10dp"
-                                    android:id="@+id/btn_home_philgeps"/>
-
-                        </LinearLayout>
-                        <LinearLayout
+                        <TextView
+                                android:layout_width="320dp"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:gravity="center"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="BIDS AND AWARDS"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:background="@color/colorPrimary"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+
+                        <Button
+                                android:id="@+id/btn_home_philgeps"
                                 android:layout_width="match_parent"
-                                android:orientation="vertical">
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@drawable/philgeps" />
 
-                            <TextView
-                                    android:layout_width="200dp"
-                                    android:layout_height="wrap_content"
-                                    android:text="FEATURED LINKS"
-                                    android:textStyle="bold"
-
-                                    android:paddingBottom="5dp"
-                                    android:paddingTop="5dp"
-                                    android:textSize="25sp"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/white"
-                                    android:layout_marginBottom="5dp"
-                                    android:layout_marginTop="25dp"
-                                    android:layout_gravity="center"
-                            />
-
-
-                        </LinearLayout>
                     </LinearLayout>
-            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
-
-
-        </LinearLayout>
 
 
 
@@ -729,30 +666,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="18dp"
                         android:text="@string/Reps"
-                        android:textSize="13dp"
-                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:textStyle="bold"/>
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="13dp"
-                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp"/>
                 <TextView
                         android:text="© 2019 San Pablo City Goverment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="13dp"
-                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:id="@+id/textView8"
 
-                />
+                        />
 
             </LinearLayout>
 
@@ -767,8 +704,9 @@
 
         <LinearLayout
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
@@ -784,10 +722,10 @@
                         android:textSize="15sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="3dp"
-                />
+                        />
                 <ImageView
                         android:layout_width="90dp"
                         android:layout_height="25dp"
@@ -806,21 +744,35 @@
                         android:textSize="15sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                />
-                <TextView
-                        android:text="Chris Velasco"
-                        android:layout_width="match_parent"
+                        />
+                <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:gravity="center"
+                        android:orientation="vertical">
+                    <TextView
+                            android:text="Chris Velasco"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:gravity="center"
 
-                        android:textColor="@color/white"
-                        android:textAlignment="center"
-                />
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            />
+                    <TextView
+                            android:text="Joseph Bonilla"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:gravity="center"
+
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            />
+                </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
 
