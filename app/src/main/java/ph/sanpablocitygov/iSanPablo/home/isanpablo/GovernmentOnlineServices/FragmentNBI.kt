@@ -12,12 +12,12 @@ import android.widget.Button
 import android.widget.ProgressBar
 import ph.sanpablocitygov.iSanPablo.R
 
-class FragmentLinkPassport : Fragment() {
+class FragmentNBI : Fragment() {
 
 
     internal var btn_next: Button? = null
     internal var progressBar: ProgressBar? = null
-    private var url = "https://www.passport.gov.ph/"
+    private var url = "https://clearance.nbi.gov.ph/"
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view: View = inflater.inflate(R.layout.test, container, false)
 //       val view = inflater.inflate(R.layout.test, null)

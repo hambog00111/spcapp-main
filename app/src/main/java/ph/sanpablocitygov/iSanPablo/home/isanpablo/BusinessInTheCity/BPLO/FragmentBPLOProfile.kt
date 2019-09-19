@@ -12,9 +12,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import kotlinx.android.synthetic.main.dialog_bplo.view.*
 import kotlinx.android.synthetic.main.dialoglogout.view.*
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.Amendments.FragmentAmendments1
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentLoginBPLO
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
 
@@ -41,8 +43,16 @@ class FragmentBPLOProfile : Fragment() {
                 .commit()
         }
 
+        val btnamendments = view.findViewById<Button>(R.id.txt_bplo_amendments)
+        btnamendments.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentAmendments1() , null)
+                .addToBackStack(null)
+                .commit()
+        }
 
-        val btnlogout = view.findViewById<Button>(R.id.txt_bplo_log_out)
+        val btnlogout = view.findViewById<TextView>(R.id.txt_bplo_log_out)
         btnlogout.setOnClickListener {
 
             var logout = LayoutInflater.from(requireContext()).inflate(R.layout.dialoglogout, null)

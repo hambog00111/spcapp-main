@@ -115,9 +115,6 @@
         </LinearLayout>
         </android.support.v7.widget.CardView>
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="@drawable/line_border"/>
 
         <ImageView android:layout_width="match_parent"
                    android:layout_height="200dp"
@@ -169,11 +166,6 @@
             />
         </LinearLayout>
         </android.support.v7.widget.CardView>
-
-
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="@drawable/line_border"/>
 
 
         <ImageView android:layout_width="match_parent"
@@ -230,10 +222,6 @@
         </LinearLayout>
         </android.support.v7.widget.CardView>
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="@drawable/line_border"/>
-
         <ImageView android:layout_width="match_parent"
                    android:layout_height="200dp"
                    android:src="@drawable/tourism_mohicap"
@@ -284,9 +272,7 @@
         </android.support.v7.widget.CardView>
 
 
-            <TextView android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:background="@drawable/line_border"/>
+
 
             <ImageView android:layout_width="match_parent"
                        android:layout_height="200dp"
@@ -341,9 +327,7 @@
         </android.support.v7.widget.CardView>
 
 
-                <TextView android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:background="@drawable/line_border"/>
+
 
                 <ImageView android:layout_width="match_parent"
                            android:layout_height="200dp"
@@ -397,9 +381,6 @@
         </android.support.v7.widget.CardView>
 
 
-                <TextView android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:background="@drawable/line_border"/>
 
                 <ImageView android:layout_width="match_parent"
                            android:layout_height="200dp"
@@ -454,7 +435,6 @@
 
                 </LinearLayout>
         </android.support.v7.widget.CardView>
-
 
 
 

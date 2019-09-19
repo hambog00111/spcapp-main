@@ -4,31 +4,72 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background">
+            android:layout_height="match_parent">
 
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:orientation="vertical">
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
 
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/circle_back"
+                    android:forceHasOverlappingRendering="true"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:weightSum="1"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                    tools:ignore="UnusedAttribute">
+
+                <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/logo_home_mysanpablo" />
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textAlignment="center"
+                android:text="SAN PABLO CITY FAMOUS LANDMARKS"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"/>
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="SAN PABLO CITY FAMOUS LANDMARKS"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"
-            />
+
             <ImageView android:layout_width="match_parent"
                        android:layout_height="250dp"
                        android:src="@drawable/cathedral"

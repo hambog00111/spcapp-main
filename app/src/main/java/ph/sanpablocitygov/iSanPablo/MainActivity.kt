@@ -27,6 +27,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.dialog_disclosure.view.*
+import ph.sanpablocitygov.iSanPablo.OurBarangay.FragmentBarangay
 
 import ph.sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
 import ph.sanpablocitygov.iSanPablo.home.FragmentHome
@@ -255,9 +256,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         .addToBackStack(null)
                 .commit()
 
-
-
             }
+//            R.id.nav_our_barangay -> {
+//                supportFragmentManager.beginTransaction().replace(
+//                    R.id.frag_container,
+//                    FragmentBarangay(), null)
+//                    .addToBackStack(null)
+//                    .commit()
+//
+//            }
             R.id.nav_our_government -> {
 
                 if (isConnected()) {

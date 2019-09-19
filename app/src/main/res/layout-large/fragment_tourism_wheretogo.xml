@@ -140,9 +140,7 @@
 
 <!--    </LinearLayout>-->
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="@drawable/line_border"/>
+
 
         <ImageView android:layout_width="match_parent"
                 android:layout_height="350dp"
@@ -224,9 +222,6 @@
 
 <!--        </LinearLayout>-->
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="@drawable/line_border"/>
 
         <ImageView android:layout_width="match_parent"
                 android:layout_height="350dp"
@@ -308,9 +303,6 @@
 
 <!--        </LinearLayout>-->
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="@drawable/line_border"/>
 
         <ImageView
                 android:layout_width="match_parent"
@@ -392,10 +384,6 @@
 <!--        </LinearLayout>-->
 
 
-            <TextView android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:background="@drawable/line_border"/>
-
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
@@ -475,9 +463,7 @@
 <!--                        android:textSize="18sp"-->
 <!--                />-->
 <!--            </LinearLayout>-->
-                <TextView android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:background="@drawable/line_border"/>
+
 
                 <ImageView android:layout_width="match_parent"
                         android:layout_height="350dp"
@@ -559,9 +545,6 @@
 
 <!--                </LinearLayout>-->
 
-                <TextView android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:background="@drawable/line_border"/>
 
                 <ImageView android:layout_width="match_parent"
                         android:layout_height="350dp"

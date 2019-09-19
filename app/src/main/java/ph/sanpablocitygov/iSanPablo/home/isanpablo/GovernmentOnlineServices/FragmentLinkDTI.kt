@@ -8,31 +8,71 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Button
+import android.widget.ProgressBar
 import ph.sanpablocitygov.iSanPablo.R
 
 class FragmentLinkDTI : Fragment() {
 
 
-    @SuppressLint("SetJavaScriptEnabled")
+    internal var btn_next: Button? = null
+    internal var progressBar: ProgressBar? = null
+    private var url = "https://www.bnrs.dti.gov.ph/web/guest/home"
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view: View = inflater.inflate(R.layout.test, container, false)
+//       val view = inflater.inflate(R.layout.test, null)
+        var wv: WebView? = null
+        //     btn_pre = view.findViewById<View>(R.id.btn_pre) as Button
+        //btn_next = view.findViewById<View>(R.id.btn_next) as Button
 
-        val view: View = inflater.inflate(
-            R.layout.fragment_home_web, container,
-            false)
+        //   btn_pre= view.findViewById(R.id.btn_pre)as Button
+        btn_next=view.findViewById(R.id.btn_next)as Button
 
+        wv = view.findViewById<View>(R.id.webView) as WebView
+        progressBar = view.findViewById<View>(R.id.progressBar) as ProgressBar
 
-        val  mWebView = view.findViewById(R.id.home_web_view) as WebView
-        mWebView.loadUrl("https://www.bnrs.dti.gov.ph/web/guest/home")
+        wv.webViewClient = myWebClient()
+        wv.settings.javaScriptEnabled = true
+        wv.settings.builtInZoomControls = true
+        wv.settings.displayZoomControls = false
+        wv.loadUrl(url)
 
-        val webSettings = mWebView.settings
-        webSettings.javaScriptEnabled = true
+//        btn_pre!!.setOnClickListener {
+////
+//
+//            if (wv.canGoBack()) {
+//                wv.goBack()
+//            }
+//        }
+        btn_next!!.setOnClickListener {
+            //
 
-// Force links and redirects to open in the WebView instead of in a browser
-        mWebView.webViewClient = WebViewClient()
-
-
-
-        return  view
+            if (wv.canGoBack()) {
+                wv.goBack()
+            }
+        }
+        return view
 
     }
+
+
+
+    inner class myWebClient : WebViewClient() {
+
+        override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
+
+            progressBar!!.visibility = View.VISIBLE
+            view.loadUrl(url)
+            return true
+
+        }
+
+        override fun onPageFinished(view: WebView, url: String) {
+
+            super.onPageFinished(view, url)
+            progressBar!!.visibility = View.GONE
+        }
+
+    }
+
 }

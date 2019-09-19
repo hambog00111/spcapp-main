@@ -7,24 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOProfile
 
-class FragmentAmendments : Fragment() {
+class FragmentAmendments1 : Fragment() {
 
     @SuppressLint("SetTextI18n", "InflateParams")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_bc_amendments_login, container, false)
-          val btnreg = view.findViewById<Button>(R.id.btn_bplo_login)
-        btnreg.setOnClickListener {
-            activity!!.supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentBPLOProfile() , null)
-                .addToBackStack(null)
-                .commit()
-        }
-//        val btnreg = view.findViewById(R.id.txt_assessment_register) as TextView
+        val view: View = inflater.inflate(R.layout.fragment_bc_amendments, container, false)
+
 //        btnreg.setOnClickListener(object: View.OnClickListener {
 //
 //            override fun onClick(v:View) {
@@ -33,7 +26,14 @@ class FragmentAmendments : Fragment() {
 //            }
 //        })
 
-
+        val btnreg = view.findViewById<TextView>(R.id.txt_amen_back)
+        btnreg.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentBPLOProfile() , null)
+                .addToBackStack(null)
+                .commit()
+        }
 
         return view
 

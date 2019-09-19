@@ -1,6 +1,8 @@
 package layout.ph.sanpablocitygov.iSanPablo.goverment
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -17,96 +19,49 @@ import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineModel
 
 import ph.sanpablocitygov.iSanPablo.R
 
+import java.util.ArrayList
+
 class FragmentCityHotline : Fragment() {
 
-    private lateinit var listView: ListView
-
+    lateinit var listView: ListView
+    internal lateinit var adapter: CityhotlineAdapter
+    internal lateinit var ivcityhotline: Array<String>
+    internal lateinit var ivcityhotlinephone: Array<String>
+    internal  var arrayList = ArrayList<CityhotlineModel>()
     @SuppressLint("RestrictedApi")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val rootview = inflater.inflate(R.layout.fragment_isanpablo_hotline,null)
+        val view = inflater.inflate(R.layout.fragment_isanpablo_hotline,null)
 
-        listView = rootview.findViewById(R.id.listview_cityhotline)
-        genList(listView)
+        ivcityhotline = arrayOf("San Pablo City Government", "San Pablo City Police",
+            "Red Cross San Pablo", "San Pablo City Emergency Hospital",
+            "San Pablo General Hospital","City Disaster Risk Reduction Management Office",
+            "San Pablo Welfare and Development Office","Bureau of Fire Protection")
 
-        val btncall= rootview.findViewById<Button>(R.id.btn_call_city_hot_line)
-        btncall?.setOnClickListener{
-            activity!!.supportFragmentManager.beginTransaction().replace(R.id.frag_container,
-                FragmentCityEmployeesCorner()
-            ).commit()
+        ivcityhotlinephone = arrayOf("(049)3000-065", "(049)5626-474/(049)5210-610",
+            "(049)5624-025", "(049)5031-351/(049)5031-432",
+            "  (049)5031-351/(049)5031431","  (049)8000-405", "(049)5621-575", "(049)5627-654" )
+
+
+        val  listView = view.findViewById<ListView>(R.id.listview_cityhotline)
+
+        for (i in ivcityhotline.indices) {
+            val cityhotlineModel = CityhotlineModel(ivcityhotline[i], ivcityhotlinephone[i])
+            //bind all strings in an array
+            arrayList.add(cityhotlineModel)
         }
 
+        adapter = CityhotlineAdapter(requireContext(), arrayList)
+        listView.adapter = adapter
 
-
-        return rootview
+        return view
     }
 
-    fun genList(ls: ListView) {
-        var lists: MutableList<CityhotlineModel> = mutableListOf<CityhotlineModel>()
-
-        for (i in 0..0) {
-            var user: CityhotlineModel = CityhotlineModel("San Pablo City Goverment", "(049)3000-065")
-            lists.add(user)
-        }
-
-        for (i in 0..0) {
-            var user: CityhotlineModel = CityhotlineModel("San Pablo City Police", "(049)5626-474/(049)5210-610")
-            lists.add(user)
-        }
-
-
-        for (i in 0..0) {
-            var user: CityhotlineModel = CityhotlineModel("Red Cross San Pablo", "(049)5624-025")
-            lists.add(user)
-        }
-        for (i in 0..0) {
-            var user: CityhotlineModel = CityhotlineModel("San Pablo City Emergency Hospital", "(049)5031-351/(049)5031-432")
-            lists.add(user)
-        }
-
-
-        for (i in 0..0) {
-            var user: CityhotlineModel = CityhotlineModel("San Pablo General Hospital", "(049)5031-351/(049)5031431")
-            lists.add(user) }
-
-        for (i in 0..0) {
-            var user: CityhotlineModel = CityhotlineModel("City Disaster Risk Reduction Management Office", "(049)8000-405")
-            lists.add(user)
-        }
-
-
-        for (i in 0..0) {
-            var user: CityhotlineModel = CityhotlineModel("San Pablo Welfare and Development Office", "(049)5621-575")
-            lists.add(user)
-        }
-        for (i in 0..0) {
-            var user: CityhotlineModel = CityhotlineModel("Bureau of Fire Protection", "(049)5627-654")
-            lists.add(user)
-        }
-
-        val list = CityhotlineAdapter(requireContext(), R.layout.row_cityhot_lines, lists)
-        listView.adapter = list
-
-
-        listView.onItemClickListener = object : AdapterView.OnItemClickListener {
-
-            override fun onItemClick(parent: AdapterView<*>, view: View,
-                                     position: Int, id: Long) {
-
-                // value of item that is clicked
-                val itemValue = ls.getItemAtPosition(position) as String
-
-                // Toast the values
-                Toast.makeText(requireContext(), "Position :$position\nItem Value : $itemValue", Toast.LENGTH_LONG).show()
-            }
-        }
 
 
 
 
 
-
-    }
 
 
 }
