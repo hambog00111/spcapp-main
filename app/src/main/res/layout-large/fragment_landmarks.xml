@@ -5,97 +5,51 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/background"
-            android:paddingTop="5dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
+          >
 
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:orientation="vertical"
-    >
+                  android:orientation="vertical">
 
-
-        <LinearLayout
+        <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="7dp">
-
-
-
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:layout_gravity="center">
-                <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/spc_logo"
-                        android:id="@+id/imageView2"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="4dp"/>
-                <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:paddingLeft="15dp">
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Republic of the Philippines"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="10dp"
-                            android:textSize="17dp"
-                    />
-
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="CITY GOVERNMENT OF SAN PABLO"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:textSize="23sp"
-                            android:layout_marginTop="3dp"
-
-                    />
-                </LinearLayout>
-
-            </LinearLayout>
-        </LinearLayout>
+                android:text="SAN PABLO CITY FAMOUS LANDMARKS"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                />
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="SAN PABLO CITY FAMOUS LANDMARKS"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-                    android:textSize="25sp"
-                    android:textColor="@color/white"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"
-            />
+
             <ImageView android:layout_width="match_parent"
                        android:layout_height="300dp"
                        android:src="@drawable/cathedral"
                        android:fitsSystemWindows="true"
                        android:layout_gravity="center"
                        android:scaleType="centerCrop"
-                       android:padding="5dp"
-                       android:layout_marginLeft="5dp"
-                       android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
             />
-
+            <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -105,30 +59,43 @@
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:textSize="25sp"
+                    android:background="@color/colorPrimary"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
                     android:layout_gravity="center"
             />
             <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/land_cath"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginStart="24dp"
                     android:textSize="18sp"
             />
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
             <ImageView android:layout_width="match_parent"
                        android:layout_height="300dp"
                        android:src="@drawable/farcon"
                        android:fitsSystemWindows="true"
                        android:layout_gravity="center"
                        android:scaleType="centerCrop"
-                       android:padding="5dp"
-                       android:layout_marginLeft="5dp"
-                       android:layout_marginRight="5dp"
-            />
+                    android:padding="10dp"
+                    android:layout_margin="10dp" />
 
+            <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -139,29 +106,42 @@
                     android:paddingTop="5dp"
                     android:textSize="25sp"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/colorPrimary"
                     android:layout_gravity="center"
             />
             <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/land_farcon"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginStart="24dp"
                     android:textSize="18sp"
             />
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
             <ImageView android:layout_width="match_parent"
                        android:layout_height="300dp"
                        android:src="@drawable/plaza1"
                        android:fitsSystemWindows="true"
                        android:layout_gravity="center"
                        android:scaleType="centerCrop"
-                       android:padding="5dp"
-                       android:layout_marginLeft="5dp"
-                       android:layout_marginRight="5dp"
-            />
+                    android:padding="10dp"
+                    android:layout_margin="10dp" />
 
+            <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -172,29 +152,42 @@
                     android:paddingTop="5dp"
                     android:textSize="25sp"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"
-            />
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_gravity="center" />
+
             <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/land_plaza"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginStart="24dp"
-                    android:textSize="18sp"
-            />
+                    android:textSize="18sp" />
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
             <ImageView android:layout_width="match_parent"
                        android:layout_height="300dp"
                        android:src="@drawable/goverment_sanpablo"
                        android:fitsSystemWindows="true"
                        android:layout_gravity="center"
                        android:scaleType="centerCrop"
-                       android:padding="5dp"
-                       android:layout_marginLeft="5dp"
-                       android:layout_marginRight="5dp"
-            />
+                    android:padding="10dp"
+                    android:layout_margin="10dp" />
 
+
+            <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -205,29 +198,41 @@
                     android:paddingTop="5dp"
                     android:textSize="25sp"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/colorPrimary"
                     android:layout_gravity="center"
             />
             <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/land_hall"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginStart="24dp"
-                    android:textSize="18sp"
-            />
+                    android:textSize="18sp" />
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
             <ImageView android:layout_width="match_parent"
                        android:layout_height="300dp"
                        android:src="@drawable/hagdangbato"
                        android:fitsSystemWindows="true"
                        android:layout_gravity="center"
                        android:scaleType="centerCrop"
-                       android:padding="5dp"
-                       android:layout_marginLeft="5dp"
-                       android:layout_marginRight="5dp"
-            />
+                    android:padding="10dp"
+                    android:layout_margin="10dp" />
 
+            <android.support.v7.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="15dp">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -238,67 +243,29 @@
                     android:paddingTop="5dp"
                     android:textSize="25sp"
                     android:textColor="@color/white"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_gravity="center"
-            />
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_gravity="center" />
+
             <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/land_hagdang"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkgray"
                     android:layout_marginStart="24dp"
-                    android:textSize="18sp"
-            />
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
-
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="79dp"
-                    android:text="@string/tab_govphil"
-                    android:layout_marginTop="8dp"
-                    android:textSize="15sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-
-            />
-
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:layout_marginBottom="8dp"
-            >
-
-
-                <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:srcCompat="@drawable/asti"
-                        android:id="@+id/imageView5"
-                        android:layout_weight="1"
-                        android:layout_marginRight="7dp"/>
-                <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/dict"
-                        android:id="@+id/imageView6"
-                        android:layout_weight="1"/>
+                    android:textSize="18sp" />
 
             </LinearLayout>
+            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>
+
+
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
             <ImageView
@@ -315,30 +282,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="18dp"
                         android:text="@string/Reps"
-                        android:textSize="13dp"
-                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:textStyle="bold"/>
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="13dp"
-                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp"/>
                 <TextView
                         android:text="© 2019 San Pablo City Goverment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="13dp"
-                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:id="@+id/textView8"
 
-                />
+                        />
 
             </LinearLayout>
 
@@ -353,6 +320,7 @@
 
         <LinearLayout
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
@@ -370,10 +338,10 @@
                         android:textSize="15sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="3dp"
-                />
+                        />
                 <ImageView
                         android:layout_width="90dp"
                         android:layout_height="25dp"
@@ -392,22 +360,37 @@
                         android:textSize="15sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                />
-                <TextView
-                        android:text="Chris Velasco"
-                        android:layout_width="match_parent"
+                        />
+                <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:gravity="center"
+                        android:orientation="vertical">
+                    <TextView
+                            android:text="Chris Velasco"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:gravity="center"
 
-                        android:textColor="@color/white"
-                        android:textAlignment="center"
-                />
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            />
+                    <TextView
+                            android:text="Joseph Bonilla"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:gravity="center"
+
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            />
+                </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

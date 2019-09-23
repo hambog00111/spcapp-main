@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.dialog_business_doing_business.view.*
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_business_investment
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_invest_cancel
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.Amendments.FragmentAmendments
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentLoginBPLO
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.FragmentBusinessTaxAssessment
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxPayment.FragmentBusinessTaxPayment
@@ -97,7 +98,14 @@ class FragmentBusinessInTheCity : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-
+        val btnbs = view.findViewById<Button>(R.id.btn_business_amendments)
+        btnbs.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentAmendments() , null)
+                .addToBackStack(null)
+                .commit()
+        }
         val btntp = view.findViewById<Button>(R.id.btn_business_btp)
         btntp.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(

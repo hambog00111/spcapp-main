@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import kotlinx.android.synthetic.main.fragment_bc_print_mayors_permit.*
-import kotlinx.android.synthetic.main.fragment_fill_up.view.*
+
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 

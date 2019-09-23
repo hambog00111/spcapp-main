@@ -1,14 +1,11 @@
 package ph.sanpablocitygov.iSanPablo.OurGovernment
 
 import android.app.AlertDialog
-import android.app.ProgressDialog
-import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
-import android.net.NetworkInfo
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -17,7 +14,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_our_goverment_layout.*
 import org.json.JSONArray
 import org.json.JSONObject
@@ -28,18 +24,19 @@ import java.net.URL
 
 class FragmentOurGoverment  : Fragment(),View.OnClickListener{
 
-
     private var broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            val notConnected = intent.getBooleanExtra(ConnectivityManager
-                .EXTRA_NO_CONNECTIVITY, false)
-            if (notConnected) {
-                disconnected()
-            } else {
-                connected()
-            }
+//            val notConnected = intent.getBooleanExtra(ConnectivityManager
+//                .EXTRA_NO_CONNECTIVITY, false)
+//            if (notConnected) {
+//                disconnected()
+//            } else {
+//                connected()
+//            }
         }
     }
+
+
 
     private lateinit var data: JSONArray
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -48,20 +45,17 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
 
 
 
-            val t1: TextView = view.findViewById(R.id.dept_mayor_office)
-            t1.setOnClickListener(this)
-            GetDeptLs(this).execute()
-
-
+        val t1: TextView = view.findViewById(R.id.dept_mayor_office)
+        t1.setOnClickListener(this)
+        GetDeptLs(this).execute()
         //getData()
-
         val t2: TextView = view.findViewById(R.id.dept_administrator_office)
         t2.setOnClickListener(this)
         GetDeptLs(this).execute()
         val t3: TextView = view.findViewById(R.id.dept_accounting_office)
         t3.setOnClickListener(this)
         GetDeptLs(this).execute()
-    val t4: TextView = view.findViewById(R.id.dept_agriculture_office)
+        val t4: TextView = view.findViewById(R.id.dept_agriculture_office)
         t4.setOnClickListener(this)
         GetDeptLs(this).execute()
         val t5: TextView = view.findViewById(R.id.dept_assesor_office)
@@ -148,7 +142,27 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
     }
 
 
-
+//override fun onStart() {
+//    super.onStart()
+//    activity!!.registerReceiver(broadcastReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
+//}
+//
+//override fun onStop() {
+//    super.onStop()
+//    activity!!.unregisterReceiver(broadcastReceiver)
+//}
+//
+//
+//private fun disconnected() {
+//    scrollView.visibility = View.INVISIBLE
+//    imageView.visibility = View.VISIBLE
+//}
+//
+//private fun connected() {
+//    scrollView.visibility = View.VISIBLE
+//    imageView.visibility = View.INVISIBLE
+////        fetchFeeds()
+//}
 
 
 
@@ -166,32 +180,8 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        activity!!.registerReceiver(broadcastReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
-    }
-
-    override fun onStop() {
-        super.onStop()
-        activity!!.unregisterReceiver(broadcastReceiver)
-    }
-
-
-    private fun disconnected() {
-        scrollView.visibility = View.GONE
-        imageView.visibility = View.VISIBLE
-    }
-
-    private fun connected() {
-        scrollView.visibility = View.VISIBLE
-        imageView.visibility = View.INVISIBLE
-//        fetchFeeds()
-    }
-
-
-
 //    private fun isNetworkConnected(): Boolean {
-//        val connectivityManager = activity!!.getSystemService(activity!!.supportFragmentManager.CONNECTIVITY_SERVICE) as ConnectivityManager //1
+//        val connectivityManager = getSystemService(activity!!.supportFragmentManager.CONNECTIVITY_SERVICE) as ConnectivityManager //1
 //        val networkInfo = connectivityManager.activeNetworkInfo //2
 //        return networkInfo != null && networkInfo.isConnected //3
 //    }
@@ -276,7 +266,6 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
         //var mView: ListView = fragRef.get()!!.listView
 
         override fun onPreExecute() {
-
 
         }
 

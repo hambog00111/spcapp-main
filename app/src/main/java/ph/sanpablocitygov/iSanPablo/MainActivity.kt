@@ -29,11 +29,13 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.dialog_disclosure.view.*
 
 import ph.sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
+import ph.sanpablocitygov.iSanPablo.cityhotlines.fragmenttest
 import ph.sanpablocitygov.iSanPablo.home.FragmentHome
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 
 
 import ph.sanpablocitygov.iSanPablo.links.*
+import ph.sanpablocitygov.iSanPablo.search.FragmentSearch
 import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
 import java.time.Duration
 
@@ -109,15 +111,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        return when (item.itemId) {
-//            R.id.action_settings -> true
-//            else -> super.onOptionsItemSelected(item)
-//        }
-//    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        return when (item.itemId) {
+            R.id.action_settings -> true
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 ////
 //
 //    val police = "09081930819"
@@ -591,7 +593,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_bplo ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentBPLOonline(), null)
+                    fragmenttest(), null)
                     .addToBackStack(null)
                     .commit()
             }

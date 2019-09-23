@@ -2,19 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:background="@drawable/background"
+
               android:orientation="vertical">
 
-<TextView android:layout_width="wrap_content"
-          android:text="BPLO Fill-up Forms"
-          android:layout_gravity="center"
-          android:textSize="25sp"
-          android:textStyle="bold"
-          android:textColor="@color/white"
-          android:layout_marginBottom="10dp"
-          android:layout_marginTop="10dp"
-          android:layout_height="wrap_content"/>
 
+    <TextView android:layout_width="match_parent"
+            android:text="BPLO Fill-up Forms"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_height="wrap_content"/>
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -51,10 +54,10 @@
               android:layout_gravity="right"
               android:textStyle="bold"
               android:textAllCaps="true"
-              android:textColor="@color/white"
+              android:textColor="@color/colorPrimary"
               android:layout_margin="20dp"
               android:text="cancel"
               android:id="@+id/btn_bplo_cancel"
-              android:textSize="20sp"/>
+              android:textSize="15sp"/>
 
 </LinearLayout>

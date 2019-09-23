@@ -26,7 +26,7 @@ class FragmentBarangay : Fragment() {
 
         val rootview = inflater.inflate(R.layout.fragment_barangay, null)
 
-        listView = rootview.findViewById(R.id.listview_barangay)
+        listView = view!!.findViewById(R.id.listview_barangay)
 
         GetBrgyLs(this).execute()
 

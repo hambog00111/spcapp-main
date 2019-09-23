@@ -10,16 +10,18 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:clickable="true"
-        android:background="@drawable/background"
         android:orientation="vertical">
 
     <TextView
             android:text="Contact Number:"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:id="@+id/textView18" android:textSize="15sp"
-            android:textColor="@color/white" android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/chairman_barangay" android:layout_marginTop="8dp"
+            android:id="@+id/textView18"
+            android:textSize="15sp"
+            android:textColor="@color/darkgray"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/chairman_barangay"
+            android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/chairman_barangay"/>
     <TextView
             android:text="Barangay Chairman:"
@@ -27,7 +29,7 @@
             android:layout_height="0dp"
             android:id="@+id/textView17"
             android:textSize="15sp"
-            android:textColor="@color/white"
+            android:textColor="@color/darkgray"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="4dp" android:layout_marginTop="8dp"
@@ -36,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Barangay:"
-            android:textColor="@color/white"
+            android:textColor="@color/darkgray"
             android:textSize="15sp"
             android:id="@+id/title_barangay"
             android:textAlignment="textStart"
@@ -47,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="District:"
-            android:textColor="@color/white"
+            android:textColor="@color/darkgray"
             android:textSize="15sp"
             android:id="@+id/nav_dept_head_name"
             android:textAlignment="textStart"
@@ -57,39 +59,50 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Contact Number"
-            android:textColor="@color/white"
+            android:textColor="@color/darkgray"
             android:textSize="15sp"
             android:id="@+id/nav_contact_dept"
             android:textAlignment="textStart"
             app:layout_constraintStart_toEndOf="@+id/textView18"
             android:layout_marginStart="8dp" app:layout_constraintBottom_toBottomOf="@+id/textView18"/>
+
     <TextView
+            android:id="@+id/chairman_barangay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Barangay Chairman"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:id="@+id/chairman_barangay"
             android:textAlignment="textStart"
+            android:textColor="@color/darkgray"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="@+id/textView17"
-            app:layout_constraintTop_toBottomOf="@+id/textView17" android:layout_marginTop="8dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
     <TextView
             android:text="Barangay:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/nav_dept_name" android:textSize="15sp"
+            android:id="@+id/nav_dept_name"
+            android:textSize="15sp"
             android:textStyle="bold"
-            android:textColor="@color/white" android:layout_marginTop="4dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="4dp"
+            android:textColor="@color/darkgray"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="4dp"
             app:layout_constraintStart_toStartOf="parent"/>
+
     <TextView
-            android:text="District:"
+            android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView13" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/nav_dept_name" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="4dp" android:textSize="15sp" android:textStyle="bold"
-            android:textColor="@color/white"/>
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="District:"
+            android:textColor="@color/darkgray"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nav_dept_name" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -14,7 +14,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import kotlinx.android.synthetic.main.dialog_bplo.view.*
 import kotlinx.android.synthetic.main.dialoglogout.view.*
-import kotlinx.android.synthetic.main.fragment_fill_up.view.*
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentLoginBPLO
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
@@ -39,6 +38,7 @@ class FragmentBPLOProfile : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentBPLOPayNow() , null)
+                .addToBackStack(null)
                 .commit()
         }
 
