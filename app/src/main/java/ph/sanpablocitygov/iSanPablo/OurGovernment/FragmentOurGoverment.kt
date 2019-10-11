@@ -1,20 +1,18 @@
 package ph.sanpablocitygov.iSanPablo.OurGovernment
 
-import android.app.AlertDialog
+import android.support.v7.app.AlertDialog
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
-import android.net.ConnectivityManager
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat.getSystemService
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import kotlinx.android.synthetic.main.fragment_our_goverment_layout.*
+
 import org.json.JSONArray
 import org.json.JSONObject
 import ph.sanpablocitygov.iSanPablo.R

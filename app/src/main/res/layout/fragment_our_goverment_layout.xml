@@ -14,7 +14,7 @@
 
         <ImageView android:layout_width="match_parent"
                    android:layout_height="230dp"
-                   android:src="@drawable/office_vicinity_map2"
+                   app:srcCompat="@drawable/office_vicinity_map2"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="fitCenter"
@@ -244,7 +244,7 @@
                 android:layout_gravity="center"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/city_lights2"
+                app:srcCompat="@drawable/city_lights2"
 
 
                 />
@@ -667,7 +667,7 @@
                 <ImageView
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:src="@drawable/amben_amante"
+                        app:srcCompat="@drawable/amben_amante"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
@@ -702,7 +702,7 @@
                 <ImageView
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        android:src="@drawable/ic_human"
+                        app:srcCompat="@drawable/ic_human"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:layout_gravity="center"/>
@@ -744,7 +744,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -780,7 +780,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -824,7 +824,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -860,7 +860,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -904,7 +904,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -940,7 +940,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -984,7 +984,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -1020,7 +1020,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -1064,7 +1064,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -1100,7 +1100,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -1144,7 +1144,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -1180,7 +1180,7 @@
                     <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/ic_human"
+                            app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
                             android:layout_gravity="center"/>
@@ -1230,7 +1230,7 @@
 
         <ImageView android:layout_width="match_parent"
                    android:layout_height="230dp"
-                   android:src="@drawable/goverment_sanpablo"
+                   app:srcCompat="@drawable/goverment_sanpablo"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerCrop"
@@ -1650,7 +1650,7 @@
                 <ImageView
                         android:layout_width="100dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/phlogo"
+                        app:srcCompat="@drawable/phlogo"
                         />
 
 
@@ -1701,7 +1701,7 @@
                 <ImageView
                         android:layout_width="100dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/transpa"
+                        app:srcCompat="@drawable/transpa"
                         />
             </LinearLayout>
         </LinearLayout>
@@ -1733,7 +1733,7 @@
                 <ImageView
                         android:layout_width="80dp"
                         android:layout_height="21dp"
-                        android:src="@drawable/pylon"
+                        app:srcCompat="@drawable/pylon"
                         android:layout_marginRight="13dp"/>
             </LinearLayout>
             <LinearLayout

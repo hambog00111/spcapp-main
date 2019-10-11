@@ -1,24 +1,18 @@
 package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO
 
-import android.app.AlertDialog
-import android.app.DownloadManager
-import android.content.DialogInterface
-import android.net.Uri
-import android.os.AsyncTask
+import android.support.v7.app.AlertDialog
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import kotlinx.android.synthetic.main.dialog_bplo.view.*
 import kotlinx.android.synthetic.main.dialoglogout.view.*
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.Amendments.FragmentAmendments1
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentLoginBPLO
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
 
 
 class FragmentBPLOProfile : Fragment() {
