@@ -412,7 +412,7 @@
                           android:textSize="15sp"
                           android:inputType="textWebPassword"
                           android:textColorHint="@color/lightgray"
-                          android:text="asdcww"/>
+                          android:hint="Password"/>
                 <!--<TextView-->
                         <!--android:layout_width="match_parent"-->
                         <!--android:layout_height="wrap_content"-->
@@ -452,7 +452,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="ip"
-                            android:text="e081151e.ngrok.io"
+                            android:text="192.168.100.207:8080"
                          android:inputType="textPassword"
 
                     />
@@ -492,7 +492,7 @@
                         android:textColor="@color/white"
                         android:layout_margin="10dp"
                         android:text="clear all"
-                        android:id="@+id/btn_assess_clearall"
+                        android:id="@+id/btn_clearall"
                         android:textSize="13sp"/>
 
 

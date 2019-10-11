@@ -1,4 +1,5 @@
 package layout.ph.sanpablocitygov.iSanPablo.cityhotlines
+
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -77,9 +78,9 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
             //code later
             if (modellist[postition].ivcityhotline == "San Pablo City Government") {
                 //start NewActivity with title for actionbar and text for textview
-                val  intent = Intent(Intent.ACTION_DIAL)
+           val  intent = Intent(Intent.ACTION_DIAL)
                 intent.data= Uri.parse("tel:$phoneNumber")
-                mContext.startActivity(intent)
+                    mContext.startActivity(intent)
             }
             if (modellist[postition].ivcityhotline == "San Pablo City Police") {
                 //start NewActivity with title for actionbar and text for textview
@@ -165,4 +166,4 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 //
 //
 //
-//}}
+//}

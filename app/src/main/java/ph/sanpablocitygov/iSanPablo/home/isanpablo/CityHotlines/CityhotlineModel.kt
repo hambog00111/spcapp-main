@@ -14,3 +14,5 @@ class CityhotlineModel( ivcityhotline : String ,  ivcityhotlinephone : String)
         this.ivcityhotlinephone = ivcityhotlinephone
     }
 }
+
+

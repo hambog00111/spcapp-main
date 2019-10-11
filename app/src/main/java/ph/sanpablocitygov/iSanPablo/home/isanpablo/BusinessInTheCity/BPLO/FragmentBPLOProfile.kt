@@ -34,6 +34,7 @@ class FragmentBPLOProfile : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentBPLOPayNow() , null)
+                .addToBackStack(null)
                 .commit()
         }
 

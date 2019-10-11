@@ -29,11 +29,13 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.dialog_disclosure.view.*
 
 import ph.sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
+
 import ph.sanpablocitygov.iSanPablo.home.FragmentHome
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 
 
 import ph.sanpablocitygov.iSanPablo.links.*
+
 import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
 
 
@@ -109,13 +111,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 //    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        return when (item.itemId) {
-//            R.id.action_settings -> true
-//            else -> super.onOptionsItemSelected(item)
-//        }
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+////        return when (item.itemId) {
+//////            R.id.action_settings -> true
+//////            else -> super.onOptionsItemSelected(item)
+////        }
 //    }
 ////
 //
