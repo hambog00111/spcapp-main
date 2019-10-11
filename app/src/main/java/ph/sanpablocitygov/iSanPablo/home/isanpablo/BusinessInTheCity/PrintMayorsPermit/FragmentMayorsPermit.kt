@@ -1,20 +1,17 @@
 package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit
 
-import android.app.AlertDialog
-import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import kotlinx.android.synthetic.main.fragment_bc_print_mayors_permit.*
 
 import ph.sanpablocitygov.iSanPablo.R
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 
-class FragmentMayorsPermit :Fragment() {
+class FragmentMayorsPermit : Fragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

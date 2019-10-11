@@ -15,7 +15,7 @@
 
         <ImageView android:layout_width="match_parent"
                    android:layout_height="300dp"
-                   android:src="@drawable/cathedral"
+                   app:srcCompat="@drawable/cathedral"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerCrop"
@@ -249,7 +249,7 @@
 
     <ImageView android:layout_width="match_parent"
                android:layout_height="300dp"
-               android:src="@drawable/lights"
+               app:srcCompat="@drawable/lights"
                android:fitsSystemWindows="true"
                android:layout_gravity="center"
                android:scaleType="centerCrop"
@@ -321,7 +321,7 @@
 
         <ImageView android:layout_width="match_parent"
                    android:layout_height="300dp"
-                   android:src="@drawable/lake5"
+                   app:srcCompat="@drawable/lake5"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerCrop"
@@ -650,7 +650,7 @@
                 <ImageView
                         android:layout_width="90dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/pylon"
+                        app:srcCompat="@drawable/pylon"
                         android:layout_marginRight="13dp"/>
             </LinearLayout>
             <LinearLayout

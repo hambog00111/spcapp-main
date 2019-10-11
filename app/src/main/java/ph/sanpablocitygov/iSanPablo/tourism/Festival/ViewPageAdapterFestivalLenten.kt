@@ -3,10 +3,12 @@ package ph.sanpablocitygov.iSanPablo.tourism.Festival
 import android.content.Context
 import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+
 import ph.sanpablocitygov.iSanPablo.R
 
 class ViewPageAdapterFestivalLenten(private val context: Context) : PagerAdapter(){

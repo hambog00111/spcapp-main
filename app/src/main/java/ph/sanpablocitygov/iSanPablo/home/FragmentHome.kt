@@ -4,16 +4,15 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.ViewPager
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.view.animation.AnimationUtils
+import android.widget.*
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.links.*
 
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.ViewFlipper
 import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentBPLOAccountReg
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
@@ -48,6 +47,9 @@ class FragmentHome : Fragment() {
         viewflipperEvents =view.findViewById<View>(R.id.v_flipperevent) as ViewFlipper
 
 //
+//        val linear = view.findViewById<LinearLayout>(R.id.linear_buss)
+//        linear.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+
         for(i in 0 until image.size) {
             flip_imagehome(image[i])
         }

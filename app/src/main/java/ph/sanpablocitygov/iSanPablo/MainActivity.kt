@@ -1,11 +1,10 @@
 package ph.sanpablocitygov.iSanPablo
 
 import android.annotation.SuppressLint
-import android.app.AlertDialog
+import android.support.v7.app.AlertDialog
 import android.app.DownloadManager
 import android.app.Service
 import android.content.DialogInterface
-import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.net.Uri
@@ -24,10 +23,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 
+
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.dialog_disclosure.view.*
-import ph.sanpablocitygov.iSanPablo.OurBarangay.FragmentBarangay
 
 import ph.sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
 import ph.sanpablocitygov.iSanPablo.cityhotlines.fragmenttest
@@ -40,7 +39,6 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginb
 import ph.sanpablocitygov.iSanPablo.links.*
 import ph.sanpablocitygov.iSanPablo.search.FragmentSearch
 import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
-import java.time.Duration
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

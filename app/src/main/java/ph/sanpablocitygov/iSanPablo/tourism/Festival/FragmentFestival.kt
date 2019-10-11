@@ -1,16 +1,16 @@
 package ph.sanpablocitygov.iSanPablo.tourism.Festival
-
-
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.ViewPager
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import ph.sanpablocitygov.iSanPablo.R
 
 
-class FragmentFestival : Fragment (){
+class FragmentFestival : Fragment(){
     internal lateinit var viewPagerFestival: ViewPager
     internal lateinit var  viewPagerFestivalTilapia: ViewPager
     internal lateinit var viewPagerFestivalLenten: ViewPager

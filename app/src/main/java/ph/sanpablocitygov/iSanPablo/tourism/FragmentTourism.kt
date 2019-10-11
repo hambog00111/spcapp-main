@@ -1,17 +1,18 @@
 package ph.sanpablocitygov.iSanPablo.tourism
 
 
-import android.app.AlertDialog
+import android.support.v7.app.AlertDialog
 import android.app.DownloadManager
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import kotlinx.android.synthetic.main.dialog_business_doing_business.view.*
+
 import kotlinx.android.synthetic.main.dialog_tourism_masterplan.view.*
 import ph.sanpablocitygov.iSanPablo.FragmentGoogleMap
 import ph.sanpablocitygov.iSanPablo.R
@@ -19,7 +20,7 @@ import ph.sanpablocitygov.iSanPablo.tourism.Festival.FragmentFestival
 import ph.sanpablocitygov.iSanPablo.tourism.WheretoStayEat.FragmentWheretoStayEat
 
 
-class FragmentTourism : Fragment (){
+class FragmentTourism : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 

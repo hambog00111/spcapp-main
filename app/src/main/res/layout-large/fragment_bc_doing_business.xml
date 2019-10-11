@@ -46,7 +46,7 @@
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:layout_margin="5dp"
-                        android:src="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
         <TextView

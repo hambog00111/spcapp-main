@@ -45,7 +45,7 @@
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:layout_margin="5dp"
-                        android:src="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
 
@@ -70,7 +70,7 @@
                 android:layout_margin="10dp"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerInside"
-                android:src="@drawable/tourism_sampaloc" />
+                app:srcCompat="@drawable/tourism_sampaloc" />
 
         <android.support.v7.widget.CardView
                 android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
 
         <ImageView android:layout_width="match_parent"
                 android:layout_height="350dp"
-                   android:src="@drawable/tourism_calibato"
+                   app:srcCompat="@drawable/tourism_calibato"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerInside"
@@ -225,7 +225,7 @@
 
         <ImageView android:layout_width="match_parent"
                 android:layout_height="350dp"
-                   android:src="@drawable/tourism_bunot"
+                   app:srcCompat="@drawable/tourism_bunot"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerInside"
@@ -313,7 +313,7 @@
                 android:layout_margin="10dp"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerInside"
-                android:src="@drawable/tourism_mohicap" />
+                app:srcCompat="@drawable/tourism_mohicap" />
 
         <android.support.v7.widget.CardView
                 android:layout_height="wrap_content"
@@ -393,7 +393,7 @@
                 android:layout_margin="10dp"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerInside"
-                android:src="@drawable/tourism_palakpakin" />
+                app:srcCompat="@drawable/tourism_palakpakin" />
 
         <android.support.v7.widget.CardView
                 android:layout_height="wrap_content"
@@ -467,7 +467,7 @@
 
                 <ImageView android:layout_width="match_parent"
                         android:layout_height="350dp"
-                           android:src="@drawable/tourism_pandin"
+                           app:srcCompat="@drawable/tourism_pandin"
                            android:fitsSystemWindows="true"
                            android:layout_gravity="center"
                            android:scaleType="centerInside"
@@ -548,7 +548,7 @@
 
                 <ImageView android:layout_width="match_parent"
                         android:layout_height="350dp"
-                           android:src="@drawable/tourism_yambo"
+                           app:srcCompat="@drawable/tourism_yambo"
                            android:fitsSystemWindows="true"
                            android:layout_gravity="center"
                            android:scaleType="centerInside"
@@ -710,7 +710,7 @@
                 <ImageView
                         android:layout_width="90dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/pylon"
+                        app:srcCompat="@drawable/pylon"
                         android:layout_marginRight="13dp"/>
             </LinearLayout>
             <LinearLayout

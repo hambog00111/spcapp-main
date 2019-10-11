@@ -44,7 +44,7 @@
                 android:layout_width="65dp"
                 android:layout_height="65dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/logo_home_mysanpablo" />
+                app:srcCompat="@drawable/logo_home_mysanpablo" />
 
     </LinearLayout>
 
@@ -97,7 +97,7 @@
                     <ImageView
                             android:layout_width="55dp"
                             android:layout_height="55dp"
-                            android:src="@drawable/nav_account_circle" />
+                            app:srcCompat="@drawable/nav_account_circle" />
 
                     <EditText
                             android:id="@+id/txt_bplo_username_login"
@@ -123,7 +123,7 @@
                     <ImageView
                             android:layout_width="55dp"
                             android:layout_height="55dp"
-                            android:src="@drawable/password" />
+                            app:srcCompat="@drawable/password" />
 
                     <EditText
                             android:id="@+id/txt_bplo_password_login"
@@ -155,7 +155,7 @@
                     <ImageView
                             android:layout_width="55dp"
                             android:layout_height="55dp"
-                            android:src="@drawable/ic_ip" />
+                            app:srcCompat="@drawable/ic_ip" />
                     <android.support.design.widget.TextInputLayout
                             android:id="@+id/txt_assess_ip"
                             android:layout_width="320dp"

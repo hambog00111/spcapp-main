@@ -47,7 +47,7 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_margin="5dp"
-                        android:src="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo" />
 
             </LinearLayout>
 
@@ -64,8 +64,8 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
         <ImageView android:layout_width="match_parent"
-                   android:layout_height="200dp"
-                   android:src="@drawable/tourism_sampaloc"
+                   android:layout_height="250dp"
+                   app:srcCompat="@drawable/tourism_sampaloc"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerInside"
@@ -117,8 +117,8 @@
 
 
         <ImageView android:layout_width="match_parent"
-                   android:layout_height="200dp"
-                   android:src="@drawable/tourism_calibato"
+                   android:layout_height="250dp"
+                   app:srcCompat="@drawable/tourism_calibato"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerInside"
@@ -169,8 +169,8 @@
 
 
         <ImageView android:layout_width="match_parent"
-                   android:layout_height="200dp"
-                   android:src="@drawable/tourism_bunot"
+                   android:layout_height="250dp"
+                   app:srcCompat="@drawable/tourism_bunot"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerInside"
@@ -223,8 +223,8 @@
         </android.support.v7.widget.CardView>
 
         <ImageView android:layout_width="match_parent"
-                   android:layout_height="200dp"
-                   android:src="@drawable/tourism_mohicap"
+                   android:layout_height="250dp"
+                   app:srcCompat="@drawable/tourism_mohicap"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerInside"
@@ -275,8 +275,8 @@
 
 
             <ImageView android:layout_width="match_parent"
-                       android:layout_height="200dp"
-                       android:src="@drawable/tourism_palakpakin"
+                       android:layout_height="250dp"
+                       app:srcCompat="@drawable/tourism_palakpakin"
                        android:fitsSystemWindows="true"
                        android:layout_gravity="center"
                        android:scaleType="centerInside"
@@ -330,8 +330,8 @@
 
 
                 <ImageView android:layout_width="match_parent"
-                           android:layout_height="200dp"
-                           android:src="@drawable/tourism_pandin"
+                           android:layout_height="250dp"
+                           app:srcCompat="@drawable/tourism_pandin"
                            android:fitsSystemWindows="true"
                            android:layout_gravity="center"
                            android:scaleType="centerInside"
@@ -383,8 +383,8 @@
 
 
                 <ImageView android:layout_width="match_parent"
-                           android:layout_height="200dp"
-                           android:src="@drawable/tourism_yambo"
+                           android:layout_height="250dp"
+                           app:srcCompat="@drawable/tourism_yambo"
                            android:fitsSystemWindows="true"
                            android:layout_gravity="center"
                            android:scaleType="centerInside"
@@ -453,14 +453,14 @@
                 <ImageView
                         android:layout_width="100dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/phlogo"
+                        app:srcCompat="@drawable/phlogo"
                         />
 
 
             </LinearLayout>
 
             <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="250dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
@@ -504,7 +504,7 @@
                 <ImageView
                         android:layout_width="100dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/transpa"
+                        app:srcCompat="@drawable/transpa"
                         />
             </LinearLayout>
         </LinearLayout>
@@ -536,7 +536,7 @@
                 <ImageView
                         android:layout_width="80dp"
                         android:layout_height="21dp"
-                        android:src="@drawable/pylon"
+                        app:srcCompat="@drawable/pylon"
                         android:layout_marginRight="13dp"/>
             </LinearLayout>
             <LinearLayout

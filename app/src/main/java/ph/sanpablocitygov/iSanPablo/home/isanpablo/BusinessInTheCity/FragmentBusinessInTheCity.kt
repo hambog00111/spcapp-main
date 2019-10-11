@@ -1,13 +1,14 @@
 package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity
 
 import android.annotation.SuppressLint
-import android.app.AlertDialog
+import android.support.v7.app.AlertDialog
 import android.app.DownloadManager
 import android.content.DialogInterface
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat.getSystemService
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +17,6 @@ import android.widget.Button
 import kotlinx.android.synthetic.main.dialog_bplo.view.*
 import kotlinx.android.synthetic.main.dialog_bplo.view.btn_download_bplo
 import kotlinx.android.synthetic.main.dialog_bplo.view.btn_online_bplo
-import kotlinx.android.synthetic.main.dialog_business_doing_business.view.*
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_business_investment
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_invest_cancel
 import ph.sanpablocitygov.iSanPablo.R

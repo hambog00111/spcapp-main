@@ -10,6 +10,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.ProgressBar
+
 import ph.sanpablocitygov.iSanPablo.R
 
 class FragmentCourtAppeals : Fragment()  {

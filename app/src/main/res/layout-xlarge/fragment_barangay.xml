@@ -32,7 +32,7 @@
                 <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/spc_logo2"
+                        app:srcCompat="@drawable/spc_logo2"
                         android:id="@+id/imageView2"
                         android:layout_marginStart="4dp"
                         android:layout_marginTop="4dp"/>
@@ -70,7 +70,7 @@
 
         <ImageView android:layout_width="match_parent"
                    android:layout_height="420dp"
-                   android:src="@drawable/lake5"
+                   app:srcCompat="@drawable/lake5"
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="centerCrop"
@@ -196,7 +196,7 @@
                 <ImageView
                         android:layout_width="100dp"
                         android:layout_height="35dp"
-                        android:src="@drawable/pylon"
+                        app:srcCompat="@drawable/pylon"
                         android:layout_marginRight="13dp"/>
             </LinearLayout>
             <LinearLayout
