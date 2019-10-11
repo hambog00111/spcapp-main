@@ -22,9 +22,15 @@ import ph.sanpablocitygov.iSanPablo.search.ListViewAdapter
 import ph.sanpablocitygov.iSanPablo.search.Model
 import java.util.ArrayList
 
+
+
+
+
 class FragmentCityHotline : Fragment() {
 
-     lateinit var listView: ListView
+    internal lateinit var listView: ListView
+
+
     internal lateinit var adapter: CityhotlineAdapter
     internal lateinit var ivcityhotline: Array<String>
     internal lateinit var ivcityhotlinephone: Array<String>
@@ -33,6 +39,7 @@ class FragmentCityHotline : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_isanpablo_hotline,null)
+
 
         ivcityhotline = arrayOf("San Pablo City Government", "San Pablo City Police",
             "Red Cross San Pablo", "San Pablo City Emergency Hospital",

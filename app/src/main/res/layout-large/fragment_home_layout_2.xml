@@ -413,13 +413,9 @@
 
 
 
-        <GridLayout android:layout_width="match_parent"
+        <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:columnCount="2"
-                    android:rowCount="3"
-                    android:layout_gravity="center"
-                    android:alignmentMode="alignMargins"
-                    android:columnOrderPreserved="false">
+                android:orientation="horizontal">
 
 
             <android.support.v7.widget.CardView
@@ -430,7 +426,7 @@
                     app:cardElevation="6dp"
                     android:padding="5dp"
                     app:cardCornerRadius="12dp"
-                    android:layout_margin="15dp">
+                    android:layout_margin="10dp">
                 <LinearLayout android:layout_width="match_parent"
                               android:orientation="vertical"
                               android:layout_height="wrap_content">
@@ -482,13 +478,13 @@
 
             <android.support.v7.widget.CardView
                     android:layout_height="wrap_content"
-                    android:layout_width="200dp"
+                    android:layout_width="match_parent"
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     app:cardElevation="6dp"
                     android:padding="10dp"
                     app:cardCornerRadius="12dp"
-                    android:layout_margin="15dp">
+                    android:layout_margin="10dp">
 
                 <LinearLayout android:layout_width="match_parent"
                               android:layout_height="wrap_content"
@@ -505,13 +501,13 @@
                             android:text="FEATURED LINKS"
                             android:textAlignment="center"
                             android:textColor="@color/white"
-
                            android:textSize="25sp"
                             android:textStyle="bold" />
 
                 <LinearLayout android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:orientation="vertical"
+                                android:padding="5dp"
                               android:layout_gravity="center">
 
                     <LinearLayout android:layout_width="wrap_content"
@@ -599,7 +595,7 @@
 
 
             </android.support.v7.widget.CardView>
-        </GridLayout>
+        </LinearLayout>
 
 
 

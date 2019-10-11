@@ -5,24 +5,40 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/btn_next"
+                    android:layout_height="wrap_content"
+                    android:layout_width="48dp"
+                    android:text="@string/back"/>
 
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:background="@drawable/text_borderweb"
-                android:id="@+id/btn_next"
-                android:text="back" tools:ignore="MissingConstraints" android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent" tools:layout_editor_absoluteY="0dp"
-                app:layout_constraintHorizontal_bias="1.0"/>
+            <Button android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_forward"
+                    android:text="@string/forward"
+                    android:layout_toEndOf="@+id/btn_next"/>
 
-    </android.support.constraint.ConstraintLayout>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/btn_forward"
+                    android:layout_toStartOf="@+id/btn_go"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:focusable="false"
+                    android:id="@+id/web_url"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
     <RelativeLayout
             android:layout_width="match_parent"

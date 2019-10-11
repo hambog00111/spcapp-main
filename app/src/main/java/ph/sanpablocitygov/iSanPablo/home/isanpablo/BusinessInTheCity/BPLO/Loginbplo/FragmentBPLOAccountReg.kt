@@ -34,6 +34,7 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
     private var txt_assess_email: EditText? = null
     private var txt_assess_username: EditText? = null
     private var txt_assess_password: EditText? = null
+    private var txt_confirm_password: EditText? = null
     private var btn_asses_register: Button? = null
     private var btn_clearall: Button? = null
     private var txt_assess_ip: TextInputLayout? = null
@@ -52,6 +53,7 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
         txt_assess_username = view.findViewById<View>(R.id.txt_assess_username) as EditText
 
         txt_assess_password = view.findViewById<View>(R.id.txt_assess_password) as EditText
+        txt_confirm_password = view.findViewById<View>(R.id.txt_confirm_password) as EditText
         btn_asses_register = view.findViewById<View>(R.id.btn_asses_register) as Button
         btn_clearall = view.findViewById<View>(R.id.btn_clearall) as Button
        txt_assess_ip = view.findViewById<View>(R.id.txt_assess_ip) as TextInputLayout
@@ -65,10 +67,9 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
         txt_assess_email!!.text.clear()
         txt_assess_username!!.text.clear()
         txt_assess_password!!.text.clear()
+       txt_confirm_password!!.text.clear()
         txt_assess_last!!.text.clear()
         }
-
-
 
         btn_asses_register!!.setOnClickListener(this)
 
@@ -76,8 +77,6 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
 //
 //        btn_asses_register.setOnClickListener {
 //            addArtist() }
-
-
 
 
 
@@ -96,6 +95,7 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
         val tnum = txt_assess_tel_num!!.text.toString()
         val ed = txt_assess_email!!.text.toString()
         val uname = txt_assess_username!!.text.toString()
+        val conpass = txt_confirm_password!!.text.toString()
         val pass = txt_assess_password!!.text.toString()
         val UPDATE_URL =("http://"+txt_assess_ip?.getEditText()?.getText()+"/api/spc_api/").toString()
 
@@ -168,8 +168,19 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
             txt_assess_password?.requestFocus()
             return
         }
+        if(TextUtils.isEmpty(conpass)){
+            txt_confirm_password?.error = "Please enter your mobile confirmation password "
+            txt_confirm_password?.requestFocus()
+            return
 
+        }
+        if (pass != conpass)
+        {
+            txt_confirm_password?.error = "password do not match "
+            txt_confirm_password?.requestFocus()
+            return
 
+        }
 
 
    // val UPDATE_URL = "http://192.168.100.207:8080/api/spc_api/"
@@ -183,8 +194,6 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
             UPDATE_URL,
             Listener {
                 Toast.makeText(context, "register success", Toast.LENGTH_LONG).show()
-
-
 
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -209,16 +218,9 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
                 params.put("user[username]", uname)
                 params.put("user[password]", pass)
 
-
-
                 return params
 
-
-
-
-
             }
-
 
 
         }

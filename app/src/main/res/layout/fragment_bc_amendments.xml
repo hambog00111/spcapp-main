@@ -1,0 +1,1440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+        <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/circle_back"
+                android:forceHasOverlappingRendering="true"
+                android:gravity="center"
+                android:visibility="visible"
+                android:weightSum="1"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                tools:ignore="UnusedAttribute">
+
+            <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/logo_home_mysanpablo" />
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="center"
+            android:text="Amendments"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+
+    <android.support.v7.widget.CardView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@drawable/text_border"
+            android:gravity="center"
+            android:elevation="6dp"
+            android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                android:background="@drawable/ic_search1"
+                android:layout_margin="5dp"
+                android:id="@+id/btn_amendments_search"/>
+
+            <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search"
+                    android:textColor="@color/lightgray"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Entries"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:paddingStart="10dp"/>
+
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:scrollbars="vertical"
+                android:scrollbarSize="5dp"
+                android:scrollbarStyle="insideInset"
+                android:nestedScrollingEnabled="true" />
+
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@drawable/text_border"
+            android:gravity="center"
+            android:elevation="6dp"
+            android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+      <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="15sp"
+              android:textAlignment="center"
+              android:textColor="@color/colorPrimary"
+              android:padding="5dp"
+              android:text="BASIC INFORMATION"/>
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:textColor="@color/darkgray"
+                android:textSize="12sp"
+                android:layout_marginStart="7dp"/>
+        <EditText
+                android:id="@+id/et_amendments_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp"
+                android:inputType="textPersonName"
+                android:layout_margin="3dp"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textColor="@color/darkgray"
+                android:textSize="12sp"
+                android:layout_marginStart="7dp"/>
+        <EditText
+                android:id="@+id/et_amendments_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp"
+                android:inputType="textPersonName"
+                android:layout_margin="3dp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Middle Name"
+                android:textColor="@color/darkgray"
+                android:textSize="12sp"
+                android:layout_marginStart="7dp"/>
+
+        <EditText
+                android:id="@+id/et_amendments_middle_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp"
+                android:inputType="textPersonName"
+                android:layout_margin="3dp"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/darkgray"
+                android:text="Type of Business"/>
+
+            <ViewFlipper
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Business Name"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nature of Business"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <EditText
+                    android:id="@+id/et_amendments_business_name"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_margin="3dp"
+                    android:textColor="@color/darkgray"
+                   />
+            <EditText
+                    android:id="@+id/et_amendments_nature_of_business"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_margin="3dp"
+                    android:textColor="@color/darkgray"
+                   />
+        </LinearLayout>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+                android:layout_marginBottom="3dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="3dp"
+            android:text="No. of Employees Residing within: "
+            android:textSize="13sp"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:id="@+id/et_amendments_employee_lgu"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:textColor="@color/darkgray"
+
+                    android:inputType="number"/>
+
+            <EditText
+                    android:id="@+id/et_amendments_employee_male"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:inputType="number"/>
+            <EditText
+                    android:id="@+id/et_amendments_employee_Female"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:inputType="number"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="LGU"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textAlignment="center"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@drawable/text_border"
+            android:gravity="center"
+            android:elevation="6dp"
+            android:orientation="vertical">
+
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:padding="5dp"
+                android:text="BUSINESS INFORMATION"/>
+
+        <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Business Address"
+                android:textColor="@color/darkgray"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="3dp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp"
+                android:id="@+id/et_amendments_business_info_address"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="House No./Bldg. No."
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Building Name"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/et_amendments_business_house_number"/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/et_amendments_business_building_name"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Unit No."
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Street"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/et_amendments_business_unit_number"/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/et_amendments_business_street"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Barangay"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Subdivision"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/et_amendments_business_barangay"/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/et_amendments_business_Subdivision"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="City/ Municipality"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Province"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:text="San Pablo City"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/et_amendments_business_city"/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:text="Laguna"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/et_amendments_business_province"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Postal Code"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Email Add."
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_business_postal"
+                    android:textColor="@color/darkgray"/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:id="@+id/et_amendments_business_email" />
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Telephone"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_business_telephone"
+                    android:textColor="@color/darkgray" />
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_business_mobile"
+                    android:textColor="@color/darkgray" />
+
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@drawable/text_border"
+            android:gravity="center"
+            android:elevation="6dp"
+            android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:padding="5dp"
+                android:text="OWNER'S INFORMATION"/>
+
+        <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:textColor="@color/darkgray"
+                android:textSize="12sp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="3dp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+                android:id="@+id/et_amendments_owner_last_name"
+                android:textSize="13sp"
+                android:inputType="textPersonName"
+                android:layout_margin="3dp"/>
+        <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textColor="@color/darkgray"
+                android:textSize="12sp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="3dp"/>
+        <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp"
+                android:id="@+id/et_amendments_owner_first_name"
+                android:inputType="textPersonName"
+                android:layout_margin="3dp"/>
+        <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Middle Name"
+                android:textColor="@color/darkgray"
+                android:textSize="12sp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="3dp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp"
+                android:id="@+id/et_amendments_owner_middle_name"
+                android:inputType="textPersonName"
+                android:layout_margin="3dp"/>
+        <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Owner's Address"
+                android:textColor="@color/darkgray"
+                android:textSize="12sp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="3dp"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp"
+                android:id="@+id/et_amendments_owner_address"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="House No./Bldg. No."
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Building Name"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_house_number"
+                    android:textColor="@color/darkgray" />
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_building_name"
+                    android:textColor="@color/darkgray"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Unit No."
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Street"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_unit"
+                    android:textColor="@color/darkgray" />
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_street"
+                    android:textColor="@color/darkgray" />
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Barangay"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Subdivision"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_barangay"
+                    android:textColor="@color/darkgray"/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_subdivision"
+                    android:textColor="@color/darkgray" />
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="City/Municipality"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Province"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_city"
+                    android:textColor="@color/darkgray" />
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_province"
+                    android:textColor="@color/darkgray" />
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Postal Code"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_postal_code"
+                    android:textColor="@color/darkgray" />
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_email"
+                    android:textColor="@color/darkgray"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Telephone"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+            <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Number"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="3dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_telephone"
+                    android:textColor="@color/darkgray" />
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:id="@+id/et_amendments_owner_mobile"
+                    android:textColor="@color/darkgray"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@drawable/text_border"
+            android:gravity="center"
+            android:elevation="6dp"
+            android:orientation="vertical">
+
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:padding="5dp"
+                android:text="LESSOR'S INFORMATION"/>
+
+        <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Telephone"
+                android:textColor="@color/darkgray"
+                android:textSize="12sp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="3dp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+                android:hint="Last Name"
+                android:textSize="13sp"
+                android:id="@+id/et_amendments_lessors_last"
+                android:inputType="textPersonName"
+                android:layout_margin="3dp"/>
+        <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+                android:hint="First Name"
+                android:textSize="13sp"
+                android:id="@+id/et_amendments_lessors_first"
+                android:inputType="textPersonName"
+                android:layout_margin="3dp"/>
+        <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+                android:hint="Middle Name"
+                android:id="@+id/et_amendments_lessors_middle"
+                android:textSize="13sp"
+                android:inputType="textPersonName"
+                android:layout_margin="3dp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp"
+
+                android:hint="Owner's Address"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Monthly Rental"/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Tel. Num."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Mobile Num."/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="sample@email.com"/>
+
+        </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@drawable/text_border"
+            android:gravity="center"
+            android:elevation="6dp"
+            android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:padding="5dp"
+                android:text="BUSINESS ACTIVITY"/>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Line of Business"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Code"/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Sub Category"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Unit's No."/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Essentials"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Non Essentials"/>
+
+            <EditText
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/darkgray"
+                    android:hint="Capitalization"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+        <TextView android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorPrimary"
+
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:text="Back to User's Profile"
+                android:gravity="center"
+
+                android:layout_gravity="right"
+                android:id="@+id/txt_amen_back"/>
+
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/phlogo"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:text="@string/Reps"
+                        android:textSize="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Rep"
+                        android:textSize="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_marginBottom="5dp"/>
+
+                <TextView
+                        android:text="© 2019 San Pablo City Goverment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:id="@+id/textView8"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/transpa"
+                        />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                        android:text="Developed by:"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        android:layout_marginEnd="3dp"
+                        />
+                <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="21dp"
+                        android:src="@drawable/pylon"
+                        android:layout_marginRight="13dp"/>
+            </LinearLayout>
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                        android:text="Developer: "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:text="Chris Velasco"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center" />
+                    <TextView
+                            android:text="Joseph Bonilla"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

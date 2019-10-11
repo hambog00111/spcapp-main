@@ -24,6 +24,7 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.Amendments.
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentLoginBPLO
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.FragmentBusinessTaxAssessment
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxPayment.FragmentBusinessTaxPayment
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.DoingBusiness.FragmentDoingBusiness
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
 
 @Suppress("PLUGIN_WARNING")
@@ -161,25 +162,11 @@ class FragmentBusinessInTheCity : Fragment() {
 
         val btndb = view.findViewById<Button>(R.id.btn_business_doing_business)
         btndb.setOnClickListener {
-            val dbView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_business_doing_business, null)
-
-            val dbBuilder = AlertDialog.Builder(requireContext())
-                .setView(dbView)
-
-            val dbDialog = dbBuilder.show()
-
-            dbView.btn_doing_business_confirm.setOnClickListener {
-                dbDialog.dismiss()
-                val downloadManager: DownloadManager = getSystemService(requireContext(),
-                    DownloadManager::class.java) as DownloadManager
-                val uri = Uri.parse("https://cdn.fbsbx.com/v/t59.2708-21/64329806_2133055023490219_6338292588298108928_n.docx/citizen-charter-final-latest-edit.docx?_nc_cat=100&_nc_oc=AQmUfUeDrDFJ5oErypQlMYMn8AzefS_jOlOGmyaa73hyxcXmHrzIevPEVjdvcr7BcQNLoPUk8Dw29B3DDjYH8qpY&_nc_ht=cdn.fbsbx.com&oh=c29736b01c0e5335511e027dace205d9&oe=5D4B2F5F&dl=1&fbclid=IwAR2RUXd0-w4ylrIZ3xUw9ywm3nyTwNOadbCem6ldUSTmI7y_16ElAoa6ghI")
-                val request = DownloadManager.Request(uri)
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                downloadManager.enqueue(request)  }
-
-            dbView.btn_doing_business_cancel.setOnClickListener {
-                dbDialog.dismiss()
-            }
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentDoingBusiness() , null)
+                .addToBackStack(null)
+                .commit()
         }
 
 

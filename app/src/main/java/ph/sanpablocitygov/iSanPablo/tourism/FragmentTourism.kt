@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import kotlinx.android.synthetic.main.dialog_business_doing_business.view.*
 import kotlinx.android.synthetic.main.dialog_tourism_masterplan.view.*
+import ph.sanpablocitygov.iSanPablo.FragmentGoogleMap
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.tourism.Festival.FragmentFestival
 import ph.sanpablocitygov.iSanPablo.tourism.WheretoStayEat.FragmentWheretoStayEat
@@ -28,6 +29,14 @@ class FragmentTourism : Fragment (){
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentLandmarks() , null)
+                .addToBackStack(null)
+                .commit()
+        }
+        val howto = view.findViewById<Button>(R.id.btn_tourism_how_tgt)
+        howto?.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentGoogleMap() , null)
                 .addToBackStack(null)
                 .commit()
         }

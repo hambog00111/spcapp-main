@@ -16,6 +16,60 @@
         Government of San Pablo as provided for in the Data Privacy Act of 2012. \n
     </string>
 
+
+
+    <string name="new_business_permit">
+
+  1. Filled-up Unified Business Permit Application Form      \n
+        2. One (1) Copy of: \n
+	     \t DTI Business Name Registration (if Sole Proprietor)    \n
+        \t SEC Registration and Articles of Incorporation 	   \n
+	   \t (if Corporation or Partnership)   \n
+	   \t  CDA Registration and Articles of Cooperation (if Cooperative)    \n
+3. One (1) Photo Copy Contract of Lease and Xerox copy of Lessor Mayor’s Permit (if Place of Business is rented)    \n
+	 4. One (1) Photo Copy of Business Capitalization   \n
+5. One (1) Original Copy of Barangay Business Clearance (Place of Business)   \n
+	6. One (1) Duplicate and/or Photo Copy of Market Clearance (if Market Stall Holder)   \n
+7. One (1) Photo Copy of Occupancy Permit (for Newly Constructed Building)    \n
+	8. One (1) Photo Copy of SSS, PHILHEALTH, PAG-I.B.I.G. Certificate of Coverage   \n
+
+
+    </string>
+
+
+    <string name="renewal_business">
+   \t\t1. Filled-up Unified Business Permit Application Form \n
+	\t\t2. One (1) Original Copy of Barangay Business Clearance (Place of Business)        \n
+	\t\t3. One (1) Photo Copy of Income Tax Return of the previous Year/Statement of Gross Sales/Receipt  \n
+ 	\t\t4. Original Copy of Previous year’s Mayor’s Permit  \n
+	\t\t5. One (1) Duplicate and/or Photo Copy of Market Clearance   \n
+                   \t\t(if Market Stall Holder)  \n
+    \t\t6. One (1) Photo Copy of SSS, PHILHEALTH, PAG-I.B.I.G. Clearance  \n
+
+    </string>
+
+
+
+    <string name="business_tricycle">
+
+  \t\t1. Accomplished and duly notarized Tricycle Franchise Application/Petition Form \n
+    \t\t2. Duly Approved Unified Clearance Form \n
+    \t\t3. Presentation of Original Community Tax Certification (CTC) \n
+    \t\t4. Road Worthy Certificate \n
+    \t\t5. City Solid Waste Management Certificate \n
+    \t\t6. Original Copy of Police Clearance of Driver \n \n
+
+    \t\tPhoto Copy of: \n
+    \t\t7. One (1) LTO Certificate of Registration (CR) and OfficialReceipt (OR) and/or proof of ownership of tricycle \n
+    \t\t8. One (1) Photo Copy of Insurance Policy /Certificate of Coverage \n
+    \t\t9. One (1) Photo Copy of Professional Driver’s License with Restriction Code 1 (Tricycle Driver)\n
+    \t\t10. One (1) Photo Copy of Voter’s Certification/ID \n \n
+    \t\tOther Requirements: \n
+    \t\t11. One (1) Photo Copy of Certificate of Coverage/Clearance from SSS, Philhealth and PAG-I.B.I.G. \n
+    \t\t12.  Original Copy Certificate of Completion/Attendance of seminar from PNP/CTMO (for new applicants and transfer of ownership only) \n
+
+    </string>
+
     <string name="hymn">
         Titik ni : Celso Al Carunungan \n
         Tugtugin ni : Antonino Buenaventura \n

@@ -69,6 +69,14 @@ class FragmentGovermentOnlineServices : Fragment(){
                 .addToBackStack(null)
                 .commit()
         }
+        val btnnbi = view.findViewById<Button>(R.id.btn_govser_nbi)
+        btnnbi?.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentNBI() , null)
+                .addToBackStack(null)
+                .commit()
+        }
         return view
     }
 }

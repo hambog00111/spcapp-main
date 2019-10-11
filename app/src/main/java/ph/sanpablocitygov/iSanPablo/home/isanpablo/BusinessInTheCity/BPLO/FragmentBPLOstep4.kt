@@ -80,6 +80,14 @@ class FragmentBPLOstep4 : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
+        val btnpass = view.findViewById<Button>(R.id.txt_bplo_submit)
+        btnpass.setOnClickListener {
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentBPLOProfile() , null)
+                .addToBackStack(null)
+                .commit()
+        }
         return view
     }
 
