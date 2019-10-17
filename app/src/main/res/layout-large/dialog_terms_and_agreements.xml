@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:text="Terms and Agreements"
+            android:textColor="@color/white"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+
+            android:layout_height="250dp">
+
+        <me.biubiubiu.justifytext.library.JustifyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/history2"
+                android:textColor="@color/darkgray"
+                android:layout_marginStart="35dp"
+                android:textSize="18sp"/>
+
+    </ScrollView>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="left"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:text="ACCEPT"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
