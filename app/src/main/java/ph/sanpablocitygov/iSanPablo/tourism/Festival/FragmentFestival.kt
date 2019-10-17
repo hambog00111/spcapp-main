@@ -15,6 +15,8 @@ class FragmentFestival : Fragment(){
     internal lateinit var  viewPagerFestivalTilapia: ViewPager
     internal lateinit var viewPagerFestivalLenten: ViewPager
     internal lateinit var viewPagerFestivalchristmas: ViewPager
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view: View = inflater.inflate(R.layout.fragment_tourism_festivals, container, false)
@@ -35,6 +37,10 @@ class FragmentFestival : Fragment(){
         viewPagerFestivalchristmas = view.findViewById<View>(R.id.festivals_christmas_viewpager) as ViewPager
         val adapterevents3 = ViewPageAdapterFestivalchristmas(requireContext())
         viewPagerFestivalchristmas.adapter = adapterevents3
+
+
+
+
         return view
     }
 }

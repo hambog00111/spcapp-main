@@ -58,6 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="San Pablo City Hotlines"
+                    android:id="@+id/txt_title_ch"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
                     android:textSize="30sp"
@@ -65,6 +66,11 @@
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp" />
 
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/linear_ch_hotlines"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
             <ListView
                     android:id="@+id/listview_cityhotline"
                     android:layout_width="match_parent"
@@ -76,13 +82,11 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
-
                     android:nestedScrollingEnabled="true"
                     android:scrollbarSize="5dp"
                     android:scrollbarStyle="insideInset"
-                    android:scrollbars="vertical"
-
-                    />
+                    android:scrollbars="vertical" />
+            </LinearLayout>
 
         </LinearLayout>
 

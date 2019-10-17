@@ -413,6 +413,33 @@
                           android:inputType="textWebPassword"
                           android:textColorHint="@color/lightgray"
                           android:hint="Password"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Confirm Password:"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:paddingTop="5dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/darkgray"
+                        android:layout_marginBottom="5dp"
+                        android:layout_gravity="center"
+                        />
+                <EditText android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_confirm_password"
+                        android:textColor="@color/darkgray"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="15sp"
+                        android:inputType="textWebPassword"
+                        android:textColorHint="@color/lightgray"
+                        android:hint="Confrim Password"/>
+
+
+
+
                 <!--<TextView-->
                         <!--android:layout_width="match_parent"-->
                         <!--android:layout_height="wrap_content"-->

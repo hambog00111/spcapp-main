@@ -57,6 +57,7 @@
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="30sp"
+                android:id="@+id/txt_title_mt"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp" />
@@ -71,6 +72,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_mt_rpt"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -100,6 +102,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_mt_fp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -140,6 +143,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_mt_mop"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -169,6 +173,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_mt_lcr"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -209,6 +214,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_mt_cert"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -218,6 +224,7 @@
                         android:background="@drawable/logo_mt_certification_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
+                        android:id="@+id/btn_my_taxes_cert"
                         android:layout_gravity="center"/>
                 <TextView
                         android:layout_width="match_parent"
@@ -236,6 +243,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_mt_op"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 

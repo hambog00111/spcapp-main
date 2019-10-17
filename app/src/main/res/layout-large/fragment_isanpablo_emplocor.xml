@@ -52,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="City Employee Corner"
+                android:id="@+id/txt_title_cec"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="30sp"
@@ -70,6 +71,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_cec_sr"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -79,6 +81,7 @@
                         android:background="@drawable/logo_emplocor_sor_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
+                        android:id="@+id/btn_cec_sr"
                         android:layout_gravity="center"/>
 
                 <TextView
@@ -98,6 +101,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_cec_cos"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -107,6 +111,7 @@
                         android:background="@drawable/logo_emplocor_cp_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
+                        android:id="@+id/btn_cec_cop"
                         android:layout_gravity="center"/>
 
                 <TextView

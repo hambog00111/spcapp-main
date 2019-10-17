@@ -4,12 +4,15 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.ViewPager
+import android.support.v7.app.AlertDialog
+import android.support.v7.widget.CardView
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
+import kotlinx.android.synthetic.main.fragment_update.view.*
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.links.*
 
@@ -26,29 +29,48 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.test
 class FragmentHome : Fragment() {
 
     internal lateinit var viewflipperHome : ViewFlipper
-
-
-    internal lateinit var viewPagerHome: ViewPager
-    internal lateinit var viewPagerEvents: ViewPager
     internal lateinit var viewflipperEvents : ViewFlipper
-
-  val image = intArrayOf(R.drawable.lake5,R.drawable.lake1,R.drawable.lake4,R.drawable.lake2)
-
+    val image = intArrayOf(R.drawable.lake5,R.drawable.lake1,R.drawable.lake4,R.drawable.lake2)
     val imageevent = intArrayOf(R.drawable.event1,R.drawable.event2,R.drawable.event3)
-    //internal lateinit var downloadManager: DownloadManager
-    //@SuppressLint("InflateParams")
+
+
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_home_layout_2, null)
 
        viewflipperHome =view.findViewById<View>(R.id.v_flipper) as ViewFlipper
+       viewflipperHome.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
+       viewflipperEvents =view.findViewById<View>(R.id.v_flipperevent) as ViewFlipper
 
-        viewflipperEvents =view.findViewById<View>(R.id.v_flipperevent) as ViewFlipper
+        //animation
+        val linear = view.findViewById<LinearLayout>(R.id.linear_buss)
+        linear.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val lt = view.findViewById<LinearLayout>(R.id.linear_mytaxes)
+        lt.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val lmap = view.findViewById<LinearLayout>(R.id.linear_myapp)
+        lmap.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val lch = view.findViewById<LinearLayout>(R.id.linear_hotlines)
+        lch.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val lmy = view.findViewById<LinearLayout>(R.id.linear_myisanpablo)
+        lmy.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
+        val  gos = view.findViewById<LinearLayout>(R.id.linear_gos)
+        gos.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
 
-//
-//        val linear = view.findViewById<LinearLayout>(R.id.linear_buss)
-//        linear.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val cve  = view.findViewById<CardView>(R.id.cv_events)
+        cve.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val cvjo  = view.findViewById<CardView>(R.id.cv_job)
+        cvjo.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val cvfl  = view.findViewById<CardView>(R.id.cv_links)
+        cvfl.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val cvba  = view.findViewById<CardView>(R.id.cv_bids)
+        cvba.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val cveng  = view.findViewById<CardView>(R.id.cv_eng)
+        cveng.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+
+
+
+
 
         for(i in 0 until image.size) {
             flip_imagehome(image[i])
@@ -182,8 +204,81 @@ class FragmentHome : Fragment() {
                 .commit()
         }
 
+        val txtlcr = view.findViewById<TextView>(R.id.txt_eng_lcr)
+        txtlcr.setOnClickListener {
+
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+            val mybusBuilder = AlertDialog.Builder(requireContext())
+                .setView(mybus)
+
+            val mybusDialog = mybusBuilder.show()
+
+            mybus.txt_confirm_update.setOnClickListener {
+                mybusDialog.dismiss()
+            }
+        }
 
 
+        val txt_bpls = view.findViewById<TextView>(R.id.txt_eng_bpls)
+        txt_bpls.setOnClickListener {
+
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+            val mybusBuilder = AlertDialog.Builder(requireContext())
+                .setView(mybus)
+
+            val mybusDialog = mybusBuilder.show()
+
+            mybus.txt_confirm_update.setOnClickListener {
+                mybusDialog.dismiss()
+            }
+        }
+
+        val txtrpt = view.findViewById<TextView>(R.id.txt_eng_rpt)
+        txtrpt.setOnClickListener {
+
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+            val mybusBuilder = AlertDialog.Builder(requireContext())
+                .setView(mybus)
+
+            val mybusDialog = mybusBuilder.show()
+
+            mybus.txt_confirm_update.setOnClickListener {
+                mybusDialog.dismiss()
+            }
+        }
+
+        val txthr = view.findViewById<TextView>(R.id.txt_eng_hr)
+        txthr.setOnClickListener {
+
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+            val mybusBuilder = AlertDialog.Builder(requireContext())
+                .setView(mybus)
+
+            val mybusDialog = mybusBuilder.show()
+
+            mybus.txt_confirm_update.setOnClickListener {
+                mybusDialog.dismiss()
+            }
+        }
+
+        val txtebp = view.findViewById<TextView>(R.id.txt_eng_ebp)
+        txtebp.setOnClickListener {
+
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+            val mybusBuilder = AlertDialog.Builder(requireContext())
+                .setView(mybus)
+
+            val mybusDialog = mybusBuilder.show()
+
+            mybus.txt_confirm_update.setOnClickListener {
+                mybusDialog.dismiss()
+            }
+        }
         return view
 
     }

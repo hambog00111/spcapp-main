@@ -54,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TOURISM"
+                android:id="@+id/txt_title_tour"
                 android:textAlignment="center"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
@@ -72,6 +73,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_tour_tm"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -102,6 +104,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_tour_fest"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -142,6 +145,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_tour_wtg"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -171,6 +175,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_tour_wts"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -213,6 +218,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_tour_htgt"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -244,6 +250,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_tour_land"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
