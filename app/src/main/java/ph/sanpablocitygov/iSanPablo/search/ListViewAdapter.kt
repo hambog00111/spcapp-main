@@ -37,8 +37,7 @@ class ListViewAdapter(internal var mContext: Context, internal var modellist: Mu
         return modellist.size
     }
 
-    override fun getItem(i: Int): Any {
-        return modellist[i]
+    override fun getItem(i: Int): Any {      return modellist[i]
     }
 
     override fun getItemId(i: Int): Long {

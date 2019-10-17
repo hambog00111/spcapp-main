@@ -64,12 +64,7 @@ class FragmentSearch:Fragment (){
             }
         })
 
-
-
-
-
         return view
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -1,10 +1,12 @@
 package ph.sanpablocitygov.iSanPablo
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.support.v7.app.AlertDialog
 import android.app.DownloadManager
 import android.app.Service
 import android.content.DialogInterface
+import android.content.pm.PackageManager
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.net.Uri
@@ -13,11 +15,13 @@ import android.os.Bundle
 import android.support.annotation.RequiresApi
 import android.support.design.widget.NavigationView
 import android.support.design.widget.Snackbar
+import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
@@ -43,7 +47,7 @@ import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-
+    private val TAG = "PermissionDemo"
     var context =this
     var connectivity: ConnectivityManager?=null
     var info: NetworkInfo?=null
@@ -53,7 +57,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-
+       //
 
         fab.setOnClickListener { view ->
             var show: Any = Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -76,6 +80,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
        ).commit()
 
     }
+
+
+
+
+
 
     fun isConnected() : Boolean
     {
@@ -295,7 +304,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_tourism -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentTourism(), null)
+                    FragmentSearch(), null)
                     .addToBackStack(null)
                     .commit()
 
@@ -370,7 +379,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setMessage(str)
                         setTitle("APP-2019")
 
-                        setPositiveButton("OK", DialogInterface.OnClickListener
+                        setPositiveButton("OK",
                         { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
