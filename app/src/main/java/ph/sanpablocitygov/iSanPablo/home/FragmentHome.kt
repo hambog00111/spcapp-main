@@ -1,49 +1,74 @@
 package ph.sanpablocitygov.iSanPablo.home
 
+
+import android.Manifest
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
+import android.content.pm.PackageManager
 import android.os.Bundle
+import android.preference.PreferenceManager
+import android.provider.Settings
+import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AlertDialog
 import android.support.v7.widget.CardView
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
-import kotlinx.android.synthetic.main.fragment_update.view.*
-import ph.sanpablocitygov.iSanPablo.R
-import ph.sanpablocitygov.iSanPablo.links.*
-
+import com.firebase.ui.auth.AuthUI.getApplicationContext
+import kotlinx.android.synthetic.main.dialog_terms_and_agreements.view.*
 import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentBPLOAccountReg
+import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes.FragmentMyTaxes
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.GovernmentOnlineServices.FragmentGovermentOnlineServices
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.FragmentMyAppOnlineRequest
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes.FragmentMyTaxes
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.test
+import ph.sanpablocitygov.iSanPablo.links.FragmentFBCIO
+import ph.sanpablocitygov.iSanPablo.links.FragmentHomeCSC
+import ph.sanpablocitygov.iSanPablo.links.FragmentHomePhilGEPS
+import ph.sanpablocitygov.iSanPablo.links.FragmentHomePhilJobNet
 
-@Suppress("UNREACHABLE_CODE", "PLUGIN_WARNING")
+
+@Suppress("PLUGIN_WARNING")
 class FragmentHome : Fragment() {
+    private var permissionsRequired = arrayOf( Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION,
+        Manifest.permission.CALL_PHONE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    private val PERMISSION_CALLBACK_CONSTANT = 100
+    private val REQUEST_PERMISSION_SETTING = 101
+    private var permissionStatus: SharedPreferences? = null
+    private var sentToSettings = false
 
-    internal lateinit var viewflipperHome : ViewFlipper
-    internal lateinit var viewflipperEvents : ViewFlipper
-    val image = intArrayOf(R.drawable.lake5,R.drawable.lake1,R.drawable.lake4,R.drawable.lake2)
-    val imageevent = intArrayOf(R.drawable.event1,R.drawable.event2,R.drawable.event3)
+    private lateinit var viewflipperHome: ViewFlipper
 
 
-    @SuppressLint("SetJavaScriptEnabled")
+    internal lateinit var viewPagerHome: ViewPager
+    internal lateinit var viewPagerEvents: ViewPager
+    private lateinit var viewflipperEvents: ViewFlipper
+
+    val image = intArrayOf(R.drawable.lake5, R.drawable.lake1, R.drawable.lake4, R.drawable.lake2)
+
+    val imageevent = intArrayOf(R.drawable.event1, R.drawable.event2, R.drawable.event3)
+    //internal lateinit var downloadManager: DownloadManager
+    //@SuppressLint("InflateParams")
+
+    @SuppressLint("InflateParams", "RestrictedApi")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_home_layout_2, null)
 
-       viewflipperHome =view.findViewById<View>(R.id.v_flipper) as ViewFlipper
-       viewflipperHome.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
-       viewflipperEvents =view.findViewById<View>(R.id.v_flipperevent) as ViewFlipper
 
-        //animation
+        permissionStatus = activity!!.getSharedPreferences("permissionStatus", Context.MODE_PRIVATE)
+        requestPermission()
+
+        viewflipperHome = view.findViewById<View>(R.id.v_flipper) as ViewFlipper
+
+        viewflipperEvents = view.findViewById<View>(R.id.v_flipperevent) as ViewFlipper
         val linear = view.findViewById<LinearLayout>(R.id.linear_buss)
         linear.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
         val lt = view.findViewById<LinearLayout>(R.id.linear_mytaxes)
@@ -70,14 +95,12 @@ class FragmentHome : Fragment() {
 
 
 
-
-
-        for(i in 0 until image.size) {
+        for (i in 0 until image.size) {
             flip_imagehome(image[i])
         }
-//
 
-        for(i in 0 until imageevent.size) {
+
+        for (i in 0 until imageevent.size) {
             flip_imageevent(imageevent[i])
         }
 
@@ -93,7 +116,8 @@ class FragmentHome : Fragment() {
         btncsc?.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                FragmentHomeCSC() , null)
+                FragmentHomeCSC(), null
+            )
                 .addToBackStack(null)
                 .commit()
         }
@@ -101,7 +125,8 @@ class FragmentHome : Fragment() {
         btnphiljob?.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                FragmentHomePhilJobNet() , null)
+                FragmentHomePhilJobNet(), null
+            )
                 .addToBackStack(null)
                 .commit()
         }
@@ -111,17 +136,17 @@ class FragmentHome : Fragment() {
         btnweb?.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                Fragmentweb() , null)
+                Fragmentweb(), null
+            )
                 .addToBackStack(null)
                 .commit()
         }
 
-        val btngeps = view.findViewById<android.widget.Button>(R.id.btn_home_philgeps)
+        val btngeps = view.findViewById<Button>(R.id.btn_home_philgeps)
         btngeps?.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                FragmentHomePhilGEPS()
-                , null)
+                FragmentHomePhilGEPS(), null)
                 .addToBackStack(null)
                 .commit()
         }
@@ -130,7 +155,8 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentFBCIO()
-                , null)
+                , null
+            )
                 .addToBackStack(null)
                 .commit()
         }
@@ -139,7 +165,8 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentFBCIO()
-                , null)
+                , null
+            )
                 .addToBackStack(null)
                 .commit()
         }
@@ -149,7 +176,8 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentBusinessInTheCity()
-                , null)
+                , null
+            )
                 .addToBackStack(null)
                 .commit()
         }
@@ -159,7 +187,8 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentMyTaxes()
-                , null)
+                , null
+            )
                 .addToBackStack(null)
                 .commit()
         }
@@ -169,7 +198,8 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentGovermentOnlineServices()
-                , null)
+                , null
+            )
                 .addToBackStack(null)
                 .commit()
         }
@@ -179,7 +209,8 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentMyAppOnlineRequest()
-                , null)
+                , null
+            )
                 .addToBackStack(null)
                 .commit()
         }
@@ -189,7 +220,8 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentCityHotline()
-                , null)
+                , null
+            )
                 .addToBackStack(null)
                 .commit()
         }
@@ -199,112 +231,109 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentCityEmployeesCorner()
-                , null)
+                , null
+            )
                 .addToBackStack(null)
                 .commit()
         }
 
-        val txtlcr = view.findViewById<TextView>(R.id.txt_eng_lcr)
-        txtlcr.setOnClickListener {
-
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
-
-            val mybusBuilder = AlertDialog.Builder(requireContext())
-                .setView(mybus)
-
-            val mybusDialog = mybusBuilder.show()
-
-            mybus.txt_confirm_update.setOnClickListener {
-                mybusDialog.dismiss()
-            }
-        }
 
 
-        val txt_bpls = view.findViewById<TextView>(R.id.txt_eng_bpls)
-        txt_bpls.setOnClickListener {
-
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
-
-            val mybusBuilder = AlertDialog.Builder(requireContext())
-                .setView(mybus)
-
-            val mybusDialog = mybusBuilder.show()
-
-            mybus.txt_confirm_update.setOnClickListener {
-                mybusDialog.dismiss()
-            }
-        }
-
-        val txtrpt = view.findViewById<TextView>(R.id.txt_eng_rpt)
-        txtrpt.setOnClickListener {
-
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
-
-            val mybusBuilder = AlertDialog.Builder(requireContext())
-                .setView(mybus)
-
-            val mybusDialog = mybusBuilder.show()
-
-            mybus.txt_confirm_update.setOnClickListener {
-                mybusDialog.dismiss()
-            }
-        }
-
-        val txthr = view.findViewById<TextView>(R.id.txt_eng_hr)
-        txthr.setOnClickListener {
-
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
-
-            val mybusBuilder = AlertDialog.Builder(requireContext())
-                .setView(mybus)
-
-            val mybusDialog = mybusBuilder.show()
-
-            mybus.txt_confirm_update.setOnClickListener {
-                mybusDialog.dismiss()
-            }
-        }
-
-        val txtebp = view.findViewById<TextView>(R.id.txt_eng_ebp)
-        txtebp.setOnClickListener {
-
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
-
-            val mybusBuilder = AlertDialog.Builder(requireContext())
-                .setView(mybus)
-
-            val mybusDialog = mybusBuilder.show()
-
-            mybus.txt_confirm_update.setOnClickListener {
-                mybusDialog.dismiss()
-            }
-        }
         return view
 
     }
 
-//
-    fun flip_imagehome(i : Int) {
-        val view = ImageView(context)
-        view.setBackgroundResource(i)
-        viewflipperHome.addView(view)
-        viewflipperHome.setFlipInterval(5000)
-        viewflipperHome.setAutoStart(true)
-        viewflipperHome.setInAnimation(context , android.R.anim.slide_in_left)
-        viewflipperHome.setOutAnimation(context , android.R.anim.slide_out_right)
+
+    private fun requestPermission() {
+        if (ActivityCompat.checkSelfPermission(requireContext(), permissionsRequired[0]) != PackageManager.PERMISSION_GRANTED
+            || ActivityCompat.checkSelfPermission(requireContext(), permissionsRequired[1]) != PackageManager.PERMISSION_GRANTED
+            || ActivityCompat.checkSelfPermission(requireContext(), permissionsRequired[2]) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), permissionsRequired[0])
+                || ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), permissionsRequired[1])
+                || ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), permissionsRequired[2])) {
+                //Show Information about why you need the permission
+
+            } else if (permissionStatus!!.getBoolean(permissionsRequired[0], false)) {
+                //Previously Permission Request was cancelled with 'Dont Ask Again',
+                // Redirect to Settings after showing Information about why you need the permission
+                val builder = AlertDialog.Builder(requireContext())
+                builder.setTitle("Need Multiple Permissions")
+                builder.setMessage("This app needs permissions.")
+                builder.setPositiveButton("Grant") { dialog, which ->
+                    dialog.cancel()
+                    sentToSettings = true
+                    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+
+                    startActivityForResult(intent, REQUEST_PERMISSION_SETTING)
+                    Toast.makeText(requireContext(), "Go to Permissions to Grant ", Toast.LENGTH_LONG).show()
+                }
+                builder.setNegativeButton("Cancel") { dialog, which -> dialog.cancel() }
+                builder.show()
+            } else {
+                //just request the permission
+                ActivityCompat.requestPermissions(requireActivity(), permissionsRequired, PERMISSION_CALLBACK_CONSTANT)
+            }
+
+            //   txtPermissions.setText("Permissions Required")
+
+            val editor = permissionStatus!!.edit()
+            editor.putBoolean(permissionsRequired[0], true)
+            editor.commit()
+        } else {
+            //You already have the permission, just go ahead.
+
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == PERMISSION_CALLBACK_CONSTANT) {
+            //check if all permissions are granted
+            var allgranted = false
+            for (i in grantResults.indices) {
+                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+                    allgranted = true
+                } else {
+                    allgranted = false
+                    break
+                }
+            }
+
+            if (allgranted) {
+
+            } else if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), permissionsRequired[0])
+                || ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), permissionsRequired[1])
+                || ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), permissionsRequired[2])) {
+
+            } else {
+                Toast.makeText(requireContext(), "Unable to get Permission", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
 
-    fun flip_imageevent(i : Int) {
-        val view = ImageView(context)
-        view.setBackgroundResource(i)
-        viewflipperEvents.addView(view)
-        viewflipperEvents.setFlipInterval(7000)
-        viewflipperEvents.setAutoStart(true)
-        viewflipperEvents.setInAnimation(context , android.R.anim.slide_in_left)
-        viewflipperEvents.setOutAnimation(context , android.R.anim.slide_out_right)
-    }
 
+
+                private fun flip_imagehome(i: Int) {
+                    val view = ImageView(context)
+                    view.setBackgroundResource(i)
+                    viewflipperHome.addView(view)
+                    viewflipperHome.setFlipInterval(5000)
+                    viewflipperHome.isAutoStart = true
+                    viewflipperHome.setInAnimation(context, android.R.anim.slide_in_left)
+                    viewflipperHome.setOutAnimation(context, android.R.anim.slide_out_right)
+                }
+
+
+                private fun flip_imageevent(i: Int) {
+                    val view = ImageView(context)
+                    view.setBackgroundResource(i)
+                    viewflipperEvents.addView(view)
+                    viewflipperEvents.setFlipInterval(7000)
+                    viewflipperEvents.isAutoStart = true
+                    viewflipperEvents.setInAnimation(context, android.R.anim.slide_in_left)
+                    viewflipperEvents.setOutAnimation(context, android.R.anim.slide_out_right)
+                }
 
 }
 

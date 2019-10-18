@@ -3,7 +3,11 @@ package ph.sanpablocitygov.iSanPablo
 import android.content.Intent
 
 import android.os.Bundle
+import android.preference.PreferenceManager
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import com.firebase.ui.auth.AuthUI
+import kotlinx.android.synthetic.main.dialog_terms_and_agreements.view.*
 import java.util.*
 
 class LoadingActivity : AppCompatActivity() {
@@ -11,12 +15,45 @@ class LoadingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
-        Timer().schedule( object: TimerTask(){
-            override fun run() {
-                val intent = Intent(this@LoadingActivity, MainActivity::class.java)
-                startActivity(intent)
-                finish()
+
+        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val editor = sharedPreferences.edit()
+
+        val isFirstRun = sharedPreferences.getBoolean("IS_FIRST_RUN", true)
+        val isFirstRun2 = sharedPreferences.getBoolean("IS_FIRST_RUN", false)
+        if(isFirstRun) {
+            val dialogBuilder = AlertDialog.Builder(this)
+            val inflaters = this.layoutInflater
+            val dialogView = inflaters.inflate(R.layout.dialog_terms_and_agreements, null)
+            dialogBuilder.setView(dialogView)
+            dialogBuilder.setCancelable(false)
+            val alertDialog = dialogBuilder.create()
+//             Update
+            dialogView.checkbox_accept.setOnCheckedChangeListener { buttonView, isChecked ->
+                editor.putBoolean("IS_FIRST_RUN", false)
+                alertDialog.dismiss()
+                editor.apply()
+
+                Timer().schedule( object: TimerTask(){
+                    override fun run() {
+                        val intent = Intent(this@LoadingActivity, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                }, 1200L)
             }
-        }, 1200L)
+            alertDialog.show()
+        }else{
+
+            Timer().schedule( object: TimerTask(){
+                override fun run() {
+                    val intent = Intent(this@LoadingActivity, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+            }, 1200L)
+        }
+
+
     }
 }

@@ -82,12 +82,7 @@ class FragmentSearch:Fragment (){
             }
         })
 
-
-
-
-
         return view
-
     }
 
 

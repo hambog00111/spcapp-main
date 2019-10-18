@@ -1,37 +1,44 @@
 package ph.sanpablocitygov.iSanPablo
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.support.v7.app.AlertDialog
 import android.app.DownloadManager
 import android.app.Service
-import android.content.Context
 import android.content.DialogInterface
+import android.content.pm.PackageManager
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.support.annotation.RequiresApi
 import android.support.design.widget.NavigationView
 import android.support.design.widget.Snackbar
+import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
+import com.firebase.ui.auth.AuthUI
 
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.dialog_disclosure.view.*
+import kotlinx.android.synthetic.main.dialog_terms_and_agreements.view.*
 
 import ph.sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
-
+import ph.sanpablocitygov.iSanPablo.cityhotlines.fragmenttest
 import ph.sanpablocitygov.iSanPablo.home.FragmentHome
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 
@@ -40,29 +47,41 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginb
 
 import ph.sanpablocitygov.iSanPablo.links.*
 import ph.sanpablocitygov.iSanPablo.search.FragmentSearch
-
 import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
 
 
+@Suppress("PLUGIN_WARNING")
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-
+    private val TAG = "PermissionDemo"
     var context =this
     var connectivity: ConnectivityManager?=null
     var info: NetworkInfo?=null
 
+    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-
-
+       //
 
         fab.setOnClickListener { view ->
             var show: Any = Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+
+        val web = findViewById<Button>(R.id.db_home_logo) as Button
+        web.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentBrowser() , null)
+                .addToBackStack(null)
+            .commit()
+
+        }
+
 
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar,
@@ -78,14 +97,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
            R.id.frag_container,
            FragmentHome()
        ).commit()
-
-        val web = findViewById<Button>(R.id.db_home_logo) as Button
-        web.setOnClickListener {
-            supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentBrowser(), null)
-                .addToBackStack(null).commit()
-        }
 
     }
 
@@ -128,13 +139,136 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        return when (item.itemId) {
+            R.id.action_settings -> true
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+////
+//
+//    val police = "09081930819"
+//    val emergency = "09089078124"
+//    val fire = "09995784943"
+//    val PHONE_REQ = 1
+//
+    // actions on click menu items
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+//
+////
+////        R.id.police_menu -> {
+////
+////            if (ActivityCompat.checkSelfPermission(
+////                    this,
+////                    Manifest.permission.CALL_PHONE
+////                ) != PackageManager.PERMISSION_GRANTED
+////            ) {
+////
+////                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), PHONE_REQ)
+////
+////            } else {
+////
+////                policecall()
+////            }
+////
+////            true
+////        }
+//
+////        R.id.emergency_menu -> {
+////
+////            if (ActivityCompat.checkSelfPermission(
+////                    this,
+////                    Manifest.permission.CALL_PHONE
+////                ) != PackageManager.PERMISSION_GRANTED
+////            ) {
+////
+////                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), PHONE_REQ)
+////            } else {
+////                emergencycall()
+////            }
+////            true
+////        }
+//
+////        R.id.fire_menu -> {
+////
+////            if (ActivityCompat.checkSelfPermission(
+////                    this,
+////                    Manifest.permission.CALL_PHONE
+////                ) != PackageManager.PERMISSION_GRANTED
+////            ) {
+////
+////                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), PHONE_REQ)
+////            } else {
+////
+////                firecall()
+////            }
+////            true
+////        }
+////
+////        R.id.admin -> {
+////
+////        spc_map()
+////
+////            true
+////        }
+//
+//
+//        else -> {
+//            // If we got here, the user's action was not recognized.
+//            // Invoke the superclass to handle it.
+//            super.onOptionsItemSelected(item)
+//        }
+//
+//    }
 
+//    private fun policecall() {
+//        val callIntent = Intent(Intent.ACTION_CALL)
+//        callIntent.data = Uri.parse("tel:" + police)
+//
+//        startActivity(callIntent)
+//    }
+//
+////    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+////        if(requestCode == PHONE_REQ)policecall()
+////
+////    }
+//
+//
+//    private fun emergencycall(){
+//        val callIntent =Intent(Intent.ACTION_CALL)
+//        callIntent.data = Uri.parse("tel:" + emergency)
+//
+//        startActivity(callIntent)
+//    }
+//
+//    private fun firecall(){
+//        val callIntent = Intent(Intent.ACTION_CALL)
+//        callIntent.data = Uri.parse("tel:" + fire)
+//
+//        startActivity(callIntent)
+//    }
+//
+//    private fun spc_map(){
+//        supportFragmentManager.beginTransaction().replace(
+//            R.id.frag_container,
+//            FragmentGoogleMap()
+//        ).commit()
+//
+//    }
+//
+//
+
+
+//    @SuppressLint("CommitTransaction")
     @SuppressLint("WrongConstant", "ShowToast")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> {
-                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right).replace(
+                supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
 
                     FragmentHome(), null)
@@ -146,11 +280,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_our_city -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
+
                     FragmentOurCity(), null)
-                        .addToBackStack(null).commit()
+                        .addToBackStack(null)
+                .commit()
 
             }
-
+//            R.id.nav_our_barangay -> {
+//                supportFragmentManager.beginTransaction().replace(
+//                    R.id.frag_container,
+//                    FragmentBarangay(), null)
+//                    .addToBackStack(null)
+//                    .commit()
+//
+//            }
             R.id.nav_our_government -> {
 
                 if (isConnected()) {
@@ -168,6 +311,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     Toast.makeText(context,"Please check your internet connection",4000).show()
 
                 }
+
+
 
             }
 
@@ -252,7 +397,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setMessage(str)
                         setTitle("APP-2019")
 
-                        setPositiveButton("OK", DialogInterface.OnClickListener
+                        setPositiveButton("OK",
                         { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
@@ -462,6 +607,22 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
 
+//
+//            R.id.nav_webview ->{
+//                supportFragmentManager.beginTransaction().replace(
+//                    R.id.frag_container,
+//                    FragmentBrowser(), null)
+//                    .addToBackStack(null)
+//                    .commit()
+//            }
+
+//            R.id.nav_webview ->{
+//                supportFragmentManager.beginTransaction().replace(
+//                    R.id.frag_container,
+//                    FragmentBrowser()
+//                ).commit()
+//            }
+
 
             R.id.nav_bplo ->{
                 supportFragmentManager.beginTransaction().replace(
@@ -530,7 +691,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     .addToBackStack(null)
                     .commit()
         }
-
+//            R.id.nav_representatives ->{
+//                supportFragmentManager.beginTransaction().replace(
+//                    R.id.frag_container,
+//                    FragmentRepresentatives()
+//                    , null)
+//                    .addToBackStack(null)
+//                    .commit()
+//            }
             R.id.nav_supreme_court ->{
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,

@@ -77,8 +77,10 @@ class FragmentBusinessInTheCity : Fragment() {
 
             val mybusDialog = mybusBuilder.show()
 
+
             mybus.txt_confirm_update.setOnClickListener {
                 mybusDialog.dismiss()
+
             }
 
 

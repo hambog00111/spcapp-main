@@ -1,22 +1,31 @@
 package layout.ph.sanpablocitygov.iSanPablo.goverment
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
+import android.util.Log
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.Button
+import android.widget.ListView
+import android.widget.Toast
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineAdapter
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineModel
 
 
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.home.FragmentHome
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.FragmentMyAppOnlineRequest
 import ph.sanpablocitygov.iSanPablo.search.ListViewAdapter
 import ph.sanpablocitygov.iSanPablo.search.Model
 import java.util.ArrayList
@@ -29,35 +38,36 @@ class FragmentCityHotline : Fragment() {
 
     internal lateinit var listView: ListView
 
+
     internal lateinit var adapter: CityhotlineAdapter
     internal lateinit var ivcityhotline: Array<String>
     internal lateinit var ivcityhotlinephone: Array<String>
-    internal  var arrayList = ArrayList<CityhotlineModel>()
+    internal var arrayList = ArrayList<CityhotlineModel>()
     @SuppressLint("RestrictedApi")
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_isanpablo_hotline,null)
+        val view = inflater.inflate(R.layout.fragment_isanpablo_hotline, null)
+       // setupPermissions()
 
-
-        val titlebc = view.findViewById<TextView>(R.id.txt_title_ch)
-        titlebc.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
-
-        val lnrhot  = view.findViewById<LinearLayout>(R.id.linear_ch_hotlines)
-        lnrhot.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
-
-
-
-        ivcityhotline = arrayOf("San Pablo City Government", "San Pablo City Police",
+        ivcityhotline = arrayOf(
+            "San Pablo City Government", "San Pablo City Police",
             "Red Cross San Pablo", "San Pablo City Emergency Hospital",
-            "San Pablo General Hospital","City Disaster Risk Reduction Management Office",
-            "San Pablo Welfare and Development Office","Bureau of Fire Protection")
+            "San Pablo General Hospital", "City Disaster Risk Reduction Management Office",
+            "San Pablo Welfare and Development Office", "Bureau of Fire Protection"
+        )
 
-        ivcityhotlinephone = arrayOf("(049)3000-065", "(049)5626-474/(049)5210-610",
+        ivcityhotlinephone = arrayOf(
+            "(049)3000-065", "(049)5626-474/(049)5210-610",
             "(049)5624-025", "(049)5031-351/(049)5031-432",
-            "  (049)5031-351/(049)5031431","  (049)8000-405", "(049)5621-575", "(049)5627-654" )
+            "  (049)5031-351/(049)5031431", "  (049)8000-405", "(049)5621-575", "(049)5627-654"
+        )
 
 
-        val  listView = view.findViewById<ListView>(R.id.listview_cityhotline)
+        val listView = view.findViewById<ListView>(R.id.listview_cityhotline)
 
         for (i in ivcityhotline.indices) {
             val cityhotlineModel = CityhotlineModel(ivcityhotline[i], ivcityhotlinephone[i])
@@ -71,7 +81,61 @@ class FragmentCityHotline : Fragment() {
         return view
     }
 
-
+//    private val TAG = ""
+//    private val RECORD_REQUEST_CODE = 101
+//
+//
+//    private fun setupPermissions() {
+//        val permission = ContextCompat.checkSelfPermission(
+//            requireContext(),
+//            Manifest.permission.CALL_PHONE)
+//
+//
+//        if (permission != PackageManager.PERMISSION_GRANTED) {
+//            Log.i(TAG, "Permission  denied")
+//
+//            activity!!.supportFragmentManager.beginTransaction().replace(
+//                R.id.frag_container,
+//                FragmentHome()
+//                , null
+//            )
+//                .addToBackStack(null)
+//                .commit()
+////            Toast.makeText(requireContext(),"Permission DENIED",Toast.LENGTH_SHORT).show()
+//            makeRequest()
+//        }
+//
+//
+//    }
+//
+//    private fun makeRequest() {
+//        ActivityCompat.requestPermissions(
+//            requireActivity(),
+//            arrayOf(Manifest.permission.CALL_PHONE),
+//            RECORD_REQUEST_CODE
+//        )
+//    }
+//
+//    override fun onRequestPermissionsResult(requestCode: Int,
+//                                            permissions: Array<String>, grantResults: IntArray) {
+//        if (requestCode == 42) {
+//            // If request is cancelled, the result arrays are empty.
+//            if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+//
+//
+//            } else {
+//                // permission denied, boo! Disable the
+//                // functionality
+//
+//
+//            }
+//            return
+//        }
+//
+//
+//    }
+//
+//
 
 
 
