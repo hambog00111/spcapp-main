@@ -42,7 +42,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:background="@color/colorPrimary"
-
+                    android:id="@+id/linear_myisanpablo"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:padding="5dp">
@@ -140,6 +140,7 @@
                             android:background="@drawable/text_border"
                             android:elevation="6dp"
                             android:gravity="center"
+                            android:id="@+id/linear_mytaxes"
                             android:orientation="vertical">
 
                         <LinearLayout
@@ -196,11 +197,12 @@
                             android:layout_marginBottom="5dp"
                             android:background="@drawable/text_border"
                             android:elevation="6dp"
+                            android:id="@+id/linear_myapp"
                             android:gravity="center"
                             android:orientation="vertical">
 
                         <LinearLayout
-                                android:layout_width="90dp"
+                                android:layout_width="89dp"
                                 android:layout_height="90dp"
                                 android:layout_gravity="center"
                                 android:elevation="10dp"
@@ -247,6 +249,7 @@
                             android:background="@drawable/text_border"
                             android:elevation="6dp"
                             android:gravity="center"
+                            android:id="@+id/linear_hotlines"
                             android:orientation="vertical">
 
                         <LinearLayout
@@ -294,12 +297,14 @@
                         android:orientation="horizontal">
 
                     <LinearLayout
+
                             android:layout_width="150dp"
                             android:layout_height="140dp"
                             android:layout_gravity="center"
                             android:layout_margin="10dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
+                            android:id="@+id/linear_gos"
                             android:background="@drawable/text_border"
                             android:elevation="6dp"
                             android:gravity="center"
@@ -352,6 +357,7 @@
                             android:layout_marginBottom="5dp"
                             android:background="@drawable/text_border"
                             android:elevation="6dp"
+                            android:id="@+id/linear_cec"
                             android:gravity="center"
                             android:orientation="vertical">
 
@@ -394,6 +400,7 @@
             </LinearLayout>
 
             <android.support.v7.widget.CardView
+                    android:id="@+id/cv_events"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
@@ -451,6 +458,7 @@
 
                         <android.support.v7.widget.CardView
                                 android:layout_margin="5dp"
+                                android:id="@+id/cv_job"
                                 android:layout_width="160dp"
                                 android:layout_height="wrap_content"
                                 app:cardCornerRadius="12dp"
@@ -506,7 +514,8 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="6dp"
-                android:layout_marginTop="30dp"
+                android:id="@+id/cv_bids"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:elevation="6dp"
                 android:orientation="vertical">
@@ -522,7 +531,7 @@
                         android:textStyle="bold"
                         android:background="@color/colorPrimary"
                         android:gravity="center"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:padding="5dp"
                         android:textAlignment="center"
                         android:textColor="@color/white"
@@ -551,7 +560,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp"
-
+            android:id="@+id/cv_links"
             android:gravity="center"
             android:elevation="6dp"
             android:orientation="vertical">
@@ -691,6 +700,7 @@
                 android:background="@drawable/text_border"
                 android:gravity="center"
                 android:elevation="6dp"
+                android:id="@+id/cv_eng"
                 android:orientation="vertical">
             <LinearLayout
                     android:layout_width="match_parent"
@@ -721,6 +731,7 @@
                         android:textSize="12sp"
                         android:gravity="center"
                         android:textStyle="bold"
+                        android:id="@+id/txt_eng_lcr"
                         android:background="@drawable/text_border2"
                         android:text="LCR Form"/>
                 <TextView
@@ -732,6 +743,7 @@
                         android:textSize="12sp"
                         android:gravity="center"
                         android:textStyle="bold"
+                        android:id="@+id/txt_eng_bpls"
                         android:background="@drawable/text_border2"
                         android:text="BPLS Form"/>
                 <TextView
@@ -744,6 +756,7 @@
                         android:gravity="center"
                         android:textStyle="bold"
                         android:background="@drawable/text_border2"
+                        android:id="@+id/txt_eng_rpt"
                         android:text="RPT Request"/>
                 <TextView
                         android:layout_width="match_parent"
@@ -754,6 +767,7 @@
                         android:textSize="12sp"
                         android:gravity="center"
                         android:textStyle="bold"
+                        android:id="@+id/txt_eng_hr"
                         android:background="@drawable/text_border2"
                         android:text="HR Module"/>
                 <TextView
@@ -768,6 +782,7 @@
                         android:textSize="12sp"
                         android:gravity="center"
                         android:textStyle="bold"
+                        android:id="@+id/txt_eng_ebp"
                         android:background="@drawable/text_border2"
                         android:text="EBP System"/>
 

@@ -1,29 +1,37 @@
 package ph.sanpablocitygov.iSanPablo.search
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.text.TextUtils
 import android.view.*
-import android.widget.ListView
-import android.widget.SearchView
+import android.widget.*
+import ph.sanpablocitygov.iSanPablo.FragmentDepartment
+import ph.sanpablocitygov.iSanPablo.LoadingActivity
 
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
 import java.util.ArrayList
 
 
 class FragmentSearch:Fragment (){
 
     private lateinit var searchView : SearchView
-
+    var list_load: ListView? = null
     internal lateinit var adapter: ListViewAdapter
     internal lateinit var title: Array<String>
     internal  lateinit var icon: IntArray
     internal  var arrayList = ArrayList<Model>()
     internal  lateinit var mFrag : Fragment
+    internal lateinit var mContext: Context
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+
 
         val view = inflater.inflate(R.layout.fragmentsearch, null)
 
+//     val  list_load = view.findViewById<ListView>(R.id.listview_cityhotline) as ListView
 
 
         title = arrayOf("Business in The City", "My Taxes",
@@ -42,11 +50,21 @@ class FragmentSearch:Fragment (){
           arrayList.add(model)
         }
 
+
+
         //pass results to listViewAdapter class
         adapter = ListViewAdapter(requireContext(), arrayList)
 
+
         //bind the adapter to the listview
         listView.adapter = adapter
+
+//        listView.setOnItemClickListener {
+//            //set the results into textviews
+//          var holder : ListViewAdapter.ViewHolder
+//          val view2 = view.findViewById<TextView>(R.id.mainTitle) as TextView
+//
+//        }
 
         searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
@@ -67,6 +85,7 @@ class FragmentSearch:Fragment (){
         return view
     }
 
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
 
@@ -75,4 +94,6 @@ class FragmentSearch:Fragment (){
             true
         } else super.onOptionsItemSelected(item)
     }
+
+
 }

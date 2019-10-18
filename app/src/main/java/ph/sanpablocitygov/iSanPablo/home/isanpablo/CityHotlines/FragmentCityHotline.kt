@@ -14,10 +14,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.Button
-import android.widget.ListView
-import android.widget.Toast
+import android.view.animation.AnimationUtils
+import android.widget.*
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineAdapter
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineModel
@@ -38,7 +36,6 @@ class FragmentCityHotline : Fragment() {
 
     internal lateinit var listView: ListView
 
-
     internal lateinit var adapter: CityhotlineAdapter
     internal lateinit var ivcityhotline: Array<String>
     internal lateinit var ivcityhotlinephone: Array<String>
@@ -53,8 +50,17 @@ class FragmentCityHotline : Fragment() {
         val view = inflater.inflate(R.layout.fragment_isanpablo_hotline, null)
        // setupPermissions()
 
-        ivcityhotline = arrayOf(
-            "San Pablo City Government", "San Pablo City Police",
+
+        val titlebc = view.findViewById<TextView>(R.id.txt_title_ch)
+        titlebc.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
+
+        val lnrhot  = view.findViewById<LinearLayout>(R.id.linear_ch_hotlines)
+        lnrhot.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+
+
+
+        ivcityhotline = arrayOf("San Pablo City Government", "San Pablo City Police",
+
             "Red Cross San Pablo", "San Pablo City Emergency Hospital",
             "San Pablo General Hospital", "City Disaster Risk Reduction Management Office",
             "San Pablo Welfare and Development Office", "Bureau of Fire Protection"

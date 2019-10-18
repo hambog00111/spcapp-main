@@ -52,8 +52,8 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-        android:layout_gravity="center"
-
+                android:layout_gravity="center"
+                android:id="@+id/txt_title_bc"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:textAlignment="center"
@@ -71,6 +71,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_bc_db"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -100,6 +101,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_bc_inv"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -140,6 +142,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_bc_bplo"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -168,6 +171,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_bc_bta"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -208,6 +212,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_bc_btp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -236,6 +241,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_bc_mp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -276,6 +282,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_bc_a"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -305,6 +312,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_bc_mb"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 

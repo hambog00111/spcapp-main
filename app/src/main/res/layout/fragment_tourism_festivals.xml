@@ -68,7 +68,7 @@
         <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:id="@+id/festivals_viewpager"
+                android:id="@+id/festivals_viewpager1"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
@@ -119,7 +119,7 @@
         <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:id="@+id/festivals_tilapia_viewpager"
+                android:id="@+id/festivals_tilapia_viewpager1"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
@@ -170,7 +170,7 @@
         <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:id="@+id/festivals_lenten_viewpager"
+                android:id="@+id/festivals_lenten_viewpager1"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
@@ -220,7 +220,7 @@
         <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:id="@+id/festivals_christmas_viewpager"
+                android:id="@+id/festivals_christmas_viewpager1"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"

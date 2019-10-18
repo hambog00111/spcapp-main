@@ -12,13 +12,17 @@ import android.support.v4.content.ContextCompat.getSystemService
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 
 import kotlinx.android.synthetic.main.dialog_bplo.view.*
 import kotlinx.android.synthetic.main.dialog_bplo.view.btn_download_bplo
 import kotlinx.android.synthetic.main.dialog_bplo.view.btn_online_bplo
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_business_investment
 import kotlinx.android.synthetic.main.dialog_investment.view.btn_invest_cancel
+import kotlinx.android.synthetic.main.fragment_update.view.*
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.Amendments.FragmentAmendments
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentLoginBPLO
@@ -34,6 +38,52 @@ class FragmentBusinessInTheCity : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view: View = inflater.inflate(R.layout.fragment_isanpablo_businesscity, container, false)
+
+        //animation
+        val titlebc = view.findViewById<TextView>(R.id.txt_title_bc)
+        titlebc.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
+
+        val lnrdb  = view.findViewById<LinearLayout>(R.id.linear_bc_db)
+        lnrdb.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val lnri  = view.findViewById<LinearLayout>(R.id.linear_bc_inv)
+        lnri.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val lnrbplo  = view.findViewById<LinearLayout>(R.id.linear_bc_bplo)
+        lnrbplo.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val lnrbta  = view.findViewById<LinearLayout>(R.id.linear_bc_bta)
+        lnrbta.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val lnrpmp  = view.findViewById<LinearLayout>(R.id.linear_bc_mp)
+        lnrpmp.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val lnra  = view.findViewById<LinearLayout>(R.id.linear_bc_a)
+        lnra.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val lnrbtp  = view.findViewById<LinearLayout>(R.id.linear_bc_btp)
+        lnrbtp.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val linrmb  = view.findViewById<LinearLayout>(R.id.linear_bc_mb)
+        linrmb.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+
+
+
+
+
+
+
+
+        val mybusiness = view.findViewById<Button>(R.id.btn_business_mybusiness)
+        mybusiness.setOnClickListener {
+
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+            val mybusBuilder = AlertDialog.Builder(requireContext())
+                .setView(mybus)
+
+            val mybusDialog = mybusBuilder.show()
+
+            mybus.txt_confirm_update.setOnClickListener {
+                mybusDialog.dismiss()
+            }
+
+
+        }
+
 
         val btnbplo = view.findViewById<Button>(R.id.btn_business_bplo)
         btnbplo.setOnClickListener {
@@ -65,21 +115,21 @@ class FragmentBusinessInTheCity : Fragment() {
                 alertDialog.show()
             }
 
-//            bploView.btn_online_bplo.setOnClickListener {
-//                bploDialog.dismiss()
-//                val intent = Intent(activity, LoginBPLOActivity::class.java)
-//                activity?.startActivity(intent)
-//            }
-
 
 
             bploView.btn_online_bplo.setOnClickListener {
                 bploDialog.dismiss()
-                activity!!.supportFragmentManager.beginTransaction().replace(
-                    R.id.frag_container,
-                    FragmentLoginBPLO() , null)
-                    .addToBackStack(null)
-                    .commit()
+//
+                val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+                val mybusBuilder = AlertDialog.Builder(requireContext())
+                    .setView(mybus)
+
+                val mybusDialog = mybusBuilder.show()
+
+                mybus.txt_confirm_update.setOnClickListener {
+                    mybusDialog.dismiss()
+                }
             }
 
 
@@ -93,27 +143,42 @@ class FragmentBusinessInTheCity : Fragment() {
 
         val btnbta = view.findViewById<Button>(R.id.btn_business_bta)
         btnbta.setOnClickListener {
-            activity!!.supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentBusinessTaxAssessment() , null)
-                .addToBackStack(null)
-                .commit()
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+            val mybusBuilder = AlertDialog.Builder(requireContext())
+                .setView(mybus)
+
+            val mybusDialog = mybusBuilder.show()
+
+            mybus.txt_confirm_update.setOnClickListener {
+                mybusDialog.dismiss()
+            }
         }
         val btnbs = view.findViewById<Button>(R.id.btn_business_amendments)
         btnbs.setOnClickListener {
-            activity!!.supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentAmendments() , null)
-                .addToBackStack(null)
-                .commit()
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+            val mybusBuilder = AlertDialog.Builder(requireContext())
+                .setView(mybus)
+
+            val mybusDialog = mybusBuilder.show()
+
+            mybus.txt_confirm_update.setOnClickListener {
+                mybusDialog.dismiss()
+            }
         }
         val btntp = view.findViewById<Button>(R.id.btn_business_btp)
         btntp.setOnClickListener {
-            activity!!.supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentBusinessTaxPayment() , null)
-                .addToBackStack(null)
-                .commit()
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+            val mybusBuilder = AlertDialog.Builder(requireContext())
+                .setView(mybus)
+
+            val mybusDialog = mybusBuilder.show()
+
+            mybus.txt_confirm_update.setOnClickListener {
+                mybusDialog.dismiss()
+            }
         }
 
 
@@ -155,11 +220,6 @@ class FragmentBusinessInTheCity : Fragment() {
 
 
 
-
-
-
-
-
         val btndb = view.findViewById<Button>(R.id.btn_business_doing_business)
         btndb.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
@@ -172,11 +232,16 @@ class FragmentBusinessInTheCity : Fragment() {
 
         val btnmp = view.findViewById<Button>(R.id.btn_business_printmayor)
         btnmp.setOnClickListener {
-            activity!!.supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentMayorsPermit() , null)
-                .addToBackStack(null)
-                .commit()
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+
+            val mybusBuilder = AlertDialog.Builder(requireContext())
+                .setView(mybus)
+
+            val mybusDialog = mybusBuilder.show()
+
+            mybus.txt_confirm_update.setOnClickListener {
+                mybusDialog.dismiss()
+            }
         }
 
         return  view

@@ -60,6 +60,7 @@
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="30sp"
+                android:id="@+id/txt_title_gos"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp" />
@@ -74,6 +75,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_gos_bir"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -103,6 +105,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_gos_dti"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -143,6 +146,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_gos_poa"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -171,6 +175,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_gos_nbi"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -211,6 +216,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_gos_sss"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -239,6 +245,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_gos_philsys"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -278,6 +285,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_gos_philhealth"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -306,6 +314,7 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_gos_pagibig"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 

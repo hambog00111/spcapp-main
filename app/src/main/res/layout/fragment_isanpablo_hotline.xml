@@ -61,7 +61,7 @@
                         android:paddingStart="20dp"
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
-
+                        android:id="@+id/txt_title_ch"
                         android:text="San Pablo City Hotlines"
                         android:textColor="@color/colorPrimary"
                         android:textSize="20sp" />
@@ -71,6 +71,7 @@
 
                 <LinearLayout android:layout_width="match_parent"
                               android:layout_height="match_parent"
+                                android:id="@+id/linear_ch_hotlines"
                               android:orientation="vertical">
 
 

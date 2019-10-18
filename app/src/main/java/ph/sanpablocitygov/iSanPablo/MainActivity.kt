@@ -304,7 +304,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_tourism -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
-                    FragmentSearch(), null)
+                    FragmentTourism(), null)
                     .addToBackStack(null)
                     .commit()
 

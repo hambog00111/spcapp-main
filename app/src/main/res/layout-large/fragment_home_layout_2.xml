@@ -19,18 +19,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="330dp"
                 android:layout_gravity="center"
-                android:fitsSystemWindows="true"
-
-        />
-
-
+                android:fitsSystemWindows="true" />
 
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="horizontal"
                       android:padding="10dp"
-                android:layout_marginTop="10dp"
+                      android:id="@+id/linear_myisanpablo"
+                      android:layout_marginTop="10dp"
                       android:background="@color/colorPrimary"
                       android:layout_gravity="center"
                       android:gravity="center">
@@ -117,6 +114,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
                         android:layout_marginTop="5dp"
+                        android:id="@+id/linear_mytaxes"
                         android:layout_marginBottom="5dp"
                         android:background="@drawable/text_border"
                         android:elevation="6dp"
@@ -174,6 +172,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
                         android:layout_marginTop="5dp"
+                        android:id="@+id/linear_myapp"
                         android:layout_marginBottom="5dp"
                         android:background="@drawable/text_border"
                         android:elevation="6dp"
@@ -225,6 +224,7 @@
                         android:layout_margin="10dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
+                        android:id="@+id/linear_hotlines"
                         android:background="@drawable/text_border"
                         android:elevation="6dp"
                         android:gravity="center"
@@ -283,6 +283,7 @@
                         android:layout_marginBottom="5dp"
                         android:background="@drawable/text_border"
                         android:elevation="6dp"
+                        android:id="@+id/linear_gos"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -333,6 +334,7 @@
                         android:layout_marginBottom="5dp"
                         android:background="@drawable/text_border"
                         android:elevation="6dp"
+                        android:id="@+id/linear_cec"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -375,6 +377,7 @@
         </LinearLayout>
 
         <android.support.v7.widget.CardView
+                android:id="@+id/cv_events"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:layout_columnWeight="1"
@@ -424,6 +427,7 @@
                     android:orientation="vertical">
 
             <android.support.v7.widget.CardView
+                    android:id="@+id/cv_job"
                     android:layout_height="wrap_content"
                     android:layout_width="300dp"
                     android:layout_columnWeight="1"
@@ -482,6 +486,7 @@
             </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                        android:id="@+id/cv_bids"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:layout_columnWeight="1"
@@ -531,6 +536,7 @@
 
 
             <android.support.v7.widget.CardView
+                    android:id="@+id/cv_links"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
                     android:layout_columnWeight="1"
@@ -650,6 +656,7 @@
 
             </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
+                        android:id="@+id/cv_eng"
                         android:layout_margin="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -684,6 +691,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:id="@+id/txt_eng_lcr"
                                 android:layout_margin="3dp"
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
@@ -696,6 +704,7 @@
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
                                 android:layout_margin="3dp"
+                                android:id="@+id/txt_eng_bpls"
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
                                 android:gravity="center"
@@ -706,6 +715,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:id="@+id/txt_eng_rpt"
                                 android:layout_margin="3dp"
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
@@ -717,6 +727,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:id="@+id/txt_eng_hr"
                                 android:layout_margin="3dp"
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
@@ -728,6 +739,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:id="@+id/txt_eng_ebp"
                                 android:layout_marginStart="3dp"
                                 android:layout_marginEnd="3dp"
                                 android:layout_marginTop="3dp"
