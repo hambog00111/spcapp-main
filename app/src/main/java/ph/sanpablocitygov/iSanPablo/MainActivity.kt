@@ -145,7 +145,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
             R.id.action_settings -> true
+            R.id.phone -> {
+                search()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
+
+
         }
     }
 ////
@@ -251,13 +257,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //        startActivity(callIntent)
 //    }
 //
-//    private fun spc_map(){
-//        supportFragmentManager.beginTransaction().replace(
-//            R.id.frag_container,
-//            FragmentGoogleMap()
-//        ).commit()
-//
-//    }
+    private fun search(){
+        supportFragmentManager.beginTransaction().replace(
+            R.id.frag_container,
+            FragmentSearch()
+        ).commit()
+
+    }
 //
 //
 
