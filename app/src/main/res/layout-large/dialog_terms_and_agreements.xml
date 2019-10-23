@@ -19,35 +19,37 @@
             android:layout_width="match_parent"
             android:paddingTop="10dp"
 
-            android:layout_height="250dp">
+            android:layout_height="350dp">
 
         <me.biubiubiu.justifytext.library.JustifyTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/history2"
+                android:text="@string/history1"
+                android:layout_marginEnd="5dp"
                 android:textColor="@color/darkgray"
                 android:layout_marginStart="35dp"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
     </ScrollView>
 
     <LinearLayout
             android:layout_width="match_parent"
             android:padding="10dp"
+            android:gravity="end"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:gravity="end"
+        <CheckBox
+                android:id="@+id/checkbox_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:textStyle="bold"
                 android:layout_marginEnd="10dp"
-                android:layout_gravity="left"
+                android:layout_gravity="end"
                 android:textColor="@color/colorPrimary"
-                android:textSize="18sp"
-                android:text="ACCEPT"/>
-
+                android:textSize="20sp"
+                android:text=" I ACCEPT"/>
 
     </LinearLayout>
 

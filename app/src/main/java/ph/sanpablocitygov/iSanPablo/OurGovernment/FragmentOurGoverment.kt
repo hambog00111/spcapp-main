@@ -1,5 +1,6 @@
 package ph.sanpablocitygov.iSanPablo.OurGovernment
 
+import android.app.ProgressDialog
 import android.support.v7.app.AlertDialog
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -21,9 +22,11 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 class FragmentOurGoverment  : Fragment(),View.OnClickListener{
-
+    private var pLoading: ProgressDialog? = null
     private var broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
+
+
 //            val notConnected = intent.getBooleanExtra(ConnectivityManager
 //                .EXTRA_NO_CONNECTIVITY, false)
 //            if (notConnected) {
@@ -264,7 +267,10 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
         //var mView: ListView = fragRef.get()!!.listView
 
         override fun onPreExecute() {
-
+//            pLoading = ProgressDialog(requireContext())
+//            pLoading!!.setMessage("\tLoading, please wait")
+//            pLoading!!.setCancelable(false)
+//            pLoading!!.show()
         }
 
         override fun doInBackground(vararg params: Void?): String {
@@ -277,6 +283,7 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
                         "{\"depts\": [{\"dept_office\": \"null\", \"dept_position\": \"null\", \"dept_name\":\"null\"}]}"
                 } else {
                     xhr = conn.inputStream.bufferedReader().readText()
+
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -288,8 +295,9 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
 
         override fun onPostExecute(result: String?) {
             data = JSONObject(result.toString()).getJSONArray("depts")
-            //res = result
-            //ListDept(res!!)
+   //   res = result
+      //     ListDept(res!!)
+//            pLoading!!.dismiss()
         }
 
         fun ListDept(jsonStr: CharSequence) {

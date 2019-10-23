@@ -7,31 +7,36 @@ import android.support.v4.app.Fragment
 import android.text.TextUtils
 import android.view.*
 import android.widget.*
+import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
 import ph.sanpablocitygov.iSanPablo.FragmentDepartment
+import ph.sanpablocitygov.iSanPablo.FragmentOurCity
 import ph.sanpablocitygov.iSanPablo.LoadingActivity
 
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes.FragmentMyTaxes
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.GovernmentOnlineServices.FragmentGovermentOnlineServices
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.FragmentMyAppOnlineRequest
 import java.util.ArrayList
 
 
 class FragmentSearch:Fragment (){
 
     private lateinit var searchView : SearchView
-    var list_load: ListView? = null
+
     internal lateinit var adapter: ListViewAdapter
     internal lateinit var title: Array<String>
     internal  lateinit var icon: IntArray
     internal  var arrayList = ArrayList<Model>()
-    internal  lateinit var mFrag : Fragment
-    internal lateinit var mContext: Context
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
 
 
         val view = inflater.inflate(R.layout.fragmentsearch, null)
 
-//     val  list_load = view.findViewById<ListView>(R.id.listview_cityhotline) as ListView
+
 
 
         title = arrayOf("Business in The City", "My Taxes",
@@ -58,13 +63,71 @@ class FragmentSearch:Fragment (){
 
         //bind the adapter to the listview
         listView.adapter = adapter
-
-//        listView.setOnItemClickListener {
-//            //set the results into textviews
-//          var holder : ListViewAdapter.ViewHolder
-//          val view2 = view.findViewById<TextView>(R.id.mainTitle) as TextView
+//        holder.mTitleTv!!.text = modellist[position].title
+        listView.setOnItemClickListener {  parent, view, position, id ->
+        //            activity!!.supportFragmentManager.beginTransaction().replace(
+//                R.id.frag_container,
 //
-//        }
+//                FragmentBusinessInTheCity(), null)
+//                .addToBackStack(null)
+//                .commit()
+
+            if (arrayList[position].title == "Business in The City" ) {
+
+
+
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentBusinessInTheCity(), null)
+                .commit()
+        }
+
+
+
+
+            if (arrayList[position].title == "My Taxes" ) {
+
+
+
+                activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentMyTaxes(), null)
+                    .commit()
+            }
+
+            if (arrayList[position].title == "My app Online Request") {
+                //start NewActivity with title for actionbar and text for textview
+                activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentMyAppOnlineRequest(), null)
+                    .commit()
+
+            }
+            if (arrayList[position].title == "City Hotlines") {
+                //start NewActivity with title for actionbar and text for textview
+                activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentCityHotline(), null)
+                    .commit()
+
+            }
+            if (arrayList[position].title == "Government Online Service") {
+                //start NewActivity with title for actionbar and text for textview
+                activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentGovermentOnlineServices(), null)
+                    .commit()
+            }
+            if (arrayList[position].title == "City Employee Corner") {
+                //start NewActivity with title for actionbar and text for textview
+                activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentCityEmployeesCorner(), null)
+                    .commit()
+            }
+
+
+        }
 
         searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {

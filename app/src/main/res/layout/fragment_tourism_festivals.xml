@@ -65,19 +65,18 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
+
         <android.support.v4.view.ViewPager
+                android:id="@+id/festivals_viewpager"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:id="@+id/festivals_viewpager1"
-                android:fitsSystemWindows="true"
                 android:layout_gravity="center"
-                android:scaleType="centerCrop"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-        />
+                android:layout_margin="5dp"
+                android:fitsSystemWindows="true"
 
+                android:scaleType="centerCrop" />
 
-    <android.support.v7.widget.CardView
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
@@ -119,12 +118,12 @@
         <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:id="@+id/festivals_tilapia_viewpager1"
+                android:id="@+id/festivals_tilapia_viewpager"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
-                android:padding="10dp"
-                android:layout_margin="10dp"
+
+                android:layout_margin="5dp"
         />
 
     <android.support.v7.widget.CardView
@@ -170,12 +169,12 @@
         <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:id="@+id/festivals_lenten_viewpager1"
+                android:id="@+id/festivals_lenten_viewpager"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
-                android:padding="10dp"
-                android:layout_margin="10dp" />
+
+                android:layout_margin="5dp" />
 
 
     <android.support.v7.widget.CardView
@@ -220,12 +219,12 @@
         <android.support.v4.view.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:id="@+id/festivals_christmas_viewpager1"
+                android:id="@+id/festivals_christmas_viewpager"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
-                android:padding="10dp"
-                android:layout_margin="10dp"
+
+                android:layout_margin="5dp"
         />
     <android.support.v7.widget.CardView
             android:layout_width="match_parent"

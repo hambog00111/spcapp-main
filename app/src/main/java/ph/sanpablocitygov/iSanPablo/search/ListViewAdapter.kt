@@ -22,10 +22,7 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBus
 import java.util.ArrayList
 import java.util.Locale
 
-class ListViewAdapter(internal var mContext: Context,
-                      internal var modellist: MutableList<Model>,
-                      internal  var mFrag: Fragment = Fragment(),
-                      internal val activity: AppCompatActivity = AppCompatActivity()): BaseAdapter() {
+class ListViewAdapter(internal var mContext: Context, internal var modellist: MutableList<Model>): BaseAdapter() {
     internal var inflater: LayoutInflater = LayoutInflater.from(mContext)
     internal var arrayList: ArrayList<Model> = ArrayList()
 
@@ -82,52 +79,52 @@ class ListViewAdapter(internal var mContext: Context,
 
         //listview item clicks
 
-        holder.mTitleTv!!.setOnClickListener {
-            //code later
-         val transaction : FragmentManager
-            if (modellist[postition].title == "Business in The City" ) {
-//                val mFrag: Fragment = Fragment()
-                val frag = mFrag
-//                if (!isFinishing() && !isDestroyed())
+//        holder.mTitleTv!!.setOnClickListener {
+//            //code later
+//         val transaction : FragmentManager
+//            if (modellist[postition].title == "Business in The City" ) {
+////                val mFrag: Fragment = Fragment()
+//
+////                if (!isFinishing() && !isDestroyed())
+////                //start NewActivity with title for actionbar and text for textview
+////           activity.supportFragmentManager.beginTransaction().replace(
+////                    R.id.frag_container,
+////                    FragmentBusinessInTheCity(), null)
+////                    .commit()
+//            }
+//            if (modellist[postition].title == "My Taxes") {
 //                //start NewActivity with title for actionbar and text for textview
-           activity.supportFragmentManager.beginTransaction().replace(
-                    R.id.frag_container,
-                    FragmentBusinessInTheCity(), null)
-                    .commit()
-            }
-            if (modellist[postition].title == "My Taxes") {
-                //start NewActivity with title for actionbar and text for textview
-                val intent = Intent(mContext, FragmentDepartment::class.java)
-                mContext.startActivity(intent)
-            }
-            if (modellist[postition].title == "My app Online Request") {
-                //start NewActivity with title for actionbar and text for textview
-                val intent = Intent(mContext, LoadingActivity::class.java)
-
-                mContext.startActivity(intent)
-            }
-            if (modellist[postition].title == "City Hotlines") {
-                //start NewActivity with title for actionbar and text for textview
-                val intent = Intent(mContext, FragmentBusinessInTheCity::class.java)
-
-                mContext.startActivity(intent)
-            }
-            if (modellist[postition].title == "Government Online Service") {
-                //start NewActivity with title for actionbar and text for textview
-                val intent = Intent(mContext, FragmentDepartment::class.java)
-
-                mContext.startActivity(intent)
-            }
-            if (modellist[postition].title == "City Employee Corner") {
-                //start NewActivity with title for actionbar and text for textview
-                val intent = Intent(mContext, FragmentDepartment::class.java)
-
-                mContext.startActivity(intent)
-            }
-
-        }
-
-        return view
+//                val intent = Intent(mContext, FragmentDepartment::class.java)
+//                mContext.startActivity(intent)
+//            }
+//            if (modellist[postition].title == "My app Online Request") {
+//                //start NewActivity with title for actionbar and text for textview
+//                val intent = Intent(mContext, LoadingActivity::class.java)
+//
+//                mContext.startActivity(intent)
+//            }
+//            if (modellist[postition].title == "City Hotlines") {
+//                //start NewActivity with title for actionbar and text for textview
+//                val intent = Intent(mContext, FragmentBusinessInTheCity::class.java)
+//
+//                mContext.startActivity(intent)
+//            }
+//            if (modellist[postition].title == "Government Online Service") {
+//                //start NewActivity with title for actionbar and text for textview
+//                val intent = Intent(mContext, FragmentDepartment::class.java)
+//
+//                mContext.startActivity(intent)
+//            }
+//            if (modellist[postition].title == "City Employee Corner") {
+//                //start NewActivity with title for actionbar and text for textview
+//                val intent = Intent(mContext, FragmentDepartment::class.java)
+//
+//                mContext.startActivity(intent)
+//            }
+//
+//        }
+//
+       return view
     }
 
     //filter

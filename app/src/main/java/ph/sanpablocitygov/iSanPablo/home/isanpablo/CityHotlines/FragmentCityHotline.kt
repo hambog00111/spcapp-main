@@ -10,7 +10,6 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.util.Log
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,6 +35,7 @@ class FragmentCityHotline : Fragment() {
 
     internal lateinit var listView: ListView
 
+
     internal lateinit var adapter: CityhotlineAdapter
     internal lateinit var ivcityhotline: Array<String>
     internal lateinit var ivcityhotlinephone: Array<String>
@@ -49,8 +49,6 @@ class FragmentCityHotline : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_isanpablo_hotline, null)
        // setupPermissions()
-
-
         val titlebc = view.findViewById<TextView>(R.id.txt_title_ch)
         titlebc.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
 
@@ -59,7 +57,8 @@ class FragmentCityHotline : Fragment() {
 
 
 
-        ivcityhotline = arrayOf("San Pablo City Government", "San Pablo City Police",
+        ivcityhotline = arrayOf(
+            "San Pablo City Government", "San Pablo City Police",
 
             "Red Cross San Pablo", "San Pablo City Emergency Hospital",
             "San Pablo General Hospital", "City Disaster Risk Reduction Management Office",
@@ -86,64 +85,6 @@ class FragmentCityHotline : Fragment() {
 
         return view
     }
-
-//    private val TAG = ""
-//    private val RECORD_REQUEST_CODE = 101
-//
-//
-//    private fun setupPermissions() {
-//        val permission = ContextCompat.checkSelfPermission(
-//            requireContext(),
-//            Manifest.permission.CALL_PHONE)
-//
-//
-//        if (permission != PackageManager.PERMISSION_GRANTED) {
-//            Log.i(TAG, "Permission  denied")
-//
-//            activity!!.supportFragmentManager.beginTransaction().replace(
-//                R.id.frag_container,
-//                FragmentHome()
-//                , null
-//            )
-//                .addToBackStack(null)
-//                .commit()
-////            Toast.makeText(requireContext(),"Permission DENIED",Toast.LENGTH_SHORT).show()
-//            makeRequest()
-//        }
-//
-//
-//    }
-//
-//    private fun makeRequest() {
-//        ActivityCompat.requestPermissions(
-//            requireActivity(),
-//            arrayOf(Manifest.permission.CALL_PHONE),
-//            RECORD_REQUEST_CODE
-//        )
-//    }
-//
-//    override fun onRequestPermissionsResult(requestCode: Int,
-//                                            permissions: Array<String>, grantResults: IntArray) {
-//        if (requestCode == 42) {
-//            // If request is cancelled, the result arrays are empty.
-//            if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-//
-//
-//            } else {
-//                // permission denied, boo! Disable the
-//                // functionality
-//
-//
-//            }
-//            return
-//        }
-//
-//
-//    }
-//
-//
-
-
 
 
 
