@@ -17,7 +17,6 @@ import android.support.annotation.RequiresApi
 import android.support.design.widget.NavigationView
 import android.support.design.widget.Snackbar
 import android.support.v4.app.ActivityCompat
-import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
@@ -80,8 +79,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 FragmentBrowser() , null)
                 .addToBackStack(null)
             .commit()
-
-
 
         }
 
@@ -146,46 +143,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-//
-//        val search = findViewById<Button>(R.id.phone) as Button
-//        search.setOnClickListener {
-//            supportFragmentManager.beginTransaction().replace(
-//                R.id.frag_container,
-//                FragmentBrowser() , null)
-//                .addToBackStack(null)
-//                .commit()
-
-      //  }
-
-
         return when (item.itemId) {
             R.id.action_settings -> true
-
-            R.id.phone-> {
+            R.id.phone -> {
                 search()
                 true
             }
-
             else -> super.onOptionsItemSelected(item)
 
 
-
         }
-
-
-
     }
-
-    private fun search() {
-        supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentSearch() , null)
-                .addToBackStack(null)
-                .commit()
-
-    }
-
-
 ////
 //
 //    val police = "09081930819"
@@ -289,13 +257,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //        startActivity(callIntent)
 //    }
 //
-//    private fun spc_map(){
-//        supportFragmentManager.beginTransaction().replace(
-//            R.id.frag_container,
-//            FragmentGoogleMap()
-//        ).commit()
-//
-//    }
+    private fun search(){
+        supportFragmentManager.beginTransaction().replace(
+            R.id.frag_container,
+            FragmentSearch()
+        ).commit()
+
+    }
 //
 //
 
