@@ -11,13 +11,13 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import kotlinx.android.synthetic.main.fragment_update.view.*
+import kotlinx.android.synthetic.main.update_fragment.view.*
 import ph.sanpablocitygov.iSanPablo.R
 
 class FragmentMyAppOnlineRequest : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_isanpablo_myappolreq, container, false)
+        val view: View = inflater.inflate(R.layout.home_isanpablo_myappolreq_fragment, container, false)
 
         //animation
         val titlemaor = view.findViewById<TextView>(R.id.txt_title_maor)
@@ -40,7 +40,7 @@ class FragmentMyAppOnlineRequest : Fragment(){
         val btntd = view.findViewById<Button>(R.id.btn_myapp_td)
         btntd.setOnClickListener {
 
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
@@ -56,7 +56,7 @@ class FragmentMyAppOnlineRequest : Fragment(){
              btnbc.setOnClickListener {
 
                 val mybus =
-                    LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+                    LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
                 val mybusBuilder = AlertDialog.Builder(requireContext())
                     .setView(mybus)
@@ -72,7 +72,7 @@ class FragmentMyAppOnlineRequest : Fragment(){
                 btndc.setOnClickListener {
 
                     val mybus = LayoutInflater.from(requireContext())
-                        .inflate(R.layout.fragment_update, null)
+                        .inflate(R.layout.update_fragment, null)
 
                     val mybusBuilder = AlertDialog.Builder(requireContext())
                         .setView(mybus)
@@ -87,7 +87,7 @@ class FragmentMyAppOnlineRequest : Fragment(){
                      btnmc.setOnClickListener {
 
                         val mybus = LayoutInflater.from(requireContext())
-                            .inflate(R.layout.fragment_update, null)
+                            .inflate(R.layout.update_fragment, null)
 
                         val mybusBuilder = AlertDialog.Builder(requireContext())
                             .setView(mybus)

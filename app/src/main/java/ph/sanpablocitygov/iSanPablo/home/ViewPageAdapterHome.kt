@@ -26,7 +26,7 @@ class ViewPageAdapterHome(private val context: Context) : PagerAdapter(){
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val v = layoutInflater!!.inflate(R.layout.custom_home_layout, null)
+        val v = layoutInflater!!.inflate(R.layout.home_custom_gallery_layout, null)
         val image = v.findViewById<View>(R.id.image_view_home) as ImageView
         image.setImageResource(images[position])
 

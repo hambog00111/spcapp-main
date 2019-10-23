@@ -13,7 +13,7 @@ class FragmentDoingBusiness : Fragment() {
     @SuppressLint("SetTextI18n", "InflateParams")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_bc_doing_business, container, false)
+        val view: View = inflater.inflate(R.layout.bc_doing_business_fragment, container, false)
         //  val btnreg = view.findViewById<TextView>(R.id.txt_assessment_register)
 //        btnreg.setOnClickListener {
 //            activity!!.supportFragmentManager.beginTransaction().replace(

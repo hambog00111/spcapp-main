@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/amendments"
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textSize="35sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5dp" />
+
+    <Button
+            android:id="@+id/btn_amendments_change_ownership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/text_border2"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/change_ownership"/>
+
+    <Button
+            android:id="@+id/btn_amendments_change_business_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/text_border2"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/change_business_name"/>
+
+    <Button
+            android:id="@+id/btn_amendments_change_business_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/text_border2"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/change_business_address"/>
+
+    <Button
+            android:id="@+id/btn_amendments_change_owners_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/text_border2"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/change_owner_s_address"/>
+
+    <Button
+            android:id="@+id/btn_amendments_change_of_nature_of_business"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/text_border2"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/change_of_nature_of_business"/>
+
+    <Button
+            android:id="@+id/btn_amendments_change_organization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/text_border2"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/change_of_organization"/>
+
+    <Button
+            android:id="@+id/btn_amendments_change_num_of_employees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/text_border2"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:text="@string/change_of_no_of_employees"/>
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+        <TextView android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:id="@+id/btn_amendments_cancel"
+                android:text="CANCEL"/>
+    </LinearLayout>
+
+</LinearLayout>

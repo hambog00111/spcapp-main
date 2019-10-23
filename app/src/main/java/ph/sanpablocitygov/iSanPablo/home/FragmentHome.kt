@@ -4,24 +4,18 @@ package ph.sanpablocitygov.iSanPablo.home
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.preference.PreferenceManager
-import android.provider.Settings
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
 import android.support.v4.view.ViewPager
-import android.support.v7.app.AlertDialog
 import android.support.v7.widget.CardView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
-import com.firebase.ui.auth.AuthUI.getApplicationContext
-import kotlinx.android.synthetic.main.dialog_terms_and_agreements.view.*
 import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
@@ -60,7 +54,7 @@ class FragmentHome : Fragment() {
     @SuppressLint("InflateParams", "RestrictedApi")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view = inflater.inflate(R.layout.fragment_home_layout_2, null)
+        val view = inflater.inflate(R.layout.home_home_fragment, null)
 
 
         permissionStatus = activity!!.getSharedPreferences("permissionStatus", Context.MODE_PRIVATE)
@@ -81,6 +75,8 @@ class FragmentHome : Fragment() {
         lmy.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
         val  gos = view.findViewById<LinearLayout>(R.id.linear_gos)
         gos.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val  cec = view.findViewById<LinearLayout>(R.id. linear_cec)
+        cec.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
 
         val cve  = view.findViewById<CardView>(R.id.cv_events)
         cve.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
@@ -187,7 +183,7 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentMyTaxes()
-                , null
+                 , null
             )
                 .addToBackStack(null)
                 .commit()
@@ -254,21 +250,21 @@ class FragmentHome : Fragment() {
                 //Show Information about why you need the permission
 
             } else if (permissionStatus!!.getBoolean(permissionsRequired[0], false)) {
-                //Previously Permission Request was cancelled with 'Dont Ask Again',
-                // Redirect to Settings after showing Information about why you need the permission
-                val builder = AlertDialog.Builder(requireContext())
-                builder.setTitle("Need Multiple Permissions")
-                builder.setMessage("This app needs permissions.")
-                builder.setPositiveButton("Grant") { dialog, which ->
-                    dialog.cancel()
-                    sentToSettings = true
-                    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
-
-                    startActivityForResult(intent, REQUEST_PERMISSION_SETTING)
-                    Toast.makeText(requireContext(), "Go to Permissions to Grant ", Toast.LENGTH_LONG).show()
-                }
-                builder.setNegativeButton("Cancel") { dialog, which -> dialog.cancel() }
-                builder.show()
+//                //Previously Permission Request was cancelled with 'Dont Ask Again',
+//                // Redirect to Settings after showing Information about why you need the permission
+//                val builder = AlertDialog. Builder(requireContext())
+//                builder.setTitle("Need Multiple Permissions")
+//                builder.setMessage("This home_event_pic1 needs permissions.")
+//                builder.setPositiveButton("Grant") { dialog, which ->
+//                    dialog.cancel()
+//                    sentToSettings = true
+//                    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+//
+//                    startActivityForResult(intent, REQUEST_PERMISSION_SETTING)
+//                    Toast.makeText(requireContext(), "Go to Permissions to Grant ", Toast.LENGTH_LONG).show()
+//                }
+//                builder.setNegativeButton("Cancel") { dialog, which -> dialog.cancel() }
+//                builder.show()
             } else {
                 //just request the permission
                 ActivityCompat.requestPermissions(requireActivity(), permissionsRequired, PERMISSION_CALLBACK_CONSTANT)

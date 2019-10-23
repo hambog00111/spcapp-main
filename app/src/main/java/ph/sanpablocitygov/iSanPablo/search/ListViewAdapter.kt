@@ -100,7 +100,7 @@ class ListViewAdapter(internal var mContext: Context,
                 val intent = Intent(mContext, FragmentDepartment::class.java)
                 mContext.startActivity(intent)
             }
-            if (modellist[postition].title == "My app Online Request") {
+            if (modellist[postition].title == "My home_event_pic1 Online Request") {
                 //start NewActivity with title for actionbar and text for textview
                 val intent = Intent(mContext, LoadingActivity::class.java)
 

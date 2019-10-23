@@ -7,12 +7,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ListView
 
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
-import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineAdapter
-import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineModel
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.ResortModel
 
 
@@ -33,7 +29,7 @@ class FragmentWheretoStayEat : Fragment() {
     @SuppressLint("RestrictedApi")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val rootview = inflater.inflate(R.layout.fragment_tourism_wheretostay, null)
+        val rootview = inflater.inflate(R.layout.tourism_wheretostay_fragment, null)
 
         listViewresort = rootview.findViewById(R.id.listview_tourism_resort)
         genList(listViewresort)
@@ -65,7 +61,7 @@ class FragmentWheretoStayEat : Fragment() {
                 "Paseo Escudero St., Brgy. IV-C, San Pablo City", "+63 9988606420")
             lists.add(user)
         }
-        val list =  ResortAdapter(requireContext(), R.layout.row_where, lists)
+        val list =  ResortAdapter(requireContext(), R.layout.tourism_wheretogo_row, lists)
         ls.adapter = list
 
     }
@@ -110,7 +106,7 @@ class FragmentWheretoStayEat : Fragment() {
                 "Unit 7-G Square Barleta St., Cor, Malvar St., Brgy. IV-B, San Pablo City")
             lists.add(user)
         }
-        val list = TravelTourAdapter(requireContext(), R.layout.row_where_travel_tour, lists)
+        val list = TravelTourAdapter(requireContext(), R.layout.tourism_wheretogo_row2, lists)
         ls.adapter = list
     }
 
@@ -134,7 +130,7 @@ class FragmentWheretoStayEat : Fragment() {
             var user: ResortModel = ResortModel("Dioko Resort and Eco Tourism Park", "Brgy. San Joaquin, San Pablo City", "(049) 8004542")
             lists.add(user)
         }
-        val list = ResortAdapter(requireContext(), R.layout.row_where, lists)
+        val list = ResortAdapter(requireContext(), R.layout.tourism_wheretogo_row, lists)
         ls.adapter = list
 
     }
@@ -146,7 +142,7 @@ class FragmentWheretoStayEat : Fragment() {
             lists.add(user)
         }
 
-        val list = ResortAdapter(requireContext(), R.layout.row_where, lists)
+        val list = ResortAdapter(requireContext(), R.layout.tourism_wheretogo_row, lists)
         ls.adapter = list
     }
 
@@ -158,7 +154,7 @@ class FragmentWheretoStayEat : Fragment() {
             lists.add(user)
         }
 
-        val list =  ResortAdapter(requireContext(), R.layout.row_where, lists)
+        val list =  ResortAdapter(requireContext(), R.layout.tourism_wheretogo_row, lists)
         ls.adapter = list
 
     }

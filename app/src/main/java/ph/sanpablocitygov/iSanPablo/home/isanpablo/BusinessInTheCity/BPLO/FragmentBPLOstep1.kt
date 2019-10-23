@@ -8,13 +8,12 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
-import kotlinx.android.synthetic.main.fragment_bc_bplo_fillup_step1.*
 import ph.sanpablocitygov.iSanPablo.R
 
 class FragmentBPLOstep1 : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_bc_bplo_fillup_step1, null)
+        val view = inflater.inflate(R.layout.bc_bplo_fillup_step1_fragment_, null)
         
         // Initializing a String Array
         val asso = arrayOf("Association", "Cooperative", "Corporation", "Partnership", "Single")

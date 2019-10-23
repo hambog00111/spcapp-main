@@ -18,12 +18,12 @@ class FragmentOurCity : Fragment() {
     lateinit var mediaController: MediaController
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_our_city_layout, container, false)
+        val view: View = inflater.inflate(R.layout.our_city_fragment, container, false)
 
         val hymn1 = view.findViewById<Button>(R.id.btn_play_hymn)
         hymn1.setOnClickListener {
 
-            val hymnView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_hymn, null)
+            val hymnView = LayoutInflater.from(requireContext()).inflate(R.layout.our_city_hymn_dialogbox, null)
 
             val hymnBuilder = AlertDialog.Builder(requireContext())
                 .setView(hymnView)

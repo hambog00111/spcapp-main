@@ -6,8 +6,7 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
-import com.firebase.ui.auth.AuthUI
-import kotlinx.android.synthetic.main.dialog_terms_and_agreements.view.*
+import kotlinx.android.synthetic.main.home_terms_and_agreements_dialogbox.view.*
 import java.util.*
 
 class LoadingActivity : AppCompatActivity() {
@@ -24,7 +23,7 @@ class LoadingActivity : AppCompatActivity() {
         if(isFirstRun) {
             val dialogBuilder = AlertDialog.Builder(this)
             val inflaters = this.layoutInflater
-            val dialogView = inflaters.inflate(R.layout.dialog_terms_and_agreements, null)
+            val dialogView = inflaters.inflate(R.layout.home_terms_and_agreements_dialogbox, null)
             dialogBuilder.setView(dialogView)
             dialogBuilder.setCancelable(false)
             val alertDialog = dialogBuilder.create()

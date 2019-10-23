@@ -1,7 +1,6 @@
 package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 
@@ -15,7 +14,7 @@ import ph.sanpablocitygov.iSanPablo.R
 class FragmentBPLOstep4 : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_bc_bplo_fillup_step4, null)
+        val view = inflater.inflate(R.layout.bc_bplo_fillup_step4_fragment, null)
 
 
         // Initializing a String Array

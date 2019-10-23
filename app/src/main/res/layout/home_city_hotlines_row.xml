@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+    <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/linearLayout">
+
+
+        <TextView
+                android:id="@+id/title_cityhot_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="San Pablo City Goverment"
+                android:textColor="@color/darkgray"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        <LinearLayout
+                android:layout_margin="5dp"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/title_cityhotline_number"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkgray"
+            />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btn_call_city_hot_line"
+
+            android:background="@drawable/ic_phone"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintTop_toTopOf="@+id/linearLayout"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/linearLayout"/>
+
+</android.support.constraint.ConstraintLayout>
+

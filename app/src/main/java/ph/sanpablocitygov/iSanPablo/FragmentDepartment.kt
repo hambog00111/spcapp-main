@@ -23,7 +23,7 @@ class FragmentDepartment : Fragment(), View.OnClickListener{
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_our_goverment_layout, container, false)
+        val view: View = inflater.inflate(R.layout.our_government_fragment, container, false)
         //listView = view.findViewById(R.id.listview_department)
         val t1: TextView = view.findViewById(R.id.dept_mayor_office)
         t1.setOnClickListener(this)
@@ -262,7 +262,7 @@ override fun onClick(v: View?) {
                 }
                 OurGovernmentAdapter(
                     fragRef.get()!!.requireContext(),
-                    R.layout.row_department,
+                    R.layout.our_government_department_row,
                     list
                 )
                 //mView.adapter = adapter

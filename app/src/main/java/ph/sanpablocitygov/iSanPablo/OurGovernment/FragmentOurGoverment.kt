@@ -39,7 +39,7 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
     private lateinit var data: JSONArray
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_our_goverment_layout, container, false)
+        val view: View = inflater.inflate(R.layout.our_government_fragment, container, false)
 
 
 
@@ -309,7 +309,7 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
                 }
                 OurGovernmentAdapter(
                     fragRef.get()!!.requireContext(),
-                    R.layout.row_department,
+                    R.layout.our_government_department_row,
                     list
                 )
                 //mView.adapter = adapter

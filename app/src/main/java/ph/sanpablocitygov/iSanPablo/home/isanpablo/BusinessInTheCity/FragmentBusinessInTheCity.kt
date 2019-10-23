@@ -17,19 +17,14 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 
-import kotlinx.android.synthetic.main.dialog_bplo.view.*
-import kotlinx.android.synthetic.main.dialog_bplo.view.btn_download_bplo
-import kotlinx.android.synthetic.main.dialog_bplo.view.btn_online_bplo
-import kotlinx.android.synthetic.main.dialog_investment.view.btn_business_investment
-import kotlinx.android.synthetic.main.dialog_investment.view.btn_invest_cancel
-import kotlinx.android.synthetic.main.fragment_update.view.*
+import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.*
+import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.btn_download_bplo
+import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.btn_online_bplo
+import kotlinx.android.synthetic.main.bc_investment_dialogbox.view.btn_business_investment
+import kotlinx.android.synthetic.main.bc_investment_dialogbox.view.btn_invest_cancel
+import kotlinx.android.synthetic.main.update_fragment.view.*
 import ph.sanpablocitygov.iSanPablo.R
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.Amendments.FragmentAmendments
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentLoginBPLO
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.FragmentBusinessTaxAssessment
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxPayment.FragmentBusinessTaxPayment
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.DoingBusiness.FragmentDoingBusiness
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentMayorsPermit
 
 @Suppress("PLUGIN_WARNING")
 class FragmentBusinessInTheCity : Fragment() {
@@ -37,7 +32,7 @@ class FragmentBusinessInTheCity : Fragment() {
     @SuppressLint("SetTextI18n", "InflateParams")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_isanpablo_businesscity, container, false)
+        val view: View = inflater.inflate(R.layout.home_isanpablo_businesscity_fragment, container, false)
 
         //animation
         val titlebc = view.findViewById<TextView>(R.id.txt_title_bc)
@@ -70,7 +65,7 @@ class FragmentBusinessInTheCity : Fragment() {
         val mybusiness = view.findViewById<Button>(R.id.btn_business_mybusiness)
         mybusiness.setOnClickListener {
 
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
@@ -90,7 +85,7 @@ class FragmentBusinessInTheCity : Fragment() {
         val btnbplo = view.findViewById<Button>(R.id.btn_business_bplo)
         btnbplo.setOnClickListener {
 
-            var bploView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_bplo, null)
+            var bploView = LayoutInflater.from(requireContext()).inflate(R.layout.bc_bplo_dialogbox, null)
 
             val bplobBuilder = AlertDialog.Builder(requireContext())
                 .setView(bploView)
@@ -122,7 +117,7 @@ class FragmentBusinessInTheCity : Fragment() {
             bploView.btn_online_bplo.setOnClickListener {
                 bploDialog.dismiss()
 //
-                val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+                val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
                 val mybusBuilder = AlertDialog.Builder(requireContext())
                     .setView(mybus)
@@ -145,7 +140,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
         val btnbta = view.findViewById<Button>(R.id.btn_business_bta)
         btnbta.setOnClickListener {
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
@@ -158,7 +153,7 @@ class FragmentBusinessInTheCity : Fragment() {
         }
         val btnbs = view.findViewById<Button>(R.id.btn_business_amendments)
         btnbs.setOnClickListener {
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
@@ -171,7 +166,7 @@ class FragmentBusinessInTheCity : Fragment() {
         }
         val btntp = view.findViewById<Button>(R.id.btn_business_btp)
         btntp.setOnClickListener {
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
@@ -187,7 +182,7 @@ class FragmentBusinessInTheCity : Fragment() {
         val btninvest = view.findViewById<Button>(R.id.btn_business_investment)
         btninvest.setOnClickListener {
 
-            val investmentView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_investment, null)
+            val investmentView = LayoutInflater.from(requireContext()).inflate(R.layout.bc_investment_dialogbox, null)
 
             val investbBuilder = AlertDialog.Builder(requireContext())
                 .setView(investmentView)
@@ -234,7 +229,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
         val btnmp = view.findViewById<Button>(R.id.btn_business_printmayor)
         btnmp.setOnClickListener {
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)

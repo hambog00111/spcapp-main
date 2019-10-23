@@ -14,20 +14,23 @@ package="ph.sanpablocitygov.iSanPablo">
         android:resizeable="true"
         android:smallScreens="true"
         android:xlargeScreens="true"/>
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.intent.action.DIAL" />
+    <uses-permission android:name="android.intent.action.CALL_BUTTON" />
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 
 <application
         android:allowBackup="true"
-
         android:largeHeap="true"
-        android:hardwareAccelerated="false"
-
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -46,15 +49,7 @@ package="ph.sanpablocitygov.iSanPablo">
             android:name=".home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.BusinessTaxAssessmentRegActivity"
             android:label="@string/app_name">
     </activity>
-    <activity
-            android:name=".tourism.gallery.videos.ActivityVideos"
-            android:screenOrientation="portrait"/>
-    <activity
-            android:name=".tourism.gallery.pictures.ActivityPictures"
-            android:screenOrientation="portrait"/>
-    <activity
-            android:name=".tourism.gallery.videos.ActivityVideoView"
-            android:screenOrientation="portrait"/>
+
     <activity
             android:name=".MainActivity"
 
@@ -73,15 +68,7 @@ package="ph.sanpablocitygov.iSanPablo">
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
     </activity>
-    <activity
-            android:name=".tourism.gallery.videos.ActivityVideoDetail"
-            android:label="Videos"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait">
-        <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="ph.sanpablocitygov.iSanPablo.MainActivity"/>
-    </activity>
+
 </application>
 
 </manifest>

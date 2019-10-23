@@ -17,7 +17,6 @@ import org.json.JSONException
 import org.json.JSONObject
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOProfile
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 
 
 class FragmentLoginBPLO: Fragment(),View.OnClickListener {
@@ -38,7 +37,7 @@ class FragmentLoginBPLO: Fragment(),View.OnClickListener {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_bc_bplo_home_login, null)
+        val view = inflater.inflate(R.layout.bc_bplo_login_fragment, null)
 
         progressBar = view.findViewById(R.id.progressBar) as ProgressBar
         etName = view.findViewById<View>(R.id.txt_bplo_username_login)as EditText
