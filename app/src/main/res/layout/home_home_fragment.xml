@@ -12,19 +12,8 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-
-<!--            <android.support.v4.view.ViewPager-->
-<!--                    android:id="@+id/home_viewpager"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="230dp"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:layout_margin="3dp"-->
-<!--                    android:layout_marginBottom="20dp"-->
-<!--                    android:fitsSystemWindows="true"-->
-<!--                    android:scaleType="centerCrop" />-->
-
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
 
             <ViewFlipper
                     android:id="@+id/v_flipper"
@@ -32,9 +21,7 @@
                     android:layout_height="230dp"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:fitsSystemWindows="true"
-
-                    />
+                    android:fitsSystemWindows="true" />
 
             <LinearLayout
                     android:layout_width="match_parent"
@@ -50,7 +37,8 @@
                 <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -59,7 +47,8 @@
                         android:text="My iSanPablo"
                         android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
 
             </LinearLayout>
@@ -112,7 +101,8 @@
                                     android:foreground="?attr/selectableItemBackground"
                                     android:gravity="bottom"
                                     android:scaleType="fitCenter"
-                                    tools:targetApi="m" />
+                                    tools:targetApi="m"
+                                    tools:ignore="UnusedAttribute" />
                         </LinearLayout>
 
                         <TextView
@@ -123,7 +113,7 @@
                                 android:layout_marginBottom="5dp"
                                 android:gravity="center"
                                 android:padding="3dp"
-                                android:text="BUSINESS IN THE CITY"
+                                android:text="@string/business_in_the_city"
                                 android:textAlignment="center"
                                 android:textColor="@color/blues"
                                 android:textSize="12sp"
@@ -171,7 +161,7 @@
                                 android:layout_marginBottom="5dp"
                                 android:gravity="center"
                                 android:padding="3dp"
-                                android:text="MY TAXES"
+                                android:text="@string/my_taxes"
                                 android:textAlignment="center"
                                 android:textColor="@color/bluess"
                                 android:textSize="12sp"
@@ -221,7 +211,8 @@
                                     android:foreground="?attr/selectableItemBackground"
                                     android:gravity="bottom"
                                     android:scaleType="fitCenter"
-                                    tools:targetApi="m" />
+                                    tools:targetApi="m"
+                                    tools:ignore="UnusedAttribute" />
                         </LinearLayout>
 
                         <TextView
@@ -232,7 +223,7 @@
                                 android:layout_marginBottom="5dp"
                                 android:gravity="center"
                                 android:padding="3dp"
-                                android:text="MY APP ONLINE REQUEST"
+                                android:text="@string/my_app_online_request"
                                 android:textAlignment="center"
                                 android:textColor="@color/blues"
                                 android:textSize="12sp"
@@ -284,7 +275,8 @@
                                 android:textAlignment="center"
                                 android:textColor="@color/bluess"
                                 android:textSize="12sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -330,7 +322,8 @@
                                     android:foreground="?attr/selectableItemBackground"
                                     android:gravity="bottom"
                                     android:scaleType="fitCenter"
-                                    tools:targetApi="m" />
+                                    tools:targetApi="m"
+                                    tools:ignore="UnusedAttribute" />
                         </LinearLayout>
 
                         <TextView
@@ -341,7 +334,7 @@
                                 android:layout_marginBottom="5dp"
                                 android:gravity="center"
                                 android:padding="3dp"
-                                android:text="GOVERNMENT ONLINE SERVICES"
+                                android:text="@string/government_online_services"
                                 android:textAlignment="center"
                                 android:textColor="@color/blues"
                                 android:textSize="12sp"
@@ -393,7 +386,8 @@
                                 android:textAlignment="center"
                                 android:textColor="@color/bluess"
                                 android:textSize="12sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -425,7 +419,7 @@
                             android:paddingTop="10dp"
                             android:elevation="5dp"
                             android:paddingBottom="10dp"
-                            android:text="EVENTS AND ANNOUNCEMENTS"
+                            android:text="@string/events_and_announcements"
 
                             android:textAlignment="center"
                             android:textColor="@color/white"
@@ -484,7 +478,7 @@
                                     android:background="@color/colorPrimary"
                                     android:paddingTop="5dp"
                                     android:paddingBottom="5dp"
-                                    android:text="JOBS OFFER"
+                                    android:text="@string/jobs_offer"
                                     android:textAlignment="center"
                                     android:textColor="@color/white"
                                     android:textSize="20sp"
@@ -530,7 +524,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="BIDS AND AWARDS"
+                        android:text="@string/bids_and_awards"
                         android:textStyle="bold"
                         android:background="@color/colorPrimary"
                         android:gravity="center"
@@ -581,7 +575,7 @@
                                     android:background="@color/colorPrimary"
                                     android:paddingTop="5dp"
                                     android:paddingBottom="5dp"
-                                    android:text="FEATURED LINKS"
+                                    android:text="@string/featured_links"
                                     android:textAlignment="center"
                                     android:textColor="@color/white"
                                     android:textSize="20sp"
@@ -603,16 +597,16 @@
                                         android:id="@+id/btn_fb_cio"
                                         android:layout_width="30dp"
                                         android:layout_height="30dp"
-                                        android:layout_marginRight="10dp"
-                                        android:background="@drawable/facebook" />
+                                        android:layout_marginEnd="10dp"
+                                        android:background="@drawable/facebook"
+                                        tools:ignore="TooDeepLayout" />
 
                                 <TextView
                                         android:id="@+id/text_fb_cio"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
-
-                                        android:text="CIO San Pablo FB Page"
+                                        android:text="@string/cio_san_pablo_fb_page"
                                         android:textColor="@color/colorPrimary"
                                         android:textSize="13sp" />
                             </LinearLayout>
@@ -627,7 +621,7 @@
                                         android:id="@+id/btn_fb_tourism"
                                         android:layout_width="30dp"
                                         android:layout_height="30dp"
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginEnd="10dp"
                                         android:background="@drawable/facebook" />
 
                                 <TextView
@@ -635,8 +629,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
-
-                                        android:text="Tourism San Pablo FB page"
+                                        android:text="@string/tourism_san_pablo_fb_page"
                                         android:textColor="@color/colorPrimary"
                                         android:textSize="13sp" />
                             </LinearLayout>
@@ -651,7 +644,7 @@
                                         android:id="@+id/btn_fb_lgu"
                                         android:layout_width="30dp"
                                         android:layout_height="30dp"
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginEnd="10dp"
                                         android:background="@drawable/facebook" />
 
                                 <TextView
@@ -659,7 +652,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
-                                        android:text="San Pablo LGU FB Page"
+                                        android:text="@string/san_pablo_lgu_fb_page"
                                         android:textColor="@color/colorPrimary"
                                         android:textSize="13sp" />
                             </LinearLayout>
@@ -674,7 +667,7 @@
                                         android:id="@+id/btn_fb_cdrrmo"
                                         android:layout_width="30dp"
                                         android:layout_height="30dp"
-                                        android:layout_marginRight="10dp"
+                                        android:layout_marginEnd="10dp"
                                         android:background="@drawable/facebook" />
 
                                 <TextView
@@ -682,7 +675,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
-                                        android:text="CDRRMO San Pablo FB Page"
+                                        android:text="@string/cdrrmo_san_pablo_fb_page"
                                         android:textColor="@color/colorPrimary"
                                         android:textSize="13sp" />
                             </LinearLayout>
@@ -717,7 +710,7 @@
                         android:background="@color/colorPrimary"
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
-                        android:text="Engineering and Building Form"
+                        android:text="@string/engineering_and_building_form"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="18sp"
@@ -734,7 +727,7 @@
                         android:textStyle="bold"
                         android:id="@+id/txt_eng_lcr"
                         android:background="@drawable/text_border2"
-                        android:text="LCR Form"/>
+                        android:text="@string/lcr_form"/>
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -746,7 +739,7 @@
                         android:textStyle="bold"
                         android:id="@+id/txt_eng_bpls"
                         android:background="@drawable/text_border2"
-                        android:text="BPLS Form"/>
+                        android:text="@string/bpls_form"/>
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -758,7 +751,7 @@
                         android:textStyle="bold"
                         android:background="@drawable/text_border2"
                         android:id="@+id/txt_eng_rpt"
-                        android:text="RPT Request"/>
+                        android:text="@string/rpt_request"/>
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -770,7 +763,7 @@
                         android:textStyle="bold"
                         android:id="@+id/txt_eng_hr"
                         android:background="@drawable/text_border2"
-                        android:text="HR Module"/>
+                        android:text="@string/hr_module"/>
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -785,7 +778,7 @@
                         android:textStyle="bold"
                         android:id="@+id/txt_eng_ebp"
                         android:background="@drawable/text_border2"
-                        android:text="EBP System"/>
+                        android:text="@string/ebp_system"/>
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -793,155 +786,156 @@
 </LinearLayout>
 
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="20dp">
             <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="70dp"
-                        app:srcCompat="@drawable/phlogo"
-                        />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                    android:layout_width="150dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="18dp"
-                        android:text="@string/Reps"
-                        android:textSize="10dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textAlignment="center"
-                        android:gravity="center"
-                        android:textStyle="bold"/>
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/Rep"
-                        android:textSize="10dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textAlignment="center"
-                        android:gravity="center"
-                        android:layout_marginBottom="5dp"/>
-
-                <TextView
-                        android:text="© 2019 San Pablo City Goverment"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="10sp"
-                        android:gravity="center"
-                        android:textColor="@color/colorPrimary"
-                        android:textAlignment="center"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:id="@+id/textView8"/>
-
-            </LinearLayout>
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="70dp"
-                        app:srcCompat="@drawable/transpa"
-                        />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-            <LinearLayout
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                <TextView
-                        android:text="Developed by:"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="13sp"
-                        android:gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textAlignment="center"
-                        android:layout_marginEnd="3dp"
-                        />
-                <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="21dp"
-                        app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
-            </LinearLayout>
-            <LinearLayout
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                <TextView
-                        android:text="Developer: "
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="13sp"
-                        android:gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textAlignment="center"
-                        />
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
                 <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+                    <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/phlogo"
+                            tools:ignore="ContentDescription" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
                     <TextView
-                            android:text="Chris Velasco"
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:text="@string/Reps"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            tools:ignore="SmallSp,SpUsage,TooManyViews" />
+
+                    <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="13sp"
-                            android:gravity="center"
+                            android:text="@string/Rep"
+                            android:textSize="10sp"
                             android:textColor="@color/colorPrimary"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:layout_marginBottom="5dp"
+                            tools:ignore="SmallSp,SpUsage" />
+
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:id="@+id/textView8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="13sp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
                             android:gravity="center"
+                            android:text="@string/_2019_san_pablo_city_goverment"
+                            android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
-                            android:textAlignment="center" />
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/transpa"
+                            tools:ignore="ContentDescription" />
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                    <TextView
+                            android:text="@string/developed_by"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            android:layout_marginEnd="3dp"
+                            />
+                    <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="21dp"
+                            app:srcCompat="@drawable/pylon"
+                            android:layout_marginEnd="13dp"
+                            tools:ignore="ContentDescription" />
+                </LinearLayout>
+                <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <TextView
+                            android:text="@string/developer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            />
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <TextView
+                                android:text="@string/chris_velasco"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:gravity="center"
+
+                                android:textColor="@color/colorPrimary"
+                                android:textAlignment="center"
+                                />
+                        <TextView
+                                android:text="@string/joseph_bonilla"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:gravity="center"
+
+                                android:textColor="@color/colorPrimary"
+                                android:textAlignment="center"
+                                />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
 
         </LinearLayout>
     </RelativeLayout>

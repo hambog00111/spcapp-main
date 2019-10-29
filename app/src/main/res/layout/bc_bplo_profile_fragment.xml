@@ -25,7 +25,8 @@
 
                 <RelativeLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
 
             </LinearLayout>
 
@@ -48,7 +49,8 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -73,23 +75,25 @@
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:orientation="horizontal"
-                          android:gravity="center">
+                          android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
 
                 <TextView android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:textColor="@color/colorPrimaryDark"
-                          android:text="BPLO FILL FORM"
+                          android:text="@string/bplo_fill_form"
                           android:textSize="20sp"
                           android:textStyle="bold"
                           android:padding="10dp"
-                          android:layout_marginLeft="10dp"
+                          android:layout_marginStart="10dp"
                           android:gravity="center"
 
                 />
                 <ImageView android:layout_width="150dp"
                            android:layout_height="50dp"
                            android:layout_margin="10dp"
-                           app:srcCompat="@drawable/bc_bplo_bili_logo"/>
+                           app:srcCompat="@drawable/bc_bplo_bili_logo"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
@@ -104,7 +108,8 @@
 
                           android:layout_marginEnd="10dp"
 
-                          android:text="Business Information"/>
+                          android:text="Business Information"
+                        tools:ignore="HardcodedText" />
 
                 <LinearLayout android:layout_width="match_parent"
                               android:layout_height="wrap_content"
@@ -118,7 +123,8 @@
                               android:layout_marginStart="10dp"
                               android:layout_marginBottom="10dp"
                               android:layout_marginEnd="5dp"
-                              android:text="Business Name:"/>
+                              android:text="Business Name:"
+                            tools:ignore="HardcodedText" />
 
                     <TextView android:layout_width="match_parent"
                               android:layout_height="wrap_content"
@@ -143,7 +149,7 @@
                               android:layout_marginStart="10dp"
                               android:layout_marginBottom="10dp"
                               android:layout_marginEnd="5dp"
-                              android:text="Owner's Name:"/>
+                              android:text="@string/owner_s_name"/>
 
                     <TextView android:layout_width="match_parent"
                               android:layout_height="wrap_content"
@@ -167,7 +173,7 @@
                               android:layout_marginStart="10dp"
                               android:layout_marginBottom="10dp"
                               android:layout_marginEnd="5dp"
-                              android:text="Business ID:"/>
+                              android:text="@string/business_id"/>
 
                     <TextView android:layout_width="match_parent"
                               android:layout_height="wrap_content"
@@ -192,7 +198,7 @@
                               android:layout_marginStart="10dp"
                               android:layout_marginBottom="10dp"
                               android:layout_marginEnd="5dp"
-                              android:text="Main Line of Business:"/>
+                              android:text="@string/main_line_of_business"/>
 
                     <TextView android:layout_width="match_parent"
                               android:layout_height="wrap_content"
@@ -216,7 +222,7 @@
 
                       android:layout_marginEnd="10dp"
 
-                      android:text="Business Profile"/>
+                      android:text="@string/business_profile"/>
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:orientation="horizontal">
@@ -229,7 +235,7 @@
                           android:layout_marginStart="10dp"
                           android:layout_marginBottom="10dp"
                           android:layout_marginEnd="5dp"
-                          android:text="Date Approved:"/>
+                          android:text="@string/date_approved"/>
 
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
@@ -254,7 +260,7 @@
                           android:layout_marginStart="10dp"
                           android:layout_marginBottom="10dp"
                           android:layout_marginEnd="5dp"
-                          android:text="Date of Payment:"/>
+                          android:text="@string/date_of_payment"/>
 
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
@@ -291,9 +297,10 @@
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:background="@drawable/text_border2"
-                    android:text="Apply now"
+                    android:text="@string/apply_now"
                     android:layout_gravity="start"
-                    android:id="@+id/txt_bplo_apply_now"/>
+                    android:id="@+id/txt_bplo_apply_now"
+                    tools:ignore="ButtonStyle" />
 
 
             <Button android:layout_width="100dp"
@@ -306,9 +313,10 @@
                     android:textStyle="bold"
                     android:textSize="13sp"
                     android:background="@drawable/text_border2"
-                    android:text="Amendments"
+                    android:text="@string/amendments"
                     android:layout_gravity="start"
-                    android:id="@+id/txt_bplo_amendments"/>
+                    android:id="@+id/txt_bplo_amendments"
+                    tools:ignore="ButtonStyle" />
 
             <Button android:layout_width="100dp"
                     android:layout_height="30dp"
@@ -321,9 +329,10 @@
                     android:gravity="center"
                     android:textSize="13sp"
                     android:background="@drawable/text_border2"
-                    android:text="pay now"
+                    android:text="@string/pay_now"
                     android:layout_gravity="center_horizontal"
-                    android:id="@+id/txt_bplo_pay_now"/>
+                    android:id="@+id/txt_bplo_pay_now"
+                    tools:ignore="ButtonStyle" />
 
 
         </LinearLayout>
@@ -336,11 +345,12 @@
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textSize="13sp"
-                android:text="LOG OUT"
+                android:text="@string/log_out"
                 android:gravity="center"
 
                 android:layout_gravity="right"
-                android:id="@+id/txt_bplo_log_out"/>
+                android:id="@+id/txt_bplo_log_out"
+                tools:ignore="RtlHardcoded" />
 
 
         <LinearLayout
@@ -358,7 +368,7 @@
                         android:layout_width="100dp"
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/phlogo"
-                        />
+                        tools:ignore="ContentDescription" />
 
 
             </LinearLayout>
@@ -372,24 +382,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="18dp"
                         android:text="@string/Reps"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:layout_marginBottom="5dp"/>
+                        android:layout_marginBottom="5dp"
+                        tools:ignore="SmallSp" />
 
                 <TextView
-                        android:text="© 2019 San Pablo City Goverment"
+                        android:text="@string/_2019_san_pablo_city_goverment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
@@ -398,7 +410,8 @@
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
-                        android:id="@+id/textView8"/>
+                        android:id="@+id/textView8"
+                        tools:ignore="SmallSp" />
 
             </LinearLayout>
             <LinearLayout
@@ -409,7 +422,7 @@
                         android:layout_width="100dp"
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/transpa"
-                        />
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
         </LinearLayout>
 
@@ -425,9 +438,10 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
                 <TextView
-                        android:text="Developed by:"
+                        android:text="@string/developed_by"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="13sp"
@@ -441,7 +455,8 @@
                         android:layout_width="80dp"
                         android:layout_height="21dp"
                         app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
             <LinearLayout
 
@@ -449,7 +464,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <TextView
-                        android:text="Developer: "
+                        android:text="@string/developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="13sp"
@@ -463,7 +478,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="13sp"
@@ -471,7 +486,7 @@
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center" />
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="13sp"

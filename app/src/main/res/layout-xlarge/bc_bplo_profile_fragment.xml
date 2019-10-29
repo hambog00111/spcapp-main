@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:background="@drawable/circle_back"
+                    android:forceHasOverlappingRendering="true"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:weightSum="1"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                    tools:ignore="UnusedAttribute">
+                <ImageView
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:background="@drawable/text_border"
+                android:gravity="center"
+                android:elevation="6dp"
+                android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            tools:ignore="UseCompoundDrawables">
+
+                        <TextView android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:text="@string/bplo_fill_form"
+                                android:textSize="40sp"
+                                android:textStyle="bold"
+                                android:padding="10dp"
+                                android:gravity="center"
+
+                                />
+                        <ImageView android:layout_width="270dp"
+                                android:layout_height="100dp"
+                                android:layout_margin="10dp"
+                                app:srcCompat="@drawable/bc_bplo_bili_logo"
+                                tools:ignore="ContentDescription" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <TextView android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="25sp"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+
+                                android:text="Business Information"
+                                tools:ignore="HardcodedText" />
+
+                        <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:text="Business Name:"
+                                    tools:ignore="HardcodedText" />
+
+                            <TextView android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:id="@+id/txt_bplo_profile_business_name"
+                                    android:text=""/>
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:text="Owner's Name:"
+                                    tools:ignore="HardcodedText" />
+
+                            <TextView android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:id="@+id/txt_bplo_profile_owners_name"
+                                    android:text=""/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:text="Business ID:"
+                                    tools:ignore="HardcodedText" />
+
+                            <TextView android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:id="@+id/txt_bplo_profile_business_id"
+                                    android:text=""/>
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:text="Main Line of Business:"
+                                    tools:ignore="HardcodedText" />
+
+                            <TextView android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:id="@+id/txt_bplo_profile_main_line"
+                                    android:text=""/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:background="@drawable/line_border"/>
+                    <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="25sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+
+                            android:text="Business Profile"
+                            tools:ignore="HardcodedText" />
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <TextView android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginEnd="5dp"
+                                android:text="@string/date_approved"/>
+
+                        <TextView android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:id="@+id/txt_bplo_profile_date_approved"
+                                android:text=""/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <TextView android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginEnd="5dp"
+                                android:text="@string/date_of_payment"/>
+
+                        <TextView android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:id="@+id/txt_bplo_profile_date_of_payment"
+                                android:text=""/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:gravity="center">
+
+                    <Button android:layout_width="160dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/white"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:background="@drawable/text_border2"
+                            android:text="@string/apply_now"
+                            android:layout_gravity="start"
+                            android:id="@+id/txt_bplo_apply_now"
+                            tools:ignore="ButtonStyle" />
+
+
+                    <Button android:layout_width="160dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/white"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:background="@drawable/text_border2"
+                            android:text="AMENDMENTS"
+                            android:layout_gravity="start"
+                            android:id="@+id/txt_bplo_amendments"
+                            tools:ignore="ButtonStyle,HardcodedText" />
+                    <Button android:layout_width="160dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/white"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:background="@drawable/text_border2"
+                            android:text="@string/pay_now"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/txt_bplo_pay_now"
+                            tools:ignore="ButtonStyle" />
+
+
+                </LinearLayout>
+
+
+
+                <TextView android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:text="@string/log_out"
+                        android:gravity="center"
+                        android:layout_gravity="right"
+                        android:id="@+id/txt_bplo_log_out"
+                        tools:ignore="RtlHardcoded" />
+
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/phlogo"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:text="@string/republic_of_the_philippines"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Rep"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp"/>
+                <TextView
+                        android:text="@string/_2019_san_pablo_city_goverment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:padding="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:id="@+id/textView8"
+
+                        />
+
+            </LinearLayout>
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/transpa"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="3dp"
+                        android:gravity="center"
+                        android:text="@string/developed_by"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+                <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="45dp"
+                        app:srcCompat="@drawable/pylon"
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription,TooManyViews" />
+            </LinearLayout>
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                        android:text="@string/developer_t"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:text="@string/chris_velasco"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:gravity="center"
+
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            />
+                    <TextView
+                            android:text="@string/joseph_bonilla"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:gravity="center"
+
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

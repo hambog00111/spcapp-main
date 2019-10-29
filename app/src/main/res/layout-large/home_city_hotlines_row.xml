@@ -6,9 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:orientation="horizontal"
-        android:padding="10dp"
-
->
+        android:padding="10dp">
 
 
     <LinearLayout
@@ -23,15 +21,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent">
+
         <TextView
                 android:id="@+id/title_cityhot_line"
-                android:text="San Pablo City Goverment"
+                android:text="@string/san_pablo_city_government"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/darkgray"
-        />
+                android:textColor="@color/darkgray" />
 
 
         <LinearLayout
@@ -55,14 +53,11 @@
 
     <Button
 
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:id="@+id/btn_call_city_hot_line"
             android:layout_gravity="right"
-
             android:background="@drawable/ic_phone"
-
-
             tools:ignore="RtlHardcoded" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="28dp"

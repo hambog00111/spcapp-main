@@ -25,7 +25,8 @@
 
                 <RelativeLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
             </LinearLayout>
             <LinearLayout
                     android:id="@+id/linearLayout4"
@@ -45,11 +46,12 @@
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
         <TextView
-                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="BPLO - Register Step 4"
@@ -58,7 +60,8 @@
                 android:textSize="30sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
 
 
         <android.support.v7.widget.CardView
@@ -88,7 +91,8 @@
                         android:paddingBottom="5dp"
                         android:textSize="18sp"
                         android:gravity="center"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
                 <me.biubiubiu.justifytext.library.JustifyTextView
                         android:layout_width="match_parent"
@@ -119,26 +123,27 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="INSTRUCTION"
+                        android:text="@string/instruction"
                         android:paddingStart="10dp"
                         android:textColor="@color/white"
                         android:paddingTop="5dp"
                         android:background="@color/colorPrimary"
                         android:paddingBottom="5dp"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="1.  Provide accurate information. Incomplete form will not be proceed in the next step."
+                        android:text="@string/_1_provide_accurate_information_incomplete_form_will_not_be_proceed_in_the_next_step"
                         android:textColor="@color/colorPrimaryDark"
                         android:layout_margin="5dp"
                         android:textSize="15sp"/>
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="2.  If the context is unclickable please proceed to the next context. It will be automatic system generated."
+                        android:text="@string/_2_if_the_context_is_unclickable_please_proceed_to_the_next_context_it_will_be_automatic_system_generated"
                         android:textColor="@color/colorPrimaryDark"
                         android:layout_margin="5dp"
                         android:textSize="15sp"/>
@@ -169,7 +174,8 @@
                     android:paddingStart="10dp"
                       android:textStyle="bold"
                       android:layout_marginBottom="10dp"
-                      android:text="Business Activity"/>
+                      android:text="Business Activity"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
 
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
@@ -178,7 +184,8 @@
                       android:textStyle="bold"
                     android:paddingStart="10dp"
                       android:layout_marginBottom="10dp"
-                      android:text="Main Business"/>
+                      android:text="@string/main_business"
+                    tools:ignore="RtlSymmetry" />
 
 
             <LinearLayout android:layout_width="match_parent"
@@ -210,11 +217,12 @@
                               android:layout_height="wrap_content"
                               android:textSize="18sp"
                               android:inputType="number"
-                              android:text="Capitalization"
+                              android:text="@string/capitalization"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
-                              android:id="@+id/txt_bplo_business_activity_capitalization"/>
+                              android:id="@+id/txt_bplo_business_activity_capitalization"
+                            tools:ignore="Autofill,LabelFor" />
 
                 </LinearLayout>
 
@@ -233,23 +241,25 @@
                               android:layout_height="wrap_content"
                               android:textSize="18sp"
                               android:inputType="number"
-                              android:hint="No. of Units"
+                              android:hint="@string/no_of_units"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_business_activity_num_units"/>
+                              android:id="@+id/txt_bplo_business_activity_num_units"
+                            tools:ignore="Autofill" />
 
                 </LinearLayout>
             </LinearLayout>
 
             <Button android:layout_width="120dp"
                     android:layout_height="35dp"
-                    android:text="update"
+                    android:text="@string/update"
                     android:layout_gravity="right"
                     android:layout_margin="5dp"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:id="@+id/btn_business_activity_update"
-                    android:background="@drawable/text_border2"/>
+                    android:background="@drawable/text_border2"
+                    tools:ignore="RtlHardcoded" />
             <LinearLayout android:layout_width="match_parent"
                           android:padding="10dp"
                             android:gravity="center"
@@ -269,7 +279,8 @@
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
-                              android:id="@+id/txt_bplo_business_activity_line_business_conf"/>
+                              android:id="@+id/txt_bplo_business_activity_line_business_conf"
+                            tools:ignore="Autofill,HardcodedText" />
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:textSize="18sp"
@@ -278,16 +289,18 @@
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
-                              android:id="@+id/txt_bplo_business_activity_code_conf"/>
+                              android:id="@+id/txt_bplo_business_activity_code_conf"
+                            tools:ignore="Autofill,HardcodedText" />
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:textSize="18sp"
                               android:inputType="text"
-                              android:hint="Sub Category"
+                              android:hint="@string/sub_category"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
-                              android:id="@+id/txt_bplo_business_activity_sub_category_conf"/>
+                              android:id="@+id/txt_bplo_business_activity_sub_category_conf"
+                            tools:ignore="Autofill" />
                 </LinearLayout>
 
                 <LinearLayout android:layout_width="270dp"
@@ -298,18 +311,20 @@
                               android:layout_height="wrap_content"
                               android:textSize="18sp"
                               android:inputType="number"
-                              android:text="Capitalization"
+                              android:text="@string/capitalization"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
-                              android:id="@+id/txt_bplo_business_activity_capitalization_conf"/>
+                              android:id="@+id/txt_bplo_business_activity_capitalization_conf"
+                            tools:ignore="Autofill,LabelFor" />
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:textSize="18sp"
                               android:inputType="number"
-                              android:hint="No. of Units"
+                              android:hint="@string/no_of_units"
                               android:textColorHint="@color/darkgray"
-                              android:id="@+id/txt_bplo_business_activity_num_units_conf"/>
+                              android:id="@+id/txt_bplo_business_activity_num_units_conf"
+                            tools:ignore="Autofill" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -339,7 +354,8 @@
                     android:paddingTop="5dp"
                       android:textStyle="bold"
                       android:layout_marginBottom="10dp"
-                      android:text="Additional Line of Business"/>
+                      android:text="@string/additional_line_of_business"
+                    tools:ignore="RtlSymmetry" />
 
             <LinearLayout android:layout_width="match_parent"
                           android:layout_gravity="center"
@@ -360,10 +376,11 @@
                               android:layout_height="wrap_content"
                               android:textSize="18sp"
                               android:inputType="text"
-                              android:hint="Sub Category"
+                              android:hint="@string/sub_category"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_additional_line_sub_category"/>
+                              android:id="@+id/txt_bplo_additional_line_sub_category"
+                            tools:ignore="Autofill" />
 
 
 
@@ -384,11 +401,12 @@
                               android:layout_height="wrap_content"
                               android:textSize="18sp"
                               android:inputType="number"
-                              android:text="Capitalization"
+                              android:text="@string/capitalization"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
-                              android:id="@+id/txt_bplo_additional_line_capitalization"/>
+                              android:id="@+id/txt_bplo_additional_line_capitalization"
+                            tools:ignore="Autofill,LabelFor" />
 
                 </LinearLayout>
 
@@ -396,23 +414,24 @@
 
             <Button android:layout_width="120dp"
                     android:layout_height="35dp"
-                    android:text="ADD"
+                    android:text="@string/add"
                     android:layout_gravity="right"
                     android:layout_margin="5dp"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:id="@+id/btn_additional_line_add"
-                    android:background="@drawable/text_border2"/>
+                    android:background="@drawable/text_border2"
+                    tools:ignore="RtlHardcoded" />
 
             <ListView android:layout_width="match_parent"
-
                       android:layout_height="400dp"
                       android:scrollbars="vertical"
                       android:scrollbarSize="5dp"
                       android:scrollbarStyle="insideInset"
                       android:nestedScrollingEnabled="true"
-                    android:layout_margin="5dp"
-                      android:id="@+id/listview_additional_line"/>
+                      android:layout_margin="5dp"
+                      android:id="@+id/listview_additional_line"
+                      tools:ignore="NestedScrolling" />
         </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -438,9 +457,10 @@
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:background="@drawable/text_border2"
-                    android:text="BACK PAGE"
+                    android:text="@string/back_page"
                     android:layout_gravity="start"
-                    android:id="@+id/txt_bplo_back"/>
+                    android:id="@+id/txt_bplo_back"
+                    tools:ignore="ButtonStyle" />
 
             <Button android:layout_width="120dp"
                     android:layout_height="35dp"
@@ -452,9 +472,10 @@
                     android:gravity="center"
                     android:textSize="18sp"
                     android:background="@drawable/text_border2"
-                    android:text="Clear all"
+                    android:text="@string/clear_all"
                     android:layout_gravity="center_horizontal"
-                    android:id="@+id/txt_bplo_clear_all"/>
+                    android:id="@+id/txt_bplo_clear_all"
+                    tools:ignore="ButtonStyle" />
 
             <Button android:layout_width="120dp"
                     android:layout_height="35dp"
@@ -464,10 +485,11 @@
                     android:layout_marginTop="10dp"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:text="SUBMIT"
+                    android:text="@string/submit"
                     android:background="@drawable/text_border2"
                     android:layout_gravity="right"
-                    android:id="@+id/txt_bplo_submit"/>
+                    android:id="@+id/txt_bplo_submit"
+                    tools:ignore="ButtonStyle,RtlHardcoded" />
 
         </LinearLayout>
 
@@ -483,7 +505,8 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/phlogo"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -505,7 +528,7 @@
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp"/>
                 <TextView
-                        android:text="© 2019 San Pablo City Goverment"
+                        android:text="@string/_2019_san_pablo_city_goverment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textSize="13sp"
@@ -513,9 +536,7 @@
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
-                        android:id="@+id/textView8"
-
-                        />
+                        android:id="@+id/textView8" />
 
             </LinearLayout>
 
@@ -524,7 +545,8 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/transpa"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
@@ -540,9 +562,10 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
                 <TextView
-                        android:text="Developed by:"
+                        android:text="@string/developed_by"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
@@ -556,7 +579,8 @@
                         android:layout_width="90dp"
                         android:layout_height="25dp"
                         app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
+                        android:layout_marginRight="13dp"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
             </LinearLayout>
             <LinearLayout
 
@@ -564,7 +588,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <TextView
-                        android:text="Developer: "
+                        android:text="@string/developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
@@ -578,7 +602,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
@@ -588,7 +612,7 @@
                             android:textAlignment="center"
                             />
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"

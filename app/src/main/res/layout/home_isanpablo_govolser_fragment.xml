@@ -26,7 +26,8 @@
 
                 <RelativeLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
 
             </LinearLayout>
 
@@ -49,7 +50,8 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -65,7 +67,8 @@
                 android:text="Government Online Services"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
         <LinearLayout
 
                 android:layout_width="match_parent"
@@ -82,18 +85,18 @@
                     android:orientation="vertical">
 
                 <Button
+                        android:id="@+id/btn_govser_bir"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:layout_gravity="center"
                         android:background="@drawable/logo_gos_bir"
                         android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:id="@+id/btn_govser_bir"
-                        android:layout_gravity="center"/>
+                        android:scaleType="fitCenter" />
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="BIR Online Reg\n(TIN)"
+                        android:text="@string/bir_online_reg_n_tin"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:textSize="15sp"
@@ -123,7 +126,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="DTI Business\nRegistration"
+                        android:text="@string/dti_business_nregistration"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:padding="3dp"
@@ -153,7 +156,7 @@
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="105dp"
+                        android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:id="@+id/btn_govser_passport"
                         android:fitsSystemWindows="true"
@@ -163,7 +166,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Passport Online App"
+                        android:text="@string/passport_online_app"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:textSize="15sp"
@@ -193,7 +196,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="NBI Application"
+                        android:text="@string/nbi_application"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:textSize="15sp"
@@ -233,7 +236,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="SSS Registration"
+                        android:text="@string/sss_registration"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:textSize="15sp"
@@ -263,7 +266,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Phil Sys"
+                        android:text="@string/phil_sys"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:padding="3dp"
@@ -302,7 +305,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="PhilHealth Online\nRegistration"
+                        android:text="@string/philhealth_online_nregistration"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:textSize="15sp"
@@ -332,7 +335,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Pag-ibig Online\nRegistration"
+                        android:text="@string/pag_ibig_online_nregistration"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:padding="3dp"
@@ -361,7 +364,7 @@
                         android:layout_width="100dp"
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/phlogo"
-                        />
+                        tools:ignore="ContentDescription" />
 
 
             </LinearLayout>
@@ -375,24 +378,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="18dp"
                         android:text="@string/Reps"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp,SpUsage" />
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:layout_marginBottom="5dp"/>
+                        android:layout_marginBottom="5dp"
+                        tools:ignore="SmallSp,SpUsage" />
 
                 <TextView
-                        android:text="© 2019 San Pablo City Goverment"
+                        android:text="@string/_2019_san_pablo_city_goverment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
@@ -401,7 +406,8 @@
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
-                        android:id="@+id/textView8"/>
+                        android:id="@+id/textView8"
+                        tools:ignore="SmallSp" />
 
             </LinearLayout>
             <LinearLayout
@@ -412,7 +418,7 @@
                         android:layout_width="100dp"
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/transpa"
-                        />
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
         </LinearLayout>
 
@@ -428,9 +434,10 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
                 <TextView
-                        android:text="Developed by:"
+                        android:text="@string/developed_by"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="13sp"
@@ -444,7 +451,8 @@
                         android:layout_width="80dp"
                         android:layout_height="21dp"
                         app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
             <LinearLayout
 
@@ -452,7 +460,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <TextView
-                        android:text="Developer: "
+                        android:text="@string/developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="13sp"
@@ -466,7 +474,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="13sp"
@@ -474,7 +482,7 @@
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center" />
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="13sp"

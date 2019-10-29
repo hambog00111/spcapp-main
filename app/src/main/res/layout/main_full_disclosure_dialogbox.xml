@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical">
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="FULL DISCLOSURE"
+            android:text="@string/full_disclosure"
             android:textStyle="bold"
             android:background="@color/colorPrimary"
             android:paddingBottom="5dp"
@@ -40,7 +41,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_1"
-                    android:text="4th-quarter-SPP"/>
+                    android:text="@string/_4th_quarter_spp"/>
             <Button android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/text_border2"
@@ -48,7 +49,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_2"
-                    android:text="20-utilization-2018\n4th-Quarter"/>
+                    android:text="@string/_20_utilization_2018_n4th_quarter"/>
             <Button android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/text_border2"
@@ -56,7 +57,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_3"
-                    android:text="app-2019"/>
+                    android:text="@string/app_2019"/>
             <Button android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/text_border2"
@@ -64,7 +65,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_4"
-                    android:text="bid-results 2018\n4th quarter"/>
+                    android:text="@string/bid_results_2018_n4th_quarter"/>
 
         </LinearLayout>
         <LinearLayout
@@ -82,7 +83,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_5"
-                    android:text="SCF-4TH-QUARTER"/>
+                    android:text="@string/scf_4th_quarter"/>
             <Button android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/text_border2"
@@ -90,7 +91,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_6"
-                    android:text="SEF-UTILIZATION\n2018"/>
+                    android:text="@string/sef_utilization_n2018"/>
             <Button android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/text_border2"
@@ -98,7 +99,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_7"
-                    android:text="statement of debt\nservices 03.24.14"/>
+                    android:text="@string/statement_of_debt_nservices_03_24_14"/>
             <Button android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/text_border2"
@@ -106,7 +107,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_8"
-                    android:text="unliquidated\n2018"/>
+                    android:text="@string/unliquidated_n2018"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -130,7 +131,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_9"
-                    android:text="cdrrmf-12.31.18"/>
+                    android:text="@string/cdrrmf_12_31_18"/>
             <Button android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/text_border2"
@@ -138,7 +139,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_10"
-                    android:text="manpower\ncomplement(dilg)"/>
+                    android:text="@string/manpower_ncomplement_dilg"/>
 
             <Button android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -147,7 +148,7 @@
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     android:id="@+id/disclosure_11"
-                    android:text="PDAF UTILIZATION"/>
+                    android:text="@string/pdaf_utilization"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -160,8 +161,9 @@
               android:layout_marginTop="15dp"
               android:layout_marginRight="20dp"
               android:layout_marginBottom="10dp"
-              android:text="CANCEL"
+              android:text="@string/cancel"
               android:id="@+id/btn_dis_cancel"
-              android:textSize="13sp"/>
+              android:textSize="13sp"
+            tools:ignore="RtlHardcoded" />
 
 </LinearLayout>

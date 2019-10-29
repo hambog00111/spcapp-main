@@ -96,11 +96,11 @@
 
     <string name="history1">
 
-        \t \t The earliest historical record of the City of San Pablo dates
+        \t The earliest historical record of the City of San Pablo dates
         back to pre-Spanish times when four (4) big barrios bounded by Mt. Banahaw
         and Mt. Makiling composed Sampaloc. \n \n
 
-        \t \t In 1521, Sampaloc was changed to San Pablo De Los Montes, which became
+        \t In 1521, Sampaloc was changed to San Pablo De Los Montes, which became
         a parish in 1556 and then a municipality in 1647. In 1899, a Municipal
         Government was established with Inocente Martinez as Municipal President
         in 1902 when the Civil Government was granted independence from the Province
@@ -109,7 +109,7 @@
         or Commonwealth Act No. 520. The City was inaugurated on March 30, 1941 with Dr.
         Potenciano Malvar as the appointed City Mayor. \n \n
 
-        \t \t Over the years, it has flourished as a 1st class City.
+        \t Over the years, it has flourished as a 1st class City.
         It is now being governed by Hon. Loreto S. Amante as a
         first term City Mayor until June 30, 2016. \n
 
@@ -432,9 +432,7 @@
         as the appointed City Mayor. \n
     </string>
     <string name="Reps">Republic of the Philippines</string>
-    <string name="Rep">
-        All content is in the public \n
-        domain unless otherwise stated</string>
+    <string name="Rep">All content is in the public \n domain unless otherwise stated</string>
 
     <string name="home2">
         \t \t In 1521, Sampaloc was changed to San Pablo De Los Montes,
@@ -1210,7 +1208,6 @@
     <string name="_192_168_100_93_8080">192.168.100.93:8080</string>
     <string name="ip">IP</string>
     <string name="dc_call_this_number">Call this number?</string>
-    <string name="amendments">Amendments</string>
     <string name="change_ownership">Change Ownership</string>
     <string name="change_business_name">Change Business Name</string>
     <string name="change_business_address">Change Business Address</string>
@@ -1218,9 +1215,281 @@
     <string name="change_of_nature_of_business">Change of Nature of Business</string>
     <string name="change_of_organization">Change of Organization</string>
     <string name="change_of_no_of_employees">Change of No. of Employees</string>
+    <string name="republic_of_the_philippines">\tRepublic of the Philippines</string>
+    <string name="type_of_business">Type of Business</string>
+    <string name="city_municipality">City/ Municipality</string>
+    <string name="email_add">Email Add.</string>
+    <string name="owner_s_information">OWNER\'S INFORMATION</string>
+    <string name="owner_s_address">Owner\'s Address</string>
+    <string name="province">Province</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="lessor_s_information">LESSOR\'S INFORMATION</string>
+    <string name="telephone">Telephone</string>
+    <string name="unit_s_no">Unit\'s No.</string>
+    <string name="developer_t">Developer:</string>
+    <string name="entries">Entries</string>
+    <string name="basic_information">BASIC INFORMATION</string>
+    <string name="no_of_employees_residing_within">No. of Employees Residing within:</string>
+    <string name="nature_of_business">Nature of Business</string>
+    <string name="lgu">LGU</string>
+    <string name="business_information">BUSINESS INFORMATION</string>
+    <string name="cellphone_num">Cellphone Num.</string>
+    <string name="barangay">Barangay</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="tel_num">Tel. Num.</string>
+    <string name="mobile_num">Mobile Num.</string>
+    <string name="business_activity">BUSINESS ACTIVITY</string>
+    <string name="line_of_business">Line of Business</string>
+    <string name="code">Code</string>
+    <string name="essentials">Essentials</string>
+    <string name="non_essentials">Non Essentials</string>
+    <string name="back_to_user_s_profile">Back to User\'s Profile</string>
+    <string name="sample_email_com">sample@email.com</string>
+    <string name="login">Login</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="sign_in">sign in</string>
+    <string name="online_bplo_fill_up_form">Online BPLO Fill up Form</string>
+    <string name="bplo_fill_up_forms">BPLO Fill-up Forms</string>
+    <string name="download_business_registration_form">Download Business Registration Form</string>
+    <string name="email_adress">Email@address</string>
+    <string name="lessor_address">Lessor Address</string>
+    <string name="lessor_information">Lessor Information</string>
+    <string name="monthly_rental">Monthly Rental</string>
+    <string name="bplo_register_step_1">BPLO Register - Step 1</string>
+    <string name="please_specify_entity">Please Specify Entity</string>
+    <string name="businesss_id">Businesss ID</string>
+    <string name="_1223">1223</string>
+    <string name="mode_of_payment">Mode of Payment:</string>
+    <string name="annually">Annually</string>
+    <string name="date_application">Date Application</string>
+    <string name="reference_no">Reference No.</string>
+    <string name="yy_dd_mm">yy/dd/mm</string>
+    <string name="tin_no">TIN no.</string>
+    <string name="are_you_enjoying_tax_incentive_from_any_government">Are you enjoying tax incentive from any government?</string>
+    <string name="please_sepicify_entity">Please Sepicify Entity</string>
+    <string name="is_the_establishment_cctv_equipped">Is the Establishment CCTV equipped?</string>
+    <string name="number_of_cameras">Number of Cameras</string>
+    <string name="name_of_taxpayer_registrant">Name of Taxpayer / Registrant</string>
+    <string name="business_name">Business Name</string>
+    <string name="trade_name_franchise">Trade Name/Franchise</string>
+    <string name="name_of_president_treasurer_corporation">Name of President/Treasurer Corporation</string>
+    <string name="owners_gender">Owners Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="jp">JP</string>
+    <string name="bplo_register_step_2">BPLO Register - Step 2</string>
+    <string name="pin">PIN</string>
+    <string name="business_address">Business Address</string>
+    <string name="bplo_register_step_3">BPLO Register - Step 3</string>
+    <string name="owners_information">Owners Information</string>
+    <string name="owners_address">Owners Address</string>
+    <string name="building_name">Building Name</string>
+    <string name="street">Street</string>
+    <string name="subdivision">Subdivision</string>
+    <string name="house_no_bldg_no">House No./Bldg. No.</string>
+    <string name="san_pablo_city">San Pablo City</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="unit_no">Unit No.</string>
+    <string name="laguna">Laguna</string>
+    <string name="business_area_in_sqm">Business Area (in SQM)</string>
+    <string name="in_sq_m">in sq m</string>
+    <string name="total_male_employees_nin_establishment">Total Male Employees in Establishment</string>
+    <string name="total_female_employee_nin_establishment">Total Female Employee in Establishment</string>
+    <string name="nunit_of_service_vehicle">Unit of Service Vehicle</string>
+    <string name="total_no_of_employees_nresiding_in_lgu">Total No. of Employees  Residing in LGU</string>
+    <string name="rented">Rented?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="next_page">next page</string>
+    <string name="bplo_register_step_4">BPLO Register - Step 4</string>
+    <string name="instruction">INSTRUCTION</string>
+    <string name="_1_provide_accurate_information_incomplete_form_will_not_be_proceed_in_the_next_step">1. Provide accurate information. Incomplete form will not be proceed in the next step.</string>
+    <string name="_2_if_the_context_is_unclickable_please_proceed_to_the_next_context_it_will_be_automatic_system_generated">2. If the context is unclickable please proceed to the next context. It will be automatic system generated.</string>
+    <string name="main_business">Main Business</string>
+    <string name="update">update</string>
+    <string name="no_of_units">No. of Units</string>
+    <string name="additional_line_of_business">Additional Line of Business</string>
+    <string name="sub_category">Sub Category</string>
+    <string name="capitalization">Capitalization</string>
+    <string name="add">ADD</string>
+    <string name="back_page">BACK PAGE</string>
+    <string name="clear_all">Clear all</string>
+    <string name="submit">SUBMIT</string>
+    <string name="owner_s_name">Owner\'s Name:</string>
+    <string name="business_id">Business ID:</string>
+    <string name="main_line_of_business">Main Line of Business:</string>
+    <string name="business_profile">Business Profile</string>
+    <string name="amendments">Amendments</string>
+    <string name="bplo_fill_form">BPLO FILL FORM</string>
+    <string name="date_approved">Date Approved:</string>
+    <string name="date_of_payment">Date of Payment:</string>
+    <string name="apply_now">Apply now</string>
+    <string name="pay_now">pay now</string>
+    <string name="log_out">LOG OUT</string>
+    <string name="register">REGISTER</string>
+    <string name="_09_xxxx_xxx_xxx">09 xxxx xxx xxx</string>
+    <string name="plus">+</string>
+    <string name="you_can_use_letters_numbers_and_periods">*You can use letters,numbers, and periods*</string>
+    <string name="password">Password</string>
+    <string name="confrim_password">Confirm Password</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="middle_name">Middle Name</string>
+    <string name="telephone_number">Telephone Number:</string>
+    <string name="_049">(049)</string>
+    <string name="area_code">Area Code</string>
+    <string name="_5030_538">5030-538</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="please_enter_your_own_valid_email_address">*please enter your own valid email address*</string>
+    <string name="login_information">Login Information</string>
+    <string name="username">Username</string>
+    <string name="confirm_password">Confirm Password:</string>
+    <string name="would_you_like_to_download_the_file_of_procedure_and_requirements_for_doing_business_in_san_pablo_city">Would you like to download the file of procedure and requirements for doing business in San Pablo City?</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="monday_to_friday_8_00_to_5_00pm_no_noon_break_n">Monday to Friday – 8:00 to 5:00pm (No Noon Break)</string>
+    <string name="issuance_tricycle_franchise_and_mayor_s_permit_for_tricycle_operators_new_renewal">ISSUANCE TRICYCLE FRANCHISE and MAYOR\'S PERMIT FOR TRICYCLE OPERATORS(new/renewal)</string>
+    <string name="doing_business">Doing Business</string>
+    <string name="issuance_of_mayor_s_permit_for_new_business_registration">ISSUANCE OF MAYOR’S PERMIT FOR NEW BUSINESS REGISTRATION</string>
+    <string name="_30_minutes">30 minutes</string>
+    <string name="issuance_of_mayor_s_permit_for_business_permit_renewal">ISSUANCE OF MAYOR’S PERMIT FOR BUSINESS PERMIT RENEWAL</string>
+    <string name="business_permit_applicants">Business Permit Applicants</string>
+    <string name="based_on_the_revised_revenue_code_of_the_city_of_san_pablo">Based on the Revised Revenue Code of the City of San Pablo</string>
+    <string name="frontline_services">Frontline Services:</string>
+    <string name="clients">Clients:</string>
+    <string name="tricycle_operators">Tricycle Operators</string>
+    <string name="requirements">Requirements:</string>
+    <string name="fees">Fees:</string>
+    <string name="based_on_ordinance_no_2011_01_and_the_revised_revenue_code_of_the_city_of_san_pablo">Based on Ordinance No. 2011-01 and the Revised Revenue Code of the City of San Pablo</string>
+    <string name="total_processing_time">Total Processing Time:</string>
+    <string name="_15_minutes">15 minutes</string>
+    <string name="schedule_of_service_availability">Schedule of Service Availability:</string>
+    <string name="monday_to_friday_8_00_to_5_00pm_no_noon_break">Monday to Friday – 8:00 to 5:00pm (No Noon Break)</string>
+    <string name="investment">INVESTMENT</string>
+    <string name="why_invest_in_san_pablo_city">Why Invest in San Pablo City?</string>
+    <string name="comprehensive_development_plan">COMPREHENSIVE DEVELOPMENT PLAN</string>
+    <string name="print_mayor_s_permit">Print Mayor\'s Permit</string>
+    <string name="clear">clear</string>
+    <string name="payment_official_reciept_number">Payment Official Receipt Number:</string>
+    <string name="o_r_number">O.R. Number</string>e
+    <string name="valid_email_address">Valid Email Address:</string>
+    <string name="email_address">Email Address</string>
+    <string name="please_enter_valid_email_address_of_the_user">*please enter valid email address of the user*</string>
+    <string name="san_pablo_city_government">San Pablo City Government</string>
+    <string name="my_app_online_request">MY APP ONLINE REQUEST</string>
+    <string name="engineering_and_building_form">Engineering and Building Form</string>
+    <string name="my_isanpablo">My iSanPablo</string>
+    <string name="business_in_the_city">BUSINESS IN THE CITY</string>
+    <string name="my_taxes">MY TAXES</string>
+    <string name="government_online_services">GOVERNMENT ONLINE SERVICES</string>
+    <string name="city_employee_ncorner">CITY EMPLOYEE CORNER</string>
+    <string name="events_and_announcements">EVENTS AND ANNOUNCEMENTS</string>
+    <string name="jobs_offer">JOBS OFFER</string>
+    <string name="bids_and_awards">BIDS AND AWARDS</string>
+    <string name="featured_links">FEATURED LINKS</string>
+    <string name="cio_san_pablo_fb_page">CIO San Pablo FB Page</string>
+    <string name="tourism_san_pablo_fb_page">Tourism San Pablo FB page</string>
+    <string name="san_pablo_lgu_fb_page">San Pablo LGU FB Page</string>
+    <string name="cdrrmo_san_pablo_fb_page">CDRRMO San Pablo FB Page</string>
+    <string name="lcr_form">LCR Form</string>
+    <string name="bpls_form">BPLS Form</string>
+    <string name="rpt_request">RPT Request</string>
+    <string name="hr_module">HR Module</string>
+    <string name="ebp_system">EBP System</string>
+    <string name="service_record">Service Record</string>
+    <string name="city_employee_corner">City Employee Corner</string>
+    <string name="service_of_record">Service of Record</string>
+    <string name="copy_of_payslip">Copy of Payslip</string>
+    <string name="developed_by">Developed by:</string>
+    <string name="bir_online_reg_n_tin">BIR Online Reg (TIN)</string>
+    <string name="dti_business_nregistration">DTI Business Registration</string>
+    <string name="passport_online_app">Passport Online App</string>
+    <string name="nbi_application">NBI Application</string>
+    <string name="sss_registration">SSS Registration</string>
+    <string name="phil_sys">Phil Sys</string>
+    <string name="philhealth_online_nregistration">PhilHealth Online Registration</string>
+    <string name="pag_ibig_online_nregistration">Pag-ibig Online Registration</string>
+    <string name="_2019_san_pablo_city_goverment">© 2019 San Pablo City Goverment</string>
+    <string name="developer">Developer:</string>
+    <string name="chris_velasco">Chris Velasco</string>
+    <string name="joseph_bonilla">Joseph Bonilla</string>
+    <string name="san_pablo_city_hotlines">San Pablo City Hotlines</string>
+    <string name="death_certificate">Death Certificate</string>
+    <string name="request_copy_of_td_oha">Request Copy of TD/OHA</string>
+    <string name="birth_certificate">Birth Certificate</string>
+    <string name="marriage_certificate">Marriage Certificate</string>
+    <string name="other_s_payment">Other\'s Payment</string>
+    <string name="rpt_payment">RPT Payment</string>
+    <string name="franchise_payment">Franchise Payment</string>
+    <string name="market_online_payment">Market Online Payment</string>
+    <string name="lcr_request_payment">LCR Request Payment</string>
+    <string name="certification">Certification</string>
+    <string name="terms_and_agreements">Terms and Agreements</string>
+    <string name="i_accept">I ACCEPT</string>
+    <string name="full_disclosure">FULL DISCLOSURE</string>
+    <string name="_4th_quarter_spp">4th-quarter-SPP</string>
+    <string name="_20_utilization_2018_n4th_quarter">20-utilization-2018 4th-Quarter</string>
+    <string name="app_2019">app-2019</string>
+    <string name="cdrrmf_12_31_18">cdrrmf-12.31.18</string>
+    <string name="manpower_ncomplement_dilg">manpower complement(dilg)</string>
+    <string name="pdaf_utilization">PDAF UTILIZATION</string>
+    <string name="scf_4th_quarter">SCF-4TH-QUARTER</string>
+    <string name="sef_utilization_n2018">SEF-UTILIZATION 2018</string>
+    <string name="unliquidated_n2018">unliquidated 2018</string>
+    <string name="bid_results_2018_n4th_quarter">bid-results 2018 4th quarter</string>
+    <string name="statement_of_debt_nservices_03_24_14">statement of debt services 03.24.14</string>
     <string name="cancel">CANCEL</string>
+    <string name="send">Send</string>
+    <string name="location_and_topography">Location and Topography</string>
+    <string name="history">HISTORY</string>
+    <string name="the_pre_hispanic_village_of_sampalok">The Pre-Hispanic Village of Sampalok</string>
+    <string name="the_coming_of_spaniards">The Coming of Spaniards</string>
+    <string name="japanese_occupation">Japanese Occupation</string>
+    <string name="modern_history">Modern History</string>
+    <string name="american_occupation">American Occupation</string>
+    <string name="location_and_topology">Location and Topology</string>
+    <string name="geographical_location">Geographical Location</string>
+    <string name="topography">Topography</string>
+    <string name="approximate_distance_of_neighboring_municipalities_n_san_pablo_city">Approximate Distance of Neighboring Municipalities  San Pablo City</string>
+    <string name="name_of_municipality">Name of Municipality</string>
+    <string name="approximate_distance_n_kilometers">Approximate Distance  (Kilometers)</string>
+    <string name="climate">Climate</string>
+    <string name="lunsod_naming_mahal">LUNSOD NAMING MAHAL</string>
+    <string name="play_video_hymn">PLAY VIDEO HYMN</string>
+    <string name="office_vicinity_map">Office Vicinity Map</string>
+    <string name="_2_bantayog_ng_mga_bayani">2. Bantayog ng mga Bayani</string>
+    <string name="_3_old_capitol_bldg">3. Old Capitol Bldg.</string>
+    <string name="_4_one_stop_processing_center">4. One Stop Processing Center</string>
+    <string name="_5_department_of_justice">5. Department of Justice</string>
+    <string name="_6_pamana_hall">6. Pamana Hall</string>
+    <string name="_7_abc_bldg">7. ABC bldg.</string>
+    <string name="_8_vice_mayor_s_office">8. Vice Mayor\'s Office</string>
+    <string name="_9_city_governance_bldg">9. City Governance Bldg.</string>
+    <string name="_10_spc_police_station">10. SPC Police Station</string>
+    <string name="_11_bjmp">11. BJMP</string>
+    <string name="_12_city_prosecutor_s_office">12. City Prosecutor\'s Office</string>
+    <string name="_13_philpost">13. PhilPost</string>
+    <string name="_14_register_of_deeds">14. Register of Deeds</string>
+    <string name="_15_city_library">15. City Library</string>
+    <string name="_16_pnp_lock_up_ndetention_cell">16. PNP Lock-Up/ Detention Cell</string>
+    <string name="_17_engineering_bldg">17. Engineering Bldg.</string>
+    <string name="_18_chrmo_bldg">18. CHRMO Bldg.</string>
+    <string name="_19_spc_chamber_of_ncommerce">19. SPC Chamber of Commerce</string>
+    <string name="_20_cswmo">20. CSWMO</string>
+    <string name="_21_girl_scout_council">21. Girl Scout Council</string>
+    <string name="_22_hagdang_bato">22. Hagdang Bato</string>
+    <string name="_23_bonifacio_shrine">23. Bonifacio Shrine</string>
+    <string name="mission_and_vision">Mission and Vision</string>
+    <string name="mission">MISSION</string>
+    <string name="vision">VISION</string>
+    <string name="our_15_point_service_standards_for_clients">Our 15-point service standards for clients</string>
+    <string name="performance_pledge">PERFORMANCE PLEDGE</string>
+    <string name="a">A</string>
+    <string name="m">M</string>
+    <string name="n">N</string>
+    <string name="t">T</string>
+    <string name="e">E</string>
+    <string name="city_local_officials">CITY LOCAL OFFICIALS</string>
     <string name="no_internet_connection">No Internet Connection</string>
-
-
     <item name="btn_next" type="id"/>
+
 </resources>

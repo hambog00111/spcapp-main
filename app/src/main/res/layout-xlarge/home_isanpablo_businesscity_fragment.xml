@@ -9,6 +9,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+
         <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_marginBottom="20dp"
@@ -16,7 +18,7 @@
             <LinearLayout
                     android:id="@+id/linearLayout3"
                     android:layout_width="match_parent"
-                    android:layout_height="90dp"
+                    android:layout_height="110dp"
                     android:background="@color/colorPrimary"
                     android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -25,12 +27,13 @@
 
                 <RelativeLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
             </LinearLayout>
             <LinearLayout
                     android:id="@+id/linearLayout4"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:background="@drawable/circle_back"
                     android:forceHasOverlappingRendering="true"
                     android:gravity="center"
@@ -42,10 +45,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
                     tools:ignore="UnusedAttribute">
                 <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
 
@@ -53,13 +57,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:id="@+id/txt_title_bc"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:textAlignment="center"
                 android:text="Business in the City"
                 android:textColor="@color/colorPrimary"
-                android:textSize="30sp" />
+                android:textSize="35sp"
+                tools:ignore="HardcodedText" />
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -70,13 +75,14 @@
                 android:orientation="horizontal">
             <LinearLayout
                     android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                    android:layout_width="300dp"
+                    android:id="@+id/linear_bc_db"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                         android:background="@drawable/logo_bc_db_button"
                         android:fitsSystemWindows="true"
                         android:id="@+id/btn_business_doing_business"
@@ -89,23 +95,25 @@
                         android:text="Doing Business"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
-                        android:textSize="15sp"
+                        android:textSize="21sp"
                         android:padding="3dp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimary"/>
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
             <LinearLayout
                     android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                    android:layout_width="300dp"
+                    android:id="@+id/linear_bc_inv"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                         android:background="@drawable/logo_bc_investment_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
@@ -119,10 +127,11 @@
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:padding="3dp"
-                        android:textSize="15sp"
+                        android:textSize="21sp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimary"/>
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -140,12 +149,13 @@
             <LinearLayout
                     android:layout_marginTop="5dp"
                     android:layout_width="280dp"
+                    android:id="@+id/linear_bc_bplo"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="127dp"
-                        android:layout_height="125dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                         android:id="@+id/btn_business_bplo"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
@@ -154,26 +164,28 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="BPLO Fill-up\nForms"
+                        android:text="BPLO Fill-up Forms"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
-                        android:textSize="15sp"
+                        android:textSize="21sp"
                         android:padding="3dp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimary"/>
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
             <LinearLayout
                     android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                    android:layout_width="300dp"
+                    android:id="@+id/linear_bc_bta"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="130dp"
-                        android:layout_height="125dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
                         android:background="@drawable/logo_bc_bta_button"
@@ -183,14 +195,15 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Business Tax\nAssessment"
+                        android:text="Business Tax Assessment"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
-                        android:textSize="15sp"
+                        android:textSize="21sp"
                         android:padding="3dp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimary"/>
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -205,43 +218,48 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
+
             <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                    android:id="@+id/linear_bc_btp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:id="@+id/btn_business_btp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
                         android:background="@drawable/logo_bc_btp_button"
                         android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:id="@+id/btn_business_btp"
-                        android:layout_gravity="center"/>
+                        android:scaleType="fitCenter" />
+
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Business Tax Payment"
-                        android:textStyle="bold"
                         android:layout_marginTop="5dp"
-                        android:textSize="15sp"
-                        android:padding="3dp"
-                        android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimary"/>
+                        android:padding="3dp"
+                        android:text="Business Tax Payment"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
             <LinearLayout
                     android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                    android:layout_width="300dp"
+                    android:id="@+id/linear_bc_mp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                         android:background="@drawable/logo_bc_p_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
@@ -251,14 +269,15 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Print Mayor's Permit"
-                        android:textStyle="bold"
                         android:layout_marginTop="5dp"
-                        android:padding="3dp"
-                        android:textSize="15sp"
-                        android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimary"/>
+                        android:padding="3dp"
+                        android:text="Print Mayor's Permit"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -275,13 +294,14 @@
 
             <LinearLayout
                     android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                    android:layout_width="300dp"
+                    android:id="@+id/linear_bc_a"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                         android:background="@drawable/logo_bc_amendments_button"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
@@ -294,23 +314,25 @@
                         android:text="Amendments"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
-                        android:textSize="15sp"
+                        android:textSize="21sp"
                         android:padding="3dp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimary"/>
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
             <LinearLayout
                     android:layout_marginTop="5dp"
-                    android:layout_width="280dp"
+                    android:layout_width="300dp"
+                    android:id="@+id/linear_bc_mb"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                         android:background="@drawable/logo_bc_mybusiness_button"
                         android:fitsSystemWindows="true"
                         android:id="@+id/btn_business_mybusiness"
@@ -323,19 +345,23 @@
                         android:text="My Business"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
-                        android:textSize="15sp"
+                        android:textSize="21sp"
                         android:padding="3dp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimary"/>
+                        android:textColor="@color/colorPrimary"
+                        tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
         </LinearLayout>
 
+
+
+
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="140dp"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
@@ -344,36 +370,44 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/phlogo"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="vertical">
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="18dp"
-                        android:text="@string/Reps"
-                        android:textSize="13sp"
-                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:text="@string/republic_of_the_philippines"
                         android:textAlignment="center"
-                        android:textStyle="bold"/>
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp"/>
                 <TextView
-                        android:text="© 2019 San Pablo City Goverment"
+                        android:text="@string/_2019_san_pablo_city_goverment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
+                        android:padding="5dp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
                         android:id="@+id/textView8"
 
                         />
@@ -385,7 +419,8 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/transpa"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
@@ -393,7 +428,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
@@ -401,23 +436,25 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
                 <TextView
-                        android:text="Developed by:"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:gravity="center"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textAlignment="center"
                         android:layout_marginEnd="3dp"
-                        />
+                        android:gravity="center"
+                        android:text="@string/developed_by"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
                 <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="25dp"
+                        android:layout_width="110dp"
+                        android:layout_height="45dp"
                         app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription,TooManyViews" />
             </LinearLayout>
             <LinearLayout
 
@@ -425,10 +462,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <TextView
-                        android:text="Developer: "
+                        android:text="@string/developer_t"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="15sp"
+                        android:layout_height="match_parent"
+                        android:textSize="18sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
                         android:textColor="@color/colorPrimary"
@@ -439,20 +476,19 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:gravity="center"
-
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center"
-                            />
+                            tools:ignore="TooManyViews" />
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:gravity="center"
 
                             android:textColor="@color/colorPrimary"
@@ -461,6 +497,7 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
 
     </LinearLayout>
 </ScrollView>

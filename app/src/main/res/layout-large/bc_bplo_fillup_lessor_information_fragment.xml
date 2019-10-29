@@ -12,12 +12,8 @@
 
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
-                  android:orientation="vertical">
-
-
-
-
-
+                  android:orientation="vertical"
+            tools:ignore="UselessParent">
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
@@ -37,50 +33,55 @@
 
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:hint="Last Name"
+                      android:hint="@string/last_name"
                       android:textColor="@color/darkgray"
                       android:textColorHint="@color/lightgray"
                       android:textSize="18sp"
                       android:inputType="textPersonName"
-                      android:id="@+id/txt_bplo_lessor_info_lname"/>
+                      android:id="@+id/txt_bplo_lessor_info_lname"
+                    tools:ignore="Autofill" />
 
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:hint="First Name"
+                      android:hint="@string/first_name"
                       android:textColor="@color/darkgray"
                       android:textColorHint="@color/lightgray"
                       android:textSize="18sp"
                       android:inputType="textPersonName"
-                      android:id="@+id/txt_bplo_lessor_info_fname"/>
+                      android:id="@+id/txt_bplo_lessor_info_fname"
+                    tools:ignore="Autofill" />
 
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:hint="Middle Name"
+                      android:hint="@string/middle_name"
                       android:textColor="@color/darkgray"
                       android:textColorHint="@color/lightgray"
                       android:textSize="18sp"
                       android:inputType="textPersonName"
-                      android:id="@+id/txt_bplo_lessor_info_mname"/>
+                      android:id="@+id/txt_bplo_lessor_info_mname"
+                    tools:ignore="Autofill" />
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:textSize="18sp"
                       android:inputType="textPostalAddress"
-                      android:hint="Lessor Address"
+                      android:hint="@string/lessor_address"
                       android:textColor="@color/darkgray"
                       android:textColorHint="@color/lightgray"
                       android:clickable="false"
-                      android:id="@+id/txt_bplo_lessor_info_lessor_address"/>
+                      android:id="@+id/txt_bplo_lessor_info_lessor_address"
+                    tools:ignore="Autofill" />
 
 
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:textSize="18sp"
                       android:inputType="textPostalAddress"
-                      android:hint="Street"
+                      android:hint="@string/street"
                       android:textColor="@color/darkgray"
                       android:textColorHint="@color/lightgray"
                       android:clickable="false"
-                      android:id="@+id/txt_bplo_lessor_info_street"/>
+                      android:id="@+id/txt_bplo_lessor_info_street"
+                    tools:ignore="Autofill" />
 
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
@@ -131,7 +132,7 @@
                               android:id="@+id/txt_bplo_lessor_info_city"/>
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
-                              android:textSize="13sp"
+                              android:textSize="18sp"
                               android:inputType="phone"
                               android:hint="Contact Number"
                               android:textColor="@color/darkgray"

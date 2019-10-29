@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/ll_bplo_1"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/text_border4">
+
+            <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="@color/darkgray"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lessor_information" />
+
+            <EditText android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/last_name"
+                    android:textColor="@color/darkgray"
+                    android:textColorHint="@color/lightgray"
+                    android:textSize="20sp"
+                    android:inputType="textPersonName"
+                    android:id="@+id/txt_bplo_lessor_info_lname"
+                    tools:ignore="Autofill" />
+
+            <EditText android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/first_name"
+                    android:textColor="@color/darkgray"
+                    android:textColorHint="@color/lightgray"
+                    android:textSize="20sp"
+                    android:inputType="textPersonName"
+                    android:id="@+id/txt_bplo_lessor_info_fname"
+                    tools:ignore="Autofill" />
+
+            <EditText android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/middle_name"
+                    android:textColor="@color/darkgray"
+                    android:textColorHint="@color/lightgray"
+                    android:textSize="20sp"
+                    android:inputType="textPersonName"
+                    android:id="@+id/txt_bplo_lessor_info_mname"
+                    tools:ignore="Autofill" />
+            <EditText android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:inputType="textPostalAddress"
+                    android:hint="@string/lessor_address"
+                    android:textColor="@color/darkgray"
+                    android:textColorHint="@color/lightgray"
+                    android:clickable="false"
+                    android:id="@+id/txt_bplo_lessor_info_lessor_address"
+                    tools:ignore="Autofill" />
+
+
+            <EditText android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:inputType="textPostalAddress"
+                    android:hint="@string/street"
+                    android:textColor="@color/darkgray"
+                    android:textColorHint="@color/lightgray"
+                    android:clickable="false"
+                    android:id="@+id/txt_bplo_lessor_info_street"
+                    tools:ignore="Autofill" />
+
+            <EditText android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:inputType="textPostalAddress"
+                    android:hint="Subdivision"
+                    android:textColor="@color/darkgray"
+                    android:textColorHint="@color/lightgray"
+                    android:clickable="false"
+                    android:id="@+id/txt_bplo_lessor_info_subdivision"
+                    tools:ignore="Autofill,HardcodedText" />
+
+            <Spinner android:layout_width="180dp"
+                    android:id="@+id/spinner_bplo_lessor_info_district"
+                    android:layout_height="wrap_content"/>
+
+
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+
+                    <EditText
+                            android:id="@+id/txt_bplo_lessor_info_house_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/house_no_bldg_no"
+                            android:inputType="number"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="20sp"
+                            tools:ignore="Autofill" />
+
+
+                    <EditText
+                            android:id="@+id/txt_bplo_lessor_info_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:inputType="text"
+                            android:text="@string/san_pablo_city"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="20sp"
+                            tools:ignore="Autofill,LabelFor,UnusedAttribute" />
+
+                    <EditText
+                            android:id="@+id/txt_bplo_lessor_info_contact_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/contact_number"
+                            android:inputType="phone"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="20sp"
+                            tools:ignore="Autofill" />
+
+                    <EditText
+                            android:id="@+id/txt_bplo_lessor_info_email_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email@adress"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="20sp"
+                            tools:ignore="Autofill" />
+                </LinearLayout>
+
+
+                <LinearLayout android:layout_width="320dp"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:inputType="number"
+                            android:hint="@string/unit_no"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:id="@+id/txt_bplo_lessor_info_unit_num"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contextClickable="false"
+                            android:textSize="20sp"
+                            android:inputType="date"
+                            android:text="@string/laguna"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:clickable="false"
+                            android:id="@+id/txt_bplo_lessor_info_province"
+                            tools:ignore="Autofill,LabelFor,UnusedAttribute" />
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:inputType="number"
+                            android:hint="@string/pin"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:id="@+id/txt_bplo_lessor_info_pin"
+                            tools:ignore="Autofill,TextFields" />
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:inputType="number"
+                            android:hint="@string/monthly_rental"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:id="@+id/txt_bplo_lessor_info_monthly_rental"
+                            tools:ignore="Autofill" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

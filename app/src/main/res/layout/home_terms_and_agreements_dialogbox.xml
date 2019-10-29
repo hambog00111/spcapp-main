@@ -12,13 +12,12 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:text="Terms and Agreements"
+            android:text="@string/terms_and_agreements"
             android:textColor="@color/white"/>
 
     <ScrollView
             android:layout_width="match_parent"
             android:paddingTop="5dp"
-
             android:layout_height="250dp">
 
         <me.biubiubiu.justifytext.library.JustifyTextView
@@ -50,7 +49,7 @@
                 android:layout_gravity="end"
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
-                android:text=" I ACCEPT"/>
+                android:text="@string/i_accept"/>
 
 
     </LinearLayout>

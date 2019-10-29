@@ -28,7 +28,8 @@
 
                 <RelativeLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
 
             </LinearLayout>
 
@@ -51,27 +52,28 @@
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
 
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
+
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-        android:orientation="vertical">
+            android:orientation="vertical">
         <TextView
-                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="REGISTER"
-
-
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="30sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
 
         <android.support.v7.widget.CardView
                 android:layout_margin="5dp"
@@ -101,7 +103,8 @@
                     android:textSize="23sp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
 
 
 
@@ -114,7 +117,8 @@
                       android:textSize="20sp"
                       android:inputType="textPersonName"
                       android:textColorHint="@color/lightgray"
-                      android:hint="Last Name"/>
+                      android:hint="@string/last_name"
+                    tools:ignore="Autofill" />
 
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
@@ -125,7 +129,8 @@
                       android:textSize="20sp"
                       android:inputType="textPersonName"
                       android:textColorHint="@color/lightgray"
-                      android:hint="First Name"/>
+                      android:hint="@string/first_name"
+                    tools:ignore="Autofill" />
 
 
             <EditText android:layout_width="match_parent"
@@ -137,7 +142,8 @@
                       android:textSize="20sp"
                       android:inputType="textPersonName"
                       android:textColorHint="@color/lightgray"
-                      android:hint="Middle Name"/>
+                      android:hint="@string/middle_name"
+                    tools:ignore="Autofill" />
 
 
             <TextView
@@ -152,7 +158,8 @@
                     android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
                     android:textColorHint="@color/darkgray"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    tools:ignore="HardcodedText" />
 
             <EditText android:layout_width="350dp"
                       android:layout_height="wrap_content"
@@ -163,13 +170,14 @@
                       android:inputType="phone"
                       android:textSize="20sp"
                       android:textColorHint="@color/lightgray"
-                      android:hint="09 xxxx xxx xxx" />
+                      android:hint="09 xxxx xxx xxx"
+                    tools:ignore="Autofill,HardcodedText" />
 
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Telephone Number:"
+                    android:text="@string/telephone_number"
                     android:textStyle="bold"
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
@@ -199,7 +207,8 @@
                                   android:inputType="phone"
                                   android:textSize="20sp"
                                   android:textColorHint="@color/lightgray"
-                                  android:hint="(049)"/>
+                                  android:hint="@string/_049"
+                                tools:ignore="Autofill" />
                         <TextView android:layout_width="10dp"
                                   android:text="+"
                                   android:layout_marginTop="10dp"
@@ -207,13 +216,13 @@
                                   android:textColor="@color/darkgray"
                                   android:textAlignment="center"
                                   android:layout_height="match_parent"
-                        />
+                                tools:ignore="HardcodedText" />
                     </LinearLayout>
                     <TextView android:layout_width="90dp"
                               android:layout_height="wrap_content"
                               android:textColor="@color/darkgray"
                               android:textSize="18sp"
-                              android:text="Area Code"
+                              android:text="@string/area_code"
                               android:textStyle="italic"
                               android:layout_gravity="center"
                               android:gravity="center"
@@ -235,7 +244,8 @@
                               android:inputType="phone"
                               android:textSize="20sp"
                               android:textColorHint="@color/lightgray"
-                              android:hint="5030-538"/>
+                              android:hint="@string/_5030_538"
+                            tools:ignore="Autofill" />
                     <TextView android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:textColor="@color/darkgray"
@@ -247,7 +257,7 @@
                               android:layout_marginStart="5dp"
                               android:layout_marginEnd="5dp"
                               android:textAlignment="center"
-                    />
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -262,11 +272,12 @@
                       android:textSize="20sp"
                       android:inputType="textEmailAddress"
                       android:textColorHint="@color/lightgray"
-                      android:hint="example@gmail.com"/>
+                      android:hint="@string/example_gmail_com"
+                    tools:ignore="Autofill" />
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="*please enter your own valid email address*"
+                    android:text="@string/please_enter_your_own_valid_email_address"
                     android:textStyle="italic"
                     android:layout_marginStart="10dp"
                     android:paddingBottom="10dp"
@@ -299,7 +310,7 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Login Information"
+                    android:text="@string/login_information"
                     android:textStyle="bold"
                     android:background="@color/colorPrimary"
                     android:paddingBottom="10dp"
@@ -308,7 +319,8 @@
                     android:paddingStart="5dp"
                     android:textColor="@color/white"
                     android:layout_marginBottom="5dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    tools:ignore="RtlSymmetry" />
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -320,7 +332,8 @@
                     android:textSize="20sp"
                     android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    tools:ignore="HardcodedText" />
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:id="@+id/txt_assess_username"
@@ -330,7 +343,8 @@
                       android:textSize="20sp"
                       android:inputType="text"
                       android:textColorHint="@color/lightgray"
-                      android:hint="Username"/>
+                      android:hint="@string/username"
+                    tools:ignore="Autofill" />
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -344,7 +358,8 @@
                     android:textColorHint="@color/darkgray"
                     android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    tools:ignore="HardcodedText" />
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -357,7 +372,7 @@
                     android:textColor="@color/darkgray"
                     android:layout_marginBottom="5dp"
                     android:layout_gravity="center"
-            />
+                    tools:ignore="HardcodedText" />
             <EditText android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:id="@+id/txt_assess_password"
@@ -367,13 +382,14 @@
                       android:textSize="20sp"
                       android:inputType="textWebPassword"
                       android:textColorHint="@color/lightgray"
-                      android:hint="password"/>
+                      android:hint="password"
+                    tools:ignore="Autofill,HardcodedText" />
 
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Confirm Password:"
+                    android:text="@string/confirm_password"
                     android:textStyle="bold"
                     android:layout_marginStart="10dp"
 
@@ -392,7 +408,8 @@
                     android:textSize="20sp"
                     android:inputType="textWebPassword"
                     android:textColorHint="@color/lightgray"
-                    android:hint="confirm password"/>
+                    android:hint="confirm password"
+                    tools:ignore="Autofill,HardcodedText" />
             <android.support.design.widget.TextInputLayout
                     android:id="@+id/txt_assess_ip"
                     android:layout_width="match_parent"
@@ -408,7 +425,7 @@
                         android:text="192.168.100.207:8080"
                         android:inputType="textPassword"
 
-                />
+                        tools:ignore="HardcodedText" />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
@@ -429,7 +446,8 @@
                     android:layout_margin="10dp"
                     android:text="Register"
                     android:id="@+id/btn_asses_register"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button android:layout_width="100dp"
                     android:layout_height="40dp"
@@ -441,7 +459,8 @@
                     android:layout_margin="10dp"
                     android:text="clear all"
                     android:id="@+id/btn_clearall"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    tools:ignore="ButtonStyle,HardcodedText" />
 
 
             <Button android:layout_width="90dp"
@@ -454,7 +473,8 @@
                     android:layout_margin="10dp"
                     android:text="Cancel"
                     android:id="@+id/btn_assess_cancel"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    tools:ignore="ButtonOrder,ButtonStyle,HardcodedText" />
 
         </LinearLayout>
 
@@ -473,7 +493,8 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/phlogo"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -495,7 +516,7 @@
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp"/>
                 <TextView
-                        android:text="© 2019 San Pablo City Goverment"
+                        android:text="@string/_2019_san_pablo_city_goverment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textSize="13sp"
@@ -514,7 +535,8 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/transpa"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
@@ -530,9 +552,10 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
                 <TextView
-                        android:text="Developed by:"
+                        android:text="@string/developed_by"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
@@ -546,7 +569,8 @@
                         android:layout_width="90dp"
                         android:layout_height="25dp"
                         app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
             <LinearLayout
 
@@ -562,28 +586,26 @@
                         android:layout_marginStart="5dp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        />
+                        tools:ignore="HardcodedText" />
                 <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:gravity="center"
-
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center"
                             />
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:gravity="center"
-
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center"
                             />

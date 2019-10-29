@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-<ScrollView android:layout_width="match_parent"
-            android:id="@+id/scrollView"
-            android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent"
+                    android:id="@+id/scrollView"
+                    android:layout_height="match_parent">
+
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:orientation="vertical">
@@ -19,8 +19,8 @@
                    android:fitsSystemWindows="true"
                    android:layout_gravity="center"
                    android:scaleType="fitCenter"
-                android:layout_marginBottom="15dp"
-                />
+                   android:layout_marginBottom="15dp"
+                tools:ignore="ContentDescription" />
 
         <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -41,7 +41,7 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Office Vicinity Map"
+                    android:text="@string/office_vicinity_map"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:paddingBottom="5dp"
@@ -50,18 +50,21 @@
                     android:textSize="20sp"
                     android:textColor="@color/white"
                     android:layout_gravity="center" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_margin="10dp"
-                android:layout_gravity="center"
-                >
+                android:layout_gravity="center">
+
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:orientation="horizontal"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    tools:ignore="UselessParent">
+
             <LinearLayout
                     android:layout_width="160dp"
                     android:layout_gravity="center"
@@ -73,73 +76,74 @@
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="1. Doña Leonila Park"/>
+                          android:text="1. Doña Leonila Park"
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="2. Bantayog ng mga Bayani"/>
+                          android:text="@string/_2_bantayog_ng_mga_bayani"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="3. Old Capitol Bldg."/>
+                          android:text="@string/_3_old_capitol_bldg"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="4. One Stop Processing Center"/>
+                          android:text="@string/_4_one_stop_processing_center"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="5. Department of Justice"/>
+                          android:text="@string/_5_department_of_justice"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="6. Pamana Hall"/>
+                          android:text="@string/_6_pamana_hall"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="7. ABC bldg."/>
+                          android:text="@string/_7_abc_bldg"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="8. Vice Mayor's Office"/>
+                          android:text="@string/_8_vice_mayor_s_office"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="9. City Governance Bldg."/>
+                          android:text="@string/_9_city_governance_bldg"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="10. SPC Police Station"/>
+                          android:text="@string/_10_spc_police_station"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="11. BJMP"/>
+                          android:text="@string/_11_bjmp"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="12. City Prosecutor's Office"/>
+                          android:text="@string/_12_city_prosecutor_s_office"/>
 
             </LinearLayout>
 
@@ -154,67 +158,67 @@
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="13. PhilPost"/>
+                          android:text="@string/_13_philpost"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="14. Register of Deeds"/>
+                          android:text="@string/_14_register_of_deeds"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="15. City Library"/>
+                          android:text="@string/_15_city_library"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="16. PNP Lock-Up/\nDetention Cell"/>
+                          android:text="@string/_16_pnp_lock_up_ndetention_cell"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="17. Engineering Bldg."/>
+                          android:text="@string/_17_engineering_bldg"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="18. CHRMO Bldg."/>
+                          android:text="@string/_18_chrmo_bldg"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="19. SPC Chamber of\nCommerce"/>
+                          android:text="@string/_19_spc_chamber_of_ncommerce"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="20. CSWMO"/>
+                          android:text="@string/_20_cswmo"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="21. Girl Scout Council"/>
+                          android:text="@string/_21_girl_scout_council"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="22. Hagdang Bato"/>
+                          android:text="@string/_22_hagdang_bato"/>
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginBottom="5dp"
                           android:textColor="@color/darkgray"
                           android:textSize="13sp"
-                          android:text="23. Bonifacio Shrine"/>
+                          android:text="@string/_23_bonifacio_shrine"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -226,7 +230,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mission and Vision"
+                android:text="@string/mission_and_vision"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:padding="5dp"
@@ -235,9 +239,7 @@
                 android:textSize="23sp"
                 android:background="@color/colorPrimary"
                 android:textColor="@color/white"
-                android:layout_gravity="center"
-        />
-
+                android:layout_gravity="center" />
 
         <ImageView
                 android:layout_width="match_parent"
@@ -246,16 +248,12 @@
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/city_lights2"
-
-
-                />
+                tools:ignore="ContentDescription" />
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
-
 
             <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
@@ -268,15 +266,16 @@
                     android:layout_marginBottom="15dp"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="6dp">
+
                 <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                        android:orientation="vertical">
 
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="MISSION"
+                            android:text="@string/mission"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:paddingBottom="5dp"
@@ -284,20 +283,18 @@
                             android:paddingTop="5dp"
                             android:textSize="20sp"
                             android:textColor="@color/white"
-                            android:layout_gravity="center"
-                            />
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Mission"
-                    android:textColor="@color/darkgray"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="24dp"
-                    android:textSize="13sp" />
+                            android:layout_gravity="center" />
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Mission"
+                            android:textColor="@color/darkgray"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="24dp"
+                            android:textSize="13sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
-
 
             <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
@@ -317,7 +314,7 @@
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="VISION"
+                            android:text="@string/vision"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:paddingBottom="5dp"
@@ -326,14 +323,14 @@
                             android:background="@color/colorPrimary"
                             android:textColor="@color/white"
                             android:layout_gravity="center" />
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Vision"
-                    android:textColor="@color/darkgray"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="24dp"
-                    android:textSize="13sp"/>
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Vision"
+                            android:textColor="@color/darkgray"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="24dp"
+                            android:textSize="13sp"/>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -355,16 +352,17 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Our 15-point service standards for clients"
+                        android:text="@string/our_15_point_service_standards_for_clients"
                         android:textStyle="bold"
-                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
                         android:paddingBottom="5dp"
                         android:paddingTop="5dp"
                         android:textSize="18sp"
                         android:background="@color/colorPrimary"
                         android:textColor="@color/white"
                         android:layout_marginBottom="5dp"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        tools:ignore="RtlSymmetry" />
             <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -396,16 +394,17 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="PERFORMANCE PLEDGE"
+                        android:text="@string/performance_pledge"
                         android:textStyle="bold"
-                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
                         android:paddingBottom="5dp"
                         android:paddingTop="5dp"
                         android:background="@color/colorPrimary"
                         android:textSize="20sp"
                         android:textColor="@color/white"
                         android:layout_marginBottom="5dp"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        tools:ignore="RtlSymmetry" />
 
             <TextView
                     android:layout_marginTop="10dp"
@@ -424,7 +423,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="A"
+                        android:text="@string/a"
                         android:textStyle="bold"
                         android:textColor="@color/bluess"
                         android:layout_marginStart="22dp"
@@ -445,7 +444,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="M"
+                        android:text="@string/m"
                         android:textStyle="bold"
                         android:textColor="@color/bluess"
                         android:layout_marginStart="22dp"
@@ -466,7 +465,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="A"
+                        android:text="@string/a"
                         android:textStyle="bold"
                         android:textColor="@color/bluess"
                         android:layout_marginStart="22dp"
@@ -487,7 +486,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="N"
+                        android:text="@string/n"
                         android:textStyle="bold"
                         android:textColor="@color/bluess"
                         android:layout_marginStart="22dp"
@@ -508,7 +507,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="T"
+                        android:text="@string/t"
                         android:textStyle="bold"
                         android:textColor="@color/bluess"
                         android:layout_marginStart="22dp"
@@ -529,7 +528,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="E"
+                        android:text="@string/e"
                         android:textStyle="bold"
                         android:textColor="@color/bluess"
                         android:layout_marginStart="22dp"
@@ -568,13 +567,14 @@
                 android:layout_height="wrap_content"
                 android:text="AGENCY MANDATE"
                 android:textStyle="bold"
-                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                tools:ignore="HardcodedText,RtlSymmetry" />
             <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -609,7 +609,7 @@
                         android:layout_height="wrap_content"
                         android:text="STRATEGIC DIRECTIONS"
                         android:textStyle="bold"
-                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
                         android:paddingBottom="5dp"
                         android:paddingTop="5dp"
                         android:textSize="20sp"
@@ -617,7 +617,8 @@
                         android:textColor="@color/white"
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
             <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -634,13 +635,14 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="TooManyViews">
 
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CITY LOCAL OFFICIALS"
+                    android:text="@string/city_local_officials"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:paddingBottom="8dp"
@@ -1241,10 +1243,9 @@
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_marginTop="10dp"
-                      android:id="@+id/clickbutton"
+                android:id="@+id/clickbutton"
                       android:layout_height="wrap_content"
-                      android:orientation="vertical"
-                tools:ignore="InvalidId">
+                      android:orientation="vertical">
 
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"

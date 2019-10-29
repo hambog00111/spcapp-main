@@ -25,7 +25,8 @@
 
                 <RelativeLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
 
             </LinearLayout>
 
@@ -48,7 +49,8 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -59,7 +61,7 @@
                 android:paddingStart="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="BPLO Register - Step 1"
+                android:text="@string/bplo_register_step_1"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="25sp"
@@ -94,7 +96,8 @@
                     android:paddingBottom="5dp"
                     android:textSize="15sp"
                     android:gravity="center"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
             <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
@@ -124,25 +127,26 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="INSTRUCTION"
+                    android:text="@string/instruction"
                     android:textColor="@color/white"
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:textSize="15sp"
                     android:paddingStart="10dp"
                     android:background="@color/colorPrimary"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="1.  Provide accurate information. Incomplete form will not be proceed in the next step."
+                    android:text="@string/_1_provide_accurate_information_incomplete_form_will_not_be_proceed_in_the_next_step"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_margin="5dp"
                     android:textSize="13sp"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="2.  If the context is unclickable please proceed to the next context. It will be automatic system generated."
+                    android:text="@string/_2_if_the_context_is_unclickable_please_proceed_to_the_next_context_it_will_be_automatic_system_generated"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_margin="5dp"
                     android:textSize="13sp"/>
@@ -166,7 +170,8 @@
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:orientation="horizontal"
-                          android:gravity="center">
+                          android:gravity="center"
+                    tools:ignore="UselessParent">
                 <LinearLayout android:layout_width="170dp"
                               android:layout_height="70dp"
                               android:orientation="vertical"
@@ -176,20 +181,21 @@
                               android:textColor="@color/darkgray"
                               android:textStyle="bold"
                               android:textSize="13sp"
-                              android:text="Businesss ID"/>
+                              android:text="@string/businesss_id"/>
 
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:contextClickable="false"
                               android:textSize="13sp"
                               android:inputType="number"
-                              android:hint="1223"
+                              android:hint="@string/_1223"
                               android:clickable="false"
                                 android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/darkgray"
                               android:id="@+id/txt_bplo_business_id"
-                              tools:targetApi="m"/>
+                              tools:targetApi="m"
+                            tools:ignore="Autofill" />
                 </LinearLayout>
 
                 <LinearLayout android:layout_width="170dp"
@@ -199,7 +205,7 @@
 
                     <TextView android:layout_width="match_parent"
                               android:layout_height="wrap_content"
-                              android:text="Mode of Payment:"
+                              android:text="@string/mode_of_payment"
                               android:textColor="@color/darkgray"
                               android:textSize="13sp"
                               android:textStyle="bold"/>
@@ -209,10 +215,11 @@
                               android:layout_height="wrap_content"
                               android:textColor="@color/darkgray"
                               android:textSize="13sp"
-                              android:text="Annually"
+                              android:text="@string/annually"
                               android:clickable="false"
                               android:contextClickable="false"
-                              android:id="@+id/rb_mode_of_payment_annually"/>
+                              android:id="@+id/rb_mode_of_payment_annually"
+                            tools:ignore="Autofill,LabelFor,TextFields,UnusedAttribute" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -253,30 +260,33 @@
                               android:textColor="@color/darkgray"
                               android:textStyle="bold"
                               android:textSize="13sp"
-                              android:text="Date Application \n"/>
+                              android:text="Date Application\n"
+                            tools:ignore="HardcodedText" />
 
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:contextClickable="false"
                               android:textSize="13sp"
                               android:inputType="date"
-                              android:hint="yy/dd/mm"
+                              android:hint="@string/yy_dd_mm"
                               android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
-                              android:id="@+id/txt_bplo_date_application"/>
+                              android:id="@+id/txt_bplo_date_application"
+                            tools:ignore="Autofill,UnusedAttribute" />
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:contextClickable="false"
                               android:textSize="13sp"
                               android:inputType="number"
-                              android:hint="Reference No."
+                              android:hint="@string/reference_no"
                               android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:clickable="false"
-                              android:id="@+id/txt_bplo_ref_number"/>
+                              android:id="@+id/txt_bplo_ref_number"
+                            tools:ignore="Autofill,UnusedAttribute" />
                     <Spinner android:layout_width="match_parent"
                              android:layout_height="wrap_content"
                              android:spinnerMode="dropdown"
@@ -301,29 +311,33 @@
                               android:hint="DTI/SEC/CDA\n Registration No."
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_dti_registration_num"/>
+                              android:id="@+id/txt_bplo_dti_registration_num"
+                            tools:ignore="Autofill,HardcodedText" />
                     <TextView android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:textColor="@color/darkgray"
                               android:textStyle="bold"
                               android:textSize="13sp"
-                              android:text="DTI/SEC/CDA Date of Registration:"/>
+                              android:text="DTI/SEC/CDA Date of Registration:"
+                            tools:ignore="HardcodedText" />
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:textSize="13sp"
                               android:inputType="date"
-                              android:hint="yy/dd/mm"
+                              android:hint="@string/yy_dd_mm"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_date_dti_registration"/>
+                              android:id="@+id/txt_bplo_date_dti_registration"
+                            tools:ignore="Autofill" />
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:textSize="13sp"
                               android:inputType="number"
-                              android:hint="TIN no."
+                              android:hint="@string/tin_no"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_tin_num"/>
+                              android:id="@+id/txt_bplo_tin_num"
+                            tools:ignore="Autofill" />
                     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"/>
                 </LinearLayout>
             </LinearLayout>
@@ -339,7 +353,7 @@
                           android:layout_height="wrap_content"
                           android:textSize="13sp"
                           android:textColor="@color/darkgray"
-                          android:text="Are you enjoying tax incentive from any government?" />
+                          android:text="@string/are_you_enjoying_tax_incentive_from_any_government" />
 
 
                 <RadioGroup android:layout_width="match_parent"
@@ -349,13 +363,13 @@
 
                     <RadioButton android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:text="Yes"
+                                 android:text="@string/yes"
                                  android:textSize="13sp"
                                  android:textColor="@color/darkgray"
                                  android:id="@+id/rb_bplo_government_yes"/>
                     <RadioButton android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:text="No"
+                                 android:text="@string/no"
                                  android:textSize="13sp"
                                  android:textColor="@color/darkgray"
                                  android:id="@+id/rb_bplo_government_no"/>
@@ -363,18 +377,19 @@
                 </RadioGroup>
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:hint="Please Sepicify Entity"
+                          android:hint="@string/please_specify_entity"
                           android:textColor="@color/darkgray"
                           android:textColorHint="@color/lightgray"
                           android:textSize="13sp"
                           android:maxLength="200"
-                          android:id="@+id/txt_bplo_government_entity"/>
+                          android:id="@+id/txt_bplo_government_entity"
+                        tools:ignore="Autofill,TextFields" />
 
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:textSize="13sp"
                           android:textColor="@color/darkgray"
-                          android:text="Is the Establishment CCTV equipped?"/>
+                          android:text="@string/is_the_establishment_cctv_equipped"/>
                 <RadioGroup android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -382,13 +397,13 @@
 
                     <RadioButton android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:text="Yes"
+                                 android:text="@string/yes"
                                  android:textSize="13sp"
                                  android:textColor="@color/darkgray"
                                  android:id="@+id/rb_bplo_cctv_yes"/>
                     <RadioButton android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:text="No"
+                                 android:text="@string/no"
                                  android:textSize="13sp"
                                  android:textColor="@color/darkgray"
                                  android:id="@+id/rb_cctv_no"/>
@@ -396,13 +411,14 @@
 
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:hint="Number of Cameras"
+                          android:hint="@string/number_of_cameras"
                           android:textColor="@color/darkgray"
                           android:textColorHint="@color/lightgray"
                           android:textSize="13sp"
                           android:maxLength="200"
                           android:inputType="number"
-                          android:id="@+id/txt_bplo_cctv_number_of_cameras"/>
+                          android:id="@+id/txt_bplo_cctv_number_of_cameras"
+                        tools:ignore="Autofill" />
             </LinearLayout>
         </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -429,7 +445,8 @@
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp"
                     android:background="@color/colorPrimary"
-                      android:text="Name of Taxpayer / Registrant"/>
+                      android:text="@string/name_of_taxpayer_registrant"
+                    tools:ignore="RtlSymmetry" />
 
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
@@ -438,64 +455,70 @@
 
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:hint="Last Name"
+                          android:hint="@string/last_name"
                           android:textColor="@color/darkgray"
                           android:textColorHint="@color/lightgray"
                           android:textSize="13sp"
                           android:inputType="textPersonName"
-                          android:id="@+id/txt_bplo_name_of_taxpayer_lname"/>
+                          android:id="@+id/txt_bplo_name_of_taxpayer_lname"
+                        tools:ignore="Autofill" />
 
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:hint="First Name"
+                          android:hint="@string/first_name"
                           android:textColor="@color/darkgray"
                           android:textColorHint="@color/lightgray"
                           android:textSize="13sp"
                           android:inputType="textPersonName"
-                          android:id="@+id/txt_bplo_name_of_taxpayer_fname"/>
+                          android:id="@+id/txt_bplo_name_of_taxpayer_fname"
+                        tools:ignore="Autofill" />
 
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:hint="Middle Name"
+                          android:hint="@string/middle_name"
                           android:textColor="@color/darkgray"
                           android:textColorHint="@color/lightgray"
                           android:textSize="13sp"
                           android:inputType="textPersonName"
-                          android:id="@+id/txt_bplo_name_of_taxpayer_mname"/>
+                          android:id="@+id/txt_bplo_name_of_taxpayer_mname"
+                        tools:ignore="Autofill" />
 
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:hint="Business Name"
+                          android:hint="@string/business_name"
                           android:textColor="@color/darkgray"
                           android:textColorHint="@color/lightgray"
                           android:textSize="13sp"
                           android:inputType="textPersonName"
-                          android:id="@+id/txt_bplo_name_of_taxpayer_business_name"/>
+                          android:id="@+id/txt_bplo_name_of_taxpayer_business_name"
+                        tools:ignore="Autofill" />
 
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:hint="Trade Name/Franchise"
+                          android:hint="@string/trade_name_franchise"
                           android:textColor="@color/darkgray"
                           android:textColorHint="@color/lightgray"
                           android:textSize="13sp"
                           android:inputType="textPersonName"
-                          android:id="@+id/txt_bplo_name_of_taxpayer_trade_name"/>
+                          android:id="@+id/txt_bplo_name_of_taxpayer_trade_name"
+                        tools:ignore="Autofill" />
 
                 <EditText android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:hint="Name of President/Treasurer Corporation"
+                          android:hint="@string/name_of_president_treasurer_corporation"
                           android:textColor="@color/darkgray"
                           android:textColorHint="@color/lightgray"
                           android:textSize="13sp"
                           android:inputType="textPersonName"
-                          android:id="@+id/txt_bplo_name_of_taxpayer_name_of_president"/>
+                          android:id="@+id/txt_bplo_name_of_taxpayer_name_of_president"
+                        tools:ignore="Autofill" />
 
 
                 <TextView android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:textSize="13sp"
                           android:textColor="@color/darkgray"
-                          android:text="Owners Gender:" />
+                          android:text="@string/owners_gender" />
 
                 <RadioGroup android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -504,19 +527,19 @@
 
                     <RadioButton android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:text="Male"
+                                 android:text="@string/male"
                                  android:textSize="13sp"
                                  android:textColor="@color/darkgray"
                                  android:id="@+id/rb_bplo_name_of_tax_payer_male"/>
                     <RadioButton android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:text="Female"
+                                 android:text="@string/female"
                                  android:textSize="13sp"
                                  android:textColor="@color/darkgray"
                                  android:id="@+id/rb_bplo_name_of_tax_payer_female"/>
                     <RadioButton android:layout_width="wrap_content"
                                  android:layout_height="wrap_content"
-                                 android:text="JP"
+                                 android:text="@string/jp"
                                  android:textSize="13sp"
                                  android:textColor="@color/darkgray"
                                  android:id="@+id/rb_bplo_name_of_tax_payer_jp"/>
@@ -545,9 +568,10 @@
                     android:gravity="center"
                     android:textSize="13sp"
                     android:background="@drawable/text_border2"
-                    android:text="Clear all"
+                    android:text="@string/clear_all"
                     android:layout_gravity="start"
-                    android:id="@+id/txt_bplo_clear_all"/>
+                    android:id="@+id/txt_bplo_clear_all"
+                    tools:ignore="ButtonStyle" />
 
             <Button android:layout_width="100dp"
                     android:layout_height="30dp"
@@ -557,10 +581,11 @@
                     android:layout_marginTop="10dp"
                     android:textStyle="bold"
                     android:textSize="13sp"
-                    android:text="next page"
+                    android:text="@string/next_page"
                     android:background="@drawable/text_border2"
                     android:layout_gravity="right"
-                    android:id="@+id/txt_bplo_next_page"/>
+                    android:id="@+id/txt_bplo_next_page"
+                    tools:ignore="ButtonStyle,RtlHardcoded" />
 
         </LinearLayout>
 
@@ -584,7 +609,7 @@
                         android:layout_width="100dp"
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/phlogo"
-                        />
+                        tools:ignore="ContentDescription" />
 
 
             </LinearLayout>
@@ -598,24 +623,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="18dp"
                         android:text="@string/Reps"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:layout_marginBottom="5dp"/>
+                        android:layout_marginBottom="5dp"
+                        tools:ignore="SmallSp" />
 
                 <TextView
-                        android:text="© 2019 San Pablo City Goverment"
+                        android:text="@string/_2019_san_pablo_city_goverment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
@@ -624,7 +651,8 @@
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
-                        android:id="@+id/textView8"/>
+                        android:id="@+id/textView8"
+                        tools:ignore="SmallSp" />
 
             </LinearLayout>
             <LinearLayout
@@ -635,7 +663,7 @@
                         android:layout_width="100dp"
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/transpa"
-                        />
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
         </LinearLayout>
 
@@ -645,15 +673,17 @@
                 android:layout_height="35dp"
                 android:layout_marginBottom="10dp"
                 android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                tools:ignore="TooManyViews">
 
             <LinearLayout
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
                 <TextView
-                        android:text="Developed by:"
+                        android:text="@string/developed_by"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="13sp"
@@ -667,7 +697,8 @@
                         android:layout_width="80dp"
                         android:layout_height="21dp"
                         app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
             <LinearLayout
 
@@ -675,7 +706,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <TextView
-                        android:text="Developer: "
+                        android:text="@string/developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="13sp"
@@ -689,7 +720,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="13sp"
@@ -697,7 +728,7 @@
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center" />
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="13sp"
