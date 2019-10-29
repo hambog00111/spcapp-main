@@ -102,7 +102,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                                 tv.text = "(049)3000-065"
                              //  holder.resultTv!!.text = ""+number+""
                             //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                                builder.setPositiveButton("Call 2"){dialog, which ->
+                                builder.setPositiveButton("Call"){dialog, which ->
                                     // Do something when user press the positive button
                                     val  intent = Intent(Intent.ACTION_DIAL)
                                     intent.data= Uri.parse("tel:$phoneNumber")

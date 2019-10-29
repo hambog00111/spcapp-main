@@ -52,10 +52,21 @@ package="ph.sanpablocitygov.iSanPablo">
 
     <activity
             android:name=".MainActivity"
-
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
+
+        <intent-filter>
+            <action android:name="android.intent.action.CALL_BUTTON" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:scheme="tel"/>
+        </intent-filter>
+
+        <intent-filter>
+            <action android:name="android.intent.action.DIAL" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:scheme="tel"/>
+        </intent-filter>
     </activity>
     <activity
             android:name=".LoadingActivity"
