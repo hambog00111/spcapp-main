@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical">
 
     <TextView android:layout_width="match_parent"
-              android:text="INVESTMENT"
+              android:text="@string/investment"
               android:layout_gravity="center"
               android:textSize="20sp"
               android:textStyle="bold"
@@ -15,7 +16,8 @@
             android:paddingStart="20dp"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
-              android:layout_height="wrap_content"/>
+              android:layout_height="wrap_content"
+            tools:ignore="RtlSymmetry" />
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -29,7 +31,7 @@
               android:background="@drawable/text_border2"
               android:padding="10dp"
               android:textStyle="bold"
-              android:text="Why Invest in San Pablo City?"
+              android:text="@string/why_invest_in_san_pablo_city"
               android:id="@+id/btn_download_wispc"/>
 
     <TextView android:layout_width="match_parent"
@@ -44,7 +46,7 @@
               android:background="@drawable/text_border2"
               android:padding="10dp"
               android:textStyle="bold"
-              android:text="COMPREHENSIVE DEVELOPMENT PLAN"
+              android:text="@string/comprehensive_development_plan"
               android:id="@+id/btn_business_investment"/>
 
     <TextView android:layout_width="wrap_content"
@@ -56,6 +58,7 @@
               android:layout_margin="20dp"
               android:text="cancel"
               android:id="@+id/btn_invest_cancel"
-              android:textSize="13sp"/>
+              android:textSize="13sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
 
 </LinearLayout>

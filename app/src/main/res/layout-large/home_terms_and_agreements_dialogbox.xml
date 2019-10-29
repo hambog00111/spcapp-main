@@ -12,12 +12,12 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="30sp"
-            android:text="Terms and Agreements"
+            android:text="@string/terms_and_agreements"
             android:textColor="@color/white"/>
 
     <ScrollView
             android:layout_width="match_parent"
-            android:paddingTop="10dp"
+            android:paddingTop="15dp"
 
             android:layout_height="350dp">
 
@@ -49,7 +49,7 @@
                 android:layout_gravity="end"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
-                android:text=" I ACCEPT"/>
+                android:text="@string/i_accept"/>
 
     </LinearLayout>
 

@@ -24,7 +24,8 @@
 
                 <RelativeLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
 
             </LinearLayout>
 
@@ -47,7 +48,8 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -58,7 +60,7 @@
                 android:paddingStart="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Print Mayor's Permit"
+                android:text="@string/print_mayor_s_permit"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="25sp"
@@ -100,7 +102,7 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Payment Official Reciept Number:"
+                    android:text="@string/payment_official_reciept_number"
                     android:textStyle="bold"
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
@@ -118,8 +120,8 @@
                       android:layout_marginEnd="10dp"
                       android:textSize="15sp"
                       android:inputType="number"
-                      android:hint="O.R. Number"
-            />
+                      android:hint="@string/o_r_number"
+                    tools:ignore="Autofill" />
 
             <TextView
                     android:layout_width="match_parent"
@@ -130,7 +132,7 @@
                     android:paddingTop="5dp"
                     android:textColor="@color/darkgray"
                     android:paddingBottom="5dp"
-                    android:text="Valid Email Address:"
+                    android:text="@string/valid_email_address"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -140,15 +142,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:hint="Email Address"
+                    android:hint="@string/email_address"
                     android:inputType="number"
                     android:textColor="@color/darkgray"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    tools:ignore="Autofill,TextFields" />
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="*please enter valid email address of the user*"
+                    android:text="@string/please_enter_valid_email_address_of_the_user"
                     android:textStyle="italic"
                     android:layout_marginStart="10dp"
                     android:paddingBottom="5dp"
@@ -160,7 +163,7 @@
         </LinearLayout>
         </android.support.v7.widget.CardView>
 
-            <LinearLayout android:layout_width="match_parent"
+        <LinearLayout android:layout_width="match_parent"
                           android:layout_height="50dp"
                           android:layout_marginTop="20dp"
                           android:orientation="horizontal">
@@ -173,7 +176,8 @@
                         android:textColor="@color/white"
                         android:background="@drawable/text_border2"
                         android:id="@+id/btn_mp_clear"
-                        android:text="clear"/>
+                        android:text="@string/clear"
+                        tools:ignore="ButtonStyle" />
                 <Button android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -182,7 +186,8 @@
                         android:textColor="@color/white"
                         android:background="@drawable/text_border2"
                         android:id="@+id/btn_mp_send"
-                        android:text="send"/>
+                        android:text="@string/send"
+                        tools:ignore="ButtonStyle" />
 
                 <Button
                         android:id="@+id/btn_mp_back"
@@ -193,7 +198,8 @@
                         android:text="back"
                         android:textColor="@color/white"
                         android:textSize="13sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="ButtonStyle,HardcodedText" />
             </LinearLayout>
 
 
@@ -216,7 +222,7 @@
                         android:layout_width="100dp"
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/phlogo"
-                />
+                        tools:ignore="ContentDescription" />
 
 
             </LinearLayout>
@@ -230,21 +236,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="18dp"
                         android:text="@string/Reps"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp,SpUsage" />
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:layout_marginBottom="5dp"/>
+                        android:layout_marginBottom="5dp"
+                        tools:ignore="SmallSp,SpUsage" />
 
                 <TextView
                         android:id="@+id/textView8"
@@ -253,10 +261,11 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"
                         android:gravity="center"
-                        android:text="© 2019 San Pablo City Goverment"
+                        android:text="@string/_2019_san_pablo_city_goverment"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
 
             </LinearLayout>
             <LinearLayout
@@ -267,7 +276,7 @@
                         android:layout_width="100dp"
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/transpa"
-                />
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
         </LinearLayout>
 
@@ -282,9 +291,10 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
                 <TextView
-                        android:text="Developed by:"
+                        android:text="@string/developed_by"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="13sp"
@@ -298,7 +308,8 @@
                         android:layout_width="80dp"
                         android:layout_height="21dp"
                         app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
             <LinearLayout
 
@@ -306,7 +317,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <TextView
-                        android:text="Developer: "
+                        android:text="@string/developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
@@ -320,7 +331,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
@@ -330,7 +341,7 @@
                             android:textAlignment="center"
                             />
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="13sp"

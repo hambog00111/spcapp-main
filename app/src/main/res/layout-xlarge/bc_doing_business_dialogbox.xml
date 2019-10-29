@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -12,7 +13,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Doing Business"
+                android:text="@string/doing_business"
                 android:textStyle="bold"
                 android:paddingStart="20dp"
                 android:paddingBottom="10dp"
@@ -22,16 +23,15 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
 
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                tools:ignore="RtlSymmetry" />
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Would you like to download the file of procedure and requirements for doing business in San Pablo City?"
-
+                android:text="@string/would_you_like_to_download_the_file_of_procedure_and_requirements_for_doing_business_in_san_pablo_city"
                 android:layout_marginStart="15dp"
                 android:paddingBottom="10dp"
-
                 android:textSize="25sp"
                 android:textColor="@color/darkgray"
                 android:layout_marginBottom="5dp"
@@ -57,7 +57,7 @@
                 android:layout_height="40dp"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="CONFIRM"
+                android:text="@string/confirm"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -68,7 +68,7 @@
                 android:layout_height="40dp"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="CANCEL"
+                android:text="@string/cancel"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold" />

@@ -27,7 +27,8 @@
 
                 <RelativeLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
             </LinearLayout>
             <LinearLayout
                     android:id="@+id/linearLayout4"
@@ -47,14 +48,15 @@
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
         <TextView
              android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Amendments"
+                android:text="@string/amendments"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="30sp"
@@ -97,17 +99,18 @@
                             android:textSize="15sp"
                             android:layout_marginBottom="5dp"
                             android:layout_marginTop="5dp"
-                            tools:ignore="HardcodedText" />
+                            tools:ignore="Autofill,HardcodedText,TextFields" />
                 </LinearLayout>
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/colorPrimary"
-                        android:text="Entries"
+                        android:text="@string/entries"
                         android:layout_marginTop="5dp"
                         android:textSize="18sp"
-                        android:paddingStart="10dp"/>
+                        android:paddingStart="10dp"
+                        tools:ignore="RtlSymmetry" />
 
                 <ListView
                         android:layout_width="match_parent"
@@ -117,7 +120,8 @@
                         android:scrollbars="vertical"
                         android:scrollbarSize="5dp"
                         android:scrollbarStyle="insideInset"
-                        android:nestedScrollingEnabled="true" />
+                        android:nestedScrollingEnabled="true"
+                        tools:ignore="NestedScrolling" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -144,7 +148,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
                         android:padding="5dp"
-                        android:text="BASIC INFORMATION"/>
+                        android:text="@string/basic_information"/>
 
 
                 <EditText
@@ -152,28 +156,31 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkgray"
-                        android:hint="Last Name"
+                        android:hint="@string/last_name"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
-                        android:layout_margin="3dp"/>
+                        android:layout_margin="3dp"
+                        tools:ignore="Autofill" />
                 <EditText
                         android:id="@+id/et_amendments_first_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkgray"
-                        android:hint="First Name"
+                        android:hint="@string/first_name"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
-                        android:layout_margin="3dp"/>
+                        android:layout_margin="3dp"
+                        tools:ignore="Autofill" />
                 <EditText
                         android:id="@+id/et_amendments_middle_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkgray"
-                        android:hint="Middle Name"
+                        android:hint="@string/middle_name"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
-                        android:layout_margin="3dp"/>
+                        android:layout_margin="3dp"
+                        tools:ignore="Autofill" />
 
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -185,11 +192,13 @@
                             android:textSize="15sp"
                             android:layout_margin="3dp"
                             android:textColor="@color/darkgray"
-                            android:text="Type of Business:"/>
+                            android:text="Type of Business:"
+                            tools:ignore="HardcodedText" />
 
                     <ViewFlipper
                             android:layout_width="100dp"
-                            android:layout_height="20dp"/>
+                            android:layout_height="20dp"
+                            tools:ignore="UselessLeaf" />
                 </LinearLayout>
 
 
@@ -205,7 +214,8 @@
                             android:textSize="15sp"
                             android:layout_margin="3dp"
                             android:textColor="@color/darkgray"
-                            android:hint="Business Name"/>
+                            android:hint="@string/business_name"
+                            tools:ignore="Autofill,TextFields" />
                     <EditText
                             android:id="@+id/et_amendments_nature_of_business"
                             android:layout_width="200dp"
@@ -213,7 +223,8 @@
                             android:textSize="15sp"
                             android:layout_margin="3dp"
                             android:textColor="@color/darkgray"
-                            android:hint="Nature of Business"/>
+                            android:hint="@string/nature_of_business"
+                            tools:ignore="Autofill,TextFields" />
                 </LinearLayout>
 
                 <TextView
@@ -221,7 +232,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkgray"
                         android:layout_margin="3dp"
-                        android:text="No. of Employees Residing within: "
+                        android:text="@string/no_of_employees_residing_within"
                         android:textSize="15sp"/>
 
                 <LinearLayout
@@ -237,8 +248,9 @@
                             android:textSize="15sp"
                             android:layout_margin="3dp"
                             android:textColor="@color/darkgray"
-                            android:hint="LGU"
-                            android:inputType="number"/>
+                            android:hint="@string/lgu"
+                            android:inputType="number"
+                            tools:ignore="Autofill" />
 
                     <EditText
                             android:id="@+id/et_amendments_employee_male"
@@ -246,18 +258,20 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Male"
+                            android:hint="@string/male"
                             android:layout_margin="3dp"
-                            android:inputType="number"/>
+                            android:inputType="number"
+                            tools:ignore="Autofill" />
                     <EditText
                             android:id="@+id/et_amendments_employee_Female"
                             android:layout_width="120dp"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Female"
+                            android:hint="@string/female"
                             android:layout_margin="3dp"
-                            android:inputType="number"/>
+                            android:inputType="number"
+                            tools:ignore="Autofill" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -286,7 +300,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
                         android:padding="5dp"
-                        android:text="BUSINESS INFORMATION"/>
+                        android:text="@string/business_information"/>
 
                 <EditText
                         android:layout_width="match_parent"
@@ -294,7 +308,8 @@
                         android:layout_margin="3dp"
                         android:textColor="@color/darkgray"
                         android:textSize="15sp"
-                        android:hint="Business Address"/>
+                        android:hint="Business Address"
+                        tools:ignore="Autofill,HardcodedText,TextFields" />
 
 
                 <LinearLayout
@@ -309,7 +324,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="House No./Bldg. No."/>
+                            android:hint="@string/house_no_bldg_no"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -317,7 +333,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Building Name"/>
+                            android:hint="@string/building_name"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -332,7 +349,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Unit No."/>
+                            android:hint="@string/unit_no"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -340,7 +358,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Street"/>
+                            android:hint="@string/street"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -355,7 +374,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Barangay"/>
+                            android:hint="@string/barangay"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -363,7 +383,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Subdivision"/>
+                            android:hint="@string/subdivision"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -378,7 +399,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:text="San Pablo City"/>
+                            android:text="@string/san_pablo_city"
+                            tools:ignore="Autofill,LabelFor,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -386,7 +408,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:text="Laguna"/>
+                            android:text="@string/laguna"
+                            tools:ignore="Autofill,LabelFor,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -401,7 +424,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Postal Code"/>
+                            android:hint="@string/postal_code"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -409,7 +433,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="sample@email.com"/>
+                            android:hint="@string/sample_email_com"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -424,7 +449,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Tel. Num."/>
+                            android:hint="@string/tel_num"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -432,7 +458,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Cellphone Num."/>
+                            android:hint="@string/cellphone_num"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -460,34 +487,35 @@
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
                         android:padding="5dp"
-                        android:text="OWNER'S INFORMATION"/>
+                        android:text="@string/owner_s_information"/>
 
                 <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkgray"
-                        android:hint="Last Name"
+                        android:hint="@string/last_name"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
-                        android:layout_margin="3dp"/>
+                        android:layout_margin="3dp"
+                        tools:ignore="Autofill" />
                 <EditText
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkgray"
-                        android:hint="First Name"
+                        android:hint="@string/first_name"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
-                        android:layout_margin="3dp"/>
+                        android:layout_margin="3dp"
+                        tools:ignore="Autofill" />
                 <EditText
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkgray"
-                        android:hint="Middle Name"
+                        android:hint="@string/middle_name"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
-                        android:layout_margin="3dp"/>
+                        android:layout_margin="3dp"
+                        tools:ignore="Autofill" />
 
                 <EditText
                         android:layout_width="match_parent"
@@ -495,7 +523,8 @@
                         android:layout_margin="3dp"
                         android:textColor="@color/darkgray"
                         android:textSize="15sp"
-                        android:hint="Owner's Address"/>
+                        android:hint="@string/owner_s_address"
+                        tools:ignore="Autofill,TextFields" />
 
 
                 <LinearLayout
@@ -510,7 +539,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="House No./Bldg. No."/>
+                            android:hint="@string/house_no_bldg_no"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -518,7 +548,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Building Name"/>
+                            android:hint="@string/building_name"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -533,7 +564,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Unit No."/>
+                            android:hint="@string/unit_no"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -541,7 +573,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Street"/>
+                            android:hint="@string/street"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -556,7 +589,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Barangay"/>
+                            android:hint="@string/barangay"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -564,7 +598,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Subdivision"/>
+                            android:hint="@string/subdivision"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -579,7 +614,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:text="San Pablo City"/>
+                            android:text="@string/san_pablo_city"
+                            tools:ignore="Autofill,LabelFor,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -587,7 +623,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:text="Laguna"/>
+                            android:text="@string/laguna"
+                            tools:ignore="Autofill,LabelFor,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -602,7 +639,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Postal Code"/>
+                            android:hint="@string/postal_code"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -610,7 +648,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="sample@email.com"/>
+                            android:hint="@string/sample_email_com"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -625,7 +664,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Tel. Num."/>
+                            android:hint="@string/tel_num"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -633,7 +673,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Cellphone Num."/>
+                            android:hint="Cellphone Num."
+                            tools:ignore="Autofill,HardcodedText,TextFields" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -648,7 +689,8 @@
                 android:background="@drawable/text_border"
                 android:gravity="center"
                 android:elevation="6dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="TooManyViews">
 
 
             <LinearLayout android:layout_width="match_parent"
@@ -662,34 +704,37 @@
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
                         android:padding="5dp"
-                        android:text="LESSOR'S INFORMATION"/>
+                        android:text="@string/lessor_s_information"/>
 
                 <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkgray"
-                        android:hint="Last Name"
+                        android:hint="@string/last_name"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
-                        android:layout_margin="3dp"/>
+                        android:layout_margin="3dp"
+                        tools:ignore="Autofill" />
                 <EditText
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkgray"
-                        android:hint="First Name"
+                        android:hint="@string/first_name"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
-                        android:layout_margin="3dp"/>
+                        android:layout_margin="3dp"
+                        tools:ignore="Autofill" />
                 <EditText
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/darkgray"
-                        android:hint="Middle Name"
+                        android:hint="@string/middle_name"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
-                        android:layout_margin="3dp"/>
+                        android:layout_margin="3dp"
+                        tools:ignore="Autofill" />
 
                 <EditText
                         android:layout_width="match_parent"
@@ -697,7 +742,8 @@
                         android:layout_margin="3dp"
                         android:textColor="@color/darkgray"
                         android:textSize="15sp"
-                        android:hint="Owner's Address"/>
+                        android:hint="@string/owner_s_address"
+                        tools:ignore="Autofill,TextFields" />
 
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -711,7 +757,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Monthly Rental"/>
+                            android:hint="@string/monthly_rental"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -719,7 +766,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Tel. Num."/>
+                            android:hint="@string/tel_num"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
 
@@ -735,7 +783,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Mobile Num."/>
+                            android:hint="@string/mobile_num"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -743,7 +792,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="sample@email.com"/>
+                            android:hint="@string/sample_email_com"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -770,7 +820,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
                         android:padding="5dp"
-                        android:text="BUSINESS ACTIVITY"/>
+                        android:text="@string/business_activity"/>
 
 
                 <LinearLayout
@@ -785,7 +835,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Line of Business"/>
+                            android:hint="@string/line_of_business"
+                            tools:ignore="Autofill,TextFields" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -800,7 +851,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Code"/>
+                            android:hint="@string/code"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -808,7 +860,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Sub Category"/>
+                            android:hint="@string/sub_category"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
 
@@ -824,7 +877,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Unit's No."/>
+                            android:hint="@string/unit_s_no"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -832,7 +886,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Essentials"/>
+                            android:hint="@string/essentials"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
                 <LinearLayout
@@ -847,7 +902,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Non Essentials"/>
+                            android:hint="@string/non_essentials"
+                            tools:ignore="Autofill,TextFields" />
 
                     <EditText
                             android:layout_width="200dp"
@@ -855,7 +911,8 @@
                             android:layout_margin="3dp"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:hint="Capitalization"/>
+                            android:hint="@string/capitalization"
+                            tools:ignore="Autofill,TextFields" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -866,15 +923,14 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="5dp"
                 android:textColor="@color/colorPrimary"
-
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textSize="15sp"
-                android:text="Back to User's Profile"
+                android:text="@string/back_to_user_s_profile"
                 android:gravity="center"
-
                 android:layout_gravity="right"
-                android:id="@+id/txt_amen_back"/>
+                android:id="@+id/txt_amen_back"
+                tools:ignore="RtlHardcoded" />
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -886,7 +942,8 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/phlogo"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -908,7 +965,7 @@
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp"/>
                 <TextView
-                        android:text="© 2019 San Pablo City Goverment"
+                        android:text="@string/_2019_san_pablo_city_goverment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textSize="13sp"
@@ -927,7 +984,8 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/transpa"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
@@ -940,12 +998,12 @@
                 android:orientation="horizontal">
 
             <LinearLayout
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
                 <TextView
-                        android:text="Developed by:"
+                        android:text="@string/developed_by"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
@@ -959,7 +1017,8 @@
                         android:layout_width="90dp"
                         android:layout_height="25dp"
                         app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
             <LinearLayout
 
@@ -967,7 +1026,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <TextView
-                        android:text="Developer: "
+                        android:text="@string/developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
@@ -981,7 +1040,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
@@ -991,7 +1050,7 @@
                             android:textAlignment="center"
                             />
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"

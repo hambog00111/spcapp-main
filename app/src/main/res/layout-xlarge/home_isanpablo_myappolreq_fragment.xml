@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:background="@drawable/circle_back"
+                    android:forceHasOverlappingRendering="true"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:weightSum="1"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                    tools:ignore="UnusedAttribute">
+                <ImageView
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+
+
+        <TextView
+                android:paddingStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My App Online Request"
+                android:textAlignment="center"
+                android:paddingBottom="5dp"
+                android:id="@+id/txt_title_maor"
+                android:paddingTop="5dp"
+                android:textSize="35sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+        <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+            <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="300dp"
+                    android:id="@+id/linear_maor_td"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <Button
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/btn_myapp_td"
+                        android:background="@drawable/logo_malr_request_button"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/request_copy_of_td_oha"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:textSize="21sp"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="300dp"
+                    android:id="@+id/linear_maor_bc"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <Button
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/btn_myapp_bc"
+                        android:background="@drawable/logo_malr_bc_button"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/birth_certificate"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:padding="3dp"
+                        android:textSize="21sp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+            <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="300dp"
+                    android:id="@+id/linear_maor_mc"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <Button
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:id="@+id/btn_myapp_mc"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/logo_malr_mc_button"
+                        android:layout_gravity="center"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/marriage_certificate"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:textSize="21sp"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="300dp"
+                    android:id="@+id/linear_maor_dc"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <Button
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="fitCenter"
+                        android:id="@+id/btn_myapp_dc"
+                        android:background="@drawable/logo_malr_dc_button"
+                        android:layout_gravity="center"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Death Certificate"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:textSize="21sp"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/phlogo"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:text="@string/republic_of_the_philippines"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Rep"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp"/>
+                <TextView
+                        android:text="@string/_2019_san_pablo_city_goverment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:padding="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:id="@+id/textView8"
+
+                        />
+
+            </LinearLayout>
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/transpa"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="3dp"
+                        android:gravity="center"
+                        android:text="@string/developed_by"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+                <ImageView
+                        android:layout_width="110dp"
+                        android:layout_height="45dp"
+                        app:srcCompat="@drawable/pylon"
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription,TooManyViews" />
+            </LinearLayout>
+            <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                        android:text="@string/developer_t"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAlignment="center"
+                        />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                            android:text="@string/chris_velasco"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            tools:ignore="TooManyViews" />
+                    <TextView
+                            android:text="@string/joseph_bonilla"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:gravity="center"
+
+                            android:textColor="@color/colorPrimary"
+                            android:textAlignment="center"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

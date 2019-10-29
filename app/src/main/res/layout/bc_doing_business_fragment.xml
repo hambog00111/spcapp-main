@@ -26,7 +26,8 @@
 
                 <RelativeLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        tools:ignore="UselessLeaf" />
 
             </LinearLayout>
 
@@ -49,7 +50,8 @@
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/logo_home_mysanpablo"
+                        tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -60,7 +62,7 @@
                 android:paddingStart="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Doing Business"
+                android:text="@string/doing_business"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="25sp"
@@ -97,13 +99,13 @@
                             android:textSize="15sp"
                             android:textStyle="bold"
                             android:textColor="@color/darkgray"
-                            android:text="Frontline Services:"
+                            android:text="@string/frontline_services"
                             android:layout_margin="2dp"
                             />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="ISSUANCE OF MAYOR’S PERMIT FOR NEW BUSINESS REGISTRATION"
+                            android:text="@string/issuance_of_mayor_s_permit_for_new_business_registration"
                             android:layout_margin="2dp"
                             android:textColor="@color/darkgray"
                             android:textSize="15sp"/>
@@ -120,13 +122,12 @@
                             android:textSize="15sp"
                             android:textStyle="bold"
                             android:textColor="@color/darkgray"
-                            android:text="Clients:"
-                            android:layout_margin="2dp"
-                            />
+                            android:text="@string/clients"
+                            android:layout_margin="2dp" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Business Permit Applicants"
+                            android:text="@string/business_permit_applicants"
                             android:layout_margin="2dp"
                             android:textColor="@color/darkgray"
                             android:textSize="15sp"/>
@@ -136,7 +137,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
                         android:textColor="@color/darkgray"
-                        android:text="Requirements:"
+                        android:text="@string/requirements"
                         android:textStyle="bold"
                         android:layout_margin="2dp"/>
 
@@ -163,14 +164,14 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:text="Fees:"
+                            android:text="@string/fees"
                             android:textStyle="bold"
                             android:layout_margin="2dp"
                             />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Based on the Revised Revenue Code of the City of San Pablo"
+                            android:text="@string/based_on_the_revised_revenue_code_of_the_city_of_san_pablo"
                             android:layout_margin="2dp"
                             android:textColor="@color/darkgray"
                             android:textSize="15sp"/>
@@ -186,13 +187,13 @@
                             android:textSize="15sp"
                             android:textStyle="bold"
                             android:textColor="@color/darkgray"
-                            android:text="Total Processing Time:"
+                            android:text="@string/total_processing_time"
                             android:layout_margin="2dp"
                             />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="30 minutes"
+                            android:text="@string/_30_minutes"
 
                             android:layout_margin="2dp"
                             android:textColor="@color/darkgray"
@@ -210,14 +211,14 @@
                             android:textSize="15sp"
                             android:textStyle="bold"
                             android:textColor="@color/darkgray"
-                            android:text="Schedule of Service Availability:"
+                            android:text="@string/schedule_of_service_availability"
                             android:layout_margin="2dp"
                             />
 
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Monday to Friday – 8:00 to 5:00pm (No Noon Break)\n"
+                            android:text="@string/monday_to_friday_8_00_to_5_00pm_no_noon_break_n"
                             android:layout_margin="2dp"
                             android:textColor="@color/darkgray"
                             android:textSize="15sp"/>
@@ -253,13 +254,13 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:textColor="@color/darkgray"
-                    android:text="Frontline Services:"
+                    android:text="@string/frontline_services"
                     android:layout_margin="2dp"
                     />
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ISSUANCE OF MAYOR’S PERMIT FOR BUSINESS PERMIT RENEWAL"
+                    android:text="@string/issuance_of_mayor_s_permit_for_business_permit_renewal"
                     android:layout_margin="2dp"
                     android:textColor="@color/darkgray"
                     android:textSize="15sp"/>
@@ -276,13 +277,13 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:textColor="@color/darkgray"
-                    android:text="Clients:"
+                    android:text="@string/clients"
                     android:layout_margin="2dp"
                     />
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Business Permit Applicants"
+                    android:text="@string/business_permit_applicants"
                     android:layout_margin="2dp"
                     android:textColor="@color/darkgray"
                     android:textSize="15sp"/>
@@ -293,7 +294,7 @@
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/darkgray"
-                android:text="Requirements:"
+                android:text="@string/requirements"
                 android:layout_margin="2dp"/>
 
         <TextView
@@ -319,14 +320,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:textColor="@color/darkgray"
-                    android:text="Fees:"
+                    android:text="@string/fees"
                     android:textStyle="bold"
                     android:layout_margin="2dp"
                     />
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Based on the Revised Revenue Code of the City of San Pablo"
+                    android:text="@string/based_on_the_revised_revenue_code_of_the_city_of_san_pablo"
                     android:layout_margin="2dp"
 
                     android:textColor="@color/darkgray"
@@ -343,13 +344,13 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:textColor="@color/darkgray"
-                    android:text="Total Processing Time:"
+                    android:text="@string/total_processing_time"
                     android:layout_margin="2dp"
                     />
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="15 minutes"
+                    android:text="@string/_15_minutes"
                     android:layout_margin="2dp"
                     android:textColor="@color/darkgray"
                     android:textSize="15sp"/>
@@ -366,14 +367,14 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:textColor="@color/darkgray"
-                    android:text="Schedule of Service Availability:"
+                    android:text="@string/schedule_of_service_availability"
                     android:layout_margin="2dp"
                     />
 
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Monday to Friday – 8:00 to 5:00pm (No Noon Break) "
+                    android:text="@string/monday_to_friday_8_00_to_5_00pm_no_noon_break"
                     android:layout_margin="2dp"
                     android:textColor="@color/darkgray"
                     android:textSize="15sp"/>
@@ -410,13 +411,13 @@
                             android:textSize="15sp"
                             android:textStyle="bold"
                             android:textColor="@color/darkgray"
-                            android:text="Frontline Services:"
+                            android:text="@string/frontline_services"
                             android:layout_margin="2dp"
                             />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="ISSUANCE TRICYCLE FRANCHISE and MAYOR'S PERMIT FOR TRICYCLE OPERATORS(new/renewal)"
+                            android:text="@string/issuance_tricycle_franchise_and_mayor_s_permit_for_tricycle_operators_new_renewal"
                             android:layout_margin="2dp"
                             android:textColor="@color/darkgray"
                             android:textSize="15sp"/>
@@ -432,14 +433,14 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:text="Clients:"
+                            android:text="@string/clients"
                             android:textStyle="bold"
                             android:layout_margin="2dp"
                             />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Tricycle Operators"
+                            android:text="@string/tricycle_operators"
                             android:layout_margin="2dp"
                             android:textColor="@color/darkgray"
                             android:textSize="15sp"/>
@@ -449,7 +450,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
                         android:textColor="@color/darkgray"
-                        android:text="Requirements:"
+                        android:text="@string/requirements"
                         android:textStyle="bold"
                         android:layout_margin="2dp"/>
 
@@ -475,7 +476,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="24dp"
                             android:layout_margin="2dp"
-                            android:text="Fees:"
+                            android:text="@string/fees"
                             android:textStyle="bold"
                             android:textColor="@color/darkgray"
                             android:textSize="15sp" />
@@ -483,7 +484,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="2dp"
-                            android:text="Based on Ordinance No. 2011-01 and the Revised Revenue Code of the City of San Pablo"
+                            android:text="@string/based_on_ordinance_no_2011_01_and_the_revised_revenue_code_of_the_city_of_san_pablo"
                             android:textColor="@color/darkgray"
                             android:textSize="15sp"/>
                 </LinearLayout>
@@ -497,14 +498,14 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:textColor="@color/darkgray"
-                            android:text="Total Processing Time:"
+                            android:text="@string/total_processing_time"
                             android:textStyle="bold"
                             android:layout_margin="2dp"
                             />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="15 minutes"
+                            android:text="@string/_15_minutes"
                             android:layout_margin="2dp"
                             android:textColor="@color/darkgray"
                             android:textSize="15sp"/>
@@ -521,14 +522,14 @@
                             android:textSize="15sp"
                             android:textStyle="bold"
                             android:textColor="@color/darkgray"
-                            android:text="Schedule of Service Availability:"
+                            android:text="@string/schedule_of_service_availability"
                             android:layout_margin="2dp"
                             />
 
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Monday to Friday – 8:00 to 5:00pm (No Noon Break) "
+                            android:text="@string/monday_to_friday_8_00_to_5_00pm_no_noon_break"
                             android:layout_margin="2dp"
                             android:textColor="@color/darkgray"
                             android:textSize="15sp"/>
@@ -552,7 +553,8 @@
                 <ImageView
                         android:layout_width="100dp"
                         android:layout_height="70dp"
-                        app:srcCompat="@drawable/phlogo"/>
+                        app:srcCompat="@drawable/phlogo"
+                        tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -565,24 +567,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="18dp"
                         android:text="@string/Reps"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="10dp"
+                        android:textSize="10sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:layout_marginBottom="5dp"/>
+                        android:layout_marginBottom="5dp"
+                        tools:ignore="SmallSp" />
 
                 <TextView
-                        android:text="© 2019 San Pablo City Goverment"
+                        android:text="@string/_2019_san_pablo_city_goverment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
@@ -591,7 +595,8 @@
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
-                        android:id="@+id/textView8"/>
+                        android:id="@+id/textView8"
+                        tools:ignore="SmallSp" />
 
             </LinearLayout>
             <LinearLayout
@@ -602,7 +607,7 @@
                         android:layout_width="100dp"
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/transpa"
-                        />
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
         </LinearLayout>
 
@@ -618,7 +623,8 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
                 <TextView
                         android:text="Developed by:"
                         android:layout_width="match_parent"
@@ -629,12 +635,13 @@
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="3dp"
-                        />
+                        tools:ignore="HardcodedText" />
                 <ImageView
                         android:layout_width="80dp"
                         android:layout_height="21dp"
                         app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription" />
             </LinearLayout>
             <LinearLayout
 
@@ -642,7 +649,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <TextView
-                        android:text="Developer: "
+                        android:text="@string/developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="13sp"
@@ -650,13 +657,13 @@
                         android:layout_marginStart="5dp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        />
+                        tools:ignore="TooManyViews" />
                 <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="13sp"
@@ -664,7 +671,7 @@
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center" />
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="13sp"

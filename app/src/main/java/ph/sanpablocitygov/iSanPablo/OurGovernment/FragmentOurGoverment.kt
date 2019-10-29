@@ -4,6 +4,8 @@ import android.support.v7.app.AlertDialog
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -12,10 +14,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
 
 import org.json.JSONArray
 import org.json.JSONObject
 import ph.sanpablocitygov.iSanPablo.R
+import ph.sanpablocitygov.iSanPablo.home.FragmentHome
 import java.lang.ref.WeakReference
 import java.net.HttpURLConnection
 import java.net.URL
@@ -42,6 +46,19 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
         val view: View = inflater.inflate(R.layout.our_government_fragment, container, false)
 
 
+//        val connectivityManager = requireContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+//        val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
+//        val isConnected: Boolean = activeNetwork?.isConnectedOrConnecting == false
+//
+//        if (isConnected){
+//            activity!!.supportFragmentManager.beginTransaction().replace(
+//                R.id.frag_container,
+//                FragmentHome()
+//                , null
+//            )
+//                .addToBackStack(null)
+//                .commit()
+//        }
 
         val t1: TextView = view.findViewById(R.id.dept_mayor_office)
         t1.setOnClickListener(this)

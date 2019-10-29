@@ -102,7 +102,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                                 tv.text = "(049)3000-065"
                              //  holder.resultTv!!.text = ""+number+""
                             //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                                builder.setPositiveButton("button_call"){dialog, which ->
+                                builder.setPositiveButton("Call 2"){dialog, which ->
                                     // Do something when user press the positive button
                                     val  intent = Intent(Intent.ACTION_DIAL)
                                     intent.data= Uri.parse("tel:$phoneNumber")
@@ -149,7 +149,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     //  holder.resultTv!!.text = ""+number+""
                     //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                    builder.setPositiveButton("button_call 2"){dialog, which ->
+                    builder.setPositiveButton("Call 2"){dialog, which ->
                         // Do something when user press the positive button
                         val  intent = Intent(Intent.ACTION_DIAL)
                         intent.data= Uri.parse("tel:$phoneNumber1b")
@@ -197,7 +197,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                 tv.text = "(049)5624-025"
                 //  holder.resultTv!!.text = ""+number+""
                 //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                builder.setPositiveButton("button_call"){dialog, which ->
+                builder.setPositiveButton("Call 2"){dialog, which ->
                     // Do something when user press the positive button
                     val  intent = Intent(Intent.ACTION_DIAL)
                     intent.data= Uri.parse("tel:$phoneNumber2")
@@ -242,7 +242,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                 //  holder.resultTv!!.text = ""+number+""
                 //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                builder.setPositiveButton("button_call 2"){dialog, which ->
+                builder.setPositiveButton("butCall 2"){dialog, which ->
                     // Do something when user press the positive button
                     val  intent = Intent(Intent.ACTION_DIAL)
                     intent.data= Uri.parse("tel:$phoneNumber3b")
@@ -297,7 +297,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                 //  holder.resultTv!!.text = ""+number+""
                 //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                builder.setPositiveButton("button_call 2"){dialog, which ->
+                builder.setPositiveButton("Call 2"){dialog, which ->
                     // Do something when user press the positive button
                     val  intent = Intent(Intent.ACTION_DIAL)
                     intent.data= Uri.parse("tel:$phoneNumber4b")
@@ -342,7 +342,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                 tv.text = "(049)8000-405"
                 //  holder.resultTv!!.text = ""+number+""
                 //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                builder.setPositiveButton("button_call"){dialog, which ->
+                builder.setPositiveButton("Call 2"){dialog, which ->
                     // Do something when user press the positive button
                     val  intent = Intent(Intent.ACTION_DIAL)
                     intent.data= Uri.parse("tel:$phoneNumber5")
@@ -412,7 +412,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                 tv.text = "(049)5627-654"
                 //  holder.resultTv!!.text = ""+number+""
                 //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                builder.setPositiveButton("button_call"){dialog, which ->
+                builder.setPositiveButton("Call 2"){dialog, which ->
                     // Do something when user press the positive button
                     val  intent = Intent(Intent.ACTION_DIAL)
                     intent.data= Uri.parse("tel:$phoneNumber7")

@@ -24,7 +24,7 @@
                 android:id="@+id/title_cityhot_line"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="San Pablo City Goverment"
+                android:text="@string/san_pablo_city_government"
                 android:textColor="@color/darkgray"
                 android:textSize="15sp"
                 android:textStyle="bold" />
