@@ -431,13 +431,10 @@
         Act No. 520. The City was inaugurated on March 30, 1941 with Dr. Potenciano Malvar
         as the appointed City Mayor. \n
     </string>
-    <string name="Reps">Republic of the Philippines \n
-
-    </string>
+    <string name="Reps">Republic of the Philippines</string>
     <string name="Rep">
         All content is in the public \n
-        domain unless otherwise stated
-    </string>
+        domain unless otherwise stated</string>
 
     <string name="home2">
         \t \t In 1521, Sampaloc was changed to San Pablo De Los Montes,
@@ -1212,5 +1209,18 @@
     <string name="leonilla_park">Doña Leonila Park Plan San Pablo City (Official Video)</string>
     <string name="_192_168_100_93_8080">192.168.100.93:8080</string>
     <string name="ip">IP</string>
+    <string name="dc_call_this_number">Call this number?</string>
+    <string name="amendments">Amendments</string>
+    <string name="change_ownership">Change Ownership</string>
+    <string name="change_business_name">Change Business Name</string>
+    <string name="change_business_address">Change Business Address</string>
+    <string name="change_owner_s_address">Change Owner\'s Address</string>
+    <string name="change_of_nature_of_business">Change of Nature of Business</string>
+    <string name="change_of_organization">Change of Organization</string>
+    <string name="change_of_no_of_employees">Change of No. of Employees</string>
+    <string name="cancel">CANCEL</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+
+
     <item name="btn_next" type="id"/>
 </resources>

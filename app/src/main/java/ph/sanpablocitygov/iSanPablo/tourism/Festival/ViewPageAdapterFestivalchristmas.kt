@@ -27,7 +27,7 @@ class ViewPageAdapterFestivalchristmas(private val context: Context) : PagerAdap
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val v = layoutInflater!!.inflate(R.layout.custom_festivals_christmas_layout, null)
+        val v = layoutInflater!!.inflate(R.layout.tourism_festivals_christmas_custom, null)
         val image = v.findViewById<View>(R.id.image_view_christmas_festivals) as ImageView
         image.setImageResource(images[position])
 

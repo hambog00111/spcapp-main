@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOProfile
@@ -17,7 +16,7 @@ class FragmentAmendments1 : Fragment() {
     @SuppressLint("SetTextI18n", "InflateParams")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_bc_amendments, container, false)
+        val view: View = inflater.inflate(R.layout.bc_amendments_home_fragment, container, false)
 
 //        btnreg.setOnClickListener(object: View.OnClickListener {
 //

@@ -16,7 +16,7 @@ class FragmentAmendments : Fragment() {
     @SuppressLint("SetTextI18n", "InflateParams")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_bc_amendments_login, container, false)
+        val view: View = inflater.inflate(R.layout.bc_amendments_login_fragment, container, false)
           val btnreg = view.findViewById<Button>(R.id.btn_bplo_login)
         btnreg.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(

@@ -21,7 +21,7 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
 import com.firebase.ui.auth.AuthUI.getApplicationContext
-import kotlinx.android.synthetic.main.dialog_terms_and_agreements.view.*
+
 import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
@@ -60,7 +60,7 @@ class FragmentHome : Fragment() {
     @SuppressLint("InflateParams", "RestrictedApi")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view = inflater.inflate(R.layout.fragment_home_layout_2, null)
+        val view = inflater.inflate(R.layout.home_home_fragment, null)
 
 
         permissionStatus = activity!!.getSharedPreferences("permissionStatus", Context.MODE_PRIVATE)
@@ -150,7 +150,7 @@ class FragmentHome : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-        val btncio = view.findViewById<android.widget.Button>(R.id.btn_fb_cio)
+        val btncio = view.findViewById<Button>(R.id.btn_fb_cio)
         btncio?.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,

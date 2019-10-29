@@ -14,7 +14,7 @@ import ph.sanpablocitygov.iSanPablo.R
 class FragmentBPLOonline : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_bc_bplo_home_login, null)
+        val view = inflater.inflate(R.layout.bc_bplo_login_fragment, null)
 
         val btnlogin = view.findViewById<Button>(R.id.btn_bplo_login)
         btnlogin.setOnClickListener {

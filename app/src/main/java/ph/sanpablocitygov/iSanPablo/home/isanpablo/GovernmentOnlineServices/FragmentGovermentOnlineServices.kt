@@ -16,7 +16,7 @@ class FragmentGovermentOnlineServices : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
 
-        val view: View = inflater.inflate(R.layout.fragment_isanpablo_govolser, container, false)
+        val view: View = inflater.inflate(R.layout.home_isanpablo_govolser_fragment, container, false)
 
 
         val titlegos = view.findViewById<TextView>(R.id.txt_title_gos)

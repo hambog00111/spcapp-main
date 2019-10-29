@@ -11,7 +11,7 @@ import ph.sanpablocitygov.iSanPablo.R
 class FragmentWheretogo : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_tourism_wheretogo, null)
+        val view = inflater.inflate(R.layout.tourism_wheretogo_fragment, null)
 //
 
 //        val btn_pictures = view?.findViewById<Button>(R.id.button_picture)

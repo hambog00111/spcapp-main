@@ -11,14 +11,14 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import kotlinx.android.synthetic.main.fragment_update.view.*
+import kotlinx.android.synthetic.main.update_fragment.view.*
 import ph.sanpablocitygov.iSanPablo.R
 
 class FragmentCityEmployeesCorner : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_isanpablo_emplocor, container, false)
+        val view: View = inflater.inflate(R.layout.home_isanpablo_emplocor_fragment, container, false)
 
 
         val titlecec = view.findViewById<TextView>(R.id.txt_title_cec)
@@ -35,7 +35,7 @@ class FragmentCityEmployeesCorner : Fragment(){
         val btnsr = view.findViewById<Button>(R.id.btn_cec_sr)
         btnsr.setOnClickListener {
 
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
@@ -51,7 +51,7 @@ class FragmentCityEmployeesCorner : Fragment(){
         val btncop = view.findViewById<Button>(R.id.btn_cec_cop)
         btncop.setOnClickListener {
 
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_update, null)
+            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)

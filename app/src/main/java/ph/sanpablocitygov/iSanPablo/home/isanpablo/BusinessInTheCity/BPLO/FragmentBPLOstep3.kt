@@ -12,7 +12,7 @@ import ph.sanpablocitygov.iSanPablo.R
 class FragmentBPLOstep3 : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_bc_bplo_fillup_step3, null)
+        val view = inflater.inflate(R.layout.bc_bplo_fillup_step3_fragment, null)
 
         val btnnext = view.findViewById<Button>(R.id.txt_bplo_next_page)
         btnnext.setOnClickListener {

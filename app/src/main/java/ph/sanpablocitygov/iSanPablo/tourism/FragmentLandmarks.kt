@@ -13,7 +13,7 @@ class
 FragmentLandmarks : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_landmarks, null)
+        val view = inflater.inflate(R.layout.tourism_landmarks_fragment, null)
 //
 
 //        val btn_pictures = view?.findViewById<Button>(R.id.button_picture)

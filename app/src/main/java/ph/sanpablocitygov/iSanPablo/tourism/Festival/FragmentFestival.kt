@@ -19,7 +19,7 @@ class FragmentFestival : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_tourism_festivals, container, false)
+        val view: View = inflater.inflate(R.layout.tourism_festivals_fragment, container, false)
 
         viewPagerFestival = view.findViewById<View>(R.id.festivals_viewpager) as ViewPager
         val adapterevents = ViewPageAdapterFestival(requireContext())

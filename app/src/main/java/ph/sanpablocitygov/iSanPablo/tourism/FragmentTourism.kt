@@ -16,7 +16,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 
-import kotlinx.android.synthetic.main.dialog_tourism_masterplan.view.*
+import kotlinx.android.synthetic.main.tourism_masterplan_dialogbox.view.*
 import ph.sanpablocitygov.iSanPablo.FragmentGoogleMap
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.tourism.Festival.FragmentFestival
@@ -27,7 +27,7 @@ class FragmentTourism : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_tourism_layout, container, false)
+        val view: View = inflater.inflate(R.layout.tourism_home_fragment, container, false)
 
 
 
@@ -95,7 +95,7 @@ class FragmentTourism : Fragment(){
 
         val btnmp = view.findViewById<Button>(R.id.btn_tourism_masterplan)
         btnmp.setOnClickListener {
-            val dbView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_tourism_masterplan, null)
+            val dbView = LayoutInflater.from(requireContext()).inflate(R.layout.tourism_masterplan_dialogbox, null)
 
             val dbBuilder = AlertDialog.Builder(requireContext())
                 .setView(dbView)

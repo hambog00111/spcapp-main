@@ -16,19 +16,19 @@
                         <!--android:id="@+id/police_menu"-->
                         <!--android:title="Police Station"-->
                         <!--android:icon="@drawable/ic_police"-->
-                        <!--app:showAsAction="never"-->
+                        <!--home_event_pic1:showAsAction="never"-->
                 <!--/>-->
                 <!--<item-->
                         <!--android:id="@+id/emergency_menu"-->
                         <!--android:title="Emergency Hotline"-->
                         <!--android:icon="@drawable/ic_emergency"-->
-                        <!--app:showAsAction="never"-->
+                        <!--home_event_pic1:showAsAction="never"-->
                 <!--/>-->
                 <!--<item-->
                         <!--android:id="@+id/fire_menu"-->
                         <!--android:title="Fire Station "-->
                         <!--android:icon="@drawable/ic_fire"-->
-                        <!--app:showAsAction="never"-->
+                        <!--home_event_pic1:showAsAction="never"-->
                 <!--/>-->
 
 
@@ -39,12 +39,12 @@
         <!--<item-->
                 <!--android:icon="@drawable/ic_location2"-->
                 <!--android:id="@+id/spc_map"-->
-                <!--app:showAsAction="always"-->
+                <!--home_event_pic1:showAsAction="always"-->
                 <!--android:title=""/>-->
         <!--<item-->
                 <!--android:icon="@drawable/ic_photo_camera"-->
                 <!--android:id="@+id/camera"-->
-                <!--app:showAsAction="always"-->
+                <!--home_event_pic1:showAsAction="always"-->
                 <!--android:title=""/>-->
 
 

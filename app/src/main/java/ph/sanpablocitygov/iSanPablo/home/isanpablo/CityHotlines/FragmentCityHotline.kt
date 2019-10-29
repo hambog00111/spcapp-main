@@ -1,30 +1,20 @@
 package layout.ph.sanpablocitygov.iSanPablo.goverment
 
-import android.Manifest
 import android.annotation.SuppressLint
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
-import android.util.Log
+
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineAdapter
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineModel
 
 
 import ph.sanpablocitygov.iSanPablo.R
-import ph.sanpablocitygov.iSanPablo.home.FragmentHome
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.FragmentMyAppOnlineRequest
-import ph.sanpablocitygov.iSanPablo.search.ListViewAdapter
-import ph.sanpablocitygov.iSanPablo.search.Model
 import java.util.ArrayList
 
 
@@ -35,11 +25,10 @@ class FragmentCityHotline : Fragment() {
 
     internal lateinit var listView: ListView
 
-
     internal lateinit var adapter: CityhotlineAdapter
-    internal lateinit var ivcityhotline: Array<String>
-    internal lateinit var ivcityhotlinephone: Array<String>
-    internal var arrayList = ArrayList<CityhotlineModel>()
+    private lateinit var ivcityhotline: Array<String>
+    private lateinit var ivcityhotlinephone: Array<String>
+    private var arrayList = ArrayList<CityhotlineModel>()
     @SuppressLint("RestrictedApi")
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,8 +36,9 @@ class FragmentCityHotline : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_isanpablo_hotline, null)
+        val view = inflater.inflate(R.layout.home_isanpablo_hotline_fragment, null)
        // setupPermissions()
+
         val titlebc = view.findViewById<TextView>(R.id.txt_title_ch)
         titlebc.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
 
@@ -57,8 +47,8 @@ class FragmentCityHotline : Fragment() {
 
 
 
-        ivcityhotline = arrayOf(
-            "San Pablo City Government", "San Pablo City Police",
+        ivcityhotline = arrayOf("San Pablo City Government", "San Pablo City Police",
+
 
             "Red Cross San Pablo", "San Pablo City Emergency Hospital",
             "San Pablo General Hospital", "City Disaster Risk Reduction Management Office",
