@@ -69,7 +69,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
-
+            mybusBuilder.setCancelable(false)
             val mybusDialog = mybusBuilder.show()
 
 
@@ -89,7 +89,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
             val bplobBuilder = AlertDialog.Builder(requireContext())
                 .setView(bploView)
-
+            bplobBuilder.setCancelable(false)
             val bploDialog = bplobBuilder.show()
 
             bploView.btn_download_bplo.setOnClickListener {
@@ -109,6 +109,7 @@ class FragmentBusinessInTheCity : Fragment() {
                     setNegativeButton("CANCEL", null)
                 }
                 val alertDialog = builder.create()
+                alertDialog.setCancelable(false)
                 alertDialog.show()
             }
 
@@ -121,7 +122,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
                 val mybusBuilder = AlertDialog.Builder(requireContext())
                     .setView(mybus)
-
+                mybusBuilder.setCancelable(false)
                 val mybusDialog = mybusBuilder.show()
 
                 mybus.txt_confirm_update.setOnClickListener {
@@ -144,7 +145,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
-
+            mybusBuilder.setCancelable(false)
             val mybusDialog = mybusBuilder.show()
 
             mybus.txt_confirm_update.setOnClickListener {
@@ -157,7 +158,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
-
+            mybusBuilder.setCancelable(false)
             val mybusDialog = mybusBuilder.show()
 
             mybus.txt_confirm_update.setOnClickListener {
@@ -170,7 +171,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
-
+            mybusBuilder.setCancelable(false)
             val mybusDialog = mybusBuilder.show()
 
             mybus.txt_confirm_update.setOnClickListener {
@@ -186,13 +187,15 @@ class FragmentBusinessInTheCity : Fragment() {
 
             val investbBuilder = AlertDialog.Builder(requireContext())
                 .setView(investmentView)
-
+            investbBuilder.setCancelable(false)
             val investDialog = investbBuilder.show()
 
             investmentView.btn_business_investment.setOnClickListener {
                 investDialog.dismiss()
                 var str = "Would you like to download this document?"
                 val builder = AlertDialog.Builder(requireContext())
+
+
                 with(builder) {
                     setMessage(str)
                     setTitle("Download CDP Form")
@@ -207,6 +210,7 @@ class FragmentBusinessInTheCity : Fragment() {
                     setNegativeButton("CANCEL", null)
                 }
                 val alertDialog = builder.create()
+                alertDialog.setCancelable(false)
                 alertDialog.show()
             }
 //
@@ -233,7 +237,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
-
+            mybusBuilder.setCancelable(false)
             val mybusDialog = mybusBuilder.show()
 
             mybus.txt_confirm_update.setOnClickListener {

@@ -96,7 +96,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                 val builder = AlertDialog.Builder(mContext)
                     .setView(Contact)
-
+                builder.setCancelable(false)
                 var tv = Contact.findViewById(R.id.resultTv) as TextView
 
                 var cl = Contact.findViewById(R.id.call) as TextView
@@ -120,7 +120,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
 
@@ -132,9 +132,9 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                     val Contact = LayoutInflater.from(mContext)
                         .inflate(R.layout.home_city_hotlines_call_dialogbox, null)
 
-
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
                     var tv = Contact.findViewById(R.id.resultTv) as TextView
@@ -178,7 +178,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
 
@@ -192,6 +192,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
                     var tv = Contact.findViewById(R.id.resultTv) as TextView
@@ -216,7 +217,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
 
@@ -230,6 +231,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
                     var tv = Contact.findViewById(R.id.resultTv) as TextView
@@ -273,7 +275,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
 
@@ -286,6 +288,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
                     var tv = Contact.findViewById(R.id.resultTv) as TextView
@@ -329,7 +332,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
                 }
@@ -341,6 +344,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
                     var tv = Contact.findViewById(R.id.resultTv) as TextView
@@ -365,7 +369,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
                 }
@@ -377,6 +381,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
                     var tv = Contact.findViewById(R.id.resultTv) as TextView
@@ -401,7 +406,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
                 }
@@ -413,6 +418,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
                     var tv = Contact.findViewById(R.id.resultTv) as TextView
@@ -437,7 +443,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
                 }

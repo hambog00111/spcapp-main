@@ -99,7 +99,7 @@ class FragmentTourism : Fragment(){
 
             val dbBuilder = AlertDialog.Builder(requireContext())
                 .setView(dbView)
-
+            dbBuilder.setCancelable(false)
             val dbDialog = dbBuilder.show()
 
             dbView.btn_doing_master_confirm.setOnClickListener {
@@ -114,6 +114,7 @@ class FragmentTourism : Fragment(){
                 downloadManager.enqueue(request)  }
 
             dbView.btn_doing_master_cancel.setOnClickListener {
+
                 dbDialog.dismiss()
             }
         }

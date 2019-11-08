@@ -39,7 +39,7 @@ class FragmentCityEmployeesCorner : Fragment(){
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
-
+            mybusBuilder.setCancelable(false)
             val mybusDialog = mybusBuilder.show()
 
             mybus.txt_confirm_update.setOnClickListener {
@@ -55,7 +55,7 @@ class FragmentCityEmployeesCorner : Fragment(){
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
-
+            mybusBuilder.setCancelable(false)
             val mybusDialog = mybusBuilder.show()
 
             mybus.txt_confirm_update.setOnClickListener {

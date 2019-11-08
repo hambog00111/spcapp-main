@@ -34,6 +34,7 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Fragme
 
 
 import ph.sanpablocitygov.iSanPablo.links.*
+import ph.sanpablocitygov.iSanPablo.search.FragmentSearch
 import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
 
 
@@ -117,9 +118,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+//        return when (item.itemId) {
+//            R.id.action_settings -> true
+//            else -> super.onOptionsItemSelected(item)
+//        }
+
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.search -> {
+
+                search()
+
+                true
+            }
             else -> super.onOptionsItemSelected(item)
+
+
         }
     }
 ////
@@ -182,12 +195,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 ////            true
 ////        }
 ////
-////        R.id.admin -> {
-////
-////        spc_map()
-////
-////            true
-////        }
+//        R.id.action_search -> {
+//
+//        search()
+//
+//            true
+//        }
 //
 //
 //        else -> {
@@ -195,7 +208,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //            // Invoke the superclass to handle it.
 //            super.onOptionsItemSelected(item)
 //        }
-//
+
 //    }
 
 //    private fun policecall() {
@@ -211,12 +224,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 ////    }
 //
 //
-//    private fun emergencycall(){
-//        val callIntent =Intent(Intent.ACTION_CALL)
-//        callIntent.data = Uri.parse("tel:" + emergency)
-//
-//        startActivity(callIntent)
-//    }
+    private fun search(){
+    supportFragmentManager.beginTransaction().replace(
+        R.id.frag_container,
+        FragmentSearch(), null)
+        .addToBackStack(null)
+        .commit()
+
+}
 //
 //    private fun firecall(){
 //        val callIntent = Intent(Intent.ACTION_CALL)
@@ -316,6 +331,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     val disView = LayoutInflater.from(this).inflate(R.layout.main_full_disclosure_dialogbox, null)
                     val disBuilder = AlertDialog.Builder(this)
                         .setView(disView)
+                disBuilder.setCancelable(false)
                     val disDialog = disBuilder.show()
 
                 disView.disclosure_1.setOnClickListener {
@@ -335,7 +351,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 
@@ -347,18 +363,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setMessage(str)
                         setTitle("20-utilization-2018-4th-Quarter")
 
-                        setPositiveButton("OK",
-                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                        setPositiveButton("OK"
+                        ) { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
                             val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/20-Uitlization-2018-4th-Quarter.xls")
                             val request = DownloadManager.Request(uri)
                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            downloadManager.enqueue(request)  })
+                            downloadManager.enqueue(request)  }
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 
@@ -382,7 +398,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 
@@ -406,7 +422,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 
@@ -430,7 +446,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 
@@ -454,7 +470,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 
@@ -478,7 +494,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 
@@ -501,7 +517,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 
@@ -524,7 +540,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 
@@ -547,7 +563,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 
@@ -570,7 +586,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
-
+                    alertDialog.setCancelable(false)
                     alertDialog.show()
                 }
 

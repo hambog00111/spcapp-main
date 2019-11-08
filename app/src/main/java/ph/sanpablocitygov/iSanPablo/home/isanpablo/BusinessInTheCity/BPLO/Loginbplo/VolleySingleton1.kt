@@ -1,20 +1,18 @@
 package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo
 
+import android.annotation.SuppressLint
 import android.content.Context
 import com.android.volley.Request
 import com.android.volley.RequestQueue
-import com.android.volley.toolbox.Volley
+
 
 class VolleySingleton1 private constructor(context: Context) {
     private var mRequestQueue: RequestQueue
 
     // applicationContext is key, it keeps you from leaking the
     // Activity or BroadcastReceiver if someone passes one in.
-    val requestQueue: RequestQueue
+    private val requestQueue: RequestQueue
         get() {
-            if (mRequestQueue == null) {
-                mRequestQueue = Volley.newRequestQueue(mCtx?.applicationContext)
-            }
             return mRequestQueue
         }
 
@@ -28,7 +26,9 @@ class VolleySingleton1 private constructor(context: Context) {
     }
 
     companion object {
+        @SuppressLint("StaticFieldLeak")
         private var mInstance: VolleySingleton1? = null
+        @SuppressLint("StaticFieldLeak")
         private var mCtx: Context? = null
 
         @Synchronized

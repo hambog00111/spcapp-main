@@ -98,7 +98,7 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
         val uname = txt_assess_username!!.text.toString()
         val conpass = txt_confirm_password!!.text.toString()
         val pass = txt_assess_password!!.text.toString()
-        val UPDATE_URL =("http://"+txt_assess_ip?.getEditText()?.getText()+"/api/spc_api/").toString()
+        val UPDATE_URL =("http://"+txt_assess_ip?.editText?.text +"/api/spc_api/").toString()
 
         if (TextUtils.isEmpty(lname)) {
             txt_assess_last?.error = "Please enter your last name"

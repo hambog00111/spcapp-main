@@ -44,7 +44,7 @@ class FragmentMyAppOnlineRequest : Fragment(){
 
             val mybusBuilder = AlertDialog.Builder(requireContext())
                 .setView(mybus)
-
+            mybusBuilder.setCancelable(false)
             val mybusDialog = mybusBuilder.show()
 
             mybus.txt_confirm_update.setOnClickListener {
@@ -60,7 +60,7 @@ class FragmentMyAppOnlineRequest : Fragment(){
 
                 val mybusBuilder = AlertDialog.Builder(requireContext())
                     .setView(mybus)
-
+                 mybusBuilder.setCancelable(false)
                 val mybusDialog = mybusBuilder.show()
 
                 mybus.txt_confirm_update.setOnClickListener {
@@ -76,7 +76,7 @@ class FragmentMyAppOnlineRequest : Fragment(){
 
                     val mybusBuilder = AlertDialog.Builder(requireContext())
                         .setView(mybus)
-
+                    mybusBuilder.setCancelable(false)
                     val mybusDialog = mybusBuilder.show()
 
                     mybus.txt_confirm_update.setOnClickListener {
@@ -91,7 +91,7 @@ class FragmentMyAppOnlineRequest : Fragment(){
 
                         val mybusBuilder = AlertDialog.Builder(requireContext())
                             .setView(mybus)
-
+                         mybusBuilder.setCancelable(false)
                         val mybusDialog = mybusBuilder.show()
 
                         mybus.txt_confirm_update.setOnClickListener {

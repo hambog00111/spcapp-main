@@ -729,7 +729,7 @@
             <LinearLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="190dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="227dp"
                     android:orientation="vertical">
 
                 <ImageView
@@ -797,50 +797,53 @@
 
         </LinearLayout>
         <LinearLayout
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="9dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
+
             <LinearLayout
-                    android:layout_marginTop="10dp"
                     android:layout_width="190dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="227dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
                 <ImageView
                         android:layout_width="150dp"
                         android:layout_height="150dp"
-                        app:srcCompat="@drawable/ic_human"
+                        android:layout_gravity="center"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"/>
+                        app:srcCompat="@drawable/ic_human" />
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="HON. ENRICO GALICIA"
-                        android:textStyle="bold"
                         android:layout_marginTop="8dp"
-                        android:textSize="15sp"
-                        android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/bluess"/>
+                        android:text="HON. ENRICO GALICIA"
+                        android:textAlignment="center"
+                        android:textColor="@color/bluess"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="City Councilor"
                         android:layout_marginTop="4dp"
-                        android:textSize="15sp"
-                        android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/bluess"/>
+                        android:text="City Councilor"
+                        android:textAlignment="center"
+                        android:textColor="@color/bluess"
+                        android:textSize="15sp" />
             </LinearLayout>
+
             <LinearLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="190dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="227dp"
                     android:orientation="vertical">
 
                 <ImageView
@@ -884,7 +887,7 @@
             <LinearLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="190dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="227dp"
                     android:orientation="vertical">
 
                 <ImageView
@@ -918,7 +921,7 @@
             <LinearLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="190dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="227dp"
                     android:orientation="vertical">
 
                 <ImageView
@@ -952,7 +955,7 @@
             <LinearLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="190dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="227dp"
                     android:orientation="vertical">
 
                 <ImageView
@@ -996,7 +999,7 @@
             <LinearLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="190dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="227dp"
                     android:orientation="vertical">
 
                 <ImageView
@@ -1030,7 +1033,7 @@
             <LinearLayout
                     android:layout_marginTop="10dp"
                     android:layout_width="190dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="227dp"
                     android:orientation="vertical">
 
                 <ImageView
@@ -1044,7 +1047,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="HON. EDUARDO DIZON"
+                        android:text="HON. EDUARDO DIZON\n"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:textSize="15sp"
@@ -1089,7 +1092,7 @@
                         android:text="HON. ARISTON A.\nAMANTE"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
                         android:textAlignment="center"
                         android:gravity="center"
                         android:textColor="@color/bluess"/>
@@ -1098,7 +1101,7 @@
                         android:layout_height="wrap_content"
                         android:text="ABC, President"
                         android:layout_marginTop="4dp"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
                         android:textAlignment="center"
                         android:gravity="center"
                         android:paddingBottom="3dp"
@@ -1125,7 +1128,7 @@
                         android:text="HON. LIBERTY PAMELA E. CAPUCHINO "
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
                         android:textAlignment="center"
                         android:gravity="center"
                         android:textColor="@color/bluess"/>
@@ -1134,7 +1137,7 @@
                         android:layout_height="wrap_content"
                         android:text="SK Federation President"
                         android:layout_marginTop="4dp"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
                         android:textAlignment="center"
                         android:gravity="center"
                         android:paddingBottom="3dp"
@@ -1169,6 +1172,8 @@
         <LinearLayout android:layout_width="match_parent"
                       android:layout_marginTop="10dp"
                       android:layout_height="wrap_content"
+
+                android:id="@+id/clickbutton"
                       android:orientation="vertical">
 
             <TextView android:layout_width="match_parent"
