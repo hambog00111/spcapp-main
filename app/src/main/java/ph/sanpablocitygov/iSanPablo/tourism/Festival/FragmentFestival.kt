@@ -11,10 +11,10 @@ import ph.sanpablocitygov.iSanPablo.R
 
 
 class FragmentFestival : Fragment(){
-    internal lateinit var viewPagerFestival: ViewPager
-    internal lateinit var  viewPagerFestivalTilapia: ViewPager
-    internal lateinit var viewPagerFestivalLenten: ViewPager
-    internal lateinit var viewPagerFestivalchristmas: ViewPager
+    private lateinit var viewPagerFestival: ViewPager
+    private lateinit var  viewPagerFestivalTilapia: ViewPager
+    private lateinit var viewPagerFestivalLenten: ViewPager
+    private lateinit var viewPagerFestivalchristmas: ViewPager
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

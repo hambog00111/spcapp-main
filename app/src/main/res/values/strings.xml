@@ -1491,7 +1491,10 @@
     <string name="city_local_officials">CITY LOCAL OFFICIALS</string>
     <string name="no_internet_connection">No Internet Connection</string>
     <string name="hon_loreto_s_amante">HON. LORETO S. AMANTE</string>
+
     <string name="city_mayor">City Mayor</string>
+=======
+>>>>>>> 167aeae25d45fb130d74bff3afbfa41b3aac90f5
     <item name="btn_next" type="id"/>
 
 </resources>

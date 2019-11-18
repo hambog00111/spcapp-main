@@ -12,9 +12,10 @@ import ph.sanpablocitygov.iSanPablo.R
 
 import java.util.*
 
-class CityhotlineAdapter(internal var mContext: Context, internal var modellist: MutableList<CityhotlineModel>) : BaseAdapter() {
+@Suppress("NAME_SHADOWING")
+class CityhotlineAdapter(private var mContext: Context, private var modellist: MutableList<CityhotlineModel>) : BaseAdapter() {
     internal var inflater: LayoutInflater = LayoutInflater.from(mContext)
-    internal var arrayList: ArrayList<CityhotlineModel> = ArrayList()
+    private var arrayList: ArrayList<CityhotlineModel> = ArrayList()
 
 
 
@@ -40,7 +41,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
         return i.toLong()
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "InflateParams")
     override fun getView(postition: Int, view: View?, parent: ViewGroup): View {
         var view = view
 
@@ -50,14 +51,15 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
             view = inflater.inflate(R.layout.home_city_hotlines_row, null)
 
             //locate the views in row.xml
-            holder.title = view.findViewById<TextView>(R.id.title_cityhot_line)
-            holder.phone = view.findViewById<TextView>(R.id.title_cityhotline_number)
+            holder.title = view.findViewById(R.id.title_cityhot_line) as TextView
+            holder.phone = view.findViewById(R.id.title_cityhotline_number)as TextView
 
 
             view.tag = holder
 
         } else {
             holder = view.tag as ViewHolder
+
         }
         //set the results into textviews
         holder.title!!.text = modellist[postition].ivcityhotline
@@ -78,7 +80,6 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
         val phoneNumber4b = "(049)5031431"
 
         val phoneNumber5 = " (049)8000-405"
-   //     val Contact = LayoutInflater.from(mContext).inflate(R.layout.home_city_hotlines_call_dialogbox, null)
 
 
         val phoneNumber6 = "(049)5621-575"
@@ -96,15 +97,15 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                 val builder = AlertDialog.Builder(mContext)
                     .setView(Contact)
+                builder.setCancelable(false)
+                val tv = Contact.findViewById(R.id.resultTv) as TextView
 
-                var tv = Contact.findViewById(R.id.resultTv) as TextView
-
-                var cl = Contact.findViewById(R.id.call) as TextView
+                val cl = Contact.findViewById(R.id.call) as TextView
                 cl.text = "Call"
                 tv.text = "(049)3000-065"
 
 
-                builder.setPositiveButton("call") { dialog, which ->
+                builder.setPositiveButton("call") { _, _ ->
 
                         // Do something when user press the positive button
                         val intent = Intent(Intent.ACTION_DIAL)
@@ -115,12 +116,12 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 
                     // Display a neutral button on alert dialog
-                    builder.setNeutralButton("Cancel") { dialog, which ->
+                    builder.setNeutralButton("Cancel") { _, _ ->
                     }
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
 
@@ -132,16 +133,16 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                     val Contact = LayoutInflater.from(mContext)
                         .inflate(R.layout.home_city_hotlines_call_dialogbox, null)
 
-
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
-                    var tv = Contact.findViewById(R.id.resultTv) as TextView
-                    var cl = Contact.findViewById(R.id.call) as TextView
+                    val tv = Contact.findViewById(R.id.resultTv) as TextView
+                    val cl = Contact.findViewById(R.id.call) as TextView
 
-                    var cl1 = Contact.findViewById(R.id.call1) as TextView
-                    var tv1 = Contact.findViewById(R.id.resultTv1) as TextView
+                    val cl1 = Contact.findViewById(R.id.call1) as TextView
+                    val tv1 = Contact.findViewById(R.id.resultTv1) as TextView
 
                     //button_call number 1 ito yung lalabas sa dialog
                     cl.text = "Call1"
@@ -153,7 +154,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     //  holder.resultTv!!.text = ""+number+""
                     //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                    builder.setPositiveButton("Call 2") { dialog, which ->
+                    builder.setPositiveButton("Call 2") { _, _ ->
                         // Do something when user press the positive button
                         val intent = Intent(Intent.ACTION_DIAL)
                         intent.data = Uri.parse("tel:$phoneNumber1b")
@@ -162,7 +163,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                     }
 
                     // Display a negative button on alert dialog
-                    builder.setNegativeButton("Call 1") { dialog, which ->
+                    builder.setNegativeButton("Call 1") { _, _ ->
 
                         val intent = Intent(Intent.ACTION_DIAL)
                         intent.data = Uri.parse("tel:$phoneNumber1a")
@@ -178,7 +179,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
 
@@ -192,16 +193,17 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
-                    var tv = Contact.findViewById(R.id.resultTv) as TextView
+                    val tv = Contact.findViewById(R.id.resultTv) as TextView
 
-                    var cl = Contact.findViewById(R.id.call) as TextView
+                    val cl = Contact.findViewById(R.id.call) as TextView
                     cl.text = "Call"
                     tv.text = "(049)5624-025"
                     //  holder.resultTv!!.text = ""+number+""
                     //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                    builder.setPositiveButton("Call") { dialog, which ->
+                    builder.setPositiveButton("Call") { _, _ ->
                         // Do something when user press the positive button
                         val intent = Intent(Intent.ACTION_DIAL)
                         intent.data = Uri.parse("tel:$phoneNumber2")
@@ -216,7 +218,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
 
@@ -230,13 +232,14 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
-                    var tv = Contact.findViewById(R.id.resultTv) as TextView
-                    var cl = Contact.findViewById(R.id.call) as TextView
+                    val tv = Contact.findViewById(R.id.resultTv) as TextView
+                    val cl = Contact.findViewById(R.id.call) as TextView
 
-                    var cl1 = Contact.findViewById(R.id.call1) as TextView
-                    var tv1 = Contact.findViewById(R.id.resultTv1) as TextView
+                    val cl1 = Contact.findViewById(R.id.call1) as TextView
+                    val tv1 = Contact.findViewById(R.id.resultTv1) as TextView
 
                     //button_call number 1 ito yung lalabas sa dialog
                     cl.text = "Call1"
@@ -248,7 +251,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     //  holder.resultTv!!.text = ""+number+""
                     //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                    builder.setPositiveButton("butCall 2") { dialog, which ->
+                    builder.setPositiveButton("Call 2") { _, _ ->
                         // Do something when user press the positive button
                         val intent = Intent(Intent.ACTION_DIAL)
                         intent.data = Uri.parse("tel:$phoneNumber3b")
@@ -257,7 +260,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                     }
 
                     // Display a negative button on alert dialog
-                    builder.setNegativeButton("Call 1") { dialog, which ->
+                    builder.setNegativeButton("Call 1") { _, _ ->
 
                         val intent = Intent(Intent.ACTION_DIAL)
                         intent.data = Uri.parse("tel:$phoneNumber3a")
@@ -273,7 +276,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
 
@@ -286,13 +289,14 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
-                    var tv = Contact.findViewById(R.id.resultTv) as TextView
-                    var cl = Contact.findViewById(R.id.call) as TextView
+                    val tv = Contact.findViewById(R.id.resultTv) as TextView
+                    val cl = Contact.findViewById(R.id.call) as TextView
 
-                    var cl1 = Contact.findViewById(R.id.call1) as TextView
-                    var tv1 = Contact.findViewById(R.id.resultTv1) as TextView
+                    val cl1 = Contact.findViewById(R.id.call1) as TextView
+                    val tv1 = Contact.findViewById(R.id.resultTv1) as TextView
 
                     //button_call number 1 ito yung lalabas sa dialog
                     cl.text = "Call1"
@@ -304,7 +308,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     //  holder.resultTv!!.text = ""+number+""
                     //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                    builder.setPositiveButton("Call 2") { dialog, which ->
+                    builder.setPositiveButton("Call 2") { _, _ ->
                         // Do something when user press the positive button
                         val intent = Intent(Intent.ACTION_DIAL)
                         intent.data = Uri.parse("tel:$phoneNumber4b")
@@ -313,7 +317,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
                     }
 
                     // Display a negative button on alert dialog
-                    builder.setNegativeButton("Call 1") { dialog, which ->
+                    builder.setNegativeButton("Call 1") { _, _ ->
 
                         val intent = Intent(Intent.ACTION_DIAL)
                         intent.data = Uri.parse("tel:$phoneNumber4a")
@@ -329,7 +333,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
                 }
@@ -341,16 +345,17 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
-                    var tv = Contact.findViewById(R.id.resultTv) as TextView
+                    val tv = Contact.findViewById(R.id.resultTv) as TextView
 
-                    var cl = Contact.findViewById(R.id.call) as TextView
+                    val cl = Contact.findViewById(R.id.call) as TextView
                     cl.text = "Call"
                     tv.text = "(049)8000-405"
                     //  holder.resultTv!!.text = ""+number+""
                     //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                    builder.setPositiveButton("Call") { dialog, which ->
+                    builder.setPositiveButton("Call") { _, _ ->
                         // Do something when user press the positive button
                         val intent = Intent(Intent.ACTION_DIAL)
                         intent.data = Uri.parse("tel:$phoneNumber5")
@@ -365,7 +370,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
                 }
@@ -377,16 +382,17 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
-                    var tv = Contact.findViewById(R.id.resultTv) as TextView
+                    val tv = Contact.findViewById(R.id.resultTv) as TextView
 
-                    var cl = Contact.findViewById(R.id.call) as TextView
+                    val cl = Contact.findViewById(R.id.call) as TextView
                     cl.text = "Call"
                     tv.text = "(049)5621-575"
                     //  holder.resultTv!!.text = ""+number+""
                     //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                    builder.setPositiveButton("call") { dialog, which ->
+                    builder.setPositiveButton("call") { _, _ ->
                         // Do something when user press the positive button
                         val intent = Intent(Intent.ACTION_DIAL)
                         intent.data = Uri.parse("tel:$phoneNumber6")
@@ -401,7 +407,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
                 }
@@ -413,16 +419,17 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
 //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
                     val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
                         .setView(Contact)
 
-                    var tv = Contact.findViewById(R.id.resultTv) as TextView
+                    val tv = Contact.findViewById(R.id.resultTv) as TextView
 
-                    var cl = Contact.findViewById(R.id.call) as TextView
+                    val cl = Contact.findViewById(R.id.call) as TextView
                     cl.text = "Call"
                     tv.text = "(049)5627-654"
                     //  holder.resultTv!!.text = ""+number+""
                     //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
-                    builder.setPositiveButton("Call") { dialog, which ->
+                    builder.setPositiveButton("Call") { _, _ ->
                         // Do something when user press the positive button
                         val intent = Intent(Intent.ACTION_DIAL)
                         intent.data = Uri.parse("tel:$phoneNumber7")
@@ -437,7 +444,7 @@ class CityhotlineAdapter(internal var mContext: Context, internal var modellist:
 
                     // Finally, make the alert dialog using builder
                     val dialog: AlertDialog = builder.create()
-
+                    dialog.setCancelable(false)
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
                 }

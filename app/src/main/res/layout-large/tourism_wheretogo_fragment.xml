@@ -45,7 +45,7 @@
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:layout_margin="5dp"
-                        app:srcCompat="@drawable/logo_home_mysanpablo" />
+                        app:srcCompat="@drawable/tourism" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
 

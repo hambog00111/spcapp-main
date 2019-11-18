@@ -1,5 +1,6 @@
 package ph.sanpablocitygov.iSanPablo
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ class FragmentBrowser : Fragment() {
         internal var btn_next: Button? = null
         internal var progressBar: ProgressBar? = null
         private var url = "http://www.sanpablocitygov.ph/"
+        @SuppressLint("SetJavaScriptEnabled")
         override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
             val view: View = inflater.inflate(R.layout.test, container, false)
 //       val view = inflater.inflate(R.layout.test, null)

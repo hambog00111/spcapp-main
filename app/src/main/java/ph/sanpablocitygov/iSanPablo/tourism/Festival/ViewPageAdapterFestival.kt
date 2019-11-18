@@ -1,5 +1,6 @@
 package ph.sanpablocitygov.iSanPablo.tourism.Festival
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
@@ -7,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+
+
 
 import ph.sanpablocitygov.iSanPablo.R
 
@@ -24,6 +27,7 @@ class ViewPageAdapterFestival(private val context: Context) : PagerAdapter(){
         return images.size
     }
 
+    @SuppressLint("InflateParams")
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val v = layoutInflater!!.inflate(R.layout.tourism_festivals_coco_custom, null)

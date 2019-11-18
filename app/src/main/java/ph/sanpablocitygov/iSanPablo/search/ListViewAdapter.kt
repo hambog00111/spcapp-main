@@ -1,5 +1,6 @@
 package ph.sanpablocitygov.iSanPablo.search
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.support.v4.app.ActivityManagerCompat
@@ -22,9 +23,10 @@ import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBus
 import java.util.ArrayList
 import java.util.Locale
 
+@Suppress("NAME_SHADOWING")
 class ListViewAdapter(internal var mContext: Context, internal var modellist: MutableList<Model>): BaseAdapter() {
     internal var inflater: LayoutInflater = LayoutInflater.from(mContext)
-    internal var arrayList: ArrayList<Model> = ArrayList()
+    private var arrayList: ArrayList<Model> = ArrayList()
 
 
 
@@ -49,7 +51,8 @@ class ListViewAdapter(internal var mContext: Context, internal var modellist: Mu
         return i.toLong()
     }
 
-    override fun getView( postition: Int, view: View?, parent: ViewGroup): View? {
+    @SuppressLint("InflateParams")
+    override fun getView(postition: Int, view: View?, parent: ViewGroup): View? {
         var view = view
         val holder: ViewHolder
 

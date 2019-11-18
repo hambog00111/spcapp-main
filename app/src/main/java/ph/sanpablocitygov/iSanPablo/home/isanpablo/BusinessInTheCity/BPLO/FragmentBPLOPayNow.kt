@@ -19,6 +19,7 @@ class FragmentBPLOPayNow: Fragment()  {
     internal var btn_pre: Button? = null
     internal var progressBar: ProgressBar? = null
     private var url = "https://epaymentportal.landbank.com/index.php?code=VHQxcGVETU5EOWZiZXVIQnRWQ3NodmtCL2dKMG1HRjBsJTJCZ2k5dlIvclcwPQ&fbclid=IwAR1nOclEeFYG6lARtlcj5bKGAK3bRaeAXdihUBF1BdvmHzbdT5uPukxYku4"
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view: View = inflater.inflate(R.layout.test, container, false)
 //       val view = inflater.inflate(R.layout.test, null)

@@ -1,5 +1,6 @@
 package ph.sanpablocitygov.iSanPablo
 
+import android.annotation.SuppressLint
 import android.support.v7.app.AlertDialog
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -13,9 +14,9 @@ import android.widget.TextView
 import android.widget.VideoView
 
 class FragmentOurCity : Fragment() {
-    var str_url: String =
-        "https://ia801501.us.archive.org/35/items/SanPabloHymnWithLyrics/San%20Pablo%20Hymn%20with%20Lyrics.mp4"
+    private var strurl: String = "https://ia801501.us.archive.org/35/items/SanPabloHymnWithLyrics/San%20Pablo%20Hymn%20with%20Lyrics.mp4"
     lateinit var mediaController: MediaController
+    @SuppressLint("InflateParams")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view: View = inflater.inflate(R.layout.our_city_fragment, container, false)
@@ -31,7 +32,7 @@ class FragmentOurCity : Fragment() {
             val bploDialog = hymnBuilder.show()
 
             val videohome = hymnView.findViewById<View>(R.id.videohome) as VideoView
-            videohome.setVideoPath(str_url)
+            videohome.setVideoPath(strurl)
             videohome.start()
             mediaController = MediaController(requireContext())
             mediaController.setAnchorView(videohome)

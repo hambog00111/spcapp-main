@@ -23,13 +23,11 @@ import java.util.ArrayList
 
 class FragmentCityHotline : Fragment() {
 
-    internal lateinit var listView: ListView
-
-    internal lateinit var adapter: CityhotlineAdapter
+    private lateinit var adapter: CityhotlineAdapter
     private lateinit var ivcityhotline: Array<String>
     private lateinit var ivcityhotlinephone: Array<String>
     private var arrayList = ArrayList<CityhotlineModel>()
-    @SuppressLint("RestrictedApi")
+    @SuppressLint("RestrictedApi", "InflateParams")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

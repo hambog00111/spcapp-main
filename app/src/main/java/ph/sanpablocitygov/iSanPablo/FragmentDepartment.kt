@@ -1,5 +1,6 @@
 package ph.sanpablocitygov.iSanPablo
 
+import android.annotation.SuppressLint
 import android.support.v7.app.AlertDialog
 import android.os.AsyncTask
 import android.os.Bundle
@@ -211,8 +212,9 @@ override fun onClick(v: View?) {
 
 
 
+    @SuppressLint("StaticFieldLeak")
     inner class GetDeptLs internal constructor(mContext: FragmentDepartment): AsyncTask<Void,Void,String>(){
-        private var res: String? = null
+   //     private var res: String? = null
         private val fragRef: WeakReference<FragmentDepartment> = WeakReference(mContext)
         //var mView: ListView = fragRef.get()!!.listView
 
@@ -221,7 +223,7 @@ override fun onClick(v: View?) {
         }
 
         override fun doInBackground(vararg params: Void?): String {
-            var xhr: String = ""
+            var xhr = ""
             val conn = URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
             try {
                 conn.connect()

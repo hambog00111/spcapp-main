@@ -4,23 +4,20 @@ package ph.sanpablocitygov.iSanPablo.home
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
+
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.preference.PreferenceManager
-import android.provider.Settings
+
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
-import android.support.v4.view.ViewPager
-import android.support.v7.app.AlertDialog
+
 import android.support.v7.widget.CardView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
-import com.firebase.ui.auth.AuthUI.getApplicationContext
 
 import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
 import ph.sanpablocitygov.iSanPablo.R
@@ -40,15 +37,13 @@ class FragmentHome : Fragment() {
     private var permissionsRequired = arrayOf( Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION,
         Manifest.permission.CALL_PHONE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
     private val PERMISSION_CALLBACK_CONSTANT = 100
-    private val REQUEST_PERMISSION_SETTING = 101
+
     private var permissionStatus: SharedPreferences? = null
-    private var sentToSettings = false
 
     private lateinit var viewflipperHome: ViewFlipper
 
 
-    internal lateinit var viewPagerHome: ViewPager
-    internal lateinit var viewPagerEvents: ViewPager
+
     private lateinit var viewflipperEvents: ViewFlipper
 
     val image = intArrayOf(R.drawable.lake5, R.drawable.lake1, R.drawable.lake4, R.drawable.lake2)
@@ -81,6 +76,8 @@ class FragmentHome : Fragment() {
         lmy.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
         val  gos = view.findViewById<LinearLayout>(R.id.linear_gos)
         gos.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val cc = view.findViewById<LinearLayout>(R.id.linear_cec)
+        cc.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
 
         val cve  = view.findViewById<CardView>(R.id.cv_events)
         cve.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
@@ -279,9 +276,6 @@ class FragmentHome : Fragment() {
             val editor = permissionStatus!!.edit()
             editor.putBoolean(permissionsRequired[0], true)
             editor.apply()
-        } else {
-            //You already have the permission, just go ahead.
-
         }
     }
 

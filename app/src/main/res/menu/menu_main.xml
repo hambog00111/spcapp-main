@@ -6,7 +6,7 @@
 
         <item
                 android:icon="@drawable/ic_search"
-                android:id="@+id/phone"
+                android:id="@+id/search"
                 app:showAsAction="always"
                 android:title="">
         </item>

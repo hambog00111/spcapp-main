@@ -1,5 +1,6 @@
 package ph.sanpablocitygov.iSanPablo.home
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -17,10 +18,11 @@ class Fragmentweb  : Fragment()  {
     internal var btn_next: Button? = null
     internal var progressBar: ProgressBar? = null
     private var url = "http://www.sanpablocitygov.ph/?fbclid=IwAR25R1_F3f9gz59nqa9bqAWp7a32RGeGDViejvA23747zW77GhNjZu2v8YU"
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view: View = inflater.inflate(R.layout.test, container, false)
 //       val view = inflater.inflate(R.layout.test, null)
-        var wv: WebView? = null
+        val wv: WebView
         //     btn_pre = view.findViewById<View>(R.id.btn_pre) as Button
         //btn_next = view.findViewById<View>(R.id.btn_next) as Button
 

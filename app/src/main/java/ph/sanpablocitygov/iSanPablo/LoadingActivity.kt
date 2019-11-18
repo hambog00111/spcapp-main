@@ -1,5 +1,8 @@
+@file:Suppress("DEPRECATION")
+
 package ph.sanpablocitygov.iSanPablo
 
+import android.annotation.SuppressLint
 import android.content.Intent
 
 import android.os.Bundle
@@ -11,6 +14,7 @@ import java.util.*
 
 class LoadingActivity : AppCompatActivity() {
 
+    @SuppressLint("InflateParams")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
