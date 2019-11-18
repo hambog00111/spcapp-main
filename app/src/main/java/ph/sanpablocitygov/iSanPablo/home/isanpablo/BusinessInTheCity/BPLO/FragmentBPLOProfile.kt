@@ -50,7 +50,7 @@ class FragmentBPLOProfile : Fragment() {
         val btnlogout = view.findViewById<TextView>(R.id.txt_bplo_log_out)
         btnlogout.setOnClickListener {
 
-            var logout = LayoutInflater.from(requireContext()).inflate(R.layout.dialoglogout, null)
+            val logout = LayoutInflater.from(requireContext()).inflate(R.layout.dialoglogout, null)
             val bplobBuilder = AlertDialog.Builder(requireContext())
                 .setView(logout)
 

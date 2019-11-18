@@ -5,6 +5,7 @@ import android.support.v7.app.AlertDialog
 import android.app.DownloadManager
 import android.app.Service
 import android.content.DialogInterface
+import android.media.Image
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.net.Uri
@@ -21,12 +22,16 @@ import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.Toast
 
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.main_full_disclosure_dialogbox.view.*
+import kotlinx.android.synthetic.main.nav_header_main.*
 
 import ph.sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
 import ph.sanpablocitygov.iSanPablo.home.FragmentHome
@@ -52,6 +57,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
        //
 
+        val webss: Button = findViewById<Button>(R.id.db_home_logo)
+        webss.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentSPCWebsite(), null)
+                .addToBackStack(null)
+                .commit()
+        }
+
+
+
         fab.setOnClickListener { view ->
             var show: Any = Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
@@ -73,8 +89,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
        ).commit()
 
     }
-
-
 
 
 
@@ -252,7 +266,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
 //    @SuppressLint("CommitTransaction")
-    @SuppressLint("WrongConstant", "ShowToast")
+    @SuppressLint("WrongConstant", "ShowToast", "InflateParams")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -357,7 +371,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 disView.disclosure_2.setOnClickListener {
                     disDialog.dismiss()
-                    var str = "Would you like to download this document?"
+                    val str = "Would you like to download this document?"
                     val builder = AlertDialog.Builder((this))
                     with(builder) {
                         setMessage(str)
@@ -381,7 +395,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 disView.disclosure_3.setOnClickListener {
                     disDialog.dismiss()
-                    var str = "Would you like to download this document?"
+                    val str = "Would you like to download this document?"
                     val builder = AlertDialog.Builder((this))
                     with(builder) {
                         setMessage(str)
@@ -405,20 +419,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 disView.disclosure_4.setOnClickListener {
                     disDialog.dismiss()
-                    var str = "Would you like to download this document?"
+                    val str = "Would you like to download this document?"
                     val builder = AlertDialog.Builder((this))
                     with(builder) {
                         setMessage(str)
                         setTitle("BID-RESULTS 2018 4th Quarter")
 
-                        setPositiveButton("OK", DialogInterface.OnClickListener
-                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                        setPositiveButton("OK"
+                        ) { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
                             val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/BID-RESULTS%202018%204th%20Quarter.xlsx")
                             val request = DownloadManager.Request(uri)
                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            downloadManager.enqueue(request)  })
+                            downloadManager.enqueue(request)  }
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
@@ -429,20 +443,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 disView.disclosure_5.setOnClickListener {
                     disDialog.dismiss()
-                    var str = "Would you like to download this document?"
+                    val str = "Would you like to download this document?"
                     val builder = AlertDialog.Builder((this))
                     with(builder) {
                         setMessage(str)
                         setTitle("SFC-4THQ")
 
-                        setPositiveButton("OK", DialogInterface.OnClickListener
-                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                        setPositiveButton("OK"
+                        ) { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
                             val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/SCF-4THQ.xlsx")
                             val request = DownloadManager.Request(uri)
                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            downloadManager.enqueue(request)  })
+                            downloadManager.enqueue(request)  }
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
@@ -453,20 +467,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 disView.disclosure_6.setOnClickListener {
                     disDialog.dismiss()
-                    var str = "Would you like to download this document?"
+                    val str = "Would you like to download this document?"
                     val builder = AlertDialog.Builder((this))
                     with(builder) {
                         setMessage(str)
                         setTitle("SEF-Utilization-2018")
 
-                        setPositiveButton("OK", DialogInterface.OnClickListener
-                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                        setPositiveButton("OK"
+                        ) { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
                             val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/SEF-Utilization-2018.xls")
                             val request = DownloadManager.Request(uri)
                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            downloadManager.enqueue(request)  })
+                            downloadManager.enqueue(request)  }
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
@@ -477,20 +491,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 disView.disclosure_7.setOnClickListener {
                     disDialog.dismiss()
-                    var str = "Would you like to download this document?"
+                    val str = "Would you like to download this document?"
                     val builder = AlertDialog.Builder((this))
                     with(builder) {
                         setMessage(str)
                         setTitle("Statement of Debt Service 03.24.14")
 
-                        setPositiveButton("OK", DialogInterface.OnClickListener
-                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                        setPositiveButton("OK"
+                        ) { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
                             val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/Statement%20of%20Debt%20Services%2003.24.14.xlsx")
                             val request = DownloadManager.Request(uri)
                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            downloadManager.enqueue(request)  })
+                            downloadManager.enqueue(request)  }
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
@@ -500,20 +514,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 disView.disclosure_8.setOnClickListener {
                     disDialog.dismiss()
-                    var str = "Would you like to download this document?"
+                    val str = "Would you like to download this document?"
                     val builder = AlertDialog.Builder((this))
                     with(builder) {
                         setMessage(str)
                         setTitle("Unliquidated-2018")
 
-                        setPositiveButton("OK", DialogInterface.OnClickListener
-                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                        setPositiveButton("OK"
+                        ) { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
                             val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/Unliquidated-2018.xlsx")
                             val request = DownloadManager.Request(uri)
                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            downloadManager.enqueue(request)  })
+                            downloadManager.enqueue(request)  }
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
@@ -523,20 +537,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 disView.disclosure_9.setOnClickListener {
                     disDialog.dismiss()
-                    var str = "Would you like to download this document?"
+                    val str = "Would you like to download this document?"
                     val builder = AlertDialog.Builder((this))
                     with(builder) {
                         setMessage(str)
                         setTitle("CDRRMF-12.31.18")
 
-                        setPositiveButton("OK", DialogInterface.OnClickListener
-                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                        setPositiveButton("OK"
+                        ) { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
                             val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/CDRRMF-12.31.18.xlsx")
                             val request = DownloadManager.Request(uri)
                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            downloadManager.enqueue(request)  })
+                            downloadManager.enqueue(request)  }
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
@@ -546,20 +560,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 disView.disclosure_10.setOnClickListener {
                     disDialog.dismiss()
-                    var str = "Would you like to download this document?"
+                    val str = "Would you like to download this document?"
                     val builder = AlertDialog.Builder((this))
                     with(builder) {
                         setMessage(str)
                         setTitle("Manpower Complement(DILG)")
 
-                        setPositiveButton("OK", DialogInterface.OnClickListener
-                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                        setPositiveButton("OK"
+                        ) { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
                             val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/Manpower%20Complement%20(DILG).xlsx")
                             val request = DownloadManager.Request(uri)
                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            downloadManager.enqueue(request)  })
+                            downloadManager.enqueue(request)  }
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
@@ -569,20 +583,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 disView.disclosure_11.setOnClickListener {
                     disDialog.dismiss()
-                    var str = "Would you like to download this document?"
+                    val str = "Would you like to download this document?"
                     val builder = AlertDialog.Builder((this))
                     with(builder) {
                         setMessage(str)
                         setTitle("PDAF UTILIZATION")
 
-                        setPositiveButton("OK", DialogInterface.OnClickListener
-                        { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                        setPositiveButton("OK"
+                        ) { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
                             this@MainActivity,
                             DownloadManager::class.java) as DownloadManager
                             val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/PDAF%20UTILIZATION.xls")
                             val request = DownloadManager.Request(uri)
                             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            downloadManager.enqueue(request)  })
+                            downloadManager.enqueue(request)  }
                         setNegativeButton("CANCEL", null)
                     }
                     val alertDialog = builder.create()
@@ -606,12 +620,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //                    .commit()
 //            }
 
-//            R.id.nav_webview ->{
+//            R.id.db_home_logo_1 ->{
 //                supportFragmentManager.beginTransaction().replace(
 //                    R.id.frag_container,
-//                    FragmentBrowser()
-//                ).commit()
+//                    FragmentSPCWebsite(), null)
+//                    .addToBackStack(null)
+//                    .commit()
 //            }
+
+
+
 
 
             R.id.nav_bplo ->{

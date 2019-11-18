@@ -7,7 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
-import android.net.Uri
+
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -23,13 +23,12 @@ import org.json.JSONArray
 import org.json.JSONObject
 import ph.sanpablocitygov.iSanPablo.LoadingActivity
 import ph.sanpablocitygov.iSanPablo.R
-import ph.sanpablocitygov.iSanPablo.home.FragmentHome
-import ph.sanpablocitygov.iSanPablo.links.FragmentSandiganbayan
+
 import java.lang.ref.WeakReference
 import java.net.HttpURLConnection
 import java.net.URL
 
-@Suppress("PLUGIN_WARNING")
+@Suppress("PLUGIN_WARNING", "DEPRECATION")
 class FragmentOurGoverment  : Fragment(),View.OnClickListener{
     private var pLoading: ProgressDialog? = null
 
@@ -183,22 +182,18 @@ override fun onStop() {
 @SuppressLint("SetTextI18n")
 private fun disconnected() {
     clickbutton.visibility = View.GONE
-//    imageView.visibility = View.VISIBLE
+
     val Nonet = LayoutInflater.from(requireActivity()).inflate(R.layout.fragment_our_gov_dialogbox, null)
 
     val builder = android.app.AlertDialog.Builder(requireContext())
         .setView(Nonet)
 
-    var tv = Nonet.findViewById(R.id.resultTv) as TextView
+    val tv = Nonet.findViewById(R.id.resultTv) as TextView
 
     tv.text = "You need to have Mobile Data or wifi to access this."
     builder.setCancelable(false)
 
     builder.setPositiveButton("OK"){dialog, which ->
-//        activity!!.supportFragmentManager.beginTransaction().replace(
-//            R.id.frag_container,
-//            FragmentHome())
-//            .commit()
 
         val intent = Intent(context, LoadingActivity::class.java)
         startActivity(intent)
@@ -218,8 +213,6 @@ private fun disconnected() {
 
 private fun connected() {
     clickbutton.visibility = View.VISIBLE
-//    imageView.visibility = View.INVISIBLE
-//        fetchFeeds()
 }
 
 
@@ -228,7 +221,7 @@ private fun connected() {
     fun getData() {
         val conn: HttpURLConnection = URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
         val res = conn.inputStream.bufferedReader().readText()
-        val data: JSONArray = JSONObject(res).getJSONArray("depts")
+        JSONObject(res).getJSONArray("depts")
     }
     override fun onClick(v: View?) {
         when(v!!.id) {
@@ -335,9 +328,9 @@ private fun connected() {
 
 
 
-    @SuppressLint("StaticFieldLeak")
+//    @SuppressLint("StaticFieldLeak")
      inner class GetDeptLs internal constructor(mContext: FragmentOurGoverment): AsyncTask<Void, Void, String>(){
-        private var res: String? = null
+   //     private var res: String? = null
         private val fragRef: WeakReference<FragmentOurGoverment> = WeakReference(mContext)
         //var mView: ListView = fragRef.get()!!.listView
 
@@ -364,8 +357,10 @@ private fun connected() {
                 }
 
 
-            } catch (e: Exception) {
+          }
+            catch (e: Exception) {
                 xhr = "conErr"
+
                 e.printStackTrace()
             }
 
@@ -379,15 +374,16 @@ private fun connected() {
 
 
             if (result.toString () =="conErr")
-            {
 
+            {
+                Toast.makeText(requireContext(),"Connection failed",Toast.LENGTH_SHORT).show()
             }else{
 
                 data = JSONObject(result.toString()).getJSONArray("depts")
             }
             pLoading!!.dismiss()
 
-            //ListDept(result!!)
+
         }
 
         fun ListDept(jsonStr: CharSequence) {
@@ -412,7 +408,7 @@ private fun connected() {
                     R.layout.our_government_department_row,
                     list
                 )
-                //mView.adapter = adapter
+
             } catch (e: Exception) {
                 e.printStackTrace()
             }

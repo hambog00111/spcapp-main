@@ -22,13 +22,14 @@ package="ph.sanpablocitygov.iSanPablo">
     <uses-permission android:name="android.intent.action.DIAL" />
     <uses-permission android:name="android.intent.action.CALL_BUTTON" />
 
-
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 
 <application
 
+
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:largeHeap="true"
         android:hardwareAccelerated="true"
@@ -36,7 +37,9 @@ package="ph.sanpablocitygov.iSanPablo">
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:targetApi="m">
+    <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     <activity android:name=".home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.BPLOstep1Activity"
             android:label="@string/app_name">
     </activity>

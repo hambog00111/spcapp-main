@@ -15,12 +15,16 @@
 
     <ImageView
             android:id="@+id/imageView"
+
+            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/nav_header_desc"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/logo_home_mysanpablo"/>
+            android:focusableInTouchMode="true"
+            app:srcCompat="@drawable/logo_home_mysanpablo"
+            android:focusable="true" />
 
     <TextView
             android:layout_gravity="bottom"

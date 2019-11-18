@@ -3,7 +3,7 @@ package ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity
 import android.annotation.SuppressLint
 import android.support.v7.app.AlertDialog
 import android.app.DownloadManager
-import android.content.DialogInterface
+
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -85,7 +85,7 @@ class FragmentBusinessInTheCity : Fragment() {
         val btnbplo = view.findViewById<Button>(R.id.btn_business_bplo)
         btnbplo.setOnClickListener {
 
-            var bploView = LayoutInflater.from(requireContext()).inflate(R.layout.bc_bplo_dialogbox, null)
+            val bploView = LayoutInflater.from(requireContext()).inflate(R.layout.bc_bplo_dialogbox, null)
 
             val bplobBuilder = AlertDialog.Builder(requireContext())
                 .setView(bploView)
@@ -94,18 +94,18 @@ class FragmentBusinessInTheCity : Fragment() {
 
             bploView.btn_download_bplo.setOnClickListener {
                 bploDialog.dismiss()
-                var str = "Would you like to download this document?"
+                val str = "Would you like to download this document?"
                 val builder = AlertDialog.Builder(requireContext())
                 with(builder) {
                     setMessage(str)
                     setTitle("Download BPLO Form")
 
-                    setPositiveButton("OK", DialogInterface.OnClickListener
+                    setPositiveButton("OK")
                     { _, _ ->  val downloadManager: DownloadManager = getSystemService(requireContext(), DownloadManager::class.java) as DownloadManager
                         val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/BUSINESS%20PERMIT%20APPLICATION%20FORM.docx")
                         val request = DownloadManager.Request(uri)
                         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                        downloadManager.enqueue(request)  })
+                        downloadManager.enqueue(request)  }
                     setNegativeButton("CANCEL", null)
                 }
                 val alertDialog = builder.create()
@@ -192,7 +192,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
             investmentView.btn_business_investment.setOnClickListener {
                 investDialog.dismiss()
-                var str = "Would you like to download this document?"
+                val str = "Would you like to download this document?"
                 val builder = AlertDialog.Builder(requireContext())
 
 
@@ -200,13 +200,13 @@ class FragmentBusinessInTheCity : Fragment() {
                     setMessage(str)
                     setTitle("Download CDP Form")
 
-                    setPositiveButton("OK", DialogInterface.OnClickListener
-                    { _, _ ->  val downloadManager: DownloadManager = getSystemService(requireContext(),
+                    setPositiveButton("OK"
+                    ) { _, _ ->  val downloadManager: DownloadManager = getSystemService(requireContext(),
                         DownloadManager::class.java) as DownloadManager
                         val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/CDP%20Annexes%202018-2023.pdf?fbclid=IwAR2UpsGrvzmKHABFyjzDjN6A2TZ2CFLXKo2DbN-pcMaGTkHkYubf0bTOxbE")
                         val request = DownloadManager.Request(uri)
                         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                        downloadManager.enqueue(request)  })
+                        downloadManager.enqueue(request)  }
                     setNegativeButton("CANCEL", null)
                 }
                 val alertDialog = builder.create()

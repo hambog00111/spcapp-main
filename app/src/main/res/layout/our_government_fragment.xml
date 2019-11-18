@@ -678,7 +678,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="HON. LORETO S. AMANTE"
+                        android:text="@string/hon_loreto_s_amante"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:textSize="15sp"

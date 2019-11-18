@@ -38,7 +38,7 @@ class FragmentGoogleMap :
                     val perm: String = android.Manifest.permission.ACCESS_FINE_LOCATION
 //
                     // ask the user for permission
-                    ActivityCompat.requestPermissions(requireActivity(), arrayOf<String>(perm), 1)
+                    ActivityCompat.requestPermissions(requireActivity(), arrayOf(perm), 1)
                     // we will use these when user responds
                     callback.invoke(origin, true, false)
                 }

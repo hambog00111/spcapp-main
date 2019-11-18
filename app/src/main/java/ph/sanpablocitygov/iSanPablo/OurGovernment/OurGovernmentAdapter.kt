@@ -14,7 +14,7 @@ class OurGovernmentAdapter(var mcontext: Context, var resource:Int, var items:Li
     : ArrayAdapter<OurGovernmentModel>( mcontext , resource , items ) {
 
     @SuppressLint("ViewHolder")
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
 
         val layoutInflater : LayoutInflater = LayoutInflater.from(mcontext)

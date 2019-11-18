@@ -76,6 +76,8 @@ class FragmentHome : Fragment() {
         lmy.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
         val  gos = view.findViewById<LinearLayout>(R.id.linear_gos)
         gos.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+        val cc = view.findViewById<LinearLayout>(R.id.linear_cec)
+        cc.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
 
         val cve  = view.findViewById<CardView>(R.id.cv_events)
         cve.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
