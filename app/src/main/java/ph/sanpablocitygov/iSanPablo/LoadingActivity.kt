@@ -19,7 +19,7 @@ class LoadingActivity : AppCompatActivity() {
         val editor = sharedPreferences.edit()
 
         val isFirstRun = sharedPreferences.getBoolean("IS_FIRST_RUN", true)
-        val isFirstRun2 = sharedPreferences.getBoolean("IS_FIRST_RUN", false)
+
         if(isFirstRun) {
             val dialogBuilder = AlertDialog.Builder(this)
             val inflaters = this.layoutInflater
@@ -28,7 +28,7 @@ class LoadingActivity : AppCompatActivity() {
             dialogBuilder.setCancelable(false)
             val alertDialog = dialogBuilder.create()
 //             Update
-            dialogView.checkbox_accept.setOnCheckedChangeListener { buttonView, isChecked ->
+            dialogView.checkbox_accept.setOnCheckedChangeListener { _, _ ->
                 editor.putBoolean("IS_FIRST_RUN", false)
                 alertDialog.dismiss()
                 editor.apply()

@@ -191,9 +191,7 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
 
 
 
-        val req = object : StringRequest(Method.POST,
-            UPDATE_URL,
-            Listener {
+        val req = object : StringRequest(Method.POST, UPDATE_URL, Listener {
                 Toast.makeText(context, "register success", Toast.LENGTH_LONG).show()
 
                 activity!!.supportFragmentManager.beginTransaction().replace(

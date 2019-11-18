@@ -4,18 +4,24 @@ package ph.sanpablocitygov.iSanPablo.home
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.preference.PreferenceManager
+import android.provider.Settings
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
 import android.support.v4.view.ViewPager
+import android.support.v7.app.AlertDialog
 import android.support.v7.widget.CardView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
+import com.firebase.ui.auth.AuthUI.getApplicationContext
+
 import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
@@ -75,8 +81,6 @@ class FragmentHome : Fragment() {
         lmy.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_transition_animation)
         val  gos = view.findViewById<LinearLayout>(R.id.linear_gos)
         gos.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
-        val  cec = view.findViewById<LinearLayout>(R.id. linear_cec)
-        cec.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
 
         val cve  = view.findViewById<CardView>(R.id.cv_events)
         cve.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
@@ -146,7 +150,7 @@ class FragmentHome : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-        val btncio = view.findViewById<android.widget.Button>(R.id.btn_fb_cio)
+        val btncio = view.findViewById<Button>(R.id.btn_fb_cio)
         btncio?.setOnClickListener {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
@@ -183,7 +187,7 @@ class FragmentHome : Fragment() {
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentMyTaxes()
-                 , null
+                , null
             )
                 .addToBackStack(null)
                 .commit()
@@ -250,11 +254,11 @@ class FragmentHome : Fragment() {
                 //Show Information about why you need the permission
 
             } else if (permissionStatus!!.getBoolean(permissionsRequired[0], false)) {
-//                //Previously Permission Request was cancelled with 'Dont Ask Again',
-//                // Redirect to Settings after showing Information about why you need the permission
-//                val builder = AlertDialog. Builder(requireContext())
+                //Previously Permission Request was cancelled with 'Dont Ask Again',
+                // Redirect to Settings after showing Information about why you need the permission
+//                val builder = AlertDialog.Builder(requireContext())
 //                builder.setTitle("Need Multiple Permissions")
-//                builder.setMessage("This home_event_pic1 needs permissions.")
+//                builder.setMessage("This app needs permissions.")
 //                builder.setPositiveButton("Grant") { dialog, which ->
 //                    dialog.cancel()
 //                    sentToSettings = true
@@ -263,8 +267,8 @@ class FragmentHome : Fragment() {
 //                    startActivityForResult(intent, REQUEST_PERMISSION_SETTING)
 //                    Toast.makeText(requireContext(), "Go to Permissions to Grant ", Toast.LENGTH_LONG).show()
 //                }
-//                builder.setNegativeButton("Cancel") { dialog, which -> dialog.cancel() }
-//                builder.show()
+             //   builder.setNegativeButton("Cancel") { dialog, which -> dialog.cancel() }
+              //  builder.show()
             } else {
                 //just request the permission
                 ActivityCompat.requestPermissions(requireActivity(), permissionsRequired, PERMISSION_CALLBACK_CONSTANT)
@@ -274,7 +278,7 @@ class FragmentHome : Fragment() {
 
             val editor = permissionStatus!!.edit()
             editor.putBoolean(permissionsRequired[0], true)
-            editor.commit()
+            editor.apply()
         } else {
             //You already have the permission, just go ahead.
 

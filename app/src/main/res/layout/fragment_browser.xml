@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_go"
             android:text="GO"
+
             android:layout_alignParentEnd="true"/>
 
 </RelativeLayout>

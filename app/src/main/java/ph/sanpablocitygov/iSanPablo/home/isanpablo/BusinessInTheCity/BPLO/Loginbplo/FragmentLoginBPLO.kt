@@ -115,10 +115,7 @@ class FragmentLoginBPLO: Fragment(),View.OnClickListener {
                         // SharedPrefManager.getInstance(applicationContext).userLogin(user)
                         //starting the MainActivity
                         //  finish()
-                        // startActivity(Intent(applicationContext, Main3Activity::class.java))
-//
-//                        val intent = Intent(applicationContext, FragmentBPLOstep1::class.java)
-//                        startActivity(intent)
+
 
                         activity!!.supportFragmentManager.beginTransaction().replace(
                             R.id.frag_container,

@@ -1,11 +1,13 @@
 package ph.sanpablocitygov.iSanPablo.OurGovernment
-
+import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.support.v7.app.AlertDialog
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.net.ConnectivityManager
-import android.net.NetworkInfo
+import android.net.Uri
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -13,38 +15,48 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
 import android.widget.TextView
-import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
+import android.widget.Toast
+import kotlinx.android.synthetic.main.our_government_fragment.*
 
 import org.json.JSONArray
 import org.json.JSONObject
+import ph.sanpablocitygov.iSanPablo.LoadingActivity
+import ph.sanpablocitygov.iSanPablo.OurGovernment.Model.LocalOfficialsModel
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.FragmentHome
+import ph.sanpablocitygov.iSanPablo.links.FragmentSandiganbayan
 import java.lang.ref.WeakReference
 import java.net.HttpURLConnection
 import java.net.URL
 
-class FragmentOurGoverment  : Fragment(),View.OnClickListener{
+@Suppress("PLUGIN_WARNING")
+
+
+lateinit var  adapter1: Adapter
+lateinit var  localoff: MutableList<LocalOfficialsModel>
+class FragmentOurGoverment  : Fragment(), View.OnClickListener{
+
+    private var pLoading: ProgressDialog? = null
 
     private var broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-//            val notConnected = intent.getBooleanExtra(ConnectivityManager
-//                .EXTRA_NO_CONNECTIVITY, false)
-//            if (notConnected) {
-//                disconnected()
-//            } else {
-//                connected()
-//            }
+            val notConnected = intent.getBooleanExtra(ConnectivityManager
+                .EXTRA_NO_CONNECTIVITY, false)
+            if (notConnected) {
+                disconnected()
+            }else{
+                connected()
+            }
         }
     }
-
 
 
     private lateinit var data: JSONArray
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view: View = inflater.inflate(R.layout.our_government_fragment, container, false)
-
 
 //        val connectivityManager = requireContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 //        val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
@@ -62,6 +74,11 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
 
         val t1: TextView = view.findViewById(R.id.dept_mayor_office)
         t1.setOnClickListener(this)
+        pLoading = ProgressDialog(requireContext())
+        pLoading!!.setMessage("\tLoading, please wait")
+        pLoading!!.setCancelable(false)
+        pLoading!!.show()
+
         GetDeptLs(this).execute()
         //getData()
         val t2: TextView = view.findViewById(R.id.dept_administrator_office)
@@ -151,37 +168,70 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
 
 
 
+//        initdata()
 
         return  view
 
     }
+//
+//    private fun initdata() {
+//
+//        localoff = ArrayList()
+//
+//        localoff.add(localoff)
+//    }
 
 
-//override fun onStart() {
-//    super.onStart()
-//    activity!!.registerReceiver(broadcastReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
-//}
-//
-//override fun onStop() {
-//    super.onStop()
-//    activity!!.unregisterReceiver(broadcastReceiver)
-//}
-//
-//
-//private fun disconnected() {
-//    scrollView.visibility = View.INVISIBLE
+    override fun onStart() {
+    super.onStart()
+    activity!!.registerReceiver(broadcastReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
+
+}
+
+override fun onStop() {
+    super.onStop()
+    activity!!.unregisterReceiver(broadcastReceiver)
+}
+
+
+private fun disconnected() {
+    clickbutton.visibility = View.GONE
 //    imageView.visibility = View.VISIBLE
-//}
-//
-//private fun connected() {
-//    scrollView.visibility = View.VISIBLE
+    val Nonet = LayoutInflater.from(requireActivity()).inflate(R.layout.fragment_our_gov_dialogbox, null)
+
+    val builder = android.app.AlertDialog.Builder(requireContext())
+        .setView(Nonet)
+
+    var tv = Nonet.findViewById(R.id.resultTv) as TextView
+
+    tv.text = "You need to have Mobile Data or wifi to access this.Press ok to go back to home."
+
+    builder.setPositiveButton("ok"){dialog, which ->
+//        activity!!.supportFragmentManager.beginTransaction().replace(
+//            R.id.frag_container,
+//            FragmentHome())
+//            .commit()
+        val intent = Intent(context, LoadingActivity::class.java)
+        startActivity(intent)
+
+    }
+
+
+    val dialog: android.app.AlertDialog = builder.create()
+
+    dialog.show()
+
+}
+
+private fun connected() {
+    clickbutton.visibility = View.VISIBLE
 //    imageView.visibility = View.INVISIBLE
-////        fetchFeeds()
-//}
+//        fetchFeeds()
+}
 
 
 
-        fun getData() {
+    fun getData() {
         val conn: HttpURLConnection = URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
         val res = conn.inputStream.bufferedReader().readText()
         val data: JSONArray = JSONObject(res).getJSONArray("depts")
@@ -275,46 +325,69 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
 
 
 
-    inner class GetDeptLs internal constructor(mContext: FragmentOurGoverment): AsyncTask<Void, Void, String>(){
+    @SuppressLint("StaticFieldLeak")
+     inner class GetDeptLs internal constructor(mContext: FragmentOurGoverment): AsyncTask<Void, Void, String>(){
         private var res: String? = null
         private val fragRef: WeakReference<FragmentOurGoverment> = WeakReference(mContext)
         //var mView: ListView = fragRef.get()!!.listView
 
         override fun onPreExecute() {
 
+
+
         }
 
         override fun doInBackground(vararg params: Void?): String {
-            var xhr: String = ""
+            var xhr = ""
             val conn = URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
             try {
+
+                conn.readTimeout = 10000
+                conn.connectTimeout = 15000
                 conn.connect()
                 if(conn.responseCode == HttpURLConnection.HTTP_NOT_FOUND) {
                     xhr =
                         "{\"depts\": [{\"dept_office\": \"null\", \"dept_position\": \"null\", \"dept_name\":\"null\"}]}"
                 } else {
+
                     xhr = conn.inputStream.bufferedReader().readText()
                 }
+
+
             } catch (e: Exception) {
+                xhr = "conErr"
                 e.printStackTrace()
-            } finally {
-                conn.disconnect()
             }
+
+//            finally {
+//                disconnected()
+//            }
             return xhr
         }
 
         override fun onPostExecute(result: String?) {
-            data = JSONObject(result.toString()).getJSONArray("depts")
-            //res = result
-            //ListDept(res!!)
+
+
+            if (result.toString () =="conErr")
+            {
+
+            }else{
+
+                data = JSONObject(result.toString()).getJSONArray("depts")
+            }
+            pLoading!!.dismiss()
+
+            //ListDept(result!!)
         }
 
         fun ListDept(jsonStr: CharSequence) {
+
             val list = mutableListOf<OurGovernmentModel>()
             try {
                 val dLs: JSONArray = JSONObject(jsonStr.toString()).getJSONArray("depts")
-                for(i in 0 until dLs.length() step 1) {
+                for(i in 0 until dLs.length()) {
                     val post: JSONObject = dLs.getJSONObject(i)
+
                     list.add(
                         OurGovernmentModel(
                             post.getString("dept_office"),
@@ -333,6 +406,7 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
             } catch (e: Exception) {
                 e.printStackTrace()
             }
+            return
         }
 
     }
