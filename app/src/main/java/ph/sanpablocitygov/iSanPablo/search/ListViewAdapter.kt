@@ -64,7 +64,7 @@ class ListViewAdapter(internal var mContext: Context, internal var modellist: Mu
 
             holder = ViewHolder()
             //locate the views in row.xml
-            holder.mTitleTv = view.findViewById<TextView>(R.id.mainTitle) as TextView
+            holder.mTitleTv = view.findViewById <TextView>(R.id.mainTitle) as TextView
             holder.mIconIv = view.findViewById(R.id.mainIcon) as ImageView
 //
             view.tag = holder
@@ -80,52 +80,7 @@ class ListViewAdapter(internal var mContext: Context, internal var modellist: Mu
         holder.mIconIv!!.setImageResource(modellist[postition].icon)
 
 
-        //listview item clicks
 
-//        holder.mTitleTv!!.setOnClickListener {
-//            //code later
-//         val transaction : FragmentManager
-//            if (modellist[postition].title == "Business in The City" ) {
-////                val mFrag: Fragment = Fragment()
-//
-////                if (!isFinishing() && !isDestroyed())
-////                //start NewActivity with title for actionbar and text for textview
-////           activity.supportFragmentManager.beginTransaction().replace(
-////                    R.id.frag_container,
-////                    FragmentBusinessInTheCity(), null)
-////                    .commit()
-//            }
-//            if (modellist[postition].title == "My Taxes") {
-//                //start NewActivity with title for actionbar and text for textview
-//                val intent = Intent(mContext, FragmentDepartment::class.java)
-//                mContext.startActivity(intent)
-//            }
-//            if (modellist[postition].title == "My app Online Request") {
-//                //start NewActivity with title for actionbar and text for textview
-//                val intent = Intent(mContext, LoadingActivity::class.java)
-//
-//                mContext.startActivity(intent)
-//            }
-//            if (modellist[postition].title == "City Hotlines") {
-//                //start NewActivity with title for actionbar and text for textview
-//                val intent = Intent(mContext, FragmentBusinessInTheCity::class.java)
-//
-//                mContext.startActivity(intent)
-//            }
-//            if (modellist[postition].title == "Government Online Service") {
-//                //start NewActivity with title for actionbar and text for textview
-//                val intent = Intent(mContext, FragmentDepartment::class.java)
-//
-//                mContext.startActivity(intent)
-//            }
-//            if (modellist[postition].title == "City Employee Corner") {
-//                //start NewActivity with title for actionbar and text for textview
-//                val intent = Intent(mContext, FragmentDepartment::class.java)
-//
-//                mContext.startActivity(intent)
-//            }
-//
-//        }
 //
        return view
     }
