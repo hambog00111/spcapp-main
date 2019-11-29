@@ -302,13 +302,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 if (isConnected()) {
                     supportFragmentManager.beginTransaction().replace(
                         R.id.frag_container,
-                        FragmentOurGoverment(), null
-                    )
+                        FragmentOurGoverment(), null)
                         .addToBackStack(null)
                         .commit()
-
                 }
-
                 else{
 
                     Toast.makeText(context,"Please check your internet connection",4000).show()
