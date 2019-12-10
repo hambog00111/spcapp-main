@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-        >
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="vertical">
-
+            android:layout_height="match_parent"
+            android:orientation="vertical">
         <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_marginBottom="20dp"
@@ -18,7 +16,7 @@
             <LinearLayout
                     android:id="@+id/linearLayout3"
                     android:layout_width="match_parent"
-                    android:layout_height="90dp"
+                    android:layout_height="110dp"
                     android:background="@color/colorPrimary"
                     android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -31,8 +29,8 @@
             </LinearLayout>
             <LinearLayout
                     android:id="@+id/linearLayout4"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
                     android:background="@drawable/circle_back"
                     android:forceHasOverlappingRendering="true"
                     android:gravity="center"
@@ -44,108 +42,35 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
                     tools:ignore="UnusedAttribute">
                 <ImageView
-                        android:layout_width="65dp"
-                        android:layout_height="65dp"
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
                         android:layout_margin="5dp"
                         app:srcCompat="@drawable/tourism" />
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>
+
         <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="FESTIVALS"
-                android:textAlignment="center"
-                android:paddingBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:paddingTop="5dp"
-                android:textSize="30sp"
+                android:paddingBottom="5dp"
+                android:text="Our Seven Lakes"
+                android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp" />
+                android:textSize="35sp" />
 
-        <android.support.v4.view.ViewPager
+        <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:id="@+id/festivals_viewpager"
-                android:fitsSystemWindows="true"
+                android:layout_height="400dp"
                 android:layout_gravity="center"
-                android:scaleType="centerCrop"
-                android:padding="10dp"
-                android:layout_margin="10dp" />
-
-
-        <android.support.v7.widget.CardView
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="12dp"
-                android:layout_margin="15dp">
-            <LinearLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Coco Festival"
-                        android:background="@color/colorPrimary"
-                        android:paddingStart="20dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="5dp"
-                        android:paddingTop="5dp"
-                        android:textSize="32sp"
-                        android:textColor="@color/white"
-                        android:layout_marginBottom="15dp"
-
-                        android:layout_gravity="center" />
-                <me.biubiubiu.justifytext.library.JustifyTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/coco_festivals"
-
-                        android:textColor="@color/darkgray"
-                        android:layout_marginStart="35dp"
-                        android:textSize="15sp"/>
-
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-<!--        <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Coco Festival"-->
-<!--                android:textStyle="bold"-->
-<!--                android:paddingLeft="20dp"-->
-<!--                android:paddingBottom="5dp"-->
-<!--                android:paddingTop="5dp"-->
-<!--                android:textSize="28sp"-->
-<!-- -->
-<!--                android:layout_marginBottom="5dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_gravity="center"-->
-<!--        />-->
-
-<!--        <me.biubiubiu.justifytext.library.JustifyTextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/coco_festivals"-->
-<!--               -->
-<!--                android:layout_marginStart="35dp"-->
-<!--                android:textSize="17sp"-->
-<!--        />-->
-
-        <android.support.v4.view.ViewPager
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:id="@+id/festivals_tilapia_viewpager"
-                android:fitsSystemWindows="true"
-                android:layout_gravity="center"
-                android:scaleType="centerCrop"
+                android:layout_marginTop="20dp"
                 android:padding="10dp"
                 android:layout_margin="10dp"
-        />
-
+                android:fitsSystemWindows="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/tourism_sampaloc" />
 
         <android.support.v7.widget.CardView
                 android:layout_height="wrap_content"
@@ -158,64 +83,46 @@
             <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Tilapia Festival"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
                         android:background="@color/colorPrimary"
                         android:paddingStart="20dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="5dp"
                         android:paddingTop="5dp"
-                        android:textSize="32sp"
+                        android:paddingBottom="5dp"
+                        android:text="SAMPALOC LAKE"
                         android:textColor="@color/white"
-                        android:layout_marginBottom="15dp"
+                        android:textSize="32sp"
 
-                        android:layout_gravity="center" />
+                        android:textStyle="bold" />
+
                 <me.biubiubiu.justifytext.library.JustifyTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/tilapia_festivals"
-                        android:textColor="@color/darkgray"
                         android:layout_marginStart="35dp"
-                        android:textSize="15sp"/>
+
+                        android:text="@string/sampaloc_lakes"
+                        android:textColor="@color/darkgray"
+                        android:textSize="20sp" />
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
-<!--        <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Tilapia Festival"-->
-<!--                android:textStyle="bold"-->
-<!--                android:paddingLeft="20dp"-->
-<!--                android:paddingBottom="5dp"-->
-<!--                android:paddingTop="5dp"-->
-<!--                android:textSize="28sp"-->
 
-<!--                android:layout_marginBottom="5dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_gravity="center"-->
-<!--        />-->
 
-<!--        <me.biubiubiu.justifytext.library.JustifyTextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="35dp"-->
-
-<!--                android:text="@string/tilapia_festivals"-->
-<!--                android:textSize="17sp" />-->
-
-        <android.support.v4.view.ViewPager
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:id="@+id/festivals_lenten_viewpager"
+        <ImageView android:layout_width="match_parent"
+                android:layout_height="400dp"
+                app:srcCompat="@drawable/tourism_calibato"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
-                android:scaleType="centerCrop"
+                android:scaleType="centerInside"
+                android:layout_marginTop="20dp"
                 android:padding="10dp"
                 android:layout_margin="10dp"
-        />
+                />
         <android.support.v7.widget.CardView
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
@@ -227,67 +134,96 @@
             <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Lenten Procession"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
                         android:background="@color/colorPrimary"
                         android:paddingStart="20dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="5dp"
                         android:paddingTop="5dp"
-                        android:textSize="32sp"
+                        android:paddingBottom="5dp"
+                        android:text="CALIBATO"
                         android:textColor="@color/white"
-                        android:layout_marginBottom="15dp"
+                        android:textSize="32sp"
 
-                        android:layout_gravity="center" />
+                        android:textStyle="bold" />
+
                 <me.biubiubiu.justifytext.library.JustifyTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/lenten_festivals"
+                        android:text="@string/calibato_lakes"
+
                         android:textColor="@color/darkgray"
                         android:layout_marginStart="35dp"
-                        android:textSize="15sp"/>
+                        android:textSize="20sp"/>
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
 
 
-
-<!--        <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_marginBottom="5dp"-->
-<!--                android:paddingLeft="20dp"-->
-<!--                android:paddingTop="5dp"-->
-<!--                android:paddingBottom="5dp"-->
-
-<!--                android:text="Lenten Procession"-->
-<!--                android:textSize="28sp"-->
-<!--                android:textStyle="bold" />-->
-
-<!--        <me.biubiubiu.justifytext.library.JustifyTextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/lenten_festivals"-->
-
-<!--                android:layout_marginStart="35dp"-->
-<!--                android:textSize="17sp"-->
-<!--        />-->
-
-        <android.support.v4.view.ViewPager
-                android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:id="@+id/festivals_christmas_viewpager"
+        <ImageView android:layout_width="match_parent"
+                android:layout_height="400dp"
+                app:srcCompat="@drawable/tourism_bunot"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
-                android:scaleType="centerCrop"
+                android:scaleType="centerInside"
+                android:layout_marginTop="20dp"
                 android:padding="10dp"
                 android:layout_margin="10dp"
-        />
+                />
+        <android.support.v7.widget.CardView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="15dp">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:background="@color/colorPrimary"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="BUNOT"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+
+                        android:textStyle="bold" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bunot_lakes"
+
+                        android:textColor="@color/darkgray"
+                        android:layout_marginStart="35dp"
+                        android:textSize="20sp"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/tourism_mohicap" />
 
         <android.support.v7.widget.CardView
                 android:layout_height="wrap_content"
@@ -300,60 +236,195 @@
             <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Christmas Tree Lighting Ceremonies and Gift Giving"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
                         android:background="@color/colorPrimary"
                         android:paddingStart="20dp"
-                        android:textStyle="bold"
-                        android:paddingBottom="5dp"
                         android:paddingTop="5dp"
-                        android:textSize="25sp"
+                        android:paddingBottom="5dp"
+                        android:text="MOHICAP"
                         android:textColor="@color/white"
-                        android:layout_marginBottom="15dp"
+                        android:textSize="32sp"
 
-                        android:layout_gravity="center" />
+                        android:textStyle="bold" />
+
                 <me.biubiubiu.justifytext.library.JustifyTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/christmas_festivals"
+
+                        android:text="@string/mohicap_lakes"
                         android:textColor="@color/darkgray"
                         android:layout_marginStart="35dp"
-                        android:textSize="15sp"/>
+                        android:textSize="20sp"/>
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
 
-<!--        <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Christmas Tree Lighting Ceremonies and Gift Giving"-->
-<!--                android:textStyle="bold"-->
-<!--                android:paddingStart="20dp"-->
-<!--                android:paddingEnd="10dp"-->
-<!--                android:paddingBottom="5dp"-->
-<!--                android:paddingTop="5dp"-->
-<!--                android:textSize="28sp"-->
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/tourism_palakpakin" />
 
-<!--                android:layout_marginBottom="5dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_gravity="center"-->
-<!--        />-->
+        <android.support.v7.widget.CardView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="15dp">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-<!--        <me.biubiubiu.justifytext.library.JustifyTextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/christmas_festivals"-->
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:background="@color/colorPrimary"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="PALAKPAKIN"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
 
-<!--                android:layout_marginStart="35dp"-->
-<!--                android:textSize="17sp"-->
-<!--        />-->
+                        android:textStyle="bold" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/palakpakin_lakes"
+
+                        android:textColor="@color/darkgray"
+                        android:layout_marginStart="35dp"
+                        android:textSize="20sp"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+        <ImageView android:layout_width="match_parent"
+                android:layout_height="400dp"
+                app:srcCompat="@drawable/tourism_pandin"
+                android:fitsSystemWindows="true"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                />
+
+        <android.support.v7.widget.CardView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="15dp">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:background="@color/colorPrimary"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="PANDIN"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+
+                        android:textStyle="bold" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pandin_lakes"
+
+                        android:textColor="@color/darkgray"
+                        android:layout_marginStart="35dp"
+                        android:textSize="20sp"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+        <ImageView android:layout_width="match_parent"
+                android:layout_height="400dp"
+                app:srcCompat="@drawable/tourism_yambo"
+                android:fitsSystemWindows="true"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                />
+        <android.support.v7.widget.CardView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="15dp">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:background="@color/colorPrimary"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="YAMBO"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+
+                        android:textStyle="bold" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yambo_lakes"
+                        android:textColor="@color/darkgray"
+
+                        android:layout_marginStart="35dp"
+                        android:textSize="20sp"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+
 
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="140dp"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
@@ -367,32 +438,36 @@
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="vertical">
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="18dp"
-                        android:text="@string/Reps"
-                        android:textSize="13sp"
-                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:textStyle="bold"/>
+                        android:text="\t Republic of the Philippines"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
+                        android:gravity="center"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp"/>
                 <TextView
                         android:text="@string/_2019_san_pablo_city_goverment"
-                        android:layout_width="match_parent"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
+
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
+
                         android:id="@+id/textView8"
 
                         />
@@ -413,48 +488,51 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
             <LinearLayout
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     tools:ignore="UseCompoundDrawables">
+
                 <TextView
-                        android:text="@string/developed_by"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:gravity="center"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textAlignment="center"
                         android:layout_marginEnd="3dp"
-                        />
+                        android:gravity="center"
+                        android:text="@string/developed_by"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
                 <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="25dp"
+                        android:layout_width="110dp"
+                        android:layout_height="45dp"
                         app:srcCompat="@drawable/pylon"
                         android:layout_marginEnd="13dp"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription,TooManyViews" />
             </LinearLayout>
             <LinearLayout
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                 <TextView
-                        android:text="@string/developer"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:gravity="center"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:text="@string/developer_t"
                         android:textAlignment="center"
-                        />
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
                 <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -463,17 +541,16 @@
                             android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:gravity="center"
-
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center"
-                            />
+                            tools:ignore="TooManyViews" />
                     <TextView
                             android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:gravity="center"
 
                             android:textColor="@color/colorPrimary"
@@ -482,7 +559,6 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
 
     </LinearLayout>
 </ScrollView>

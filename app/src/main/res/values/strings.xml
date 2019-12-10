@@ -432,7 +432,7 @@
         as the appointed City Mayor. \n
     </string>
     <string name="Reps">Republic of the Philippines</string>
-    <string name="Rep">All content is in the public \n domain unless otherwise stated</string>
+    <string name="Rep">All content is in the public\ndomain unless otherwise stated</string>
 
     <string name="home2">
         \t \t In 1521, Sampaloc was changed to San Pablo De Los Montes,
@@ -1221,7 +1221,7 @@
     <string name="change_of_nature_of_business">Change of Nature of Business</string>
     <string name="change_of_organization">Change of Organization</string>
     <string name="change_of_no_of_employees">Change of No. of Employees</string>
-    <string name="republic_of_the_philippines">\tRepublic of the Philippines</string>
+    <string name="republic_of_the_philippines">Republic of the Philippines</string>
     <string name="type_of_business">Type of Business</string>
     <string name="city_municipality">City/ Municipality</string>
     <string name="email_add">Email Add.</string>
@@ -1414,7 +1414,7 @@
     <string name="phil_sys">Phil Sys</string>
     <string name="philhealth_online_nregistration">PhilHealth Online Registration</string>
     <string name="pag_ibig_online_nregistration">Pag-ibig Online Registration</string>
-    <string name="_2019_san_pablo_city_goverment">© 2019 San Pablo City Goverment</string>
+    <string name="_2019_san_pablo_city_goverment">© 2019 San Pablo City Government</string>
     <string name="developer">Developer:</string>
     <string name="chris_velasco">Chris Velasco</string>
     <string name="joseph_bonilla">Joseph Bonilla</string>

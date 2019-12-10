@@ -480,8 +480,6 @@
 
     </LinearLayout>
 
-
-
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -544,12 +542,11 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
             <LinearLayout
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -578,7 +575,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <TextView
-                        android:text="Developer: "
+                        android:text="@string/developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
@@ -586,7 +583,7 @@
                         android:layout_marginStart="5dp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        tools:ignore="HardcodedText" />
+                        />
                 <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -597,6 +594,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:gravity="center"
+
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center"
                             />
@@ -606,13 +604,12 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:gravity="center"
+
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center"
                             />
                 </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

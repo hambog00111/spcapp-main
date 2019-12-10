@@ -68,8 +68,6 @@ class FragmentSearch:Fragment (){
           arrayList.add(model)
         }
 
-
-
         //pass results to listViewAdapter class
         adapter = ListViewAdapter(requireContext(), arrayList)
 

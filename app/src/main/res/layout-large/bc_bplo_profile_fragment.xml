@@ -294,18 +294,19 @@
                           android:padding="5dp"
                           android:gravity="center">
 
-                <Button android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:textColor="@color/white"
-                        android:layout_marginEnd="10dp"
+                <Button
+                        android:id="@+id/txt_bplo_apply_now"
+                        android:layout_width="150dp"
+                        android:layout_height="31dp"
+                        android:layout_gravity="start"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
+                        android:layout_marginEnd="10dp"
                         android:background="@drawable/text_border2"
                         android:text="@string/apply_now"
-                        android:layout_gravity="start"
-                        android:id="@+id/txt_bplo_apply_now"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         tools:ignore="ButtonStyle" />
 
 
@@ -423,7 +424,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
@@ -433,7 +434,7 @@
                     android:orientation="horizontal"
                     tools:ignore="UseCompoundDrawables">
                 <TextView
-                        android:text="Developed by:"
+                        android:text="@string/developed_by"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
@@ -442,7 +443,7 @@
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="3dp"
-                        tools:ignore="HardcodedText" />
+                        />
                 <ImageView
                         android:layout_width="90dp"
                         android:layout_height="25dp"
@@ -456,7 +457,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <TextView
-                        android:text="Developer: "
+                        android:text="@string/developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="15sp"
@@ -464,7 +465,7 @@
                         android:layout_marginStart="5dp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        tools:ignore="HardcodedText" />
+                        />
                 <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -475,16 +476,20 @@
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:gravity="center"
+
                             android:textColor="@color/colorPrimary"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            />
                     <TextView
                             android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:gravity="center"
+
                             android:textColor="@color/colorPrimary"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

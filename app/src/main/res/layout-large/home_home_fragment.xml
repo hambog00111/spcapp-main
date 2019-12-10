@@ -800,8 +800,7 @@
                         android:textSize="13sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        android:layout_marginBottom="5dp"
-                        tools:ignore="TooManyViews" />
+                        android:layout_marginBottom="5dp"/>
                 <TextView
                         android:text="@string/_2019_san_pablo_city_goverment"
                         android:layout_width="match_parent"
@@ -831,7 +830,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
@@ -878,14 +877,15 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="15sp"
                             android:gravity="center"
+
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center"
-                            tools:ignore="HardcodedText,TooManyViews" />
+                            />
                     <TextView
                             android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
@@ -899,8 +899,6 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
-
     </LinearLayout>
 
 </ScrollView>

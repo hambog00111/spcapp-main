@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:background="@drawable/circle_back"
+                    android:forceHasOverlappingRendering="true"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:weightSum="1"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                    tools:ignore="UnusedAttribute">
+                <ImageView
+                        android:layout_width="85dp"
+                        android:layout_height="85dp"
+                        android:layout_margin="5dp"
+                        app:srcCompat="@drawable/tourism" />
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="WHERE TO STAY/ EAT?"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="35sp" />
+
+
+
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="RESORTS"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"/>
+        </LinearLayout>
+
+        <!--        <TextView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginBottom="5dp"-->
+        <!--                android:gravity="center"-->
+        <!--                android:paddingTop="5dp"-->
+        <!--                android:paddingBottom="5dp"-->
+        <!--                android:text="RESORTS"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="28sp"-->
+        <!--                android:textStyle="bold" />-->
+
+        <ListView
+                android:id="@+id/listview_tourism_resort"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/text_border"
+                android:nestedScrollingEnabled="true"
+                android:padding="5dp"
+                android:scrollbarSize="5dp"
+                android:scrollbarStyle="insideInset" />
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="HOTEL"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"/>
+        </LinearLayout>
+        <!--        <TextView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginBottom="5dp"-->
+        <!--                android:gravity="center"-->
+        <!--                android:paddingTop="5dp"-->
+        <!--                android:paddingBottom="5dp"-->
+        <!--                android:text="HOTEL"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="28sp"-->
+        <!--                android:textStyle="bold" />-->
+
+        <ListView
+                android:id="@+id/listview_tourism_hotel"
+                android:layout_width="match_parent"
+                android:scrollbarSize="5dp"
+                android:padding="5dp"
+                android:background="@drawable/text_border"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:scrollbarStyle="insideInset"
+                android:nestedScrollingEnabled="true"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INN"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textSize="32sp"
+                android:background="@color/colorPrimary"
+
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                />
+
+        <ListView
+                android:id="@+id/listview_tourism_inn"
+                android:layout_width="match_parent"
+                android:scrollbarSize="5dp"
+                android:padding="5dp"
+                android:background="@drawable/text_border"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:scrollbarStyle="insideInset"
+                android:nestedScrollingEnabled="true"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="TRAVEL AND TOURS"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"/>
+        </LinearLayout>
+
+        <!--        <TextView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="TRAVEL AND TOURS"-->
+        <!--                android:textStyle="bold"-->
+        <!--                android:gravity="center"-->
+        <!--                android:paddingBottom="5dp"-->
+        <!--                android:paddingTop="5dp"-->
+        <!--                android:textSize="28sp"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:layout_marginBottom="5dp"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--        />-->
+
+        <ListView
+                android:id="@+id/listview_tourism_travel_tour"
+                android:layout_width="match_parent"
+                android:scrollbarSize="5dp"
+                android:scrollbarStyle="insideInset"
+                android:nestedScrollingEnabled="true"
+                android:layout_height="400dp"
+                android:padding="5dp"
+                android:background="@drawable/text_border"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="RESTAURANTS"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"/>
+        </LinearLayout>
+        <!--        <TextView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginBottom="5dp"-->
+        <!--                android:gravity="center"-->
+        <!--                android:paddingTop="5dp"-->
+        <!--                android:paddingBottom="5dp"-->
+        <!--                android:text="Restaurants"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textSize="28sp"-->
+        <!--                android:textStyle="bold" />-->
+
+        <ListView
+                android:id="@+id/listview_tourism_travel_restaurant"
+                android:layout_width="match_parent"
+                android:scrollbarSize="5dp"
+                android:scrollbarStyle="insideInset"
+                android:nestedScrollingEnabled="true"
+                android:layout_height="400dp"
+                android:padding="5dp"
+                android:background="@drawable/text_border"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"/>
+
+
+    </LinearLayout>
+</ScrollView>
