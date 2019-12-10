@@ -517,12 +517,6 @@ class FragmentSearch:Fragment (){
 
 
 
-
-
-
-
-
-
         }
 
         searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener {
@@ -536,6 +530,7 @@ class FragmentSearch:Fragment (){
                     listView.clearTextFilter()
                 } else {
                     adapter.filter(s)
+
                 }
                 return true
             }

@@ -44,7 +44,8 @@ class ListViewAdapter(internal var mContext: Context, internal var modellist: Mu
         return modellist.size
     }
 
-    override fun getItem(i: Int): Any {      return modellist[i]
+    override fun getItem(i: Int): Any {
+        return modellist[i]
     }
 
     override fun getItemId(i: Int): Long {
@@ -90,8 +91,8 @@ class ListViewAdapter(internal var mContext: Context, internal var modellist: Mu
         var charText = charText
         charText = charText.toLowerCase(Locale.getDefault())
         modellist.clear()
-         if (charText.length == 0) {
-            modellist.addAll(arrayList)
+         if (charText.isEmpty()) {
+         modellist.addAll(arrayList)
             } else {
                  for (model in arrayList) {
                   if (model.title.toLowerCase(Locale.getDefault())

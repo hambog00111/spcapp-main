@@ -15,15 +15,14 @@
 
     <ImageView
             android:id="@+id/imageView"
-
             android:clickable="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
             android:contentDescription="@string/nav_header_desc"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             android:layout_gravity="center"
             android:focusableInTouchMode="true"
-            app:srcCompat="@drawable/logo_home_mysanpablo"
+            app:srcCompat="@mipmap/new_icon"
             android:focusable="true" />
 
     <TextView
@@ -32,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_marginTop="10dp"
+
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/white"
             android:textStyle="bold" />

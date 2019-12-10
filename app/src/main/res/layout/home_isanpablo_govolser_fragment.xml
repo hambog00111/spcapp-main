@@ -128,11 +128,13 @@
                         android:layout_height="wrap_content"
                         android:text="@string/dti_business_nregistration"
                         android:textStyle="bold"
+                        android:autoSizeTextType="uniform"
                         android:layout_marginTop="5dp"
                         android:padding="3dp"
                         android:textSize="15sp"
                         android:textAlignment="center"
                         android:gravity="center"
+                        android:scaleType="fitCenter"
                         android:textColor="@color/colorPrimary"/>
 
             </LinearLayout>
@@ -266,7 +268,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/phil_sys"
+                        android:text="@string/philsys"
                         android:textStyle="bold"
                         android:layout_marginTop="5dp"
                         android:padding="3dp"
