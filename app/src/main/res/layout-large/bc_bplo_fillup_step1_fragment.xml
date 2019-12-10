@@ -100,6 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
+                    android:layout_marginEnd="5dp"
                     android:textColor="@color/colorPrimaryDark"
                     android:text="@string/data_privacy_policy"
                     android:layout_marginStart="30dp"/>
@@ -140,14 +141,14 @@
                     android:layout_height="match_parent"
                     android:text="@string/_1_provide_accurate_information_incomplete_form_will_not_be_proceed_in_the_next_step"
                     android:textColor="@color/colorPrimaryDark"
-                android:layout_margin="5dp"
+                android:layout_margin="8dp"
                     android:textSize="15sp"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/_2_if_the_context_is_unclickable_please_proceed_to_the_next_context_it_will_be_automatic_system_generated"
                     android:textColor="@color/colorPrimaryDark"
-                    android:layout_margin="5dp"
+                    android:layout_margin="8dp"
                     android:textSize="15sp"/>
         </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -184,18 +185,20 @@
                               android:textSize="18sp"
                               android:text="@string/businesss_id"/>
 
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:contextClickable="false"
-                              android:textSize="18sp"
-                              android:inputType="number"
-                              android:hint="@string/_1223"
-                              android:focusable="false"
-                              android:clickable="false"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/darkgray"
-                              android:id="@+id/txt_bplo_business_id" tools:targetApi="m"
-                            tools:ignore="Autofill" />
+                    <EditText
+                            android:id="@+id/txt_bplo_business_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:focusable="false"
+                            android:hint="@string/_1223"
+                            android:inputType="number"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/darkgray"
+                            android:textSize="18sp"
+                            tools:ignore="Autofill"
+                            tools:targetApi="m" />
 
                 </LinearLayout>
                 <LinearLayout android:layout_width="270dp"

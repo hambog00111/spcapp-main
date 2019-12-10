@@ -18,7 +18,7 @@ import ph.sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
 
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
-import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentCityEmployeesCorner
+import ph.sanpablocitygov.iSanPablo.home.isanpablo.CityEmployeeCorner.FragmentCityEmployeesCorner
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes.FragmentMyTaxes
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.GovernmentOnlineServices.FragmentGovermentOnlineServices
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.FragmentMyAppOnlineRequest
@@ -48,7 +48,7 @@ class FragmentSearch:Fragment (){
 
         title = arrayOf("Business in The City", "My Taxes",
             "My app Online Request", "City Hotlines",
-            "Government Online Sevice","City Employee Corner","Our City",
+            "Government Online Service","City Employee Corner","Our City",
             "Our Government","Full Disclosure","Tourism","GOV.PH","Open Data Portal","Official Gazette"
             ,"Office of the President","Office of the Vice President"
             ,"Senate of the Philippines","House of Representatives","Supreme Court","Court of the Appeals","Sandiganbayan")
@@ -123,7 +123,7 @@ class FragmentSearch:Fragment (){
                     .commit()
 
             }
-            if (arrayList[position].title == "Government Online Sevice") {
+            if (arrayList[position].title == "Government Online Service") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -519,12 +519,6 @@ class FragmentSearch:Fragment (){
 
 
 
-
-
-
-
-
-
         }
 
         searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener {
@@ -538,6 +532,7 @@ class FragmentSearch:Fragment (){
                     listView.clearTextFilter()
                 } else {
                     adapter.filter(s)
+
                 }
                 return true
             }

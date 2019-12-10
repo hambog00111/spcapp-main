@@ -102,9 +102,9 @@
 
         \t In 1521, Sampaloc was changed to San Pablo De Los Montes, which became
         a parish in 1556 and then a municipality in 1647. In 1899, a Municipal
-        Government was established with Inocente Martinez as Municipal President
+        Government was established by Inocente Martinez as Municipal President
         in 1902 when the Civil Government was granted independence from the Province
-        of Laguna. On May 7, 1940, the charter bill sponsored by Congressman Tomas
+        of Laguna. On May 7, 1940, the charter bill, sponsored by Congressman Tomas
         Dizon was approved. The bill became known as the City Charter of San Pablo
         or Commonwealth Act No. 520. The City was inaugurated on March 30, 1941 with Dr.
         Potenciano Malvar as the appointed City Mayor. \n \n
@@ -210,7 +210,7 @@
     <string name="Sampalok">
         \t \t Sampalok was a large and prospering village which had it\'s own system of government
         and culture. Barangays already existed and each was headed by a chieftain who
-        was also known as Gatpuno. Foremost among them were Gat Paguil, Gat Sungayan,
+        was also known as Gatpuno. Foremost among of them were Gat Paguil, Gat Sungayan,
         Gat Salakab and Gat Pulintan. Cultural development was manifested in marriage
         patterns, religion and social groups. \n \n
         \t \t Even crude written symbols of communications
@@ -336,7 +336,7 @@
         \t \t In ancient times, San Pablo was known as the village of Sampalok. It was an upland
         realm surrounded by mountain ranges and quiescent volcanic peaks. Belief was that
         mountain making movements or orogeny had thrust lower lying areas to uplands and low
-        rolling plains after extensive volcanisms took place millions of years ago and
+        rolling plains after extensive volcanism took place millions of years ago and
         where caesal piniaceus tamarind or sampalok trees grew in wild abundance. This
         upland realm became our hometown, San Pablo de los Montes. \n
 
@@ -969,20 +969,20 @@
 
         2.We will greet our clients with a sincere smile. \n\n
 
-        3.When you enter our offce premises,we will introduce ourselves to you so that you can address usback in an
-        apporiate manner. \n\n
+        3.When you enter our office premises, we will introduce ourselves to you so that you can address us back in an
+        appropriate manner. \n\n
 
-        4.We will attend our clients’ inquiries within three(3)minutes. \n\n
+        4.We will attend our clients’ inquiries within three (3) minutes. \n\n
 
-        5.Approriate action will immediately follow your queries and you will be referred accordingly. \n\n
+        5.Appropriate action will immediately follow your queries and you will be referred accordingly. \n\n
 
         6.We will make you comfortable inside our facilities while you wait for your service request. \n\n
 
-        7.Express/special lanes are provided for Senior Citivens, pregnant women and People with Disablilites. \n\n
+        7.Express/special lanes are provided for Senior Citizens, pregnant women and People with Disabilities. \n\n
 
-        8.We will teach the clients, needed requiremnts that can expedite their service request. \n\n
+        8.We will teach the clients, needed requirements that can expedite their service request. \n\n
 
-        9.We will promplty return your denied request and explain to you the reason forsuch, which in turn will allow us
+        9.We will promptly return your denied request and explain to you the reason for such, which in turn will allow us
         to reprocess it. \n\n
 
         10.Our service stations will be properly labeled that will include our organizational chart and service flow
@@ -1000,13 +1000,13 @@
         15. A satisfied client is our happiness in the government service. \n
     </string>
     <string name="performance_pledge1">
-        We, the officials and employees of the City Government of San Pablocommit to:
+        We, the officials and employees of the City Government of San Pablo commit to:
     </string>
     <string name="performance_pledge2">
         ssist every client and visitors with utmost courtesy and smile.\n
     </string>
     <string name="performance_pledge3">
-        onitor our own ranks to ensure that services are delivered ontime \n
+        onitor our own ranks to ensure that services are delivered on time \n
     </string>
     <string name="performance_pledge4">
         dequate care shall be accorded to Senior Citizens, pregnant women, children and Persons with Disabilities(PWDs)
@@ -1026,8 +1026,8 @@
     </string>
     <string name="agency_mandate">
         \t \t All employees both rank and file and personnel holding key positions
-        in different departments of the local governmaent are mandated to deliver quality service
-        through the implementation of it\'s programs to make them effcient
+        in different departments of the local government are mandated to deliver quality service
+        through the implementation of it\'s programs to make them efficient
         and sustainable that have been developed in partnership with the private sector. \n
     </string>
     <string name="strategic_directions">
@@ -1035,9 +1035,9 @@
 
         1. Existing policies of the city/ agency have to be reviewed and revisited by the implementing offce.\n\n
 
-        2. Implementation of recuitment, selection and promotion plan, along with the performance management plan,
-        learningand development strategy and rewards and recognition policies have to be strictly
-        observed by the city and to be upheldby the city’s implementing offcials/offcers at all times.\n\n
+        2. Implementation of recruitment, selection and promotion plan, along with the performance management plan,
+        learning and development strategy and rewards and recognition policies have to be strictly
+        observed by the city and to be upheld by the city’s implementing officials/officers at all times.\n\n
 
         3. Monitor day-to-day activities of all employees.\n\n
 
@@ -1149,7 +1149,7 @@
     </string>
 
     <string name="coco_festivals">
-        \t\t A weeklong festival celebrated every 2nd week of January that
+        \t\t A week long festival celebrated every 2nd week of January that
         showcases the rich cultural heritage and natural attractions of
         the City highlighted by a grandiose parade honoring it\'s patron Saint
         Paul the First Hermit for a bountiful and blessed coconut harvest.
@@ -1166,7 +1166,7 @@
         festival honors the fishermen and their families with events like balsa
         regatta, balsa tug of war, tilapia eating and cooking contest, largest
         and healthiest tilapia which are conducted to the awe of visitors and
-        village dwellers around Sampalok Lake. Fostering camaraderie among the fisherfolks
+        village dwellers around Sampalok Lake. Fostering camaraderie among the fisher folks
         is promoted by the event that is highlighted by the search for Diwata ng Pitong Lawa. \n
     </string>
     <string name="lenten_festivals">
@@ -1178,6 +1178,12 @@
         City to witness the annual event. \n
     </string>
 
+
+    <string name="_3_take_a_picture_of_the_requirements_by_clicking_capture_for_each_procedure">3. Take a picture of the requirements by clicking capture for each procedure.</string>
+    <string name="_1_take_a_picture_of_the_requirements_by_clicking_capture_for_each_procedure">2. Take a picture of the Government Issued ID by clicking capture image.</string>
+    <string name="_2_take_a_picture_of_the_requirements_by_clicking_capture_for_each_procedure">3. Take a picture of the Requester by clicking capture image.</string>
+
+    <string name="_1_0_provide_accurate_information_incomplete_form_will_not_be_proceed_in_the_next_step">1. Provide accurate information. Incomplete form will not be proceed or submitted.</string>
     <string name="christmas_festivals">
 
         \t\t The annual LIGHTING OF CHRISTMAS TREE at the City Plaza of

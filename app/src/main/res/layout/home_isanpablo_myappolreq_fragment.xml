@@ -112,13 +112,13 @@
                     android:orientation="vertical">
 
                 <Button
+                        android:id="@+id/btn_myapp_bc"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:layout_gravity="center"
                         android:background="@drawable/logo_malr_bc_button"
                         android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:id="@+id/btn_myapp_bc"
-                        android:layout_gravity="center"/>
+                        android:scaleType="fitCenter" />
 
                 <TextView
                         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package ph.sanpablocitygov.iSanPablo.home.isanpablo
+package ph.sanpablocitygov.iSanPablo.home.isanpablo.CityEmployeeCorner
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -35,32 +35,36 @@ class FragmentCityEmployeesCorner : Fragment(){
         val btnsr = view.findViewById<Button>(R.id.btn_cec_sr)
         btnsr.setOnClickListener {
 
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
-
-            val mybusBuilder = AlertDialog.Builder(requireContext())
-                .setView(mybus)
-            mybusBuilder.setCancelable(false)
-            val mybusDialog = mybusBuilder.show()
-
-            mybus.txt_confirm_update.setOnClickListener {
-                mybusDialog.dismiss()
-            }
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentServiceRecord() , null)
+                .addToBackStack(null)
+                .commit()
         }
 
 
         val btncop = view.findViewById<Button>(R.id.btn_cec_cop)
         btncop.setOnClickListener {
 
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+//            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+//
+//            val mybusBuilder = AlertDialog.Builder(requireContext())
+//                .setView(mybus)
+//            mybusBuilder.setCancelable(false)
+//            val mybusDialog = mybusBuilder.show()
+//
+//            mybus.txt_confirm_update.setOnClickListener {
+//                mybusDialog.dismiss()
+//            }
 
-            val mybusBuilder = AlertDialog.Builder(requireContext())
-                .setView(mybus)
-            mybusBuilder.setCancelable(false)
-            val mybusDialog = mybusBuilder.show()
 
-            mybus.txt_confirm_update.setOnClickListener {
-                mybusDialog.dismiss()
-            }
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                FragmentCopyofPayslip
+
+                    () , null)
+                .addToBackStack(null)
+                .commit()
         }
 
 

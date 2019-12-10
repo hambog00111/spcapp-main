@@ -15,6 +15,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.our_government_fragment.*
@@ -22,32 +23,45 @@ import kotlinx.android.synthetic.main.our_government_fragment.*
 import org.json.JSONArray
 import org.json.JSONObject
 import ph.sanpablocitygov.iSanPablo.LoadingActivity
+import ph.sanpablocitygov.iSanPablo.OurGovernment.Model.LocalOfficialsModel
 import ph.sanpablocitygov.iSanPablo.R
 
 import java.lang.ref.WeakReference
 import java.net.HttpURLConnection
 import java.net.URL
 
-@Suppress("PLUGIN_WARNING", "DEPRECATION")
-class FragmentOurGoverment  : Fragment(),View.OnClickListener{
+@Suppress("PLUGIN_WARNING")
+
+
+lateinit var  adapter1: Adapter
+lateinit var  localoff: MutableList<LocalOfficialsModel>
+
+    @Suppress("PLUGIN_WARNING", "DEPRECATION")
+class FragmentOurGoverment  : Fragment(),View.OnClickListener {
+
     private var pLoading: ProgressDialog? = null
 
     private var broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            val notConnected = intent.getBooleanExtra(ConnectivityManager
-                .EXTRA_NO_CONNECTIVITY, false)
+            val notConnected = intent.getBooleanExtra(
+                ConnectivityManager
+                    .EXTRA_NO_CONNECTIVITY, false
+            )
             if (notConnected) {
                 disconnected()
-            }else{
+            } else {
                 connected()
             }
         }
     }
 
 
-
     private lateinit var data: JSONArray
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         val view: View = inflater.inflate(R.layout.our_government_fragment, container, false)
 
@@ -160,71 +174,82 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener{
         GetDeptLs(this).execute()
 
 
+//        initdata()
+
+        return view
+
+    }
+//
+//    private fun initdata() {
+//
+//        localoff = ArrayList()
+//
+//        localoff.add(localoff)
+//    }
 
 
-        return  view
+    override fun onStart() {
+        super.onStart()
+        activity!!.registerReceiver(
+            broadcastReceiver,
+            IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
+        )
 
     }
 
-
-override fun onStart() {
-    super.onStart()
-    activity!!.registerReceiver(broadcastReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
-
-}
-
-override fun onStop() {
-    super.onStop()
-    activity!!.unregisterReceiver(broadcastReceiver)
-}
-
-
-@SuppressLint("SetTextI18n")
-private fun disconnected() {
-    clickbutton.visibility = View.GONE
-
-    val Nonet = LayoutInflater.from(requireActivity()).inflate(R.layout.fragment_our_gov_dialogbox, null)
-
-    val builder = android.app.AlertDialog.Builder(requireContext())
-        .setView(Nonet)
-
-    val tv = Nonet.findViewById(R.id.resultTv) as TextView
-
-    tv.text = "You need to have Mobile Data or wifi to access this."
-    builder.setCancelable(false)
-
-    builder.setPositiveButton("OK"){dialog, which ->
-
-        val intent = Intent(context, LoadingActivity::class.java)
-        startActivity(intent)
-
-    }
-    builder.setNegativeButton("CANCEL"){dialog, which ->
-  dialog.dismiss()
-
+    override fun onStop() {
+        super.onStop()
+        activity!!.unregisterReceiver(broadcastReceiver)
     }
 
 
-    val dialog: android.app.AlertDialog = builder.create()
+    @SuppressLint("SetTextI18n")
+    private fun disconnected() {
+        clickbutton.visibility = View.GONE
 
-    dialog.show()
+        val Nonet = LayoutInflater.from(requireActivity())
+            .inflate(R.layout.fragment_our_gov_dialogbox, null)
 
-}
+        val builder = android.app.AlertDialog.Builder(requireContext())
+            .setView(Nonet)
 
-private fun connected() {
-    clickbutton.visibility = View.VISIBLE
-}
+        val tv = Nonet.findViewById(R.id.resultTv) as TextView
+
+        tv.text = "You need to have Mobile Data or wifi to access this."
+        builder.setCancelable(false)
+
+        builder.setPositiveButton("OK") { dialog, which ->
+
+            val intent = Intent(context, LoadingActivity::class.java)
+            startActivity(intent)
+
+        }
+        builder.setNegativeButton("CANCEL") { dialog, which ->
+            dialog.dismiss()
+
+        }
 
 
+        val dialog: android.app.AlertDialog = builder.create()
+
+        dialog.show()
+
+    }
+
+    private fun connected() {
+        clickbutton.visibility = View.VISIBLE
+    }
 
 
     fun getData() {
-        val conn: HttpURLConnection = URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
+        val conn: HttpURLConnection =
+            URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
         val res = conn.inputStream.bufferedReader().readText()
         JSONObject(res).getJSONArray("depts")
     }
+
     override fun onClick(v: View?) {
-        when(v!!.id) {
+        when (v!!.id) {
             R.id.dept_mayor_office -> dispMyrOff()
             R.id.dept_secretary_office -> dispSecOff()
             R.id.dept_traffic_office -> dispTrfOff()
@@ -241,96 +266,117 @@ private fun connected() {
 
     fun dispMyrOff() {
 
-       try{ var str = ""
-           for(i: Int in 0 until 7 step 1) {
-               val post: JSONObject = data.getJSONObject(i)
-               str = str + post.getString("dept_position") + "\n" + post.getString("dept_name") + "\n\n"
-           }
-           val builder = AlertDialog.Builder(requireContext())
-           with(builder) {
-               setMessage(str)
-               setTitle("Mayor\'s Office")
-               setPositiveButton("OK",null)
-           }
-           val alertDialog = builder.create()
-           alertDialog.show()
-       } catch (e: Exception) {
-           Toast.makeText(requireContext(), "unable to connect to the server please try again later ", Toast.LENGTH_SHORT).show()
-       }
+        try {
+            var str = ""
+            for (i: Int in 0 until 7 step 1) {
+                val post: JSONObject = data.getJSONObject(i)
+                str =
+                    str + post.getString("dept_position") + "\n" + post.getString("dept_name") + "\n\n"
+            }
+            val builder = AlertDialog.Builder(requireContext())
+            with(builder) {
+                setMessage(str)
+                setTitle("Mayor\'s Office")
+                setPositiveButton("OK", null)
+            }
+            val alertDialog = builder.create()
+            alertDialog.show()
+        } catch (e: Exception) {
+            Toast.makeText(
+                requireContext(),
+                "unable to connect to the server please try again later ",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
 
     }
+
     fun dispSecOff() {
-      try{ var str = ""
-          for(i: Int in 26 until 28 step 1) {
-              val post: JSONObject = data.getJSONObject(i)
-              str = str + post.getString("dept_position") + "\n" + post.getString("dept_name") + "\n\n"
-          }
-          val builder = AlertDialog.Builder(requireContext())
-          with(builder) {
-              setMessage(str)
-              setTitle("Secretary to the Sanguniang Panglungsod")
-              setPositiveButton("OK",null)
-          }
-          val alertDialog = builder.create()
-          alertDialog.show()
-      } catch (e: Exception) {
-          Toast.makeText(requireContext(), "unable to connect to the server please try again later ", Toast.LENGTH_SHORT).show()
-      }
+        try {
+            var str = ""
+            for (i: Int in 26 until 28 step 1) {
+                val post: JSONObject = data.getJSONObject(i)
+                str =
+                    str + post.getString("dept_position") + "\n" + post.getString("dept_name") + "\n\n"
+            }
+            val builder = AlertDialog.Builder(requireContext())
+            with(builder) {
+                setMessage(str)
+                setTitle("Secretary to the Sanguniang Panglungsod")
+                setPositiveButton("OK", null)
+            }
+            val alertDialog = builder.create()
+            alertDialog.show()
+        } catch (e: Exception) {
+            Toast.makeText(
+                requireContext(),
+                "unable to connect to the server please try again later ",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
     fun dispTrfOff() {
-     try{
-         var str = ""
-         for(i: Int in 35 until 37 step 1) {
-             val post: JSONObject = data.getJSONObject(i)
-             str = str + post.getString("dept_position") + "\n" + post.getString("dept_name") + "\n\n"
-         }
-         val builder = AlertDialog.Builder(requireContext())
-         with(builder) {
-             setMessage(str)
-             setTitle("Traffic Management Office")
-             setPositiveButton("OK",null)
-         }
-         val alertDialog = builder.create()
-         alertDialog.show()
-     }   catch (e: Exception) {
-         Toast.makeText(requireContext(), "unable to connect to the server please try again later ", Toast.LENGTH_SHORT).show()
-     }
+        try {
+            var str = ""
+            for (i: Int in 35 until 37 step 1) {
+                val post: JSONObject = data.getJSONObject(i)
+                str =
+                    str + post.getString("dept_position") + "\n" + post.getString("dept_name") + "\n\n"
+            }
+            val builder = AlertDialog.Builder(requireContext())
+            with(builder) {
+                setMessage(str)
+                setTitle("Traffic Management Office")
+                setPositiveButton("OK", null)
+            }
+            val alertDialog = builder.create()
+            alertDialog.show()
+        } catch (e: Exception) {
+            Toast.makeText(
+                requireContext(),
+                "unable to connect to the server please try again later ",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
     fun dispOth(v: Int) {
-     try{
-         var str = ""
-         val txt: TextView = view!!.findViewById(v)
-         for(i: Int in 0 until 37 step 1) {
-             val post: String = (data.getJSONObject(i)).getString("dept_office")
-             if(post.equals(txt.text.toString(), true)) {
-                 str = str + (data.getJSONObject(i)).getString("dept_position") + "\n" + (data.getJSONObject(i)).getString("dept_name") + "\n\n"
-             }
-         }
-         val builder = AlertDialog.Builder(requireContext())
-         with(builder) {
-             setMessage(str)
-             setTitle(txt.text.toString())
-             setPositiveButton("OK",null)
-         }
-         val alertDialog = builder.create()
-         alertDialog.show()
+        try {
+            var str = ""
+            val txt: TextView = view!!.findViewById(v)
+            for (i: Int in 0 until 37 step 1) {
+                val post: String = (data.getJSONObject(i)).getString("dept_office")
+                if (post.equals(txt.text.toString(), true)) {
+                    str =
+                        str + (data.getJSONObject(i)).getString("dept_position") + "\n" + (data.getJSONObject(
+                            i
+                        )).getString("dept_name") + "\n\n"
+                }
+            }
+            val builder = AlertDialog.Builder(requireContext())
+            with(builder) {
+                setMessage(str)
+                setTitle(txt.text.toString())
+                setPositiveButton("OK", null)
+            }
+            val alertDialog = builder.create()
+            alertDialog.show()
 
-     }   catch (e: Exception) {
-         Toast.makeText(requireContext(), "unable to connect to the server please try again later ", Toast.LENGTH_SHORT).show()
-     }
+        } catch (e: Exception) {
+            Toast.makeText(
+                requireContext(),
+                "unable to connect to the server please try again later ",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
 
-
-
-
-
-
-//    @SuppressLint("StaticFieldLeak")
-     inner class GetDeptLs internal constructor(mContext: FragmentOurGoverment): AsyncTask<Void, Void, String>(){
-   //     private var res: String? = null
+    //    @SuppressLint("StaticFieldLeak")
+    inner class GetDeptLs internal constructor(mContext: FragmentOurGoverment) :
+        AsyncTask<Void, Void, String>() {
+        //     private var res: String? = null
         private val fragRef: WeakReference<FragmentOurGoverment> = WeakReference(mContext)
         //var mView: ListView = fragRef.get()!!.listView
 
@@ -341,13 +387,14 @@ private fun connected() {
 
         override fun doInBackground(vararg params: Void?): String {
             var xhr = ""
-            val conn = URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
+            val conn =
+                URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
             try {
 
                 conn.readTimeout = 10000
                 conn.connectTimeout = 15000
                 conn.connect()
-                if(conn.responseCode == HttpURLConnection.HTTP_NOT_FOUND) {
+                if (conn.responseCode == HttpURLConnection.HTTP_NOT_FOUND) {
 //                  xhr =
 //                        "{\"depts\": \"null\",[{\"dept_office\": \"null\", \"dept_position\": \"null\", \"dept_name\":\"null\"}]}"
 
@@ -357,8 +404,7 @@ private fun connected() {
                 }
 
 
-          }
-            catch (e: Exception) {
+            } catch (e: Exception) {
                 xhr = "conErr"
 
                 e.printStackTrace()
@@ -373,11 +419,9 @@ private fun connected() {
         override fun onPostExecute(result: String?) {
 
 
-            if (result.toString () =="conErr")
-
-            {
-                Toast.makeText(requireContext(),"Connection failed",Toast.LENGTH_SHORT).show()
-            }else{
+            if (result.toString() == "conErr") {
+                Toast.makeText(requireContext(), "Connection failed", Toast.LENGTH_SHORT).show()
+            } else {
 
                 data = JSONObject(result.toString()).getJSONArray("depts")
             }
@@ -391,7 +435,7 @@ private fun connected() {
             val list = mutableListOf<OurGovernmentModel>()
             try {
                 val dLs: JSONArray = JSONObject(jsonStr.toString()).getJSONArray("depts")
-                for(i in 0 until dLs.length()) {
+                for (i in 0 until dLs.length()) {
                     val post: JSONObject = dLs.getJSONObject(i)
 
                     list.add(
@@ -419,3 +463,4 @@ private fun connected() {
 
 
 }
+

@@ -1,12 +1,12 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
         <android.support.constraint.ConstraintLayout
@@ -61,7 +61,7 @@
                 android:paddingStart="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/bplo_register_step_4"
+                android:text="BPLO - Register Step 5"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="25sp"
@@ -142,19 +142,25 @@
                         android:layout_height="match_parent"
                         android:text="@string/_1_provide_accurate_information_incomplete_form_will_not_be_proceed_in_the_next_step"
                         android:textColor="@color/colorPrimaryDark"
-                        android:layout_margin="5dp"
+                        android:layout_margin="8dp"
                         android:textSize="13sp"/>
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/_2_if_the_context_is_unclickable_please_proceed_to_the_next_context_it_will_be_automatic_system_generated"
                         android:textColor="@color/colorPrimaryDark"
-                        android:layout_margin="5dp"
+                        android:layout_margin="8dp"
+                        android:textSize="13sp"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/_3_take_a_picture_of_the_requirements_by_clicking_capture_for_each_procedure"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_margin="8dp"
                         android:textSize="13sp"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
-
         <android.support.v7.widget.CardView
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
@@ -165,183 +171,52 @@
                 android:gravity="center"
                 android:elevation="6dp"
                 android:orientation="vertical">
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="vertical">
-
-            <TextView android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="18sp"
-                      android:textColor="@color/white"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:paddingStart="10dp"
-                    android:background="@color/colorPrimary"
-                      android:textStyle="bold"
-                      android:layout_marginBottom="10dp"
-                      android:text="Business Activity"
-                    tools:ignore="HardcodedText,RtlSymmetry" />
-
-            <TextView android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="15sp"
-                      android:textColor="@color/darkgray"
-                      android:textStyle="bold"
-                    android:paddingStart="10dp"
-                      android:layout_marginBottom="5dp"
-                      android:text="@string/main_business"
-                    tools:ignore="RtlSymmetry" />
-
 
             <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:layout_gravity="center"
-                          android:gravity="center"
-                    android:layout_margin="5dp"
-                          android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
 
-                <LinearLayout android:layout_width="170dp"
-                              android:layout_height="wrap_content"
-                              android:orientation="vertical">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="DTI Permit"
+                        android:textColor="@color/white"
+                        android:paddingTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginBottom="10dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="25sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
-                    <Spinner android:layout_width="170dp"
-                             android:id="@+id/spinner_bplo_business_activity_line_business"
-                             android:layout_height="wrap_content"/>
+                <ImageView
+                        android:layout_width="350dp"
+                        android:layout_height="450dp"
 
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/image_bplo"
+                        android:id="@+id/bplo_step5_dti_img"
+                        tools:ignore="ContentDescription" />
 
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:textSize="13sp"
-                              android:inputType="text"
-                              android:hint="@string/sub_category"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_business_activity_sub_category"
-                            tools:ignore="Autofill" />
-
-
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:textSize="13sp"
-                              android:inputType="number"
-                              android:text="@string/capitalization"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:clickable="false"
-                              android:id="@+id/txt_bplo_business_activity_capitalization"
-                            tools:ignore="Autofill,LabelFor" />
-
-                </LinearLayout>
-
-
-                <LinearLayout android:layout_width="170dp"
-                              android:layout_height="wrap_content"
-                              android:orientation="vertical">
-
-                    <Spinner android:layout_width="match_parent"
-                             android:id="@+id/spinner_bplo_business_activity_sub_category"
-                             android:layout_height="wrap_content"/>
+                <Button
+                        android:id="@+id/bplo_step5_dti_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:text="CAPTURE IMAGE"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/text_border3"/>
 
 
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:textSize="13sp"
-                              android:inputType="number"
-                              android:hint="@string/no_of_units"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_business_activity_num_units"
-                            tools:ignore="Autofill" />
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:textSize="13sp"
-                              android:inputType="number"
-                              android:hint="@string/no_of_units"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                                android:visibility="invisible"
-                            tools:ignore="Autofill" />
 
-                </LinearLayout>
             </LinearLayout>
-
-            <Button android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:text="@string/update"
-                    android:layout_gravity="right"
-                    android:layout_margin="5dp"
-                    android:textColor="@color/white"
-                    android:textSize="13sp"
-                    android:id="@+id/btn_business_activity_update"
-                    android:background="@drawable/text_border2"
-                    tools:ignore="RtlHardcoded" />
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:gravity="center"
-                  android:orientation="horizontal">
-
-        <LinearLayout android:layout_width="180dp"
-                      android:layout_height="wrap_content"
-                      android:orientation="vertical">
-
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="text"
-                      android:hint="Line of business"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_activity_line_business_conf"
-                    tools:ignore="Autofill,HardcodedText" />
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="text"
-                      android:hint="Code"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_activity_code_conf"
-                    tools:ignore="Autofill,HardcodedText" />
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="text"
-                      android:hint="@string/sub_category"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_activity_sub_category_conf"
-                    tools:ignore="Autofill" />
-        </LinearLayout>
-
-            <LinearLayout android:layout_width="180dp"
-                          android:layout_height="wrap_content"
-                          android:orientation="vertical">
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="number"
-                      android:text="@string/capitalization"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_activity_capitalization_conf"
-                    tools:ignore="Autofill,LabelFor" />
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="number"
-                      android:hint="@string/no_of_units"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:id="@+id/txt_bplo_business_activity_num_units_conf"
-                    tools:ignore="Autofill" />
-            </LinearLayout>
-    </LinearLayout>
-        </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -354,123 +229,62 @@
                 android:gravity="center"
                 android:elevation="6dp"
                 android:orientation="vertical">
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="vertical">
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:textSize="15sp"
-                  android:textColor="@color/white"
-                android:background="@color/colorPrimary"
-                android:paddingStart="10dp"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                  android:textStyle="bold"
-                  android:layout_marginBottom="10dp"
-                  android:text="@string/additional_line_of_business"
-                tools:ignore="RtlSymmetry" />
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
 
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                android:gravity="center"
-                      android:orientation="horizontal">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Sketch of the Establishment"
+                        android:textColor="@color/white"
+                        android:paddingTop="5dp"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginBottom="10dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="25sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
-            <LinearLayout android:layout_width="180dp"
-                          android:layout_height="wrap_content"
-                          android:orientation="vertical">
-                <Spinner android:layout_width="180dp"
-                         android:id="@+id/spinner_bplo_additional_line_line_business"
-                         android:layout_height="wrap_content"/>
+                <ImageView
+                        android:layout_width="350dp"
+                        android:layout_height="450dp"
 
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/image_bplo"
+                        android:id="@+id/bplo_step5_sketch_img"
+                        tools:ignore="ContentDescription" />
 
-                <EditText android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:textSize="13sp"
-                          android:inputType="text"
-                          android:hint="@string/sub_category"
-                          android:textColor="@color/darkgray"
-                          android:textColorHint="@color/lightgray"
-                          android:id="@+id/txt_bplo_additional_line_sub_category"
-                        tools:ignore="Autofill" />
-
-
-
-            </LinearLayout>
-
-
-            <LinearLayout android:layout_width="180dp"
-                          android:layout_height="wrap_content"
-                          android:orientation="vertical">
-
-                <Spinner android:layout_width="180dp"
-                         android:id="@+id/spinner_bplo_additional_line_activity_code"
-                         android:layout_height="wrap_content"/>
+                <Button
+                        android:id="@+id/bplo_step5_sketch_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:text="CAPTURE IMAGE"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/text_border3"/>
 
 
-                <EditText android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:textSize="13sp"
-                          android:inputType="number"
-                          android:text="Capitalization"
-                          android:textColor="@color/darkgray"
-                          android:textColorHint="@color/white"
-                          android:clickable="false"
-                          android:id="@+id/txt_bplo_additional_line_capitalization"
-                        tools:ignore="Autofill,HardcodedText,LabelFor" />
 
             </LinearLayout>
-
-        </LinearLayout>
-
-        <Button android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="@string/add"
-                android:layout_gravity="right"
-                android:layout_margin="5dp"
-                android:textColor="@color/white"
-                android:textSize="13sp"
-                android:id="@+id/btn_additional_line_add"
-                android:background="@drawable/text_border2"
-                tools:ignore="RtlHardcoded" />
-
-        <ListView android:layout_width="match_parent"
-                    android:layout_margin="5dp"
-                  android:layout_height="300dp"
-                  android:scrollbars="vertical"
-                  android:scrollbarSize="5dp"
-                  android:scrollbarStyle="insideInset"
-                  android:nestedScrollingEnabled="true"
-                  android:id="@+id/listview_additional_line"
-                tools:ignore="NestedScrolling" />
-    </LinearLayout>
         </android.support.v7.widget.CardView>
 
 
-
-
-
         <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="horizontal"
-                      android:layout_margin="10dp"
-                      android:layout_gravity="center"
-                      android:padding="5dp"
-                      android:gravity="center">
-
-            <Button android:layout_width="100dp"
-                      android:layout_height="30dp"
-                      android:textColor="@color/white"
-                      android:layout_marginEnd="5dp"
-                      android:layout_marginStart="5dp"
-                      android:layout_marginTop="10dp"
-                      android:textStyle="bold"
-                      android:textSize="15sp"
-                    android:background="@drawable/text_border2"
-                      android:text="@string/back_page"
-                      android:layout_gravity="start"
-                      android:id="@+id/txt_bplo_back"
-                    tools:ignore="ButtonStyle" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:gravity="center">
 
             <Button android:layout_width="100dp"
                     android:layout_height="30dp"
@@ -479,26 +293,26 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="10dp"
                     android:textStyle="bold"
-                    android:gravity="center"
                     android:textSize="15sp"
                     android:background="@drawable/text_border2"
-                    android:text="@string/clear_all"
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/txt_bplo_clear_all"
+                    android:text="@string/back_page"
+                    android:layout_gravity="start"
+                    android:id="@+id/txt_bplo_back"
                     tools:ignore="ButtonStyle" />
 
-            <Button android:layout_width="100dp"
-                      android:layout_height="30dp"
-                      android:textColor="@color/white"
-                      android:layout_marginEnd="5dp"
-                      android:layout_marginStart="5dp"
-                      android:layout_marginTop="10dp"
-                      android:textStyle="bold"
-                      android:textSize="15sp"
-                      android:text="@string/next_page"
+
+            <Button android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="@string/submit"
                     android:background="@drawable/text_border2"
-                      android:layout_gravity="right"
-                      android:id="@+id/txt_bplo_submit"
+                    android:layout_gravity="right"
+                    android:id="@+id/txt_bplo_submit"
                     tools:ignore="ButtonStyle,RtlHardcoded" />
 
         </LinearLayout>
@@ -648,6 +462,5 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

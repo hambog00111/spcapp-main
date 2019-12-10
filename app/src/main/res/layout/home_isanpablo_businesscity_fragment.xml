@@ -112,12 +112,12 @@
 
             <Button
                     android:id="@+id/btn_business_investment"
-                    android:layout_width="89dp"
+                    android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/logo_bc_investment_button"
                     android:fitsSystemWindows="true"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity="center"/>
+                    android:scaleType="fitCenter" />
 
             <TextView
                     android:layout_width="match_parent"
@@ -180,13 +180,13 @@
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="89dp"
-                        android:layout_height="100dp"
-                        android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:background="@drawable/logo_bc_bta_button"
                         android:id="@+id/btn_business_bta"
-                        android:layout_gravity="center"/>
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/logo_bc_bta_button"
+                        android:fitsSystemWindows="true"
+                        android:scaleType="fitCenter" />
 
                 <TextView
                         android:layout_width="match_parent"
@@ -252,13 +252,13 @@
                     android:orientation="vertical">
 
                 <Button
-                        android:layout_width="101dp"
+                        android:id="@+id/btn_business_printmayor"
+                        android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:layout_gravity="center"
                         android:background="@drawable/logo_bc_p_button"
                         android:fitsSystemWindows="true"
-                        android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:id="@+id/btn_business_printmayor"/>
+                        android:scaleType="fitCenter" />
 
                 <TextView
                         android:layout_width="match_parent"
