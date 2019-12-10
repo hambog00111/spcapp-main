@@ -17,7 +17,7 @@
                 android:id="@+id/v_flipper"
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="360dp"
+                android:layout_height="400dp"
                 android:layout_gravity="center"
                 android:fitsSystemWindows="true" />
 
@@ -31,399 +31,399 @@
                 android:background="@color/colorPrimary"
                 android:layout_gravity="center"
                 android:gravity="center">
-            <ImageView android:layout_width="70dp"
-                    android:layout_height="70dp"
+            <ImageView android:layout_width="65dp"
+                    android:layout_height="65dp"
                     app:srcCompat="@drawable/logo_home_mysanpablo"
                     tools:ignore="ContentDescription" />
             <TextView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="35sp"
+                    android:textSize="30sp"
                     android:layout_marginStart="5dp"
                     android:textStyle="bold"
                     android:text="@string/my_isanpablo"/>
         </LinearLayout>
 
-<!--        <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:gravity="center"-->
-<!--                android:orientation="vertical">-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
 
-<!--            <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:gravity="center"-->
-<!--                    android:orientation="horizontal">-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
-<!--                <LinearLayout-->
-<!--                        android:layout_width="190dp"-->
-<!--                        android:layout_height="190dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_margin="10dp"-->
-<!--                        android:layout_marginTop="5dp"-->
-<!--                        android:id="@+id/linear_buss"-->
-<!--                        android:layout_marginBottom="5dp"-->
-<!--                        android:background="@drawable/text_border"-->
-<!--                        android:elevation="6dp"-->
-<!--                        android:gravity="center"-->
-<!--                        android:orientation="vertical">-->
+                <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/linear_buss"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/text_border"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-<!--                    <LinearLayout-->
-<!--                            android:layout_width="130dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:elevation="10dp"-->
-<!--                            android:gravity="bottom">-->
+                    <LinearLayout
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:gravity="bottom">
 
-<!--                        <Button-->
-<!--                                android:id="@+id/btn_business_in_the_city"-->
+                        <Button
+                                android:id="@+id/btn_business_in_the_city"
 
-<!--                                android:layout_width="110dp"-->
-<!--                                android:layout_height="120dp"-->
-<!--                                android:layout_marginStart="10dp"-->
-<!--                                android:layout_marginEnd="10dp"-->
-<!--                                android:background="@drawable/home_bc_logo"-->
-<!--                                android:elevation="10dp"-->
-<!--                                android:fitsSystemWindows="true"-->
-<!--                                android:foreground="?attr/selectableItemBackground"-->
-<!--                                android:gravity="bottom"-->
-<!--                                android:scaleType="fitCenter"-->
-<!--                                tools:targetApi="m"-->
-<!--                                tools:ignore="UnusedAttribute" />-->
-<!--                    </LinearLayout>-->
+                                android:layout_width="110dp"
+                                android:layout_height="120dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/home_bc_logo"
+                                android:elevation="10dp"
+                                android:fitsSystemWindows="true"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:gravity="bottom"
+                                android:scaleType="fitCenter"
+                                tools:targetApi="m"
+                                tools:ignore="UnusedAttribute" />
+                    </LinearLayout>
 
-<!--                    <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="50dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:layout_marginTop="5dp"-->
-<!--                            android:layout_marginBottom="5dp"-->
-<!--                            android:gravity="center"-->
-<!--                            android:padding="3dp"-->
-<!--                            android:text="@string/business_in_the_city"-->
-<!--                            android:textAlignment="center"-->
-<!--                            android:textColor="@color/blues"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:textStyle="bold" />-->
-<!--                </LinearLayout>-->
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="@string/business_in_the_city"
+                            android:textAlignment="center"
+                            android:textColor="@color/blues"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                </LinearLayout>
 
-<!--                <LinearLayout-->
-<!--                        android:layout_width="190dp"-->
-<!--                        android:layout_height="190dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_margin="10dp"-->
-<!--                        android:layout_marginTop="5dp"-->
-<!--                        android:id="@+id/linear_mytaxes"-->
-<!--                        android:layout_marginBottom="5dp"-->
-<!--                        android:background="@drawable/text_border"-->
-<!--                        android:elevation="6dp"-->
-<!--                        android:gravity="center"-->
-<!--                        android:orientation="vertical">-->
+                <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/linear_mytaxes"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/text_border"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-<!--                    <LinearLayout-->
-<!--                            android:layout_width="130dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:elevation="10dp"-->
-<!--                            android:gravity="bottom">-->
+                    <LinearLayout
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:gravity="bottom">
 
-<!--                        <Button-->
-<!--                                android:foreground="?attr/selectableItemBackground"-->
-<!--                                android:id="@+id/btn_my_taxes"-->
-<!--                                android:layout_width="110dp"-->
-<!--                                android:layout_height="110dp"-->
-<!--                                android:layout_gravity="bottom"-->
-<!--                                android:layout_marginStart="10dp"-->
-<!--                                android:layout_marginEnd="10dp"-->
-<!--                                android:background="@drawable/home_mt_logo"-->
-<!--                                android:fitsSystemWindows="true"-->
-<!--                                android:gravity="bottom"-->
-<!--                                android:scaleType="fitCenter"-->
-<!--                                tools:ignore="UnusedAttribute" />-->
-<!--                    </LinearLayout>-->
+                        <Button
+                                android:foreground="?attr/selectableItemBackground"
+                                android:id="@+id/btn_my_taxes"
+                                android:layout_width="110dp"
+                                android:layout_height="110dp"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/home_mt_logo"
+                                android:fitsSystemWindows="true"
+                                android:gravity="bottom"
+                                android:scaleType="fitCenter"
+                                tools:ignore="UnusedAttribute" />
+                    </LinearLayout>
 
-<!--                    <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="50dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:layout_marginTop="5dp"-->
-<!--                            android:layout_marginBottom="5dp"-->
-<!--                            android:gravity="center"-->
-<!--                            android:padding="3dp"-->
-<!--                            android:text="@string/my_taxes"-->
-<!--                            android:textAlignment="center"-->
-<!--                            android:textColor="@color/bluess"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:textStyle="bold" />-->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="@string/my_taxes"
+                            android:textAlignment="center"
+                            android:textColor="@color/bluess"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
-<!--                </LinearLayout>-->
+                </LinearLayout>
 
-<!--                <LinearLayout-->
-<!--                        android:layout_width="190dp"-->
-<!--                        android:layout_height="190dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_margin="10dp"-->
-<!--                        android:layout_marginTop="5dp"-->
-<!--                        android:id="@+id/linear_myapp"-->
-<!--                        android:layout_marginBottom="5dp"-->
-<!--                        android:background="@drawable/text_border"-->
-<!--                        android:elevation="6dp"-->
-<!--                        android:gravity="center"-->
-<!--                        android:orientation="vertical">-->
+                <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/linear_myapp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/text_border"
+                        android:elevation="6dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-<!--                    <LinearLayout-->
-<!--                            android:layout_width="130dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:elevation="10dp"-->
-<!--                            android:gravity="bottom">-->
+                    <LinearLayout
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_gravity="center"
+                            android:elevation="10dp"
+                            android:gravity="bottom">
 
-<!--                        <Button-->
-<!--                                android:id="@+id/btn_online_request"-->
-<!--                                android:foreground="?attr/selectableItemBackground"-->
-<!--                                android:layout_width="100dp"-->
-<!--                                android:layout_height="110dp"-->
-<!--                                android:layout_marginStart="15dp"-->
-<!--                                android:layout_marginEnd="15dp"-->
-<!--                                android:background="@drawable/home_maor_logo"-->
-<!--                                android:elevation="10dp"-->
-<!--                                android:fitsSystemWindows="true"-->
-<!--                                android:gravity="bottom"-->
-<!--                                android:scaleType="fitCenter"-->
-<!--                                tools:targetApi="m"-->
-<!--                                tools:ignore="UnusedAttribute" />-->
-<!--                    </LinearLayout>-->
+                        <Button
+                                android:id="@+id/btn_online_request"
+                                android:foreground="?attr/selectableItemBackground"
+                                android:layout_width="100dp"
+                                android:layout_height="110dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/home_maor_logo"
+                                android:elevation="10dp"
+                                android:fitsSystemWindows="true"
+                                android:gravity="bottom"
+                                android:scaleType="fitCenter"
+                                tools:targetApi="m"
+                                tools:ignore="UnusedAttribute" />
+                    </LinearLayout>
 
-<!--                    <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="50dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:layout_marginTop="5dp"-->
-<!--                            android:layout_marginBottom="5dp"-->
-<!--                            android:gravity="center"-->
-<!--                            android:padding="3dp"-->
-<!--                            android:text="MY APP ONLINE REQUEST"-->
-<!--                            android:textAlignment="center"-->
-<!--                            android:textColor="@color/blues"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:textStyle="bold"-->
-<!--                            tools:ignore="HardcodedText" />-->
-<!--                </LinearLayout>-->
-<!--            </LinearLayout>-->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="MY APP ONLINE REQUEST"
+                            android:textAlignment="center"
+                            android:textColor="@color/blues"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
 
 
-<!--            <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:gravity="center"-->
-<!--                    android:orientation="horizontal">-->
+            <LinearLayout
+                    android:layout_width="210dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/linear_hotlines"
+                    android:background="@drawable/text_border"
+                    android:elevation="6dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:gravity="bottom">
+
+                    <Button
+                            android:foreground="?attr/selectableItemBackground"
+                            android:id="@+id/btn_city_hot_lines"
+                            android:layout_width="110dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/home_ch_logo"
+                            android:fitsSystemWindows="true"
+                            android:gravity="bottom"
+                            android:scaleType="fitCenter"
+                            tools:ignore="UnusedAttribute" />
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="CITY HOTLINES\n"
+                        android:textAlignment="center"
+                        android:textColor="@color/bluess"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+            </LinearLayout>
 
 
-<!--                <LinearLayout-->
-<!--                        android:layout_width="190dp"-->
-<!--                        android:layout_height="190dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_margin="10dp"-->
-<!--                        android:layout_marginTop="5dp"-->
-<!--                        android:layout_marginBottom="5dp"-->
-<!--                        android:id="@+id/linear_hotlines"-->
-<!--                        android:background="@drawable/text_border"-->
-<!--                        android:elevation="6dp"-->
-<!--                        android:gravity="center"-->
-<!--                        android:orientation="vertical">-->
+            <LinearLayout
+                    android:layout_width="210dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/text_border"
+                    android:elevation="6dp"
+                    android:id="@+id/linear_gos"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-<!--                    <LinearLayout-->
-<!--                            android:layout_width="130dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:elevation="10dp"-->
-<!--                            android:gravity="bottom">-->
+                <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:gravity="bottom">
 
-<!--                        <Button-->
-<!--                                android:foreground="?attr/selectableItemBackground"-->
-<!--                                android:id="@+id/btn_city_hot_lines"-->
-<!--                                android:layout_width="110dp"-->
-<!--                                android:layout_height="100dp"-->
-<!--                                android:layout_gravity="bottom"-->
-<!--                                android:layout_marginStart="10dp"-->
-<!--                                android:layout_marginEnd="10dp"-->
-<!--                                android:background="@drawable/home_ch_logo"-->
-<!--                                android:fitsSystemWindows="true"-->
-<!--                                android:gravity="bottom"-->
-<!--                                android:scaleType="fitCenter"-->
-<!--                                tools:ignore="UnusedAttribute" />-->
-<!--                    </LinearLayout>-->
+                    <Button
+                            android:id="@+id/btn_gov_online_service"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:layout_width="110dp"
+                            android:layout_height="120dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:background="@drawable/home_gos_logo"
+                            android:elevation="10dp"
+                            android:fitsSystemWindows="true"
+                            android:gravity="bottom"
+                            android:scaleType="fitCenter"
+                            tools:targetApi="m"
+                            tools:ignore="UnusedAttribute" />
+                </LinearLayout>
 
-<!--                    <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="50dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:layout_marginTop="5dp"-->
-<!--                            android:layout_marginBottom="5dp"-->
-<!--                            android:gravity="center"-->
-<!--                            android:padding="3dp"-->
-<!--                            -->
-<!--                            android:text="CITY HOTLINES"-->
-<!--                            android:textAlignment="center"-->
-<!--                            android:textColor="@color/bluess"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:textStyle="bold"-->
-<!--                            tools:ignore="HardcodedText" />-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="@string/government_online_services"
+                        android:textAlignment="center"
+                        android:textColor="@color/blues"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+            </LinearLayout>
 
-<!--                </LinearLayout>-->
+            <LinearLayout
+                    android:layout_width="210dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/text_border"
+                    android:elevation="6dp"
+                    android:id="@+id/linear_cec"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-<!--                <LinearLayout-->
-<!--                        android:layout_width="190dp"-->
-<!--                        android:layout_height="190dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_margin="10dp"-->
-<!--                        android:layout_marginTop="5dp"-->
-<!--                        android:layout_marginBottom="5dp"-->
-<!--                        android:background="@drawable/text_border"-->
-<!--                        android:elevation="6dp"-->
-<!--                        android:id="@+id/linear_gos"-->
-<!--                        android:gravity="center"-->
-<!--                        android:orientation="vertical">-->
+                <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:elevation="10dp"
+                        android:gravity="bottom">
 
-<!--                    <LinearLayout-->
-<!--                            android:layout_width="130dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:elevation="10dp"-->
-<!--                            android:gravity="bottom">-->
+                    <Button
+                            android:foreground="?attr/selectableItemBackground"
+                            android:id="@+id/btn_city_employees_corner"
+                            android:layout_width="110dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/home_cec_logo"
+                            android:fitsSystemWindows="true"
+                            android:gravity="bottom"
+                            android:scaleType="fitCenter"
+                            tools:ignore="UnusedAttribute" />
+                </LinearLayout>
 
-<!--                        <Button-->
-<!--                                android:id="@+id/btn_gov_online_service"-->
-<!--                                android:foreground="?attr/selectableItemBackground"-->
-<!--                                android:layout_width="110dp"-->
-<!--                                android:layout_height="120dp"-->
-<!--                                android:layout_marginStart="10dp"-->
-<!--                                android:layout_marginEnd="15dp"-->
-<!--                                android:background="@drawable/home_gos_logo"-->
-<!--                                android:elevation="10dp"-->
-<!--                                android:fitsSystemWindows="true"-->
-<!--                                android:gravity="bottom"-->
-<!--                                android:scaleType="fitCenter"-->
-<!--                                tools:targetApi="m"-->
-<!--                                tools:ignore="UnusedAttribute" />-->
-<!--                    </LinearLayout>-->
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="CITY EMPLOYEE\nCORNER"
+                        android:textAlignment="center"
+                        android:textColor="@color/bluess"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
-<!--                    <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="50dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:layout_marginTop="5dp"-->
-<!--                            android:layout_marginBottom="5dp"-->
-<!--                            android:gravity="center"-->
-<!--                            android:padding="3dp"-->
-<!--                            android:text="@string/government_online_services"-->
-<!--                            android:textAlignment="center"-->
-<!--                            android:textColor="@color/blues"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:textStyle="bold" />-->
-<!--                </LinearLayout>-->
+            </LinearLayout>
+        </LinearLayout>
 
-<!--                <LinearLayout-->
-<!--                        android:layout_width="190dp"-->
-<!--                        android:layout_height="190dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_margin="10dp"-->
-<!--                        android:layout_marginTop="5dp"-->
-<!--                        android:layout_marginBottom="5dp"-->
-<!--                        android:background="@drawable/text_border"-->
-<!--                        android:elevation="6dp"-->
-<!--                        android:id="@+id/linear_cec"-->
-<!--                        android:gravity="center"-->
-<!--                        android:orientation="vertical">-->
 
-<!--                    <LinearLayout-->
-<!--                            android:layout_width="130dp"-->
-<!--                            android:layout_height="130dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:elevation="10dp"-->
-<!--                            android:gravity="bottom">-->
+        <android.support.v7.widget.CardView
+                android:id="@+id/cv_events"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="15dp">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/events_and_announcements"
+                        android:textStyle="bold"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textSize="30sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:background="@color/colorPrimary"
+                        android:layout_gravity="center" />
 
-<!--                        <Button-->
-<!--                                android:foreground="?attr/selectableItemBackground"-->
-<!--                                android:id="@+id/btn_city_employees_corner"-->
-<!--                                android:layout_width="110dp"-->
-<!--                                android:layout_height="120dp"-->
-<!--                                android:layout_gravity="bottom"-->
-<!--                                android:layout_marginStart="10dp"-->
-<!--                                android:layout_marginEnd="10dp"-->
-<!--                                android:background="@drawable/home_cec_logo"-->
-<!--                                android:fitsSystemWindows="true"-->
-<!--                                android:gravity="bottom"-->
-<!--                                android:scaleType="fitCenter"-->
-<!--                                tools:ignore="UnusedAttribute" />-->
-<!--                    </LinearLayout>-->
+                <ViewFlipper
+                        android:id="@+id/v_flipperevent"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        />
 
-<!--                    <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="50dp"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:layout_marginTop="5dp"-->
-<!--                            android:layout_marginBottom="5dp"-->
-<!--                            android:gravity="center"-->
-<!--                            android:padding="3dp"-->
-<!--                            android:text="CITY EMPLOYEE\nCORNER"-->
-<!--                            android:textAlignment="center"-->
-<!--                            android:textColor="@color/bluess"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:textStyle="bold"-->
-<!--                            tools:ignore="HardcodedText" />-->
-
-<!--                </LinearLayout>-->
-<!--            </LinearLayout>-->
-<!--        </LinearLayout>-->
-
-<!--        <android.support.v7.widget.CardView-->
-<!--                android:id="@+id/cv_events"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_columnWeight="1"-->
-<!--                android:layout_rowWeight="1"-->
-<!--                app:cardElevation="6dp"-->
-<!--                app:cardCornerRadius="12dp"-->
-<!--                android:layout_margin="15dp">-->
-<!--            <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:orientation="vertical">-->
-<!--                <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="@string/events_and_announcements"-->
-<!--                        android:textStyle="bold"-->
-<!--                        android:paddingBottom="10dp"-->
-<!--                        android:paddingTop="10dp"-->
-<!--                        android:textSize="30sp"-->
-<!--                        android:textAlignment="center"-->
-<!--                        android:textColor="@color/white"-->
-<!--                        android:background="@color/colorPrimary"-->
-<!--                        android:layout_gravity="center" />-->
-
-<!--                <ViewFlipper-->
-<!--                        android:id="@+id/v_flipperevent"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="300dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:scaleType="centerInside"-->
-<!--                        />-->
-
-<!--            </LinearLayout>-->
-<!--        </android.support.v7.widget.CardView>-->
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
 
 
         <LinearLayout android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
                 android:orientation="horizontal">
 
 
@@ -471,7 +471,7 @@
                             <Button
                                     android:layout_marginTop="5dp"
                                     android:layout_width="200dp"
-                                    android:layout_height="180dp"
+                                    android:layout_height="200dp"
                                     android:background="@drawable/csc"
                                     android:gravity="center"
                                     android:layout_gravity="center"
@@ -480,7 +480,7 @@
 
                             <Button
                                     android:layout_width="300dp"
-                                    android:layout_height="90dp"
+                                    android:layout_height="100dp"
                                     android:background="@drawable/philjob"
                                     android:layout_gravity="center"
                                     android:padding="10dp"
@@ -527,17 +527,17 @@
                         <Button
                                 android:id="@+id/btn_home_philgeps"
                                 android:layout_width="match_parent"
-                                android:layout_height="150dp"
+                                android:layout_height="match_parent"
                                 android:layout_gravity="center"
                                 android:background="@drawable/philgeps" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
             </LinearLayout>
+
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
                     android:orientation="vertical">
 
 
@@ -582,8 +582,8 @@
                                     android:orientation="horizontal"
                                     android:layout_marginBottom="10dp">
 
-                                <Button android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                <Button android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:background="@drawable/facebook"
                                         android:layout_marginEnd="10dp"
                                         android:id="@+id/btn_fb_cio"/>
@@ -602,8 +602,8 @@
                                     android:orientation="horizontal"
                                     android:layout_marginBottom="10dp">
 
-                                <Button android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                <Button android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:background="@drawable/facebook"
                                         android:layout_marginEnd="10dp"
                                         android:id="@+id/btn_fb_tourism"/>
@@ -622,8 +622,8 @@
                                     android:orientation="horizontal"
                                     android:layout_marginBottom="10dp">
 
-                                <Button android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                <Button android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:background="@drawable/facebook"
                                         android:layout_marginEnd="10dp"
                                         android:id="@+id/btn_fb_lgu"/>
@@ -642,8 +642,8 @@
                                     android:orientation="horizontal"
                                     android:layout_marginBottom="10dp">
 
-                                <Button android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                <Button android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:background="@drawable/facebook"
                                         android:layout_marginEnd="10dp"
                                         android:id="@+id/btn_fb_cdrrmo"/>
@@ -680,7 +680,7 @@
                             android:orientation="vertical">
 
                         <TextView
-                                android:layout_width="match_parent "
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginBottom="5dp"
@@ -765,7 +765,6 @@
             </LinearLayout>
         </LinearLayout>
 
-
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
@@ -788,33 +787,30 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:text="@string/republic_of_the_philippines"
                         android:textAlignment="center"
+                        android:text="\t Republic of the Philippines"
                         android:textColor="@color/colorPrimary"
                         android:textSize="15sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
                         android:textSize="15sp"
+                        android:gravity="center"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp"/>
                 <TextView
                         android:text="@string/_2019_san_pablo_city_goverment"
-                        android:layout_width="match_parent"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:textSize="15sp"
-                        android:padding="5dp"
+
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
+
                         android:id="@+id/textView8"
 
                         />
@@ -868,16 +864,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                 <TextView
-                        android:text="@string/developer_t"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="18sp"
-                        android:gravity="center"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:text="@string/developer_t"
                         android:textAlignment="center"
-                        />
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
                 <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

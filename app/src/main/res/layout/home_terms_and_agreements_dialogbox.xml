@@ -9,7 +9,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/colorPrimary"
-            android:gravity="center"
+              android:gravity="center"
             android:textStyle="bold"
             android:textSize="20sp"
             android:text="@string/terms_and_agreements"

@@ -13,7 +13,7 @@
 
 
         <ImageView android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="300dp"
                 app:srcCompat="@drawable/office_vicinity_map2"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
@@ -22,7 +22,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                />
+                tools:ignore="ContentDescription" />
 
         <TextView
                 android:layout_width="match_parent"
@@ -33,11 +33,11 @@
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:background="@color/colorPrimary"
-                android:textSize="32sp"
+                android:textSize="35sp"
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:layout_gravity="center"
-                />
+                tools:ignore="HardcodedText" />
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -47,7 +47,7 @@
 
 
             <LinearLayout
-                    android:layout_width="220dp"
+                    android:layout_width="280dp"
                     android:layout_gravity="center"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -56,79 +56,91 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="1. Doña Leonila Park"/>
+                        android:textSize="20sp"
+                        android:text="1. Doña Leonila Park"
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="2. Bantayog ng mga Bayani"/>
+                        android:textSize="20sp"
+                        android:text="2. Bantayog ng mga Bayani"
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="3. Old Capitol Bldg."/>
+                        android:textSize="20sp"
+                        android:text="3. Old Capitol Bldg."
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="4. One Stop Processing Center"/>
+                        android:textSize="20sp"
+                        android:text="4. One Stop Processing Center"
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="5. Department of Justice"/>
+                        android:textSize="20sp"
+                        android:text="5. Department of Justice"
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="6. Pamana Hall"/>
+                        android:textSize="20sp"
+                        android:text="6. Pamana Hall"
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="7. ABC bldg."/>
+                        android:textSize="20sp"
+                        android:text="7. ABC bldg."
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="8. Vice Mayor's Office"/>
+                        android:textSize="20sp"
+                        android:text="8. Vice Mayor's Office"
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="9. City Governance Bldg."/>
+                        android:textSize="20sp"
+                        android:text="9. City Governance Bldg."
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="10. SPC Police Station"/>
+                        android:textSize="20sp"
+                        android:text="10. SPC Police Station"
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="11. BJMP"/>
+                        android:textSize="20sp"
+                        android:text="11. BJMP"
+                        tools:ignore="HardcodedText" />
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="12. City Prosecutor's Office"/>
+                        android:textSize="20sp"
+                        android:text="12. City Prosecutor's Office"
+                        tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
             <LinearLayout
-                    android:layout_width="220dp"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center"
@@ -137,67 +149,78 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="13. PhilPost"/>
+                        android:textSize="20sp"
+                        android:text="13. PhilPost"
+                        tools:ignore="HardcodedText"/>
+                <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/darkgray"
+                        android:textSize="20sp"
+                        android:text="14. Register of Deeds"
+                        tools:ignore="HardcodedText"/>
+                <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/darkgray"
+                        android:textSize="20sp"
+                        android:text="15. City Library"
+                        tools:ignore="HardcodedText"/>
+                <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/darkgray"
+                        android:textSize="20sp"
+                        android:text="16. PNP Lock-Up/\nDetention Cell"
+                        tools:ignore="HardcodedText"/>
+                <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/darkgray"
+                        android:textSize="20sp"
+                        android:text="17. Engineering Bldg."
+                        tools:ignore="HardcodedText"/>
+                <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/darkgray"
+                        android:textSize="20sp"
+                        android:text="18. CHRMO Bldg."
+                        tools:ignore="HardcodedText"/>
+                <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/darkgray"
+                        android:textSize="20sp"
+                        android:text="19. SPC Chamber of\nCommerce"
+                        tools:ignore="HardcodedText"/>
+                <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/darkgray"
+                        android:textSize="20sp"
+                        android:text="20. CSWMO"
+                        tools:ignore="HardcodedText"/>
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
                         android:textSize="17sp"
-                        android:text="14. Register of Deeds"/>
-                <TextView android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="15. City Library"/>
-                <TextView android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="16. PNP Lock-Up/\nDetention Cell"/>
-                <TextView android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="17. Engineering Bldg."/>
-                <TextView android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="18. CHRMO Bldg."/>
-                <TextView android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="19. SPC Chamber of\nCommerce"/>
-                <TextView android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:textColor="@color/darkgray"
-                        android:textSize="17sp"
-                        android:text="20. CSWMO"/>
-                <TextView android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:textColor="@color/darkgray"
-                        android:textSize="17sp"
+                        tools:ignore="HardcodedText"
                         android:text="21. Girl Scout Council"/>
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText"
                         android:text="22. Hagdang Bato"/>
                 <TextView android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
                         android:textColor="@color/darkgray"
-                        android:textSize="17sp"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText"
                         android:text="23. Bonifacio Shrine"/>
 
             </LinearLayout>
@@ -210,10 +233,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mission and Vision"
+                tools:ignore="HardcodedText"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:paddingBottom="10dp"
-                android:textSize="32sp"
+                android:textSize="35sp"
                 android:padding="5dp"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/white"
@@ -223,7 +247,7 @@
 
 
         <ImageView android:layout_width="match_parent"
-                android:layout_height="280dp"
+                android:layout_height="300dp"
                 app:srcCompat="@drawable/city_lights2"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
@@ -231,7 +255,7 @@
                 android:padding="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                />
+                tools:ignore="ContentDescription" />
 
 
         <LinearLayout
@@ -256,11 +280,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="MISSION"
+                            tools:ignore="HardcodedText"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:paddingBottom="5dp"
                             android:paddingTop="5dp"
-                            android:textSize="28sp"
+                            android:textSize="30sp"
                             android:textColor="@color/white"
                             android:background="@color/colorPrimary"
                             android:layout_marginBottom="10dp"
@@ -272,7 +297,7 @@
                             android:text="@string/Mission"
                             android:textColor="@color/darkgray"
                             android:layout_marginStart="24dp"
-                            android:textSize="17sp" />
+                            android:textSize="20sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -292,11 +317,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="VISION"
+                            tools:ignore="HardcodedText"
                             android:textStyle="bold"
                             android:gravity="center"
                             android:paddingBottom="5dp"
                             android:paddingTop="5dp"
-                            android:textSize="28sp"
+                            android:textSize="30sp"
                             android:textColor="@color/white"
                             android:layout_marginBottom="10dp"
                             android:background="@color/colorPrimary"
@@ -308,7 +334,7 @@
                             android:text="@string/Vision"
                             android:textColor="@color/darkgray"
                             android:layout_marginStart="24dp"
-                            android:textSize="17sp" />
+                            android:textSize="20sp" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -326,14 +352,15 @@
                         android:orientation="vertical">
 
                     <TextView
+                            tools:ignore="HardcodedText,RtlSymmetry"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Our 15-point service standards for clients"
                             android:textStyle="bold"
-                            android:paddingLeft="20dp"
+                            android:paddingStart="20dp"
                             android:paddingBottom="5dp"
                             android:paddingTop="5dp"
-                            android:textSize="25sp"
+                            android:textSize="30sp"
                             android:textColor="@color/white"
                             android:layout_marginBottom="10dp"
                             android:background="@color/colorPrimary"
@@ -345,7 +372,7 @@
                             android:text="@string/point_service"
                             android:textColor="@color/darkgray"
                             android:layout_marginStart="27dp"
-                            android:textSize="17sp" />
+                            android:textSize="20sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -367,14 +394,15 @@
                             android:layout_height="wrap_content"
                             android:text="PERFORMANCE PLEDGE"
                             android:textStyle="bold"
-                            android:paddingLeft="20dp"
+                            android:paddingStart="20dp"
                             android:paddingBottom="5dp"
                             android:paddingTop="5dp"
-                            android:textSize="28sp"
+                            android:textSize="35sp"
                             android:textColor="@color/white"
                             android:layout_marginBottom="15dp"
                             android:background="@color/colorPrimary"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -382,7 +410,7 @@
                             android:text="@string/performance_pledge1"
                             android:textColor="@color/darkgray"
                             android:layout_marginStart="27dp"
-                            android:textSize="17sp"
+                            android:textSize="20sp"
                             />
                     <LinearLayout
                             android:layout_width="wrap_content"
@@ -395,14 +423,14 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/colorPrimary"
                                 android:layout_marginStart="27dp"
-                                android:textSize="20sp"
-                                />
+                                android:textSize="23sp"
+                                tools:ignore="HardcodedText" />
                         <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/performance_pledge2"
                                 android:textColor="@color/darkgray"
-                                android:textSize="17sp"
+                                android:textSize="20sp"
                                 />
                     </LinearLayout>
                     <LinearLayout
@@ -416,14 +444,14 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/colorPrimary"
                                 android:layout_marginStart="27dp"
-                                android:textSize="20sp"
-                                />
+                                android:textSize="23sp"
+                                tools:ignore="HardcodedText" />
                         <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/performance_pledge3"
                                 android:textColor="@color/darkgray"
-                                android:textSize="17sp"
+                                android:textSize="20sp"
                                 />
                     </LinearLayout>
                     <LinearLayout
@@ -437,14 +465,14 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/colorPrimary"
                                 android:layout_marginStart="27dp"
-                                android:textSize="20sp"
-                                />
+                                android:textSize="23sp"
+                                tools:ignore="HardcodedText" />
                         <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/performance_pledge4"
                                 android:textColor="@color/darkgray"
-                                android:textSize="17sp"
+                                android:textSize="20sp"
                                 />
                     </LinearLayout>
                     <LinearLayout
@@ -458,14 +486,14 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/colorPrimary"
                                 android:layout_marginStart="27dp"
-                                android:textSize="20sp"
-                                />
+                                android:textSize="23sp"
+                                tools:ignore="HardcodedText" />
                         <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/performance_pledge5"
                                 android:textColor="@color/darkgray"
-                                android:textSize="17sp"
+                                android:textSize="20sp"
                                 />
                     </LinearLayout>
                     <LinearLayout
@@ -479,14 +507,14 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/colorPrimary"
                                 android:layout_marginStart="27dp"
-                                android:textSize="20sp"
-                                />
+                                android:textSize="23sp"
+                                tools:ignore="HardcodedText" />
                         <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/performance_pledge6"
                                 android:textColor="@color/darkgray"
-                                android:textSize="17sp"
+                                android:textSize="20sp"
                                 />
                     </LinearLayout>
                     <LinearLayout
@@ -500,14 +528,14 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/colorPrimary"
                                 android:layout_marginStart="27dp"
-                                android:textSize="20sp"
-                                />
+                                android:textSize="23sp"
+                                tools:ignore="HardcodedText" />
                         <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/performance_pledge7"
                                 android:textColor="@color/darkgray"
-                                android:textSize="17sp"
+                                android:textSize="20sp"
                                 />
                     </LinearLayout>
 
@@ -532,14 +560,15 @@
                         android:layout_height="wrap_content"
                         android:text="AGENCY MANDATE"
                         android:textStyle="bold"
-                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
                         android:paddingBottom="5dp"
                         android:paddingTop="5dp"
-                        android:textSize="28sp"
+                        android:textSize="30sp"
                         android:textColor="@color/white"
                         android:layout_marginBottom="15dp"
                         android:background="@color/colorPrimary"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
 
                 <me.biubiubiu.justifytext.library.JustifyTextView
                         android:layout_width="match_parent"
@@ -547,7 +576,7 @@
                         android:text="@string/agency_mandate"
                         android:textColor="@color/darkgray"
                         android:layout_marginStart="27dp"
-                        android:textSize="17sp"
+                        android:textSize="20sp"
                         />
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -569,15 +598,15 @@
                         android:layout_height="wrap_content"
                         android:text="STRATEGIC DIRECTIONS"
                         android:textStyle="bold"
-                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
                         android:paddingBottom="5dp"
                         android:paddingTop="5dp"
-                        android:textSize="28sp"
+                        android:textSize="35sp"
                         android:textColor="@color/white"
                         android:layout_marginBottom="15dp"
                         android:background="@color/colorPrimary"
                         android:layout_gravity="center"
-                        />
+                        tools:ignore="HardcodedText,RtlSymmetry" />
 
                 <me.biubiubiu.justifytext.library.JustifyTextView
                         android:layout_width="match_parent"
@@ -585,14 +614,10 @@
                         android:text="@string/strategic_directions"
                         android:textColor="@color/darkgray"
                         android:layout_marginStart="27dp"
-                        android:textSize="17sp"/>
+                        android:textSize="20sp"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
 
             <TextView
                     android:layout_width="match_parent"
@@ -608,9 +633,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
-                    />
+                    tools:ignore="HardcodedText" />
 
-        </LinearLayout>
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -622,12 +646,13 @@
                     android:orientation="vertical">
 
                 <ImageView
-                        android:layout_width="180dp"
-                        android:layout_height="180dp"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
                         app:srcCompat="@drawable/amben_amante"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        tools:ignore="ContentDescription" />
 
                 <TextView
                         android:layout_width="match_parent"
@@ -635,19 +660,21 @@
                         android:text="HON. AMBEN B.AMANTE"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/bluess"/>
+                        android:textColor="@color/bluess"
+                        tools:ignore="HardcodedText" />
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="City Mayor"
                         android:layout_marginTop="4dp"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/bluess"/>
+                        android:textColor="@color/bluess"
+                        tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <LinearLayout
@@ -657,12 +684,15 @@
                     android:orientation="vertical">
 
                 <ImageView
-                        android:layout_width="180dp"
-                        android:layout_height="180dp"
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
                         app:srcCompat="@drawable/ic_human"
                         android:fitsSystemWindows="true"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center"
+                        tools:ignore="ContentDescription" />
+
+
 
                 <TextView
                         android:layout_width="match_parent"
@@ -670,19 +700,21 @@
                         android:text="HON. ANGELITA E. YANG"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/bluess"/>
+                        android:textColor="@color/bluess"
+                        tools:ignore="HardcodedText" />
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="City Vice-Mayor"
                         android:layout_marginTop="4dp"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textAlignment="center"
                         android:gravity="center"
-                        android:textColor="@color/bluess"/>
+                        android:textColor="@color/bluess"
+                        tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <LinearLayout
@@ -694,17 +726,18 @@
                     android:orientation="horizontal">
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="190dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
                             app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -712,33 +745,36 @@
                             android:text="HON. JUSTIN COLAGO"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="City Councilor"
                             android:layout_marginTop="4dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="190dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
                             app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -746,33 +782,36 @@
                             android:text="HON. KARLA MONICA ADAJAR"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="City Councilor"
                             android:layout_marginTop="4dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="190dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            app:srcCompat="@drawable/ic_human"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="center"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            app:srcCompat="@drawable/ic_human"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -780,76 +819,85 @@
                             android:text="HON. RONDEL DIAZ"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="City Councilor"
                             android:layout_marginTop="4dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
 
             </LinearLayout>
             <LinearLayout
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="9dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:orientation="horizontal">
+
                 <LinearLayout
-                        android:layout_marginTop="10dp"
-                        android:layout_width="190dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            app:srcCompat="@drawable/ic_human"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_gravity="center"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            app:srcCompat="@drawable/ic_human"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="HON. ENRICO GALICIA"
-                            android:textStyle="bold"
                             android:layout_marginTop="8dp"
-                            android:textSize="15sp"
-                            android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:text="HON. ENRICO GALICIA"
+                            android:textAlignment="center"
+                            android:textColor="@color/bluess"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="City Councilor"
                             android:layout_marginTop="4dp"
-                            android:textSize="15sp"
-                            android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:text="City Councilor"
+                            android:textAlignment="center"
+                            android:textColor="@color/bluess"
+                            android:textSize="18sp"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
+
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="190dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
                             app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -857,19 +905,21 @@
                             android:text="HON. DIOSDADO BIGLETE"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="City Councilor"
                             android:layout_marginTop="4dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
 
 
@@ -883,17 +933,18 @@
                     android:orientation="horizontal">
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="190dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
                             app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -901,33 +952,36 @@
                             android:text="HON. ARNEL C. TICZON"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="City Councilor"
                             android:layout_marginTop="4dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="190dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
                             app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -935,33 +989,36 @@
                             android:text="HON. ELSIE PAVICO"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="City Councilor"
                             android:layout_marginTop="4dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="190dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
                             app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -969,19 +1026,21 @@
                             android:text="HON. DANDI C. MEDINA"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="City Councilor"
                             android:layout_marginTop="4dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -995,17 +1054,18 @@
 
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="190dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
                             app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -1013,53 +1073,58 @@
                             android:text="HON. NAPOLEON C. CALATRABA"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="City Councilor"
                             android:layout_marginTop="4dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="190dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
                             app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="HON. EDUARDO DIZON"
+                            android:text="HON. EDUARDO DIZON\n"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="City Councilor"
                             android:layout_marginTop="4dp"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -1071,17 +1136,18 @@
                     android:orientation="horizontal">
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="180dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
                             app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -1089,35 +1155,38 @@
                             android:text="HON. ARISTON A.\nAMANTE"
                             android:textStyle="bold"
                             android:layout_marginTop="5dp"
-                            android:textSize="13sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="ABC, President"
                             android:layout_marginTop="4dp"
-                            android:textSize="13sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
                             android:paddingBottom="3dp"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
 
                 <LinearLayout
                         android:layout_marginTop="10dp"
-                        android:layout_width="180dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                     <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
                             app:srcCompat="@drawable/ic_human"
                             android:fitsSystemWindows="true"
                             android:scaleType="fitCenter"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            tools:ignore="ContentDescription" />
 
                     <TextView
                             android:layout_width="match_parent"
@@ -1125,20 +1194,22 @@
                             android:text="HON. LIBERTY PAMELA E. CAPUCHINO "
                             android:textStyle="bold"
                             android:layout_marginTop="5dp"
-                            android:textSize="13sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="SK Federation President"
                             android:layout_marginTop="4dp"
-                            android:textSize="13sp"
+                            android:textSize="18sp"
                             android:textAlignment="center"
                             android:gravity="center"
                             android:paddingBottom="3dp"
-                            android:textColor="@color/bluess"/>
+                            android:textColor="@color/bluess"
+                            tools:ignore="HardcodedText" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -1149,32 +1220,36 @@
                 android:text="SAN PABLO CITY GOVERNMENT OFFICES"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="35sp"
                 android:padding="10dp"
                 android:background="@color/colorPrimary"
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="10dp"
+                tools:ignore="HardcodedText" />
 
         <ImageView android:layout_width="match_parent"
-                android:layout_height="280dp"
+                android:layout_height="350dp"
                 app:srcCompat="@drawable/goverment_sanpablo"
                 android:fitsSystemWindows="true"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
                 android:padding="5dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                tools:ignore="ContentDescription" />
 
 
         <LinearLayout android:layout_width="match_parent"
                 android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
+
+                android:id="@+id/clickbutton"
                 android:orientation="vertical">
 
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
@@ -1183,11 +1258,11 @@
                     android:textStyle="bold"
                     android:text="Mayor's Office"
                     android:id="@+id/dept_mayor_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/text_border2"
                     android:padding="10dp"
@@ -1197,11 +1272,11 @@
 
                     android:text="Administrator's Office"
                     android:id="@+id/dept_administrator_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
@@ -1210,20 +1285,20 @@
                     android:padding="10dp"
                     android:text="Accounting Office"
                     android:id="@+id/dept_accounting_office"
-                    />
+                    tools:ignore="HardcodedText" />
 
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp" android:layout_marginEnd="15dp"
+                    android:textSize="20sp" android:layout_marginEnd="15dp"
                     android:background="@drawable/text_border2"
                     android:padding="10dp"
                     android:layout_marginBottom="8dp"
                     android:text="Agriculture Office"
                     android:id="@+id/dept_agriculture_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1232,15 +1307,15 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Assesor Office"
                     android:id="@+id/dept_assesor_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp" android:layout_marginEnd="15dp"
+                    android:textSize="20sp" android:layout_marginEnd="15dp"
                     android:background="@drawable/text_border2"
                     android:padding="10dp"
                     android:layout_marginBottom="8dp"
@@ -1249,7 +1324,7 @@
 
                     android:text="Budget Office"
                     android:id="@+id/dept_budget_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1258,11 +1333,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Cooperative Office"
                     android:id="@+id/dept_cooperative_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1271,15 +1346,15 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Environment and Natural Resources Office"
                     android:id="@+id/dept_environmental_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold" android:layout_marginEnd="15dp"
@@ -1287,11 +1362,11 @@
                     android:padding="10dp"
                     android:text="Engineering Office"
                     android:id="@+id/dept_engineer_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
@@ -1300,7 +1375,7 @@
                     android:padding="10dp"
                     android:text="General Services Office"
                     android:id="@+id/dept_general_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1309,11 +1384,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Human Resource Management Office"
                     android:id="@+id/dept_human_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1322,11 +1397,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Legal Office"
                     android:id="@+id/dept_legal_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1335,11 +1410,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Local Civil Registar"
                     android:id="@+id/dept_local_civil_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1348,11 +1423,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Planning and Development Office"
                     android:id="@+id/dept_planning_office"
-                    />
+                    tools:ignore="HardcodedText" />
 
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1362,11 +1437,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Population and Nutrition"
                     android:id="@+id/dept_population_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1375,11 +1450,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Social Welfare and Development Office"
                     android:id="@+id/dept_social_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1387,11 +1462,12 @@
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:layout_marginBottom="8dp"
-                    android:text="Tourism Office" android:layout_marginEnd="15dp"
+                    android:text="Tourism Office"
+                    android:layout_marginEnd="15dp"
                     android:background="@drawable/text_border2"
                     android:padding="10dp"
                     android:id="@+id/dept_tourism_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1400,11 +1476,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Treasurer's Office"
                     android:id="@+id/dept_treasurer_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1413,11 +1489,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Veterinarian Office"
                     android:id="@+id/dept_veterinarian_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1426,11 +1502,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Vice Mayor Office"
                     android:id="@+id/dept_vice_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1439,16 +1515,16 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="Secretary to the Sanguniang Panglungsod"
                     android:id="@+id/dept_secretary_office"
-                    />
+                    tools:ignore="HardcodedText" />
 
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
@@ -1457,20 +1533,21 @@
                     android:padding="10dp"
                     android:text="Office of the Building Official"
                     android:id="@+id/dept_office_office"
-                    />
+                    tools:ignore="HardcodedText" />
 
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
-                    android:text="Health Office" android:layout_marginEnd="15dp"
+                    android:text="Health Office"
+                    android:layout_marginEnd="15dp"
                     android:background="@drawable/text_border2"
                     android:padding="10dp"
                     android:id="@+id/dept_health_office"
-                    />
+                    tools:ignore="HardcodedText" />
 
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1480,11 +1557,11 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="City Information Office"
                     android:id="@+id/dept_information_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -1493,16 +1570,16 @@
                     android:padding="10dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:text="San Pablo City General Hospital"
                     android:id="@+id/dept_hospital_office"
-                    />
+                    tools:ignore="HardcodedText" />
 
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
@@ -1511,12 +1588,12 @@
                     android:padding="10dp"
                     android:text="Solid Waste Management Office"
                     android:id="@+id/dept_solid_office"
-                    />
+                    tools:ignore="HardcodedText" />
 
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
@@ -1525,11 +1602,11 @@
                     android:padding="10dp"
                     android:text="Dalubhasaan ng Lunsod ng San Pablo"
                     android:id="@+id/dept_dalubhasan_office"
-                    />
+                    tools:ignore="HardcodedText" />
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
@@ -1538,12 +1615,12 @@
                     android:padding="10dp"
                     android:text="Disaster Risk Reduction and Management Office"
                     android:id="@+id/dept_disaster_office"
-                    />
+                    tools:ignore="HardcodedText" />
 
             <TextView android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginStart="15dp"
                     android:textStyle="bold"
@@ -1552,13 +1629,13 @@
                     android:padding="10dp"
                     android:text="Traffic Management Office"
                     android:id="@+id/dept_traffic_office"
-                    />
+                    tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="140dp"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
@@ -1567,36 +1644,41 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/phlogo"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
             <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="vertical">
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="18dp"
-                        android:text="@string/Reps"
-                        android:textSize="13sp"
-                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:textStyle="bold"/>
+                        android:text="\t Republic of the Philippines"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
+                        android:gravity="center"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginBottom="5dp"/>
                 <TextView
-                        android:text="© 2019 San Pablo City Goverment"
-                        android:layout_width="match_parent"
+                        android:text="@string/_2019_san_pablo_city_goverment"
+                        android:layout_width="250dp"
                         android:layout_height="match_parent"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
+
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
+
                         android:id="@+id/textView8"
 
                         />
@@ -1608,7 +1690,8 @@
                     android:layout_height="match_parent"
                     app:srcCompat="@drawable/transpa"
                     android:layout_weight="1"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
@@ -1616,7 +1699,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
@@ -1624,58 +1707,61 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
                 <TextView
-                        android:text="Developed by:"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:gravity="center"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textAlignment="center"
                         android:layout_marginEnd="3dp"
-                        />
+                        android:gravity="center"
+                        android:text="@string/developed_by"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
                 <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="25dp"
+                        android:layout_width="110dp"
+                        android:layout_height="45dp"
                         app:srcCompat="@drawable/pylon"
-                        android:layout_marginRight="13dp"/>
+                        android:layout_marginEnd="13dp"
+                        tools:ignore="ContentDescription,TooManyViews" />
             </LinearLayout>
             <LinearLayout
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                 <TextView
-                        android:text="Developer: "
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="15sp"
-                        android:gravity="center"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="5dp"
-                        android:textColor="@color/colorPrimary"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:text="@string/developer_t"
                         android:textAlignment="center"
-                        />
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+
                 <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                     <TextView
-                            android:text="Chris Velasco"
+                            android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:gravity="center"
-
                             android:textColor="@color/colorPrimary"
                             android:textAlignment="center"
-                            />
+                            tools:ignore="TooManyViews" />
                     <TextView
-                            android:text="Joseph Bonilla"
+                            android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="15sp"
+                            android:textSize="18sp"
                             android:gravity="center"
 
                             android:textColor="@color/colorPrimary"
@@ -1684,7 +1770,5 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
-
     </LinearLayout>
 </ScrollView>
