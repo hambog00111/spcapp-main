@@ -29,8 +29,6 @@ class ListViewAdapter(internal var mContext: Context, internal var modellist: Mu
     private var arrayList: ArrayList<Model> = ArrayList()
 
 
-
-
     init {
         this.arrayList.addAll(modellist)
     }
