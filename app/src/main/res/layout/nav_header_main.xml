@@ -22,7 +22,7 @@
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             android:layout_gravity="center"
             android:focusableInTouchMode="true"
-            app:srcCompat="@mipmap/new_icon"
+            app:srcCompat="@mipmap/new_icon1"
             android:focusable="true" />
 
     <TextView
