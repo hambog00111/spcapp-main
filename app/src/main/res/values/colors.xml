@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#337096</color>
-    <color name="colorPrimaryDark">#122036</color>
-    <color name="colorAccent">#337096</color>
-    <color name="white">#FFFFFF</color>
-    <color name="tab">#1571FF</color>
-    <color name="black">#00000F</color>
-    <color name="red">#C20008</color>
-    <color name="blues">#1C3757</color>
-    <color name="bluess">#1A3144</color>
-    <color name="fill">#215C81</color>
-    <color name="darkgray">#232325</color>
-    <color name="lightgray">#A3A3A3</color>
+<color name="colorPrimary">#337096</color>
+<color name="colorPrimaryDark">#122036</color>
+<color name="colorAccent">#337096</color>
+<color name="white">#FFFFFF</color>
+<color name="tab">#1571FF</color>
+<color name="black">#00000F</color>
+<color name="red">#C20008</color>
+<color name="blues">#1C3757</color>
+<color name="bluess">#1A3144</color>
+<color name="fill">#215C81</color>
+<color name="darkgray">#232325</color>
+<color name="lightgray">#A3A3A3</color>
 </resources>

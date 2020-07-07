@@ -71,7 +71,6 @@ class FragmentSearch:Fragment (){
         //pass results to listViewAdapter class
         adapter = ListViewAdapter(requireContext(), arrayList)
 
-
         //bind the adapter to the listview
         listView.adapter = adapter
 //        holder.mTitleTv!!.text = modellist[position].title
@@ -79,23 +78,17 @@ class FragmentSearch:Fragment (){
 
 
             if (arrayList[position].title == "Business in The City" ) {
-
-
-
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentBusinessInTheCity(), null)
                 .addToBackStack(null)
                 .commit()
+
+
         }
 
 
-
-
-            if (arrayList[position].title == "My Taxes" ) {
-
-
-
+            else if (arrayList[position].title == "My Taxes" ) {
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
                     FragmentMyTaxes(), null)
@@ -103,7 +96,7 @@ class FragmentSearch:Fragment (){
                     .commit()
             }
 
-            if (arrayList[position].title == "My app Online Request") {
+            else  if (arrayList[position].title == "My app Online Request") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -112,7 +105,7 @@ class FragmentSearch:Fragment (){
                     .commit()
 
             }
-            if (arrayList[position].title == "City Hotlines") {
+            else  if (arrayList[position].title == "City Hotlines") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -121,7 +114,7 @@ class FragmentSearch:Fragment (){
                     .commit()
 
             }
-            if (arrayList[position].title == "Government Online Service") {
+            else if (arrayList[position].title == "Government Online Service") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -129,7 +122,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-            if (arrayList[position].title == "City Employee Corner") {
+            else  if (arrayList[position].title == "City Employee Corner") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -138,7 +131,7 @@ class FragmentSearch:Fragment (){
                     .commit()
             }
 //new entry
-            if (arrayList[position].title == "Our City") {
+            else if (arrayList[position].title == "Our City") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -146,7 +139,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-            if (arrayList[position].title == "Our Government") {
+            else if (arrayList[position].title == "Our Government") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -154,7 +147,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-            if (arrayList[position].title == "Full Disclosure") {
+            else if (arrayList[position].title == "Full Disclosure") {
                 //start NewActivity with title for actionbar and text for textview
                 val disView = LayoutInflater.from(requireContext()).inflate(R.layout.main_full_disclosure_dialogbox, null)
                 val disBuilder = AlertDialog.Builder(requireContext())
@@ -423,7 +416,7 @@ class FragmentSearch:Fragment (){
                 }
             }
 
-            if (arrayList[position].title == "Tourism") {
+            else  if (arrayList[position].title == "Tourism") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -432,7 +425,7 @@ class FragmentSearch:Fragment (){
                     .commit()
             }
 
-            if (arrayList[position].title == "GOV.PH") {
+            else if (arrayList[position].title == "GOV.PH") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -440,7 +433,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-            if (arrayList[position].title == "Open Data Portal") {
+            else  if (arrayList[position].title == "Open Data Portal") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -448,7 +441,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-            if (arrayList[position].title == "Official Gazette") {
+            else  if (arrayList[position].title == "Official Gazette") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -456,7 +449,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-            if (arrayList[position].title == "Office of the President") {
+            else if (arrayList[position].title == "Office of the President") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -464,7 +457,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-            if (arrayList[position].title == "Office of the Vice President") {
+            else if (arrayList[position].title == "Office of the Vice President") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -472,7 +465,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-            if (arrayList[position].title == "Senate of the Philippines") {
+            else if (arrayList[position].title == "Senate of the Philippines") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -480,7 +473,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-            if (arrayList[position].title == "House of Representatives") {
+            else if (arrayList[position].title == "House of Representatives") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -488,7 +481,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-            if (arrayList[position].title == "Supreme Court") {
+            else if (arrayList[position].title == "Supreme Court") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -497,7 +490,7 @@ class FragmentSearch:Fragment (){
                     .commit()
             }
 
-            if (arrayList[position].title == "Court of the Appeals") {
+            else if (arrayList[position].title == "Court of the Appeals") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -505,8 +498,7 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-
-            if (arrayList[position].title == "Sandiganbayan") {
+            else if (arrayList[position].title == "Sandiganbayan") {
                 //start NewActivity with title for actionbar and text for textview
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
@@ -514,19 +506,16 @@ class FragmentSearch:Fragment (){
                     .addToBackStack(null)
                     .commit()
             }
-
-
-
         }
 
         searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
+
                 return false
             }
 
             override fun onQueryTextChange(s: String): Boolean {
                 if (TextUtils.isEmpty(s)) {
-                    adapter.filter("")
                     listView.clearTextFilter()
                 } else {
                     adapter.filter(s)
@@ -539,6 +528,13 @@ class FragmentSearch:Fragment (){
         return view
     }
 
+    fun resetSearch() {
+        activity!!.supportFragmentManager.beginTransaction().replace(
+            R.id.frag_container,
+            FragmentSearch(), null)
+            .addToBackStack(null)
+            .commit()
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId

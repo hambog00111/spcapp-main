@@ -21,14 +21,12 @@ package="ph.sanpablocitygov.iSanPablo">
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.intent.action.DIAL" />
     <uses-permission android:name="android.intent.action.CALL_BUTTON" />
-
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 <!--camera-->
     <uses-permission android:name="android.permission.CAMERA"/>
 <application
-
 
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
@@ -60,7 +58,8 @@ package="ph.sanpablocitygov.iSanPablo">
 
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="LockedOrientationActivity">
 
         <intent-filter>
             <action android:name="android.intent.action.CALL_BUTTON" />
@@ -79,7 +78,7 @@ package="ph.sanpablocitygov.iSanPablo">
     <activity
             android:name=".LoadingActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/LoadingTheme">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>

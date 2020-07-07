@@ -519,7 +519,7 @@
                       android:gravity="center">
 
             <Button android:layout_width="100dp"
-                    android:layout_height="30dp"
+                    android:layout_height="40dp"
                     android:textColor="@color/white"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="5dp"
@@ -533,7 +533,7 @@
                     tools:ignore="ButtonStyle" />
 
             <Button android:layout_width="100dp"
-                    android:layout_height="30dp"
+                    android:layout_height="40dp"
                     android:textColor="@color/white"
                     android:layout_marginEnd="5dp"
                     android:layout_marginStart="5dp"
@@ -548,7 +548,7 @@
                     tools:ignore="ButtonStyle" />
 
             <Button android:layout_width="100dp"
-                    android:layout_height="30dp"
+                    android:layout_height="40dp"
                     android:textColor="@color/white"
                     android:layout_marginEnd="10dp"
                     android:layout_marginStart="5dp"

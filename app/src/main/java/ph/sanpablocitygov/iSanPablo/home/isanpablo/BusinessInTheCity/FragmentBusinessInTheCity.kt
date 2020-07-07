@@ -103,7 +103,6 @@ class FragmentBusinessInTheCity : Fragment() {
                 with(builder) {
                     setMessage(str)
                     setTitle("Download BPLO Form")
-
                     setPositiveButton("OK")
                     { _, _ ->  val downloadManager: DownloadManager = getSystemService(requireContext(), DownloadManager::class.java) as DownloadManager
                         val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/BUSINESS%20PERMIT%20APPLICATION%20FORM.docx")

@@ -170,7 +170,7 @@ class FragmentBPLOAccountReg: Fragment(), View.OnClickListener {
             return
         }
         if(TextUtils.isEmpty(conpass)){
-            txt_confirm_password?.error = "Please enter your mobile confirmation password "
+            txt_confirm_password?.error = "Please enter your confirmation password "
             txt_confirm_password?.requestFocus()
             return
 

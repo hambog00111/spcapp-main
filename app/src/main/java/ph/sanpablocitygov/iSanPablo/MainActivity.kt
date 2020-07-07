@@ -1,11 +1,9 @@
 package ph.sanpablocitygov.iSanPablo
 
+
 import android.annotation.SuppressLint
-import android.support.v7.app.AlertDialog
 import android.app.DownloadManager
 import android.app.Service
-import android.content.DialogInterface
-import android.media.Image
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.net.Uri
@@ -17,33 +15,28 @@ import android.support.design.widget.Snackbar
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.Toast
-
-
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.main_full_disclosure_dialogbox.view.*
-import kotlinx.android.synthetic.main.nav_header_main.*
-
 import ph.sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
 import ph.sanpablocitygov.iSanPablo.home.FragmentHome
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
-
-
 import ph.sanpablocitygov.iSanPablo.links.*
 import ph.sanpablocitygov.iSanPablo.search.FragmentSearch
 import ph.sanpablocitygov.iSanPablo.tourism.FragmentTourism
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    private var backPressedTime: Long = 0
+    private var backToast: Toast? = null
 
     private val TAG = "PermissionDemo"
     var context =this
@@ -119,9 +112,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
 
-        } else {
+        } else  if (backPressedTime + 2000 > System.currentTimeMillis())
+        {
+            backToast!!.cancel()
             super.onBackPressed()
+            return
         }
+        else
+        {
+            backToast = Toast.makeText(baseContext, "Press back again to exit", Toast.LENGTH_SHORT)
+            backToast!!.show()
+        }
+        backPressedTime = System.currentTimeMillis()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

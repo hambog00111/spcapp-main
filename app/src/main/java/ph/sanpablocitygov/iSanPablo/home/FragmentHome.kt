@@ -3,14 +3,21 @@ package ph.sanpablocitygov.iSanPablo.home
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.content.Context
+import android.app.AlertDialog
+import android.app.ProgressDialog
 
+import android.content.Context
+import android.content.DialogInterface
+
+import android.content.Intent
+import org.jetbrains.anko.toast
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
 
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
 
 import android.support.v7.widget.CardView
 import android.view.LayoutInflater
@@ -19,7 +26,18 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
 
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.utils.ColorTemplate
+import com.google.gson.Gson
+import kotlinx.android.synthetic.main.home_city_hotlines_row.*
+import kotlinx.android.synthetic.main.home_home_fragment.*
+
 import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
+import okhttp3.*
+import org.jetbrains.anko.runOnUiThread
+import org.json.JSONObject
 import ph.sanpablocitygov.iSanPablo.R
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
 import ph.sanpablocitygov.iSanPablo.home.isanpablo.CityEmployeeCorner.FragmentCityEmployeesCorner
@@ -30,10 +48,14 @@ import ph.sanpablocitygov.iSanPablo.links.FragmentFBCIO
 import ph.sanpablocitygov.iSanPablo.links.FragmentHomeCSC
 import ph.sanpablocitygov.iSanPablo.links.FragmentHomePhilGEPS
 import ph.sanpablocitygov.iSanPablo.links.FragmentHomePhilJobNet
+import java.io.IOException
+import java.net.HttpURLConnection
+import java.net.URL
 
 
 @Suppress("PLUGIN_WARNING")
 class FragmentHome : Fragment() {
+
     private var permissionsRequired = arrayOf( Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION,
         Manifest.permission.CALL_PHONE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
     private val PERMISSION_CALLBACK_CONSTANT = 100
@@ -62,7 +84,7 @@ class FragmentHome : Fragment() {
         requestPermission()
 
         viewflipperHome = view.findViewById<View>(R.id.v_flipper) as ViewFlipper
-
+//          val img =view.findViewById(R.id.img) as LinearLayout
         viewflipperEvents = view.findViewById<View>(R.id.v_flipperevent) as ViewFlipper
         val linear = view.findViewById<LinearLayout>(R.id.linear_buss)
         linear.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
@@ -92,13 +114,13 @@ class FragmentHome : Fragment() {
 
 
 
-        for (i in 0 until image.size) {
-            flip_imagehome(image[i])
+        for (element in image) {
+            flip_imagehome(element)
         }
 
 
-        for (i in 0 until imageevent.size) {
-            flip_imageevent(imageevent[i])
+        for (element in imageevent) {
+            flip_imageevent(element)
         }
 
 //        viewPagerEvents = view.findViewById<View>(R.id.events_viewpager) as ViewPager
@@ -234,11 +256,111 @@ class FragmentHome : Fragment() {
                 .commit()
         }
 
+//        fun getData() {
+//            val conn: HttpURLConnection =
+//                URL("localhost:8000/api/getNews1").openConnection() as HttpURLConnection
+//            val res = conn.inputStream.bufferedReader().readText()
+//            JSONObject(res).getJSONArray("asd")
+//        }
+//
+//        val imageView = ImageView(context)
+//        Glide.with(context).load("").into(imageView)
+//        img.addView(imageView)
 
+
+
+
+        setBarChart()
 
         return view
 
     }
+
+
+    private fun setBarChart() {
+        val pdLoading = ProgressDialog(requireContext())
+        pdLoading.setMessage("\tLoading...")
+        pdLoading.setCancelable(false)
+        pdLoading.show()
+
+        val okHttpClient = OkHttpClient()
+
+        val request = Request.Builder()
+            .url("https://coronavirus-19-api.herokuapp.com/countries")
+            .build()
+        okHttpClient.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+               pdLoading!!.dismiss()
+
+                activity!!.runOnUiThread(java.lang.Runnable {
+                    activity!!.toast("Unable to connect to the server please try again later")
+
+                })
+                println(e)
+            }
+            @SuppressLint("ShowToast")
+            override fun onResponse(call: Call, response: Response) {
+                pdLoading!!.dismiss()
+                val body = response.body?.string()
+                val gson = Gson()
+                val list = gson.fromJson(body, Array<mainhandler>::class.java).toList()
+
+                for (student in list) {
+                    if(student.country=="Philippines") {
+                        activity!!.intent.putExtra("cases",student.cases)
+                        activity!!. intent.putExtra("deaths",student.deaths)
+                        activity!!.intent.putExtra("recovered",student.recovered)
+                    }
+                }
+
+
+
+                activity!!.runOnUiThread(java.lang.Runnable {
+
+                    val ca = (  activity!!.intent as Intent).getStringExtra("cases")
+
+
+                    val de = (activity!!.intent as Intent).getStringExtra("deaths")
+
+                    val re = (activity!!.intent as Intent).getStringExtra("recovered")
+
+                    val float1: Float? = ca.toFloat()
+                    val float2: Float? = de.toFloat()
+                    val float3: Float? = re.toFloat()
+                    val entries = ArrayList<BarEntry>()
+                    float1?.let { BarEntry(it, 0) }?.let { entries.add(it) }
+                    float2?.let { BarEntry(it, 1) }?.let { entries.add(it) }
+                    float3?.let { BarEntry(it, 2) }?.let { entries.add(it) }
+                    val barDataSet = BarDataSet(entries, "")
+
+                    val labels = ArrayList<String>()
+                    labels.add("Cases")
+                    labels.add("Deaths")
+                    labels.add("Recovered")
+                    val data = BarData(labels, barDataSet)
+                    barChart.data = data // set the data and list of lables into chart
+
+                    barChart.setDescription("")  // set the description
+
+                  //      barDataSet.setColors(ColorTemplate.COLORFUL_COLORS)
+
+                    //    barDataSet.color = resources.getColor(R.color.colorRed)
+
+
+
+                    barChart.animateY(300)
+
+                })
+            }
+        })
+
+
+    }
+
+
+
+
+
 
 
     private fun requestPermission() {
@@ -323,11 +445,14 @@ class FragmentHome : Fragment() {
                     val view = ImageView(context)
                     view.setBackgroundResource(i)
                     viewflipperEvents.addView(view)
-                    viewflipperEvents.setFlipInterval(7000)
+                    viewflipperEvents.flipInterval = 7000
                     viewflipperEvents.isAutoStart = true
                     viewflipperEvents.setInAnimation(context, android.R.anim.slide_in_left)
                     viewflipperEvents.setOutAnimation(context, android.R.anim.slide_out_right)
                 }
+
+
+
 
 }
 

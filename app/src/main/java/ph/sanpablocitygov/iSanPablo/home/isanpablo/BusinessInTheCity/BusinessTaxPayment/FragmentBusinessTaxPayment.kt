@@ -12,6 +12,8 @@ import android.widget.Button
 import android.widget.ProgressBar
 import ph.sanpablocitygov.iSanPablo.R
 
+
+
 class FragmentBusinessTaxPayment: Fragment()  {
 
     internal var btn_next: Button? = null
