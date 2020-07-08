@@ -330,6 +330,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     .commit()
 
             }
+
+            R.id.nav_data_privacy ->{
+                supportFragmentManager.beginTransaction().replace(
+                        R.id.frag_container,
+                        FragmentDataprivacy(), null)
+                    .addToBackStack(null)
+                    .commit()
+            }
+
             R.id.nav_department_head -> {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,

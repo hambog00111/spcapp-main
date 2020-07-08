@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.widget.TextView
 import kotlinx.android.synthetic.main.home_terms_and_agreements_dialogbox.view.*
 import java.util.*
 
@@ -28,11 +29,12 @@ class LoadingActivity : AppCompatActivity() {
             val dialogBuilder = AlertDialog.Builder(this)
             val inflaters = this.layoutInflater
             val dialogView = inflaters.inflate(R.layout.home_terms_and_agreements_dialogbox, null)
+
             dialogBuilder.setView(dialogView)
             dialogBuilder.setCancelable(false)
             val alertDialog = dialogBuilder.create()
 //             Update
-            dialogView.checkbox_accept.setOnCheckedChangeListener { _, _ ->
+            dialogView.agree.setOnClickListener{
                 editor.putBoolean("IS_FIRST_RUN", false)
                 alertDialog.dismiss()
                 editor.apply()
@@ -45,6 +47,11 @@ class LoadingActivity : AppCompatActivity() {
                     }
                 }, 1200L)
             }
+
+            dialogView.disagree.setOnClickListener{
+                finish()
+            }
+
             alertDialog.show()
         }else{
 

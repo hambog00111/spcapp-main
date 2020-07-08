@@ -19,6 +19,10 @@
               android:title="Full Disclosure"/>
         <item android:id="@+id/nav_tourism"
               android:title="Tourism"/>
+
+        <item android:id="@+id/nav_data_privacy"
+                android:title="Data Privacy Policy"/>
+
         <!--<item android:title="The City">-->
             <!--<menu>-->
                 <!--<item-->
