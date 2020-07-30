@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import ph.sanpablocitygov.iSanPablo.R
+import ph.Sanpablocitygov.iSanPablo.R
 
 import java.util.*
 

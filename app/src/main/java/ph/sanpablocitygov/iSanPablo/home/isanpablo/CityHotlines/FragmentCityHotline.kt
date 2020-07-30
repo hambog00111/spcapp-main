@@ -14,7 +14,7 @@ import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineAdapter
 import layout.ph.sanpablocitygov.iSanPablo.cityhotlines.CityhotlineModel
 
 
-import ph.sanpablocitygov.iSanPablo.R
+import ph.Sanpablocitygov.iSanPablo.R
 import java.util.ArrayList
 
 

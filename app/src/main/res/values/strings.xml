@@ -1541,7 +1541,6 @@ b.	PYLON International Trading Corporation or San Pablo City
     <string name="back"><![CDATA[<]]></string>
     <string name="forward"><![CDATA[>]]></string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Lakbay San Pablo</string>
     <string name="title_activity_maps2">Map</string>

@@ -18,8 +18,7 @@
     <ScrollView
             android:layout_width="match_parent"
             android:paddingTop="15dp"
-
-            android:layout_height="450dp">
+            android:layout_height="370dp">
 
         <me.biubiubiu.justifytext.library.JustifyTextView
                 android:layout_width="match_parent"
@@ -35,21 +34,34 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:padding="10dp"
-            android:gravity="end"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="10dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-        <CheckBox
-                android:id="@+id/checkbox_accept"
+        <TextView
+                android:id="@+id/agree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:textStyle="bold"
                 android:layout_marginEnd="10dp"
-                android:layout_gravity="end"
                 android:textColor="@color/colorPrimary"
                 android:textSize="25sp"
-                android:text="@string/i_accept"/>
+                android:text="I AGREE/ SANGAYON AKO"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I DISAGREE/ HINDI AKO SANGAYON"
+                android:id="@+id/disagree"
+                android:layout_marginTop="10dp"
+                android:textSize="25sp"
+                android:layout_marginRight="40dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                />
+
+
 
     </LinearLayout>
 
