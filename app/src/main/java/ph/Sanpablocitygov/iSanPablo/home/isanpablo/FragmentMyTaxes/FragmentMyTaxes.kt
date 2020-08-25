@@ -1,6 +1,8 @@
 package ph.Sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.app.DownloadManager
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AlertDialog
@@ -12,6 +14,12 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
+import kotlinx.android.synthetic.main.mt_rpt_dailog.view.btn_online_payment
+import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.*
+import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.btn_bplo_cancel
+import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.btn_download_bplo
+import kotlinx.android.synthetic.main.mt_rpt_dailog.view.*
 import kotlinx.android.synthetic.main.update_fragment.view.*
 
 import ph.Sanpablocitygov.iSanPablo.R
@@ -47,11 +55,44 @@ override  fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, save
 
     val btnrtpp = view.findViewById<Button>(R.id.btn_rpt_payment)
     btnrtpp?.setOnClickListener {
-        activity!!.supportFragmentManager.beginTransaction().replace(
-            R.id.frag_container,
-            FragmentRTPPayment() , null)
-            .addToBackStack(null)
-            .commit()
+        val bploView = LayoutInflater.from(requireContext()).inflate(R.layout.mt_rpt_dailog, null)
+
+        val bplobBuilder = AlertDialog.Builder(requireContext())
+            .setView(bploView)
+        bplobBuilder.setCancelable(false)
+        val bploDialog = bplobBuilder.show()
+
+        bploView.btn_request_assessment.setOnClickListener {
+
+            bploDialog.dismiss()
+
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentRequestAssessment() , null)
+                .addToBackStack(null)
+                .commit()
+        }
+
+
+        bploView.btn_online_payment.setOnClickListener {
+          bploDialog.dismiss()
+
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentRTPPayment() , null)
+                .addToBackStack(null)
+                .commit()
+
+
+        }
+
+
+
+        bploView.btn_bplo_cancel.setOnClickListener {
+            bploDialog.dismiss()
+        }
+
+
     }
     val btnfp = view.findViewById<Button>(R.id.btn_fp)
     btnfp?.setOnClickListener {

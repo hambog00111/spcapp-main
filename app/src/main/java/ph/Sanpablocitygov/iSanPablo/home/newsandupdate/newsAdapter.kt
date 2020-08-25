@@ -28,5 +28,6 @@ class newsAdapter(private val dataList: ArrayList<HashMap<String, String>>) : Re
         val textView1: TextView = itemView.text_view_1
         val textView2: TextView = itemView.text_view_2
         val textView3: TextView = itemView.text_view_3
+
     }
 }

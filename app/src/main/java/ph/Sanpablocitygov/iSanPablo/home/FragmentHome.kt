@@ -5,10 +5,12 @@ package ph.Sanpablocitygov.iSanPablo.home
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 
 import android.app.ProgressDialog
 
 import android.content.Context
+import android.content.DialogInterface
 
 
 import android.content.Intent
@@ -49,6 +51,7 @@ import ph.Sanpablocitygov.iSanPablo.home.isanpablo.CityEmployeeCorner.FragmentCi
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes.FragmentMyTaxes
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.GovernmentOnlineServices.FragmentGovermentOnlineServices
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.FragmentMyAppOnlineRequest
+import ph.Sanpablocitygov.iSanPablo.home.newsandupdate.CustomAdapter
 import ph.Sanpablocitygov.iSanPablo.home.newsandupdate.newsAdapter
 import ph.Sanpablocitygov.iSanPablo.home.newsandupdate.newshandler
 import ph.Sanpablocitygov.iSanPablo.links.FragmentFBCIO
@@ -83,6 +86,7 @@ class FragmentHome : Fragment(){
         val view = inflater.inflate(R.layout.home_home_fragment, null)
         newsandupdate()
 
+
         permissionStatus = activity!!.getSharedPreferences("permissionStatus", Context.MODE_PRIVATE)
         requestPermission()
 
@@ -103,7 +107,13 @@ class FragmentHome : Fragment(){
         gos.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
         val cc = view.findViewById<LinearLayout>(R.id.linear_cec)
         cc.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
+         val seemore = view.findViewById<TextView>(R.id.see_more)
 
+        seemore.setOnClickListener {
+
+            list()
+
+        }
         val cve  = view.findViewById<CardView>(R.id.cv_events)
         cve.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
         val cvjo  = view.findViewById<CardView>(R.id.cv_job)
@@ -513,7 +523,58 @@ class FragmentHome : Fragment(){
 //                }
 
 
+    @SuppressLint("InflateParams")
+    fun list(){
 
+
+        val mDialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialognewandupdate, null)
+
+        val mBuilder = AlertDialog.Builder(requireContext())
+            .setView(mDialogView)
+
+            .setPositiveButton("Ok", DialogInterface.OnClickListener {
+                    dialog, _ ->dialog.cancel()
+            })
+        val  mAlertDialog = mBuilder.show()
+        val okHttpClient = OkHttpClient()
+        val request = Request.Builder()
+
+
+            .url("http://www.sanpablocitygov.ph/api/getNews")
+            .build()
+        okHttpClient.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                activity!!.runOnUiThread {
+                    activity!!.toast("Unable to connect to the server please try again later")
+
+                }
+            }
+            @SuppressLint("ShowToast")
+            override fun onResponse(call: Call, response: Response) {
+                val body = response.body?.string()
+                val gson = Gson()
+                val list = gson.fromJson(body, Array<newshandler>::class.java).toList()
+                println(list)
+                for (entry in list) {
+                    val map = HashMap<String, String>()
+                    map["id"] = entry.id
+                    map["title"] =  entry.title
+                    map["subtitle"] = entry.subtitle
+                    dataList.add(map)
+                    println(map)
+                }
+                activity!!.runOnUiThread {
+
+                    mAlertDialog.findViewById<ListView>(R.id.listView)!!.adapter = CustomAdapter(requireContext(), dataList)
+
+                }
+
+
+            }
+        })
+
+
+    }
 
 }
 
