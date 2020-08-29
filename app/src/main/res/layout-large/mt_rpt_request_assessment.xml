@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -95,7 +96,7 @@
                             android:textColorHint="@color/lightgray"
                             android:textSize="18sp"
                             android:inputType="textPersonName"
-                            android:id="@+id/txt_bplo_name_of_taxpayer_lname"
+                            android:id="@+id/rpt_ownname"
                             tools:ignore="Autofill" />
 
 
@@ -107,7 +108,17 @@
                             android:textColorHint="@color/lightgray"
                             android:textSize="18sp"
                             android:inputType="textEmailAddress"
-                            android:id="@+id/txt_bplo_name_of_taxpayer_trade_name"
+                            android:id="@+id/rpt_email"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Contact Number"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="18sp"
+                            android:inputType="textEmailAddress"
+                            android:id="@+id/rpt_contact"
                             tools:ignore="Autofill" />
 
                     <EditText android:layout_width="match_parent"
@@ -116,8 +127,9 @@
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
                             android:textSize="18sp"
+                            android:digits="0123456789-"
                             android:inputType="number"
-                            android:id="@+id/txt_bplo_name_of_taxpayer_name_of_president"
+                            android:id="@+id/rpt_pin"
                             tools:ignore="Autofill" />
 
 
@@ -144,7 +156,7 @@
                             android:text="Submit"
                             android:background="@drawable/text_border2"
                             android:layout_gravity="right"
-                            android:id="@+id/txt_bplo_next_page"
+                            android:id="@+id/rpt_submit"
                             tools:ignore="ButtonStyle,RtlHardcoded" />
 
                 </LinearLayout>

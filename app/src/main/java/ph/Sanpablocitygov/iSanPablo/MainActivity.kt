@@ -28,6 +28,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.main_full_disclosure_dialogbox.view.*
+import kotlinx.android.synthetic.main.update_fragment.view.*
 import ph.Sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
 import ph.Sanpablocitygov.iSanPablo.home.FragmentHome
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
@@ -649,11 +650,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
             R.id.nav_bplo ->{
-                supportFragmentManager.beginTransaction().replace(
-                    R.id.frag_container,
-                    FragmentBPLOonline(), null)
-                    .addToBackStack(null)
-                    .commit()
+
+                val mybus = LayoutInflater.from(this).inflate(R.layout.update_fragment, null)
+
+                val mybusBuilder = AlertDialog.Builder(this)
+                    .setView(mybus)
+                mybusBuilder.setCancelable(false)
+                val mybusDialog = mybusBuilder.show()
+
+                mybus.txt_confirm_update.setOnClickListener {
+                    mybusDialog.dismiss()
+                }
+
+//                supportFragmentManager.beginTransaction().replace(
+//                    R.id.frag_container,
+//                    FragmentBPLOonline(), null)
+//                    .addToBackStack(null)
+//                    .commit()
             }
 
             R.id.nav_govph ->{

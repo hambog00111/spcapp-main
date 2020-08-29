@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -78,11 +76,11 @@
                         android:textColor="@color/white"
                         android:paddingStart="10dp"
                         android:textStyle="bold"
-                        android:textSize="15sp"
+                        android:textSize="20sp"
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
                         android:background="@color/colorPrimary"
-                        android:text="RPT REQUEST ASSESSMENT FORM"
+                        android:text="BUSINESS TAX REQUEST ASSESSMENT FORM"
                         tools:ignore="RtlSymmetry" />
 
                 <LinearLayout android:layout_width="match_parent"
@@ -92,50 +90,54 @@
 
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Owner's name"
+                            android:hint="Bin"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
-                            android:textSize="13sp"
-                            android:inputType="textPersonName"
-                            android:id="@+id/rpt_ownname"
+                            android:textSize="18sp"
+                            android:inputType="number"
+                            android:id="@+id/bta_bin"
                             tools:ignore="Autofill" />
 
 
 
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Email Address"
+                            android:hint="Owner's Name"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
-                            android:textSize="13sp"
-                            android:inputType="textEmailAddress"
-                            android:id="@+id/rpt_email"
-                            tools:ignore="Autofill" />
-
+                            android:textSize="18sp"
+                            android:inputType="textPersonName"
+                            android:id="@+id/bta_ownername"
+                            tools:ignore="Autofill," />
 
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Contact Number"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
-                            android:textSize="13sp"
-                            android:inputType="textEmailAddress"
-                            android:id="@+id/rpt_contact"
+                            android:textSize="18sp"
+                            android:inputType="number"
+                            android:id="@+id/bta_contact"
                             tools:ignore="Autofill" />
-
 
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="PIN"
+                            android:hint="Email Address"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
-                            android:textSize="13sp"
-                            android:digits="0123456789-"
-                            android:inputType="number"
+                            android:textSize="18sp"
+                            android:inputType="textEmailAddress"
+                            android:id="@+id/bta_email"
+                            tools:ignore="Autofill" />
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Business Name"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="18sp"
+                            android:inputType="textPersonName"
                             android:id="@+id/rpt_pin"
                             tools:ignore="Autofill" />
-
-
 
                 </LinearLayout>
                 <LinearLayout android:layout_width="match_parent"
@@ -148,14 +150,14 @@
 
 
 
-                    <Button android:layout_width="100dp"
-                            android:layout_height="30dp"
+                    <Button android:layout_width="120dp"
+                            android:layout_height="40dp"
                             android:textColor="@color/white"
                             android:layout_marginEnd="10dp"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
                             android:textStyle="bold"
-                            android:textSize="13sp"
+                            android:textSize="18sp"
                             android:text="Submit"
                             android:background="@drawable/text_border2"
                             android:layout_gravity="right"
@@ -170,91 +172,73 @@
 
 
 
-
-
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="20dp">
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/phlogo"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
             <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="70dp"
-                        app:srcCompat="@drawable/phlogo"
-                        tools:ignore="ContentDescription" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                    android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-
                 <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="18dp"
                         android:text="@string/Reps"
-                        android:textSize="10sp"
+                        android:textSize="13sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        tools:ignore="SmallSp" />
-
+                        android:textStyle="bold"/>
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/Rep"
-                        android:textSize="10sp"
+                        android:textSize="13sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
-                        android:gravity="center"
-                        android:layout_marginBottom="5dp"
-                        tools:ignore="SmallSp" />
-
+                        android:layout_marginBottom="5dp"/>
                 <TextView
                         android:text="@string/_2019_san_pablo_city_goverment"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="10sp"
-                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:textSize="13sp"
                         android:textColor="@color/colorPrimary"
                         android:textAlignment="center"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:id="@+id/textView8"
-                        tools:ignore="SmallSp" />
+
+                        />
 
             </LinearLayout>
-            <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="70dp"
-                        app:srcCompat="@drawable/transpa"
-                        tools:ignore="ContentDescription" />
-            </LinearLayout>
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/transpa"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
+
         </LinearLayout>
 
         <LinearLayout
                 android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
                 android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
             <LinearLayout
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -263,7 +247,7 @@
                         android:text="@string/developed_by"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
                         android:textColor="@color/colorPrimary"
@@ -271,8 +255,8 @@
                         android:layout_marginEnd="3dp"
                         />
                 <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="21dp"
+                        android:layout_width="90dp"
+                        android:layout_height="25dp"
                         app:srcCompat="@drawable/pylon"
                         android:layout_marginEnd="13dp"
                         tools:ignore="ContentDescription" />
@@ -286,7 +270,7 @@
                         android:text="@string/developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="13sp"
+                        android:textSize="15sp"
                         android:gravity="center"
                         android:layout_marginStart="5dp"
                         android:textColor="@color/colorPrimary"
@@ -300,18 +284,22 @@
                             android:text="@string/chris_velasco"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="13sp"
+                            android:textSize="15sp"
                             android:gravity="center"
+
                             android:textColor="@color/colorPrimary"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            />
                     <TextView
                             android:text="@string/joseph_bonilla"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="13sp"
+                            android:textSize="15sp"
                             android:gravity="center"
+
                             android:textColor="@color/colorPrimary"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

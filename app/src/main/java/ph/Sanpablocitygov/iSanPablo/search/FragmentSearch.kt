@@ -29,7 +29,7 @@ import java.util.ArrayList
 
 class FragmentSearch:Fragment (){
 
-    private lateinit var searchView : SearchView
+    private lateinit var searchView : EditText
 
     internal lateinit var adapter: ListViewAdapter
     private lateinit var title: Array<String>
@@ -58,7 +58,7 @@ class FragmentSearch:Fragment (){
             R.drawable.disclosure,R.drawable.tourism,R.drawable.aboutgov,R.drawable.aboutgov
             ,R.drawable.aboutgov,R.drawable.govlinks,R.drawable.govlinks,R.drawable.govlinks,R.drawable.govlinks,
             R.drawable.govlinks,R.drawable.govlinks,R.drawable.govlinks)
-        searchView = view.findViewById(R.id.searchView) as SearchView
+        searchView = view.findViewById(R.id.searchView) as EditText
 
       val  listView = view.findViewById<ListView>(R.id.listView)
 
@@ -76,8 +76,8 @@ class FragmentSearch:Fragment (){
 //        holder.mTitleTv!!.text = modellist[position].title
         listView.setOnItemClickListener { _, _, position, _ ->
 
-
             if (arrayList[position].title == "Business in The City" ) {
+
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
                 FragmentBusinessInTheCity(), null)
@@ -89,6 +89,8 @@ class FragmentSearch:Fragment (){
 
 
             else if (arrayList[position].title == "My Taxes" ) {
+
+
                 activity!!.supportFragmentManager.beginTransaction().replace(
                     R.id.frag_container,
                     FragmentMyTaxes(), null)
@@ -508,22 +510,25 @@ class FragmentSearch:Fragment (){
             }
         }
 
-        searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String): Boolean {
 
-                return false
-            }
 
-            override fun onQueryTextChange(s: String): Boolean {
-                if (TextUtils.isEmpty(s)) {
-                    listView.clearTextFilter()
-                } else {
-                    adapter.filter(s)
 
-                }
-                return true
-            }
-        })
+//        searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener {
+//            override fun onQueryTextSubmit(query: String): Boolean {
+//
+//                return false
+//            }
+//
+//            override fun onQueryTextChange(s: String): Boolean {
+//                if (TextUtils.isEmpty(s)) {
+//                listView.clearTextFilter()
+//                } else {
+//                    adapter.filter(s)
+//
+//                }
+//                return true
+//            }
+//        })
 
         return view
     }

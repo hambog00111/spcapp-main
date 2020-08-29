@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -82,7 +81,7 @@
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp"
                         android:background="@color/colorPrimary"
-                        android:text="RPT REQUEST ASSESSMENT FORM"
+                        android:text="REQUESTOR FILL UP FORM"
                         tools:ignore="RtlSymmetry" />
 
                 <LinearLayout android:layout_width="match_parent"
@@ -92,24 +91,24 @@
 
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Owner's name"
+                            android:hint="Your Full Name"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
                             android:textSize="13sp"
                             android:inputType="textPersonName"
-                            android:id="@+id/rpt_ownname"
+                            android:id="@+id/bc_namereq"
                             tools:ignore="Autofill" />
 
 
 
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Email Address"
+                            android:hint="Home Address (with zip code)"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
                             android:textSize="13sp"
-                            android:inputType="textEmailAddress"
-                            android:id="@+id/rpt_email"
+                            android:inputType="textPostalAddress"
+                            android:id="@+id/bc_address"
                             tools:ignore="Autofill" />
 
 
@@ -119,55 +118,186 @@
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
                             android:textSize="13sp"
-                            android:inputType="textEmailAddress"
-                            android:id="@+id/rpt_contact"
+                            android:inputType="number"
+                            android:id="@+id/bc_number"
                             tools:ignore="Autofill" />
 
 
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="PIN"
+                            android:hint="Email Address"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
                             android:textSize="13sp"
-                            android:digits="0123456789-"
-                            android:inputType="number"
-                            android:id="@+id/rpt_pin"
+                            android:inputType="textEmailAddress"
+                            android:id="@+id/bc_email"
                             tools:ignore="Autofill" />
 
 
-
-                </LinearLayout>
-                <LinearLayout android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_margin="10dp"
-                        android:layout_gravity="center"
-                        android:padding="5dp"
-                        android:gravity="bottom|end">
-
-
-
-                    <Button android:layout_width="100dp"
-                            android:layout_height="30dp"
-                            android:textColor="@color/white"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:textStyle="bold"
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Your relationship to the birth certificate owner"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
                             android:textSize="13sp"
-                            android:text="Submit"
-                            android:background="@drawable/text_border2"
-                            android:layout_gravity="right"
-                            android:id="@+id/rpt_submit"
-                            tools:ignore="ButtonStyle,RtlHardcoded" />
-
+                            android:inputType="text"
+                            android:id="@+id/bc_relation"
+                            tools:ignore="Autofill" />
                 </LinearLayout>
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
+        <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:background="@drawable/text_border"
+                android:gravity="center"
+                android:elevation="6dp"
+                android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:paddingStart="10dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@color/colorPrimary"
+                        android:text="INFORMATION FOR BIRTH CERTIFICATE REQUEST"
+                        tools:ignore="RtlSymmetry" />
 
+                <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Number of copies you are requesting"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="number"
+                            android:id="@+id/bc_numcopy"
+                            tools:ignore="Autofill" />
+
+
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Full Name (maiden name if married female)"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="textEmailAddress"
+                            android:id="@+id/bc_name"
+                            tools:ignore="Autofill" />
+
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Sex"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="textEmailAddress"
+                            android:id="@+id/bc_sex"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date of birth"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/bc_date_birth"
+                            tools:ignore="Autofill" />
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Place of birth"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/bc_place_birth"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Father’s name"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="textPersonName"
+                            android:id="@+id/bc_father_name"
+                            tools:ignore="Autofill" />
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mother’s maiden name"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="textPersonName"
+                            android:id="@+id/bc_mother_name"
+                            tools:ignore="Autofill" />
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date of registration, if the birth certificate was late registered"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/bc_date_reg"
+                            tools:ignore="Autofill" />
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Purpose of your request"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/bc_purpose"
+                            tools:ignore="Autofill" />
+
+
+
+                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:layout_margin="10dp"
+                                        android:layout_gravity="center"
+                                        android:padding="5dp"
+                                        android:gravity="bottom|end">
+
+
+
+                                    <Button android:layout_width="100dp"
+                                            android:layout_height="30dp"
+                                            android:textColor="@color/white"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:textStyle="bold"
+                                            android:textSize="13sp"
+                                            android:text="Submit"
+                                            android:background="@drawable/text_border2"
+                                            android:layout_gravity="right"
+                                            android:id="@+id/bc_submit"
+                                            tools:ignore="ButtonStyle,RtlHardcoded" />
+
+                                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
 
 

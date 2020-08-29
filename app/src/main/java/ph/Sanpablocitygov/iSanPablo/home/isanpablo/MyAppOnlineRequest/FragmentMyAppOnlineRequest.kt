@@ -14,6 +14,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import kotlinx.android.synthetic.main.update_fragment.view.*
 import ph.Sanpablocitygov.iSanPablo.R
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.BirthCertificate.FragmentBirthCertificate
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.DeathCertificate.FragmentDeathCertificate
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.MarriageCertificate.FragmentMarriageCertificate
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.RequestTDOHA.FragmentRequestTDOHA
 
 class FragmentMyAppOnlineRequest : Fragment(){
     @SuppressLint("InflateParams")
@@ -35,70 +39,59 @@ class FragmentMyAppOnlineRequest : Fragment(){
         lnrdc.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
 
 
-
-
-
-        //opening new function/fragment
         val btntd = view.findViewById<Button>(R.id.btn_myapp_td)
         btntd.setOnClickListener {
 
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentRequestTDOHA() , null)
+                .addToBackStack(null)
+                .commit()
 
-            val mybusBuilder = AlertDialog.Builder(requireContext())
-                .setView(mybus)
-            mybusBuilder.setCancelable(false)
-            val mybusDialog = mybusBuilder.show()
-
-            mybus.txt_confirm_update.setOnClickListener {
-                mybusDialog.dismiss()
-            }
         }
 
             val btnbc = view.findViewById<Button>(R.id.btn_myapp_bc)
              btnbc.setOnClickListener {
+                 activity!!.supportFragmentManager.beginTransaction().replace(
+                         R.id.frag_container,
+                         FragmentBirthCertificate() , null)
+                     .addToBackStack(null)
+                     .commit()
 
-                val mybus =
-                    LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
-                val mybusBuilder = AlertDialog.Builder(requireContext())
-                    .setView(mybus)
-                 mybusBuilder.setCancelable(false)
-                val mybusDialog = mybusBuilder.show()
-
-                mybus.txt_confirm_update.setOnClickListener {
-                    mybusDialog.dismiss()
-                }
+//                val mybus =
+//                    LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+//
+//                val mybusBuilder = AlertDialog.Builder(requireContext())
+//                    .setView(mybus)
+//                 mybusBuilder.setCancelable(false)
+//                val mybusDialog = mybusBuilder.show()
+//
+//                mybus.txt_confirm_update.setOnClickListener {
+//                    mybusDialog.dismiss()
+//                }
             }
 
                 val btndc = view.findViewById<Button>(R.id.btn_myapp_dc)
                 btndc.setOnClickListener {
 
-                    val mybus = LayoutInflater.from(requireContext())
-                        .inflate(R.layout.update_fragment, null)
 
-                    val mybusBuilder = AlertDialog.Builder(requireContext())
-                        .setView(mybus)
-                    mybusBuilder.setCancelable(false)
-                    val mybusDialog = mybusBuilder.show()
 
-                    mybus.txt_confirm_update.setOnClickListener {
-                        mybusDialog.dismiss()
-                    }
+                    activity!!.supportFragmentManager.beginTransaction().replace(
+                            R.id.frag_container,
+                            FragmentDeathCertificate() , null)
+                        .addToBackStack(null)
+                        .commit()
                 }
                     val btnmc = view.findViewById<Button>(R.id.btn_myapp_mc)
                      btnmc.setOnClickListener {
 
-                        val mybus = LayoutInflater.from(requireContext())
-                            .inflate(R.layout.update_fragment, null)
 
-                        val mybusBuilder = AlertDialog.Builder(requireContext())
-                            .setView(mybus)
-                         mybusBuilder.setCancelable(false)
-                        val mybusDialog = mybusBuilder.show()
-
-                        mybus.txt_confirm_update.setOnClickListener {
-                            mybusDialog.dismiss()
-                        }
+                         activity!!.supportFragmentManager.beginTransaction().replace(
+                                 R.id.frag_container,
+                                 FragmentMarriageCertificate() , null)
+                             .addToBackStack(null)
+                             .commit()
                     }
 
                         return view
