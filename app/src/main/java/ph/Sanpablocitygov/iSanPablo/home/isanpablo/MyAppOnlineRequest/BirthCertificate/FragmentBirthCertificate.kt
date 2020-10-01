@@ -2,10 +2,15 @@ package ph.Sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.BirthCert
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.app.DatePickerDialog
 import android.app.ProgressDialog
+import android.content.ContentValues.TAG
 import android.content.DialogInterface
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
@@ -19,9 +24,11 @@ import org.jetbrains.anko.toast
 import ph.Sanpablocitygov.iSanPablo.R
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes.rptassementhandler
 import java.io.IOException
+import java.util.*
 
 class FragmentBirthCertificate : Fragment(){
-
+    private var mDateSetListener: DatePickerDialog.OnDateSetListener? = null
+    private var mDateSetListener2: DatePickerDialog.OnDateSetListener? = null
     @SuppressLint("InflateParams")
     override  fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -38,12 +45,68 @@ class FragmentBirthCertificate : Fragment(){
         val  bc_sex =view.findViewById<EditText>(R.id.bc_sex)
         val  bc_place_birth =view.findViewById<EditText>(R.id.bc_place_birth)
         val  bc_date_birth =view.findViewById<EditText>(R.id.bc_date_birth)
-        val  bc_father_name =view.findViewById<EditText>(R.id.bc_father_name)
-        val  bc_mother_name =view.findViewById<EditText>(R.id.bc_mother_name)
         val  bc_date_reg =view.findViewById<EditText>(R.id.bc_date_reg)
         val  bc_purpose =view.findViewById<EditText>(R.id.bc_purpose)
         val  bc_relation =view.findViewById<EditText>(R.id.bc_relation)
 
+
+
+        bc_date_birth.setOnClickListener {
+
+            val cal = Calendar.getInstance()
+            cal.add(Calendar.DATE,0)
+            val year = cal[Calendar.YEAR]
+            val month = cal[Calendar.MONTH]
+            val day = cal[Calendar.DAY_OF_MONTH]
+
+            val dialog = DatePickerDialog(
+                activity!!,
+                android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                mDateSetListener,
+                year, month, day)
+            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.datePicker.maxDate = cal.timeInMillis
+            dialog.show()
+        }
+
+
+
+
+
+        bc_date_reg.setOnClickListener {
+
+            val cal = Calendar.getInstance()
+
+            val year = cal[Calendar.YEAR]
+            val month = cal[Calendar.MONTH]
+            val day = cal[Calendar.DAY_OF_MONTH]
+
+            val dialog = DatePickerDialog(
+                activity!!,
+                android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                mDateSetListener2,
+                year, month, day)
+
+            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.datePicker.maxDate = cal.timeInMillis
+            dialog.show()
+        }
+
+
+        mDateSetListener = DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
+            var month = month
+            month = month + 1
+            Log.d(TAG, "onDateSet: mm/dd/yyy: $month/$day/$year")
+            val date = "$month/$day/$year"
+            bc_date_birth!!.setText(date)
+        }
+        mDateSetListener2 = DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
+            var month = month
+            month = month + 1
+            Log.d(TAG, "onDateSet: mm/dd/yyy: $month/$day/$year")
+            val date = "$month/$day/$year"
+            bc_date_reg!!.setText(date)
+        }
         submit.setOnClickListener {
 
             if (bcnamereq!!.text.toString().trim { it <= ' ' }.isEmpty()) {
@@ -108,8 +171,6 @@ class FragmentBirthCertificate : Fragment(){
             }
 
 
-
-
             else{
 
                 Request()
@@ -117,7 +178,6 @@ class FragmentBirthCertificate : Fragment(){
         }
 
         }
-
 
 return view
     }
@@ -137,8 +197,7 @@ return view
         val  bc_sex =view!!.findViewById<EditText>(R.id.bc_sex).text.toString()
         val  bc_place_birth =view!!.findViewById<EditText>(R.id.bc_place_birth).text.toString()
         val  bc_date_birth =view!!.findViewById<EditText>(R.id.bc_date_birth).text.toString()
-        val  bc_father_name =view!!.findViewById<EditText>(R.id.bc_father_name).text.toString()
-        val  bc_mother_name =view!!.findViewById<EditText>(R.id.bc_mother_name).text.toString()
+
         val  bc_date_reg =view!!.findViewById<EditText>(R.id.bc_date_reg).text.toString()
         val  bc_purpose =view!!.findViewById<EditText>(R.id.bc_purpose).text.toString()
         val  bc_relation =view!!.findViewById<EditText>(R.id.bc_relation).text.toString()
@@ -153,18 +212,15 @@ return view
             .add("sex", bc_sex)
             .add("place_of_birth", bc_place_birth)
             .add("date_of_birth", bc_date_birth)
-            .add("father's_name", bc_father_name)
-            .add("mother's_name", bc_mother_name)
-            .add("date_of_register",bc_date_reg )
-            .add("purpose_of_request",bc_purpose )
+            .add("date_of_registration",bc_date_reg)
+            .add("purpose_of_request",bc_purpose)
             .add("relationship_to_owner", bc_relation)
-
             .build()
 
         val okHttpClient = OkHttpClient()
         val request = Request.Builder()
             .method("POST",formBody)
-            .url("http://192.168.3.172:8080/api/add_request_birthcert")
+            .url("http://www.sanpablocitygov.ph/api/add_request_birthcert")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -185,42 +241,39 @@ return view
                 val rptrequest = gson.fromJson(body, rptassementhandler::class.java)
                 when (rptrequest.message) {
                     "Success" -> {
-                        val  bcnamereq =view!!.findViewById<EditText>(R.id.bc_namereq)
-                        val  bc_address =view!!.findViewById<EditText>(R.id.bc_address)
-                        val  bc_number =view!!.findViewById<EditText>(R.id.bc_number)
-                        val  bc_email =view!!.findViewById<EditText>(R.id.bc_email)
-                        val  bc_numcopy =view!!.findViewById<EditText>(R.id.bc_numcopy)
-                        val  bc_name =view!!.findViewById<EditText>(R.id.bc_name)
-                        val  bc_sex =view!!.findViewById<EditText>(R.id.bc_sex)
-                        val  bc_place_birth =view!!.findViewById<EditText>(R.id.bc_place_birth)
-                        val  bc_date_birth =view!!.findViewById<EditText>(R.id.bc_date_birth)
-                        val  bc_father_name =view!!.findViewById<EditText>(R.id.bc_father_name)
-                        val  bc_mother_name =view!!.findViewById<EditText>(R.id.bc_mother_name)
-                        val  bc_date_reg =view!!.findViewById<EditText>(R.id.bc_date_reg)
-                        val  bc_purpose =view!!.findViewById<EditText>(R.id.bc_purpose)
-                        val  bc_relation =view!!.findViewById<EditText>(R.id.bc_relation)
-
-
-                        bcnamereq.text.clear()
-                        bc_address.text.clear()
-                        bc_number.text.clear()
-                        bc_email.text.clear()
-                        bc_numcopy.text.clear()
-                        bc_name.text.clear()
-                        bc_sex.text.clear()
-                        bc_place_birth.text.clear()
-                        bc_date_birth.text.clear()
-                        bc_father_name.text.clear()
-                        bc_mother_name.text.clear()
-                        bc_date_reg.text.clear()
-                        bc_purpose.text.clear()
-                        bc_relation.text.clear()
 
 
                         activity!!.runOnUiThread(java.lang.Runnable {
 
+                            val  bcnamereq =view!!.findViewById<EditText>(R.id.bc_namereq)
+                            val  bc_address =view!!.findViewById<EditText>(R.id.bc_address)
+                            val  bc_number =view!!.findViewById<EditText>(R.id.bc_number)
+                            val  bc_email =view!!.findViewById<EditText>(R.id.bc_email)
+                            val  bc_numcopy =view!!.findViewById<EditText>(R.id.bc_numcopy)
+                            val  bc_name =view!!.findViewById<EditText>(R.id.bc_name)
+                            val  bc_sex =view!!.findViewById<EditText>(R.id.bc_sex)
+                            val  bc_place_birth =view!!.findViewById<EditText>(R.id.bc_place_birth)
+                            val  bc_date_birth =view!!.findViewById<EditText>(R.id.bc_date_birth)
+
+                            val  bc_date_reg =view!!.findViewById<EditText>(R.id.bc_date_reg)
+                            val  bc_purpose =view!!.findViewById<EditText>(R.id.bc_purpose)
+                            val  bc_relation =view!!.findViewById<EditText>(R.id.bc_relation)
+
+
+                            bcnamereq.text.clear()
+                            bc_address.text.clear()
+                            bc_number.text.clear()
+                            bc_email.text.clear()
+                            bc_numcopy.text.clear()
+                            bc_name.text.clear()
+                            bc_sex.text.clear()
+                            bc_place_birth.text.clear()
+                            bc_date_birth.text.clear()
+                            bc_date_reg.text.clear()
+                            bc_purpose.text.clear()
+                            bc_relation.text.clear()
                             val dialogBuilder = AlertDialog.Builder(requireContext())
-                            dialogBuilder.setMessage("Request for birth certificate successfully Sent.")
+                            dialogBuilder.setMessage("Request for birth certificate successfully Sent.Please wait within 24 hrs and check your email for confirmation. Thank you!")
                                 // if the dialog is cancelable
                                 .setCancelable(false)
                                 // positive button text and action

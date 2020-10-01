@@ -30,6 +30,7 @@ class FragmentRequestAssessment : Fragment(){
 
         val ownname = view.findViewById<EditText>(R.id.rpt_ownname)
         val email = view.findViewById<EditText>(R.id.rpt_email)
+        val property_add = view.findViewById<EditText>(R.id.rpt_property_add)
         val contact = view.findViewById<EditText>(R.id.rpt_contact)
         val pin = view.findViewById<EditText>(R.id.rpt_pin)
         val submit = view.findViewById<Button>(R.id.rpt_submit)
@@ -45,6 +46,11 @@ class FragmentRequestAssessment : Fragment(){
              return@setOnClickListener
          }
 
+         if (property_add!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+             Toast.makeText(activity!!, "Please enter Property Address!", Toast.LENGTH_SHORT).show()
+             return@setOnClickListener
+         }
+
 
          else if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()) {
              email.error = "Please enter a valid email address"
@@ -55,7 +61,7 @@ class FragmentRequestAssessment : Fragment(){
              Toast.makeText(activity!!, "Please enter your Contact Number!", Toast.LENGTH_SHORT).show()
              return@setOnClickListener
          }
-
+    
 
 
          if (pin!!.text.toString().trim { it <= ' ' }.isEmpty()) {
@@ -96,12 +102,14 @@ return view
         pdLoading.show()
         val ownname = view!!.findViewById<EditText>(R.id.rpt_ownname).text.toString()
         val email = view!!.findViewById<EditText>(R.id.rpt_email).text.toString()
+        val property_add = view!!.findViewById<EditText>(R.id.rpt_property_add).text.toString()
         val contact = view!!.findViewById<EditText>(R.id.rpt_contact).text.toString()
         val pin = view!!.findViewById<EditText>(R.id.rpt_pin).text.toString()
 
         val formBody: RequestBody = FormBody.Builder()
             .add("RPname", ownname)
             .add("RPemail", email)
+            .add("RPaddress", property_add)
             .add("RPnumber", contact)
             .add("RPpid", pin)
 
@@ -110,7 +118,8 @@ return view
         val okHttpClient = OkHttpClient()
         val request = Request.Builder()
             .method("POST",formBody)
-            .url("http://192.168.3.172:8080/api/add_request_property")
+//        www.sanpablocitygov.ph
+            .url("http://www.sanpablocitygov.ph/api/add_request_property")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -131,20 +140,22 @@ return view
                 val rptrequest = gson.fromJson(body, rptassementhandler::class.java)
                 when (rptrequest.message) {
                     "Success" -> {
-                        val ownname = view!!.findViewById<EditText>(R.id.rpt_ownname)
-                        val email = view!!.findViewById<EditText>(R.id.rpt_email)
-                        val contact = view!!.findViewById<EditText>(R.id.rpt_contact)
-                        val pin = view!!.findViewById<EditText>(R.id.rpt_pin)
 
 
-                        ownname.text.clear()
-                        email.text.clear()
-                        contact.text.clear()
-                        pin.text.clear()
+
                         activity!!.runOnUiThread(java.lang.Runnable {
-
+                            val ownname = view!!.findViewById<EditText>(R.id.rpt_ownname)
+                            val email = view!!.findViewById<EditText>(R.id.rpt_email)
+                            val property_add = view!!.findViewById<EditText>(R.id.rpt_property_add)
+                            val contact = view!!.findViewById<EditText>(R.id.rpt_contact)
+                            val pin = view!!.findViewById<EditText>(R.id.rpt_pin)
+                            ownname.text.clear()
+                            email.text.clear()
+                            property_add.text.clear()
+                            contact.text.clear()
+                            pin.text.clear()
                             val dialogBuilder = AlertDialog.Builder(requireContext())
-                            dialogBuilder.setMessage("Request for assessment Successfully.")
+                            dialogBuilder.setMessage("Request for assessment Successfully sent . Please wait within 24 hrs and check your email for confirmation. Thank you!")
                                 // if the dialog is cancelable
                                 .setCancelable(false)
                                 // positive button text and action

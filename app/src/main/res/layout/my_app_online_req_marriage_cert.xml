@@ -218,9 +218,11 @@
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
                             android:textSize="13sp"
-                            android:inputType="text"
                             android:id="@+id/mc_date_marriage"
-                            tools:ignore="Autofill" />
+                            android:textIsSelectable="true"
+                            android:focusable="false"
+                            android:editable="false"
+                            tools:ignore="Deprecated" />
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Place of marriage"
@@ -236,10 +238,12 @@
                             android:hint="Date of registration, if the marriage certificate was late registered"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
-                            android:textSize="13sp"
-                            android:inputType="textPersonName"
+                            android:textSize="9sp"
                             android:id="@+id/mc_date_marriage_late"
-                            tools:ignore="Autofill" />
+                            android:textIsSelectable="true"
+                            android:focusable="false"
+                            android:editable="false"
+                            tools:ignore="Deprecated" />
 
 
 

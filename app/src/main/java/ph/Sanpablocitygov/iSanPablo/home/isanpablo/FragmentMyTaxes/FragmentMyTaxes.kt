@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.mt_rpt_dailog.view.btn_online_payment
 import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.*
 import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.btn_bplo_cancel
 import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.btn_download_bplo
+import kotlinx.android.synthetic.main.mt_others_payment_dialog.view.*
 import kotlinx.android.synthetic.main.mt_rpt_dailog.view.*
 import kotlinx.android.synthetic.main.update_fragment.view.*
 
@@ -124,17 +125,33 @@ override  fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, save
 
     val btncert = view.findViewById<Button>(R.id.btn_op)
     btncert.setOnClickListener {
+        val OpView = LayoutInflater.from(requireContext()).inflate(R.layout.mt_others_payment_dialog, null)
 
-        val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+        val bplobBuilder = AlertDialog.Builder(requireContext())
+            .setView(OpView)
+        bplobBuilder.setCancelable(false)
+        val bploDialog = bplobBuilder.show()
 
-        val mybusBuilder = AlertDialog.Builder(requireContext())
-            .setView(mybus)
+        OpView.btn_dlsp_payment.setOnClickListener {
 
-        val mybusDialog = mybusBuilder.show()
+            bploDialog.dismiss()
 
-        mybus.txt_confirm_update.setOnClickListener {
-            mybusDialog.dismiss()
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    Fragment_dlsp_payment() , null)
+                .addToBackStack(null)
+                .commit()
         }
+
+
+
+
+
+
+        OpView.btn_mt_cancel.setOnClickListener {
+            bploDialog.dismiss()
+        }
+
 
 
     }

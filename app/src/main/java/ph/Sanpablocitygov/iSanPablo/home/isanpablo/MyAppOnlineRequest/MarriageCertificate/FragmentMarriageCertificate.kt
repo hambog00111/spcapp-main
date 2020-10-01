@@ -2,10 +2,15 @@ package ph.Sanpablocitygov.iSanPablo.home.isanpablo.MyAppOnlineRequest.MarriageC
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.app.DatePickerDialog
 import android.app.ProgressDialog
+import android.content.ContentValues
 import android.content.DialogInterface
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
@@ -19,9 +24,11 @@ import org.jetbrains.anko.toast
 import ph.Sanpablocitygov.iSanPablo.R
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes.rptassementhandler
 import java.io.IOException
+import java.util.*
 
 class FragmentMarriageCertificate: Fragment(){
-
+    private var mDateSetListener: DatePickerDialog.OnDateSetListener? = null
+    private var mDateSetListener2: DatePickerDialog.OnDateSetListener? = null
     @SuppressLint("InflateParams")
     override  fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -40,6 +47,59 @@ class FragmentMarriageCertificate: Fragment(){
         val  mc_date_marriage =view.findViewById<EditText>(R.id.mc_date_marriage)
         val  mc_date_marriage_late =view.findViewById<EditText>(R.id.mc_date_marriage_late)
         val  mc_purpose =view.findViewById<EditText>(R.id.mc_purpose)
+
+
+        mc_date_marriage.setOnClickListener {
+
+            val cal = Calendar.getInstance()
+            cal.add(Calendar.DATE,0)
+            val year = cal[Calendar.YEAR]
+            val month = cal[Calendar.MONTH]
+            val day = cal[Calendar.DAY_OF_MONTH]
+
+            val dialog = DatePickerDialog(
+                activity!!,
+                android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                mDateSetListener,
+                year, month, day)
+            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.datePicker.maxDate = cal.timeInMillis
+            dialog.show()
+        }
+
+
+        mc_date_marriage_late.setOnClickListener {
+            val cal = Calendar.getInstance()
+            cal.add(Calendar.DATE,0)
+            val year = cal[Calendar.YEAR]
+            val month = cal[Calendar.MONTH]
+            val day = cal[Calendar.DAY_OF_MONTH]
+
+            val dialog = DatePickerDialog(
+                activity!!,
+                android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                mDateSetListener2,
+                year, month, day)
+            dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            dialog.datePicker.maxDate = cal.timeInMillis
+            dialog.show()
+        }
+
+        mDateSetListener = DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
+            var month = month
+            month = month + 1
+            Log.d(ContentValues.TAG, "onDateSet: mm/dd/yyy: $month/$day/$year")
+            val date = "$month/$day/$year"
+            mc_date_marriage!!.setText(date)
+        }
+        mDateSetListener2 = DatePickerDialog.OnDateSetListener { datePicker, year, month, day ->
+            var month = month
+            month = month + 1
+            Log.d(ContentValues.TAG, "onDateSet: mm/dd/yyy: $month/$day/$year")
+            val date = "$month/$day/$year"
+            mc_date_marriage_late!!.setText(date)
+        }
+
 
         submit.setOnClickListener {
             if (mc_namereq!!.text.toString().trim { it <= ' ' }.isEmpty()) {
@@ -142,7 +202,7 @@ class FragmentMarriageCertificate: Fragment(){
         val okHttpClient = OkHttpClient()
         val request = Request.Builder()
             .method("POST",formBody)
-            .url("http://192.168.3.172:8080/api/add_request_marriagecert")
+            .url("http://www.sanpablocitygov.ph/api/add_request_marriagecert")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -163,35 +223,34 @@ class FragmentMarriageCertificate: Fragment(){
                 val rptrequest = gson.fromJson(body, rptassementhandler::class.java)
                 when (rptrequest.message) {
                     "Success" -> {
-                        val  mc_namereq =view!!.findViewById<EditText>(R.id.mc_namereq)
-                        val  mc_address =view!!.findViewById<EditText>(R.id.mc_address)
-                        val  mc_number =view!!.findViewById<EditText>(R.id.mc_number)
-                        val  mc_email =view!!.findViewById<EditText>(R.id.mc_email)
-                        val  mc_numcopy =view!!.findViewById<EditText>(R.id.mc_numcopy)
-                        val  mc_husname =view!!.findViewById<EditText>(R.id.mc_husname)
-                        val  mc_wifename =view!!.findViewById<EditText>(R.id.mc_wifename)
-                        val  mc_place_marriage =view!!.findViewById<EditText>(R.id.mc_place_marriage)
-                        val  mc_date_marriage =view!!.findViewById<EditText>(R.id.mc_date_marriage)
-                        val  mc_date_marriage_late =view!!.findViewById<EditText>(R.id.mc_date_marriage_late)
-                        val  mc_purpose =view!!.findViewById<EditText>(R.id.mc_purpose)
 
 
-
-                        mc_namereq.text.clear()
-                        mc_address.text.clear()
-                        mc_number.text.clear()
-                        mc_email.text.clear()
-                        mc_numcopy.text.clear()
-                        mc_husname.text.clear()
-                        mc_wifename.text.clear()
-                        mc_place_marriage.text.clear()
-                        mc_date_marriage.text.clear()
-                        mc_date_marriage_late.text.clear()
-                        mc_purpose.text.clear()
                         activity!!.runOnUiThread(java.lang.Runnable {
+                            val  mc_namereq =view!!.findViewById<EditText>(R.id.mc_namereq)
+                            val  mc_address =view!!.findViewById<EditText>(R.id.mc_address)
+                            val  mc_number =view!!.findViewById<EditText>(R.id.mc_number)
+                            val  mc_email =view!!.findViewById<EditText>(R.id.mc_email)
+                            val  mc_numcopy =view!!.findViewById<EditText>(R.id.mc_numcopy)
+                            val  mc_husname =view!!.findViewById<EditText>(R.id.mc_husname)
+                            val  mc_wifename =view!!.findViewById<EditText>(R.id.mc_wifename)
+                            val  mc_place_marriage =view!!.findViewById<EditText>(R.id.mc_place_marriage)
+                            val  mc_date_marriage =view!!.findViewById<EditText>(R.id.mc_date_marriage)
+                            val  mc_date_marriage_late =view!!.findViewById<EditText>(R.id.mc_date_marriage_late)
+                            val  mc_purpose =view!!.findViewById<EditText>(R.id.mc_purpose)
 
+                            mc_namereq.text.clear()
+                            mc_address.text.clear()
+                            mc_number.text.clear()
+                            mc_email.text.clear()
+                            mc_numcopy.text.clear()
+                            mc_husname.text.clear()
+                            mc_wifename.text.clear()
+                            mc_place_marriage.text.clear()
+                            mc_date_marriage.text.clear()
+                            mc_date_marriage_late.text.clear()
+                            mc_purpose.text.clear()
                             val dialogBuilder = AlertDialog.Builder(requireContext())
-                            dialogBuilder.setMessage("Request for marriage certificate successfully Sent.")
+                            dialogBuilder.setMessage("Request for marriage certificate successfully Sent. Please wait within 24 hrs and check your email for confirmation. Thank you!")
                                 // if the dialog is cancelable
                                 .setCancelable(false)
                                 // positive button text and action

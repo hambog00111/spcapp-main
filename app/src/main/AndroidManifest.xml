@@ -78,7 +78,8 @@ package="ph.Sanpablocitygov.iSanPablo">
     <activity
             android:name="ph.Sanpablocitygov.iSanPablo.LoadingActivity"
             android:label="@string/app_name"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
             android:theme="@style/LoadingTheme">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>

@@ -137,7 +137,16 @@
                             android:id="@+id/dc_email"
                             tools:ignore="Autofill" />
 
-
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Purpose of your request"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="18sp
+"
+                            android:inputType="textPersonName"
+                            android:id="@+id/dc_purpose"
+                            tools:ignore="Autofill" />
 
                 </LinearLayout>
 
@@ -209,7 +218,18 @@
                             android:inputType="textEmailAddress"
                             android:id="@+id/dc_sex"
                             tools:ignore="Autofill" />
-
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date of death"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="18sp"
+                            android:inputType="text"
+                            android:id="@+id/dc_date_death"
+                            android:textIsSelectable="true"
+                            android:focusable="false"
+                            android:editable="false"
+                            tools:ignore="Deprecated" />
 
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -221,36 +241,19 @@
                             android:inputType="text"
                             android:id="@+id/dc_place_death"
                             tools:ignore="Autofill" />
-                    <EditText android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Date of death"
-                            android:textColor="@color/darkgray"
-                            android:textColorHint="@color/lightgray"
-                            android:textSize="18sp
-"
-                            android:inputType="text"
-                            android:id="@+id/dc_date_death"
-                            tools:ignore="Autofill" />
+
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Date of registration, if the death certificate was late registered"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
-                            android:textSize="18sp
-"
-                            android:inputType="textPersonName"
+                            android:textSize="18sp"
                             android:id="@+id/dc_date_death_late"
-                            tools:ignore="Autofill" />
-                    <EditText android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Purpose of your request"
-                            android:textColor="@color/darkgray"
-                            android:textColorHint="@color/lightgray"
-                            android:textSize="18sp
-"
-                            android:inputType="textPersonName"
-                            android:id="@+id/dc_purpose"
-                            tools:ignore="Autofill" />
+                            android:textIsSelectable="true"
+                            android:focusable="false"
+                            android:editable="false"
+                            tools:ignore="Deprecated" />
+
 
 
 

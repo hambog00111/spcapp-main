@@ -13,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 
 import ph.Sanpablocitygov.iSanPablo.R
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.CityEmployeeCorner.FragmentCopyofPayslip.FragmentCopyofPayslip
 
 class FragmentCityEmployeesCorner : Fragment(){
 
@@ -60,9 +61,7 @@ class FragmentCityEmployeesCorner : Fragment(){
 
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                FragmentCopyofPayslip
-
-                    () , null)
+                    FragmentCopyofPayslip(), null)
                 .addToBackStack(null)
                 .commit()
         }

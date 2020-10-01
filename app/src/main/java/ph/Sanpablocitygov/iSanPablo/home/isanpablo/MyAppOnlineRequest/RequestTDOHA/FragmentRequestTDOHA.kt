@@ -132,7 +132,7 @@ class FragmentRequestTDOHA : Fragment(){
         val okHttpClient = OkHttpClient()
         val request = Request.Builder()
             .method("POST",formBody)
-            .url("http://192.168.3.172:8080/api/add_request_td_oha")
+            .url("http://www.sanpablocitygov.ph/api/add_request_td_oha")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -153,30 +153,30 @@ class FragmentRequestTDOHA : Fragment(){
                 val rptrequest = gson.fromJson(body, rptassementhandler::class.java)
                 when (rptrequest.message) {
                     "Success" -> {
-                        val  td_namereq =view!!.findViewById<EditText>(R.id.td_namereq)
-                        val  td_address =view!!.findViewById<EditText>(R.id.td_address)
-                        val  td_number =view!!.findViewById<EditText>(R.id.td_number)
-                        val  td_email =view!!.findViewById<EditText>(R.id.td_email)
-                        val  td_numcopy =view!!.findViewById<EditText>(R.id.td_numcopy)
-                        val  td_name_owner =view!!.findViewById<EditText>(R.id.td_name_owner)
-                        val  td_location =view!!.findViewById<EditText>(R.id.td_location)
-                        val  td_pin =view!!.findViewById<EditText>(R.id.td_pin)
-                        val  td_arp =view!!.findViewById<EditText>(R.id.td_arp)
 
-
-                        td_namereq.text.clear()
-                        td_address.text.clear()
-                        td_number.text.clear()
-                        td_email.text.clear()
-                        td_numcopy.text.clear()
-                        td_name_owner.text.clear()
-                        td_location.text.clear()
-                        td_pin.text.clear()
-                        td_arp.text.clear()
                         activity!!.runOnUiThread(java.lang.Runnable {
+                            val  td_namereq =view!!.findViewById<EditText>(R.id.td_namereq)
+                            val  td_address =view!!.findViewById<EditText>(R.id.td_address)
+                            val  td_number =view!!.findViewById<EditText>(R.id.td_number)
+                            val  td_email =view!!.findViewById<EditText>(R.id.td_email)
+                            val  td_numcopy =view!!.findViewById<EditText>(R.id.td_numcopy)
+                            val  td_name_owner =view!!.findViewById<EditText>(R.id.td_name_owner)
+                            val  td_location =view!!.findViewById<EditText>(R.id.td_location)
+                            val  td_pin =view!!.findViewById<EditText>(R.id.td_pin)
+                            val  td_arp =view!!.findViewById<EditText>(R.id.td_arp)
 
+
+                            td_namereq.text.clear()
+                            td_address.text.clear()
+                            td_number.text.clear()
+                            td_email.text.clear()
+                            td_numcopy.text.clear()
+                            td_name_owner.text.clear()
+                            td_location.text.clear()
+                            td_pin.text.clear()
+                            td_arp.text.clear()
                             val dialogBuilder = AlertDialog.Builder(requireContext())
-                            dialogBuilder.setMessage("Request for death certificate successfully Sent.")
+                            dialogBuilder.setMessage("Request for death certificate successfully Sent. Please wait within 24 hrs and check your email for confirmation. Thank you!")
                                 // if the dialog is cancelable
                                 .setCancelable(false)
                                 // positive button text and action

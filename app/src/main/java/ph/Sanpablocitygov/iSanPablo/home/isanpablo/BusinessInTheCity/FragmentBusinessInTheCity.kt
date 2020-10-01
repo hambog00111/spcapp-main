@@ -26,6 +26,7 @@ import kotlinx.android.synthetic.main.bc_investment_dialogbox.view.btn_invest_ca
 import kotlinx.android.synthetic.main.update_fragment.view.*
 import ph.Sanpablocitygov.iSanPablo.R
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOProfile
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.BusinessTaxAssementRequest
 
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxPayment.FragmentBusinessTaxPayment
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.DoingBusiness.FragmentDoingBusiness
@@ -58,11 +59,6 @@ class FragmentBusinessInTheCity : Fragment() {
         lnrbtp.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
         val linrmb  = view.findViewById<LinearLayout>(R.id.linear_bc_mb)
         linrmb.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
-
-
-
-
-
 
 
 
@@ -150,6 +146,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
 
         val btnbta = view.findViewById<Button>(R.id.btn_business_bta)
+
         btnbta.setOnClickListener {
             val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.bc_bta_dialog_box, null)
 
@@ -157,6 +154,17 @@ class FragmentBusinessInTheCity : Fragment() {
                 .setView(mybus)
             mybusBuilder.setCancelable(false)
             val mybusDialog = mybusBuilder.show()
+
+
+            mybus.request_copy.setOnClickListener {
+                mybusDialog.dismiss()
+                activity!!.supportFragmentManager.beginTransaction().replace(
+                        R.id.frag_container,
+                        BusinessTaxAssementRequest() , null)
+                    .addToBackStack(null)
+                    .commit()
+
+            }
 
             mybus.btn_bta_cancel.setOnClickListener {
                 mybusDialog.dismiss()

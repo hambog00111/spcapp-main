@@ -143,6 +143,16 @@
                             android:inputType="text"
                             android:id="@+id/bc_relation"
                             tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Purpose of your request"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/bc_purpose"
+                            tools:ignore="Autofill" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -219,7 +229,10 @@
                             android:textSize="13sp"
                             android:inputType="text"
                             android:id="@+id/bc_date_birth"
-                            tools:ignore="Autofill" />
+                            android:textIsSelectable="true"
+                            android:focusable="false"
+                            android:editable="false"
+                            tools:ignore="Deprecated" />
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Place of birth"
@@ -229,43 +242,19 @@
                             android:inputType="text"
                             android:id="@+id/bc_place_birth"
                             tools:ignore="Autofill" />
-
-                    <EditText android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Father’s name"
-                            android:textColor="@color/darkgray"
-                            android:textColorHint="@color/lightgray"
-                            android:textSize="13sp"
-                            android:inputType="textPersonName"
-                            android:id="@+id/bc_father_name"
-                            tools:ignore="Autofill" />
-                    <EditText android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Mother’s maiden name"
-                            android:textColor="@color/darkgray"
-                            android:textColorHint="@color/lightgray"
-                            android:textSize="13sp"
-                            android:inputType="textPersonName"
-                            android:id="@+id/bc_mother_name"
-                            tools:ignore="Autofill" />
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Date of registration, if the birth certificate was late registered"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
-                            android:textSize="13sp"
+                            android:textSize="9sp"
                             android:inputType="text"
                             android:id="@+id/bc_date_reg"
-                            tools:ignore="Autofill" />
-                    <EditText android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Purpose of your request"
-                            android:textColor="@color/darkgray"
-                            android:textColorHint="@color/lightgray"
-                            android:textSize="13sp"
-                            android:inputType="text"
-                            android:id="@+id/bc_purpose"
-                            tools:ignore="Autofill" />
+                            android:textIsSelectable="true"
+                            android:focusable="false"
+                            android:editable="false"
+                            tools:ignore="Deprecated" />
+
 
 
 

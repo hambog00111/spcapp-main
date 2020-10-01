@@ -218,7 +218,10 @@
                             android:textSize="13sp"
                             android:inputType="text"
                             android:id="@+id/dc_date_death"
-                            tools:ignore="Autofill" />
+                            android:textIsSelectable="true"
+                            android:focusable="false"
+                            android:editable="false"
+                            tools:ignore="Deprecated" />
 
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -235,10 +238,13 @@
                             android:hint="Date of registration, if the death certificate was late registered"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
-                            android:textSize="13sp"
+                            android:textSize="9sp"
                             android:inputType="textPersonName"
                             android:id="@+id/dc_date_death_late"
-                            tools:ignore="Autofill" />
+                            android:textIsSelectable="true"
+                            android:focusable="false"
+                            android:editable="false"
+                            tools:ignore="Deprecated" />
 
 
 

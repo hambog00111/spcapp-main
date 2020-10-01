@@ -33,8 +33,9 @@ import ph.Sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
 import ph.Sanpablocitygov.iSanPablo.home.FragmentHome
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
 import ph.Sanpablocitygov.iSanPablo.links.*
-import ph.Sanpablocitygov.iSanPablo.search.FragmentSearch
+
 import ph.Sanpablocitygov.iSanPablo.tourism.FragmentTourism
+import ph.sanpablocitygov.iSanPablo.search.FragmentSearch
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

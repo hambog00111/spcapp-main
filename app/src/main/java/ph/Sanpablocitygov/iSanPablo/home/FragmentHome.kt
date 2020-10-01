@@ -5,23 +5,18 @@ package ph.Sanpablocitygov.iSanPablo.home
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.app.AlertDialog
-
 import android.app.ProgressDialog
-
 import android.content.Context
-import android.content.DialogInterface
-
 
 import android.content.Intent
 import org.jetbrains.anko.toast
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
-import android.support.v4.view.GravityCompat
 
 
 import android.support.v7.widget.CardView
@@ -38,12 +33,12 @@ import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_main.*
 
 import kotlinx.android.synthetic.main.home_home_fragment.*
 
 import layout.ph.sanpablocitygov.iSanPablo.goverment.FragmentCityHotline
 import okhttp3.*
+import org.w3c.dom.Text
 
 import ph.Sanpablocitygov.iSanPablo.R
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
@@ -107,13 +102,21 @@ class FragmentHome : Fragment(){
         gos.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
         val cc = view.findViewById<LinearLayout>(R.id.linear_cec)
         cc.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
-         val seemore = view.findViewById<TextView>(R.id.see_more)
-
-        seemore.setOnClickListener {
-
-            list()
-
+//         val seemore = view.findViewById<TextView>(R.id.see_more)
+//
+//        seemore.setOnClickListener {
+//
+//            list()
+//
+//        }
+      weblink1()
+        val btnurl=view!!.findViewById<Button>(R.id.covid_link)
+        btnurl.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://"+linktext.text.toString()))
+            startActivity(intent)
         }
+
+
         val cve  = view.findViewById<CardView>(R.id.cv_events)
         cve.animation = AnimationUtils.loadAnimation(requireContext(),R.anim.fade_scale_animation)
         val cvjo  = view.findViewById<CardView>(R.id.cv_job)
@@ -291,14 +294,17 @@ class FragmentHome : Fragment(){
 
 
     private fun newsandupdate(){
-
+        val pdLoading = ProgressDialog(requireContext())
+        pdLoading.setMessage("\tLoading...")
+        pdLoading.setCancelable(false)
+        pdLoading.show()
         val okHttpClient = OkHttpClient()
         val request = Request.Builder()
             .url("http://www.sanpablocitygov.ph/api/getNews")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
-
+                pdLoading.dismiss()
                 activity!!.runOnUiThread {
                     val image = view!!.findViewById<ImageView>(R.id.image)
                     val refresh = view!!.findViewById<Button>(R.id.refresh)
@@ -320,6 +326,8 @@ class FragmentHome : Fragment(){
 
             @SuppressLint("ShowToast")
             override fun onResponse(call: Call, response: Response) {
+
+                pdLoading.dismiss()
                 val body = response.body?.string()
 
                 val gson = Gson()
@@ -350,7 +358,66 @@ class FragmentHome : Fragment(){
 
     }
 
+    fun weblink1() {
+        val pdLoading = ProgressDialog(requireContext())
+        pdLoading.setMessage("\tLoading...")
+        pdLoading.setCancelable(false)
+        pdLoading.show()
+        val formBody: RequestBody = FormBody.Builder()
+            .add("link","fb")
+            .build()
 
+        val okHttpClient = OkHttpClient()
+
+        val request = Request.Builder()
+            .method("POST", formBody)
+
+            .url("http://www.sanpablocitygov.ph/api/url")
+            .build()
+        okHttpClient.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                pdLoading.dismiss()
+                activity!!.runOnUiThread(java.lang.Runnable {
+                    activity!!.toast("Unable to connect to the server please try again later")
+
+                })
+                println(e)
+            }
+            @SuppressLint("ShowToast")
+            override fun onResponse(call: Call, response: Response) {
+                pdLoading.dismiss()
+                val body = response.body?.string()
+                println(body)
+                val gson = Gson()
+                val web = gson.fromJson(body,handlerweb::class.java)
+
+                    activity!!.runOnUiThread(java.lang.Runnable {
+                        val linktext1=view!!.findViewById<TextView>(R.id.linktext)
+                        linktext1.text = web.url
+
+                    })
+
+
+
+//
+//
+//                }
+//
+//                else{
+//
+//                  activity!!.runOnUiThread(java.lang.Runnable {
+//                      activity!!.toast("unable to connect to the server please try again later")
+//
+//                    })
+//
+//                }
+
+
+
+            }
+        })
+
+    }
 
 
     private fun setBarChart() {
@@ -523,58 +590,58 @@ class FragmentHome : Fragment(){
 //                }
 
 
-    @SuppressLint("InflateParams")
-    fun list(){
 
-
-        val mDialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialognewandupdate, null)
-
-        val mBuilder = AlertDialog.Builder(requireContext())
-            .setView(mDialogView)
-
-            .setPositiveButton("Ok", DialogInterface.OnClickListener {
-                    dialog, _ ->dialog.cancel()
-            })
-        val  mAlertDialog = mBuilder.show()
-        val okHttpClient = OkHttpClient()
-        val request = Request.Builder()
-
-
-            .url("http://www.sanpablocitygov.ph/api/getNews")
-            .build()
-        okHttpClient.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                activity!!.runOnUiThread {
-                    activity!!.toast("Unable to connect to the server please try again later")
-
-                }
-            }
-            @SuppressLint("ShowToast")
-            override fun onResponse(call: Call, response: Response) {
-                val body = response.body?.string()
-                val gson = Gson()
-                val list = gson.fromJson(body, Array<newshandler>::class.java).toList()
-                println(list)
-                for (entry in list) {
-                    val map = HashMap<String, String>()
-                    map["id"] = entry.id
-                    map["title"] =  entry.title
-                    map["subtitle"] = entry.subtitle
-                    dataList.add(map)
-                    println(map)
-                }
-                activity!!.runOnUiThread {
-
-                    mAlertDialog.findViewById<ListView>(R.id.listView)!!.adapter = CustomAdapter(requireContext(), dataList)
-
-                }
-
-
-            }
-        })
-
-
-    }
+//    fun list(){
+//
+//
+//        val mDialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialognewandupdate, null)
+//
+//        val mBuilder = AlertDialog.Builder(requireContext())
+//            .setView(mDialogView)
+//
+//            .setPositiveButton("Ok", DialogInterface.OnClickListener {
+//                    dialog, _ ->dialog.cancel()
+//            })
+//        val  mAlertDialog = mBuilder.show()
+//        val okHttpClient = OkHttpClient()
+//        val request = Request.Builder()
+//
+//
+//            .url("http://www.sanpablocitygov.ph/api/getNews")
+//            .build()
+//        okHttpClient.newCall(request).enqueue(object : Callback {
+//            override fun onFailure(call: Call, e: IOException) {
+//                activity!!.runOnUiThread {
+//                    activity!!.toast("Unable to connect to the server please try again later")
+//
+//                }
+//            }
+//            @SuppressLint("ShowToast")
+//            override fun onResponse(call: Call, response: Response) {
+//                val body = response.body?.string()
+//                val gson = Gson()
+//                val list = gson.fromJson(body, Array<newshandler>::class.java).toList()
+//                println(list)
+//                for (entry in list) {
+//                    val map = HashMap<String, String>()
+//                    map["id"] = entry.id
+//                    map["title"] =  entry.title
+//                    map["subtitle"] = entry.subtitle
+//                    dataList.add(map)
+//                    println(map)
+//                }
+//                activity!!.runOnUiThread {
+//
+//                    mAlertDialog.findViewById<ListView>(R.id.listView)!!.adapter = CustomAdapter(requireContext(), dataList)
+//
+//                }
+//
+//
+//            }
+//        })
+//
+//
+//    }
 
 }
 

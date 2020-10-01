@@ -113,11 +113,22 @@
 
                     <EditText android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Contact Number"
+                            android:hint="Property Address"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
                             android:textSize="18sp"
                             android:inputType="textEmailAddress"
+                            android:id="@+id/rpt_property_add"
+                            tools:ignore="Autofill" />
+
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Contact Number"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="18sp"
+                            android:inputType="number"
                             android:id="@+id/rpt_contact"
                             tools:ignore="Autofill" />
 

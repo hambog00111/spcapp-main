@@ -9,6 +9,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:id="@+id/gov_id_pic"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:id="@+id/pic_with_id"
+                />
+
         <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_marginBottom="20dp"
@@ -119,6 +133,8 @@
 
             <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical">
 
                 <TextView
@@ -138,21 +154,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/_1_0_provide_accurate_information_incomplete_form_will_not_be_proceed_in_the_next_step"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:layout_margin="8dp"
-                        android:textSize="15sp"/>
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/_1_take_a_picture_of_the_requirements_by_clicking_capture_for_each_procedure"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:layout_margin="8dp"
-                        android:textSize="15sp"/>
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/_2_take_a_picture_of_the_requirements_by_clicking_capture_for_each_procedure"
                         android:textColor="@color/colorPrimaryDark"
                         android:layout_margin="8dp"
                         android:textSize="15sp"/>
@@ -217,6 +218,7 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/darkgray"
                             android:textSize="20sp"
+                            android:inputType="number"
                             android:hint="Enter Employee Number"/>
 
                 </LinearLayout>
@@ -272,8 +274,12 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/darkgray"
                             android:textSize="20sp"
-                            android:inputType="date"
-                            android:hint="08/20/19"/>
+                            android:textIsSelectable="true"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:editable="false"
+                            android:hint="--Select date--"
+                            tools:ignore="Deprecated" />
 
                     <TextView
                             android:layout_width="wrap_content"
@@ -292,8 +298,11 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/darkgray"
                             android:textSize="20sp"
-                            android:inputType="date"
-                            android:hint="08/30/19"/>
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:editable="false"
+                            android:hint="--Select date--"
+                            tools:ignore="Deprecated" />
 
                 </LinearLayout>
 
@@ -303,161 +312,6 @@
         </android.support.v7.widget.CardView>
 
 
-        <android.support.v7.widget.CardView
-                android:layout_margin="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                android:background="@drawable/text_border"
-                android:gravity="center"
-                android:elevation="6dp"
-                android:orientation="vertical">
-
-
-
-            <LinearLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="20dp">
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Government Issued ID"
-                        android:textColor="@color/white"
-                        android:paddingTop="5dp"
-                        android:background="@color/colorPrimary"
-                        android:layout_marginBottom="10dp"
-                        android:paddingBottom="5dp"
-                        android:textSize="25sp"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText" />
-
-                <ImageView
-                        android:layout_width="400dp"
-                        android:layout_height="400dp"
-                        android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:scaleX="1"
-                        android:scaleY="1"
-                        android:id="@+id/cec_sr_img_government_issued_ids"
-                        android:src="@drawable/image_bplo"
-                        tools:ignore="ContentDescription" />
-
-                <ImageView
-                        android:visibility="gone"
-                        android:layout_width="400dp"
-                        android:layout_height="400dp"
-                        android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:scaleX="1"
-                        android:scaleY="1"
-                        android:rotation="90"
-                        android:src="@drawable/image_bplo"
-                        android:id="@+id/cec_sr_img_government_issued_id"
-                        tools:ignore="ContentDescription" />
-
-                <Button
-                        android:id="@+id/cec_sr_btn_government_issued_id"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:text="CAPTURE IMAGE"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginEnd="50dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/text_border3"/>
-
-
-
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-                android:layout_margin="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                android:background="@drawable/text_border"
-                android:gravity="center"
-                android:elevation="6dp"
-                android:orientation="vertical">
-
-            <LinearLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="20dp">
-
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Requester's Picture with ID"
-                        android:textColor="@color/white"
-                        android:paddingTop="5dp"
-                        android:background="@color/colorPrimary"
-                        android:layout_marginBottom="10dp"
-                        android:paddingBottom="5dp"
-                        android:textSize="25sp"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText" />
-
-                <com.mikhaellopez.circularimageview.CircularImageView
-                        android:visibility="gone"
-                        android:rotation="270"
-                        app:civ_border_width="6dp"
-                        app:civ_border_color="#4CC6FB"
-                        android:layout_width="250dp"
-                        android:layout_height="250dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/circle_back1"
-                        android:src="@drawable/ic_human_picture"
-                        android:id="@+id/cec_sr_img_requester"
-                        tools:ignore="ContentDescription" />
-
-                <LinearLayout
-                        android:layout_margin="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_gravity="center"
-                        android:id="@+id/linear_cec_sr_requesters"
-                        android:layout_height="wrap_content"
-                        android:elevation="8dp"
-                        android:background="@drawable/circle_back2"
-                        android:padding="5dp">
-                    <ImageView
-                            android:layout_width="250dp"
-                            android:layout_height="250dp"
-                            android:layout_gravity="center"
-                            android:layout_margin="10dp"
-                            android:src="@drawable/ic_human_picture"
-                            android:id="@+id/cec_sr_img_requesters"
-                            tools:ignore="ContentDescription" />
-                </LinearLayout>
-                <Button
-                        android:id="@+id/cec_sr_btn_requester"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:text="CAPTURE IMAGE"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginEnd="50dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/text_border3"/>
-
-
-
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
 
 
         <LinearLayout android:layout_width="match_parent"
@@ -477,14 +331,14 @@
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:background="@drawable/text_border2"
-                    android:text="SUBMIT"
+                    android:text="back"
                     android:layout_gravity="start"
-                    android:id="@+id/txt_cec_sr_submit"
+                    android:id="@+id/txt_cec_sr_back"
                     tools:ignore="ButtonStyle" />
 
 
             <Button
-                    android:id="@+id/txt_cec_sr_cancel"
+                    android:id="@+id/txt_cec_sr_next"
                     android:layout_width="130dp"
                     android:layout_height="45dp"
                     android:layout_gravity="right"
@@ -492,7 +346,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/text_border2"
-                    android:text="CANCEL"
+                    android:text="next"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
