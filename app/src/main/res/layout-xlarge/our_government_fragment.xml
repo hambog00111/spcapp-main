@@ -9,9 +9,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-
-
         <ImageView android:layout_width="match_parent"
                 android:layout_height="300dp"
                 app:srcCompat="@drawable/office_vicinity_map2"
@@ -697,7 +694,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="HON. ANGELITA E. YANG"
+                        android:text="HON. JUSTIN COLAGO"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:textSize="25sp"
@@ -742,7 +739,7 @@
                     <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="HON. JUSTIN COLAGO"
+                            android:text="HON. ANGELITA E. YANG"
                             android:textStyle="bold"
                             android:layout_marginTop="8dp"
                             android:textSize="18sp"

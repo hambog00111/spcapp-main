@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="4dp">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_margin="4dp">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Line of Business"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+
+                    android:layout_marginLeft="8dp" />
+
+            <TextView
+                    android:id="@+id/textview_line_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Line 1"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp" />
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="8dp"
+                    android:text="Code"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp" />
+            <TextView
+                    android:id="@+id/textview_line_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                     android:text="Line 2"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp" />
+            <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Sub Category"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp" />
+
+
+            <TextView
+                    android:id="@+id/textview_line_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Line 3"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp" />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview_line_5"
+                    android:layout_marginStart="8dp"
+                    android:text="No. of Units"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp" />
+
+            <TextView
+                    android:id="@+id/textview_line_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Capitalization"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp" />
+
+            <TextView
+                    android:id="@+id/textview_line_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Line 5"
+
+                    android:textSize="15sp"
+                    android:layout_marginLeft="8dp" />
+
+<!--            <Button-->
+<!--                    android:id="@+id/btn_remove"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:text="REMOVE"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:background="@drawable/text_border2"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    />-->
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

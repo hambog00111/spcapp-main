@@ -8,6 +8,7 @@ package="ph.Sanpablocitygov.iSanPablo">
      location permissions for the 'MyLocation' functionality.
 -->
 <supports-screens
+
         android:anyDensity="true"
         android:largeScreens="true"
         android:normalScreens="true"
@@ -23,9 +24,8 @@ package="ph.Sanpablocitygov.iSanPablo">
     <uses-permission android:name="android.intent.action.CALL_BUTTON" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
-<!--camera-->
     <uses-permission android:name="android.permission.CAMERA"/>
+
 <application
 
         android:usesCleartextTraffic="true"

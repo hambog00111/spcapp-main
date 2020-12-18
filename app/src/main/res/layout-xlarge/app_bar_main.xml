@@ -69,7 +69,7 @@
                                 android:textStyle="bold"
                                 android:layout_gravity="center"
 
-                                android:text="CITY GOVERMENT OF SAN PABLO"/>
+                                android:text="CITY GOVERNMENT OF SAN PABLO"/>
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>

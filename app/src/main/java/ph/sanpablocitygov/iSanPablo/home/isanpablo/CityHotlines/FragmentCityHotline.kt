@@ -46,13 +46,17 @@ class FragmentCityHotline : Fragment() {
 
             "Red Cross San Pablo", "San Pablo City Emergency Hospital",
             "San Pablo General Hospital", "City Disaster Risk Reduction Management Office",
-            "San Pablo Welfare and Development Office", "Bureau of Fire Protection"
+            "San Pablo Welfare and Development Office", "Bureau of Fire Protection", "City Health Office","Contact Tracers","SPC ATIN Center"
         )
 
         ivcityhotlinephone = arrayOf(
             "(049)3000-065", "(049)5626-474/(049)5210-610",
             "(049)5624-025", "(049)5031-351/(049)5031-432",
-            "  (049)5031-351/(049)5031431", "  (049)8000-405", "(049)5621-575", "(049)5627-654"
+            " (049)5031-351/(049)5031431", "  (049)8000-405",
+            "(049)5621-575", "(049)5627-654",
+            "(+63)-6-7362-5480/(+63)-3-9202-2318/(049)5769-119",
+            "(+63)-0-5374-5376/(+63)-2-0839-2833","(049)5215-555"
+
         )
 
 

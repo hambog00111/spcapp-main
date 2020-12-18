@@ -8,9 +8,6 @@
                   android:layout_height="wrap_content"
                   android:orientation="vertical">
 
-
-
-
         <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -60,6 +57,7 @@
 
 
         <TextView
+
                 android:paddingStart="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -73,6 +71,7 @@
                 tools:ignore="RtlSymmetry" />
 
         <android.support.v7.widget.CardView
+
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -124,6 +123,7 @@
                 android:elevation="6dp"
                 android:orientation="vertical">
             <LinearLayout android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                 <TextView
@@ -156,6 +156,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
+                android:visibility="gone"
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -248,21 +249,34 @@
                       android:clickable="false"
                       android:id="@+id/txt_bplo_owners_info_street"
                     tools:ignore="Autofill" />
-
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="textPostalAddress"
-                      android:hint="@string/subdivision"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_owners_info_subdivision"
-                     tools:ignore="Autofill" />
-
-            <Spinner android:layout_width="180dp"
-                     android:id="@+id/spinner_bplo_owners_info_district"
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_border7"
+                        android:orientation="vertical">
+                <Spinner android:layout_width="250dp"
+                        android:id="@+id/spinner_brgy_step3"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/brgy_step3"
+                        />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_border7"
+                        android:orientation="vertical">
+            <Spinner android:layout_width="250dp"
+                     android:id="@+id/spinner_sub_step3"
                      android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sub_step3"
+                        />
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -292,11 +306,9 @@
                               android:contextClickable="false"
                               android:textSize="13sp"
                               android:inputType="text"
-                              android:focusable="false"
-                              android:text="@string/san_pablo_city"
+                              android:hint="City / Municipality"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
-                              android:clickable="false"
                               android:id="@+id/txt_bplo_owners_info_city"
                             tools:ignore="Autofill,LabelFor,UnusedAttribute" />
                     <EditText android:layout_width="match_parent"
@@ -330,12 +342,9 @@
                               android:layout_height="wrap_content"
                               android:contextClickable="false"
                               android:textSize="13sp"
-                              android:inputType="date"
-                              android:text="@string/laguna"
-                              android:focusable="false"
+                              android:hint="Province"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
-                              android:clickable="false"
                               android:id="@+id/txt_bplo_owners_info_province"
                             tools:ignore="Autofill,LabelFor,UnusedAttribute" />
                     <EditText android:layout_width="match_parent"
@@ -367,6 +376,7 @@
 
 
         <android.support.v7.widget.CardView
+
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -408,12 +418,9 @@
                   android:id="@+id/txt_bplo_owners_info_business_area"
                 tools:ignore="Autofill" />
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:gravity="center"
-                  android:orientation="horizontal">
 
-        <LinearLayout android:layout_width="170dp"
+
+        <LinearLayout android:layout_width="250dp"
                       android:layout_height="wrap_content"
                       android:orientation="vertical">
 
@@ -429,11 +436,11 @@
                 tools:ignore="Autofill" />
         </LinearLayout>
 
-        <LinearLayout android:layout_width="170dp"
+        <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:orientation="vertical">
+                      android:orientation="horizontal">
 
-        <EditText android:layout_width="match_parent"
+        <EditText android:layout_width="250dp"
                   android:layout_height="wrap_content"
                   android:hint="@string/total_female_employee_nin_establishment"
                   android:textColor="@color/darkgray"
@@ -443,15 +450,21 @@
                   android:id="@+id/txt_bplo_owners_info_total_female"
                 tools:ignore="Autofill" />
 
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_gravity="center"
-                  android:gravity="center"
-                  android:orientation="horizontal">
+            <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:id="@+id/add"
+                    android:text="Add"
+                    />
 
-        <LinearLayout android:layout_width="170dp"
+        </LinearLayout>
+
+
+
+        <LinearLayout android:layout_width="150dp"
                       android:layout_height="wrap_content"
                       android:orientation="vertical">
 
@@ -466,7 +479,7 @@
                     tools:ignore="Autofill" />
 
         </LinearLayout>
-        <LinearLayout android:layout_width="170dp"
+        <LinearLayout android:layout_width="250dp"
                       android:layout_height="wrap_content"
                       android:orientation="vertical">
 
@@ -481,7 +494,7 @@
                     tools:ignore="Autofill" />
 
         </LinearLayout>
-    </LinearLayout>
+
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:textSize="13sp"
@@ -509,6 +522,202 @@
     </LinearLayout>
     </LinearLayout>
         </android.support.v7.widget.CardView>
+
+
+
+
+
+        <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/card_step3"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:background="@drawable/text_border"
+                android:gravity="center"
+                android:elevation="6dp"
+                android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                <TextView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="@color/white"
+                        android:background="@color/colorPrimary"
+                        android:paddingStart="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="Lessor Information"
+                        tools:ignore="RtlSymmetry" />
+
+
+                <LinearLayout
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Last Name"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="textPersonName"
+                            android:id="@+id/lname_bplo_step3"
+                            tools:ignore="Autofill" />
+
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="First Name"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="textPersonName"
+                            android:id="@+id/fname_bplo_step3"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Middle Name"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="textPersonName"
+                            android:id="@+id/mname_bplo_step3"
+                            tools:ignore="Autofill" />
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Full Lessor Address"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/lessor_add_bplo_step3"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Monthly Rental"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/monthly_rental_bplo_step3"
+                            tools:ignore="Autofill" />
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="House No. / Bldg No."
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/house_number_bplo_step3"
+                            tools:ignore="Autofill" />
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_border7"
+                            android:orientation="vertical">
+                        <Spinner android:layout_width="250dp"
+                                android:id="@+id/spinner2_brgy_step3"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brgy2_step3"
+                            />
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_border7"
+                            android:orientation="vertical">
+                        <Spinner android:layout_width="250dp"
+                                android:id="@+id/spinner2_sub_step3"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sub2_step3"
+                            />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Street"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/street_bplo_step3"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="City / Municipality"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/city_bplo_step3"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Province"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/province_bplo_step3"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mobile No."
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/mobile_bplo_step3"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Telephone No."
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/telephone_bplo_step3"
+                            tools:ignore="Autofill" />
+
+                    <EditText android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email Address"
+                            android:textColor="@color/darkgray"
+                            android:textColorHint="@color/lightgray"
+                            android:textSize="13sp"
+                            android:inputType="text"
+                            android:id="@+id/Email_bplo_step3"
+                            tools:ignore="Autofill" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
@@ -580,8 +789,6 @@
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/phlogo"
                         tools:ignore="ContentDescription" />
-
-
             </LinearLayout>
 
             <LinearLayout
@@ -708,7 +915,5 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
-
     </LinearLayout>
 </ScrollView>

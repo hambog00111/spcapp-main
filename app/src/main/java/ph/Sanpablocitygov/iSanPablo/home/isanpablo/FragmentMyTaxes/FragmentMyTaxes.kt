@@ -159,16 +159,25 @@ override  fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, save
     val mybusiness = view.findViewById<Button>(R.id.btn_my_taxes_cert)
     mybusiness.setOnClickListener {
 
-        val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
 
-        val mybusBuilder = AlertDialog.Builder(requireContext())
-            .setView(mybus)
+        activity!!.supportFragmentManager.beginTransaction().replace(
+                R.id.frag_container,
+                Fragmentpaymentcert() , null)
+            .addToBackStack(null)
+            .commit()
 
-        val mybusDialog = mybusBuilder.show()
 
-        mybus.txt_confirm_update.setOnClickListener {
-            mybusDialog.dismiss()
-        }
+//
+//        val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+//
+//        val mybusBuilder = AlertDialog.Builder(requireContext())
+//            .setView(mybus)
+//
+//        val mybusDialog = mybusBuilder.show()
+//
+//        mybus.txt_confirm_update.setOnClickListener {
+//            mybusDialog.dismiss()
+//        }
 
 
     }

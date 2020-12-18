@@ -133,7 +133,7 @@
         </menu>
     </item>
 
-    <item android:title="Goverment Links">
+    <item android:title="Government Links">
            <menu>
                <item
                    android:id="@+id/nav_president"

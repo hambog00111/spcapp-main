@@ -85,6 +85,12 @@ class CityhotlineAdapter(private var mContext: Context, private var modellist: M
         val phoneNumber6 = "(049)5621-575"
 
         val phoneNumber7 = "(049)5627-654"
+        val phoneNumber8a = "09673625480"
+        val phoneNumber8b  ="09392022318"
+        val phoneNumber8c  ="(049)5769119"
+        val phoneNumber9a ="09053745376"
+        val phoneNumber9b  ="09208392833"
+        val phoneNumber10  ="(049)5215-555"
 
         //listview item clicks
         view!!.setOnClickListener {
@@ -448,6 +454,216 @@ class CityhotlineAdapter(private var mContext: Context, private var modellist: M
                     // Display the alert dialog on home_event_pic1 interface
                     dialog.show()
                 }
+
+            if (modellist[postition].ivcityhotline == "City Health Office") {
+
+                //start NewActivity with title for actionbar and text for textview
+                val Contact = LayoutInflater.from(mContext)
+                    .inflate(R.layout.home_city_hotlines_call_dialogbox, null)
+
+//                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
+                val builder = AlertDialog.Builder(mContext)
+                builder.setCancelable(false)
+                    .setView(Contact)
+
+                val tv = Contact.findViewById(R.id.resultTv) as TextView
+                val cl = Contact.findViewById(R.id.call) as TextView
+
+                val cl1 = Contact.findViewById(R.id.call1) as TextView
+                val tv1 = Contact.findViewById(R.id.resultTv1) as TextView
+
+                val cl2 = Contact.findViewById(R.id.call2) as TextView
+                val tv2 = Contact.findViewById(R.id.resultTv2) as TextView
+
+                //button_call number 1 ito yung lalabas sa dialog
+                cl.text = "Call1"
+                tv.text = "(+63)-6-7362-5480"
+
+                //button_call number 2 ito yung lalabas sa dialog
+                cl1.text = "Call2"
+                tv1.text = "(+63)-3-9202-2318"
+                //button_call number 2 ito yung lalabas sa dialog
+                cl2.text = "Call3"
+                tv2.text = "(049)5769-199"
+                //  holder.resultTv!!.text = ""+number+""
+                //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
+
+
+                builder.setPositiveButton("Landline") { _, _ ->
+                    // Do something when user press the positive button
+                    val intent = Intent(Intent.ACTION_DIAL)
+                    intent.data = Uri.parse("tel:$phoneNumber8c")
+                    mContext.startActivity(intent)
+                }
+
+                // Display a negative button on alert dialog
+                builder.setNegativeButton("Mobile") { _, _ ->
+                    val Contact = LayoutInflater.from(mContext)
+                        .inflate(R.layout.home_city_hotlines_call_dialogbox, null)
+
+//                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
+                    val builder = AlertDialog.Builder(mContext)
+                    builder.setCancelable(false)
+                        .setView(Contact)
+
+                    val tv = Contact.findViewById(R.id.resultTv) as TextView
+                    val cl = Contact.findViewById(R.id.call) as TextView
+
+                    val cl1 = Contact.findViewById(R.id.call1) as TextView
+                    val tv1 = Contact.findViewById(R.id.resultTv1) as TextView
+
+                    val cl2 = Contact.findViewById(R.id.call2) as TextView
+                    val tv2 = Contact.findViewById(R.id.resultTv2) as TextView
+
+                    //button_call number 1 ito yung lalabas sa dialog
+                    cl.text = "Call1"
+                    tv.text = "(+63)-6-7362-5480"
+
+                    //button_call number 2 ito yung lalabas sa dialog
+                    cl1.text = "Call2"
+                    tv1.text = "(+63)-3-9202-2318"
+
+                    builder.setPositiveButton("Call 2") { _, _ ->
+                        // Do something when user press the positive button
+                        val intent = Intent(Intent.ACTION_DIAL)
+                        intent.data = Uri.parse("tel:$phoneNumber8b")
+                        mContext.startActivity(intent)
+                    }
+
+                    // Display a negative button on alert dialog
+                    builder.setNegativeButton("Call 1") { _, _ ->
+                        val intent = Intent(Intent.ACTION_DIAL)
+                        intent.data = Uri.parse("tel:$phoneNumber8a")
+                        mContext.startActivity(intent)
+                    }
+                    builder.setNeutralButton("Cancel") { _, _ ->
+                    }
+                    val dialog: AlertDialog = builder.create()
+                    dialog.setCancelable(false)
+                    // Display the alert dialog on home_event_pic1 interface
+                    dialog.show()
+
+
+                }
+
+//                builder.setPositiveButton("Call 3") { _, _ ->
+//                    // Do something when user press the positive button
+//                    val intent = Intent(Intent.ACTION_DIAL)
+//                    intent.data = Uri.parse("tel:$phoneNumber8b")
+//                    mContext.startActivity(intent)
+//                }
+
+                // Display a neutral button on alert dialog
+                builder.setNeutralButton("Cancel") { _, _ ->
+                }
+
+                // Finally, make the alert dialog using builder
+                val dialog: AlertDialog = builder.create()
+                dialog.setCancelable(false)
+                // Display the alert dialog on home_event_pic1 interface
+                dialog.show()
+
+
+            }
+
+            if (modellist[postition].ivcityhotline == "Contact Tracers") {
+
+                //start NewActivity with title for actionbar and text for textview
+                val Contact = LayoutInflater.from(mContext)
+                    .inflate(R.layout.home_city_hotlines_call_dialogbox, null)
+
+//                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
+                val builder = AlertDialog.Builder(mContext)
+                builder.setCancelable(false)
+                    .setView(Contact)
+
+                val tv = Contact.findViewById(R.id.resultTv) as TextView
+                val cl = Contact.findViewById(R.id.call) as TextView
+
+                val cl1 = Contact.findViewById(R.id.call1) as TextView
+                val tv1 = Contact.findViewById(R.id.resultTv1) as TextView
+
+                //button_call number 1 ito yung lalabas sa dialog
+                cl.text = "Call1"
+                tv.text = "(+63)-0-5374-5376"
+
+                //button_call number 2 ito yung lalabas sa dialog
+                cl1.text = "Call2"
+                tv1.text = "(+63)-2-0839-2833"
+
+                //  holder.resultTv!!.text = ""+number+""
+                //   builder.setMessage(holder.resultTv?.text ?:  ""+number+"")
+                builder.setPositiveButton("Call 2") { _, _ ->
+                    // Do something when user press the positive button
+                    val intent = Intent(Intent.ACTION_DIAL)
+                    intent.data = Uri.parse("tel:$phoneNumber9b")
+                    mContext.startActivity(intent)
+
+                }
+
+                // Display a negative button on alert dialog
+                builder.setNegativeButton("Call 1") { _, _ ->
+
+                    val intent = Intent(Intent.ACTION_DIAL)
+                    intent.data = Uri.parse("tel:$phoneNumber9a")
+                    mContext.startActivity(intent)
+
+
+                }
+
+
+                // Display a neutral button on alert dialog
+                builder.setNeutralButton("Cancel") { _, _ ->
+                }
+
+                // Finally, make the alert dialog using builder
+                val dialog: AlertDialog = builder.create()
+                dialog.setCancelable(false)
+                // Display the alert dialog on home_event_pic1 interface
+                dialog.show()
+
+
+            }
+
+
+            if (modellist[postition].ivcityhotline == "SPC ATIN Center") {
+                //start NewActivity with title for actionbar and text for textview
+
+                val Contact = LayoutInflater.from(mContext).inflate(R.layout.home_city_hotlines_call_dialogbox, null)
+                //                TextView tv = (TextView) dialog.findViewById(R.id.resultTv);
+                val builder = AlertDialog.Builder(mContext)
+                    .setView(Contact)
+                builder.setCancelable(false)
+                val tv = Contact.findViewById(R.id.resultTv) as TextView
+
+                val cl = Contact.findViewById(R.id.call) as TextView
+                cl.text = "Call"
+                tv.text = "(049)5215-555"
+
+
+                builder.setPositiveButton("call") { _, _ ->
+
+                    // Do something when user press the positive button
+                    val intent = Intent(Intent.ACTION_DIAL)
+                    intent.data = Uri.parse("tel:$phoneNumber10")
+                    mContext.startActivity(intent)
+
+                }
+
+
+                // Display a neutral button on alert dialog
+                builder.setNeutralButton("Cancel") { _, _ ->
+                }
+
+                // Finally, make the alert dialog using builder
+                val dialog: AlertDialog = builder.create()
+                dialog.setCancelable(false)
+                // Display the alert dialog on home_event_pic1 interface
+                dialog.show()
+
+
+            }
+
 
             }
 

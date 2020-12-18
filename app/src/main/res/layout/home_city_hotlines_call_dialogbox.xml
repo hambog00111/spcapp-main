@@ -76,4 +76,34 @@
     </LinearLayout>
 
 
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+                android:id="@+id/call2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+
+                android:textColor="@color/darkgray"
+                android:textSize="18sp"
+                tools:ignore="RtlSymmetry" />
+
+        <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkgray"
+
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:id="@+id/resultTv2"/>
+
+
+
+    </LinearLayout>
+
     </LinearLayout>

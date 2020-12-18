@@ -99,6 +99,20 @@ class FragmentCopyofPayslip : Fragment() {
                 return@setOnClickListener
             }
 
+
+            if ((uempnum).length > 4){
+                Toast.makeText(activity, "Employee number too long", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+
+            }
+
+
+            if ((uempnum).length < 4){
+                Toast.makeText(activity, "Employee number too short", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+
+            }
+
             if (uempemail.trim { it <= ' ' }.isEmpty()) {
             Toast.makeText(activity, "Please enter your Email Address!", Toast.LENGTH_SHORT).show()
             return@setOnClickListener

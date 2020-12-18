@@ -47,8 +47,6 @@ class FragmentSearch:Fragment (){
         val view = inflater.inflate(R.layout.fragmentsearch, null)
 
 
-
-
         title = arrayOf("Business in The City", "My Taxes",
             "My app Online Request", "City Hotlines",
             "Government Online Service","City Employee Corner","Our City",
@@ -73,7 +71,6 @@ class FragmentSearch:Fragment (){
 
         //pass results to listViewAdapter class
         adapter = ListViewAdapter(requireContext(), arrayList)
-
 
         //bind the adapter to the listview
         listView.adapter = adapter

@@ -52,13 +52,8 @@ class FragmentLoginBPLO: Fragment() {
                 .commit()
         }
 
-
-
         return view
     }
-
-
-
 
 //    override fun  onClick(view: View){
 //        //first getting the values

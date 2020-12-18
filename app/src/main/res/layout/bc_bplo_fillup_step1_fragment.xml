@@ -182,20 +182,19 @@
                               android:textColor="@color/darkgray"
                               android:textStyle="bold"
                               android:textSize="13sp"
-                              android:text="@string/businesss_id"/>
+                              android:text="Application Type:"/>
 
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:contextClickable="false"
                               android:textSize="13sp"
                               android:inputType="number"
-                              android:hint="@string/_1223"
+                              android:text="New Application"
                               android:clickable="false"
                                 android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/darkgray"
                               android:id="@+id/txt_bplo_business_id"
-                              tools:targetApi="m"
                             tools:ignore="Autofill" />
                 </LinearLayout>
 
@@ -216,11 +215,13 @@
                               android:layout_height="wrap_content"
                               android:textColor="@color/darkgray"
                               android:textSize="13sp"
+                              android:focusable="false"
+                              android:editable="false"
                               android:text="@string/annually"
+                            android:contextClickable="false"
                               android:clickable="false"
-                              android:contextClickable="false"
                               android:id="@+id/rb_mode_of_payment_annually"
-                            tools:ignore="Autofill,LabelFor,TextFields,UnusedAttribute" />
+                            tools:ignore="Autofill,Deprecated,LabelFor,TextFields,UnusedAttribute" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -264,37 +265,41 @@
                               android:text="Date Application\n"
                             tools:ignore="HardcodedText" />
 
-                    <EditText android:layout_width="match_parent"
+                    <EditText
+                            android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:contextClickable="false"
                               android:textSize="13sp"
-                              android:inputType="date"
-                              android:hint="@string/yy_dd_mm"
+                              android:editable="false"
+                              android:clickable="false"
                               android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
-                              android:clickable="false"
                               android:id="@+id/txt_bplo_date_application"
-                            tools:ignore="Autofill,UnusedAttribute" />
+                            tools:ignore="Autofill,Deprecated,UnusedAttribute" />
+
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:contextClickable="false"
                               android:textSize="13sp"
                               android:inputType="number"
                               android:hint="@string/reference_no"
-                              android:focusable="false"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
-                              android:clickable="false"
                               android:id="@+id/txt_bplo_ref_number"
                             tools:ignore="Autofill,UnusedAttribute" />
+
                     <Spinner android:layout_width="match_parent"
                              android:layout_height="wrap_content"
                              android:spinnerMode="dropdown"
                              android:layout_marginBottom="5dp"
                              android:layout_marginTop="5dp"
                              android:id="@+id/spinner_bplo_association"/>
-
+                     <TextView
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:id="@+id/type_bus"
+                             />
                     <TextView android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -324,12 +329,14 @@
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:textSize="13sp"
-                              android:inputType="date"
+                            android:textIsSelectable="true"
+                            android:focusable="false"
                               android:hint="@string/yy_dd_mm"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_date_dti_registration"
                             tools:ignore="Autofill" />
+
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:textSize="13sp"

@@ -667,7 +667,7 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="HON. ANGELITA E. YANG"
+                    android:text="HON. JUSTIN COLAGO"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp"
                     android:textSize="20sp"
@@ -709,7 +709,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="HON. JUSTIN COLAGO"
+                        android:text="HON. ANGELITA E. YANG"
                         android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:textSize="15sp"

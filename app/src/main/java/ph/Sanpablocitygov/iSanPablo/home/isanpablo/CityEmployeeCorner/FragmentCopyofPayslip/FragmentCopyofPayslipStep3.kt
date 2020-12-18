@@ -15,6 +15,7 @@ import android.provider.MediaStore
 import android.support.annotation.NonNull
 import android.support.annotation.RequiresApi
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.util.Base64
 import android.view.LayoutInflater
 import android.view.View
@@ -54,7 +55,7 @@ class FragmentCopyofPayslipStep3: Fragment(){
 
         }
         btncamera.setOnClickListener {
-            if (activity!!.checkSelfPermission(Manifest.permission.CAMERA) !== PackageManager.PERMISSION_GRANTED) {
+            if (ContextCompat.checkSelfPermission(requireContext(),Manifest.permission.CAMERA) !== PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(arrayOf<String>(Manifest.permission.CAMERA), MY_CAMERA_PERMISSION_CODE)
             } else {
                 val cameraIntent = Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE)

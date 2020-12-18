@@ -14,6 +14,7 @@ import android.widget.TextView
 
 import ph.Sanpablocitygov.iSanPablo.R
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.CityEmployeeCorner.FragmentCopyofPayslip.FragmentCopyofPayslip
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.CityEmployeeCorner.FragmentServiceRecord.FragmentServiceRecord
 
 class FragmentCityEmployeesCorner : Fragment(){
 
@@ -38,7 +39,7 @@ class FragmentCityEmployeesCorner : Fragment(){
 
             activity!!.supportFragmentManager.beginTransaction().replace(
                 R.id.frag_container,
-                FragmentServiceRecord() , null)
+                    FragmentServiceRecord(), null)
                 .addToBackStack(null)
                 .commit()
         }

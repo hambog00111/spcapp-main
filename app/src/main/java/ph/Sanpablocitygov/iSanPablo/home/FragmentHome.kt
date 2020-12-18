@@ -427,7 +427,6 @@ class FragmentHome : Fragment(){
         pdLoading.show()
 
         val okHttpClient = OkHttpClient()
-
         val request = Request.Builder()
             .url("https://coronavirus-19-api.herokuapp.com/countries")
             .build()

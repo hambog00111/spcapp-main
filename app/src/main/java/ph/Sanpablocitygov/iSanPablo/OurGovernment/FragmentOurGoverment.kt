@@ -284,7 +284,7 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener {
     fun dispSecOff() {
         try {
             var str = ""
-            for (i: Int in 26 until 28 step 1) {
+            for (i: Int in 25 until 28 step 1) {
                 val post: JSONObject = data.getJSONObject(i)
                 str =
                     str + post.getString("dept_position") + "\n" + post.getString("dept_name") + "\n\n"
@@ -334,7 +334,7 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener {
     fun dispOth(v: Int) = try {
         var str = ""
         val txt: TextView = view!!.findViewById(v)
-        for (i: Int in 0 until 37 step 1) {
+        for (i: Int in 0 until 34 step 1) {
             val post: String = (data.getJSONObject(i)).getString("dept_office")
             if (post.equals(txt.text.toString(), true)) {
                 str =
@@ -378,7 +378,8 @@ class FragmentOurGoverment  : Fragment(),View.OnClickListener {
         override fun doInBackground(vararg params: Void?): String {
             var xhr = ""
             val conn =
-                URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
+              URL("http://www.sanpablocitygov.ph/api/get-dept-list").openConnection() as HttpURLConnection
+               // URL("http://192.168.3.24:8000/api/get-dept-list").openConnection() as HttpURLConnection
             try {
 
                 conn.readTimeout = 10000

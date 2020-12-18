@@ -184,7 +184,7 @@
 
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:textSize="15sp"
+                      android:textSize="17sp"
                       android:textColor="@color/darkgray"
                       android:textStyle="bold"
                     android:paddingStart="10dp"
@@ -196,153 +196,138 @@
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_gravity="center"
-                          android:gravity="center"
-                    android:layout_margin="5dp"
-                          android:orientation="horizontal">
-
-                <LinearLayout android:layout_width="170dp"
-                              android:layout_height="wrap_content"
-                              android:orientation="vertical">
-
-                    <Spinner android:layout_width="170dp"
-                             android:id="@+id/spinner_bplo_business_activity_line_business"
-                             android:layout_height="wrap_content"/>
-
-
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:textSize="13sp"
-                              android:inputType="text"
-                              android:hint="@string/sub_category"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_business_activity_sub_category"
-                            tools:ignore="Autofill" />
-
-
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:textSize="13sp"
-                              android:inputType="number"
-                              android:text="@string/capitalization"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:clickable="false"
-                              android:id="@+id/txt_bplo_business_activity_capitalization"
-                            tools:ignore="Autofill,LabelFor" />
-
-                </LinearLayout>
-
-
-                <LinearLayout android:layout_width="170dp"
-                              android:layout_height="wrap_content"
-                              android:orientation="vertical">
-
-                    <Spinner android:layout_width="match_parent"
-                             android:id="@+id/spinner_bplo_business_activity_sub_category"
-                             android:layout_height="wrap_content"/>
-
-
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:textSize="13sp"
-                              android:inputType="number"
-                              android:hint="@string/no_of_units"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                              android:id="@+id/txt_bplo_business_activity_num_units"
-                            tools:ignore="Autofill" />
-                    <EditText android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:textSize="13sp"
-                              android:inputType="number"
-                              android:hint="@string/no_of_units"
-                              android:textColor="@color/darkgray"
-                              android:textColorHint="@color/lightgray"
-                                android:visibility="invisible"
-                            tools:ignore="Autofill" />
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <Button android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:text="@string/update"
-                    android:layout_gravity="right"
-                    android:layout_margin="5dp"
-                    android:textColor="@color/white"
-                    android:textSize="13sp"
-                    android:id="@+id/btn_business_activity_update"
-                    android:background="@drawable/text_border2"
-                    tools:ignore="RtlHardcoded" />
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:gravity="center"
-                  android:orientation="horizontal">
-
-        <LinearLayout android:layout_width="180dp"
-                      android:layout_height="wrap_content"
-                      android:orientation="vertical">
-
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="text"
-                      android:hint="Line of business"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_activity_line_business_conf"
-                    tools:ignore="Autofill,HardcodedText" />
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="text"
-                      android:hint="Code"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_activity_code_conf"
-                    tools:ignore="Autofill,HardcodedText" />
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="text"
-                      android:hint="@string/sub_category"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_activity_sub_category_conf"
-                    tools:ignore="Autofill" />
-        </LinearLayout>
-
-            <LinearLayout android:layout_width="180dp"
-                          android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
                           android:orientation="vertical">
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="number"
-                      android:text="@string/capitalization"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:clickable="false"
-                      android:id="@+id/txt_bplo_business_activity_capitalization_conf"
-                    tools:ignore="Autofill,LabelFor" />
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:textSize="13sp"
-                      android:inputType="number"
-                      android:hint="@string/no_of_units"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:id="@+id/txt_bplo_business_activity_num_units_conf"
-                    tools:ignore="Autofill" />
+
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Line of Business"
+                            android:textColor="@color/black"
+                            />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_border7"
+                        android:orientation="vertical">
+                    <Spinner android:layout_width="260dp"
+                             android:id="@+id/spinner_linebuss_step4"
+                             android:layout_height="wrap_content"/>
+                </LinearLayout>
+                    <TextView
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/busline_category"
+                            />
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Category"
+                        android:textColor="@color/black"
+                        />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_border7"
+                        android:orientation="vertical">
+                <Spinner android:layout_width="260dp"
+                        android:id="@+id/spinner_subcate_step4"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <EditText
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/b_code_step4"
+                        />
+                <EditText
+                        android:id="@+id/subcategory_step4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Sub Category"
+                        />
+                    <EditText
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:hint="No. Units"
+                            android:inputType="number"
+                            android:id="@+id/unit_num_step_4"
+                            />
+                    <EditText
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:hint="Capitalization"
+                            android:id="@+id/capital_step4"
+                            />
+
             </LinearLayout>
-    </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginRight="5dp"
+        >
+
+    <Button android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="ADD"
+            android:layout_gravity="right"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:id="@+id/btn_business_add"
+            android:background="@drawable/text_border2"
+            tools:ignore="RtlHardcoded" />
+
+    <Button android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="REMOVE"
+            android:layout_gravity="right"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:id="@+id/btn_business_remove"
+            android:background="@drawable/text_border2"
+            tools:ignore="RtlHardcoded" />
+</LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_1"
+                        />
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"/>
+
+            </LinearLayout>
+
+<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/count"
+        android:text="0"
+        />
         </LinearLayout>
         </android.support.v7.widget.CardView>
+
+
+
+
 
         <android.support.v7.widget.CardView
                 android:layout_margin="5dp"
@@ -374,75 +359,138 @@
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                 android:gravity="center"
-                      android:orientation="horizontal">
+                      android:orientation="vertical">
 
-            <LinearLayout android:layout_width="180dp"
-                          android:layout_height="wrap_content"
-                          android:orientation="vertical">
-                <Spinner android:layout_width="180dp"
-                         android:id="@+id/spinner_bplo_additional_line_line_business"
-                         android:layout_height="wrap_content"/>
-
-
-                <EditText android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:textSize="13sp"
-                          android:inputType="text"
-                          android:hint="@string/sub_category"
-                          android:textColor="@color/darkgray"
-                          android:textColorHint="@color/lightgray"
-                          android:id="@+id/txt_bplo_additional_line_sub_category"
-                        tools:ignore="Autofill" />
-
-
-
-            </LinearLayout>
-
-
-            <LinearLayout android:layout_width="180dp"
-                          android:layout_height="wrap_content"
-                          android:orientation="vertical">
-
-                <Spinner android:layout_width="180dp"
-                         android:id="@+id/spinner_bplo_additional_line_activity_code"
-                         android:layout_height="wrap_content"/>
-
-
-                <EditText android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:textSize="13sp"
-                          android:inputType="number"
-                          android:text="Capitalization"
-                          android:textColor="@color/darkgray"
-                          android:textColorHint="@color/white"
-                          android:clickable="false"
-                          android:id="@+id/txt_bplo_additional_line_capitalization"
-                        tools:ignore="Autofill,HardcodedText,LabelFor" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <Button android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="@string/add"
-                android:layout_gravity="right"
-                android:layout_margin="5dp"
-                android:textColor="@color/white"
-                android:textSize="13sp"
-                android:id="@+id/btn_additional_line_add"
-                android:background="@drawable/text_border2"
-                tools:ignore="RtlHardcoded" />
-
-        <ListView android:layout_width="match_parent"
+            <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
-                  android:layout_height="300dp"
-                  android:scrollbars="vertical"
-                  android:scrollbarSize="5dp"
-                  android:scrollbarStyle="insideInset"
-                  android:nestedScrollingEnabled="true"
-                  android:id="@+id/listview_additional_line"
-                tools:ignore="NestedScrolling" />
+                    android:orientation="vertical">
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Line of Business"
+                        android:textColor="@color/black"
+                        />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_border7"
+                        android:orientation="vertical">
+                    <Spinner android:layout_width="260dp"
+                            android:id="@+id/spinner_addlinebuss_step4"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addbusline_category"
+                        />
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Category"
+                        android:textColor="@color/black"
+                        />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_border7"
+                        android:orientation="vertical">
+                    <Spinner android:layout_width="260dp"
+                            android:id="@+id/spinner_addsubcate_step4"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <EditText
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addb_code_step4"
+                        />
+                <EditText
+                        android:id="@+id/addsubcategory_step4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Sub Category"
+                        />
+                <EditText
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:hint="No. Units"
+                        android:inputType="number"
+                        android:id="@+id/addunit_num_step_4"
+                        />
+                <EditText
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="Capitalization"
+                        android:id="@+id/addcapital_step4"
+                        />
+
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:layout_marginRight="5dp"
+                    >
+
+            <Button android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:text="ADD"
+                    android:layout_gravity="right"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:id="@+id/btn_addbusiness_add"
+                    android:background="@drawable/text_border2"
+                    tools:ignore="RtlHardcoded" />
+
+                <Button android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="REMOVE"
+                        android:layout_gravity="right"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:id="@+id/btn_addbusiness_remove"
+                        android:background="@drawable/text_border2"
+                        tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text1"
+                        />
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/add_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addcount"
+                    android:text="0"
+                    />
+        </LinearLayout>
     </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -495,7 +543,7 @@
                       android:layout_marginTop="10dp"
                       android:textStyle="bold"
                       android:textSize="15sp"
-                      android:text="@string/next_page"
+                      android:text="EXECUTE"
                     android:background="@drawable/text_border2"
                       android:layout_gravity="right"
                       android:id="@+id/txt_bplo_submit"

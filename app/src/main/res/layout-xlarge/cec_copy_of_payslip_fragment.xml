@@ -68,7 +68,7 @@
                 android:paddingStart="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Copy of Payslip"
+                android:text="Step 1"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:textSize="35sp"
