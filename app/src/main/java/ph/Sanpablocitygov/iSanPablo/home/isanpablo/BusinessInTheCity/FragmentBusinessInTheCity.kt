@@ -26,6 +26,7 @@ import kotlinx.android.synthetic.main.bc_investment_dialogbox.view.btn_invest_ca
 import kotlinx.android.synthetic.main.update_fragment.view.*
 import ph.Sanpablocitygov.iSanPablo.R
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOProfile
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOstep1
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.BusinessTaxAssementRequest
 
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxPayment.FragmentBusinessTaxPayment
@@ -129,7 +130,7 @@ class FragmentBusinessInTheCity : Fragment() {
 
                 activity!!.supportFragmentManager
                     .beginTransaction().setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
-                    .replace(R.id.frag_container, FragmentBPLOProfile(), null)
+                    .replace(R.id.frag_container, FragmentBPLOstep1(), null)
                     .addToBackStack(null)
                     .commit()
 

@@ -251,9 +251,11 @@
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:orientation="horizontal"
-                            android:gravity="center">
+                          android:layout_margin="5dp"
+                          android:gravity="center">
 
-                <LinearLayout android:layout_width="180dp"
+                <LinearLayout android:layout_width="170dp"
+                        android:layout_margin="5dp"
                               android:layout_height="wrap_content"
                               android:orientation="vertical">
 
@@ -291,7 +293,8 @@
                 </LinearLayout>
 
 
-                <LinearLayout android:layout_width="180dp"
+                <LinearLayout android:layout_width="170dp"
+                        android:layout_margin="5dp"
                               android:layout_height="wrap_content"
                               android:orientation="vertical">
 
@@ -332,6 +335,7 @@
                <EditText android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:hint="@string/email_address"
+                       android:layout_marginBottom="10dp"
                          android:textColor="@color/darkgray"
                          android:textColorHint="@color/lightgray"
                          android:textSize="13sp"
