@@ -49,16 +49,8 @@ class FragmentBPLOstep1 : Fragment() {
         val btnnextpage = view.findViewById<Button>(R.id.txt_bplo_next_page)
 
 
-        //id that will pass to step2
-        val applicationtype = view.findViewById<EditText>(R.id.txt_bplo_application_type).text.toString()
-        val modeofpayment = view.findViewById<EditText>(R.id.rb_mode_of_payment_annually).text.toString()
-        val dateapplication = view.findViewById<EditText>(R.id.txt_bplo_date_application).text.toString()
-        val dti_sec_cda_reg_num = view.findViewById<EditText>(R.id.txt_bplo_dti_registration_num).text.toString()
-        val refnum = view.findViewById<EditText>(R.id.txt_bplo_ref_number).text.toString()
-        val dti_sec_cda_date_reg = view.findViewById<EditText>(R.id.txt_bplo_date_dti_registration).text.toString()
-        val bus_type_id = view.findViewById<TextView>(R.id.type_bus).text.toString()
-        val tin_num = view.findViewById<EditText>(R.id.txt_bplo_tin_num).text.toString()
 
+        //val refnum1 =view!!.findViewById<TextView>(R.id.refnums).text.toString()
         //gov taxt incentive id
         val gov_incentive =view.findViewById<TextView>(R.id.tax_incentives)
         val mEdit_gov =view.findViewById<EditText>(R.id.txt_bplo_government_entity)
@@ -67,12 +59,7 @@ class FragmentBPLOstep1 : Fragment() {
         val cctv_equppied =view.findViewById<TextView>(R.id.cctv_equipped)
         val mEditcctv =view.findViewById<EditText>(R.id.txt_bplo_cctv_number_of_cameras)
 
-        //name of taxpayer registrant
-        val ulastname =view.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_lname)
-        val ufirstname =view.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_fname)
-        val umiddlename =view.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_mname)
-        val ubussinessname =view.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_business_name)
-        val tradename_franchise =view.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_trade_name)
+
         val gender =view.findViewById<TextView>(R.id.gender)
 
         // gov incentive enjoying function
@@ -89,6 +76,7 @@ class FragmentBPLOstep1 : Fragment() {
             }
             if (checkedId==R.id.rb_bplo_government_no){
                 mEdit_gov.isEnabled = false
+                mEdit_gov.setText("")
                 gov_incentive.text="no"
             }
 
@@ -107,6 +95,7 @@ class FragmentBPLOstep1 : Fragment() {
             }
             if (checkedId==R.id.rb_cctv_no){
                 cctv_equppied.text="no"
+
                 mEditcctv.isEnabled = false
             }
         }
@@ -130,34 +119,7 @@ class FragmentBPLOstep1 : Fragment() {
 
 
         btnnextpage.setOnClickListener {
-            //pass data to step 2 function
-            val intent = activity!!.intent
-                intent.putExtra("application_type", applicationtype)
-                intent.putExtra("modeofpayment", modeofpayment)
-                intent.putExtra("dateapplication", dateapplication)
-                intent.putExtra("dti_sec_cda_reg_num", dti_sec_cda_reg_num)
-                intent.putExtra("refnum",refnum)
-                intent.putExtra("dti_sec_cda_date_reg", dti_sec_cda_date_reg)
-                intent.putExtra("bus_type_id", bus_type_id)
-                intent.putExtra("tin_num", tin_num)
-                intent.putExtra("gov_incentive", gov_incentive.text.toString())
-                intent.putExtra("mEdit_gov", mEdit_gov.text.toString())
-                intent.putExtra("cctv_equppied", cctv_equppied.text.toString())
-                intent.putExtra("mEditcctv", mEditcctv.text.toString())
-                intent.putExtra("ulastname", ulastname.text.toString())
-                intent.putExtra("ufirstname",ufirstname.text.toString())
-                intent.putExtra("umiddlename",umiddlename.text.toString())
-                intent.putExtra("ubussinessname",ubussinessname.text.toString())
-                intent.putExtra("tradename_franchise",tradename_franchise.text.toString())
-
-                intent.putExtra("gender",gender.text.toString())
-
-
-            activity!!.supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentBPLOstep2(), null)
-                .addToBackStack(null)
-                .commit()
+          submit()
         }
 
         date_of_reg.setOnClickListener {
@@ -197,7 +159,7 @@ class FragmentBPLOstep1 : Fragment() {
 
         val request = Request.Builder()
             //.method("GET", formBody)
-            .url("http://192.168.3.208:8000/api/getOrganization")
+            .url("http://www.sanpablocitygov.ph/api/getOrganization")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -264,6 +226,175 @@ class FragmentBPLOstep1 : Fragment() {
         return view
     }
 
+    fun reference(){
+
+        val pdLoading = ProgressDialog(requireContext())
+        pdLoading.setMessage("\tLoading...")
+        pdLoading.setCancelable(false)
+        pdLoading.show()
+        val okHttpClient = OkHttpClient()
+        val request = Request.Builder()
+            .url("http://www.sanpablocitygov.ph/api/reference")
+            .build()
+        okHttpClient.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                pdLoading.dismiss()
+                activity!!.runOnUiThread {
+                    activity!!.toast("Unable to connect to the server please try again later")
+                }
+            }
+
+            @SuppressLint("ShowToast")
+            override fun onResponse(call: Call, response: Response) {
+
+                pdLoading.dismiss()
+                val body = response.body?.string()
+
+                val gson = Gson()
+
+                val Reference = gson.fromJson(body,BPLOSTEP1_HANDLER::class.java)
+                println(body)
+                activity!!.runOnUiThread(java.lang.Runnable {
+                    val refnum = view!!.findViewById<EditText>(R.id.txt_bplo_ref_number)
+
+                    //val refnum1 =view!!.findViewById<TextView>(R.id.refnums)
+                   // refnum1.text="${Reference.ref}"
+                    refnum.setText(Reference.ref)
+
+                })
+            }
+        })
+    }
+
+    fun submit(){
+        val applicationtype = view!!.findViewById<EditText>(R.id.txt_bplo_application_type).text.toString()
+        val modeofpayment = view!!.findViewById<EditText>(R.id.rb_mode_of_payment_annually).text.toString()
+        val dateapplication = view!!.findViewById<EditText>(R.id.txt_bplo_date_application).text.toString()
+        val dti_sec_cda_reg_num = view!!.findViewById<EditText>(R.id.txt_bplo_dti_registration_num).text.toString()
+        val refnum = view!!.findViewById<EditText>(R.id.txt_bplo_ref_number).text.toString()
+        val dti_sec_cda_date_reg = view!!.findViewById<EditText>(R.id.txt_bplo_date_dti_registration).text.toString()
+        val bus_type_id = view!!.findViewById<TextView>(R.id.type_bus).text.toString()
+        val tin_num = view!!.findViewById<EditText>(R.id.txt_bplo_tin_num).text.toString()
+
+        val gov_incentive =view!!.findViewById<TextView>(R.id.tax_incentives).text.toString()
+        val mEdit_gov =view!!.findViewById<EditText>(R.id.txt_bplo_government_entity)
+
+        //cctv_equipped id
+        val cctv_equppied =view!!.findViewById<TextView>(R.id.cctv_equipped).text.toString()
+        val mEditcctv =view!!.findViewById<EditText>(R.id.txt_bplo_cctv_number_of_cameras)
+
+        //name of taxpayer registrant
+        val ulastname =view!!.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_lname).text.toString()
+        val ufirstname =view!!.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_fname).text.toString()
+        val umiddlename =view!!.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_mname).text.toString()
+        val ubussinessname =view!!.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_business_name).text.toString()
+        val tradename_franchise =view!!.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_trade_name).text.toString()
+        val gender =view!!.findViewById<TextView>(R.id.gender)
+
+//        if (dti_sec_cda_reg_num.trim { it <= ' ' }.isEmpty()) {
+//            Toast.makeText(activity, "Please enter DTI/SEC/CDA Registration No!", Toast.LENGTH_SHORT).show()
+//
+//            return
+//        }
+
+
+//        if (dti_sec_cda_date_reg.trim { it <= ' ' }.isEmpty()) {
+//            Toast.makeText(activity, "Please Select DTI/SEC/CDA Date of Registration!", Toast.LENGTH_SHORT).show()
+//
+//            return
+//        }
+
+        if (bus_type_id=="0") {
+            Toast.makeText(activity, "Please Select Business Type!", Toast.LENGTH_SHORT).show()
+
+            return
+        }
+
+//        if (tin_num.trim { it <= ' ' }.isEmpty()) {
+//            Toast.makeText(activity, "Please enter your TIN No!", Toast.LENGTH_SHORT).show()
+//
+//            return
+//        }
+
+
+
+        if(gov_incentive=="yes"){
+            if (mEdit_gov.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(activity, "Please Specify Entity!", Toast.LENGTH_SHORT).show()
+
+                return
+            }
+
+        }
+
+        if(cctv_equppied=="yes"){
+            if (mEditcctv.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(activity, "Please Enter the number of your cctv!", Toast.LENGTH_SHORT).show()
+
+                return
+            }
+
+        }
+
+
+        if (ulastname.trim { it <= ' ' }.isEmpty()) {
+            Toast.makeText(activity, "Please enter Taxpayer/registrant Last name!", Toast.LENGTH_SHORT).show()
+
+            return
+        }
+
+        if (ufirstname.trim { it <= ' ' }.isEmpty()) {
+            Toast.makeText(activity, "Please enter  Taxpayer/registrant First name!", Toast.LENGTH_SHORT).show()
+
+            return
+        }
+        if (ubussinessname.trim { it <= ' ' }.isEmpty()) {
+            Toast.makeText(activity, "Please enter  Taxpayer/registrant Business name!", Toast.LENGTH_SHORT).show()
+
+            return
+        }
+
+        if (gender.text.toString()=="") {
+            Toast.makeText(activity, "Please Select Gender!", Toast.LENGTH_SHORT).show()
+
+            return
+        }else {
+
+
+            //pass data to step 2 function
+            val intent = activity!!.intent
+            intent.putExtra("application_type", applicationtype)
+            intent.putExtra("modeofpayment", modeofpayment)
+            intent.putExtra("dateapplication", dateapplication)
+            intent.putExtra("dti_sec_cda_reg_num", dti_sec_cda_reg_num)
+            intent.putExtra("refnum", refnum)
+            intent.putExtra("dti_sec_cda_date_reg", dti_sec_cda_date_reg)
+            intent.putExtra("bus_type_id", bus_type_id)
+            intent.putExtra("tin_num", tin_num)
+            intent.putExtra("gov_incentive", gov_incentive)
+            intent.putExtra("mEdit_gov", mEdit_gov.text.toString())
+            intent.putExtra("cctv_equppied", cctv_equppied)
+            intent.putExtra("mEditcctv", mEditcctv.text.toString())
+            intent.putExtra("ulastname", ulastname)
+            intent.putExtra("ufirstname", ufirstname)
+            intent.putExtra("umiddlename", umiddlename)
+            intent.putExtra("ubussinessname", ubussinessname)
+            intent.putExtra("tradename_franchise", tradename_franchise)
+
+            intent.putExtra("gender", gender.text.toString())
+
+
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentBPLOstep2(), null
+                )
+                .addToBackStack(null)
+                .commit()
+        }
+
+    }
+
+
     private fun DateTime():String {
         val c = Calendar.getInstance().time
         val df = SimpleDateFormat("MM/dd/yyyy")
@@ -271,41 +402,5 @@ class FragmentBPLOstep1 : Fragment() {
     }
 
 
-  fun reference(){
 
-      val pdLoading = ProgressDialog(requireContext())
-      pdLoading.setMessage("\tLoading...")
-      pdLoading.setCancelable(false)
-      pdLoading.show()
-      val okHttpClient = OkHttpClient()
-      val request = Request.Builder()
-          .url("http://192.168.3.208:8000/api/reference")
-          .build()
-      okHttpClient.newCall(request).enqueue(object : Callback {
-          override fun onFailure(call: Call, e: IOException) {
-              pdLoading.dismiss()
-              activity!!.runOnUiThread {
-                  activity!!.toast("Unable to connect to the server please try again later")
-              }
-          }
-
-          @SuppressLint("ShowToast")
-          override fun onResponse(call: Call, response: Response) {
-
-              pdLoading.dismiss()
-              val body = response.body?.string()
-
-              val gson = Gson()
-
-              val Reference = gson.fromJson(body,BPLOSTEP1_HANDLER::class.java)
-              println(body)
-              activity!!.runOnUiThread(java.lang.Runnable {
-                  val reference = view!!.findViewById<EditText>(R.id.txt_bplo_ref_number)
-
-                  reference.setText(Reference.ref)
-
-              })
-          }
-      })
- }
 }

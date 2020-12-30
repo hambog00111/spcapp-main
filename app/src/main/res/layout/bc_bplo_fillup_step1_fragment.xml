@@ -285,6 +285,12 @@
                             android:textSize="13sp"
                             android:text="Reference Number"
                             tools:ignore="HardcodedText" />
+
+
+<!--                    <TextView-->
+<!--                            android:id="@+id/refnums"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"/>-->
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:textSize="13sp"
@@ -311,6 +317,7 @@
                     </LinearLayout>
 
                      <TextView
+                             android:visibility="gone"
                              android:layout_width="match_parent"
                              android:layout_height="wrap_content"
                              android:id="@+id/type_bus"
@@ -324,12 +331,18 @@
                               android:padding="8dp"
                               android:layout_height="wrap_content"
                               android:orientation="vertical">
-
+                    <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/darkgray"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:text="DTI/SEC/CDA\n Registration No."
+                            tools:ignore="HardcodedText" />
                     <EditText android:layout_width="match_parent"
                               android:layout_height="wrap_content"
                               android:textSize="13sp"
                               android:inputType="number"
-                              android:hint="DTI/SEC/CDA\n Registration No."
+                              android:hint="DTI/SEC/CDA Reg No."
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_dti_registration_num"
@@ -401,6 +414,7 @@
 
                 </RadioGroup>
                 <TextView
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/tax_incentives"
@@ -441,6 +455,7 @@
                 </RadioGroup>
 
                 <TextView
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cctv_equipped"
@@ -574,7 +589,7 @@
                                  android:id="@+id/rb_bplo_name_of_tax_payer_jp"/>
                 </RadioGroup>
                 <TextView
-
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/gender"
@@ -591,23 +606,6 @@
                       android:layout_gravity="center"
                       android:padding="5dp"
                       android:gravity="center">
-
-
-
-            <Button android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:textColor="@color/white"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="13sp"
-                    android:background="@drawable/text_border2"
-                    android:text="@string/clear_all"
-                    android:layout_gravity="start"
-                    android:id="@+id/txt_bplo_clear_all"
-                    tools:ignore="ButtonStyle" />
 
             <Button android:layout_width="100dp"
                     android:layout_height="30dp"

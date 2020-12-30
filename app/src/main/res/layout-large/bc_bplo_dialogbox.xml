@@ -33,7 +33,7 @@
               android:background="@drawable/text_border2"
               android:padding="10dp"
               android:textStyle="bold"
-              android:text="@string/download_business_registration_form"
+              android:text="@string/download_business_application_form"
               android:id="@+id/btn_download_bplo"/>
 
     <TextView android:layout_width="match_parent"
@@ -48,8 +48,23 @@
               android:background="@drawable/text_border2"
               android:padding="10dp"
               android:textStyle="bold"
-              android:text="@string/online_bplo_fill_up_form"
+              android:text="@string/new_business_online_fill_up_form"
               android:id="@+id/btn_online_bplo"/>
+
+    <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/text_border2"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="@string/renew_online_application"
+            android:id="@+id/btn_online_renewal"/>
 
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"

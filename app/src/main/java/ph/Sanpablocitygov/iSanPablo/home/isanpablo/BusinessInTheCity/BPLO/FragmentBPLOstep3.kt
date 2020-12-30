@@ -5,6 +5,7 @@ import android.app.ProgressDialog
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.CardView
+import android.util.Patterns
 
 import android.view.LayoutInflater
 import android.view.View
@@ -44,6 +45,7 @@ class FragmentBPLOstep3 : Fragment() {
         val unit_vehicle = view.findViewById<EditText>(R.id.txt_bplo_owners_info_unit_service)
         val totalnum = view.findViewById<EditText>(R.id.txt_bplo_owners_info_total_num_employees_lgu)
 
+
         //owners info
         val lname_step3 = view.findViewById<EditText>(R.id.txt_bplo_owners_info_lname)
         val fname_step3 = view.findViewById<EditText>(R.id.txt_bplo_owners_info_fname)
@@ -51,8 +53,8 @@ class FragmentBPLOstep3 : Fragment() {
         val owner_address_step3 = view.findViewById<EditText>(R.id.txt_bplo_owners_info_owners_address)
         val building_name_step3 = view.findViewById<EditText>(R.id.txt_bplo_owners_info_owners_name)
         val owners_street_step3 = view.findViewById<EditText>(R.id.txt_bplo_owners_info_street)
-        val owners_brgy_step3 = view.findViewById<TextView>(R.id.brgy_step3)
-        val owners_sub_step3 = view.findViewById<TextView>(R.id.sub_step3)
+        val owners_brgy_step3 = view.findViewById<EditText>(R.id.txt_bplo_owners_info_brgy)
+        val owners_sub_step3 = view.findViewById<EditText>(R.id.txt_bplo_owners_info_subdivision)
 
         val owner_house_no_step3 = view.findViewById<EditText>(R.id.txt_bplo_owners_info_house_num)
         val owner_city_step3 = view.findViewById<EditText>(R.id.txt_bplo_owners_info_city)
@@ -62,10 +64,8 @@ class FragmentBPLOstep3 : Fragment() {
         val owner_province_step3 = view.findViewById<EditText>(R.id.txt_bplo_owners_info_province)
 
 
-
-
-
-      //rented info id
+        //rented info id
+        val rent_val = view!!.findViewById<TextView>(R.id.rented_value)
         val lastname_step3 = view.findViewById<EditText>(R.id.lname_bplo_step3)
         val firstname_step3 = view.findViewById<EditText>(R.id.fname_bplo_step3)
         val middle_step3 = view.findViewById<EditText>(R.id.mname_bplo_step3)
@@ -80,8 +80,9 @@ class FragmentBPLOstep3 : Fragment() {
         val mobile_step3 = view.findViewById<EditText>(R.id.mobile_bplo_step3)
         val telephone_step3 = view.findViewById<EditText>(R.id.telephone_bplo_step3)
         val email_step3 = view.findViewById<EditText>(R.id.Email_bplo_step3)
-
-
+        val subs2 = view.findViewById<TextView>(R.id.sub2_step3)
+        val spinner_brgy2 =view.findViewById<Spinner>(R.id.spinner2_brgy_step3)
+        val spinner_sub2 =view.findViewById<Spinner>(R.id.spinner2_sub_step3)
 
 
         //step 1 data hold
@@ -119,6 +120,43 @@ class FragmentBPLOstep3 : Fragment() {
         val  pin_step2 = intent.getStringExtra("pin_step2")
         val email_address_step2 =intent.getStringExtra("email_address_step2")
 
+        val rented = view!!.findViewById<RadioGroup>(R.id.rg_bplo_owner_info_rented)
+
+        rented.setOnCheckedChangeListener{ _, checkedId ->
+            if (checkedId==R.id.rb_bplo_owner_info_rented_yes){
+                val lin = view!!.findViewById<CardView>(R.id.card_step3)
+                lin.visibility = View.VISIBLE
+                rent_val.text="yes"
+                // Toast.makeText(activity!!,"yes",Toast.LENGTH_SHORT).show()
+            }
+
+            if (checkedId==R.id.rb_bplo_owner_info_rented_no){
+                val lin = view!!.findViewById<CardView>(R.id.card_step3)
+                lin.visibility = View.GONE
+                rent_val.text="no"
+                // Toast.makeText(activity!!,"no",Toast.LENGTH_SHORT).show()
+            }
+
+
+
+            if(rent_val.text.toString()=="no"){
+
+                lastname_step3!!.setText("")
+                firstname_step3!!.text.clear()
+                full_add_step3!!.text.clear()
+                monthly_rental_step3!!.text.clear()
+                brgy_step3!!.text = "0"
+
+
+                city_step3!!.text.clear()
+                province_step3!!.text.clear()
+                mobile_step3!!.text.clear()
+
+                getbrgy()
+            }
+
+
+        }
 
         btnadd.setOnClickListener {
 
@@ -132,7 +170,8 @@ class FragmentBPLOstep3 : Fragment() {
                 Toast.makeText(context, "Please enter the number of Female employees!", Toast.LENGTH_SHORT).show()
                 totalnum.text.clear()
                 return@setOnClickListener
-            }else {
+            }
+            else {
                 val sum = nummale.text.toString().toInt() + numfemale.text.toString().toInt()
                 totalnum.setText(sum.toString())
             }
@@ -141,92 +180,244 @@ class FragmentBPLOstep3 : Fragment() {
 
 
         btnnext.setOnClickListener {
-            //STEP 1
-            intent.putExtra("application_type", applicationtype)
-            intent.putExtra("modeofpayment", modeofpayment)
-            intent.putExtra("dateapplication", dateapplication)
-            intent.putExtra("dti_sec_cda_reg_num", dti_sec_cda_reg_num)
-            intent.putExtra("refnum",refnum)
-            intent.putExtra("dti_sec_cda_date_reg", dti_sec_cda_date_reg)
-            intent.putExtra("bus_type_id", bus_type_id)
-            intent.putExtra("tin_num", tin_num)
-            intent.putExtra("gov_incentive", gov_incentive)
-            intent.putExtra("mEdit_gov", mEdit_gov)
-            intent.putExtra("cctv_equppied", cctv_equppied)
-            intent.putExtra("mEditcctv", mEditcctv)
-            intent.putExtra("ulastname", ulastname)
-            intent.putExtra("ufirstname",ufirstname)
-            intent.putExtra("umiddlename",umiddlename)
-            intent.putExtra("ubussinessname",ubussinessname)
-            intent.putExtra("tradename_franchise",tradename_franchise)
-            intent.putExtra("gender",gender)
-
-            //STEP 2
-            intent.putExtra("buss_address",buss_address)
-            intent.putExtra("building_name",building_name)
-            intent.putExtra("street",street)
-            intent.putExtra("brgy_step2",brgy_step2)
-            intent.putExtra("sub_step2",sub_step2)
-            intent.putExtra("house_no",house_no)
-            intent.putExtra("city_step2",city_step2)
-            intent.putExtra("contact_step2",contact_step2)
-            intent.putExtra("unit_no_step2",unit_no_step2)
-            intent.putExtra("province_step2",province_step2)
-            intent.putExtra("pin_step2",pin_step2)
-            intent.putExtra("email_address_step2",email_address_step2)
-
-            //STEP 3
-
-            intent.putExtra("sqm_step3",sqm_step3.text.toString())
-
-            intent.putExtra("nummale",nummale.text.toString())
-            intent.putExtra("numfemale",numfemale.text.toString())
-            intent.putExtra("unit_vehicle",unit_vehicle.text.toString())
-            intent.putExtra("totalnum",totalnum.text.toString())
-
-            //owners info
-            intent.putExtra("lname_step3",lname_step3.text.toString())
-            intent.putExtra("fname_step3",fname_step3.text.toString())
-            intent.putExtra("mname_step3",mname_step3.text.toString())
-            intent.putExtra("owner_address_step3",owner_address_step3.text.toString())
-            intent.putExtra("building_name_step3",building_name_step3.text.toString())
-            intent.putExtra("owners_street_step3",owners_street_step3.text.toString())
-            intent.putExtra("owners_brgy_step3",owners_brgy_step3.text.toString())
-            intent.putExtra("owners_sub_step3",owners_sub_step3.text.toString())
-            intent.putExtra("owner_house_no_step3",owner_house_no_step3.text.toString())
-            intent.putExtra("owner_city_step3",owner_city_step3.text.toString())
-            intent.putExtra("owner_contact_step3",owner_contact_step3.text.toString())
-            intent.putExtra("owner_email_step3",owner_email_step3.text.toString())
-            intent.putExtra("owner_unit_no_step3",owner_unit_no_step3.text.toString())
-            intent.putExtra("owner_province_step3",owner_province_step3.text.toString())
 
 
-            //rented data pass
-            intent.putExtra("lastname_step3",lastname_step3.text.toString())
-            intent.putExtra("firstname_step3",firstname_step3.text.toString())
-            intent.putExtra("middle_step3",middle_step3.text.toString())
-            intent.putExtra("full_add_step3",full_add_step3.text.toString())
-            intent.putExtra("monthly_rental_step3",monthly_rental_step3.text.toString())
-            intent.putExtra("house_no_step3",house_no_step3.text.toString())
-            intent.putExtra("brgy_step3",brgy_step3.text.toString())
-            intent.putExtra("sub_step3",sub_step3.text.toString())
-            intent.putExtra("street_step3",street_step3.text.toString())
-            intent.putExtra("city_step3",city_step3.text.toString())
-            intent.putExtra("province_step3",province_step3.text.toString())
-            intent.putExtra("mobile_step3",mobile_step3.text.toString())
-            intent.putExtra("telephone_step3",telephone_step3.text.toString())
-            intent.putExtra("email_step3",email_step3.text.toString())
+
+            if (lname_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Please enter your Last name!", Toast.LENGTH_SHORT).show()
+
+                return@setOnClickListener
+            }
+            if (fname_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Please enter your First name!", Toast.LENGTH_SHORT).show()
+
+                return@setOnClickListener
+            }
+
+            if (owner_address_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Please enter your  Full Address!", Toast.LENGTH_SHORT).show()
+
+                return@setOnClickListener
+            }
+
+            if (owners_brgy_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Please Enter your Barangay!", Toast.LENGTH_SHORT).show()
+
+                return@setOnClickListener
+            }
+            if (owner_city_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "City/Municipality is Required!", Toast.LENGTH_SHORT).show()
+
+                return@setOnClickListener
+            }
+
+            if (owner_province_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Province is Required!", Toast.LENGTH_SHORT).show()
+
+                return@setOnClickListener
+            }
+
+            if (owner_email_step3.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(activity, "Please enter your Email Address!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            else if (!Patterns.EMAIL_ADDRESS.matcher(owner_email_step3.text.toString()).matches()) {
+                Toast.makeText(activity, "Please enter a valid email address", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
 
 
 
 
 
-            activity!!.supportFragmentManager.beginTransaction().replace(
-                R.id.frag_container,
-                FragmentBPLOstep4() , null)
-                .addToBackStack(null)
-                .commit()
+
+            if (sqm_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Please enter the sqm of the lot!", Toast.LENGTH_SHORT).show()
+
+                return@setOnClickListener
+            }
+
+
+
+            if (nummale!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Please enter the number of Male employees!", Toast.LENGTH_SHORT).show()
+                totalnum.text.clear()
+                return@setOnClickListener
+            }
+
+             if (numfemale!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Please enter the number of Female employees!", Toast.LENGTH_SHORT).show()
+                totalnum.text.clear()
+                return@setOnClickListener
+            }
+
+//            if (unit_vehicle!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+//                Toast.makeText(context, "Please enter the number of Service Vehicle!", Toast.LENGTH_SHORT).show()
+//
+//                return@setOnClickListener
+//            }
+
+            if (totalnum!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, " Click the add button to get the total number of employee!", Toast.LENGTH_SHORT).show()
+
+                return@setOnClickListener
+            }
+
+
+
+            if(rent_val.text.toString()=="yes"){
+                if (lastname_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                    Toast.makeText(context, "Please enter Lessor Last name!", Toast.LENGTH_SHORT).show()
+
+                    return@setOnClickListener
+                }
+                if (firstname_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                    Toast.makeText(context, "Please enter Lessor First name!", Toast.LENGTH_SHORT).show()
+
+                    return@setOnClickListener
+                }
+
+                if (full_add_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                    Toast.makeText(context, "Please enter Lessor Address!", Toast.LENGTH_SHORT).show()
+
+                    return@setOnClickListener
+                }
+
+                if (monthly_rental_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                    Toast.makeText(context, "Please enter Monthly Rental!", Toast.LENGTH_SHORT).show()
+
+                    return@setOnClickListener
+                }
+
+                if (brgy_step3!!.text.toString()=="0") {
+                    Toast.makeText(context, "Please Select Lessor Barangay!", Toast.LENGTH_SHORT).show()
+
+                    return@setOnClickListener
+                }
+
+                if (city_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                    Toast.makeText(context, "Please Enter Lessor City!", Toast.LENGTH_SHORT).show()
+
+                    return@setOnClickListener
+                }
+
+                if (province_step3!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                    Toast.makeText(context, "Please Enter Lessor Province!", Toast.LENGTH_SHORT).show()
+
+                    return@setOnClickListener
+                }
+
+                if (mobile_step3.text.toString().trim { it <= ' ' }.isEmpty()) {
+                    Toast.makeText(activity, "Please enter Mobile number!", Toast.LENGTH_SHORT).show()
+
+                    return@setOnClickListener
+                }
+                if ((mobile_step3.text.toString()).length > 11){
+                    Toast.makeText(activity, "Mobile number too long", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+
+                }
+
+
+                if ((mobile_step3.text.toString()).length < 11){
+                    Toast.makeText(activity, "Mobile number too short", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+
+                }
+
+            }
+
+
+
+            else {
+
+                //STEP 1
+                intent.putExtra("application_type", applicationtype)
+                intent.putExtra("modeofpayment", modeofpayment)
+                intent.putExtra("dateapplication", dateapplication)
+                intent.putExtra("dti_sec_cda_reg_num", dti_sec_cda_reg_num)
+                intent.putExtra("refnum", refnum)
+                intent.putExtra("dti_sec_cda_date_reg", dti_sec_cda_date_reg)
+                intent.putExtra("bus_type_id", bus_type_id)
+                intent.putExtra("tin_num", tin_num)
+                intent.putExtra("gov_incentive", gov_incentive)
+                intent.putExtra("mEdit_gov", mEdit_gov)
+                intent.putExtra("cctv_equppied", cctv_equppied)
+                intent.putExtra("mEditcctv", mEditcctv)
+                intent.putExtra("ulastname", ulastname)
+                intent.putExtra("ufirstname", ufirstname)
+                intent.putExtra("umiddlename", umiddlename)
+                intent.putExtra("ubussinessname", ubussinessname)
+                intent.putExtra("tradename_franchise", tradename_franchise)
+                intent.putExtra("gender", gender)
+
+                //STEP 2
+                intent.putExtra("buss_address", buss_address)
+                intent.putExtra("building_name", building_name)
+                intent.putExtra("street", street)
+                intent.putExtra("brgy_step2", brgy_step2)
+                intent.putExtra("sub_step2", sub_step2)
+                intent.putExtra("house_no", house_no)
+                intent.putExtra("city_step2", city_step2)
+                intent.putExtra("contact_step2", contact_step2)
+                intent.putExtra("unit_no_step2", unit_no_step2)
+                intent.putExtra("province_step2", province_step2)
+                intent.putExtra("pin_step2", pin_step2)
+                intent.putExtra("email_address_step2", email_address_step2)
+
+                //STEP 3
+
+                intent.putExtra("sqm_step3", sqm_step3.text.toString())
+
+                intent.putExtra("nummale", nummale.text.toString())
+                intent.putExtra("numfemale", numfemale.text.toString())
+                intent.putExtra("unit_vehicle", unit_vehicle.text.toString())
+                intent.putExtra("totalnum", totalnum.text.toString())
+
+                //owners info
+                intent.putExtra("lname_step3", lname_step3.text.toString())
+                intent.putExtra("fname_step3", fname_step3.text.toString())
+                intent.putExtra("mname_step3", mname_step3.text.toString())
+                intent.putExtra("owner_address_step3", owner_address_step3.text.toString())
+                intent.putExtra("building_name_step3", building_name_step3.text.toString())
+                intent.putExtra("owners_street_step3", owners_street_step3.text.toString())
+                intent.putExtra("owners_brgy_step3", owners_brgy_step3.text.toString())
+                intent.putExtra("owners_sub_step3", owners_sub_step3.text.toString())
+                intent.putExtra("owner_house_no_step3", owner_house_no_step3.text.toString())
+                intent.putExtra("owner_city_step3", owner_city_step3.text.toString())
+                intent.putExtra("owner_contact_step3", owner_contact_step3.text.toString())
+                intent.putExtra("owner_email_step3", owner_email_step3.text.toString())
+                intent.putExtra("owner_unit_no_step3", owner_unit_no_step3.text.toString())
+                intent.putExtra("owner_province_step3", owner_province_step3.text.toString())
+
+
+                //rented data pass
+                intent.putExtra("lastname_step3", lastname_step3.text.toString())
+                intent.putExtra("firstname_step3", firstname_step3.text.toString())
+                intent.putExtra("middle_step3", middle_step3.text.toString())
+                intent.putExtra("full_add_step3", full_add_step3.text.toString())
+                intent.putExtra("monthly_rental_step3", monthly_rental_step3.text.toString())
+                intent.putExtra("house_no_step3", house_no_step3.text.toString())
+                intent.putExtra("brgy_step3", brgy_step3.text.toString())
+                intent.putExtra("sub_step3", sub_step3.text.toString())
+                intent.putExtra("street_step3", street_step3.text.toString())
+                intent.putExtra("city_step3", city_step3.text.toString())
+                intent.putExtra("province_step3", province_step3.text.toString())
+                intent.putExtra("mobile_step3", mobile_step3.text.toString())
+                intent.putExtra("telephone_step3", telephone_step3.text.toString())
+                intent.putExtra("email_step3", email_step3.text.toString())
+
+
+
+                activity!!.supportFragmentManager.beginTransaction().replace(
+                        R.id.frag_container,
+                        FragmentBPLOstep4(), null
+                    )
+                    .addToBackStack(null)
+                    .commit()
+            }
         }
         val btnback = view.findViewById<Button>(R.id.txt_bplo_back)
         btnback.setOnClickListener {
@@ -236,169 +427,158 @@ class FragmentBPLOstep3 : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-        val pdLoading = ProgressDialog(context)
-        pdLoading.setMessage("\tLoading...")
-        pdLoading.setCancelable(false)
-        pdLoading.show()
-
-        val okHttpClient = OkHttpClient()
-        val formBody: RequestBody = FormBody.Builder()
-            .build()
-
-        val request = Request.Builder()
-            //.method("GET", formBody)
-            .url("http://192.168.3.208:8000/api/getBarangay")
-            .build()
-        okHttpClient.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                pdLoading.dismiss()
-                activity!!.runOnUiThread(java.lang.Runnable {
-                    println(e)
-                    activity!!.toast("Unable to connect to the server please try again later")
-                })
-            }
-
-            @SuppressLint("ShowToast", "SetTextI18n")
-            override fun onResponse(call: Call, response: Response) {
-                pdLoading.dismiss()
-                val body = response.body?.string()
-                val gson = Gson()
-                println(body)
-                val list = gson.fromJson(body, Array<brgyholder>::class.java).toList()
-                val brgylistmain: MutableList<brgyhandler> = ArrayList()
 
 
+//        val pdLoading = ProgressDialog(context)
+//        pdLoading.setMessage("\tLoading...")
+//        pdLoading.setCancelable(false)
+//        pdLoading.show()
 
-                val i =  brgyhandler("SELECT BARANGAY", "0" )
-                brgylistmain.add(i)
+//        val okHttpClient = OkHttpClient()
+//        val formBody: RequestBody = FormBody.Builder()
+//            .build()
+//
+//        val request = Request.Builder()
+//            //.method("GET", formBody)
+//            .url("http://www.sanpablocitygov.ph/api/getBarangay")
+//            .build()
+//        okHttpClient.newCall(request).enqueue(object : Callback {
+//            override fun onFailure(call: Call, e: IOException) {
+//                pdLoading.dismiss()
+//                activity!!.runOnUiThread(java.lang.Runnable {
+//                    println(e)
+//                    activity!!.toast("Unable to connect to the server please try again later")
+//                })
+//            }
+//
+//            @SuppressLint("ShowToast", "SetTextI18n")
+//            override fun onResponse(call: Call, response: Response) {
+//                pdLoading.dismiss()
+//                val body = response.body?.string()
+//                val gson = Gson()
+//                println(body)
+//                val list = gson.fromJson(body, Array<brgyholder>::class.java).toList()
+//                val brgylistmain: MutableList<brgyhandler> = ArrayList()
+//
+//
+//
+//                val i =  brgyhandler("SELECT BARANGAY", "0" )
+//                brgylistmain.add(i)
+//
+//                for (entry in list) {
+//                    val i =  brgyhandler(entry.barangay_name,entry.location_barangay_id )
+//                    brgylistmain.add(i)
+//                }
+//
+//                activity!!.runOnUiThread(java.lang.Runnable {
+//
+//
+//                    var spinner: Spinner? = null
+//                    spinner = activity!!.spinner_brgy_step3
+//                    spinner!!.onItemSelectedListener
+//                    val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, brgylistmain)
+//
+//                    //adapter.setDropDownViewResource(R.layout.spinnercustomcolor)
+//
+//                    spinner.adapter = adapter
+//
+//
+//                    spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+//                        override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+//                            val data = parent.selectedItem as brgyhandler
+//                            getbrgyforsub(data)
+//
+//                        }
+//
+//                        override fun onNothingSelected(parent: AdapterView<*>?) {
+//
+//                        }
+//                    }
+//                })
+//
+//            }
+//
+//            //
+//            private fun getbrgyforsub(data: brgyhandler) {
+//                val spinner1id = view!!.findViewById<TextView>(R.id.brgy_step3)
+//                spinner1id.text = data.kodid
+//
+//
+//                val formBody: RequestBody = FormBody.Builder()
+//                    .build()
+//
+//                val okHttpClient = OkHttpClient()
+//                val request = Request.Builder()
+//                    .method("POST" ,formBody )
+//                    .url("http://www.sanpablocitygov.ph/api/getSubdivision/"+spinner1id.text)
+//                    .build()
+//                okHttpClient.newCall(request).enqueue(object : Callback {
+//                    override fun onFailure(call: Call, e: IOException) {
+//                        activity!!.runOnUiThread(java.lang.Runnable {
+//                            println(e)
+//                            activity!!.toast("Unable to connect to the server please try again later")
+//                        })
+//                    }
+//
+//                    @SuppressLint("ShowToast", "SetTextI18n")
+//                    override fun onResponse(call: Call, response: Response) {
+//                        val body = response.body?.string()
+//                        val gson = Gson()
+//                        val sub = gson.fromJson(body, Array<subdvlistclass>::class.java).toList()
+//
+//                        println(sub)
+//                        println(sub.size)
+//
+//                        val sublistmain: MutableList<sudvhandler> = ArrayList()
+//
+//                        if(sub.size == 0 ){
+//                            val i =  sudvhandler("NO SUBDIVISION FOUND" , "")
+//                            sublistmain.add(i)
+//                        }else{
+//
+//                            val i =  sudvhandler("SELECT SUBDIVISION", "0" )
+//                            sublistmain.add(i)
+//
+//                            for (entry in sub) {
+//                                val i =  sudvhandler(entry.subdivision_name , entry.location_subdivision_id)
+//                                sublistmain.add(i)
+//                            }
+//                        }
+//
+//
+//                        activity!!.runOnUiThread(java.lang.Runnable {
+//                            var spinnersub:Spinner? = null
+//                            spinnersub = activity!!.spinner_sub_step3
+//                            spinnersub!!.onItemSelectedListener
+//
+//                            val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, sublistmain)
+//
+//                            //adapter.setDropDownViewResource(R.layout.spinnercustomcolor)
+//
+//                            spinnersub.adapter = adapter
+//                            spinnersub.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+//                                override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+//
+//                                    val data2 = parent.selectedItem as sudvhandler
+//                                    getsub(data2)
+//
+//                                }
+//                                override fun onNothingSelected(parent: AdapterView<*>?) {
+//
+//                                }
+//                            }
+//                        })
+//                    }
+//                })
+//            }
+//
+//            private fun getsub(data2: sudvhandler){
+//                val spinner2subdid = view!!.findViewById<TextView>(R.id.sub_step3)
+//                spinner2subdid.setText(data2.subvid)
+//            }
+//
+//        })
 
-                for (entry in list) {
-                    val i =  brgyhandler(entry.barangay_name,entry.location_barangay_id )
-                    brgylistmain.add(i)
-                }
-
-                activity!!.runOnUiThread(java.lang.Runnable {
-
-
-                    var spinner: Spinner? = null
-                    spinner = activity!!.spinner_brgy_step3
-                    spinner!!.onItemSelectedListener
-                    val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, brgylistmain)
-
-                    //adapter.setDropDownViewResource(R.layout.spinnercustomcolor)
-
-                    spinner.adapter = adapter
-
-
-                    spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                        override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                            val data = parent.selectedItem as brgyhandler
-                            getbrgyforsub(data)
-
-                        }
-
-                        override fun onNothingSelected(parent: AdapterView<*>?) {
-
-                        }
-                    }
-                })
-
-            }
-
-            //
-            private fun getbrgyforsub(data: brgyhandler) {
-                val spinner1id = view!!.findViewById<TextView>(R.id.brgy_step3)
-                spinner1id.text = data.kodid
-
-
-                val formBody: RequestBody = FormBody.Builder()
-                    .build()
-
-                val okHttpClient = OkHttpClient()
-                val request = Request.Builder()
-                    .method("POST" ,formBody )
-                    .url("http://192.168.3.208:8000/api/getSubdivision/"+spinner1id.text)
-                    .build()
-                okHttpClient.newCall(request).enqueue(object : Callback {
-                    override fun onFailure(call: Call, e: IOException) {
-                        activity!!.runOnUiThread(java.lang.Runnable {
-                            println(e)
-                            activity!!.toast("Unable to connect to the server please try again later")
-                        })
-                    }
-
-                    @SuppressLint("ShowToast", "SetTextI18n")
-                    override fun onResponse(call: Call, response: Response) {
-                        val body = response.body?.string()
-                        val gson = Gson()
-                        val sub = gson.fromJson(body, Array<subdvlistclass>::class.java).toList()
-
-                        println(sub)
-                        println(sub.size)
-
-                        val sublistmain: MutableList<sudvhandler> = ArrayList()
-
-                        if(sub.size == 0 ){
-                            val i =  sudvhandler("NO SUBDIVISION FOUND" , "")
-                            sublistmain.add(i)
-                        }else{
-                            for (entry in sub) {
-                                val i =  sudvhandler(entry.subdivision_name , entry.location_subdivision_id)
-                                sublistmain.add(i)
-                            }
-                        }
-
-
-                        activity!!.runOnUiThread(java.lang.Runnable {
-                            var spinnersub:Spinner? = null
-                            spinnersub = activity!!.spinner_sub_step3
-                            spinnersub!!.onItemSelectedListener
-
-                            val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, sublistmain)
-
-                            //adapter.setDropDownViewResource(R.layout.spinnercustomcolor)
-
-                            spinnersub.adapter = adapter
-                            spinnersub.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                                override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-
-                                    val data2 = parent.selectedItem as sudvhandler
-                                    getsub(data2)
-
-                                }
-                                override fun onNothingSelected(parent: AdapterView<*>?) {
-
-                                }
-                            }
-                        })
-                    }
-                })
-            }
-
-            private fun getsub(data2: sudvhandler){
-                val spinner2subdid = view!!.findViewById<TextView>(R.id.sub_step3)
-                spinner2subdid.setText(data2.subvid)
-            }
-
-        })
-           val rented = view!!.findViewById<RadioGroup>(R.id.rg_bplo_owner_info_rented)
-
-
-        rented.setOnCheckedChangeListener{ _, checkedId ->
-            if (checkedId==R.id.rb_bplo_owner_info_rented_yes){
-                val lin = view!!.findViewById<CardView>(R.id.card_step3)
-                lin.visibility = View.VISIBLE
-               // Toast.makeText(activity!!,"yes",Toast.LENGTH_SHORT).show()
-            }
-
-            if (checkedId==R.id.rb_bplo_owner_info_rented_no){
-                val lin = view!!.findViewById<CardView>(R.id.card_step3)
-                lin.visibility = View.GONE
-               // Toast.makeText(activity!!,"no",Toast.LENGTH_SHORT).show()
-            }
-
-
-        }
 
         getbrgy()
 
@@ -421,7 +601,7 @@ class FragmentBPLOstep3 : Fragment() {
 
         val request = Request.Builder()
             //.method("GET", formBody)
-            .url("http://192.168.3.208:8000/api/getBarangay")
+            .url("http://www.sanpablocitygov.ph/api/getBarangay")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -491,7 +671,7 @@ class FragmentBPLOstep3 : Fragment() {
                 val okHttpClient = OkHttpClient()
                 val request = Request.Builder()
                     .method("POST" ,formBody )
-                    .url("http://192.168.3.208:8000/api/getSubdivision/"+spinner1id.text)
+                    .url("http://www.sanpablocitygov.ph/api/getSubdivision/"+spinner1id.text)
                     .build()
                 okHttpClient.newCall(request).enqueue(object : Callback {
                     override fun onFailure(call: Call, e: IOException) {
@@ -516,6 +696,10 @@ class FragmentBPLOstep3 : Fragment() {
                             val i =  sudvhandler("NO SUBDIVISION FOUND" , "")
                             sublistmain.add(i)
                         }else{
+
+
+                            val i =  sudvhandler("SELECT SUBDIVISION", "0" )
+                            sublistmain.add(i)
                             for (entry in sub) {
                                 val i =  sudvhandler(entry.subdivision_name , entry.location_subdivision_id)
                                 sublistmain.add(i)

@@ -74,6 +74,7 @@ class FragmentCopyofPayslipStep2: Fragment(){
                 .commit()
         }
 
+
         btncamera.setOnClickListener {
             if (ContextCompat.checkSelfPermission(requireContext(),Manifest.permission.CAMERA) !== PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(arrayOf<String>(Manifest.permission.CAMERA), MY_CAMERA_PERMISSION_CODE)

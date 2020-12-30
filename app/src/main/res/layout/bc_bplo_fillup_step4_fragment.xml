@@ -304,6 +304,7 @@
                     android:orientation="vertical">
 
                 <TextView
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/text_1"
@@ -317,6 +318,7 @@
             </LinearLayout>
 
 <TextView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/count"
@@ -324,6 +326,7 @@
         />
 
             <TextView
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/list_value"
@@ -391,7 +394,7 @@
                             android:layout_height="wrap_content"/>
                 </LinearLayout>
                 <TextView
-
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/addbusline_category"
@@ -479,7 +482,7 @@
 
 
                 <TextView
-
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/text1"
@@ -491,12 +494,14 @@
 
             </LinearLayout>
             <TextView
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/list_value2"
                     android:text="0"
                     />
             <TextView
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/addcount"
@@ -532,20 +537,7 @@
                       android:id="@+id/txt_bplo_back"
                     tools:ignore="ButtonStyle" />
 
-            <Button android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:textColor="@color/white"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="15sp"
-                    android:background="@drawable/text_border2"
-                    android:text="@string/clear_all"
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/txt_bplo_clear_all"
-                    tools:ignore="ButtonStyle" />
+
 
             <Button android:layout_width="100dp"
                       android:layout_height="30dp"
@@ -555,7 +547,7 @@
                       android:layout_marginTop="10dp"
                       android:textStyle="bold"
                       android:textSize="15sp"
-                      android:text="EXECUTE"
+                      android:text="SUBMIT"
                     android:background="@drawable/text_border2"
                       android:layout_gravity="right"
                       android:id="@+id/txt_bplo_submit"

@@ -1833,6 +1833,11 @@ b.	PYLON International Trading Corporation or San Pablo City
     <string name="philsys">philSys</string>
     <string name="request_assessment">Request Assessment</string>
     <string name="online_payment">Online Payment</string>
+    <string name="fill_up_form">Fill Up Form</string>
+    <string name="download_new_business_registration_form">Download New Business Registration Form</string>
+    <string name="new_business_online_fill_up_form">New Business Online Fill Up Form</string>
+    <string name="download_business_application_form">Download Business Application Form</string>
+    <string name="renew_online_application">Renew Online Application</string>
     <item name="btn_next" type="id"/>
 
 </resources>

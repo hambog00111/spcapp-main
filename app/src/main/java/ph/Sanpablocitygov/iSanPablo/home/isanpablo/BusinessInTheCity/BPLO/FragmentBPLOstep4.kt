@@ -1,33 +1,31 @@
 package ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.text.Html
-import android.text.Html.*
-import android.view.Gravity
-
+import android.text.Html.fromHtml
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.firebase.ui.auth.AuthUI.getApplicationContext
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.bc_bplo_fillup_step4_fragment.*
-import kotlinx.android.synthetic.main.bc_bplo_fillup_step4_fragment.view.*
 import okhttp3.*
 import org.jetbrains.anko.toast
-import org.w3c.dom.Text
 import ph.Sanpablocitygov.iSanPablo.R
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.FragmentBusinessInTheCity
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 import kotlin.random.Random
+
 
 class FragmentBPLOstep4 : Fragment() {
 
@@ -59,19 +57,34 @@ class FragmentBPLOstep4 : Fragment() {
         val buttonremove2 = view!!.findViewById<Button>(R.id.btn_addbusiness_remove)
         val buttonInsertsub = view!!.findViewById<Button>(R.id.btn_addbusiness_add)
         val buttonExecute = view!!.findViewById<Button>(R.id.txt_bplo_submit)
+        val busscate = view!!.findViewById<TextView>(R.id.busline_category)
+        val subccate = view!!.findViewById<EditText>(R.id.subcategory_step4)
+        val capital = view!!.findViewById<EditText>(R.id.capital_step4)
 
+        val busscate2 = view!!.findViewById<TextView>(R.id.addbusline_category)
+        val subccate2 = view!!.findViewById<EditText>(R.id.addsubcategory_step4)
+        val capital2 = view!!.findViewById<EditText>(R.id.addcapital_step4)
         //step 1 data hold
 
-
-
+        val text = view!!.findViewById<TextView>(R.id.text_1)
 
 
         loadData()
         loadData2()
         buttonExecute.setOnClickListener {
 
+            if (text!!.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Main Business is Required ", Toast.LENGTH_SHORT).show()
 
-            submit()
+                return@setOnClickListener
+            }else{
+
+                submit()
+
+            }
+
+
+
         }
         buttonremove.setOnClickListener {
            // setremoveButton()
@@ -84,12 +97,72 @@ class FragmentBPLOstep4 : Fragment() {
             removeitem2()
         }
         buttonInsert.setOnClickListener {
-            setInsertButton()
+
+            if(busscate.text.toString()=="SELECT CATEGORY"){
+                Toast.makeText(context, "Please Select Main Business Category!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (subccate.text.toString()=="Select SubCategory") {
+                Toast.makeText(context, "Please Enter Sub category!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+
+            if (subccate.text.toString()=="SPECIFY") {
+                Toast.makeText(context, "Please SPECIFY your sub Category!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (subccate.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Sub Category is Required!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+
+            if (capital.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Please Enter your capital ", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            else{
+                setInsertButton()
+
+            }
+
+
+
         }
 
         buttonInsertsub.setOnClickListener {
 
-            setInsertButton2()
+            if(busscate2.text.toString()=="SELECT CATEGORY"){
+                Toast.makeText(context, "Please Select Main Business Category!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (subccate2.text.toString()=="Select SubCategory") {
+                Toast.makeText(context, "Please Enter Sub category!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (subccate2.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Sub Category is Required!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (subccate2.text.toString()=="SPECIFY") {
+                Toast.makeText(context, "Please SPECIFY your sub Category!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (capital2.text.toString().trim { it <= ' ' }.isEmpty()) {
+                Toast.makeText(context, "Please Enter your capital ", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else{
+                setInsertButton2()
+
+            }
+
+
         }
 //        buildRecyclerView()
 
@@ -157,7 +230,7 @@ class FragmentBPLOstep4 : Fragment() {
 
         val request = Request.Builder()
             //.method("GET", formBody)
-            .url("http://192.168.3.208:8000/api/getCategory")
+            .url("http://www.sanpablocitygov.ph/api/getCategory")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -218,7 +291,7 @@ class FragmentBPLOstep4 : Fragment() {
 
                 val request = Request.Builder()
                     .method("POST", formBody)
-                    .url("http://192.168.3.208:8000/api/getSubcategory/"+spinner1id.text)
+                    .url("http://www.sanpablocitygov.ph/api/getSubcategory/"+spinner1id.text)
                     .build()
                 okHttpClient.newCall(request).enqueue(object : Callback {
                     override fun onFailure(call: Call, e: IOException) {
@@ -269,7 +342,8 @@ class FragmentBPLOstep4 : Fragment() {
                         val spinnersub = view!!.findViewById<EditText>(R.id.subcategory_step4)
                         val code = view!!.findViewById<EditText>(R.id.b_code_step4)
                         code.setText(data.b_code)
-                        spinnersub.setText(data.b_sub_category)
+
+                            spinnersub.setText(data.b_sub_category)
 
                     }
                 })
@@ -405,8 +479,16 @@ class FragmentBPLOstep4 : Fragment() {
                    line5.text.toString()
 
                 )
-
+                val capital = view!!.findViewById<EditText>(R.id.capital_step4)
+                val no_unit = view!!.findViewById<EditText>(R.id.unit_num_step_4)
                 Toast.makeText(activity!!, "successfully added", Toast.LENGTH_SHORT).show()
+                       getcategory()
+                        capital.setText("")
+                        no_unit.setText("")
+
+
+
+
 
 //                val fname = findViewById<EditText>(R.id.f_name)
 //                val mname = findViewById<EditText>(R.id.m_name)
@@ -471,6 +553,9 @@ class FragmentBPLOstep4 : Fragment() {
             Toast.makeText(context, fromHtml("<font color='#f74040'><b>" + "Maximum Additional line" + "</b></font>"), Toast.LENGTH_SHORT).show()
 
         }
+        if (line3.text.toString()=="SPECIFY") {
+            line3.setText("")
+        }
 
 
         else {
@@ -483,7 +568,12 @@ class FragmentBPLOstep4 : Fragment() {
 
             )
 
+            val capital2 = view!!.findViewById<EditText>(R.id.addcapital_step4)
+            val no_unit2 = view!!.findViewById<EditText>(R.id.addunit_num_step_4)
             Toast.makeText(activity!!, "successfully added", Toast.LENGTH_SHORT).show()
+            getcategory2()
+            capital2.setText("")
+            no_unit2.setText("")
 
 //                val fname = findViewById<EditText>(R.id.f_name)
 //                val mname = findViewById<EditText>(R.id.m_name)
@@ -544,6 +634,7 @@ class FragmentBPLOstep4 : Fragment() {
         line2: String,
         line3: String,
         line4: String,
+
        line5: String
     ) {
 
@@ -551,8 +642,8 @@ class FragmentBPLOstep4 : Fragment() {
             mAdapter2!!.notifyItemInserted(mExampleList2!!.size)
 
       // val list2= "\"addbname : $line1\",\"addcode : $line2\",\"addsubcat: $line3\",\"addnumunit : $line4\",\"addcapital : $line5\""
-        val list2= "\"addbname\"\"$line1\""
 
+        val list2 = "$line1;$line2;$line3;$line4;$line5"
         hh2.add(list2)
         val text = view!!.findViewById<View?>(R.id.text1) as? TextView
         val text1 = view!!.findViewById<View?>(R.id.addcount) as? TextView
@@ -562,7 +653,7 @@ class FragmentBPLOstep4 : Fragment() {
         text?.text =chunked.toString()
         println(chunked)
         for (i in hh2) {
-            println(i)
+          //  println(i)
 //            println("Total elements in the list by count = "+ hh.size)
             listvalue2!!.text=i
             text1!!.text=hh2.size.toString()
@@ -573,11 +664,12 @@ class FragmentBPLOstep4 : Fragment() {
         mAdapter!!.notifyItemInserted(mExampleList!!.size)
 
         println(mExampleList)
-        val list = "$line1,$line2,$line3,$line4,$line5"
+        val list = "$line1;$line2;$line3;$line4;$line5"
         hh.add(list)
        val text = view!!.findViewById<View?>(R.id.text_1) as? TextView
         val text1 = view!!.findViewById<View?>(R.id.count) as? TextView
         val list_value = view!!.findViewById<View?>(R.id.list_value) as? TextView
+
 
 
         text?.text = hh.toString()
@@ -667,7 +759,7 @@ class FragmentBPLOstep4 : Fragment() {
 
         val request = Request.Builder()
             //.method("GET", formBody)
-            .url("http://192.168.3.208:8000/api/getCategory")
+            .url("http://www.sanpablocitygov.ph/api/getCategory")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -731,7 +823,7 @@ class FragmentBPLOstep4 : Fragment() {
 
                 val request = Request.Builder()
                     .method("POST", formBody)
-                    .url("http://192.168.3.208:8000/api/getSubcategory/"+spinner2id.text)
+                    .url("http://www.sanpablocitygov.ph/api/getSubcategory/"+spinner2id.text)
                     .build()
                 okHttpClient.newCall(request).enqueue(object : Callback {
                     override fun onFailure(call: Call, e: IOException) {
@@ -782,8 +874,10 @@ class FragmentBPLOstep4 : Fragment() {
                         val spinnersub = view!!.findViewById<EditText>(R.id.addsubcategory_step4)
                         val code = view!!.findViewById<EditText>(R.id.addb_code_step4)
                         code.setText(data.b_code)
-                        spinnersub.setText(data.b_sub_category)
 
+
+
+                            spinnersub.setText(data.b_sub_category)
                     }
                 })
 
@@ -877,13 +971,12 @@ fun submit() {
     val mobile_step3 =intent.getStringExtra("mobile_step3")
     val telephone_step3 =intent.getStringExtra("telephone_step3")
     val email_step3 =intent.getStringExtra("email_step3")
-
-
-
-
-             Toast.makeText(context,"$dateapplication",Toast.LENGTH_SHORT).show()
+   // val text = view!!.findViewById<TextView>(R.id.list_value2).text.toString()
+    val text = view!!.findViewById<TextView>(R.id.text_1).text.toString()
+    val text2 = view!!.findViewById<TextView>(R.id.text1).text.toString()
     val formBody: RequestBody = FormBody.Builder()
-            //step 1
+
+        //step 1
         .add("application",applicationtype)
         .add("paymentmode",modeofpayment)
         .add("dateApplication",dateapplication)
@@ -957,17 +1050,31 @@ fun submit() {
         .add("lessor_telephone",telephone_step3)
         .add("lessor_email",email_step3)
 
-
-
-
+            //step4
+        .add("mbdata",text)
+        .add("abdata",text2)
         .build()
 
     val okHttpClient = OkHttpClient()
+    val builder = OkHttpClient.Builder()
+    builder.connectTimeout(5, TimeUnit.MINUTES) // connect timeout
+        .writeTimeout(5, TimeUnit.MINUTES) // write timeout
+        .readTimeout(5, TimeUnit.MINUTES) // read timeout
     val request = Request.Builder()
+
         .method("POST", formBody)
-        .url("http://192.168.3.208:8000/api/addApplication")
+
+    // 192.168.3.208:8000
+
+
+        .url("http://www.sanpablocitygov.ph/api/addApplication")
+
         .build()
+
+
     okHttpClient.newCall(request).enqueue(object : Callback {
+
+
         override fun onFailure(call: Call, e: IOException) {
             activity!!.runOnUiThread(java.lang.Runnable {
                 activity!!.toast("unable to connect to the server please try again later")
@@ -983,13 +1090,39 @@ fun submit() {
             val body = response.body?.string()
             println(body)
             val gson = Gson()
-         //   val bplo = gson.fromJson(body, BPLOhandler::class.java)
-//            if(bplo.message=="Success"){
-//
-//            activity!!.runOnUiThread(java.lang.Runnable {
-//                activity!!.toast(bplo.message)
-//                })
-//            }
+            val bplo = gson.fromJson(body, BPLOhandler::class.java)
+            if (bplo.message=="Success") {
+
+                activity!!.runOnUiThread(Runnable {
+
+                    val dialogBuilder = AlertDialog.Builder(activity!!)
+                    dialogBuilder.setMessage("Request for New Business Permit successfully Sent.Please wait within 24 hrs and check your email for confirmation. Thank you!")
+                        // if the dialog is cancelable
+                        .setCancelable(false)
+                        // positive button text and action
+                        .setPositiveButton("ok", DialogInterface.OnClickListener { dialog, _ ->
+
+                            activity!!.supportFragmentManager.beginTransaction().replace(
+                                    R.id.frag_container,
+                                    FragmentBusinessInTheCity(), null)
+                                .addToBackStack(null)
+                                .commit()
+                            dialog.dismiss()
+                        })
+                    val alert = dialogBuilder.create()
+                    alert.show()
+
+                })
+
+            }
+
+
+            else {
+                activity!!.runOnUiThread(Runnable {
+                    activity!!.toast("Unable to connect to the server please try again later")
+
+                })
+            }
         }
 
     })

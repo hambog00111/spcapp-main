@@ -248,34 +248,59 @@
                       android:clickable="false"
                       android:id="@+id/txt_bplo_owners_info_street"
                     tools:ignore="Autofill" />
-                <LinearLayout
-                        android:layout_width="wrap_content"
+
+                <EditText android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/text_border7"
-                        android:orientation="vertical">
-                <Spinner android:layout_width="250dp"
-                        android:id="@+id/spinner_brgy_step3"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <TextView
-                        android:layout_width="match_parent"
+                        android:textSize="13sp"
+                        android:inputType="textPostalAddress"
+                        android:hint="Barangay"
+                        android:textColor="@color/darkgray"
+                        android:textColorHint="@color/lightgray"
+                        android:clickable="false"
+                        android:id="@+id/txt_bplo_owners_info_brgy"
+                        tools:ignore="Autofill" />
+
+                <EditText android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/brgy_step3"
-                        />
-                <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/text_border7"
-                        android:orientation="vertical">
-            <Spinner android:layout_width="250dp"
-                     android:id="@+id/spinner_sub_step3"
-                     android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/sub_step3"
-                        />
+                        android:textSize="13sp"
+                        android:inputType="textPostalAddress"
+                        android:hint="Subdivision"
+                        android:textColor="@color/darkgray"
+                        android:textColorHint="@color/lightgray"
+                        android:clickable="false"
+                        android:id="@+id/txt_bplo_owners_info_subdivision"
+                        tools:ignore="Autofill" />
+<!--                <LinearLayout-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/text_border7"-->
+<!--                        android:orientation="vertical">-->
+<!--                <Spinner android:layout_width="250dp"-->
+<!--                        android:id="@+id/spinner_brgy_step3"-->
+<!--                        android:layout_height="wrap_content"/>-->
+<!--                </LinearLayout>-->
+<!--                <TextView-->
+<!--                        android:visibility="gone"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/brgy_step3"-->
+<!--                        />-->
+<!--                <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/text_border7"-->
+<!--                        android:orientation="vertical">-->
+<!--            <Spinner android:layout_width="250dp"-->
+<!--                     android:id="@+id/spinner_sub_step3"-->
+<!--                     android:layout_height="wrap_content"/>-->
+<!--                </LinearLayout>-->
+<!--                <TextView-->
+<!--                        android:visibility="gone"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:id="@+id/sub_step3"-->
+<!--                        />-->
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
@@ -304,8 +329,8 @@
                               android:layout_height="wrap_content"
                               android:contextClickable="false"
                               android:textSize="13sp"
-                              android:inputType="text"
                               android:hint="City / Municipality"
+                               android:inputType="textPersonName"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
                               android:id="@+id/txt_bplo_owners_info_city"
@@ -314,6 +339,7 @@
                               android:layout_height="wrap_content"
                               android:textSize="13sp"
                               android:inputType="phone"
+
                               android:hint="@string/contact_number"
                               android:textColor="@color/darkgray"
                               android:textColorHint="@color/lightgray"
@@ -455,21 +481,7 @@
 
 
 
-        <LinearLayout android:layout_width="150dp"
-                      android:layout_height="wrap_content"
-                      android:orientation="vertical">
 
-            <EditText android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:hint="@string/nunit_of_service_vehicle"
-                      android:textColor="@color/darkgray"
-                      android:textColorHint="@color/lightgray"
-                      android:textSize="13sp"
-                      android:inputType="number"
-                      android:id="@+id/txt_bplo_owners_info_unit_service"
-                    tools:ignore="Autofill" />
-
-        </LinearLayout>
         <LinearLayout android:layout_width="250dp"
                       android:layout_height="wrap_content"
                       android:orientation="vertical">
@@ -480,14 +492,28 @@
                       android:textColor="@color/darkgray"
                       android:textColorHint="@color/lightgray"
                       android:textSize="13sp"
-                       android:editable="false"
-                       android:clickable="false"
+                    android:clickable="false"
+                    android:focusable="false"
                       android:inputType="number"
                       android:id="@+id/txt_bplo_owners_info_total_num_employees_lgu"
-                    tools:ignore="Autofill" />
+                    tools:ignore="Autofill,Deprecated" />
 
         </LinearLayout>
+            <LinearLayout android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
+                <EditText android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nunit_of_service_vehicle"
+                        android:textColor="@color/darkgray"
+                        android:textColorHint="@color/lightgray"
+                        android:textSize="13sp"
+                        android:inputType="number"
+                        android:id="@+id/txt_bplo_owners_info_unit_service"
+                        tools:ignore="Autofill" />
+
+            </LinearLayout>
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:textSize="13sp"
@@ -508,10 +534,19 @@
             <RadioButton android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="@string/no"
+                         android:checked="true"
                          android:textSize="13sp"
                          android:textColor="@color/darkgray"
                          android:id="@+id/rb_bplo_owner_info_rented_no"/>
         </RadioGroup>
+
+            <TextView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rented_value"
+
+                    />
     </LinearLayout>
     </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -620,12 +655,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/text_border7"
+                            android:layout_marginBottom="10dp"
                             android:orientation="vertical">
                         <Spinner android:layout_width="250dp"
                                 android:id="@+id/spinner2_brgy_step3"
                                 android:layout_height="wrap_content"/>
                     </LinearLayout>
                     <TextView
+                            android:visibility="gone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/brgy2_step3"
@@ -640,6 +677,7 @@
                                 android:layout_height="wrap_content"/>
                     </LinearLayout>
                     <TextView
+                            android:visibility="gone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/sub2_step3"
@@ -681,7 +719,7 @@
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/lightgray"
                             android:textSize="13sp"
-                            android:inputType="text"
+                            android:inputType="number"
                             android:id="@+id/mobile_bplo_step3"
                             tools:ignore="Autofill" />
 
@@ -734,20 +772,7 @@
                     android:id="@+id/txt_bplo_back"
                     tools:ignore="ButtonStyle" />
 
-            <Button android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:textColor="@color/white"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="15sp"
-                    android:background="@drawable/text_border2"
-                    android:text="@string/clear_all"
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/txt_bplo_clear_all"
-                    tools:ignore="ButtonStyle" />
+
 
             <Button android:layout_width="100dp"
                     android:layout_height="40dp"

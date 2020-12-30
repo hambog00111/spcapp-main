@@ -3,6 +3,7 @@ package ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity
 import android.annotation.SuppressLint
 import android.support.v7.app.AlertDialog
 import android.app.DownloadManager
+import android.content.Intent
 
 import android.net.Uri
 import android.os.Bundle
@@ -16,10 +17,12 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import kotlinx.android.synthetic.main.bc_bplo_dialogbox.*
 
 import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.*
 import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.btn_download_bplo
 import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.btn_online_bplo
+import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.btn_online_renewal
 import kotlinx.android.synthetic.main.bc_bta_dialog_box.view.*
 import kotlinx.android.synthetic.main.bc_investment_dialogbox.view.btn_business_investment
 import kotlinx.android.synthetic.main.bc_investment_dialogbox.view.btn_invest_cancel
@@ -136,6 +139,12 @@ class FragmentBusinessInTheCity : Fragment() {
 
 
             }
+            bploView.btn_online_renewal.setOnClickListener {
+
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.sanpablocitygov.ph/renewal"))
+                startActivity(intent)
+            }
+
 
 
 
