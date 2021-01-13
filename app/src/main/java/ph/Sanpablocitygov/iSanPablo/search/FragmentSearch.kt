@@ -76,9 +76,14 @@ class FragmentSearch:Fragment (){
         listView.adapter = adapter
 //        holder.mTitleTv!!.text = modellist[position].title
         listView.setOnItemClickListener { _, _, position, _ ->
+            searchView.setQuery("", false)
+            searchView.clearFocus()
+
+            listView.clearTextFilter()
 
 
             if (arrayList[position].title == "Business in The City" ) {
+
 
 
 
@@ -527,7 +532,7 @@ class FragmentSearch:Fragment (){
             override fun onQueryTextChange(s: String): Boolean {
                 if (TextUtils.isEmpty(s)) {
                     adapter.filter("")
-                    listView.clearTextFilter()
+//                    listView.clearTextFilter()
                 } else {
                     adapter.filter(s)
 

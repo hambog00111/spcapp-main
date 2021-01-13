@@ -20,6 +20,7 @@ import org.jetbrains.anko.toast
 import ph.Sanpablocitygov.iSanPablo.R
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.FragmentMyTaxes.rptassementhandler
 import java.io.IOException
+import java.util.concurrent.TimeUnit
 
 class BusinessTaxAssementRequest : Fragment() {
 
@@ -146,6 +147,10 @@ return view
             .build()
 
         val okHttpClient = OkHttpClient()
+        val builder = OkHttpClient.Builder()
+        builder.connectTimeout(5, TimeUnit.MINUTES) // connect timeout
+            .writeTimeout(5, TimeUnit.MINUTES) // write timeout
+            .readTimeout(5, TimeUnit.MINUTES) // read timeout
         val request = Request.Builder()
             .method("POST",formBody)
             .url("http://www.sanpablocitygov.ph/api/add_request_tax")

@@ -60,8 +60,8 @@ class ListViewAdapter(internal var mContext: Context, internal var modellist: Mu
             holder.mIconIv = view.findViewById(R.id.mainIcon) as ImageView
 //
             view.tag = holder
-
         } else {
+
             holder = view.tag as ViewHolder
         }
 
@@ -84,12 +84,17 @@ class ListViewAdapter(internal var mContext: Context, internal var modellist: Mu
         modellist.clear()
          if (charText.isEmpty()) {
          modellist.addAll(arrayList)
-            } else {
+            }
+
+         else {
                  for (model in arrayList) {
                   if (model.title.toLowerCase(Locale.getDefault())
                                 .contains(charText)) {
                     modellist.add(model)
+
+
                 }
+
             }
         }
         notifyDataSetChanged()

@@ -1565,7 +1565,7 @@ b.	PYLON International Trading Corporation or San Pablo City
     <string name="lessor_s_information">LESSOR\'S INFORMATION</string>
     <string name="telephone">Telephone</string>
     <string name="unit_s_no">Unit\'s No.</string>
-    <string name="developer_t">Developer:</string>
+    <string name="developer_t">Developers:</string>
     <string name="entries">Entries</string>
     <string name="basic_information">BASIC INFORMATION</string>
     <string name="no_of_employees_residing_within">No. of Employees Residing within:</string>
@@ -1627,7 +1627,7 @@ b.	PYLON International Trading Corporation or San Pablo City
     <string name="subdivision">Subdivision</string>
     <string name="house_no_bldg_no">House No./Bldg. No.</string>
     <string name="san_pablo_city">San Pablo City</string>
-    <string name="contact_number">Contact Number</string>
+
     <string name="unit_no">Unit No.</string>
     <string name="laguna">Laguna</string>
     <string name="business_area_in_sqm">Business Area (in SQM)</string>
@@ -1642,7 +1642,7 @@ b.	PYLON International Trading Corporation or San Pablo City
     <string name="next_page">next page</string>
     <string name="bplo_register_step_4">BPLO Register - Step 4</string>
     <string name="instruction">INSTRUCTION</string>
-    <string name="_1_provide_accurate_information_incomplete_form_will_not_be_proceed_in_the_next_step">1. Provide accurate information. Incomplete form will not be proceed in the next step.</string>
+    <string name="_1_provide_accurate_information_incomplete_form_will_not_be_proceed_in_the_next_step">1. Provide accurate information.</string>
     <string name="_2_if_the_context_is_unclickable_please_proceed_to_the_next_context_it_will_be_automatic_system_generated">2. If the context is unclickable please proceed to the next context. It will be automatic system generated.</string>
     <string name="main_business">Main Business</string>
     <string name="update">update</string>
@@ -1711,7 +1711,7 @@ b.	PYLON International Trading Corporation or San Pablo City
     <string name="payment_official_reciept_number">Payment Official Receipt Number:</string>
     <string name="o_r_number">O.R. Number</string>e
     <string name="valid_email_address">Valid Email Address:</string>
-    <string name="email_address">Email Address</string>
+
     <string name="please_enter_valid_email_address_of_the_user">*please enter valid email address of the user*</string>
     <string name="san_pablo_city_government">San Pablo City Government</string>
     <string name="my_app_online_request">MY APP ONLINE REQUEST</string>
@@ -1738,7 +1738,7 @@ b.	PYLON International Trading Corporation or San Pablo City
     <string name="city_employee_corner">City Employee Corner</string>
     <string name="service_of_record">Service of Record</string>
     <string name="copy_of_payslip">Copy of Payslip</string>
-    <string name="developed_by">Developed by:</string>
+    <string name="developed_by">Project by:</string>
     <string name="bir_online_reg_n_tin">BIR Online Registration\n (TIN)</string>
     <string name="dti_business_nregistration">DTI Business\n Registration</string>
     <string name="passport_online_app">Passport Online App</string>
@@ -1748,7 +1748,7 @@ b.	PYLON International Trading Corporation or San Pablo City
     <string name="philhealth_online_nregistration">PhilHealth Online Registration</string>
     <string name="pag_ibig_online_nregistration">Pag-ibig Online Registration</string>
     <string name="_2019_san_pablo_city_goverment">© 2019 San Pablo City Government</string>
-    <string name="developer">Developer:</string>
+    <string name="developer">Developed by:</string>
     <string name="chris_velasco">Chris Velasco</string>
     <string name="joseph_bonilla">Joseph Bonilla</string>
     <string name="san_pablo_city_hotlines">San Pablo City Hotlines</string>
@@ -1838,6 +1838,12 @@ b.	PYLON International Trading Corporation or San Pablo City
     <string name="new_business_online_fill_up_form">New Business Online Fill Up Form</string>
     <string name="download_business_application_form">Download Business Application Form</string>
     <string name="renew_online_application">Renew Online Application</string>
+    <string name="renewal">Renewal</string>
+    <string name="bplo_renew">BPLO RENEW</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="email_address">Email Address</string>
+    <string name="contact_number">Contact Number</string>
+
     <item name="btn_next" type="id"/>
 
 </resources>

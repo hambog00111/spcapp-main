@@ -30,6 +30,7 @@ import kotlinx.android.synthetic.main.update_fragment.view.*
 import ph.Sanpablocitygov.iSanPablo.R
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOProfile
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOstep1
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Renew.FragmentBPLORenew
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.BusinessTaxAssementRequest
 
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxPayment.FragmentBusinessTaxPayment
@@ -141,8 +142,15 @@ class FragmentBusinessInTheCity : Fragment() {
             }
             bploView.btn_online_renewal.setOnClickListener {
 
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.sanpablocitygov.ph/renewal"))
-                startActivity(intent)
+//                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.sanpablocitygov.ph/renewal"))
+//                startActivity(intent)
+                bploDialog.dismiss()
+                activity!!.supportFragmentManager
+                    .beginTransaction().setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
+                    .replace(R.id.frag_container, FragmentBPLORenew(), null)
+                    .addToBackStack(null)
+                    .commit()
+
             }
 
 

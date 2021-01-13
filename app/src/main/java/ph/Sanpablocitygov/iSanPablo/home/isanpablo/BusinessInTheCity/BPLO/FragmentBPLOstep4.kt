@@ -136,7 +136,7 @@ class FragmentBPLOstep4 : Fragment() {
         buttonInsertsub.setOnClickListener {
 
             if(busscate2.text.toString()=="SELECT CATEGORY"){
-                Toast.makeText(context, "Please Select Main Business Category!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Please Select Additional Business Category!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -194,23 +194,7 @@ class FragmentBPLOstep4 : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-//        val btnpass = view.findViewById<Button>(R.id.txt_bplo_submit)
-//        btnpass.setOnClickListener {
-//            activity!!.supportFragmentManager.beginTransaction().replace(
-//                R.id.frag_container,
-//                FragmentBPLOProfile() , null)
-//                .addToBackStack(null)
-//                .commit()
-//        }
 
-//      val btnpass = view.findViewById<Button>(R.id.txt_bplo_submit)
-//        btnpass.setOnClickListener {
-//              activity!!.supportFragmentManager.beginTransaction().replace(
-//              R.id.frag_container,
-//              FragmentBPLOProfile() , null)
-//               .addToBackStack(null)
-//               .commit()
-//        }
 
         getcategory()
         getcategory2()
@@ -575,23 +559,6 @@ class FragmentBPLOstep4 : Fragment() {
             capital2.setText("")
             no_unit2.setText("")
 
-//                val fname = findViewById<EditText>(R.id.f_name)
-//                val mname = findViewById<EditText>(R.id.m_name)
-//                val lname = findViewById<EditText>(R.id.l_name)
-//                val c_number = findViewById<EditText>(R.id.c_number)
-//                val birthday= findViewById<TextView>(R.id.bd)
-//                val suffix = findViewById<EditText>(R.id.suffix)
-//                val relationship = findViewById<TextView>(R.id.relationship)
-
-
-//                fname.text.clear()
-//                mname.text.clear()
-//                lname.text.clear()
-//                suffix.text.clear()
-//                c_number.text.clear()
-//                birthday.text = ""
-//                relationship.text = "Choose relationship"
-
         }
 
 
@@ -623,12 +590,6 @@ class FragmentBPLOstep4 : Fragment() {
         }
     }
 
-
-    private fun buildRecyclerView() {
-
-
-    }
-
     private fun insertItem2(
         line1: String,
         line2: String,
@@ -641,7 +602,6 @@ class FragmentBPLOstep4 : Fragment() {
         mExampleList2!!.add(FragmentBPLOStep4_model(line1, line2, line3, line4,line5))
             mAdapter2!!.notifyItemInserted(mExampleList2!!.size)
 
-      // val list2= "\"addbname : $line1\",\"addcode : $line2\",\"addsubcat: $line3\",\"addnumunit : $line4\",\"addcapital : $line5\""
 
         val list2 = "$line1;$line2;$line3;$line4;$line5"
         hh2.add(list2)
@@ -675,9 +635,7 @@ class FragmentBPLOstep4 : Fragment() {
         text?.text = hh.toString()
         text1?.text = hh.size.toString()
         for (i in hh) {
-       //    println(i)
             println(i)
-//            println("Total elements in the list by count = "+ hh.size)
             list_value!!.text=i
         }
     }
@@ -686,7 +644,6 @@ class FragmentBPLOstep4 : Fragment() {
         val text1 = view!!.findViewById<TextView>(R.id.count).text.toString()
         val list_value = view!!.findViewById<TextView>(R.id.list_value).text.toString()
         if (text1=="0"){
-            //  Toast.makeText(activity,"Only One Main line of bussiness is acquired",Toast.LENGTH_SHORT).show()
             Toast.makeText(context, fromHtml("<font color='#f74040'><b>"+"Nothing to remove"+"</b></font>"), Toast.LENGTH_SHORT).show()
 
         }else{
@@ -714,7 +671,6 @@ class FragmentBPLOstep4 : Fragment() {
         val text1 = view!!.findViewById<TextView>(R.id.addcount).text.toString()
         val list_value2 = view!!.findViewById<TextView>(R.id.list_value2).text.toString()
         if (text1=="0"){
-            //  Toast.makeText(activity,"Only One Main line of bussiness is acquired",Toast.LENGTH_SHORT).show()
             Toast.makeText(context, fromHtml("<font color='#f74040'><b>"+"Nothing to remove"+"</b></font>"), Toast.LENGTH_SHORT).show()
 
         }
@@ -738,8 +694,8 @@ class FragmentBPLOstep4 : Fragment() {
             }
 
             val count = view!!.findViewById<TextView>(R.id.addcount)
-            val item_count ="1"
-//            val minus = hh2.size.toString().toInt() - item_count.toInt()
+//            val item_count ="1"
+////            val minus = hh2.size.toString().toInt() - item_count.toInt()
               count.text= hh2.size.toString()
         }
 
@@ -1128,65 +1084,6 @@ fun submit() {
     })
 
 }
-//    //STEP 1
-//    intent.putExtra("application_type", applicationtype)
-//    intent.putExtra("modeofpayment", modeofpayment)
-//    intent.putExtra("dateapplication", dateapplication)
-//    intent.putExtra("dti_sec_cda_reg_num", dti_sec_cda_reg_num)
-//    intent.putExtra("refnum",refnum)
-//    intent.putExtra("dti_sec_cda_date_reg", dti_sec_cda_date_reg)
-//    intent.putExtra("bus_type_id", bus_type_id)
-//    intent.putExtra("tin_num", tin_num)
-//    intent.putExtra("gov_incentive", gov_incentive)
-//    intent.putExtra("mEdit_gov", mEdit_gov)
-//    intent.putExtra("cctv_equppied", cctv_equppied)
-//    intent.putExtra("mEditcctv", mEditcctv)
-//    intent.putExtra("ulastname", ulastname)
-//    intent.putExtra("ufirstname",ufirstname)
-//    intent.putExtra("umiddlename",umiddlename)
-//    intent.putExtra("ubussinessname",ubussinessname)
-//    intent.putExtra("tradename_franchise",tradename_franchise)
-//    intent.putExtra("name_of_president_t_c",name_of_president_t_c)
-//    intent.putExtra("gender",gender)
-//
-//    //STEP 2
-//    intent.putExtra("buss_address",buss_address)
-//    intent.putExtra("building_name",building_name)
-//    intent.putExtra("street",street)
-//    intent.putExtra("brgy_step2",brgy_step2)
-//    intent.putExtra("sub_step2",sub_step2)
-//    intent.putExtra("house_no",house_no)
-//    intent.putExtra("city_step2",city_step2)
-//    intent.putExtra("contact_step2",contact_step2)
-//    intent.putExtra("unit_no_step2",unit_no_step2)
-//    intent.putExtra("province_step2",province_step2)
-//    intent.putExtra("pin_step2",pin_step2)
-//    intent.putExtra("email_address_step2",email_address_step2)
-//
-//    //STEP 3
-//    intent.putExtra("sqm_step3",sqm_step3)
-//    intent.putExtra("total_male_step3",total_male_step3)
-//    intent.putExtra("nummale",nummale)
-//    intent.putExtra("numfemale",numfemale)
-//    intent.putExtra("unit_vehicle",unit_vehicle)
-//    intent.putExtra("totalnum",totalnum)
-//    //rented data pass
-//    intent.putExtra("lastname_step3",lastname_step3)
-//    intent.putExtra("firstname_step3",firstname_step3)
-//    intent.putExtra("middle_step3",middle_step3)
-//    intent.putExtra("full_add_step3",full_add_step3)
-//    intent.putExtra("monthly_rental_step3",monthly_rental_step3)
-//    intent.putExtra("house_no_step3",house_no_step3)
-//    intent.putExtra("brgy_step3",brgy_step3)
-//    intent.putExtra("sub_step3",sub_step3)
-//    intent.putExtra("street_step3",street_step3)
-//    intent.putExtra("city_step3",city_step3)
-//    intent.putExtra("province_step3",province_step3)
-//    intent.putExtra("mobile_step3",mobile_step3)
-//    intent.putExtra("telephone_step3",telephone_step3)
-//    intent.putExtra("email_step3",email_step3)
-
-
 
 }
 
