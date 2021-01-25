@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO
 
 import android.annotation.SuppressLint
@@ -27,6 +29,7 @@ import java.util.concurrent.TimeUnit
 import kotlin.random.Random
 
 
+@Suppress("DEPRECATION", "NAME_SHADOWING", "NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class FragmentBPLOstep4 : Fragment() {
 
     val hh = ArrayList<String>()
@@ -53,20 +56,20 @@ class FragmentBPLOstep4 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.bc_bplo_fillup_step4_fragment, null)
         val buttonInsert = view!!.findViewById<Button>(R.id.btn_business_add)
-        val buttonremove = view!!.findViewById<Button>(R.id.btn_business_remove)
-        val buttonremove2 = view!!.findViewById<Button>(R.id.btn_addbusiness_remove)
-        val buttonInsertsub = view!!.findViewById<Button>(R.id.btn_addbusiness_add)
-        val buttonExecute = view!!.findViewById<Button>(R.id.txt_bplo_submit)
-        val busscate = view!!.findViewById<TextView>(R.id.busline_category)
-        val subccate = view!!.findViewById<EditText>(R.id.subcategory_step4)
-        val capital = view!!.findViewById<EditText>(R.id.capital_step4)
+        val buttonremove = view.findViewById<Button>(R.id.btn_business_remove)
+        val buttonremove2 = view.findViewById<Button>(R.id.btn_addbusiness_remove)
+        val buttonInsertsub = view.findViewById<Button>(R.id.btn_addbusiness_add)
+        val buttonExecute = view.findViewById<Button>(R.id.txt_bplo_submit)
+        val busscate = view.findViewById<TextView>(R.id.busline_category)
+        val subccate = view.findViewById<EditText>(R.id.subcategory_step4)
+        val capital = view.findViewById<EditText>(R.id.capital_step4)
 
-        val busscate2 = view!!.findViewById<TextView>(R.id.addbusline_category)
-        val subccate2 = view!!.findViewById<EditText>(R.id.addsubcategory_step4)
-        val capital2 = view!!.findViewById<EditText>(R.id.addcapital_step4)
+        val busscate2 = view.findViewById<TextView>(R.id.addbusline_category)
+        val subccate2 = view.findViewById<EditText>(R.id.addsubcategory_step4)
+        val capital2 = view.findViewById<EditText>(R.id.addcapital_step4)
         //step 1 data hold
 
-        val text = view!!.findViewById<TextView>(R.id.text_1)
+        val text = view.findViewById<TextView>(R.id.text_1)
 
 
         loadData()
@@ -166,12 +169,12 @@ class FragmentBPLOstep4 : Fragment() {
         }
 //        buildRecyclerView()
 
-        val mRecyclerView =view!!.findViewById<RecyclerView>(R.id.recyclerview)
+        val mRecyclerView =view.findViewById<RecyclerView>(R.id.recyclerview)
         mRecyclerView!!.setHasFixedSize(true)
         mLayoutManager = LinearLayoutManager(context)
         mAdapter = FragmentBPLOstep4_Adapter(requireContext(),mExampleList)
-        mRecyclerView!!.layoutManager = mLayoutManager
-        mRecyclerView!!.adapter = mAdapter
+        mRecyclerView.layoutManager = mLayoutManager
+        mRecyclerView.adapter = mAdapter
 
 
 //        mRecyclerView.setOnClickListener {
@@ -179,7 +182,7 @@ class FragmentBPLOstep4 : Fragment() {
 //
 //        }
 
-        val mRecyclerView2 =view?.findViewById<RecyclerView>(R.id.add_recyclerview)
+        val mRecyclerView2 =view.findViewById<RecyclerView>(R.id.add_recyclerview)
         mRecyclerView2.setHasFixedSize(true)
         addLayoutManager = LinearLayoutManager(context)
         mAdapter2 = FragmentBPLOstep4_Adapter(requireContext(),mExampleList2)
@@ -209,8 +212,8 @@ class FragmentBPLOstep4 : Fragment() {
         pdLoading.show()
 
         val okHttpClient = OkHttpClient()
-        val formBody: RequestBody = FormBody.Builder()
-            .build()
+//        val formBody: RequestBody = FormBody.Builder()
+//            .build()
 
         val request = Request.Builder()
             //.method("GET", formBody)
@@ -242,7 +245,7 @@ class FragmentBPLOstep4 : Fragment() {
                     brgylistmain.add(i)
                 }
 
-                activity!!.runOnUiThread(java.lang.Runnable {
+                activity!!.runOnUiThread {
 
                     var spinner: Spinner? = null
                     spinner = activity!!.spinner_linebuss_step4
@@ -260,10 +263,11 @@ class FragmentBPLOstep4 : Fragment() {
                             getbrgyforsub(data)
 
                         }
+
                         override fun onNothingSelected(parent: AdapterView<*>?) {
                         }
                     }
-                })
+                }
             }
 
             private fun getbrgyforsub(data: busline_holder) {
@@ -303,7 +307,7 @@ class FragmentBPLOstep4 : Fragment() {
                             brgylistmain.add(i)
                         }
 
-                        activity!!.runOnUiThread(java.lang.Runnable {
+                        activity!!.runOnUiThread {
                             var spinner: Spinner? = null
                             spinner = activity!!.spinner_subcate_step4
                             spinner!!.onItemSelectedListener
@@ -315,11 +319,12 @@ class FragmentBPLOstep4 : Fragment() {
                                     getsubcategory(data)
 
                                 }
+
                                 override fun onNothingSelected(parent: AdapterView<*>?) {
 
                                 }
                             }
-                        })
+                        }
                     }
 
                     private fun getsubcategory(data: buss_handler) {
@@ -445,7 +450,7 @@ class FragmentBPLOstep4 : Fragment() {
 //                ).show()
 //                return@setOnClickListener
 //            }
-            val text1 = view!!.findViewById<TextView>(R.id.count).text.toString()
+           // val text1 = view!!.findViewById<TextView>(R.id.count).text.toString()
 
             val count= hh.size.toString()
             if (count=="1"){
@@ -648,7 +653,7 @@ class FragmentBPLOstep4 : Fragment() {
 
         }else{
 
-            val index = Random.nextInt(1)
+         //   val index = Random.nextInt(1)
             val lastIndex = mExampleList!!.size -1
             mExampleList!!.removeAt(lastIndex)
             mAdapter!!.notifyItemRemoved(lastIndex)
@@ -677,7 +682,7 @@ class FragmentBPLOstep4 : Fragment() {
 
         else{
 
-            val index = Random.nextInt(1)
+          //  val index = Random.nextInt(1)
             val lastIndex = mExampleList2!!.size -1
             mExampleList2!!.removeAt(lastIndex)
             mAdapter2!!.notifyItemRemoved(lastIndex)
@@ -710,8 +715,8 @@ class FragmentBPLOstep4 : Fragment() {
         pdLoading.show()
 
         val okHttpClient = OkHttpClient()
-        val formBody: RequestBody = FormBody.Builder()
-            .build()
+//        val formBody: RequestBody = FormBody.Builder()
+//            .build()
 
         val request = Request.Builder()
             //.method("GET", formBody)
@@ -745,7 +750,7 @@ class FragmentBPLOstep4 : Fragment() {
                     brgylistmain.add(i)
                 }
 
-                activity!!.runOnUiThread(java.lang.Runnable {
+                activity!!.runOnUiThread {
 
 
                     var spinner: Spinner? = null
@@ -764,10 +769,11 @@ class FragmentBPLOstep4 : Fragment() {
                             getbrgyforsub(data)
 
                         }
+
                         override fun onNothingSelected(parent: AdapterView<*>?) {
                         }
                     }
-                })
+                }
             }
 
             private fun getbrgyforsub(data: busline_holder) {
@@ -807,23 +813,23 @@ class FragmentBPLOstep4 : Fragment() {
                             brgylistmain.add(i)
                         }
 
-                        activity!!.runOnUiThread(java.lang.Runnable {
-                            var spinner: Spinner? = null
-                            spinner = activity!!.spinner_addsubcate_step4
+                        activity!!.runOnUiThread {
+                            val spinner: Spinner? = activity!!.spinner_addsubcate_step4
                             spinner!!.onItemSelectedListener
                             val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, brgylistmain)
-                            spinner!!.adapter = adapter
-                            spinner!!.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                            spinner.adapter = adapter
+                            spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                                 override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                                     val data = parent.selectedItem as buss_handler
                                     getsubcategory(data)
 
                                 }
+
                                 override fun onNothingSelected(parent: AdapterView<*>?) {
 
                                 }
                             }
-                        })
+                        }
                     }
 
                     private fun getsubcategory(data: buss_handler) {
@@ -848,7 +854,7 @@ fun submit() {
     pdLoading.setMessage("\tLoading...")
     pdLoading.setCancelable(false)
     pdLoading.show()
-    val ubussline = view!!.findViewById<TextView>(R.id.text1).text.toString()
+
 
     val intent = activity!!.intent
     val applicationtype = (  activity!!.intent as Intent).getStringExtra("application_type")

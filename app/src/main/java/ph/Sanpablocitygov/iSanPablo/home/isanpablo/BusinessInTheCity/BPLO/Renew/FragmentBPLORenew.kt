@@ -52,18 +52,18 @@ class FragmentBPLORenew  : Fragment() {
 
         //additional sub id
         val busscate2 = view!!.findViewById<TextView>(R.id.addbusline_category_renew)
-        val subccate2 = view!!.findViewById<EditText>(R.id.addsubcategory_renew)
-        val capital2 = view!!.findViewById<EditText>(R.id.addcapital_renew)
-        val buttonInsertsub = view!!.findViewById<Button>(R.id.btn_addbusiness_add_renew)
-        val buttonremove = view!!.findViewById<Button>(R.id.btn_addbusiness_remove_renew)
-        val buttonsubmit = view!!.findViewById<Button>(R.id.btn_renew_submit)
+        val subccate2 = view.findViewById<EditText>(R.id.addsubcategory_renew)
+        val capital2 = view.findViewById<EditText>(R.id.addcapital_renew)
+        val buttonInsertsub = view.findViewById<Button>(R.id.btn_addbusiness_add_renew)
+        val buttonremove = view.findViewById<Button>(R.id.btn_addbusiness_remove_renew)
+        val buttonsubmit = view.findViewById<Button>(R.id.btn_renew_submit)
 
 
 
         getcategory()
         loadData()
 
-        val mRecyclerView2 =view!!.findViewById<RecyclerView>(R.id.add_recyclerview)
+        val mRecyclerView2 =view.findViewById<RecyclerView>(R.id.add_recyclerview)
         mRecyclerView2.setHasFixedSize(true)
         addLayoutManager = LinearLayoutManager(context)
         mAdapter2 = Fragment_Renew_Adapter(requireContext(),mExampleList2)

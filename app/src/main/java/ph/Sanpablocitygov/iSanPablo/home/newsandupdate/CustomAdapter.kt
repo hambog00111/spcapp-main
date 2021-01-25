@@ -20,7 +20,7 @@ class CustomAdapter(private val context: Context, private val dataList: ArrayLis
 
     @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        var dataitem = dataList[position]
+        val dataitem = dataList[position]
 
 
 

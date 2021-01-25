@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO
 
 
@@ -25,24 +27,20 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
+@Suppress("NAME_SHADOWING", "DEPRECATION")
 class FragmentBPLOstep1 : Fragment() {
-    class buss_type( val id : String ,
-                      val kod : String)
+    class buss_type( val id : String , val kod : String)
 
     class buss_handler(val kodname : String ,val kodid : String){ override fun toString(): String { return kodname } }
 
     private var mDateSetListener: DatePickerDialog.OnDateSetListener? = null
 
-    @SuppressLint("InflateParams", "NewApi")
+    @SuppressLint("InflateParams", "NewApi", "SetTextI18n")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.bc_bplo_fillup_step1_fragment, null)
 
-         val date_of_reg = view!!.findViewById<EditText>(R.id.txt_bplo_date_dti_registration)
-        val setdate = view!!.findViewById<EditText>(R.id.txt_bplo_date_application)
-//        val current = LocalDateTime.now()
-//        val formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy")
-//        val formatted = current.format(formatter)
-//        setdate!!.setText(formatted)
+        val date_of_reg = view!!.findViewById<EditText>(R.id.txt_bplo_date_dti_registration)
+        val setdate = view.findViewById<EditText>(R.id.txt_bplo_date_application)
         val currentDate = DateTime()
         setdate.setText(currentDate)
         reference()
@@ -50,7 +48,7 @@ class FragmentBPLOstep1 : Fragment() {
 
 
 
-        //val refnum1 =view!!.findViewById<TextView>(R.id.refnums).text.toString()
+
         //gov taxt incentive id
         val gov_incentive =view.findViewById<TextView>(R.id.tax_incentives)
         val mEdit_gov =view.findViewById<EditText>(R.id.txt_bplo_government_entity)
@@ -63,7 +61,7 @@ class FragmentBPLOstep1 : Fragment() {
         val gender =view.findViewById<TextView>(R.id.gender)
 
         // gov incentive enjoying function
-        val gov_tax_incentive = view!!.findViewById<RadioGroup>(R.id.rg_bplo_government_entity)
+        val gov_tax_incentive = view.findViewById<RadioGroup>(R.id.rg_bplo_government_entity)
         gov_incentive.text="no"
         mEdit_gov.isEnabled = false
 
@@ -84,7 +82,7 @@ class FragmentBPLOstep1 : Fragment() {
         }
 
            // cctv function
-        val cctv = view!!.findViewById<RadioGroup>(R.id.rg_bplo_cctv)
+        val cctv = view.findViewById<RadioGroup>(R.id.rg_bplo_cctv)
 
         cctv_equppied.text="no"
         mEditcctv.isEnabled = false
@@ -95,13 +93,13 @@ class FragmentBPLOstep1 : Fragment() {
             }
             if (checkedId==R.id.rb_cctv_no){
                 cctv_equppied.text="no"
-
+                mEditcctv.setText("")
                 mEditcctv.isEnabled = false
             }
         }
 
         // gender selection
-        val gender_selection = view!!.findViewById<RadioGroup>(R.id.rg_bplo_name_of_taxpayer_owners_gender)
+        val gender_selection = view.findViewById<RadioGroup>(R.id.rg_bplo_name_of_taxpayer_owners_gender)
 
         gender_selection.setOnCheckedChangeListener{ _, checkedId ->
             if (checkedId==R.id.rb_bplo_name_of_tax_payer_male){
@@ -154,20 +152,16 @@ class FragmentBPLOstep1 : Fragment() {
         pdLoading.show()
 
         val okHttpClient = OkHttpClient()
-        val formBody: RequestBody = FormBody.Builder()
-            .build()
-
         val request = Request.Builder()
-            //.method("GET", formBody)
             .url("http://www.sanpablocitygov.ph/api/getOrganization")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 pdLoading.dismiss()
-                activity!!.runOnUiThread(java.lang.Runnable {
+                activity!!.runOnUiThread {
                     println(e)
                     activity!!.toast("Unable to connect to the server please try again later")
-                })
+                }
             }
 
             @SuppressLint("ShowToast", "SetTextI18n")
@@ -177,25 +171,24 @@ class FragmentBPLOstep1 : Fragment() {
                 val gson = Gson()
                 println(body)
                 val list = gson.fromJson(body, Array<buss_type>::class.java).toList()
-                val brgylistmain: MutableList<buss_handler> = ArrayList()
+                val bus_type_spinner: MutableList<buss_handler> = ArrayList()
 
 
 
                 val i =  buss_handler("Select Type", "0" )
-                brgylistmain.add(i)
+                bus_type_spinner.add(i)
 
                 for (entry in list) {
                     val i =  buss_handler(entry.kod,entry.id )
-                    brgylistmain.add(i)
+                    bus_type_spinner.add(i)
                 }
 
-                activity!!.runOnUiThread(java.lang.Runnable {
+                activity!!.runOnUiThread {
 
 
-                    var spinner: Spinner? = null
-                    spinner = activity!!.spinner_bplo_association
+                    val spinner: Spinner? = activity!!.spinner_bplo_association
                     spinner!!.onItemSelectedListener
-                    val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, brgylistmain)
+                    val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, bus_type_spinner)
 
 
                     spinner.adapter = adapter
@@ -212,13 +205,13 @@ class FragmentBPLOstep1 : Fragment() {
 
                         }
                     }
-                })
+                }
 
             }
 
             //
             private fun getbrgyforsub(data: buss_handler) {
-                val spinner1id = view!!.findViewById<TextView>(R.id.type_bus)
+                val spinner1id = view.findViewById<TextView>(R.id.type_bus)
                 spinner1id.text = data.kodid
 
             }
@@ -226,7 +219,7 @@ class FragmentBPLOstep1 : Fragment() {
         return view
     }
 
-    fun reference(){
+    private fun reference(){
 
         val pdLoading = ProgressDialog(requireContext())
         pdLoading.setMessage("\tLoading...")
@@ -254,14 +247,11 @@ class FragmentBPLOstep1 : Fragment() {
 
                 val Reference = gson.fromJson(body,BPLOSTEP1_HANDLER::class.java)
                 println(body)
-                activity!!.runOnUiThread(java.lang.Runnable {
+                activity!!.runOnUiThread {
                     val refnum = view!!.findViewById<EditText>(R.id.txt_bplo_ref_number)
-
-                    //val refnum1 =view!!.findViewById<TextView>(R.id.refnums)
-                   // refnum1.text="${Reference.ref}"
                     refnum.setText(Reference.ref)
 
-                })
+                }
             }
         })
     }
@@ -291,31 +281,13 @@ class FragmentBPLOstep1 : Fragment() {
         val tradename_franchise =view!!.findViewById<EditText>(R.id.txt_bplo_name_of_taxpayer_trade_name).text.toString()
         val gender =view!!.findViewById<TextView>(R.id.gender)
 
-//        if (dti_sec_cda_reg_num.trim { it <= ' ' }.isEmpty()) {
-//            Toast.makeText(activity, "Please enter DTI/SEC/CDA Registration No!", Toast.LENGTH_SHORT).show()
-//
-//            return
-//        }
 
-
-//        if (dti_sec_cda_date_reg.trim { it <= ' ' }.isEmpty()) {
-//            Toast.makeText(activity, "Please Select DTI/SEC/CDA Date of Registration!", Toast.LENGTH_SHORT).show()
-//
-//            return
-//        }
 
         if (bus_type_id=="0") {
             Toast.makeText(activity, "Please Select Business Type!", Toast.LENGTH_SHORT).show()
 
             return
         }
-
-//        if (tin_num.trim { it <= ' ' }.isEmpty()) {
-//            Toast.makeText(activity, "Please enter your TIN No!", Toast.LENGTH_SHORT).show()
-//
-//            return
-//        }
-
 
 
         if(gov_incentive=="yes"){
@@ -324,13 +296,11 @@ class FragmentBPLOstep1 : Fragment() {
 
                 return
             }
-
         }
 
         if(cctv_equppied=="yes"){
             if (mEditcctv.text.toString().trim { it <= ' ' }.isEmpty()) {
                 Toast.makeText(activity, "Please Enter the number of your cctv!", Toast.LENGTH_SHORT).show()
-
                 return
             }
 
@@ -395,6 +365,7 @@ class FragmentBPLOstep1 : Fragment() {
     }
 
 
+    @SuppressLint("SimpleDateFormat")
     private fun DateTime():String {
         val c = Calendar.getInstance().time
         val df = SimpleDateFormat("MM/dd/yyyy")

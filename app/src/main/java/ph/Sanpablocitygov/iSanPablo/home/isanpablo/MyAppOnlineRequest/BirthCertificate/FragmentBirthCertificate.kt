@@ -27,6 +27,7 @@ import java.io.IOException
 import java.util.*
 import java.util.concurrent.TimeUnit
 
+@Suppress("NAME_SHADOWING")
 class FragmentBirthCertificate : Fragment(){
     private var mDateSetListener: DatePickerDialog.OnDateSetListener? = null
     private var mDateSetListener2: DatePickerDialog.OnDateSetListener? = null

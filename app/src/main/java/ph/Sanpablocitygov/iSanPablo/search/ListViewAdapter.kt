@@ -58,7 +58,7 @@ class ListViewAdapter(internal var mContext: Context, internal var modellist: Mu
             //locate the views in row.xml
             holder.mTitleTv = view.findViewById <TextView>(R.id.mainTitle) as TextView
             holder.mIconIv = view.findViewById(R.id.mainIcon) as ImageView
-//
+
             view.tag = holder
         } else {
 

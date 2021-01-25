@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO
 
 import android.annotation.SuppressLint
@@ -18,10 +20,10 @@ import ph.Sanpablocitygov.iSanPablo.R
 import java.io.IOException
 
 
+@Suppress("NAME_SHADOWING")
 class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
 
-    class brgyholder( val location_barangay_id : String ,
-                      val barangay_name : String)
+    class brgyholder( val location_barangay_id : String , val barangay_name : String)
 
 
     class brgyhandler(val kodname : String ,val kodid : String){ override fun toString(): String { return kodname } }
@@ -78,7 +80,6 @@ class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
         val email_address_step2=view.findViewById<EditText>(R.id.txt_bplo_business_info_email_address)
 
 
-//        Toast.makeText(activity!!,applicationtype,Toast.LENGTH_SHORT).show()
 
         val btnnext = view.findViewById<Button>(R.id.txt_bplo_next_page)
         btnnext.setOnClickListener {
@@ -112,15 +113,6 @@ class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
 
             }
 
-//            if (email_address_step2.text.toString().trim { it <= ' ' }.isEmpty()) {
-//                Toast.makeText(activity, "Please enter your Email Address!", Toast.LENGTH_SHORT).show()
-//                return@setOnClickListener
-//            }
-//
-//            else if (!Patterns.EMAIL_ADDRESS.matcher(email_address_step2.text.toString()).matches()) {
-//                Toast.makeText(activity, "Please enter a valid email address", Toast.LENGTH_SHORT).show()
-//                return@setOnClickListener
-//            }
 
             else {
 
@@ -183,20 +175,18 @@ class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
         pdLoading.show()
 
         val okHttpClient = OkHttpClient()
-        val formBody: RequestBody = FormBody.Builder()
-            .build()
 
         val request = Request.Builder()
-            //.method("GET", formBody)
+
             .url("http://www.sanpablocitygov.ph/api/getBarangay")
             .build()
         okHttpClient.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 pdLoading.dismiss()
-                activity!!.runOnUiThread(java.lang.Runnable {
+                activity!!.runOnUiThread {
                     println(e)
-                   activity!!.toast("Unable to connect to the server please try again later")
-                })
+                    activity!!.toast("Unable to connect to the server please try again later")
+                }
             }
 
             @SuppressLint("ShowToast", "SetTextI18n")
@@ -218,11 +208,10 @@ class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
                     brgylistmain.add(i)
                 }
 
-                activity!!.runOnUiThread(java.lang.Runnable {
+                activity!!.runOnUiThread {
 
 
-                    var spinner: Spinner? = null
-                    spinner = activity!!.spinner_barangay
+                    val spinner: Spinner? = activity!!.spinner_barangay
                     spinner!!.onItemSelectedListener
                     val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, brgylistmain)
 
@@ -242,7 +231,7 @@ class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
 
                         }
                     }
-                })
+                }
 
             }
 
@@ -262,10 +251,10 @@ class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
                     .build()
                 okHttpClient.newCall(request).enqueue(object : Callback {
                     override fun onFailure(call: Call, e: IOException) {
-                        activity!!.runOnUiThread(java.lang.Runnable {
+                        activity!!.runOnUiThread {
                             println(e)
-                           activity!!.toast("Unable to connect to the server please try again later")
-                        })
+                            activity!!.toast("Unable to connect to the server please try again later")
+                        }
                     }
 
                     @SuppressLint("ShowToast", "SetTextI18n")
@@ -293,12 +282,10 @@ class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
                         }
 
 
-                        activity!!.runOnUiThread(java.lang.Runnable {
-
-                            var spinnersub:Spinner? = null
+                        activity!!.runOnUiThread {
 
 
-                            spinnersub = activity!!.spinner_sub
+                            val spinnersub: Spinner? = activity!!.spinner_sub
                             spinnersub!!.onItemSelectedListener
 
                             val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, sublistmain)
@@ -313,13 +300,14 @@ class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
                                     getsub(data2)
 
                                 }
+
                                 override fun onNothingSelected(parent: AdapterView<*>?) {
 
 
                                 }
                             }
 
-                        })
+                        }
 
                     }
                 })

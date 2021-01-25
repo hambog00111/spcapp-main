@@ -27,11 +27,14 @@ import android.widget.Button
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.bc_bplo_dialogbox.view.*
 import kotlinx.android.synthetic.main.main_full_disclosure_dialogbox.view.*
 import kotlinx.android.synthetic.main.update_fragment.view.*
 import ph.Sanpablocitygov.iSanPablo.OurGovernment.FragmentOurGoverment
 import ph.Sanpablocitygov.iSanPablo.home.FragmentHome
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOonline
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOstep1
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Renew.FragmentBPLORenew
 import ph.Sanpablocitygov.iSanPablo.links.*
 
 import ph.Sanpablocitygov.iSanPablo.tourism.FragmentTourism
@@ -652,15 +655,99 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.nav_bplo ->{
 
-                val mybus = LayoutInflater.from(this).inflate(R.layout.update_fragment, null)
+//                val mybus = LayoutInflater.from(this).inflate(R.layout.update_fragment, null)
+//
+//                val mybusBuilder = AlertDialog.Builder(this)
+//                    .setView(mybus)
+//                mybusBuilder.setCancelable(false)
+//                val mybusDialog = mybusBuilder.show()
+//
+//                mybus.txt_confirm_update.setOnClickListener {
+//                    mybusDialog.dismiss()
+//                }
 
-                val mybusBuilder = AlertDialog.Builder(this)
-                    .setView(mybus)
-                mybusBuilder.setCancelable(false)
-                val mybusDialog = mybusBuilder.show()
+                val bploView = LayoutInflater.from(this).inflate(R.layout.bc_bplo_dialogbox, null)
 
-                mybus.txt_confirm_update.setOnClickListener {
-                    mybusDialog.dismiss()
+                val bplobBuilder = AlertDialog.Builder(this)
+                    .setView(bploView)
+                bplobBuilder.setCancelable(false)
+                val bploDialog = bplobBuilder.show()
+
+                bploView.btn_download_bplo.setOnClickListener {
+                    bploDialog.dismiss()
+                    val str = "Would you like to download this document?"
+                    val builder = AlertDialog.Builder(this)
+                    with(builder) {
+                        setMessage(str)
+                        setTitle("Download BPLO Form")
+//                        setPositiveButton("OK")
+//                        { _, _ ->  val downloadManager: DownloadManager = getSystemService(this.toString(), DownloadManager::class.java) as DownloadManager
+//                            val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/BUSINESS%20PERMIT%20APPLICATION%20FORM.docx")
+//                            val request = DownloadManager.Request(uri)
+//                            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+//                            downloadManager.enqueue(request)  }
+//                        setNegativeButton("CANCEL", null)
+//                    }
+//                    val alertDialog = builder.create()
+//                    alertDialog.setCancelable(false)
+//                    alertDialog.show()
+
+                        setPositiveButton("OK"
+                        ) { _, _ ->  val downloadManager: DownloadManager = ContextCompat.getSystemService(
+                            this@MainActivity,
+                            DownloadManager::class.java) as DownloadManager
+                            val uri = Uri.parse("http://www.sanpablocitygov.ph/docs/BUSINESS%20PERMIT%20APPLICATION%20FORM.docx")
+                            val request = DownloadManager.Request(uri)
+                            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                            downloadManager.enqueue(request)  }
+                        setNegativeButton("CANCEL", null)
+                    }
+                    val alertDialog = builder.create()
+                    alertDialog.setCancelable(false)
+                    alertDialog.show()
+                }
+
+
+
+                bploView.btn_online_bplo.setOnClickListener {
+                    bploDialog.dismiss()
+//                val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+//
+//                val mybusBuilder = AlertDialog.Builder(requireContext())
+//                    .setView(mybus)
+//                mybusBuilder.setCancelable(false)
+//                val mybusDialog = mybusBuilder.show()
+//
+//                mybus.txt_confirm_update.setOnClickListener {
+//                    mybusDialog.dismiss()
+//                }
+
+                    supportFragmentManager
+                        .beginTransaction().setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
+                        .replace(R.id.frag_container, FragmentBPLOstep1(), null)
+                        .addToBackStack(null)
+                        .commit()
+
+
+                }
+                bploView.btn_online_renewal.setOnClickListener {
+
+//                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.sanpablocitygov.ph/renewal"))
+//                startActivity(intent)
+                    bploDialog.dismiss()
+                    supportFragmentManager
+                        .beginTransaction().setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
+                        .replace(R.id.frag_container, FragmentBPLORenew(), null)
+                        .addToBackStack(null)
+                        .commit()
+
+                }
+
+
+
+
+                bploView.btn_bplo_cancel.setOnClickListener {
+                    bploDialog.dismiss()
                 }
 
 //                supportFragmentManager.beginTransaction().replace(

@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO
 
 import android.annotation.SuppressLint
@@ -18,6 +20,7 @@ import org.jetbrains.anko.toast
 import ph.Sanpablocitygov.iSanPablo.R
 import java.io.IOException
 
+@Suppress("DEPRECATION", "NAME_SHADOWING")
 class FragmentBPLOstep3 : Fragment() {
     class brgyholder( val location_barangay_id : String ,
                       val barangay_name : String)
@@ -80,9 +83,9 @@ class FragmentBPLOstep3 : Fragment() {
         val mobile_step3 = view.findViewById<EditText>(R.id.mobile_bplo_step3)
         val telephone_step3 = view.findViewById<EditText>(R.id.telephone_bplo_step3)
         val email_step3 = view.findViewById<EditText>(R.id.Email_bplo_step3)
-        val subs2 = view.findViewById<TextView>(R.id.sub2_step3)
-        val spinner_brgy2 =view.findViewById<Spinner>(R.id.spinner2_brgy_step3)
-        val spinner_sub2 =view.findViewById<Spinner>(R.id.spinner2_sub_step3)
+//        val subs2 = view.findViewById<TextView>(R.id.sub2_step3)
+//        val spinner_brgy2 =view.findViewById<Spinner>(R.id.spinner2_brgy_step3)
+//        val spinner_sub2 =view.findViewById<Spinner>(R.id.spinner2_sub_step3)
 
 
         //step 1 data hold
@@ -120,18 +123,18 @@ class FragmentBPLOstep3 : Fragment() {
         val  pin_step2 = intent.getStringExtra("pin_step2")
         val email_address_step2 =intent.getStringExtra("email_address_step2")
 
-        val rented = view!!.findViewById<RadioGroup>(R.id.rg_bplo_owner_info_rented)
+        val rented = view.findViewById<RadioGroup>(R.id.rg_bplo_owner_info_rented)
 
         rented.setOnCheckedChangeListener{ _, checkedId ->
             if (checkedId==R.id.rb_bplo_owner_info_rented_yes){
-                val lin = view!!.findViewById<CardView>(R.id.card_step3)
+                val lin = view.findViewById<CardView>(R.id.card_step3)
                 lin.visibility = View.VISIBLE
                 rent_val.text="yes"
                 // Toast.makeText(activity!!,"yes",Toast.LENGTH_SHORT).show()
             }
 
             if (checkedId==R.id.rb_bplo_owner_info_rented_no){
-                val lin = view!!.findViewById<CardView>(R.id.card_step3)
+                val lin = view.findViewById<CardView>(R.id.card_step3)
                 lin.visibility = View.GONE
                 rent_val.text="no"
                 // Toast.makeText(activity!!,"no",Toast.LENGTH_SHORT).show()
@@ -596,8 +599,8 @@ class FragmentBPLOstep3 : Fragment() {
         pdLoading.show()
 
         val okHttpClient = OkHttpClient()
-        val formBody: RequestBody = FormBody.Builder()
-            .build()
+//        val formBody: RequestBody = FormBody.Builder()
+//            .build()
 
         val request = Request.Builder()
             //.method("GET", formBody)
@@ -631,7 +634,7 @@ class FragmentBPLOstep3 : Fragment() {
                     brgylistmain.add(i)
                 }
 
-                activity!!.runOnUiThread(java.lang.Runnable {
+                activity!!.runOnUiThread {
 
 
                     var spinner: Spinner? = null
@@ -655,7 +658,7 @@ class FragmentBPLOstep3 : Fragment() {
 
                         }
                     }
-                })
+                }
 
             }
 
@@ -707,7 +710,7 @@ class FragmentBPLOstep3 : Fragment() {
                         }
 
 
-                        activity!!.runOnUiThread(java.lang.Runnable {
+                        activity!!.runOnUiThread {
                             var spinnersub:Spinner? = null
 
                             spinnersub = activity!!.spinner2_sub_step3
@@ -725,13 +728,14 @@ class FragmentBPLOstep3 : Fragment() {
                                     getsub(data2)
 
                                 }
+
                                 override fun onNothingSelected(parent: AdapterView<*>?) {
 
 
                                 }
                             }
 
-                        })
+                        }
 
                     }
                 })
