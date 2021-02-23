@@ -1843,6 +1843,9 @@ b.	PYLON International Trading Corporation or San Pablo City
     <string name="contact_information">Contact Information</string>
     <string name="email_address">Email Address</string>
     <string name="contact_number">Contact Number</string>
+    <string name="reference_number">Reference Number</string>
+    <string name="business_identification_number_bin">Business Identification Number(BIN)</string>
+
 
     <item name="btn_next" type="id"/>
 

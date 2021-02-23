@@ -637,8 +637,7 @@ class FragmentBPLOstep3 : Fragment() {
                 activity!!.runOnUiThread {
 
 
-                    var spinner: Spinner? = null
-                    spinner = activity!!.spinner2_brgy_step3
+                    val spinner: Spinner? = activity!!.spinner2_brgy_step3
                     spinner!!.onItemSelectedListener
                     val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, brgylistmain)
 
@@ -711,9 +710,8 @@ class FragmentBPLOstep3 : Fragment() {
 
 
                         activity!!.runOnUiThread {
-                            var spinnersub:Spinner? = null
 
-                            spinnersub = activity!!.spinner2_sub_step3
+                            val spinnersub: Spinner? = activity!!.spinner2_sub_step3
                             spinnersub!!.onItemSelectedListener
 
                             val adapter = ArrayAdapter(activity!!, android.R.layout.simple_spinner_item, sublistmain)

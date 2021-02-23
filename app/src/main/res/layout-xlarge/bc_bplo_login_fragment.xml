@@ -4,9 +4,9 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:gravity="center">
 
     <LinearLayout
             android:id="@+id/linearLayout3"
@@ -15,6 +15,7 @@
             android:background="@color/colorPrimary"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -27,8 +28,8 @@
 
     <LinearLayout
             android:id="@+id/linearLayout4"
-            android:layout_width="135dp"
-            android:layout_height="135dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:background="@drawable/circle_back"
             android:forceHasOverlappingRendering="true"
             android:gravity="center"
@@ -41,8 +42,8 @@
             tools:ignore="UnusedAttribute">
 
         <ImageView
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:layout_margin="5dp"
                 app:srcCompat="@drawable/logo_home_mysanpablo"
                 tools:ignore="ContentDescription" />
@@ -50,10 +51,17 @@
     </LinearLayout>
 
     <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/token"
+            tools:ignore="MissingConstraints">
+    </TextView>
+    <TextView
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="80dp"
             android:paddingStart="30dp"
             android:text="@string/login"
             android:textColor="@color/colorPrimary"
@@ -105,10 +113,10 @@
 
                     <EditText
                             android:id="@+id/txt_bplo_username_login"
-                            android:layout_width="320dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
-                            android:hint="Username"
+                            android:hint="@string/business_identification_number_bin"
                             android:inputType="text"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/darkgray"
@@ -133,60 +141,59 @@
 
                     <EditText
                             android:id="@+id/txt_bplo_password_login"
-                            android:layout_width="320dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
-                            android:hint="@string/password"
+                            android:hint="Password"
                             android:inputType="textPassword"
                             android:textColor="@color/darkgray"
                             android:textColorHint="@color/darkgray"
                             android:textSize="20sp"
-                            tools:ignore="Autofill" />
+                            tools:ignore="Autofill,HardcodedText" />
 
                 </LinearLayout>
-
                 <ProgressBar
-                        android:id="@+id/progressBar"
+                        android:visibility="gone"
                         style="?android:attr/progressBarStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:visibility="gone" />
+                        android:id="@+id/progressBar"/>
 
-<!--                <LinearLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:gravity="center"-->
-<!--                        android:orientation="horizontal"-->
-<!--                        android:padding="5dp">-->
+                <!--                <LinearLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_gravity="center"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:orientation="horizontal"-->
+                <!--                        android:padding="5dp">-->
 
-<!--                    <ImageView-->
-<!--                            android:layout_width="55dp"-->
-<!--                            android:layout_height="55dp"-->
-<!--                            app:srcCompat="@drawable/ic_ip"-->
-<!--                            tools:ignore="ContentDescription" />-->
+                <!--                    <ImageView-->
+                <!--                            android:layout_width="55dp"-->
+                <!--                            android:layout_height="55dp"-->
+                <!--                            app:srcCompat="@drawable/ic_ip"-->
+                <!--                            tools:ignore="ContentDescription" />-->
+                <!--                    <android.support.design.widget.TextInputLayout-->
+                <!--                            android:id="@+id/txt_assess_ip"-->
+                <!--                            android:layout_width="320dp"-->
+                <!--                            android:layout_height="match_parent"-->
+                <!--                            app:errorEnabled="true"-->
+                <!--                            android:layout_marginStart="5dp"-->
+                <!--                            app:passwordToggleEnabled="true"-->
+                <!--                            >-->
 
-<!--                    <android.support.design.widget.TextInputLayout-->
-<!--                            android:id="@+id/txt_assess_ip"-->
-<!--                            android:layout_width="320dp"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_marginStart="5dp"-->
-<!--                            app:errorEnabled="true"-->
-<!--                            app:passwordToggleEnabled="true">-->
+                <!--                        <android.support.design.widget.TextInputEditText-->
+                <!--                                android:layout_width="320dp"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:hint="ip"-->
 
-<!--                        <android.support.design.widget.TextInputEditText-->
-<!--                                android:layout_width="320dp"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:hint="ip"-->
+                <!--                                android:inputType="textPassword"-->
+                <!--                                android:text="192.168.100.207:8080"-->
+                <!--                                tools:ignore="HardcodedText">-->
 
-<!--                                android:inputType="textPassword"-->
-<!--                                android:text="192.168.100.207:8080"-->
-<!--                                tools:ignore="HardcodedText">-->
+                <!--                        </android.support.design.widget.TextInputEditText>-->
+                <!--                    </android.support.design.widget.TextInputLayout>-->
 
-<!--                        </android.support.design.widget.TextInputEditText>-->
-<!--                    </android.support.design.widget.TextInputLayout>-->
-
-<!--                </LinearLayout>-->
+                <!--                </LinearLayout>-->
 
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -196,19 +203,19 @@
 
                     <TextView
                             android:id="@+id/txt_amenndments_forget"
-                            android:layout_width="402dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
                             android:gravity="end"
                             android:paddingEnd="15dp"
-                            android:text="@string/forgot_your_password"
+                            android:text="Forgot your password?"
                             android:textColor="@color/colorPrimary"
                             android:textSize="20sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-                            tools:ignore="RtlSymmetry" />
+                            tools:ignore="HardcodedText,RtlSymmetry" />
 
                 </LinearLayout>
 
@@ -217,20 +224,13 @@
     </LinearLayout>
 
     <LinearLayout
-            android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
-            android:layout_marginBottom="5dp"
-
+            android:layout_marginTop="20dp"
+            android:layout_margin="5dp"
             android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-            app:layout_constraintVertical_bias="0.955">
+
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <Button
                 android:id="@+id/btn_bplo_login"
@@ -243,17 +243,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-        <TextView
-                android:id="@+id/txt_assessment_register"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/text_border2"
-                android:gravity="center"
-                android:text="@string/register"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

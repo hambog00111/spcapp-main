@@ -30,11 +30,13 @@ import kotlinx.android.synthetic.main.update_fragment.view.*
 import ph.Sanpablocitygov.iSanPablo.R
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOProfile
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.FragmentBPLOstep1
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Loginbplo.FragmentLoginBPLO
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BPLO.Renew.FragmentBPLORenew
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxAssessment.BusinessTaxAssementRequest
 
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.BusinessTaxPayment.FragmentBusinessTaxPayment
 import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.DoingBusiness.FragmentDoingBusiness
+import ph.Sanpablocitygov.iSanPablo.home.isanpablo.BusinessInTheCity.PrintMayorsPermit.FragmentRequestMayorsPermit
 
 @Suppress("PLUGIN_WARNING")
 class FragmentBusinessInTheCity : Fragment() {
@@ -194,16 +196,22 @@ class FragmentBusinessInTheCity : Fragment() {
         }
         val btnbs = view.findViewById<Button>(R.id.btn_business_amendments)
         btnbs.setOnClickListener {
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+//            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+//
+//            val mybusBuilder = AlertDialog.Builder(requireContext())
+//                .setView(mybus)
+//            mybusBuilder.setCancelable(false)
+//            val mybusDialog = mybusBuilder.show()
+//
+//            mybus.txt_confirm_update.setOnClickListener {
+//                mybusDialog.dismiss()
+//            }
 
-            val mybusBuilder = AlertDialog.Builder(requireContext())
-                .setView(mybus)
-            mybusBuilder.setCancelable(false)
-            val mybusDialog = mybusBuilder.show()
-
-            mybus.txt_confirm_update.setOnClickListener {
-                mybusDialog.dismiss()
-            }
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentLoginBPLO() , null)
+                .addToBackStack(null)
+                .commit()
         }
         val btntp = view.findViewById<Button>(R.id.btn_business_btp)
 
@@ -281,19 +289,30 @@ class FragmentBusinessInTheCity : Fragment() {
 
         val btnmp = view.findViewById<Button>(R.id.btn_business_printmayor)
         btnmp.setOnClickListener {
-            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+//            val mybus = LayoutInflater.from(requireContext()).inflate(R.layout.update_fragment, null)
+//
+//            val mybusBuilder = AlertDialog.Builder(requireContext())
+//                .setView(mybus)
+//            mybusBuilder.setCancelable(false)
+//            val mybusDialog = mybusBuilder.show()
+//
+//            mybus.txt_confirm_update.setOnClickListener {
+//                mybusDialog.dismiss()
+//            }
 
-            val mybusBuilder = AlertDialog.Builder(requireContext())
-                .setView(mybus)
-            mybusBuilder.setCancelable(false)
-            val mybusDialog = mybusBuilder.show()
+            activity!!.supportFragmentManager.beginTransaction().replace(
+                    R.id.frag_container,
+                    FragmentRequestMayorsPermit() , null)
+                .addToBackStack(null)
+                .commit()
 
-            mybus.txt_confirm_update.setOnClickListener {
-                mybusDialog.dismiss()
-            }
+
         }
 
         return  view
 
     }
+
+
+
 }

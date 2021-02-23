@@ -157,7 +157,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 search()
 
-                true
+               return true
             }
             else -> super.onOptionsItemSelected(item)
 

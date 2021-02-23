@@ -169,6 +169,13 @@ class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
                 .commit()
         }
 
+        getbrgy()
+        return view
+    }
+
+    fun getbrgy(){
+
+
         val pdLoading = ProgressDialog(context)
         pdLoading.setMessage("\tLoading...")
         pdLoading.setCancelable(false)
@@ -321,7 +328,7 @@ class FragmentBPLOstep2 : Fragment()  , AdapterView.OnItemSelectedListener{
 
         })
 
-        return view
+
     }
 
 
